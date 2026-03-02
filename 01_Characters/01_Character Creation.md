@@ -22,8 +22,9 @@ Things that actually have a game effect. Setting up the first member of the Lege
 * Named item - An old relic that showcase your right to rule the faction
 
 ### Create your Goblin
-
+* Name - A good name is important, it will be used a lot and remembered forever. 
 * Stats - Set up the stats
 * Talent - One talent that sets your goblin apart 
-* Patreon - A spiritual 
+* Patreon - A spiritual leader, that grants some mechanical benefits, in the spirit of that Patreon. 
+* Equipment - What really gives your goblin some configuration options. 
 
