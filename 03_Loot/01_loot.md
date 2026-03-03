@@ -12,3 +12,4 @@ Bulk is a combination of how difficult it is to carry something and it’s weigh
 ### Usage
 Some things are not only shiny, they can actually be used for stuff. A common usage is to use it as weapon or armour. Other items give situational bonuses. Often it is obvious if an item can be used by a PC or a mob. For instance, the dukes sword might be a very good weapon, but it is only one weapon so it do not give any mechanical effect to a goblin mob.
 
+s

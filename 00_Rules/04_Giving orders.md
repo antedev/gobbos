@@ -1,4 +1,6 @@
-Goblin mobs without orders are prone to follow their most basic instincts which is usually a choice of violence, eating, trashing things or running away. Which might be exactly what you want them to do, but there is no guarantee they will choose the option you thought would be best. Unless you use your Grunt to order them. 
+# Giving Orders
+
+Goblin mobs without orders are prone to follow their most basic instincts—survival, eating, trashing things, or running away. This might be exactly what you want them to do! But if you need them to do something tactical, you have to Order them.
 
 ## Order Action
 To give an Order in Combat counts as an action. 
