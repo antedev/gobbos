@@ -10,7 +10,7 @@ This list contains the raw mechanical effects used to build Talents, Items, and 
 *   +1d against heavily armoured targets (because it's a can opener).
 *   +1d against enemies larger than you.
 *   +1d against other goblins.
-*   +1d if wielded by [Specific Faction].
+*   +1d if wielded by [Specific Gang].
 *   +1d if it is raining, dark, or otherwise miserable.
 *   +1d if you are Currently Fleeing.
 *   +1d if you Scream a specific battle cry when rolling.
@@ -78,4 +78,4 @@ This list contains the raw mechanical effects used to build Talents, Items, and 
 *   **High Bulk:** The item takes up 3 or 4 Bulk, crippling your ability to carry Loot.
 *   **Fragile:** If you roll a Fumble while using this item, the item breaks completely.
 *   **Consumable:** Can only be used once (or a few times) before it is gone forever.
-*   **Cursed (Faction Loyalty):** If you are not from the item's preferred Faction, all your Criticals count as Fumbles.
+*   **Cursed (Gang Loyalty):** If you are not from the item's preferred Gang, all your Criticals count as Fumbles.

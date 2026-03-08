@@ -13,10 +13,10 @@ Every Talent is locked behind a specific, often dangerous, in-game achievement c
 ### 2. The Purchase
 Once a Talent is unlocked, the PC may spend their hard-earned XP to purchase and equip it instead of increasing a Stat.
 
-### 3. Faction Inheritance (The Easy Way)
-When a PC retires and becomes an **Elder**, or dies a glorious death and joins the **Pile of Legends**, any Talents they had purchased become permanently unlocked for their entire Faction. 
-*   **The Benefit:** A new PC from that Faction does not have to perform the dangerous Deed again! They can simply spend their starting XP (gained from Faction Renown) to buy the inherited Talent before their very first raid. 
-*   *This encourages long-running Factions to build "Skill Trees" naturally over multiple generations of Gobbos.*
+### 3. Gang Inheritance (The Easy Way)
+When a PC retires and becomes an **Elder**, or dies a glorious death and joins the **Pile of Legends**, any Talents they had purchased become permanently unlocked for their entire Gang. 
+*   **The Benefit:** A new PC from that Gang does not have to perform the dangerous Deed again! They can simply spend their starting XP (gained from Gang Renown) to buy the inherited Talent before their very first raid. 
+*   *This encourages long-running Gangs to build "Skill Trees" naturally over multiple generations of Gobbos.*
 
 ---
 

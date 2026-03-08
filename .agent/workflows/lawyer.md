@@ -1,5 +1,5 @@
 ---
-description: description: Use this to check for rules consistency and "legal" loopholes in the TTRPG mechanics.
+description: Use this to check for rules consistency and "legal" loopholes in the TTRPG mechanics.
 ---
 
 # Role: The Rules Lawyer

@@ -22,14 +22,14 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 *   **Glory (Raid Points):** Weightless points awarded for objective completion. At the end of the raid, all points are pooled, and the XP payout is shared equally among surviving PCs.
 *   **Greed (Loot Value):** The raw value of stolen goods. Pooled to upgrade the Lair and grant shared XP.
 *   **Bulk:** A measure of how heavy/unwieldy an item is. High bulk reduces movement or requires multiple goblins.
-*   **First Pick ("My Mob, My Loot"):** If a specific PC's Mob physically carries a usable item out of the dungeon, their Faction gets First Pick to claim it before the rest of the loot is pooled.
+*   **First Pick ("My Mob, My Loot"):** If a specific PC's Mob physically carries a usable item out of the dungeon, their Gang gets First Pick to claim it before the rest of the loot is pooled.
 *   **Raid Boss (MVP):** A title voted upon at the end of a raid. Grants the winner a Flair Item or Temporary Boon for the next raid.
 *   **Lair Upgrades:** Improvements to the base bought with pooled Loot, granting permanent boons to all raiding goblins.
 
-## Factions & Death
-*   **Faction:** A PC's overarching group (e.g., *The Gnashers*). Death of a PC results in another gobbo from the same Faction taking over.
-*   **Renown Level:** A measure of a Faction's overall standing based on their Loot contributions. Determines how many Stat Advances a newly respawned PC within that Faction starts out with.
-*   **Elder:** A player character who reaches a stat of 6 and automatically retires, granting a permanent passive boon to their Faction.
+## Gangs & Death
+*   **Gang:** A PC's overarching group (e.g., *The Gnashers*). Death of a PC results in another gobbo from the same Gang taking over.
+*   **Renown Level:** A measure of a Gang's overall standing based on their Loot contributions. Determines how many Stat Advances a newly respawned PC within that Gang starts out with.
+*   **Elder:** A player character who reaches a stat of 6 and automatically retires, granting a permanent passive boon to their Gang.
 *   **Pile of Legends:** The resting place for glorious dead PCs. 
 *   **Patron Saint:** The spirit of a dead PC from the Pile of Legends that grants a new PC a highly specific situational boon (so long as the new PC appeases them).
-*   **Named Item:** A piece of gear imbued with the spirit of a dead PC, possessing minor magical properties and "Faction Loyalty."
+*   **Named Item:** A piece of gear imbued with the spirit of a dead PC, possessing minor magical properties and "Gang Loyalty."
