@@ -17,31 +17,4 @@ The secondary or derived stats are:
 
 ## Abilities 
 #### Talents
-Talents is what you gobbo unique from any other gobbies, and an edge in some circumstances. Typically you can gain talents as you play, but you also get some talents when you start, depending on the level you start at. 
-ndom. Mutations can be both good and bad, sometimes really good, and sometimes really bad.
-
-## Skills
-TODO: Should we even have skills? Or can we just use the main stats?
-There are 8 skills in the game, two for each Main stat, with a bonus for Brains should your PC have been able to wield Magic for some reason. 
-### Strenght
-#### Violence
-Attacking something that is close by. 
-#### Lift 
-Lifting heavy stuff, or other acts of strength 
-### Slink
-#### Sneak
-Try to not be seen
-#### Dodge
-Try to not be hit
-
-### Brains
-#### Tinker
-Manipulate things 
-#### Notice
-See if there is something screwy going on
-
-#### Mouth
-#### Order 
-Order other goblins around
-#### Lying 
-Lying about things 
+Talents are what make your Gobbo unique from any other Gobbos, giving you an edge in specific circumstances. Typically you can gain talents as you play, but you also get some talents when you start, depending on the level you start at.

@@ -1,26 +1,52 @@
-# Actions
+# Combat and Actions
 Combat is a key mechanic in Gobbos. The combat can either be only the PC against some foe, or a more tactical battle with loads of Goblins piling on. 
-The combat is structured in a number of phases, that are repeated until the combat ends. All the players act in the Players Active turn, and then the enemies act in the Enemy Active turn. But both can use reactions to react to anything that the other does. 
-
-
+The combat is structured in a number of rounds, that are repeated until the combat ends. All the players act in the Players Active turn, and then the enemies act in the Enemy Active turn. But both can use Reactions to react to anything that the other does. 
 
 ## Actions
-Every PC have three (3) actions. They are reset at the start of each round. The players can use the actions in the Players Active turn, or save them up for the Enemy Active turn to react to anything that they enemies does. Each Mob have two (2) actions, that also are reset at the start of each round. 
+Every PC has **two (2) Actions** and **one (1) Free Order Action** per round. Actions are reset at the start of each round. The players can use their Actions during the Players Active turn, or save them up for the Enemy Active turn to react to what the enemies do. 
+
+Each Mob has **two (2) actions**, which are also reset at the start of each round, but they only act when Ordered. When they are left to their own devices (see [[Uncontrolled Mobs]]), they act on their own as per a predefined priority list
+
 ### Actionlist
 #### Move (Mob or PC)
 With a Move action, you can move up to your [[Movement]] number of zones. The different conditions of the zones are taken into account, and the movement might be limited or even impossible. If a climb, swim, jump or other action is required based on the circumstances in the zone, you must typically make a [[Slink]] test, with the [[Difficulty]] and [[TN]] set by the GM, but typically clearly denoted by the zone. 
 #### Attack (Mob or PC)
 The Attack action can only be used in the Players Active turn. 
-To Attack the player base dice pool is based on the players [[Tough]] for [[Melee attack]] and [[Slink]] for [[Ranged attack]], modified by any equipment, talents or other circumstances. The difficulty and TN is dependent on on the targets defence, armour and other circumstances. The GM will let the player know the difficulty and TN of the attack before the roll. 
+To Attack, the player's base dice pool is based on the player's [[Tough]] for [[Melee attack]] and [[Slink]] for [[Ranged attack]], modified by any equipment, talents, or other circumstances. 
+*   **One-Hit Kill:** Most enemies in Gobbos do not have Hit Points. They have a static Defence number. Roll successes equal to their Defence to instantly kill them.
+*   If you roll fewer successes than the Defence, the attack bounces off their armor and deals no damage.
 #### Plunder (Mob or PC)
 The [[Plunder]] action is to pick up any [[Loot]] at where the Player or the Mob stands.  
-#### Dodge (Mob or PC)
-The Dodge action can only be used as a [[Reaction]] to an [[Attack]] or [[Environmental effect]]. Typically this is in the Enemy Active turn, but it can be used in the Players Active turn as well. 
-The [[Dodge]] action is to avoid any [[Damage]] from the enemy. The base dice pool is based on the players [[Slink]] and modified by any equipment, talents or other circumstances. The [[Difficulty]] and [[TN]] set by the GM, but typically clearly denoted by attacker and/or environmental effect. 
-#### Mainpulate
+#### Dodge / Parry (Reaction)
+The Dodge or Parry action can only be used as a **Reaction** to an incoming Attack or Environmental effect. Typically this is in the Enemy Active turn. You **must** have saved a Standard Action from your turn to use this. If you are out of actions, you simply take the damage!
+*   **Dodge:** Test [[Slink]].
+*   **Parry:** Test [[Tough]] (requires a shield).
+*   **Armor** Armor adds bonus dice to your Dodge or Parry roll.
+*   **The Math:** Every success you roll reduces the incoming Damage by 1. If any damage remains, your Gobbo or Mob takes it.
+
+**Mob Defense:**
+Mobs do not naturally dodge. They are a chaotic swarm and simply absorb damage. A Mob only rolls defense dice if:
+1.  **Armored (Passive):** The Mob has been equipped with Armor, granting them passive bonus defense dice. *(Remember: Rolling Passive  Dice does not cost an action)*
+2.  **Ordered (Active):** The Boss PC explicitly spends a saved Order reaction to scream at them to scatter. Because dodging a giant swarm is based on how well the Boss can coordinate them, the Mob rolls a number of defense dice equal to the Boss's **Mouth** stat. If the Mob is still alive, they may take a Move action as well. 
+3.  **Automation:** The Mob's AI explicitly dictates a defensive maneuver.
+
+### GM Tactics: Group Attacks (Enemy Swarms)
+If multiple enemies surround and attack a Gobbo, the GM should NOT make separate attacks. Instead, they combine into a **Group Attack**. While a PC can only be attacked by a maximum of 3 enemies, there is no limit on attacker on a Mob
+*   The base damage is the primary enemy's Attack stat, **+1 damage** for every additional enemy in the swarm. 
+*   The player only spends **one** saved Action to Dodge/Parry the entire Group Attack. 
+> *GM Advice:* Avoid splitting enemies into many small attacks against a single PC. This will instantly drain their saved actions and create a frustrating "death by a thousand cuts." Swarm them into Group Attacks instead!
+
+#### Manipulate
 The Mainpulate action is a catch all for whenever a Mob or PC tries to interact with an item or the environment in any way. The base dice pool is based on whatever attribute is most relevant to the action, modified by any equipment, talents or other circumstances. The [[Difficulty]] and [[TN]] set by the GM. 
-#### Order
-The Order action is to give orders to the goblins. The base dice pool is based on the players [[Mouth]] and modified by any equipment, talents or other circumstances. The [[Difficulty]] and [[TN]] set by the GM. 
+#### Order 
+The Order action is used to give commands to your goblins, granting a Mob their full 2 actions for the round. 
+*   **The Boredom Rule:** Mobs have short attention spans. When given an Order, a Mob cannot perform the exact same action twice (e.g., they cannot Attack twice, or Plunder twice). *Exception:* A Mob *can* take the Move action twice if they are fleeing or charging.
+*   **The Free Shout:** The first Order you give each round is totally free (using your 1 Free Mouth Action).
+*   **The Commander Scaling:** You can convert your Standard Actions into additional Orders to command multiple Mobs, but your ability to split your attention is limited by your **Mouth** stat:
+    *   **Mouth 0-1:** Max 1 Order per round (The Free Vocal Action)
+    *   **Mouth 2-3:** Max 2 Orders per round (Free Vocal Action + spending 1 Standard Action)
+    *   **Mouth 4+:** Max 3 Orders per round (Free Vocal Action + spending both Standard Actions)
+
 
 ## The Combat loop
 The combat follows a structured loop, that is repeated until the combat ends. 
