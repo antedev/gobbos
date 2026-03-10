@@ -1,6 +1,6 @@
 # Boons and Banes (Building Blocks)
 
-This list contains the raw mechanical effects used to build Talents, Items, and Mutations. The goal is to make things highly situational and flavorful, rather than just raw math increases.
+This list contains the raw mechanical effects used to build Tricks, Items, and Mutations. The goal is to make things highly situational and flavorful, rather than just raw math increases.
 
 ## 🟢 Boons (The Good Stuff)
 
@@ -59,14 +59,14 @@ This list contains the raw mechanical effects used to build Talents, Items, and 
 ### Dice Penalties
 *   **Fumble Prone:** If you roll *any* 1s on this test, it counts as a Fumble (you don't need two 1s).
 *   **Dull/Broken:** 6s count as successes but do not "explode" and let you roll again.
-*   **Exhausting:** Using this item/talent makes your next action a Hard Test.
+*   **Exhausting:** Using this item/Trick makes your next action a Hard Test.
 
 ### Action & Movement Restraints
 *   **Two-Handed / Heavy:** Requires both hands. You cannot carry other Loot in hands while equipped.
 *   **Clunky:** Halves your movement speed when equipped.
 *   **Loud:** You automatically fail any Sneak tests while wearing/using this.
 *   **Unwieldy / Slow:** Costs 2 Actions to use instead of 1.
-*   **Rooted:** You cannot move in the same round you use this item/talent.
+*   **Rooted:** You cannot move in the same round you use this item/Trick.
 
 ### Grunt & Mob Penalties
 *   **Revolting:** Your max Grunt is reduced by 1 because the other gobbos don't want to look at you.

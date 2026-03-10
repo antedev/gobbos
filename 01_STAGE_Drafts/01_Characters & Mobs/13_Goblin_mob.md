@@ -36,12 +36,30 @@ If an attack explicitly has the AoE or Cleave trait, the incoming damage is appl
 
 **Dropping Loot:** If a Mob shrinks in Size, their Loot Capacity also drops! If they are suddenly carrying more Bulk than their new Size allows, the controlling PC must immediately choose which Loot is dropped on the floor. 
 
+## Splitting and Merging Mobs
+A Boss can dynamically manage their swarm by splitting Mobs apart or merging them together. 
+
+### Splitting a Mob
+A Boss can use an **Order** to tell a Mob to split instead of taking their normal 2 actions. 
+*   **The Math:** A Size 5 mob splits into two smaller mobs (e.g., Size 3 and Size 2). The Boss decides how to distribute the current physical dice.
+*   **The Benefit:** Splitting is an excellent way to mitigate AoE/Cleave damage, or to fit Mobs into narrow terrain.
+
+### Merging Mobs
+If two Mobs belonging to the same player end their turn in the same Zone, the Boss can use an **Order** or **Manipulate** action to merge them.
+*   **The Math:** You add the D6s together (e.g., a Size 2 and Size 3 Mob become a new Size 5 Mob). 
+*   **The Grunt Cap:** The total Size of the new Mob *cannot exceed* the Boss's **Grunt**. If a Boss merges a Mob until it exceeds their Grunt, it immediately becomes Uncontrolled (see below).
+
+### The Super-Mob (Cross-Gang Merging)
+Mobs from different player Gangs *can* merge if both Bosses agree. This creates a terrifying, chaotic massive dice pool.
+*   **The Command Struggle:** The new Super-Mob is extremely volatile. Every time *either* Boss wants to issue an Order to the Super-Mob, it requires a **Grunt test** (Testing [[Tough]] if in the same Zone, or [[Mouth]] from afar).
+*   **In-Fighting:** Whenever a Cross-Gang Mob rolls a dice pool for *any reason* (like an Attack roll, or a Manipulate check), **every 1 rolled results in 1 damage to the Mob itself.** They cannot help themselves; they just start stabbing the other gang! This happens regardless of whether the action is successful or not.
+
 ## Action Economy
 *   A Mob gets **2 Actions** per round.
 *   They only take these actions when commanded by a Boss, or when left to their own "Priority AI" (see below).
 
-## Uncontrolled Mobs
-Goblins are driven by strong feelings and sudden urges. If a Boss does not use an Order on a Mob, or if a Mob breaks line of sight with their Boss, the GM takes control of the Mob. The Mob will automatically use their 2 Actions based on a strict priority list:
+## Inherent Nature (Uncontrolled Mobs)
+Goblins are driven by strong feelings and sudden urges. If a Boss does not use an Order on a Mob, if a Mob breaks line of sight with their Boss, or if a Boss merges a Mob until it exceeds their Grunt stat, the GM takes control of the Mob. The Mob will automatically use their 2 Actions based on their Inherent Nature:
 
 **Survival > Loot/Eat > Violence > Trash Stuff > Wander Off**
 
