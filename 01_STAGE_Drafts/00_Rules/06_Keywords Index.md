@@ -37,8 +37,8 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 
 ## Gangs & Death
 *   **Gang:** A PC's overarching group (e.g., *The Gnashers*). Death of a PC results in another gobbo from the same Gang taking over.
-*   **Renown Level:** A measure of a Gang's overall standing based on their Loot contributions. Determines how many Stat Advances a newly respawned PC within that Gang starts out with.
+*   **Infamy Level:** A measure of a Gang's overall standing based on their Loot contributions. Determines how many Stat Advances a newly respawned PC within that Gang starts out with.
 *   **Elder:** A player character who reaches a stat of 6 and automatically retires, granting a permanent passive boon to their Gang.
-*   **Pile of Legends:** The resting place for glorious dead PCs. 
-*   **Patron Saint:** The spirit of a dead PC from the Pile of Legends that grants a new PC a highly specific situational boon (so long as the new PC appeases them).
+*   **Pile of Bones:** The resting place for glorious dead PCs. 
+*   **Patron Saint:** The spirit of a dead PC from the Pile of Bones that grants a new PC a highly specific situational boon (so long as the new PC appeases them).
 *   **Named Item:** A piece of gear imbued with the spirit of a dead PC, possessing minor magical properties and "Gang Loyalty."

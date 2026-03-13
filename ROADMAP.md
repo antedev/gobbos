@@ -15,9 +15,12 @@ This is the refined, granular roadmap. I have unpacked the massive "Game Modules
 
 **Feature 1.2: Resolve Mob & Progression TBDs**
 *   [ ] **Task:** Define "Terrifying Enemy" conditions for Uncontrolled Mob behavior (`13_Goblin_mob.md`).
+*   [ ] **Task:** Integrate "For Fuck Sake" (Quirks/Chaos) into Uncontrolled Mob behavior to add flavor to raids and define the reward loop for leaning into it.
 *   [ ] **Task:** Make a Go/No-Go decision on the "My Mob, My Loot" rule (`16_Level_Up and death.md`).
 *   [ ] **Task:** Make a Go/No-Go decision on the "Raid Boss (MVP)" rule (`16_Level_Up and death.md`).
 *   [ ] **Story:** Standardize Elder Benefits by drafting a table of 3-5 passive gang boons.
+*   [ ] **Task:** Define the "Infamy XP-boost" system to set baseline stats for new Bosses instead of starting at 1,1,1,1.
+*   [ ] **Task:** Define how "Inspiration" lets a new Boss retain select talents/Tricks from a dead PC in The Bone Pile.
 
 ---
 
@@ -28,6 +31,7 @@ This is the refined, granular roadmap. I have unpacked the massive "Game Modules
 *   [x] **Story:** Establish the fundamental architecture (Acquisition Limits, Costs, and Keywords).
 *   [ ] **Task:** Rules Lawyer Audit: Define missing keywords (Grit, Status Effects, Free/Standard Actions) and resolve conflicts (Reaction vs Interrupt).
 *   [ ] **Task:** Draft the General, Tough, Slink, Mouth, and Brains Trick tables.
+*   [ ] **Story:** Define the "Frenzy/Go-go-go" Pool (similar to Grit but gang/mob-focused) and how it fuels or rewards chaotic Gang Quirks.
 
 **Feature 2.2: Mutations (Chaos Traits)**
 *   [ ] **Story:** Establish how Mutations are acquired (Permanent trait? Exposure to bad magic? Potions?).
@@ -51,16 +55,18 @@ This is the refined, granular roadmap. I have unpacked the massive "Game Modules
 ## 🟡 EPIC 4: Greed & Gear (Economy) (v0.4)
 *Goal: The physical rewards. How Gobbos get loot, and what they spend it on.*
 
-**Feature 4.1: Equipment Tables**
+**Feature 4.1: Equipment Tables & Named Items**
 *   [ ] **Task:** Draft the standard Weapons Table with associated Bulk costs and bonus dice.
 *   [ ] **Task:** Draft the standard Armor Table with Bulk costs and Dodge bonuses.
 *   [ ] **Task:** Draft standard utility gear (Bombs, grappling hooks, nets, caltrops).
 *   [ ] **Task:** Define "Utility Slots" for carrying Brains-based Contraptions and Magic without costing Bulk.
+*   [ ] **Task:** Define how "Named Items" inherit magical traits upon a Boss's death, and tie it to the core Equipment rules.
 
-**Feature 4.2: The Lair (Base-Building)**
+**Feature 4.2: The Lair (Base-Building) & The Hoard**
 *   [ ] **Story:** Establish the Lair Currency logic (Raw Loot Value vs. extracting specific physical items like an Anvil).
 *   [ ] **Story:** Define Lair Upgrade Tiers and the mechanical boons they grant the Gang.
-*   [ ] **Story:** *Brainstorm* a lightweight "Crafting" system (Taping junk together).
+*   [ ] **Story:** Draft a lightweight "Crafting" system (Taping junk together, crafting Relics using Bones from dead Bosses).
+*   [ ] **Task:** Define "The Hoard" mechanics and how Bosses outfit their Mob before a raid using stored loot.
 
 ---
 
@@ -94,5 +100,5 @@ This is the refined, granular roadmap. I have unpacked the massive "Game Modules
 *Goal: Make the game playable at a physical table.*
 
 **Feature 7.1: Assets**
-*   [ ] **Task:** Design the Boss Character Sheet (incorporating the Pile of Legends).
+*   [ ] **Task:** Design the Boss Character Sheet (incorporating the Pile of Bones).
 *   [ ] **Task:** Design the Mob/Gang tracking Sheet.

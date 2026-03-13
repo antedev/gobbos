@@ -11,10 +11,10 @@ New Tricks are acquired under the following conditions:
 2.  **Leveling Up:** Every time a Boss permanently upgrades *any* stat by 1 point, they may immediately learn 1 new Trick. 
 3.  **The Elder Boon:** Inherited from a dead or retired Boss in the Gang's history (See *Gang Tricks* below). 
 
-## 2. Gang Tricks & Renown
-Gang Tricks are powerful, legendary abilities that belong to a **Gang** as a whole, rather than an individual Boss. They are acquired when a Boss reaches Level 6 in any stat and retires as an **Elder**, or dies gloriously and joins the *Pile of Legends*.
+## 2. Gang Tricks & Infamy
+Gang Tricks are powerful, legendary abilities that belong to a **Gang** as a whole, rather than an individual Boss. They are acquired when a Boss reaches Level 6 in any stat and retires as an **Elder**, or dies gloriously and joins the *Pile of Bones*.
 
-*   **The Renown Limit:** Gang Tricks do not count toward a Boss's personal Stat limit. Instead, the maximum number of Gang Tricks a starting Boss can bring on a raid is determined by the Gang's **Renown** score. 
+*   **The Infamy Limit:** Gang Tricks do not count toward a Boss's personal Stat limit. Instead, the maximum number of Gang Tricks a starting Boss can bring on a raid is determined by the Gang's **Infamy** score. 
 
 ## 3. Using Tricks & Activation Costs
 To use a Trick, the Boss must pay its associated cost. This cost is always indicated in brackets **[Cost]** next to the Trick.

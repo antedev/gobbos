@@ -14,12 +14,12 @@ Tough determines your **Grit** (Health) and **Carry Capacity** (how much Bulk yo
 
 ### Slink (S)
 *Used for sneaking, dodging, and all manners of dirty tricks.*
-Slink determines your **Movement** (Zones per action) and gives you **Passive Dodge Dice**. Passive Dodge dice are rolled automatically when you are attacked, without spending an action (just like Armor).
+Slink determines your **Movement** (Zones per action) and gives you **Passive Defence Dice**. Passive Defence dice are rolled automatically when you are attacked, without spending an action (just like Armor).
 *   **Level 1 (Starting):** Movement 4.
-*   **Level 2:** **Movement 5.**
-*   **Level 3:** Movement 5. **+1 Passive Dodge Die.**
-*   **Level 4:** **Movement 6.** +1 Passive Dodge Die.
-*   **Level 5 (Max):** **Movement 7.** **+2 Passive Dodge Dice.**
+*   **Level 2:**Movement 5.
+*   **Level 3:**Movement 5. **+1 Passive Defence Die.**
+*   **Level 4:**Movement 6. **+1 Passive Defence Die.**
+*   **Level 5 (Max):**Movement 7. **+2 Passive Defence Dice.**
 
 ### Mouth (M)
 *Used for shouting orders, lying, and trading.*

@@ -20,7 +20,7 @@ Just the fluff and lore
 Things that actually have a game effect. Setting up the first member of the Legend Heap, the founding old boss, that will give some starting effects and that sets the direction from:
 * **Old Boss (Founder)** - Your founding ancestor of the Gang. Grants 1 specific starting **Gang Trick** (See [[Tricks]]). 
 * **Named item** - An old relic that showcase your right to rule the Gang.
-* **Renown** - Your Gang's prestige and success over generations. **You start with Renown 1.** Your Gang gains +1 Renown whenever an active Boss dies gloriously and is added to the *Pile of Legends*, or when they hit Level 6 in any Stat and retire as an *Elder*. A Gang's Renown dictates how many **Gang Tricks** a newly rolled Boss in that Gang can bring on a raid!
+* **Infamy** - Your Gang's prestige and success over generations. **You start with Infamy 1.** Your Gang gains +1 Infamy whenever an active Boss dies gloriously and is added to the *Pile of Bones*, or when they hit Level 6 in any Stat and retire as an *Elder*. A Gang's Infamy dictates how many **Gang Tricks** a newly rolled Boss in that Gang can bring on a raid!
 
 ### Create your Goblin
 * Name - A good name is important, it will be used a lot and remembered forever. 
