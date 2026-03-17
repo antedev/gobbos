@@ -3,7 +3,7 @@ Combat is a key mechanic in Gobbos. The combat can either be only the PC against
 The combat is structured in a number of rounds, that are repeated until the combat ends. All the players act in the Players Active turn, and then the enemies act in the Enemy Active turn. But both can use Reactions to react to anything that the other does. 
 
 ## Actions
-Every PC has **two (2) Actions** and **one (1) Free Order Action** per round. Actions are reset at the start of each round. The players can use their Actions during the Players Active turn, or save them up for the Enemy Active turn to react to what the enemies do. 
+Every PC has **three (3) Actions** and **one (1) Free Order Action** per round. Actions are reset at the start of each round. The players can use their Actions during the Players Active turn, or save them up for the Enemy Active turn to react to what the enemies do. 
 
 Each Mob has **two (2) actions**, which are also reset at the start of each round, but they only act when Ordered. When they are left to their own devices (see [[Uncontrolled Mobs]]), they act on their own as per a predefined priority list
 
@@ -21,14 +21,14 @@ The [[Plunder]] action is to pick up any [[Loot]] at where the Player or the Mob
 The Dodge or Parry action can only be used as a **Reaction** to an incoming Attack or Environmental effect. Typically this is in the Enemy Active turn. You **must** have saved a Standard Action from your turn to use this. If you are out of actions, you simply take the damage!
 *   **Dodge:** Test [[Slink]].
 *   **Parry:** Test [[Tough]] (requires a shield).
-*   **Armor** Armor adds bonus dice to your Dodge or Parry roll.
+*   **Armor** Armor adds Passive defence dice that do NOT need an action. See more under equipment.
 *   **The Math:** Every success you roll reduces the incoming Damage by 1. If any damage remains, your Gobbo or Mob takes it.
 
 **Mob Defense:**
-Mobs do not naturally dodge. They are a chaotic swarm and simply absorb damage. A Mob only rolls defense dice if:
-1.  **Armored (Passive):** The Mob has been equipped with Armor, granting them passive bonus defense dice. *(Remember: Rolling Passive  Dice does not cost an action)*
-2.  **Ordered (Active):** The Boss PC explicitly spends a saved Order reaction to scream at them to scatter. Because dodging a giant swarm is based on how well the Boss can coordinate them, the Mob rolls a number of defense dice equal to the Boss's **Mouth** stat. If the Mob is still alive, they may take a Move action as well. 
-3.  **Automation:** The Mob's AI explicitly dictates a defensive maneuver.
+Mobs do not naturally dodge. They are a chaotic swarm and simply absorb damage. A Mob only rolls Defence dice if:
+1.  **Armored (Passive):** The Mob has been equipped with Armor, granting them Passive bonus defense dice. 
+2.  **Ordered (Active):** The Boss PC uses a Order reaction to scream at them to Scatter. It is based on how well the Boss can coordinate them, the Mob rolls a number of defense dice equal to the Boss's **Mouth** stat. If the Mob is still alive, they may take a Move action as well. . 
+3.  **Automation:** The Mob's AI explicitly dictates a defensive maneuver. TDB: Icke definerat än.
 
 ### GM Tactics: Group Attacks (Enemy Swarms)
 If multiple enemies surround and attack a Gobbo, the GM should NOT make separate attacks. Instead, they combine into a **Group Attack**. While a PC can only be attacked by a maximum of 3 enemies, there is no limit on attacker on a Mob
@@ -38,6 +38,7 @@ If multiple enemies surround and attack a Gobbo, the GM should NOT make separate
 
 #### Manipulate
 The Mainpulate action is a catch all for whenever a Mob or PC tries to interact with an item or the environment in any way. The base dice pool is based on whatever attribute is most relevant to the action, modified by any equipment, Tricks or other circumstances. The [[Difficulty]] and [[TN]] set by the GM. 
+
 #### Order 
 The Order action is used to give commands to your goblins, granting a Mob their full 2 actions for the round. Standard Orders do not require a dice roll.
 *   **Cross-Gang Super Mobs:** Issuing an Order to a Mob merged from multiple different player Gangs *always* requires a Grunt test (Test [[Tough]] if in the same Zone, or [[Mouth]] from afar).
