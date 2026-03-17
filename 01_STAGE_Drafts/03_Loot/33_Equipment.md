@@ -2,49 +2,35 @@
 
 A Goblin's power comes from the shiny junk they carry. Equipment is highly abstracted to keep the game fast and focus entirely on **Bulk** (inventory management) and tactical choice.
 
-## Weapons (Violence & Slink)
+## Weapons
 Weapons are categorized into three simple tiers based on how clunky they are to bring into a dungeon. You can flavor the weapon however you want (a rusty cleaver, a stolen dwarf-hammer, a sharpened stick), but the mechanical stats remain the same.
 
-### 1. Light Weapons (The Shiv & Sling)
-*Examples: Daggers, shivs, clubs, broken glass, slings, throwing rocks.*
-*   **Bulk:** 1
-*   **Handedness:** One-Handed
-*   **Dice Bonus:** +0d
-*   **The Benefit:** You only roll your raw Stats, but Light weapons take up almost no bulk. You can easily hold a shield in your other hand, or keep an empty sack (Bulk 0) to carry Loot right away without needing to rearrange your gear.
+| Melee Weapon | Bu0lk | Handedness | Damage | Requirement |
+|---|---|---|---|
+| Unarmed | 0 | N/A | +1d | |
+| Light Weapons | 1 | One-Handed | +2d | |
+| Medium Weapons | 2 | One-Handed | +3d | |
+| Heavy Weapons | 3 | Two-Handed | +4d | |
 
-### 2. Medium Weapons (The Goblin Standard)
-*Examples: Short swords, rusty axes, spears, spiked maces, shortbows.*
-*   **Bulk:** 2
-*   **Handedness:** One-Handed
-*   **Dice Bonus:** +1d
-*   **The Benefit:** The bread and butter. It gives you a mathematical advantage (+1d) and leaves one hand free. However, Bulk 2 takes up half of a Level 1 Goblin's total carrying capacity (which is 4). If you want to carry out a heavy Bulk 3 item from the dungeon, you will likely have to drop your weapon to do it.
-
-### 3. Heavy Weapons (Devastating but Clunky)
-*Examples: Greatswords, massive hammers, looted halberds, heavy crossbows.*
-*   **Bulk:** 3
-*   **Handedness:** Two-Handed
-*   **Dice Bonus:** +2d
-*   **The Drawback:** Requires *both* hands. You cannot use a shield, a torch, or hold Loot. Furthermore, a Level 1 Goblin with a Heavy Weapon literally cannot carry anything else without dragging it.
-
----
+| Ranged Weapon | Bulk | Handedness | Damage | Requirement |
+|---|---|---|---|
+| Sling | 1 | One-Handed | +0d | |
+| Shortbow | 2 | Two-Handed | +1d | |  
+| Crossbow | 2 | Two-Handed | +1d | B2 |
+| Heavy Crossbow | 3 | Two-Handed | +2d | T2, B2 |
+| Throwing Axes | 1 | One-Handed | +0d |  |
+| Throwing Daggers | 1 | One-Handed | +0d |  |
 
 ## Armor (Tough & Grunt)
 Armor is balanced exactly like weapons: trading defensive power for Bulk and situational banes.
 
-### No Armor or Hats
-*   **Bulk:** 0
-*   **Benefit:** Just a loincloth. No penalties to Slink, Sneak, or Movement.
-
-### Light/Scrap Armor
-*Examples: Boiled leather, wooden planks strapped to the chest, thick furs.*
-*   **Bulk:** 1
-*   **Benefit:** Ignore the first Normal wound you receive in a combat.
-
-### Heavy/Looted Armor
-*Examples: Stolen chainmail, a barrel, rusty plate armor made for a human child.*
-*   **Bulk:** 3
-*   **Benefit:** Ignore the first Hard wound you receive OR consistently reduce all incoming damage by 1.
-*   **Bane (Loud & Clunky):** You automatically fail any Slink (Sneak) tests. Significant reduction to carrying capacity.
+| Armor | Bulk | Boon | Bane | 
+|---|---|---|---|
+| None | 0 | +0d Passive Defense | |
+| Light Armor | 1 | +1d Passive Defense | |
+| Medium Armor | 2 | +2d Passive Defense | -1d Slink |
+| Heavy Armor | 3 | +3d Passive Defense | -2d Slink |
+| Shield | 1 | +1d Passive Defense (One Handed) |
 
 ---
 
