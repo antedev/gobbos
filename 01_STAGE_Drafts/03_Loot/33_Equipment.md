@@ -2,18 +2,29 @@
 
 A Goblin's power comes from the shiny junk they carry. Equipment is highly abstracted to keep the game fast and focus entirely on **Bulk** (inventory management) and tactical choice.
 
+## Attributes and Traits 
+Attributes and Traits give equipment predefinced effects and abilities. 
+
+### Quality
+Goblins typically dont spend too much time on crafting fine equipment, and thus they typically break fairly easy. This is denoted by the Quality aspect of the gear. 
+| Quality | Effect | Description |
+|---|---|---|
+| Junk | Braks on 1-2 on the gear dice | Junk picked up from the floor, a broken bottle, plank or similar |
+| Goblin made | Breaks on 1 on the gear die | The average goblin stuff breaks afer a few usages, but can typically be repaired pretty easy as well | 
+
 ## Weapons
 Weapons are categorized into three simple tiers based on how clunky they are to bring into a dungeon. You can flavor the weapon however you want (a rusty cleaver, a stolen dwarf-hammer, a sharpened stick), but the mechanical stats remain the same.
 
-| Melee Weapon | Bu0lk | Handedness | Damage | Requirement |
-|---|---|---|---|
+| Melee Weapon | Bulk | Handedness | Damage | Requirement |
+|---|---|---|---|---|
 | Unarmed | 0 | N/A | +1d | |
 | Light Weapons | 1 | One-Handed | +2d | |
 | Medium Weapons | 2 | One-Handed | +3d | |
 | Heavy Weapons | 3 | Two-Handed | +4d | |
 
+
 | Ranged Weapon | Bulk | Handedness | Damage | Requirement |
-|---|---|---|---|
+|---|---|---|---|---|
 | Sling | 1 | One-Handed | +0d | |
 | Shortbow | 2 | Two-Handed | +1d | |  
 | Crossbow | 2 | Two-Handed | +1d | B2 |
