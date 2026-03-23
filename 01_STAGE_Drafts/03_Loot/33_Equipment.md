@@ -7,10 +7,37 @@ Attributes and Traits give equipment predefinced effects and abilities.
 
 ### Quality
 Goblins typically dont spend too much time on crafting fine equipment, and thus they typically break fairly easy. This is denoted by the Quality aspect of the gear. 
-| Quality | Effect | Description |
-|---|---|---|
-| Junk | Braks on 1-2 on the gear dice | Junk picked up from the floor, a broken bottle, plank or similar |
-| Goblin made | Breaks on 1 on the gear die | The average goblin stuff breaks afer a few usages, but can typically be repaired pretty easy as well | 
+The base price multiplier is how much Loot that is required in order to acquire it in the Lair. 
+
+| Quality | Effect | Description | Price multiplier |
+|---|---|---|---|
+| Junk | Braks on 1 on the gear dice, cannot be repaired | Junk picked up from the floor, a broken bottle, plank or similar | x0,5 |
+| Scrappy / Goblin made | Breaks on 1 on the gear die, can be repaired | The average goblin stuff breaks afer a few usages, but can typically be repaired pretty easy as well | x1 |
+| Normal | Breaks on a Fumble, can be repaired | Normal quality of any Human or similar creation | x2 |
+| Superior | Never breaks | Dwarven or Master smith level | x10 |  
+
+### Weapon traits 
+Weapon traits is used to differince weapons from each other, so that it feels different to bash with a mace instead of stab with a dagger. 
+
+| Trait | Effect |
+|---|---|
+| Cutting | TDB |
+| Bashing | Gives -1d on Passive Defence |
+| Poking | TDB |
+| Fast | Gives -1d on Active Defence |
+| Slow | Allows the enemy to use an Reaction to counterattack, instead of taking a Doge Defence | 
+| Long | Allows the wielder to use a Reaction to attack if a enemy moves in to attack with a shorter weapon |
+| Short | TDB | 
+
+### Armor Traits 
+| Trait | Effect |
+|---|---|
+| Light  | TDB |
+| Medium | -1d on Slink |
+| Heavy | -2d on Slink, cannot Swim |
+| Loud | -2d on Slink when trying to Sneak | 
+| 
+
 
 ## Weapons
 Weapons are categorized into three simple tiers based on how clunky they are to bring into a dungeon. You can flavor the weapon however you want (a rusty cleaver, a stolen dwarf-hammer, a sharpened stick), but the mechanical stats remain the same.
