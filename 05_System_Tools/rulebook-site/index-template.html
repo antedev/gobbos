@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gobbos — Roguelite Tactical Skirmish RPG</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG where you play as goblins fighting for glory, loot, and chaos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="index-page">
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Index Content ===== -->
+  <main class="index-main">
+    <div class="index-hero">
+      <h1 class="index-title">Gobbos</h1>
+      <p class="index-tagline">A Roguelite Tactical Skirmish RPG</p>
+      <p class="index-description">
+        Lead your goblin mob to glory, loot, and glorious chaos.<br>
+        Death is just a stepping stone. The next boss will be <em>even stronger</em>.
+      </p>
+    </div>
+
+    <div class="env-cards">
+      {{ENV_CARDS}}
+    </div>
+
+    <footer class="index-footer">
+      <p>Built with chaos and spite. 👺</p>
+    </footer>
+  </main>
+
+  <script>
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+  </script>
+
+</body>
+</html>

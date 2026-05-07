@@ -32,10 +32,10 @@ Mouth determines how many Mobs you can command and gives you **Free Orders** tha
 
 ### Brains (B)
 *Used for noticing stuff, tinkering, traps, and magic.*
-Brains determines your **Utility Slots** (for carrying Magic Words or Contraptions without consuming standard Bulk). *(Note: These mechanics will be expanded in the upcoming Magic and Crafting rules).*
+Brains determines your **Utility Slots** (for carrying Magic Words or Contraptions without consuming standard Bulk). *(TODO: These mechanics will be expanded in the upcoming Magic and Crafting rules and subject to change).*
 *   **Level 1 (Starting):** 1 Utility Slot.
 *   **Level 2:** **2 Utility Slots.** 
-*   **Level 3:** **3 Utility Slots.**
+*   **Level 3:** **3 Utility Slots.** (Minimum to use Magic Words)
 *   **Level 4:** **4 Utility Slots.** 
 *   **Level 5 (Max):** **5 Utility Slots.**
 
