@@ -12,7 +12,7 @@ Each Mob has **two (2) actions**, which are also reset at the start of each roun
 With a Move action, you can move up to your [[Movement]] number of zones. The different conditions of the zones are taken into account, and the movement might be limited or even impossible. If a climb, swim, jump or other action is required based on the circumstances in the zone, you must typically make a [[Slink]] test, with the [[Difficulty]] and [[TN]] set by the GM, but typically clearly denoted by the zone. 
 #### Attack (Mob or PC)
 The Attack action can only be used in the Players Active turn. 
-To Attack, the player's base dice pool is based on the player's [[Tough]] for [[Melee attack]] and [[Slink]] for [[Ranged attack]], modified by any equipment, Tricks, or other circumstances. 
+To Attack, the player's base dice pool is based on the player's [[Tough]] for [[Melee attack]] and [[Slink]] for [[Ranged attack]], modified by any equipment, Quirks, or other circumstances. 
 *   **One-Hit Kill:** Most enemies in Gobbos do not have Hit Points. They have a static Defence number. Roll successes equal to their Defence to instantly kill them.
 *   If you roll fewer successes than the Defence, the attack bounces off their armor and deals no damage.
 #### Plunder (Mob or PC)
@@ -37,7 +37,7 @@ If multiple enemies surround and attack a Gobbo, the GM should NOT make separate
 > *GM Advice:* Avoid splitting enemies into many small attacks against a single PC. This will instantly drain their saved actions and create a frustrating "death by a thousand cuts." Swarm them into Group Attacks instead!
 
 #### Manipulate
-The Mainpulate action is a catch all for whenever a Mob or PC tries to interact with an item or the environment in any way. The base dice pool is based on whatever attribute is most relevant to the action, modified by any equipment, Tricks or other circumstances. The [[Difficulty]] and [[TN]] set by the GM. 
+The Mainpulate action is a catch all for whenever a Mob or PC tries to interact with an item or the environment in any way. The base dice pool is based on whatever attribute is most relevant to the action, modified by any equipment, Quirks or other circumstances. The [[Difficulty]] and [[TN]] set by the GM. 
 
 #### Order 
 The Order action is used to give commands to your goblins, granting a Mob their full 2 actions for the round. Standard Orders do not require a dice roll.

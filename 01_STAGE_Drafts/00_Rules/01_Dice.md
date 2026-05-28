@@ -19,7 +19,7 @@ Most of the time you will roll a Normal test, with a TN of 1. Denoted as Normal:
 > Example: Picking a lock is typically a [[Slink]] Normal:1. But if the lock is of particulary good quality it could be a Normal:3. And if the lockpicker has brought quality lockpicks, it could turn into a Easy:3
 
 ### Dice Pool
-The player than asemble their dice pool. This is usually equal to their main stat+1, but can be modified by equipment, Tricks, or other circumstances. So, if you have a Tough of 2, you roll 3 dice, or 3d6
+The player than asemble their dice pool. This is usually equal to their main stat+1, but can be modified by equipment, Quirks, or other circumstances. So, if you have a Tough of 2, you roll 3 dice, or 3d6
 ### Exploding Dice
 Every time you roll a 6, it is not only a sucess but allows you to roll an aditional dice. If that roll is a 6 again, you keep rolling untill you no longer roll 6s. This makes it possible, but sitll perhaps unlikely, to get a lot of successes on a single roll. 
 ### 1s and fumbles

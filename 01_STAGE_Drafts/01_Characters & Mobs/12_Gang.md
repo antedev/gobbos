@@ -9,12 +9,11 @@ Every Gang is unique, characterized by the following attributes tracked on your 
 
 *   **Current Boss:** The PC currently in charge.
 *   **Infamy:** The overall "Level" of your Gang.
-*   **Specialty:** What your Gang is famous for (e.g., Sneak-Thieves, Muck-Brawlers).
-*   **Quirks/For Fuck Sake:** A shared madness or behavioral flaw inherited by your Mobs.
+*   **Shenanigan:** What your Gang is famous for, which acts as both a mechanical boon and a behavioral flaw.
+
 *   **The Hoard:** Your Gang's shared pool of physical resources and abstract wealth.
 *   **The Bone Pile:** A historical record of dead Bosses, providing Relics and Inspiration to the current Boss.
 *   **Elders:** Retired Bosses that provide passive boons or can be spent for Lair upgrades.
-*   **Turf:** Your customized corner of the Lair.
 
 ---
 
@@ -24,23 +23,22 @@ Every Gang is unique, characterized by the following attributes tracked on your 
 **Progression:** You start at Infamy 1. Infamy increases by successfully extracting Loot from raids or completing specific Gang Agendas. 
 
 **Mechanics:**
-Infamy dictates the baseline competence of your *next* Boss. A high Infamy Gang provides an "XP-Boost" to newly rolled characters (See [[Death & Respawning]]). It also determines the maximum number of **Gang Tricks** a Boss can equip.
+Infamy dictates the baseline competence of your *next* Boss. A high Infamy Gang provides an "XP-Boost" to newly rolled characters (See [[Death & Respawning]]). It also determines the maximum number of **Gang Quirks** a Boss can equip.
 
 > *Example: If you walk through the Lair as the Boss of an Infamy 4 Gang, grunts from an Infamy 1 Gang will literally step into the mud to let you pass.*
 
 ---
 
-## Specialty & Quirks
+## Shenanigans (The Gang's Nature)
 
-### Specialty
-At Gang creation, you choose a single **Specialty** that defines your Gang's approach to problems (e.g., *Sneak-Thieves, Weird-Tinkerers, Muck-Brawlers*). 
+Goblins are chaotic, and every Gang has a defining nature that is simultaneously their greatest strength and their worst habit. When you create a Gang, you choose a starting **Shenanigan** (e.g., *Pyromaniacs, Sneak-Thieves, Shiny-Snatchers*). This acts as the "seed" of your Gang's backstory, representing the culture left behind by your dead Founder.
 
-**Mechanic:** Any Boss belonging to this Gang always rolls +1d on tests directly related to their Specialty. This gives the Gang a distinct mechanical flavor that persists across generations of Bosses.
+**Mechanics (The Double-Edged Sword):**
+*   **The Boon:** Any Boss belonging to this Gang rolls +1d on tests directly related to their Shenanigan (e.g., Pyromaniacs are great at blowing things up).
+*   **The Madness ("For Fuck Sake"):** The Shenanigan is a mandatory compulsion. It is often inconvenient (e.g., Pyromaniacs cannot resist throwing bombs even when stealth is needed; Shiny-Snatchers prioritize worthless reflective glass over actual gold). 
+*   **The Reward:** [TBD - Drafting the exact rules for the "Frenzy/Go-go-go" pool reward structure for leaning into your Shenanigan].
 
-### Quirks ("For Fuck Sake")
-Goblins are chaotic. A Specialty represents what they are good at; a **Quirk** represents their shared madness. A Gang Quirk is mandatory and often inconvenient (e.g., *Pyromaniacs:* cannot resist throwing bombs; *Shiny-Blindness:* prioritizes worthless reflective glass over gold).
-
-**Mechanic:** [TBD - Drafting the exact rules for the "Frenzy/Go-go-go" pool reward structure for leaning into Quirks].
+*Note: The Shenanigan you pick at creation is just the seed. As your Gang grows, your Bosses might acquire new Quirks or lean into different stats, organically "multiclassing" the Gang over generations.*
 
 ---
 
@@ -56,7 +54,7 @@ The Bone Pile is a literal pile of remains belonging to your Gang's glorious dea
 
 **Mechanics:**
 The dead are not forgotten. A new Boss can draw upon the Bone Pile in two specific ways:
-1.  **Inspiration:** The new Boss may permanently retain one highly iconic Trick or Talent from a dead PC in the Bone Pile. (Note: Inspiration Tricks count toward your maximum Trick limit).
+1.  **Inspiration:** The new Boss may permanently retain one highly iconic Quirk or Talent from a dead PC in the Bone Pile. (Note: Inspiration Quirks count toward your maximum personal Quirk limit).
 2.  **Relics:** You may take a literal bone from a specific dead PC and attach it to an item, forging a Relic. Relics grant highly specific, powerful boons based on how the dead Boss lived or died. **A Boss may only ever have ONE Relic equipped at a time.**
 
 ---
@@ -69,13 +67,7 @@ Elders provide passive benefits to the Gang (e.g., better prices at the Lair mer
 
 ---
 
-## Gang Turf
-The Lair is massive and shared by everyone, but your Gang has a specific corner they call home: your **Turf**. 
 
-**Mechanics:**
-[TBD - Drafting rules for how Turf provides micro-boons and how it is upgraded compared to major Lair Upgrades].
-
----
 
 ## Gang Rivalries & Agendas
 Goblins are petty. While Gangs ostensibly cooperate on raids to extract loot for the Lair, they compete fiercely at home.

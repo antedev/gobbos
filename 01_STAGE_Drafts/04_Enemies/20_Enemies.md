@@ -1,61 +1,112 @@
-# Enemies
+# 20. Enemies
 
-The GM does not roll dice in Gobbos. Therefore, enemies are entirely deterministic. They don't test for success; their stats represent guaranteed threats that the players must actively survive and overcome. 
-
-## The Enemy Stat Block
-Every standard enemy has a simple 5-Stat block:
-
-1.  **Attack:** The base physical damage they deal automatically when they attack a Gobbo or Mob.
-2.  **Defence (Target Number):** The number of successes a Gobbo needs to roll on an Attack test to instantly kill this enemy.
-3.  **Movement:** How many Zones they can cross in a single action.
-4.  **Range:** Melee (same Zone) or Ranged (X Zones).
-5.  **Special:** A unique ability, behavior, or attack difficulty modifier.
-
-> *Example: Angry Farmer*
-> *Attack: 1 (Pitchfork) | Defence: 1 (Unarmored)*
-> *Movement: 1 | Range: Melee | Special: None*
-
-## Action Economy 
-Like PCs, standard Enemies get **2 Actions** per round (usually Move and Attack). They always act during the *Enemy Active Turn*. They can not use both action to Attack. 
-
-### Enemy Equipment
-Enemies do not use the player bulk or equipment rules. An enemy's Attack and Defence stats already account for their weapons and armor. 
-
-> *Example: An Armored Knight has Defence 3 because they wear plate mail, and Attack 3 because they swing a greatsword. The GM does not track the durability of the Knight's gear.*
-
-If a PC loots an enemy, the GM translates that flavor into PC mechanics (e.g., "You loot the Knight and find a *Heavy Iron Sword*: Bulk 2, +1d6 Attack").
+*Goblins are small, weak, and easily squished. The world is full of big, scary things that want to squash them. But a goblin doesn't fight one-on-one—they fight as a screeching horde, using dirty tricks and chaotic numbers to bring down the tall-men.*
 
 ---
 
-## Bosses & Wounds
-The "One-Hit Kill" system applies to 90% of the foes you fight. However, massive monsters and Elite Bosses use **Wounds**.
+## 1. Core Enemy Framework
 
-*   A Boss has a standard **Defence TN**, but also a **Wounds** track.
-*   To deal *one* Wound to a Boss, a player must roll successes equal to or greater than its Defence TN in a single attack. 
+All combat encounters in Gobbos are governed by three overarching rules that define how enemies operate:
 
-> *Example: A Cave Troll has Defence 3, Wounds 3. A Gobbo attacks and rolls 3 successes. The Troll loses 1 Wound.*
+### Deterministic Threats
+The GM never rolls dice. Enemies do not test for success or roll to hit. Their actions are guaranteed threats. If an enemy attacks a PC or **Mob**, it deals its listed damage automatically unless the player spends a saved action to **Dodge** (testing **Slink**) or **Parry** (testing **Tough**).
 
-**The Overkill Rule:** For every multiple of the Defence TN achieved on a single roll, the Boss takes an additional Wound. Rolling 6 successes against a Defence 3 Troll deals 2 Wounds!
+### The Three Enemy Scales
+Enemies are structured into three distinct mechanical types to determine how they take damage and die:
+1.  **Standard Enemies:** The default foe. They are **One-Hit Kill**. Rolling successes equal to or greater than their **Defence** **Target Number (TN)** instantly defeats them.
+2.  **Bosses & Elites:** Powerhouses that cannot be killed in a single strike. They track damage using a **Wounds** track.
+3.  **Enemy Mobs:** Groups of standard enemies acting as a single unit, using a shared **Dice-HP** pool.
 
 ---
 
-## Morale 
-Not every enemy fights to the death. Goblins win by being a terrifying, chaotic green swarm. Every enemy group has a static **Morale TN**. (e.g., Peasant = TN 1, Guard = TN 3, Undead = Immune (They are already dead, so they can fight to the death)).
+## 2. The Stat Block
+
+Every enemy is defined by a simple five-part stat block:
+
+*   **Attack:** The base physical damage the enemy deals automatically when it performs an attack action.
+*   **Defence (Target Number):** The number of **successes** a player must roll on an Attack test to deal a **Wound** or instantly kill the enemy.
+*   **Movement:** How many **Zones** the enemy can cross with a single action.
+*   **Range:** The distance at which the enemy can attack: Melee (same **Zone**) or Ranged (X **Zones**).
+*   **Special:** The creature's Ancestry, physical tags, and unique combat behaviors.
+
+> **Example: Angry Farmer**
+> *   **Attack:** 1 (Pitchfork)
+> *   **Defence:** 1 (Unarmored)
+> *   **Movement:** 1
+> *   **Range:** Melee
+> *   **Special:** None
+
+---
+
+## 3. The Trait Hierarchy Framework
+
+To minimize GM cognitive load and prevent rules bloat, all enemy behaviors and custom capabilities are structured into a strict three-layer rules hierarchy. This framework categorizes creature properties based on their scope and how they are resolved during play.
+
+### Layer 1: Ancestries
+Every creature belongs to exactly **one** Ancestry, which establishes its core behavioral and psychological foundation.
+*   **The Behavioral Foundation:** The Ancestry dictates how the creature reacts to **Morale Checks**, psychological conditions (such as **Terrified** or **Dumb**), and natural healing.
+*   **GM Resolution:** Ancestry rules are universal. The GM resolves ancestry behaviors using the main rules reference, meaning individual stat blocks do not need to print these rules.
+
+### Layer 2: Standardized Tags
+Standardized Tags modify a creature's physical properties, movement, or targeting capabilities. A creature may possess zero, one, or more standardized tags.
+*   **The Physical Modifier:** A tag represents a common physiological trait (such as flight, size scaling, passive armor, or stealth). Each tag applies a fixed, standard mechanical modifier to the core combat and movement rules.
+*   **GM Resolution:** Tags are standardized keywords. If an enemy has a tag on its stat block, its effect is resolved using the universal tags reference catalog.
+
+### Layer 3: Unique Statblock Traits
+Unique Statblock Traits are specialized behaviors or combat tactics custom-written for a specific creature type.
+*   **The Local Exception:** A unique trait is written directly in the "Special" field of the enemy's stat block. It applies a custom modifier that overrides standard rules when its specific trigger is met.
+*   **The Slot Limit:** To prevent rules bloat, standard enemies are strictly limited to a maximum of **one (1) unique statblock trait**. Elites and Bosses may hold a maximum of **two (2) unique statblock traits**.
+*   **GM Resolution:** Because unique traits are spelled out directly on the monster's stat block, the GM can read and resolve them in real-time without flipping to other rule documents.
+
+---
+
+## 4. Enemy Mobs (Swarms)
+
+Enemy Mobs represent swarms of standard, weak units acting as a single tactical squad.
+
+### Symmetrical Health (Dice-HP)
+An Enemy **Mob** of **Size X** (Size 1–5) is tracked using **X physical D6s** on the table, starting at the "6" face. 
+*   **Standard Damage:** Damage reduces the face of a single die. Spillover damage applies. 
+*   **AoE / Cleave:** **Area of Effect (AoE)** and Cleave attacks apply their damage to **every single die** in the Mob's pool simultaneously.
+    *   *Cleave Attacks:* A player using a weapon/ability with the `Cleave` trait can distribute their excess **successes** to kill multiple units in the Mob (each multiple of the unit's **Defence TN** removes 1 point of Mob Size).
+    *   *AoE Attacks:* An `AoE` attack (like a fire bomb) deals its flat damage directly to every die in the Mob's pool.
+
+### Deterministic Attack Scaling
+An Enemy **Mob**'s automatic attack damage scales with its size:
+$$\text{Mob Attack Damage} = \text{Base Unit Attack} + (\text{Current Size} - 1)$$
+
+### Mob Constraints
+*   **No Elite Mobs:** **Mobs** can only consist of standard, one-hit-kill enemies. Elite and Boss enemies must always be fought as individual units.
+*   **Mob Morale Units:** Each point of current **Mob** **Size** counts as one "unit" when calculating the 50% catastrophic loss threshold for group **Morale Checks**.
+
+---
+
+## 5. Bosses, Elites, and Wounds
+
+Elite units and Bosses utilize a **Wounds** track.
+*   To deal **1 Wound** to a Boss, a player must roll **successes** equal to or greater than its **Defence** **Target Number (TN)** in a single attack.
+
+>> **GOLDEN RULE: The Overkill Rule**
+>> For every multiple of the **Defence** **Target Number (TN)** achieved on a single roll, the Boss takes an additional **Wound**. 
+
+---
+
+## 6. Morale & Group Flight
+
+Every enemy group has a static **Morale TN** (e.g. Peasant = **Morale TN 1**, Guard = **Morale TN 3**).
 
 ### The Morale Check
-A Morale Check is triggered at the end of the round if the enemies suffered a catastrophic loss (e.g., losing 50% of their numbers, their Captain dying, or suffering massive explosive damage).
+A group **Morale Check** is triggered at the end of the round if the enemies suffered a catastrophic loss (e.g. losing 50% of their total units/**Mob** **Size**, their Commander dying, or suffering massive explosive damage).
 
-*   **The Roll:** The players roll a combined `Swarm Terror` pool of D6s. The number of dice equals the **Total Size of all surviving Mobs + Surviving PCs** in the current and adjacent Zones. 
-*   **The Result:** If the players roll successes equal to or greater than the Enemy's Morale TN, the enemies break!
-
-> *Example: There are 2 PCs alive, and they share a Size 4 Mob and a Size 2 Mob. A Morale Check triggers against the remaining Guards (TN 3). The players roll a massive pool of 8d6 (2 PCs + 6 Mob Size). They get four successes. The Guards break!*
+*   **The Roll:** The players roll a combined `Swarm Terror` pool of **d6s** as a **Normal** test (successes on 5 or 6). The number of dice in the pool equals the **total Size of all surviving Mobs + surviving PCs** in the current and adjacent **Zones**.
+*   **The Result:** If the players roll **successes** equal to or greater than the enemy group's **Morale TN**, the enemies break!
 
 ### Fleeing
-When enemies break, they drop all heavy loot (not weapon and armour, unless it makes it easier to flee) and must use their 2 Actions on their turns to frantically move toward the nearest exit or safety. 
+When enemies break, they drop all heavy loot and must use their 2 Actions on their turns to move toward the nearest exit or safety. If their escape path is physically blocked, fleeing enemies will use their actions to shove, smash, or attack whatever stands in their way.
 
 ### Regrouping (The Rally)
-TDB: Needs to be revisited. 
-Broken enemies will keep running until they leave the map. However, if there is a surviving **Enemy Commander** (like a Boss or Captain) who did *not* break, they can use an action to scream at the fleeing troops. This triggers a new, opposed Morale Check:
-*   The Gobbos roll their Swarm Terror pool against the Commander's Morale TN. 
-*   If the Gobbos triumph again, the troops keep running.
-*   If the Gobbos fail, the Commander successfully rallies the troops, and they stop fleeing.
+If there is a surviving **Enemy Commander** who did not break, they can use an action to rally the fleeing troops. This triggers an opposed Morale Check:
+*   The players roll their Swarm Terror pool against the Commander's **Morale TN**. 
+    *   *Fiction:* The players roll to represent the Goblins banging their shields, screaming, and actively drowning out the Commander's orders to keep the enemies panicked.
+*   If the players succeed, the troops keep running.
+*   If the players fail, the Commander successfully rallies the troops, and they stop fleeing.

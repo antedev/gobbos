@@ -1,12 +1,20 @@
 # Standard Equipment & Loadouts
 
-*UPDATING NEEDED!* - As per the crafting rules the equipment should be an extension of the crafting rules, not the other way around. This means that the crafting rules should define the tiers of equipment, and the equipment section should reflect that. 
-
 A Goblin's power comes from the shiny junk they carry. Equipment is highly abstracted to keep the game fast and focus entirely on **Bulk** (inventory management) and tactical choice.
 
-## Attributes and Traits
-
+## Attributes and Traits 
 Attributes and Traits give equipment predefinced effects and abilities. 
+
+### Quality
+Goblins typically dont spend too much time on crafting fine equipment, and thus they typically break fairly easy. This is denoted by the Quality aspect of the gear. 
+The base price multiplier is how much Loot that is required in order to acquire it in the Lair. 
+
+| Quality | Effect | Description | Price multiplier |
+|---|---|---|---|
+| Junk | Braks on 1 on the gear dice, cannot be repaired | Junk picked up from the floor, a broken bottle, plank or similar | x0,5 |
+| Scrappy / Goblin made | Breaks on 1 on the gear die, can be repaired | The average goblin stuff breaks afer a few usages, but can typically be repaired pretty easy as well | x1 |
+| Normal | Breaks on a Fumble, can be repaired | Normal quality of any Human or similar creation | x2 |
+| Superior | Never breaks | Dwarven or Master smith level | x10 |  
 
 ### Weapon traits 
 Weapon traits is used to differince weapons from each other, so that it feels different to bash with a mace instead of stab with a dagger. 

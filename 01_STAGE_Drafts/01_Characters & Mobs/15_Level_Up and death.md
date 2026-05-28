@@ -31,35 +31,29 @@ There are two main ways for a Gobbo to prove they are the biggest and the baddes
 
 XP is used to increase your four Main Stats (Tough, Slink, Brains, Mouth). Stats start at 1 and can naturally max out at 5. To increase a stat, you must spend XP equal to the *next* level (e.g., going from Tough 2 to Tough 3 costs 3 XP).
 
-## The Dual XP Economy
-When you return to the Lair from a raid, you tally up your XP from two parallel tracks. 
+## The Viking Return (Glory & Loot)
+When you return to the Lair from a raid, you tally up your rewards on two completely separate tracks: **Glory** and **Loot**.
 
-### 1. Raid Points (Glory)
-Raid points are gained by completing objectives, smashing important things, or surviving terrible odds. They are weightless—you carry them in your head as bragging rights. 
+### 1. Glory (Boss XP)
+Glory represents the stories of destruction, survival, and sheer goblin stupidity you bring back. Glory translates directly into **Boss XP**, which is used to increase your Boss's Stats (Tough, Slink, Brains, Mouth).
 
-At the end of the raid, all Raid Points earned by the team are tallied together. **The resulting XP payout is shared equally among all surviving PCs.** 
-*   **1 - 4 Raid Points:** 1 XP *(A safe, decent raid)*
-*   **5 - 9 Raid Points:** 2 XP *(A solid, successful raid)*
-*   **10 - 15 Raid Points:** 3 XP *(A heroic, stupidly brave raid)*
-*   **16+ Raid Points:** 4 XP *(A legendary, blood-soaked raid)*
+To encourage both teamwork and hilarious risk-taking, Glory is awarded in two ways:
+*   **Communal Glory:** XP awarded for completing main raid objectives or surviving terrible odds as a group. This XP is shared equally among all surviving PCs. This ensures the whole team levels up together.
+*   **Personal Glory:** XP awarded specifically to an individual Gobbo for pulling off something incredibly stupid, brave, or chaotic. Did you willingly jump into the path of a rolling boulder to save a shiny rock? You get Personal Glory XP. 
 
-### 2. Loot 
-Loot is heavy, slows you down, and requires mobs to carry it. But returning to the Lair with Loot is the only way to upgrade the Lair's base capabilities. 
+*XP Cost:* To increase a stat, you must spend XP equal to the *next* level (e.g., going from Tough 2 to Tough 3 costs 3 XP). Leveling should be relatively fast, as you are expected to die eventually!
 
-All standard Loot Value is pooled together at the end of the raid. Just like Glory, **the resulting XP from Loot is shared equally among all surviving PCs**. 
-*   **Every 20 Value of Loot brought back = 1 XP** 
-*   *The Dilemma:* Dropping heavy Loot during a raid might help you fight better and get more Raid Points. Dragging the Loot home risks getting your Goobos killed, but it guarantees XP and Lair upgrades if you survive.
+### 2. Loot (Lair Progression)
+Loot is heavy, slows you down, and requires your mobs to carry it. **Loot does not grant personal Boss XP.** Instead, it is the only way to upgrade the Lair's base capabilities. 
 
-### My Mob, My Loot (First Pick)
-TDB: Should we keep this? Some of the sort perhaps, but need to be revisited
-While all general Loot Value goes to the Lair's communal pool, specific, usable items (like a Named Weapon, a shiny new helmet, or a potion) are different. **If your specific Mob physically carried the item out of the dungeon, your Gang gets "First Pick" on it.** You can claim that item for your PC before the rest of the loot is dumped into the Lair's hoard. *This encourages PCs to desperately try to hold onto specific valuable items, even if it slows their own movement down.*
+All basic Loot Value is pooled together at the end of the raid. You dump the wealth onto the table, and the players use it collectively to buy Lair Upgrades (the mini-boardgame aspect of downtime). 
 
-### The Raid Boss (MVP) 
-TDB: Should we keep this? 
-At the end of a successful raid, after all XP is handed out, the players must vote on who the "Raid Boss" (MVP) was. This could be the Gobbo who dealt the most damage, made the funniest mistake, or saved the team from a wipe. 
+*   *The Dilemma:* Dropping heavy Loot during a raid might help you fight better and earn more Personal Glory. Dragging the Loot home risks getting your Boss killed, but it guarantees Lair upgrades for the next generation if you survive.
 
-The Raid Boss does *not* get extra permanent XP (which would unbalance the team). Instead, they are rewarded by the Lair with a **Flair Item** or a **Temporary Boon** for the *next* raid. 
-*   *Examples:* A shiny badge that grants +1 Grunt maximum for one raid, a volatile "Boom-Mushroom" consumable, or the right to command an extra mob of weak "Meat-Shield" gobbos for free.
+### 3. Oddity Drafting (The Shiny Stuff)
+While abstract Loot Value goes to the Lair pool, **Oddities** (the rare, specific monster parts and weird items used for Crafting) are highly coveted physical items. 
+
+At the end of the raid, all Oddities brought back are dumped onto the table. The players must distribute them via **Player Consensus**. You argue, bargain, or trade them amongst yourselves to decide which Boss gets to keep which Oddity for their Gang. If you want the Dragon Gland for your flamethrower, you better convince the other players why your Boss deserves it!
 
 ## Retirement (The Elders)
 What happens if a Gobbo actually survives long enough to reach the peak of goblin perfection? 

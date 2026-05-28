@@ -31,13 +31,17 @@ Mouth determines how many Mobs you can command and gives you **Free Orders** tha
 *   **Level 5 (Max):** Max 3 Mobs. **3 Free Orders per round.**
 
 ### Brains (B)
-*Used for noticing stuff, tinkering, traps, and magic.*
-Brains determines your **Utility Slots** (for carrying Magic Words or Contraptions without consuming standard Bulk). *(TODO: These mechanics will be expanded in the upcoming Magic and Crafting rules and subject to change).*
-*   **Level 1 (Starting):** 1 Utility Slot.
-*   **Level 2:** **2 Utility Slots.** 
-*   **Level 3:** **3 Utility Slots.** (Minimum to use Magic Words)
-*   **Level 4:** **4 Utility Slots.** 
-*   **Level 5 (Max):** **5 Utility Slots.**
+*Used for noticing stuff, crafting, traps, and magic.*
+Brains provides two independent budgets — both equal to your Brains score, but tracked separately:
+
+- **Utility Slots** — for carrying Magic Words or Contraptions without consuming standard Bulk (see [[Magic]]).
+- **Crafting Capacity** — the maximum number of Oddities you can attach to a single piece of Custom Gear (see [[Crafting]]). A Brains 2 goblin can install up to 2 Oddities on one item.
+
+*   **Level 1 (Starting):** 1 Utility Slot. Crafting Capacity 1.
+*   **Level 2:** **2 Utility Slots.** Crafting Capacity 2.
+*   **Level 3:** **3 Utility Slots.** Crafting Capacity 3. (Minimum to use Magic Words)
+*   **Level 4:** **4 Utility Slots.** Crafting Capacity 4.
+*   **Level 5 (Max):** **5 Utility Slots.** Crafting Capacity 5.
 
 ## Secondary Stats
 The secondary stats are derived from your Main Stats, but use the progression tracks above rather than complex formulas. 
@@ -71,5 +75,5 @@ If you roll a Critical success on a test, your Gobbos are impressed and you gain
 
 
 ## Abilities 
-#### Tricks
-Tricks are what make your Gobbo unique from any other Gobbos, giving you an edge in specific circumstances. Typically you can gain Tricks as you play, but you also get some Tricks when you start, depending on the level you start at.
+#### Quirks
+Quirks are what make your Gobbo unique from any other Gobbos, giving you an edge in specific circumstances. Typically you can gain Quirks as you play, but you also get some Quirks when you start, depending on the level you start at.
