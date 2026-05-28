@@ -1,104 +1,119 @@
 # Gobbos Product Roadmap
 
-**Role: The Product Owner**
+**Role: The Product Owner**  
+**Release Goal: v1.0 (The Minimum Viable Rulebook)**
 
-This is the refined, granular roadmap. I have unpacked the massive "Game Modules" into distinctly scoped Epics, Features, and Stories/Tasks so we avoid giant tickets that never get completed. We are moving toward **v1.0 (The Minimum Viable Rulebook)**.
-
----
-
-## 🟢 EPIC 1: Combat & Mechanics Baseline (v0.1)
-*Goal: Clear the final minor technical debt in the core chassis. These are quick tasks.*
-
-**Feature 1.1: Fleeing & Regrouping Mechanics**
-*   [ ] **Task:** Define Fleeing mechanics for PCs and Mobs (`02 Combat.md`).
-*   [ ] **Task:** Solidify Enemy Regrouping/Rallying mechanics (`20_Enemies.md`).
-
-**Feature 1.2: Resolve Mob & Progression TBDs**
-*   [ ] **Task:** Define "Terrifying Enemy" conditions for Uncontrolled Mob behavior (`13_Goblin_mob.md`).
-*   [ ] **Task:** Integrate "For Fuck Sake" (Quirks/Chaos) into Uncontrolled Mob behavior to add flavor to raids and define the reward loop for leaning into it.
-*   [ ] **Task:** Make a Go/No-Go decision on the "My Mob, My Loot" rule (`16_Level_Up and death.md`).
-*   [ ] **Task:** Make a Go/No-Go decision on the "Raid Boss (MVP)" rule (`16_Level_Up and death.md`).
-*   [ ] **Story:** Standardize Elder Benefits by drafting a table of 3-5 passive gang boons.
-*   [ ] **Task:** Define the "Infamy XP-boost" system to set baseline stats for new Bosses instead of starting at 1,1,1,1.
-*   [ ] **Task:** Define how "Inspiration" lets a new Boss retain select talents/Tricks from a dead PC in The Bone Pile.
+This roadmap is organized around the **three core gameplay loops** of Gobbos. By grouping features and tasks by their operational loop rather than raw directories, we keep our design aligned with the core tenets: fast tactical fun, zero post-roll math, high chaos, goblin flavor, and meaningful roguelite progression.
 
 ---
 
-## 🔵 EPIC 2: The Boss Engine (v0.2)
-*Goal: Give players the tools to build mechanically distinct Bosses.*
+## ⚔️ LOOP 1: The Raid (Tactical Skirmish)
+*Goal: Solidify the in-raid engine. Players command mobs, use Quirks, and cast volatile magic in active zones.*
 
-**Feature 2.1: The Tricks Framework (formerly Tricks)**
-*   [x] **Story:** Establish the fundamental architecture (Acquisition Limits, Costs, and Keywords).
-*   [ ] **Task:** Rules Lawyer Audit: Define missing keywords (Grit, Status Effects, Free/Standard Actions) and resolve conflicts (Reaction vs Interrupt).
-*   [ ] **Task:** Draft the General, Tough, Slink, Mouth, and Brains Trick tables.
-*   [ ] **Story:** Define the "Frenzy/Go-go-go" Pool (similar to Grit but gang/mob-focused) and how it fuels or rewards chaotic Gang Quirks.
+### Epic 1: Combat Chassis (Physics & Morale)
+*Goal: Establish baseline movement, actions, and morale resolution.*
+*   **Feature 1.1: Fleeing & Rallying Mechanics**
+    *   [ ] **Task:** Define PC and Mob Fleeing mechanics during active combat (`02 Combat.md`).
+    *   [x] **Task:** Solidify Enemy Regrouping/Rallying mechanics (`20_Enemies.md`).
+*   **Feature 1.2: Uncontrolled Mob Chaos**
+    *   [ ] **Task:** Define "Terrifying Enemy" conditions that trigger uncontrolled panic (`13_Goblin_mob.md`).
+    *   [ ] **Task:** Integrate "For Fuck Sake" (Quirks/Chaos) into the Uncontrolled Mob behavior priority list.
 
-**Feature 2.2: Mutations (Chaos Traits)**
-*   [ ] **Story:** Establish how Mutations are acquired (Permanent trait? Exposure to bad magic? Potions?).
-*   [ ] **Task:** Create a D20 table of chaotic, double-edged physical Gobbo mutations.
+### Epic 2: The Boss Engine (Stats & Quirks)
+*Goal: Give players the tools to build and play unique goblin leaders.*
+*   **Feature 2.1: The Quirks & Twists Framework**
+    *   [x] **Story:** Establish the fundamental modular powers architecture (Acquisition Limits, Costs, and Keywords in `16_Unified_Modular_Powers_System.md`).
+    *   [ ] **Task:** Rules Lawyer Audit: Define core mechanics in the index (`06_Keywords Index.md`):
+        *   **Grit** (Health and resilience)
+        *   **Size** (for PCs vs. Mobs)
+        *   **Cover** (Partial vs. Full Cover)
+        *   **Standard / Free Actions**
+        *   **Status Effects** (Prone, Stunned, Bleeding, Poisoned)
+    *   [ ] **Task:** Draft the General, Tough, Slink, Mouth, and Brains Quirk/Twist master tables (`14_Quirks.md`).
+*   **Feature 2.2: Mutations (Chaos Traits)**
+    *   [ ] **Story:** Establish how Mutations are acquired (e.g., radiation, magical mishaps, potions).
+    *   [ ] **Task:** Create a D20 table of chaotic, double-edged physical Gobbo mutations.
 
----
-
-## 🟣 EPIC 3: Words of Chaos (Magic) (v0.3)
-*Goal: Build the spellcasting system we pinned earlier. This is complex enough to be its own Epic.*
-
-**Feature 3.1: Core Spellcasting Logistics**
-*   [ ] **Story:** Finalize the "Word-Combining" mechanic (e.g., Noun + Adjective).
-*   [ ] **Story:** Define the action economy of casting (Does it cost a Standard Action? Grunt? Grit?).
-*   [ ] **Story:** Determine how Magic interacts with Mobs (Can you target your own mob with a buff without them panicking?).
-
-**Feature 3.2: Repercussions & Mishaps**
-*   [ ] **Task:** Draft the "Magical Mishap/Fumble" table for rolling too many 1s while casting.
-
----
-
-## 🟡 EPIC 4: Greed & Gear (Economy) (v0.4)
-*Goal: The physical rewards. How Gobbos get loot, and what they spend it on.*
-
-**Feature 4.1: Equipment Tables & Named Items**
-*   [ ] **Task:** Draft the standard Weapons Table with associated Bulk costs and bonus dice.
-*   [ ] **Task:** Draft the standard Armor Table with Bulk costs and Dodge bonuses.
-*   [ ] **Task:** Draft standard utility gear (Bombs, grappling hooks, nets, caltrops).
-*   [ ] **Task:** Define "Utility Slots" for carrying Brains-based Contraptions and Magic without costing Bulk.
-*   [ ] **Task:** Define how "Named Items" inherit magical traits upon a Boss's death, and tie it to the core Equipment rules.
-
-**Feature 4.2: The Lair (Base-Building) & The Hoard**
-*   [ ] **Story:** Establish the Lair Currency logic (Raw Loot Value vs. extracting specific physical items like an Anvil).
-*   [ ] **Story:** Define Lair Upgrade Tiers and the mechanical boons they grant the Gang.
-*   [ ] **Story:** Draft a lightweight "Crafting" system (Taping junk together, crafting Relics using Bones from dead Bosses).
-*   [ ] **Task:** Define "The Hoard" mechanics and how Bosses outfit their Mob before a raid using stored loot.
+### Epic 3: Words of Chaos (Goblin Magic)
+*Goal: Build the push-your-luck spellcasting system using Brains dice pools.*
+*   **Feature 3.1: Magic Dice Casting (GDR-005)**
+    *   [x] **Story:** Finalize the pattern-matching "Lock & Push" casting loop and Success Set matching spell tiers.
+    *   [x] **Story:** Define "Chaotic Leakage" side-effects based on non-success sets.
+    *   [ ] **Task:** Create the draft files in the magic directory (`01_STAGE_Drafts/08_Magic/`).
+*   **Feature 3.2: Power Words & Mishaps**
+    *   [ ] **Story:** Define the master list of Power Words (Narrative Tags) available to mages.
+    *   [ ] **Task:** Draft the "Magical Mishap/Fumble" table for when players Farkle on casting.
 
 ---
 
-## 🟠 EPIC 5: The Dungeon & The Wilds (Adventure Framework) (v0.5)
-*Goal: How Gobbos move through the world and how a session is structured.*
+## ⛺ LOOP 2: The Lair & Downtime (Metagame & Crafting)
+*Goal: Resolve the downtime loop. Players pool loot, upgrade their base, and scrap-craft custom gear.*
 
-**Feature 5.1: Travel Mechanics**
-*   [ ] **Story:** Define abstract macro-movement (Hex crawl or point-crawl/node-based?).
-*   [ ] **Story:** Define Attrition mechanics (Food consumption. How do you feed a Size 5 Mob on the road?).
+### Epic 4: Greed & Gear (The Economy)
+*Goal: Standardize found items, carrying, and base resource rules.*
+*   **Feature 4.1: Equipment Alignment**
+    *   [ ] **Task:** Rewrite `33_Equipment.md` to define standard weapons/armor as base zero-Oddity chassis.
+    *   [ ] **Task:** Resolve `TBD` tags for Weapon traits: `Cutting`, `Poking`, `Short`.
+    *   [ ] **Task:** Resolve `TBD` tags for Armor traits: `Light`.
+*   **Feature 4.2: Utility Capacity**
+    *   [ ] **Story:** Establish "Utility Slots" for carrying Brains-based contraptions and magic without using standard Bulk.
 
-**Feature 5.2: The Raid Structure**
-*   [ ] **Story:** Define "Raid Objectives" and exactly how Glory/Raid Points are awarded.
-*   [ ] **Story:** Define Extraction mechanics (Escaping the dungeon with the loot intact).
+### Epic 5: Communal Crafting (Scrap-Taping)
+*Goal: Allow Goblins to build unstable custom weapons and armor.*
+*   **Feature 5.1: The Custom Gear Loop (GDR-003)**
+    *   [x] **Story:** Draft the Crafting Roll (Taming Successes vs. Chaos 1s), Break Roll, Scrap Cascade, and Blueprints (`34_Crafting.md`).
+    *   [x] **Story:** Define the Element Synthesis constraint rules.
+    *   [ ] **Task:** Rules Lawyer Audit: Validate Bite level balances (B0–B3) and Workshop Level constraints.
+
+### Epic 6: Base Building (The Lair Boardgame)
+*Goal: Upgrade the shared base using pooled gold and turf dominance rules.*
+*   **Feature 6.1: Communal Rooms**
+    *   [ ] **Story:** Establish the Lair Currency logic (Raw Loot Value vs. physical salvage like an Anvil).
+    *   [ ] **Task:** Create a draft of Lair upgrade rooms in the base directory (`01_STAGE_Drafts/05_Base/`).
+*   **Feature 6.2: Gang Dominance**
+    *   [ ] **Story:** Define rules for how Gangs assert dominance over specific upgrades to claim exclusive bonuses.
 
 ---
 
-## 🟤 EPIC 6: The Game Master's Arsenal (v0.6)
-*Goal: Tools for the GM to kill goblins efficiently.*
+## 💀 LOOP 3: The Legacy & Generation Leap (Roguelite Core)
+*Goal: Drive the "Next Gobbo Up" metagame. Boss deaths fuel Gang power and new character advances.*
 
-**Feature 6.1: The Bestiary**
-*   [ ] **Task:** Stat 5 common minion enemies (Guards, Dogs, Peasants, Huge Rats).
-*   [ ] **Task:** Stat 3 Boss Monsters using the Wounds mechanic (Troll, Dragon, Human Captain).
+### Epic 7: The Bone Pile & Patron Saints
+*Goal: Ensure character death is rewarding and leaves a permanent mark.*
+*   **Feature 7.1: Ancestral Legacy**
+    *   [ ] **Story:** Draft a table of 10 Patron Saint Boons and Catches based on dead PC histories (`15_Level_Up and death.md`).
+    *   [ ] **Task:** Define how Named Items inherit magical traits upon a Boss's death.
+    *   [ ] **Task:** Draft the Bone Oddity trait creation table.
 
-**Feature 6.2: Scenario Generation Tables**
-*   [ ] **Task:** Draft random Loot tables (Shiny things vs. Useful things).
-*   [ ] **Task:** Draft random Hazard/Trap tables.
+### Epic 8: Gang Progression
+*Goal: Standardize the Gang as the persistent leveling "Class".*
+*   **Feature 8.1: Infamy & Shenanigans**
+    *   [ ] **Task:** Define the "Frenzy/Go-go-go" pool reward rules when players trigger "For Fuck Sake" Shenanigan compulsions (`12_Gang.md`).
+    *   [ ] **Task:** Draft rules for Gang-specific personal raid missions (Agendas).
+*   **Feature 8.2: Retirement**
+    *   [ ] **Story:** Standardize Elder Benefits by drafting a table of 3–5 passive gang boons (`15_Level_Up and death.md`).
 
 ---
 
-## ⚫ EPIC 7: Physical Play Tools (v1.0)
-*Goal: Make the game playable at a physical table.*
+## 🗺️ Campaign & GM Tools
+*Goal: Help the GM generate adventures and run enemies easily.*
 
-**Feature 7.1: Assets**
-*   [ ] **Task:** Design the Boss Character Sheet (incorporating the Pile of Bones).
-*   [ ] **Task:** Design the Mob/Gang tracking Sheet.
+### Epic 9: Travel & Adventure
+*Goal: Structure travel and raids.*
+*   **Feature 9.1: Hex & Point Crawl Travel**
+    *   [ ] **Story:** Define macro-movement and food attrition mechanics for large mobs on the road (`01_STAGE_Drafts/07_Travel/`).
+*   **Feature 9.2: Raid Extraction**
+    *   [ ] **Story:** Define objective scaling and extraction points.
+
+### Epic 10: GM Arsenal
+*Goal: Monster stat blocks and encounter generation.*
+*   **Feature 10.1: Unified Mobs & Scale (GDR-004)**
+    *   [x] **Story:** Establish the three-layer enemy trait hierarchy (Ancestries, Standard Tags, Unique Statblock Traits).
+    *   [x] **Story:** Finalize the deterministic Enemy Mob attack formula and Dice-HP mechanics (`20_Enemies.md`).
+*   **Feature 10.2: Bestiary & Hazards**
+    *   [ ] **Task:** Stat 5 common minion units and 3 Boss/Elite monsters using the Wounds overkill rule.
+    *   [ ] **Task:** Create random Loot Tables (Shiny vs. Useful) and Trap/Hazard tables.
+
+### Epic 11: Physical Play Tools
+*   [ ] **Task:** Design the Boss Character Sheet (with the Bone Pile tracker).
+*   [ ] **Task:** Design the Mob/Gang Tracker Sheet.

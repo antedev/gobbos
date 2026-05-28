@@ -20,11 +20,11 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 
 ## Combat & Movement
 *   **Zone:** An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.
-*   **Cover:** [TODO: Define] Rules for Partial and Full Cover mitigation.
+*   **Cover:** Defensive positioning against ranged attacks. Partial cover grants a **Boon** (+1d) to Dodge, or imposes a **Bane** (-1d) on attacks. Full cover blocks targeting. See [[02 Combat]].
 *   **Dragging:** Pulling Loot that exceeds your carry capacity. Halves your Movement and imposes penalties.
-*   **Standard Action:** [TODO: Define] The main action spent on a turn (e.g., Move, Attack, Order).
-*   **Free Action:** [TODO: Define] Minor actions that cost no Standard Actions.
-*   **Reaction:** [NOTE: Previously mixed up with Interrupt, this replaces both] An action taken out of turn.
+*   **Standard Action:** The primary actions spent on a turn (3 per round). Used for Move, Attack, Plunder, Order, or Manipulate. See [[02 Combat]].
+*   **Free Action:** Minor or immediate actions that cost no Standard Actions (e.g. dropping a weapon or speaking). See [[02 Combat]].
+*   **Reaction:** An action taken out of turn in response to a trigger (e.g., Dodge/Parry), costing a saved Standard Action. See [[02 Combat]].
 *   **Passive:** A Quirk or rule that is either always active or triggered automatically without costing a Standard Action, Grunt, or Free Order.
 
 ## Loot, Gear & Conditions

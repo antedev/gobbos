@@ -3,7 +3,11 @@ Combat is a key mechanic in Gobbos. The combat can either be only the PC against
 The combat is structured in a number of rounds, that are repeated until the combat ends. All the players act in the Players Active turn, and then the enemies act in the Enemy Active turn. But both can use Reactions to react to anything that the other does. 
 
 ## Actions
-Every PC has **three (3) Actions** and **one (1) Free Order Action** per round. Actions are reset at the start of each round. The players can use their Actions during the Players Active turn, or save them up for the Enemy Active turn to react to what the enemies do. 
+Actions represent how much a goblin can accomplish in a round. There are three types of actions:
+1.  **Standard Actions:** Every PC has **three (3) Standard Actions** per round, reset at the start of each round. Standard Actions are spent to Move, Attack, Plunder, Manipulate, or Order. They can be saved to be used as Reactions.
+2.  **Free Actions:** Minor tasks that cost no Standard Actions (e.g., dropping an item, speaking, or activating passive quirks).
+3.  **Reactions:** Actions taken out of turn in response to enemy actions (e.g., Dodge or Parry). You must spend a saved Standard Action to perform a Reaction.
+Additionally, PCs have **one (1) Free Order Action** per round (which does not count toward their 3 Standard Actions).
 
 Each Mob has **two (2) actions**, which are also reset at the start of each round, but they only act when Ordered. When they are left to their own devices (see [[Uncontrolled Mobs]]), they act on their own as per a predefined priority list
 
@@ -46,6 +50,15 @@ The Order action is used to give commands to your goblins, granting a Mob their 
 *   **Free Orders & Maximum Mobs:** Your ability to command the swarm is dictated strictly by your **Mouth** stat progression (see [[Stats]]). As you level up Mouth, you can command more Mobs simultaneously, and you are granted additional **Free Orders** per round. You never have to spend your Standard Actions to issue these Free Orders!
 
 
+## Cover
+Taking cover behind walls, pillars, or upturned tables protects you from ranged attacks. There are two levels of cover:
+*   **Partial Cover:** You are partially blocked (e.g., behind a low barricade, crate, or thick foliage).
+    *   **Attacking a target in Partial Cover:** If a PC or Mob attacks a target in Partial Cover, the attack roll suffers a **Bane** (-1d).
+    *   **Defending while in Partial Cover:** If you are in Partial Cover and are targeted by a ranged attack, you gain a **Boon** (+1d) to your **Dodge** test.
+*   **Full Cover:** You are completely hidden behind a solid obstacle (e.g., a stone pillar, wall, or closed door).
+    *   You cannot be targeted by ranged attacks from that direction. An attacker must move to clear their line of sight or bypass the obstacle before they can attack.
+
+
 ## The Combat loop
 The combat follows a structured loop, that is repeated until the combat ends. 
 0. Combat Setup
@@ -85,6 +98,10 @@ The GM checks for any changes in the Environment, such as spreading fire or smok
 If the combatants are still willing to fight, go back to the Round start, and resets everyone's actions.
 ### Combat End 
 If there are no one fighting on one side, or one side gives up or flees, the Combat ends. 
-#### Fleeing
-XXX Todo
+#### Fleeing (Tactical Retreat)
+Goblins are cowards at heart, and running away is a highly viable survival strategy.
+*   **Escape Zones:** To flee an encounter, a PC or Mob must move into a designated escape zone or exit.
+*   **Disengaging & Opportunity Attacks:** If a PC or Mob attempts to leave a Zone containing alert enemies, they trigger a reactionary Opportunity Attack from each enemy in the zone. To prevent this, they must spend a Standard Action to Disengage (testing **Slink** against the highest enemy **Defence TN**). On a success, they may move out of the Zone safely.
+*   **Carrying Bulk:** Goblins fleeing with heavy treasure are slowed. Standard movement and dragging penalties for **Bulk** apply while fleeing. A PC or Mob can choose to drop their loot as a Free Action to restore full movement speed.
+*   **Mob Fleeing:** Mobs flee when given a "Scatter" or "Retreat" Order, or automatically when a failed **Morale Check** triggers group panic.
 
