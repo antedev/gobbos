@@ -6,7 +6,8 @@
   "scripts": {
     "build": "node build.js",
     "dev": "node build.js && npx live-server dist --port=3000",
-    "serve": "npx live-server dist --port=3000"
+    "serve": "npx live-server dist --port=3000",
+    "start": "node server.js"
   },
   "dependencies": {
     "markdown-it": "^14.1.0",
