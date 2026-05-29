@@ -637,9 +637,9 @@ $\text{Mob Attack Damage} = \text{Base Unit Attack} + (\text{Size} - 1)$
 <p>If a GM has to manually determine unique Difficulty and Target Numbers (TN) for every wall, lock, trap, and debris pile in the middle of a chaotic fight, the pacing slows down. Furthermore, we must ensure all hazards resolve without violating the golden rule: <strong>The GM never rolls dice!</strong></p>
 <hr>
 <h2 id="2-proposed-design-3" tabindex="-1">2. Proposed Design</h2>
-<p>This design adapts the “Room Target” mechanic from <em>Index Card RPG</em> (ICRPG) into a localized <strong>Zone Profile</strong> system, and introduces a library of modular <strong>Zone Traits</strong> (Problems and Opportunities) to easily construct tactical, chaotic battlefields.</p>
-<h3 id="2-1-the-zone-profile-the-room-tn-adaptation" tabindex="-1">2.1. The Zone Profile (The “Room TN” Adaptation)</h3>
-<p>Every Zone in an encounter has a default <strong>Zone Profile</strong> consisting of a <strong>Difficulty</strong> and a <strong>Target Number (TN)</strong> (e.g., <strong>Normal:1</strong>, <strong>Normal:2</strong>, or <strong>Hard:1</strong>).</p>
+<p>This design adapts the “Room Target” mechanic from <em>Index Card RPG</em> (ICRPG) into a localized <strong>Zone Profile</strong> system, and defines the structural framework of <strong>Zone Traits</strong>.</p>
+<h3 id="2-1-zone-profiles" tabindex="-1">2.1. Zone Profiles</h3>
+<p>Every Zone in an encounter is assigned a default <strong>Zone Profile</strong> consisting of a <strong>Difficulty</strong> and a <strong>Target Number (TN)</strong> (e.g., <strong>Normal:1</strong>, <strong>Normal:2</strong>, or <strong>Hard:1</strong>).</p>
 <blockquote>
 <blockquote>
 <p><strong>THE ZONE PROFILE RULE:</strong>
@@ -651,66 +651,98 @@ Any general environmental interaction, traversal, or search check attempted with
 </blockquote>
 <p>GMs can adjust the difficulty level of a specific task based on tools or circumstances (e.g., using professional climbing gear turns a traversal check from <strong>Normal:2</strong> to <strong>Easy:2</strong>), but the base successes needed remain tied to the Zone itself.</p>
 <hr>
-<h3 id="2-2-zone-traits-library-problems-and-opportunities" tabindex="-1">2.2. Zone Traits Library: Problems &amp; Opportunities</h3>
-<p>Zones can be customized with modular, predefined traits. These are split into <strong>Problems</strong> (Hazards/Obstacles) and <strong>Opportunities</strong> (Tactical benefits).</p>
-<h4 id="problems-hazards-and-obstacles" tabindex="-1">Problems (Hazards &amp; Obstacles)</h4>
+<h3 id="2-2-zone-traits" tabindex="-1">2.2. Zone Traits</h3>
+<p>A <strong>Zone Trait</strong> is a mechanical modifier or effect associated with a specific Zone. Traits represent either obstacles players must overcome or advantages they can exploit. All traits fall under two general categories:</p>
+<ol>
+<li><strong>Problems (Hazards &amp; Obstacles):</strong> Negative environmental features.
+<ul>
+<li><em>Triggering:</em> Problems trigger either passively (continuous effect while occupying the zone), on entry (as soon as a creature enters the zone), or at a specific phase in the round (e.g. End of Round).</li>
+<li><em>Resolution:</em> To avoid negative effects, a player must make a saving throw (a relevant stat check, typically <strong>Slink</strong> or <strong>Tough</strong>) against the <strong>Zone Profile</strong>. On a failure, they suffer Wounds, Size damage (for Mobs), or a negative <strong>Condition</strong>.</li>
+<li><em>GM Rolling:</em> GMs never roll to see if a hazard succeeds; the GM simply announces the hazard’s trigger and the affected player rolls to resist.</li>
+</ul>
+</li>
+<li><strong>Opportunities (Tactical Features &amp; Treats):</strong> Interactive or beneficial environmental features.
+<ul>
+<li><em>Triggering &amp; Resolution:</em> Opportunities can be passive (e.g., providing Cover or Boons to attacks) or interactive. Goblins can interact with an interactive opportunity by spending a Standard Action (usually <strong>Manipulate</strong> or <strong>Attack</strong>) and testing a relevant stat against the <strong>Zone Profile</strong> to yield a benefit.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="3-predefined-zone-traits" tabindex="-1">3. Predefined Zone Traits</h2>
+<p>These are standardized, modular Zone Traits that GMs can “slap” onto any Zone during setup.</p>
+<h3 id="3-1-predefined-problems-hazards-and-obstacles" tabindex="-1">3.1. Predefined Problems (Hazards &amp; Obstacles)</h3>
 <ul>
 <li><strong>Burning (Hazard):</strong> The Zone is on fire.
 <ul>
-<li><em>Rules:</em> Any PC or Mob that enters this Zone, or starts their turn here, must pass a <strong>Slink</strong> test against the <strong>Zone Profile</strong> or take <strong>1 Wound</strong> (PC) or <strong>1 Size damage</strong> (Mob). Goblins can spend a Standard Action to extinguish the fire on themselves or an adjacent ally.</li>
+<li><em>Trigger:</em> Entering the Zone, or starting a turn inside it.</li>
+<li><em>Rules:</em> Must pass a <strong>Slink</strong> test against the <strong>Zone Profile</strong> or take <strong>1 Wound</strong> (PC) or <strong>1 Size damage</strong> (Mob). Goblins can spend a Standard Action to extinguish the fire on themselves or an adjacent ally.</li>
 </ul>
 </li>
 <li><strong>Narrow (Obstacle):</strong> A tight chokepoint or low crawlspace.
 <ul>
+<li><em>Trigger:</em> Passive.</li>
 <li><em>Rules:</em> The maximum Mob size that can occupy this Zone without penalty is <strong>Size 2</strong>. Mobs of <strong>Size 3+</strong> suffer a permanent <strong>Bane</strong> (-1d) to all attack rolls and physical tests, and their Movement is capped at <strong>1 Zone</strong>. Giant enemies cannot enter.</li>
 </ul>
 </li>
 <li><strong>Slippery (Obstacle):</strong> Ice, grease, or wet slime.
 <ul>
-<li><em>Rules:</em> When entering this Zone, a PC or Mob must test <strong>Slink</strong> against the <strong>Zone Profile</strong>. On a failure, they fall <strong>Prone</strong> and their movement ends immediately.</li>
+<li><em>Trigger:</em> Entering the Zone.</li>
+<li><em>Rules:</em> Must test <strong>Slink</strong> against the <strong>Zone Profile</strong>. On a failure, the creature falls <strong>Prone</strong> and their movement ends immediately.</li>
 </ul>
 </li>
 <li><strong>Smoky (Obstacle):</strong> Dense smoke, fog, or spores.
 <ul>
+<li><em>Trigger:</em> Passive.</li>
 <li><em>Rules:</em> Ranged attacks passing through or targeting someone inside this Zone suffer a <strong>Bane</strong> (-1d). The Zone grants <strong>Partial Cover</strong> to anyone inside it.</li>
 </ul>
 </li>
 <li><strong>Toxic (Hazard):</strong> Poison gas, sewer fumes, or acid spray.
 <ul>
-<li><em>Rules:</em> Any PC or Mob starting their turn here must test <strong>Tough</strong> against the <strong>Zone Profile</strong>. On a failure, they suffer the <strong>Weakened</strong> condition until they spend a Standard Action to catch their breath in a clean zone.</li>
+<li><em>Trigger:</em> Starting a turn inside the Zone.</li>
+<li><em>Rules:</em> Must test <strong>Tough</strong> against the <strong>Zone Profile</strong>. On a failure, they suffer the <strong>Weakened</strong> condition until they spend a Standard Action to catch their breath in a clean zone.</li>
 </ul>
 </li>
 <li><strong>Deep Water (Obstacle):</strong> Flooded area or rapid currents.
 <ul>
+<li><em>Trigger:</em> Passive / Interactive.</li>
 <li><em>Rules:</em> Traversing this Zone requires a <strong>Move</strong> action to travel only <strong>1 Zone</strong> (ignoring standard movement speed). If forced to swim or stay afloat, creatures must test <strong>Tough</strong> against the <strong>Zone Profile</strong> or begin drowning (taking <strong>1 Wound</strong> per round).</li>
 </ul>
 </li>
 </ul>
-<h4 id="opportunities-tactical-features-and-treats" tabindex="-1">Opportunities (Tactical Features &amp; Treats)</h4>
+<h3 id="3-2-predefined-opportunities-tactical-features-and-treats" tabindex="-1">3.2. Predefined Opportunities (Tactical Features &amp; Treats)</h3>
 <ul>
 <li><strong>High Ground (Tactical Feature):</strong> A ledge, platform, or pile of crates.
 <ul>
+<li><em>Trigger:</em> Passive.</li>
 <li><em>Rules:</em> Ranged attacks made from this Zone gain a <strong>Boon</strong> (+1d). Melee attacks made by enemies outside this Zone against targets inside this Zone suffer a <strong>Bane</strong> (-1d).</li>
 </ul>
 </li>
 <li><strong>Junk Pile (Treat):</strong> Scrap metal, discarded weapons, or rubble.
 <ul>
+<li><em>Trigger:</em> Interactive (Standard Action: <strong>Manipulate</strong>).</li>
 <li><em>Rules:</em> Goblins can spend a Standard Action (<strong>Manipulate</strong>) to search the pile (test <strong>Notice</strong> against the <strong>Zone Profile</strong>). On a success, they find a throw-able object (deals <strong>1 damage</strong> ranged) or a random piece of low-grade loot.</li>
 </ul>
 </li>
 <li><strong>Shadowy (Tactical Feature):</strong> Dark alcoves or heavy curtains.
 <ul>
+<li><em>Trigger:</em> Passive.</li>
 <li><em>Rules:</em> Goblins attempting to Hide in this Zone gain a <strong>Boon</strong> (+1d) on their <strong>Slink</strong> tests.</li>
 </ul>
 </li>
 <li><strong>Shoring (Interactive):</strong> Structural supports or pillars.
 <ul>
-<li><em>Rules:</em> Goblins can spend a Standard Action (<strong>Manipulate</strong>) to collapse the supports. This triggers a cave-in: the Zone gains the <strong>Crumbling</strong> hazard (a random target must test <strong>Notice</strong> against the <strong>Zone Profile</strong> each round or take <strong>1 Wound</strong>) and blocks all movement to adjacent zones until cleared.</li>
+<li><em>Trigger:</em> Interactive (Standard Action: <strong>Manipulate</strong> or <strong>Attack</strong>).</li>
+<li><em>Rules:</em> Goblins can spend a Standard Action to collapse the supports. This triggers a cave-in: the Zone gains the <strong>Crumbling</strong> hazard (a random target must test <strong>Notice</strong> against the <strong>Zone Profile</strong> each round or take <strong>1 Wound</strong>) and blocks all movement to adjacent zones until cleared.</li>
 </ul>
 </li>
 </ul>
 <hr>
-<h2 id="3-alignment-with-design-tenets-2" tabindex="-1">3. Alignment with Design Tenets</h2>
+<h2 id="4-examples-of-play" tabindex="-1">4. Examples of Play</h2>
+<blockquote>
+<p><strong>Example:</strong> Grub and his Mob of Size 3 run from the town guards into a sewer tunnel designated as <strong>Zone B</strong>. The GM has set Zone B’s profile to <strong>Normal:2</strong> and given it the <strong>Narrow</strong> and <strong>Smoky</strong> traits. Because Zone B has the <strong>Narrow</strong> trait, Grub’s Mob is too big! Grub must either split the Mob, or the Mob suffers a <strong>Bane</strong> (-1d) on all attacks and physical tests, and their movement speed drops to 1 Zone. However, because the sewer tunnel is <strong>Smoky</strong>, the guards trying to shoot crossbows at them from the adjacent room suffer a <strong>Bane</strong> (-1d) because Grub’s Mob has Partial Cover.</p>
+</blockquote>
+<hr>
+<h2 id="5-alignment-with-design-tenets" tabindex="-1">5. Alignment with Design Tenets</h2>
 <ol>
 <li><strong>Fun at the Table:</strong> Gives players and Mobs tactical, interactive toys on the battlefield (pushing enemies into fires, hiding in shadows, throwing junk).</li>
 <li><strong>Zero Post-Roll Math:</strong> Modified rolls use the standard <strong>Boon</strong> and <strong>Bane</strong> systems, and difficulties map directly to <strong>Easy/Normal/Hard</strong> success states. No arithmetic is needed after dice are cast.</li>
@@ -718,14 +750,14 @@ Any general environmental interaction, traversal, or search check attempted with
 <li><strong>Goblin Flavor:</strong> Goblins are small, so the <strong>Narrow</strong> constraint affects large enemy Mobs or Giant foes much more severely than a scrappy crew of runts. Searching a <strong>Junk Pile</strong> for garbage to throw is quintessentially goblinoid.</li>
 </ol>
 <hr>
-<h2 id="4-edge-cases-and-rules-lawyer-concerns-2" tabindex="-1">4. Edge Cases &amp; Rules Lawyer Concerns</h2>
+<h2 id="6-edge-cases-and-rules-lawyer-concerns" tabindex="-1">6. Edge Cases &amp; Rules Lawyer Concerns</h2>
 <ul>
 <li><strong>GM Roll Mitigation:</strong> All hazards are resolved using player-facing saving throws. GMs never roll to see if a hazard hits; they simply announce the trigger, and the affected player rolls to resist.</li>
 <li><strong>Mob Damage Scaling:</strong> Environmental hazards like <strong>Burning</strong> or <strong>Crumbling</strong> deal <strong>1 Wound</strong> to a PC or <strong>1 Size damage</strong> (killing one goblin unit) to a Mob. This ensures damage types remain consistent across the system.</li>
 <li><strong>Mob Prone Interaction:</strong> If a Mob is knocked <strong>Prone</strong> by slipping, it suffers <strong>-1d on Dodge</strong> and must spend <strong>1 Move action</strong> of its next Order to stand back up, mirroring PC rules.</li>
 </ul>
 <hr>
-<h2 id="5-alternatives-considered-2" tabindex="-1">5. Alternatives Considered</h2>
+<h2 id="7-alternatives-considered" tabindex="-1">7. Alternatives Considered</h2>
 <ul>
 <li><strong>Global Room Target:</strong> We considered a single Target Number for the entire combat map (direct ICRPG port). However, Gobbos’ zone-based layout makes it far more interesting to have different zones feel physically distinct (e.g., fighting on dry land vs. wading through sewer sludge).</li>
 <li><strong>Dynamic GM Threat Rolls:</strong> We rejected having fires or cave-ins roll “attack dice” against the players, as it violates the tenet of the GM never rolling dice in combat.</li>
@@ -748,7 +780,7 @@ Any general environmental interaction, traversal, or search check attempted with
 <p><em>What problem are we trying to solve in the game? Why do the current rules fail to cover this scenario?</em></p>
 <h2 id="2-proposed-design-4" tabindex="-1">2. Proposed Design</h2>
 <p><em>Describe the mechanic clearly and literally using Gobbos system keywords (e.g., <strong>Boon</strong>, <strong>Bane</strong>, <strong>Successes</strong>).</em></p>
-<h2 id="3-alignment-with-design-tenets-3" tabindex="-1">3. Alignment with Design Tenets</h2>
+<h2 id="3-alignment-with-design-tenets-2" tabindex="-1">3. Alignment with Design Tenets</h2>
 <p><em>How does this mechanic stack up against our core identity?</em></p>
 <ol>
 <li><strong>Fun at the Table:</strong> [How it keeps the energy high]</li>
@@ -756,9 +788,9 @@ Any general environmental interaction, traversal, or search check attempted with
 <li><strong>Embrace Chaos:</strong> [How the mechanic can swing wildly out of the players’ control]</li>
 <li><strong>Goblin Flavor:</strong> [Why this feels like a chaotic little green monster instead of a generic fantasy hero]</li>
 </ol>
-<h2 id="4-edge-cases-and-rules-lawyer-concerns-3" tabindex="-1">4. Edge Cases &amp; Rules Lawyer Concerns</h2>
+<h2 id="4-edge-cases-and-rules-lawyer-concerns-2" tabindex="-1">4. Edge Cases &amp; Rules Lawyer Concerns</h2>
 <p><em>What are the structural vulnerabilities? (e.g., What happens if a player rolls 10 dice? Does this slow down combat rounds? Does it conflict with any existing rule in <code>PROD_Core_Rules/</code>?)</em></p>
-<h2 id="5-alternatives-considered-3" tabindex="-1">5. Alternatives Considered</h2>
+<h2 id="5-alternatives-considered-2" tabindex="-1">5. Alternatives Considered</h2>
 <p><em>What other ways did we brainstorm to handle this, and why did we throw them in the <code>Archive_Graveyard/</code>?</em></p>
 <blockquote>
 <blockquote>
@@ -2950,10 +2982,10 @@ Since death is a core tenet of <em>Gobbos</em> leveling, tie the Deeds to the <e
 <li><strong>D.E.W. (Danger, Energy, Wonder):</strong> ICRPG design recommends that every room has active Danger (hazards), Energy (timers prompting action), and Wonder (interactive elements or treasures).</li>
 </ul>
 <hr>
-<h2 id="2-adapting-the-concept-to-gobbos-zone-profiles" tabindex="-1">2. Adapting the Concept to Gobbos: “Zone Profiles”</h2>
-<p>Gobbos uses zone-based tactical movement rather than a grid (see [Movement &amp; Zones](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/03_Movement%20&amp;%<a href="http://20Zones.md">20Zones.md</a>)). Rather than a single Target Number for an entire dungeon, we can localize this concept by giving each <strong>Zone</strong> an <strong>Environmental Profile</strong> (combining <strong>Difficulty</strong> and <strong>TN</strong>).</p>
-<h3 id="the-zone-profile" tabindex="-1">The Zone Profile</h3>
-<p>Each Zone on the GM’s map is assigned a default profile:</p>
+<h2 id="2-adapting-the-concept-to-gobbos-zone-profiles-and-zone-traits" tabindex="-1">2. Adapting the Concept to Gobbos: “Zone Profiles” &amp; “Zone Traits”</h2>
+<p>Gobbos uses zone-based tactical movement rather than a grid (see [Movement &amp; Zones](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/03_Movement%20&amp;%<a href="http://20Zones.md">20Zones.md</a>)). Rather than a single Target Number for an entire dungeon, we can localize this concept by giving each <strong>Zone</strong> an <strong>Environmental Profile</strong> and modular <strong>Zone Traits</strong>.</p>
+<h3 id="2-1-the-zone-profile" tabindex="-1">2.1. The Zone Profile</h3>
+<p>Each Zone on the GM’s map is assigned a default profile consisting of a <strong>Difficulty</strong> and a <strong>Target Number (TN)</strong>:</p>
 <ul>
 <li><strong>Normal:1</strong> (Supreme Average): Standard rooms, clear streets, simple caves.</li>
 <li><strong>Normal:2</strong> (Challenging Terrain): Sewer canals, rocky slopes, crumbling ruins.</li>
@@ -2966,11 +2998,26 @@ Any generic environmental action, traversal check, or search attempted within a 
 </blockquote>
 </blockquote>
 <p>This keeps prep at absolute zero: the GM only needs to write down a single profile for each Zone on their sketch map.</p>
+<h3 id="2-2-zone-traits-1" tabindex="-1">2.2. Zone Traits</h3>
+<p>To customize the battlefield, a GM can slap modular traits onto any Zone. Traits represent either obstacles players must overcome or advantages they can exploit:</p>
+<ol>
+<li><strong>Problems (Hazards &amp; Obstacles):</strong> Negative environmental features.
+<ul>
+<li><em>Triggers:</em> They trigger either passively (continuous effect while in the zone), on entry (as soon as a creature enters the zone), or at a specific phase in the round (e.g. End of Round).</li>
+<li><em>Resolution:</em> To avoid negative effects, a player must make a saving throw (a relevant stat check, typically <strong>Slink</strong> or <strong>Tough</strong>) against the <strong>Zone Profile</strong>. On a failure, they suffer Wounds, Size damage (for Mobs), or a negative <strong>Condition</strong>.</li>
+<li><em>GM Rolling:</em> GMs never roll to see if a hazard succeeds; the GM simply announces the hazard’s trigger and the affected player rolls to resist.</li>
+</ul>
+</li>
+<li><strong>Opportunities (Tactical Features &amp; Treats):</strong> Interactive or beneficial environmental features.
+<ul>
+<li><em>Triggers &amp; Resolution:</em> Opportunities can be passive (e.g., providing Cover or Boons to attacks) or interactive. Goblins can interact with an interactive opportunity by spending a Standard Action (usually <strong>Manipulate</strong> or <strong>Attack</strong>) and testing a relevant stat against the <strong>Zone Profile</strong> to yield a benefit.</li>
+</ul>
+</li>
+</ol>
 <hr>
-<h2 id="3-predefined-zone-traits-problems-and-opportunities" tabindex="-1">3. Predefined Zone Traits: Problems &amp; Opportunities</h2>
-<p>To easily customize the battlefield, a GM can slap modular traits onto any Zone. These are split into <strong>Problems</strong> (Hazards/Obstacles) and <strong>Opportunities</strong> (Tactical benefits).</p>
-<p>All traits are resolved passively or through player rolls; <strong>the GM never rolls dice</strong> to activate environmental effects.</p>
-<h3 id="predefined-problems-hazards-and-obstacles" tabindex="-1">Predefined Problems (Hazards &amp; Obstacles)</h3>
+<h2 id="3-predefined-zone-traits-1" tabindex="-1">3. Predefined Zone Traits</h2>
+<p>These are standardized, modular Zone Traits that GMs can “slap” onto any Zone during setup.</p>
+<h3 id="3-1-predefined-problems-hazards-and-obstacles-1" tabindex="-1">3.1. Predefined Problems (Hazards &amp; Obstacles)</h3>
 <table>
 <thead>
 <tr>
@@ -3012,7 +3059,7 @@ Any generic environmental action, traversal check, or search attempted within a 
 </tr>
 </tbody>
 </table>
-<h3 id="predefined-opportunities-tactical-features-and-treats" tabindex="-1">Predefined Opportunities (Tactical Features &amp; Treats)</h3>
+<h3 id="3-2-predefined-opportunities-tactical-features-and-treats-1" tabindex="-1">3.2. Predefined Opportunities (Tactical Features &amp; Treats)</h3>
 <table>
 <thead>
 <tr>

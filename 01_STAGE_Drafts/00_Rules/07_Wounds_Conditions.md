@@ -9,9 +9,9 @@ The Player can not create a new PC until they are back at the lair. But in the m
 
 # Conditions
 There are a number of conditions that can affect a gobbo. Most of these have a direct effect on one Stat for a PC, or a varity of effects for a mob. 
-|Condition | PC | Mob |
+| Condition | PC | Mob |
 |---|---|---|   
-| Weakend | -1d on Tough | -1d on Attack |
+| Weakened | -1d on Tough | -1d on Attack |
 | Restrained | -1d on Slink, Movement becomes 0 | -1d on Dodge, Movement becomes 0 |
 | Dumb | -1d on Brains and Mouth | -1d on Morale (TDB: Migth fail to obey orders) |
 | Silenced | -1d on Mouth | -1d on Morale |
@@ -27,5 +27,7 @@ However, once a battle is concluded and the Boss can organize his Mobs again, an
 > Example: A 3d6 mob has taken some beating and their damage after the battle are 3,4,2. The Boss can now rearrange the damage dices to 6,2,1 or perhaps 5,4. In the latter case, effectively reducing the size of the mob in order to make it more stable.  
 
 ## Healing from Conditions
-Typically a condition is removed once the cause of it is removed. Usually this is obvious... TDB: More on this. 
+Typically a condition is removed once the cause of it is removed. Usually this is obvious (e.g., leaving a smoke-filled room clears the Blinded or Smoky effect).
+
+*   **Hazard Conditions:** Conditions inflicted by environmental hazards (such as *Weakened* from poison gas or *Restrained* from sticky mud) are removed once a PC or Mob spends a Standard Action (**Manipulate** or catching their breath) in a clean zone, or automatically at the end of combat. 
 

@@ -68,3 +68,16 @@ Goblins are driven by strong feelings and sudden urges. If a Boss does not use a
 3.  **Violence:** If there is a weak or beatable foe in their Zone, they will swarm and attack it.
 4.  **Trash Stuff:** If nothing else is around, they smash the room they are in.
 5.  **Wander Off:** If totally bored, they wander 1 Zone in a random direction (usually toward loud noises or shiny things).
+
+---
+
+## Mob Tests & Attributes
+Goblins in a Mob do not have individual stats (like **Tough**, **Slink**, **Brains**, or **Mouth**). Instead, their dice pool for any non-combat test is resolved using the core **Stat** dice rule based on the nature of the test:
+
+*   **Tough Tests (Strength, Endurance, Mass):** Roll **Size** dice. A Mob's collective strength and body mass are directly tied to their **Size**. Larger Mobs are much better at lifting gates, swimming against currents, or resisting toxic gas.
+*   **Slink Tests (Stealth, Dodging, Balance):** Always roll exactly **1d6** (representing a default stat value of 1). A crowd is inherently loud and clumsy. Regardless of the Mob's **Size**, one goblin tripping cascades to others, making stealth, balance, and quick dodging difficult.
+*   **Brains & Mouth Tests (Thinking, Social):** Always roll exactly **1d6** (representing a default stat value of 1). Without their Boss's direct instructions, a Mob is a disorganized mess and cannot coordinate complex tasks or trade.
+
+### Mob Gear Upgrades
+Any gear equipped to a Mob that assists with specific tests (like *silent shoes* for Slink tests or *protective masks* for Tough tests against gas) applies its benefits as standard **Boons** (+1d per Boon) to these base rolls.
+> **Example:** A Mob equipped with *silent shoes* gains a **Boon** (+1d) to Slink tests, rolling **3d6** instead of the base **2d6**.

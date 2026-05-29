@@ -2,20 +2,24 @@
 
 This file combines the core game design, workflow pipeline, and formatting rules for the Gobbos TTRPG development.
 
----
-
 ## 1. Design Overview
 
 This is the core game philosophy. It serves as keeping the game focused on the core principles. 
 
 ### Overview description
 
-It is a TTRPG where the player plays Goblins. It should be a fast, fun and chaotic system. Death of a character is far from the end, rather it is almost necessary to increase in power, like a roguelite game. They grant bonuses to the next character the player creates. 
-The players also not only control their character, but are also leading mobs of other goblins into battle. 
-The players can go on raids to find resources to upgrade the lair and society they are in, which gives them access to even more powerful abilities. 
-The core game mechanic is that the player rolls a dice pool of d6s, looking for a set number of successes. 
-The GM does not roll dice!
+It is a TTRPG where the player plays Goblins. It should be a fast, fun and chaotic system. Not rules light, but rules clear, with reusable parts in the rules.  
+The player have three different components that grows with them as they play: 
+1) The Character - The boss of a gang of goblins, that acts as the players avatar in the game. 
+2) The Gang - Your gang of goblins, that to some extent take the function of the Class in most typical ttrpgs.
+3) The Lair - The base of operations for your and the other players gang, a cooperative building project that the players can invest in to gain new abilities and resources.
 
+The player do not only control his Character but also a Mob of goblin from his gang, when going on adventures. 
+The main loop of the game is to go on raids, find Loot and Glory, that gives XP and resources to upgrade the Lair, craft new items and aquire more Quirks. 
+The core game mechanic is that the player rolls a dice pool of d6s, looking for a set number of successes. 6s explode, counts as a success and lets the player rolls another die. 
+
+Death of a character is far from the end, rather it is almost necessary to increase in power, like a roguelite game. They grant bonuses to the next character the player creates.
+The GM does not roll dice!
 
 ### Design Tenets 
 The Design tenets are ordered, and it is ok to break one of the tenets if it better serves one higher up at the list even better. 
@@ -29,16 +33,17 @@ The Design tenets are ordered, and it is ok to break one of the tenets if it bet
 ### Exceptions and Updates
 If the rules and tenets in some way stand in the way of creating the best game possible, make a case that the rules should be changed. But make it explicit, and wait for confirmation before doing suggestions and changes. 
 
----
-
 ## 2. Rulebook Development (Workflow)
-
 Welcome to the Gobbos rulebook repository! This game is in active development and operates on a "Dev/Stage/Prod" lifecycle to keep the chaos contained.
 
 If you are an AI Agent or a Human contributor, **you must read and follow this structure.**
 
-### The Pipeline
+### Main principle
+Rules should be short and clear. The aim is that complexity appears from the interplay of a few simple rules, not from complex rules. When describing a new concept or new rules, first the rule should be described in general terms, that is first the concept is described in clear text, how it works mechanically and the structure of it. Any instances of the rule is not to be intermingled with the actual rule itself, but rather described in its own section. An example is often a good idea however, in order to illustrate how the rule woriks. See the rule as a Class definition, and the actual instances of the rule is like objects created from that Class. 
 
+Do not use these word in the actual rules, Class, instances or similar. Keep it natural. 
+
+### The Pipeline
 This repository is split into specific top-level folders that represent the "release state" of any given rule or idea.
 
 #### 1. `DEV_Brainstorms/` (The Idea Pit)
@@ -53,7 +58,7 @@ This repository is split into specific top-level folders that represent the "rel
 
 #### 3. `PROD_Core_Rules/` (The Final Rulebook)
 *   **What goes here:** The single source of truth for the game. If it's in here, it is official, locked-in, and formatted perfectly.
-*   **The Rules:** Files must follow a strict logical reading order (e.g., Core Mechanics -> Character Creation -> Combat -> Loot). Flavor text should be separated from hard, bulleted rules. Any new rule added must be vetted against existing rules so that there are no conflicts, possibly change existing rules to resolve the conflict.
+*   **The Rules:** Files must follow a strict logical reading order. Flavor text should be separated from hard, bulleted rules. Any new rule added must be vetted against existing rules so that there are no conflicts, possibly change existing rules to resolve the conflict.
 
 #### 4. `Archive_Graveyard/` (Old Ideas)
 *   **What goes here:** Brainstorms or drafts that we decided *not* to use, but might want to revisit later. Keeps the active folders clean without permanently deleting work.
@@ -66,7 +71,6 @@ This repository is split into specific top-level folders that represent the "rel
 *   **What goes here:** External reference materials. PDFs of other games, links to websites, etc.
 *   **The Rules:** No original Gobbos ideas should be written here. This folder is explicitly `.gitignore`d to keep large external PDFs local.
 
----
 
 ### How to Handle a New Idea
 1. **Ideation:** Write the loose thought in `DEV_Brainstorms/`.

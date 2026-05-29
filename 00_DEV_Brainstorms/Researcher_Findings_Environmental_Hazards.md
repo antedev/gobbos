@@ -14,11 +14,11 @@ In *Index Card RPG* (ICRPG) by Runehammer Games, the **Target Number (TN)**—of
 
 ---
 
-## 2. Adapting the Concept to Gobbos: "Zone Profiles"
-Gobbos uses zone-based tactical movement rather than a grid (see [Movement & Zones](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/03_Movement%20&%20Zones.md)). Rather than a single Target Number for an entire dungeon, we can localize this concept by giving each **Zone** an **Environmental Profile** (combining **Difficulty** and **TN**).
+## 2. Adapting the Concept to Gobbos: "Zone Profiles" & "Zone Traits"
+Gobbos uses zone-based tactical movement rather than a grid (see [Movement & Zones](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/03_Movement%20&%20Zones.md)). Rather than a single Target Number for an entire dungeon, we can localize this concept by giving each **Zone** an **Environmental Profile** and modular **Zone Traits**.
 
-### The Zone Profile
-Each Zone on the GM's map is assigned a default profile:
+### 2.1. The Zone Profile
+Each Zone on the GM's map is assigned a default profile consisting of a **Difficulty** and a **Target Number (TN)**:
 *   **Normal:1** (Supreme Average): Standard rooms, clear streets, simple caves.
 *   **Normal:2** (Challenging Terrain): Sewer canals, rocky slopes, crumbling ruins.
 *   **Hard:1** (Dangerous/Hostile): Heavy winds, active battlegrounds, slick ice.
@@ -28,14 +28,23 @@ Each Zone on the GM's map is assigned a default profile:
 
 This keeps prep at absolute zero: the GM only needs to write down a single profile for each Zone on their sketch map.
 
+### 2.2. Zone Traits
+To customize the battlefield, a GM can slap modular traits onto any Zone. Traits represent either obstacles players must overcome or advantages they can exploit:
+
+1.  **Problems (Hazards & Obstacles):** Negative environmental features.
+    *   *Triggers:* They trigger either passively (continuous effect while in the zone), on entry (as soon as a creature enters the zone), or at a specific phase in the round (e.g. End of Round).
+    *   *Resolution:* To avoid negative effects, a player must make a saving throw (a relevant stat check, typically **Slink** or **Tough**) against the **Zone Profile**. On a failure, they suffer Wounds, Size damage (for Mobs), or a negative **Condition**. 
+    *   *GM Rolling:* GMs never roll to see if a hazard succeeds; the GM simply announces the hazard's trigger and the affected player rolls to resist.
+2.  **Opportunities (Tactical Features & Treats):** Interactive or beneficial environmental features.
+    *   *Triggers & Resolution:* Opportunities can be passive (e.g., providing Cover or Boons to attacks) or interactive. Goblins can interact with an interactive opportunity by spending a Standard Action (usually **Manipulate** or **Attack**) and testing a relevant stat against the **Zone Profile** to yield a benefit.
+
 ---
 
-## 3. Predefined Zone Traits: Problems & Opportunities
-To easily customize the battlefield, a GM can slap modular traits onto any Zone. These are split into **Problems** (Hazards/Obstacles) and **Opportunities** (Tactical benefits). 
+## 3. Predefined Zone Traits
 
-All traits are resolved passively or through player rolls; **the GM never rolls dice** to activate environmental effects.
+These are standardized, modular Zone Traits that GMs can "slap" onto any Zone during setup.
 
-### Predefined Problems (Hazards & Obstacles)
+### 3.1. Predefined Problems (Hazards & Obstacles)
 
 | Trait | Category | Mechanical Rules |
 | :--- | :--- | :--- |
@@ -46,7 +55,7 @@ All traits are resolved passively or through player rolls; **the GM never rolls 
 | **Toxic** | Hazard | Any PC or Mob starting their turn here must test **Tough** against the **Zone Profile**. On a failure, they suffer the **Weakened** condition until they spend a Standard Action to catch their breath in a clean zone. |
 | **Deep Water** | Obstacle | Movement through this Zone is reduced. Goblins must spend a Standard Action (**Move**) to travel **1 Zone** (instead of their normal speed). If forced to swim, they must test **Tough** against the **Zone Profile** or begin drowning (taking **1 Wound** per round). |
 
-### Predefined Opportunities (Tactical Features & Treats)
+### 3.2. Predefined Opportunities (Tactical Features & Treats)
 
 | Trait | Category | Mechanical Rules |
 | :--- | :--- | :--- |
@@ -71,4 +80,4 @@ Here is how a GM prepares a quick encounter using this system:
     *   *Traits:* **Deep Water**, **Junk Pile** (floating trash).
 
 > **Example of Play:**
-> Grub and his Mob of Size 3 run from the guards into **Zone B: The Narrow Sewage Pipe**. Because Zone B has the **Narrow** trait, Grub's Mob is too big! Grub must either split the Mob, or the Mob suffers a **Bane** on all attacks and physical tests, and their movement speed drops to 1 Zone. Furthermore, because it is **Smoky**, the guards trying to shoot crossbows at them from Zone A suffer a **Bane** because Grub has Partial Cover. 
+> Grub and his Mob of Size 3 run from the guards into **Zone B: The Narrow Sewage Pipe**. Because Zone B has the **Narrow** trait, Grub's Mob is too big! Grub must either split the Mob, or the Mob suffers a **Bane** on all attacks and physical tests, and their movement speed drops to 1 Zone. Furthermore, because it is **Smoky**, the guards trying to shoot crossbows at them from Zone A suffer a **Bane** because Grub has Partial Cover.

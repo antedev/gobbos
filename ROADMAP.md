@@ -68,10 +68,10 @@ This roadmap is organized around the **three core gameplay loops** of Gobbos. By
 ### Epic 6: Base Building (The Lair Boardgame)
 *Goal: Upgrade the shared base using pooled gold and turf dominance rules.*
 *   **Feature 6.1: Communal Rooms**
-    *   [ ] **Story:** Establish the Lair Currency logic (Raw Loot Value vs. physical salvage like an Anvil).
-    *   [ ] **Task:** Create a draft of Lair upgrade rooms in the base directory (`01_STAGE_Drafts/05_Base/`).
+    *   [x] **Story:** Establish the Lair Currency logic (Raw Loot Value vs. physical salvage like an Anvil).
+    *   [x] **Task:** Create a draft of Lair upgrade rooms in the base directory (`01_STAGE_Drafts/05_Base/`).
 *   **Feature 6.2: Gang Dominance**
-    *   [ ] **Story:** Define rules for how Gangs assert dominance over specific upgrades to claim exclusive bonuses.
+    *   [x] **Story:** Define rules for how Gangs assert dominance over specific upgrades to claim exclusive bonuses.
 
 ---
 
