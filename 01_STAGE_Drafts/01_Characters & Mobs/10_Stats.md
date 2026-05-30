@@ -61,15 +61,15 @@ However, Goblins huddle close and do not really care about other in another grou
 Your Grunt is the main tool for ensuring that the world, and especially all those goblins, bends to your will. They hear you Grunt, they listen. Or so you hope. 
 Your Grunt is also a tool you can use to bend the world to your will. By spending a Grunt you can either add 1d6 per Grunt before a test. Or after a test is done, you can spend a Grunt to reroll any of your 1s. Remember you cannot reroll a Fumble however! 
 
-#### Loosing Grunt
-If you [[Fumble]] when performing a test, and you have one or more mobs in the same zone or in an adjacent zone, you loose one Grunt. You have simply embarresed yourself in front of your gobbos, and they are not impressed. 
+#### Losing Grunt
+If you fumbled when performing a test, and you have one or more mobs in the same zone or in an adjacent zone, you lose one Grunt. You have simply embarrassed yourself in front of your gobbos, and they are not impressed. 
 ##### Effects
-If you are trying to control a mob that is now bigger than your Grunt allows, you need to pass a Grunt test (or a Mouth test?). If you fail, they are realizing they do not need to listen to you and will rebel! 
+If you are trying to control a mob that is now bigger than your Grunt allows, you must pass a **Mouth** or **Tough** test (your choice) against the Mob's Size as the Target Number (TN). If you fail, they realize you are weak and will rebel, becoming Uncontrolled! 
 #### Gaining Grunt
 ##### Single combat
 You can gain grunt. The most common way is to defeat an enemy yourself. Each defeated enemy when in the same or adjacent zone automatically gains you one Grunt, up to your maximum.
 ##### Assert dominance
-But in a dire situation you can also simply kill some of your own goblins to reassert dominance. Make an undefended attack against a mob under your control that you can attack. If you do damage increase your Grunt with 1. If you however fail to deal out any damage, you are indeed weak and loose another Grunt! 
+But in a dire situation you can also simply kill some of your own goblins to reassert dominance. Make an undefended attack against a mob under your control that you can attack. If you do damage increase your Grunt with 1. If you however fail to deal out any damage, you are indeed weak and lose another Grunt! 
 ##### Show off
 If you roll a Critical success on a test, your Gobbos are impressed and you gain 1 Grunt (up to your maximum). Remember that you also get to perform an additional action on a critical success!
 

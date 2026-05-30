@@ -1,10 +1,82 @@
-# Zones
+# Movement, Zones, & Map Layout
 
-In Gobbos, **Zones** are used to create a framework for movement, especially in combat. A Zone can be of any shape, but is often clearly defined by the environment, such as a room, a corridor, or a field. Sometimes a larger area is split into multiple Zones if the area is too large, or several smaller areas close to each other are considered a single Zone.
+The map architecture in **Gobbos** is designed to solve the "Panzer Brigade" dilemma: balancing a massive, chaotic horde of multiple players and 6 to 8 active squads without clogging the physical tabletop or turning a fast-paced rogue-lite delve into a slow traffic jam. 
+
+The layout gives a clear, high-level sense of macro-exploration while dropping into highly dynamic, multi-level, gridless tactical theaters only when a fight breaks out.
+
+---
+
+## The Tabletop Layout (Visual Sketch)
+
+At the physical gaming table, the components are arranged to keep macro-exploration and micro-skirmishes visually separated, ensuring clear command lines and zero clutter:
+
+```
++---------------------------------------------------------------------------------+
+|                                 THE GAMING TABLE                                |
++---------------------------------------------------------------------------------+
+|                                                                                 |
+|   [ Lair Sheet & Communal Hoard ]                     [ GM Screen ]             |
+|   Tracks pooled Loot, Scrap, and Lair rooms.          Reference tables,         |
+|                                                       encounter notes.          |
+|                                                                                 |
+|   +-----------------------------+         +---------------------------------+   |
+|   |     MACRO MINIMAP           |         |        ACTIVE CLASH CLUSTER     |   |
+|   |     (Point-Crawl Nodes)     |         |        (Micro Battleground)     |   |
+|   |                             |         |                                 |   |
+|   |  [Node A] <-- (Locked) -->  |         |   +---------+     +---------+   |   |
+|   |     |                       |         |   | Zone 1  |     | Zone 2  |   |   |
+|   |     v                       |         |   | Balcony |<--->| Hallway |   |   |
+|   |  [Node B] (Horde Token)     |         |   | [Cover] |     | [Narrow]|   |   |
+|   |     |                       |         |   +---------+     +---------+   |   |
+|   |     v                       |         |        ^               ^        |   |
+|   |  [Node C] (Active Encounter)|         |        |               |        |   |
+|   |                             |         |        v               v        |   |
+|   |                             |         |   +-------------------------+   |   |
+|   |                             |         |   |         Zone 3          |   |   |
+|   |                             |         |   |        Courtyard        |   |   |
+|   |                             |         |   |        [Burning]        |   |   |
+|   |                             |         |   +-------------------------+   |   |
+|   +-----------------------------+         +---------------------------------+   |
+|                                                                                 |
+|                                                                                 |
+|   [Player 1: Boss + Mob]        [Player 2: Boss + Mob]     [Player 3: Boss + Mob] |
+|   - Boss Character Sheet        - Boss Character Sheet     - Boss Character Sheet |
+|   - Mob D6 Health Tracker       - Mob D6 Health Tracker    - Mob D6 Health Tracker|
+|   - Active Quirks & Gear        - Active Quirks & Gear     - Active Quirks & Gear |
+|                                                                                 |
++---------------------------------------------------------------------------------+
+```
+
+---
+
+## Core Architectural Concept: The Hybrid Map System
+
+The physical table is split into two distinct visual tracking spaces: the macro-world where the horde travels, and the active micro-world where the blood spills.
+
+### 1. The Macro Minimap (The Point-Crawl Blueprint)
+
+Instead of a sprawling, room-by-room grid layout, the overall raid location (castle, village, or crypt) is tracked on a central node map.
+
+*   **The Scale:** Individual goblin tokens do not live here. Instead, a single token representing the bulk of the horde moves along connected nodes.
+*   **The Function:** It shows the pathways between major sections of the raid, locked doorways, known hazards, and designated escape zones used for tactical retreats. It tracks the progression of the raid at a glance without requiring any drawn architecture.
+
+### 2. The Micro Battleground (Interconnected Clash Clusters)
+
+When an encounter triggers at a node, the GM deploys a localized "Clash Cluster" consisting of 3 to 4 abstract, interconnected physical tiles or cards to represent the immediate environment.
+
+*   **The Scale:** This is where the actual goblin boss miniatures and physical piles of **d6** squad dice are placed to resolve combat.
+*   **The Fluidity:** A single battle easily bleeds across these local zones. For example, a street skirmish can seamlessly transition into a house interior or climb up onto a rooftop zone in real-time.
+
+---
+
+## Abstract, Gridless Zones
+
+In Gobbos, **Zones** are used to create a framework for movement, especially in combat. A Zone can be of any shape, but is often clearly defined by the environment, such as a room, a corridor, or a field. 
 
 A player's movement is measured in number of Zones, and a normal movement speed is to move 2 Zones per round and action.
 
 ---
+
 
 ## Zone Profiles
 
@@ -125,3 +197,44 @@ These scenarios illustrate how different hazards, opportunities, and Mob rules p
 >   * Wizgog tests Slink (**2d6**) and rolls `5, 1` (success), jumping clear of the debris.
 >   * The Knight tests Slink. The GM rules the heavy armor imposes a **Bane** (-1d). The Knight rolls `3, 2` (failure). The Knight takes **3 damage** and is knocked **Prone**, buried under rubble.
 >   * The adjacent exit is blocked, cutting off the knight's allies.
+
+---
+
+## Background Node Resolution (The Chaos Tick)
+
+If a player chooses to abandon a Mob in a previously cleared node on the macro minimap (for example, leaving them behind to forage for treasure or guard a chokepoint while the main party moves forward), that node is physically swept from the main table's active tactical space. 
+
+Because they lack a Boss to command them, the split-off Mob is tracked purely on the macro node map. They default entirely to their automated Priority AI list:
+
+1. **Survival**
+2. **Loot/Eat**
+3. **Violence**
+4. **Trash Stuff**
+5. **Wander Off**
+
+### Resolving the Chaos Tick
+
+At the end of each combat round, the player resolves the unsupervised Mob's actions using the **Chaos Tick**.
+
+>> **THE CHAOS TICK RULE:**
+>> Roll a number of **d6** equal to the unsupervised Mob's current **Size**. The Target Number and Difficulty default to the cleared zone's Profile (typically **Normal:1**). 
+>> *   **Successes (5+):** Count successes to resolve the Priority AI's progress.
+>> *   **Ones (1s):** Each **1** rolled represents growing chaos and bickering. Tally the **1s** and consult the **Gobbo Mischief Table** below. Each **1** also adds **1 die** to the communal **Bangaranga Pool** as the background racket hypes up the horde.
+>> *   **The Farkle:** If the roll yields **zero successes** and **two or more 1s**, the Mob fumbles catastrophically, triggering a disastrous event.
+
+### The Gobbo Mischief Table (Tally of 1s)
+
+| 1s Rolled | Mischief Result | Mechanical Outcome |
+| :--- | :--- | :--- |
+| **0** | **Smooth Operations** | No chaos! Gobbos cooperate perfectly. |
+| **1** | **Bickering** | Goblins fight over a shiny rock. The Mob takes **1 damage** to its active health die. |
+| **2** | **Tasting Time** | They eat glowing mushrooms or lick rusty gears. The Mob gains the **Weakened** condition. |
+| **3** | **Straying** | A few runts wander off into the dark. The Mob's **Size** decreases by 1. |
+| **4+** | **Mutiny / Riot** | The Mob tears itself apart or rebels. The Mob becomes **Uncontrolled** and hostile to all Gangs, splitting into two smaller hostile mobs or wandering off the map entirely. |
+
+### Resolution of Successes (5+ on Normal)
+
+*   **0 Successes:** The Mob gets distracted pick-nosing. No progress is made.
+*   **1 Success:** The Mob accomplishes a basic task. If foraging, they add **1d6 Scrap** to the Hoard, or they heal **1d6 damage** on their health dice by eating old rations found in the zone.
+*   **2 Successes:** They find a cache of useful garbage. Add **2d6 Scrap** to the Hoard, or find a low-grade **Oddity**.
+*   **3+ Successes:** Outstanding teamwork! The Mob secures the node, making future travel through it **Safe** (no hazard checks required), and finds a piece of **Standard Loot**.

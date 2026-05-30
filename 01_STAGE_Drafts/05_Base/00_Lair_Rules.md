@@ -52,11 +52,12 @@ During the Labor step of the Lair Phase, players assign their available **Labore
 
 ### Lair Tasks
 *   **Gathering Scrap:** Assign any number of Laborer dice and roll them. Every success (**4+**) generates **1 Scrap** for the Hoard.
+*   **Scouting Locations:** Assign Laborer dice to survey your next target location. Successes (**4+**) reveal Danger Ratings, Main Objectives, and Targets of Opportunity (see [Raid Points & Scouting](05_Raid%20points.md)).
 *   **Recruiting Gobbos:** Assign any number of Laborer dice to go out and capture or bribe wild runts. Roll them. Every **6** rolled (exploding!) permanently adds **1d6** to the Lair's **Gobbo Pool** (up to the Lair Cap).
     *   *Boss Assist:* A Boss can spend their personal Lair action to lead the recruiters, adding their **Mouth** stat as bonus dice to the roll.
     *   *Bribes:* Spend **5 Loot** from the Hoard to buy shiny junk, granting a **Boon (+1d6)** to the recruitment roll.
 *   **Clearing Slots:** Assign Laborer dice to an unexplored or blocked slot. Each success (**4+**) adds 1 progress toward clearing it. (See Lair Expansion below).
-*   **Crafting Custom Gear:** See [[34_Crafting]] for details. Crafting requires **Brains** and a Workshop, and consumes **1 Laborer die** to operate.
+*   **Crafting Custom Gear:** See [Crafting & Custom Gear](34_Crafting.md) for details. Crafting requires **Brains** and a Workshop, and consumes **1 Laborer die** to operate.
 
 ### Building the Engine (Guaranteed Successes)
 While rolling dice is chaotic and fun, players can invest Loot and Scrap to upgrade Lair rooms, transforming the Lair into a self-sustaining engine. Upgrades grant **guaranteed successes** or **automatic growth** that bypasses the dice roll:

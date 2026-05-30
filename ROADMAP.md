@@ -101,7 +101,7 @@ This roadmap is organized around the **three core gameplay loops** of Gobbos. By
 ### Epic 9: Travel & Adventure
 *Goal: Structure travel and raids.*
 *   **Feature 9.1: Hex & Point Crawl Travel**
-    *   [ ] **Story:** Define macro-movement and food attrition mechanics for large mobs on the road (`01_STAGE_Drafts/07_Travel/`).
+    *   [x] **Story:** Define macro-movement and food attrition mechanics for large mobs on the road (`01_STAGE_Drafts/07_Travel/`).
 *   **Feature 9.2: Raid Extraction**
     *   [ ] **Story:** Define objective scaling and extraction points.
 

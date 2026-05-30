@@ -80,4 +80,4 @@ Goblins in a Mob do not have individual stats (like **Tough**, **Slink**, **Brai
 
 ### Mob Gear Upgrades
 Any gear equipped to a Mob that assists with specific tests (like *silent shoes* for Slink tests or *protective masks* for Tough tests against gas) applies its benefits as standard **Boons** (+1d per Boon) to these base rolls.
-> **Example:** A Mob equipped with *silent shoes* gains a **Boon** (+1d) to Slink tests, rolling **3d6** instead of the base **2d6**.
+> **Example:** A Mob equipped with *silent shoes* gains a **Boon** (+1d) to Slink tests, rolling **2d6** instead of the base **1d6**.
