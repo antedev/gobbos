@@ -55,8 +55,8 @@ This roadmap is organized around the **three core gameplay loops** of Gobbos. By
     *   [ ] **Task:** Rewrite `33_Equipment.md` to define standard weapons/armor as base zero-Oddity chassis.
     *   [ ] **Task:** Resolve `TBD` tags for Weapon traits: `Cutting`, `Poking`, `Short`.
     *   [ ] **Task:** Resolve `TBD` tags for Armor traits: `Light`.
-*   **Feature 4.2: Utility Capacity**
-    *   [ ] **Story:** Establish "Utility Slots" for carrying Brains-based contraptions and magic without using standard Bulk.
+*   **Feature 4.2: Power Word Slots**
+    *   [x] **Story:** Establish "Power Word Slots" for memorizing magic based on the Brains stat.
 
 ### Epic 5: Communal Crafting (Scrap-Taping)
 *Goal: Allow Goblins to build unstable custom weapons and armor.*

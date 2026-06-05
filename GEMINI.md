@@ -1,6 +1,6 @@
 # Gobbos Rules and Guidelines
 
-This file combines the core game design, workflow pipeline, and formatting rules for the Gobbos TTRPG development.
+This file combines the core game design, workflow pipeline, and formatting rules for the Gobbos TTRPG development. The main objective is to write consisten and fun rules. There is a web-server as well included for easy viewing, but it do NOT need to be cared for, rebuilt, compiled, tested or anything like that unless explicitly asked for. 
 
 ## 1. Design Overview
 

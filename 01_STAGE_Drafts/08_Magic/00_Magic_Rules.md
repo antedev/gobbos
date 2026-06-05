@@ -10,12 +10,13 @@ Magic in Gobbos is unstable, highly narrative, and driven by a push-your-luck ca
 
 ### Prerequisites to Cast
 Not every goblin can channel the unstable threads of magic. To cast a spell, a goblin must meet the following criteria:
-1. **Brains 3+:** Your mind must be sharp (or cracked) enough to hold a Power Word in place.
+1. **Brains 2+:** You must have at least **1 Power Word slot** (equal to **Brains - 1**) to hold a spell in your mind. Goblins with Brains 1 have 0 slots and cannot cast magic.
 2. **Magical Conduit:** You must possess a magic-focused **Quirk** (such as *Weirdo* or *Shaman*) or be wielding a magical **Oddity** (such as a runic staff, crystal skull, or channeling wand).
 
-### Power Words as Descriptors
-Goblins do not learn "spells." Instead, they learn **Power Words**, which are represented by the exact same **Narrative Descriptors (Tags)** used for Quirks, Gang Shenanigans, and Oddity Crafting (e.g., `[Fire]`, `[Sticky]`, `[Shock]`, `[Spooky]`, `[Slip]`). 
-* If you have access to a Tag through your character's Quirks, Gear, Lair upgrades, or Gang traits, you can shout it as a Power Word to cast a spell.
+### Power Words and Slots
+Goblins do not learn "spells." Instead, they memorize **Power Words**, which are represented by the exact same **Narrative Descriptors (Tags)** used for Quirks, Gang Shenanigans, and Oddity Crafting (e.g., `[Fire]`, `[Sticky]`, `[Shock]`, `[Spooky]`, `[Slip]`). 
+*   **Prepared Words:** Your Power Word slots determine how many Words you can have memorized and ready to cast. Attuning to and swapping Power Words in your slots takes place in the Lair during downtime.
+*   **Accessing Tags:** If you have access to a Tag through your character's Quirks, Gear, Lair upgrades, or Gang traits, you can attune to it as a Power Word to fill one of your slots.
 
 ---
 

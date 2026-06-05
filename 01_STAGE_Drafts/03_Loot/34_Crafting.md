@@ -61,7 +61,7 @@ Oddities come in three functional categories. A single Oddity can fill any role;
 
 #### Oddity Limits & Capacity
 
-Your character's **Brains** score determines your **Crafting Capacity**—the maximum number of Oddities you can attach to a single item. (Note: This is completely independent of your Brains Utility Slots for carrying items). A Brains 1 goblin can attach 1 Oddity. A Brains 3 goblin can attach 3 Oddities. You cannot exceed this limit; the contraption simply becomes too complicated for your goblin brain to operate.
+Your character's **Brains** score determines your **Crafting Capacity**—the maximum number of Oddities you can attach to a single item. (Note: This is completely independent of your Brains Power Word slots). A Brains 1 goblin can attach 1 Oddity. A Brains 3 goblin can attach 3 Oddities. You cannot exceed this limit; the contraption simply becomes too complicated for your goblin brain to operate.
 
 #### The Oddity Ceiling Rule
 

@@ -72,7 +72,7 @@ Glory is awarded at the end of the raid based on Raid Points and personal antics
     *   **The Compulsion:** Voluntarily trigger their Gang's **Shenanigan** compulsion in an disadvantageous situation, generating a complication *and* adding a die to the shared **Bangaranga Pool**.
     *   **The Sacrifice:** Completely destroy a custom gear item by declaring an **Overclock** (see [Crafting & Custom Gear](34_Crafting.md)).
     *   **The Tyrant:** Use the **Assert Dominance** action (attacking a Mob under their own command) to successfully regain **Grunt** in combat.
-    *   **The Martyr:** Roll a Fumble or suffer a **Party Foul** (see [Dice](01_Dice.md)) but successfully survive the encounter.
+    *   **The Martyr:** Roll a Fumble or suffer **Overreaching** (see [Dice](01_Dice.md)) but successfully survive the encounter.
 
 
 ### 2. Loot (Lair Progression)
