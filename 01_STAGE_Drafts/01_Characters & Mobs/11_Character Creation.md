@@ -66,9 +66,9 @@ Your main stats determine your derived secondary stats, which dictate your survi
 
 >> **IMPORTANT:** Because you only have 1 point to distribute at creation, your starting stats will always feature one stat at 2 and three stats at 1. This means your second-highest stat will always be **1**, giving starting Bosses a starting **Grunt** of **1**.
 >> 
->> This starting **Grunt** limits your command to a single **Size 1 Runt Mob** at campaign start. As your Gang grows in **Infamy**, subsequent Bosses will inherit more starting Stat Advances (see [Death & Legacy](15_Level_Up%20and%20death.md)), allowing them to start with a **Grunt** of 2 or more and command larger Mobs.
+>> This starting **Grunt** limits your command to a single **Size 1 Runt Mob** at campaign start. As your Gang grows in **Infamy**, subsequent Bosses will inherit a starting **Successor XP Pool** (see [Death & Legacy](15_Level_Up%20and%20death.md)), allowing them to buy higher starting stats and command larger Mobs.
 
-> **Example:** Grub creates a Boss and puts his 1 starting point into **Tough**. His stats are **Tough** 2, **Slink** 1, **Brains** 1, and **Mouth** 1. His second-highest stat is 1. His starting **Grunt** is **1**. 
+> **Example:** Grub creates a Boss and puts his 1 starting point into **Tough**. His stats are **Tough** 2, **Slink** 1, **Brains** 1, and **Mouth** 1. His second-highest stat is 1. His starting **Grunt** is **1**.  
 
 
 ---

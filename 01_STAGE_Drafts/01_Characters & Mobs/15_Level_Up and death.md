@@ -3,12 +3,13 @@
 ## The "Next Gobbo Up" (Death & Respawning)
 When your PC dies, the Lair doesn't mourn. They simply look at the next biggest Gobbo in your Gang to take over. 
 
-Rolling a new PC from an existing Gang means you don't start from scratch. The new PC starts with Level 1 in all stats, plus a pool of **Stat Advances equal to the Gang's Infamy Level** (capped at 4).
+Rolling a new PC from an existing Gang means you don't start from scratch. The successor Boss B starts with Level 1 in all stats, gets **1 starting advance** (just like standard character creation), and receives a starting pool of **Successor XP** equal to **Gang Infamy × 4** to spend on buying stats (using the standard XP stat costs).
+*   **Successor Stat Cap:** To maintain progression space and avoid starting as an Elder, no Main Stat can be raised above **Level 4** at successor creation.
 
-### Inherited Talent
-A successor Boss does not just inherit the gang's boots—they inherit the actual tricks of the dead. The new Boss immediately starts with **1 Quirk or Twist** that the deceased Boss possessed. 
-*   **No Gating:** The successor ignores the usual Stat requirements (Tier gating) for this specific inherited Quirk/Twist, representing their raw execution of their predecessor's signature maneuver.
-*   **Slot limits:** This Quirk counts toward the Boss's personal limit of **3 Personal Quirks**.
+### Gang Marks (Tattoos of the Dead)
+A successor Boss does not just inherit their predecessor's gear—they honor their memory by getting a permanent **Gang Mark** (a tattoo inked with soot and mud). The successor immediately starts with one **Quirk** or **Twist** that the deceased Boss possessed:
+*   **No Gating:** The successor ignores the usual Stat requirements (Tier gating) for this specific **Gang Mark** Quirk, representing the raw execution of their predecessor's signature maneuver.
+*   **Slot Limits:** This Quirk counts toward the Boss's personal limit of **3 Personal Quirks**.
 
 ### The Catch-Up Boost
 To help your new Boss quickly step back into their rightful place of power, a fresh respawn receives **+2 bonus XP** on their first raid (provided they survive). This represents the successor quickly consolidating their grip on the Gang, looting the memory (and teeth) of their predecessor, and asserting their command.
@@ -100,13 +101,9 @@ Retiring is the ultimate victory for a Gobbo. They step down from active raiding
 
 ### Elder Benefits
 
-When a PC retires, they join the Gang’s council. The player rolls up a new PC, but the Gang gains a permanent, campaign-scale passive benefit. The Elder must be staffed at a relevant Lair room to unlock their super-power:
+When a PC retires, they join the Gang’s council. The player rolls up a new PC, and the retired Boss becomes an **Elder** who can be staffed at Lair facilities to unlock major, campaign-scale passive upgrades for your Gang.
 
-*   **Elder of Tough (Staffed at the Training Ring):** **"Iron Hide."** All Mobs under the Gang's command gain **+1 passive Defense Die** (Armor) for free, without consuming Bulk or reducing Carry Capacity.
-*   **Elder of Slink (Staffed at the Shadow Den):** **"Trap Sweepers."** All traps in a raid location have their Target Number (**TN**) reduced by 1 (minimum 1) for your Gang's tests.
-*   **Elder of Mouth (Staffed at the Council Room):** **"Riot Shouter."** The Gang's Boss has their starting and maximum **Grunt** command cap increased by **+1**. Additionally, once per raid, the Boss can rally all fleeing or uncontrolled Mobs in their Zone as a free action.
-*   **Elder of Brains (Staffed at the Tinker Yard):** **"Master Alchemist."** Your Boss can install **1 extra Oddity** on any piece of Custom Gear, exceeding the Boss's standard Crafting Capacity by **1**.
-
+For the list of specific mechanical upgrades unlocked by each Elder type, see [Elder Benefits](12_Gang.md#elder-benefits).
 
 Retiring is highly beneficial because it cements long-term power for the Gang without the player character dying and losing their gear to the dungeon.
  

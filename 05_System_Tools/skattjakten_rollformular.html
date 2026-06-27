@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Skattjakten: Rollformulär</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: #2c2520;
+            background-color: #fcfaf6;
+            line-height: 1.5;
+        }
+
+        .wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #e6dfd3;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+
+        /* Header */
+        .header {
+            border-bottom: 3px double #8f2424;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #8f2424;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 0 0 5px 0;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            font-style: italic;
+            color: #665c54;
+            margin: 0 0 25px 0;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .info-table td {
+            padding: 8px;
+            font-size: 16px;
+            vertical-align: bottom;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #2c2520;
+            width: 60px;
+        }
+
+        .info-line {
+            border-bottom: 1px solid #8c8075;
+            padding-bottom: 2px;
+        }
+
+        /* Sektioner */
+        .grid-layout {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        .column {
+            display: table-cell;
+            vertical-align: top;
+        }
+
+        .left-col {
+            width: 55%;
+            padding-right: 25px;
+        }
+
+        .right-col {
+            width: 45%;
+            padding-left: 25px;
+            border-left: 1px dashed #e6dfd3;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #8f2424;
+            text-transform: uppercase;
+            border-left: 4px solid #8f2424;
+            padding-left: 10px;
+            margin: 25px 0 15px 0;
+            letter-spacing: 1px;
+        }
+
+        /* Stats Tabell */
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            border: 1px solid #e6dfd3;
+        }
+
+        .stats-table th {
+            background-color: #8f2424;
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 10px 4px;
+            text-align: center;
+            border: 1px solid #8f2424;
+        }
+
+        .stats-table td {
+            padding: 12px 6px;
+            text-align: center;
+            border: 1px solid #e6dfd3;
+            font-size: 14px;
+        }
+
+        .stat-name {
+            text-align: left !important;
+            font-weight: bold;
+            background-color: #faf8f5;
+            padding-left: 12px !important;
+        }
+
+        .stat-desc {
+            font-size: 11px;
+            font-weight: normal;
+            color: #665c54;
+            display: block;
+            margin-top: 3px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Enhetliga cirklar för alla stats */
+        .circle {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #8f2424;
+            border-radius: 50%;
+            background-color: #ffffff;
+            margin: 0 auto;
+        }
+
+        /* Respektmätare */
+        .respekt-box {
+            background-color: #ffffff;
+            border: 1px solid #e6dfd3;
+            padding: 15px;
+            width: 100%;
+        }
+
+        .respekt-desc {
+            font-size: 12px;
+            color: #665c54;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .respekt-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .respekt-cell {
+            border: 2px solid #4a4039;
+            height: 40px;
+            text-align: center;
+            vertical-align: middle;
+            font-weight: bold;
+            background-color: #ffffff;
+            font-size: 13px;
+        }
+
+        /* Händer - Fyrkantiga rutor för mynt */
+        .hand-container {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .hand-box {
+            border: 2px solid #e6dfd3;
+            background-color: #ffffff;
+            width: 160px;
+            height: 160px;
+            margin: 10px 0;
+            padding: 12px;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .hand-box.heavy-restriction {
+            border-color: #d9534f;
+            background-color: #fffdfd;
+        }
+
+        .hand-box-title {
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #4a4039;
+            margin-bottom: 6px;
+            border-bottom: 1px solid #e6dfd3;
+            padding-bottom: 4px;
+        }
+
+        .hand-box.heavy-restriction .hand-box-title {
+            color: #d9534f;
+        }
+
+        .hand-text {
+            font-size: 11px;
+            color: #665c54;
+            line-height: 1.3;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .sword-icon {
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+            width: 40px;
+            height: 40px;
+            opacity: 0.25;
+        }
+
+        /* Hälsa */
+        .health-row {
+            display: flex;
+            justify-content: flex-start;
+            gap: 25px;
+            margin-top: 10px;
+        }
+
+        .heart-container {
+            text-align: center;
+        }
+
+        .heart-icon {
+            width: 50px;
+            height: 50px;
+            fill: #000000;
+        }
+
+        .heart-text {
+            font-size: 11px;
+            font-weight: bold;
+            color: #665c54;
+            margin-top: 5px;
+            text-transform: uppercase;
+        }
+
+        /* Lathund */
+        .lathund-box {
+            background-color: #faf8f5;
+            border: 1px solid #e6dfd3;
+            padding: 20px;
+            margin-top: 35px;
+        }
+
+        .lathund-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #8f2424;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #e6dfd3;
+            padding-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .lathund-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .lathund-cell {
+            width: 50%;
+            vertical-align: top;
+            font-size: 12px;
+            color: #332a24;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="title">Skattjakten</div>
+            <div class="subtitle">Pirater &amp; Stridssköldpaddor &bull; Officiellt Speltest-Rollformulär</div>
+
+            <table class="info-table">
+                <tr>
+                    <td class="info-label">Pirat:</td>
+                    <td class="info-line" style="width: 50%;"></td>
+                    <td class="info-label" style="padding-left: 30px; width: 50px;">Lag:</td>
+                    <td class="info-line"></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- GRID INTERN LAYOUT -->
+        <div class="grid-layout">
+
+            <!-- VÄNSTER KOLUMN: STATS & RESPEKT -->
+            <div class="column left-col">
+
+                <div class="section-title">Egenskaper &amp; Uppgradering</div>
+
+                <table class="stats-table">
+                    <tr>
+                        <th>Stat / Förmåga</th>
+                        <th>Nivå 1<br><span style="font-weight:normal; font-size:10px;">0 XP</span></th>
+                        <th>Nivå 2<br><span style="font-weight:normal; font-size:10px;">2 XP</span></th>
+                        <th>Nivå 3<br><span style="font-weight:normal; font-size:10px;">4 XP</span></th>
+                        <th>Nivå 4<br><span style="font-weight:normal; font-size:10px;">8 XP</span></th>
+                        <th>Nivå 5<br><span style="font-weight:normal; font-size:10px;">12 XP</span></th>
+                    </tr>
+                    <tr>
+                        <td class="stat-name">
+                            💪 Armar
+                            <span class="stat-desc">Antal tärningar vid attack</span>
+                        </td>
+                        <td>
+                            <div class="circle"></div>
+                        </td>
+                        <td>
+                            <div class="circle"></div>
+                        </td>
+                        <td>
+                            <div class="circle"></div>
+                        </td>
+                        <td>
+                            <div class="circle"></div>
+                        </td>
+                        <td>
+                            <div class="circle"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="stat-name">
+                            👟 Ben
+                            <span class="stat-desc">Antal rutor du går/handling</span>
+                        </td>
+                        <td>
+                            <div class="circle"></div>
+                        </td>
+                        <td>
+                            <div class="circle"></div>
+                        </td>
+                        <td>
+                            <div class="circle"></div>
+                        </td>
+                        <td>
+                            <div class="circle"></div>
+                        </td>
+                        <td>
+                            <div class="circle"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="stat-name">
+                            🗣️ Mun
+                            <span class="stat-desc">Order-avstånd i antal rutor</span>
+                        </td>
+                        <td>
+                            <div class="circle"></div>
+                        </td>
+                        <td>
+                            <div class="circle"></div>
+                        </td>
+                        <td>
+                            <div class="circle"></div>
+                        </td>
+                        <td>
+                            <div class="circle"></div>
+                        </td>
+                        <td>
+                            <div class="circle"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="stat-name">
+                            🧠 Hjärna
+                            <span class="stat-desc">Tärningar för fällor / lås</span>
+                        </td>
+                        <td>
+                            <div class="circle"></div>
+                        </td>
+                        <td>
+                            <div class="circle"></div>
+                        </td>
+                        <td>
+                            <div class="circle"></div>
+                        </td>
+                        <td>
+                            <div class="circle"></div>
+                        </td>
+                        <td>
+                            <div class="circle"></div>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="section-title">Respekt!</div>
+                <div class="respekt-box">
+                    <div class="respekt-desc">Lika med din näst högsta stat vid start. Bestämmer max antal sköldpaddor
+                        på din platta (1 sköldpadda = 1 tärning/liv).</div>
+                    <table class="respekt-table">
+                        <tr>
+                            <td class="respekt-cell">Nivå 1</td>
+                            <td class="respekt-cell">Nivå 2</td>
+                            <td class="respekt-cell">Nivå 3</td>
+                            <td class="respekt-cell">Nivå 4</td>
+                            <td class="respekt-cell">Nivå 5</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+
+            <!-- HÖGER KOLUMN: BÄRKAPACITET & HÄLSA -->
+            <div class="column right-col">
+
+                <div class="section-title">Bärkapacitet</div>
+                <div class="hand-container">
+
+                    <!-- Fyrkantig Hand 1 -->
+                    <div class="hand-box">
+                        <div class="hand-box-title">Hand 1</div>
+                        <div class="hand-text">Kan bära valfritt mynt utan hinder.<br><br>Koppar (1p)<br>Silver
+                            (2p)<br>Guld (3p)</div>
+                    </div>
+
+                    <!-- Fyrkantig Hand 2 (Tungt lastad) -->
+                    <div class="hand-box heavy-restriction" style="margin-left: 15px;">
+                        <div class="hand-box-title">Hand 2</div>
+                        <div class="hand-text">Placera mynt här för att bära en extra skatt.<br><br><strong>Tungt
+                                lastad:</strong> Du får endast utföra <strong>Gå</strong> eller <strong>Ge
+                                Order</strong>.</div>
+                        <!-- Svärdsikon som täcks över av myntet -->
+                        <svg class="sword-icon" viewBox="0 0 24 24">
+                            <path fill="#d9534f"
+                                d="M21.9 2.1c-.2-.2-.6-.2-.8 0l-3.3 3.3-3.1-3.1c-.2-.2-.6-.2-.8 0l-.7.7c-.2.2-.2.6 0 .8l3.1 3.1-4.6 4.6-2.5-2.5c-.2-.2-.6-.2-.8 0l-.7.7c-.2.2-.2.6 0 .8l2.5 2.5-5 5-2.1-2.1c-.2-.2-.6-.2-.8 0l-.7.7c-.2.2-.2.6 0 .8l2.1 2.1-3.3 3.3c-.2.2-.2.6 0 .8l.7.7c.2.2.6.2.8 0l3.3-3.3 2.1 2.1c.2.2.6.2.8 0l.7-.7c.2-.2.2-.6 0-.8l-2.1-2.1 5-5 2.5 2.5c.2.2.6.2.8 0l.7-.7c.2-.2.2-.6 0-.8l-2.5-2.5 4.6-4.6 3.1 3.1c.2.2.6.2.8 0l.7-.7c.2-.2.2-.6 0-.8l-3.1-3.1 3.3-3.3c.2-.2.2-.6 0-.8l-.7-.7z" />
+                        </svg>
+                    </div>
+
+                </div>
+
+                <div class="section-title">Hälsa</div>
+                <div class="health-row">
+                    <div class="heart-container">
+                        <svg class="heart-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.5 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                        <div class="heart-text">Liv 1</div>
+                    </div>
+                    <div class="heart-container">
+                        <svg class="heart-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.5 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                        <div class="heart-text">Liv 2</div>
+                    </div>
+                    <div class="heart-container">
+                        <svg class="heart-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.5 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                        <div class="heart-text">Liv 3</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- LATHUND -->
+        <div class="lathund-box">
+            <div class="lathund-title">Snabbreferens &bull; Regler vid spelbordet</div>
+            <table class="lathund-table">
+                <tr>
+                    <td class="lathund-cell" style="padding-right: 15px;">
+                        <strong>Dina handlingar (Välj 2 per runda):</strong><br>
+                        &bull; <em>Gå:</em> Flytta din Boss lika många rutor som din stat <strong>Ben</strong>.<br>
+                        &bull; <em>Attackera:</em> Slå dina <strong>Armar</strong> i d6 mot ett mål i samma rum.<br>
+                        &bull; <em>Plundra:</em> Plocka upp lös skatt på golvet (kräver inget slag).<br>
+                        &bull; <em>Låsa upp:</em> Öppna kista/dörr med ett slag för din <strong>Hjärna</strong>.<br>
+                        &bull; <em>Ge Order (Gå/Attack/Plundra):</em> Styr sköldpaddorna (Max räckvidd =
+                        <strong>Mun</strong>).<br>
+                        &nbsp;&nbsp; ➔ Sköldpaddorna flyttar alltid exakt <strong>2 steg</strong> vid order.
+                    </td>
+                    <td class="lathund-cell" style="padding-left: 15px; border-left: 1px dashed #e6dfd3;">
+                        <strong>Strid &amp; Trängsel:</strong><br>
+                        &bull; <strong>Fast TN 2:</strong> Slå för attack. Alla 5:or &amp; 6:or är framgångar (6:or
+                        exploderar). Du måste nå minst 2 framgångar för att träffa (= 1 skada). Varje framgång *över*
+                        två ger +1 skada.<br>
+                        &bull; <strong>Trängselskatt:</strong> Att gå UT ur ett rum med motståndare kostar <strong>+1
+                            extra rörelsepoäng per fientlig figur</strong> (varje sköldpadda/boss räknas).<br>
+                        &bull; <strong>Död &amp; Stöld:</strong> Vid 0 liv/sköldpaddor stjäl anfallaren din last direkt.
+                        Du teleporteras till din bas och återhämtar dig fullt utan dötid!
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
