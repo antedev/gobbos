@@ -17,22 +17,26 @@ With a Move action, you can move up to your [[Movement]] number of zones. The di
 #### Attack (Mob or PC)
 The Attack action can only be used in the Players Active turn. 
 To Attack, the player's base dice pool is based on the player's [[Tough]] for [[Melee attack]] and [[Slink]] for [[Ranged attack]], modified by any equipment, Quirks, or other circumstances. 
-*   **One-Hit Kill:** Most enemies in Gobbos do not have Hit Points. They have a static Defence number. Roll successes equal to their Defence to instantly kill them.
-*   If you roll fewer successes than the Defence, the attack bounces off their armor and deals no damage.
+*   **Kill / Wound:** If you roll successes equal to or greater than the target's current **Defence**, you instantly defeat a standard enemy, deal **1 Wound** to a Boss/Elite (see [Enemies](../04_Enemies/20_Enemies.md)), or reduce a Mob's **Size** by the number of successes scored.
+*   **Stagger:** If you roll at least **one (1) success** but fewer than the target's current **Defence**, the attack does not deal damage, but it throws them off balance. The target gains the **Staggered** condition until the end of the round.
+*   **Bounce:** If you roll **zero (0) successes**, the attack bounces harmlessly off their armor. Nothing happens.
 #### Plunder (Mob or PC)
 The [[Plunder]] action is to pick up any [[Loot]] at where the Player or the Mob stands.  
 #### Dodge / Parry (Reaction)
-The Dodge or Parry action can only be used as a **Reaction** to an incoming Attack or Environmental effect. Typically this is in the Enemy Active turn. You **must** have saved a Standard Action from your turn to use this. If you are out of actions, you simply take the damage!
+The Dodge or Parry action can only be used as a **Reaction** to an incoming Attack or Environmental effect. Typically this is in the Enemy Active turn. You **must** have saved a Standard Action from your turn to use this.cor If you are out of actions, you simply take the damage!
 *   **Dodge:** Test [[Slink]].
 *   **Parry:** Test [[Tough]] (requires a shield).
 *   **Armor** Armor adds Passive defence dice that do NOT need an action. See more under equipment.
 *   **The Math:** Every success you roll reduces the incoming Damage by 1. If any damage remains, your Gobbo or Mob takes it.
 
 **Mob Defense:**
-Mobs do not naturally dodge. They are a chaotic swarm and simply absorb damage. A Mob only rolls Defence dice if:
-1.  **Armored (Passive):** The Mob has been equipped with Armor, granting them Passive bonus defense dice. 
-2.  **Ordered (Active):** The Boss PC uses a Order reaction to scream at them to Scatter. It is based on how well the Boss can coordinate them, the Mob rolls a number of defense dice equal to the Boss's **Mouth** stat. If the Mob is still alive, they may take a Move action as well. . 
-3.  **Automation:** The Mob's AI explicitly dictates a defensive maneuver. TDB: Icke definerat än.
+Mobs do not naturally dodge. They are a chaotic swarm and simply absorb damage. However, a Mob's defensive capabilities depend on their equipment and their current combat state (saved actions):
+1.  **Armored (Passive):** If a Mob is equipped with Armor, they gain passive defense dice (e.g., **+1d6** or **+2d6**) which are rolled against every incoming attack.
+2.  **Saved Actions (Active Defense):** If a Mob has saved actions (because they are **Loitering** and only used 1 action on their turn), they can use their saved action as a Reaction to defend. For each saved action spent, the Mob rolls **1d6** Defence.
+    *   *Loitering Mobs (1 Saved Action):* Rolls **1d6** Defence.
+    *   *Ordered or Out of Control Mobs (0 Saved Actions):* Rolls **0d6** Defence (relying only on passive Armor).
+    *   *Bane:* A **Staggered** Mob suffers a **Bane (-1d)** to their Defence rolls, reducing a loitering Mob's active defense roll to **0d6**.
+3.  **Ordered Scatter (Reaction):** If a Mob with 0 saved actions is targeted by an attack, the Boss can spend a saved action (or an unused Free Order Reaction) to yell at them to "Scatter!". The Mob rolls defence dice equal to the Boss's **Mouth** stat. If they survive the attack, they may immediately Move 1 Zone to take cover.
 
 ### GM Tactics: Group Attacks (Enemy Swarms)
 If multiple enemies surround and attack a Gobbo, the GM should NOT make separate attacks. Instead, they combine into a **Group Attack**. While a PC can only be attacked by a maximum of 3 enemies, there is no limit on attacker on a Mob
@@ -44,9 +48,14 @@ If multiple enemies surround and attack a Gobbo, the GM should NOT make separate
 The Mainpulate action is a catch all for whenever a Mob or PC tries to interact with an item or the environment in any way. The base dice pool is based on whatever attribute is most relevant to the action, modified by any equipment, Quirks or other circumstances. The [[Difficulty]] and [[TN]] set by the GM. 
 
 #### Order 
-The Order action is used to give commands to your goblins, granting a Mob their full 2 actions for the round. Standard Orders do not require a dice roll.
+The Order action is used to give commands to your goblins, directing a Mob to use both of their actions for the round. Standard Orders to controlled Mobs do not require a dice roll.
+*   **The 3 Mob States:** A Mob is always in one of three states on their turn:
+    *   **Ordered:** Direct instructions from the Boss. They spend both actions as ordered (0 saved actions for defense).
+    *   **Loitering:** Under control, but receives no orders. Goblins use **1 action** to loiter (roll/choose on the Loitering Table in [Goblin Mobs](../01_Characters%20&%20Mobs/13_Goblin_mob.md)) and save **1 action** for defense (**1d6 Defence**).
+    *   **Out of Control:** Broken command (out of sight, size exceeds Grunt, or failed morale). They spend both actions running amok under GM control (roll/choose on the Out of Control Table in [Goblin Mobs](../01_Characters%20&%20Mobs/13_Goblin_mob.md)), leaving them with 0 saved actions for defense.
+*   **Regaining Control:** To regain control of an Out of Control Mob, the Boss must spend a Standard Action to **Order** them, resolving it using the standard command test rules in [Giving Orders](04_Giving%20orders.md). On a success, the Mob becomes controlled and receives their instructions; on a failure, they ignore the Boss and remain Out of Control.
 *   **Cross-Gang Super Mobs:** Issuing an Order to a Mob merged from multiple different player Gangs *always* requires a Grunt test (Test [[Tough]] if in the same Zone, or [[Mouth]] from afar).
-*   **The Boredom Rule:** Mobs have short attention spans. When given an Order, a Mob cannot perform the exact same action twice (e.g., they cannot Attack twice, or Plunder twice). *Exception:* A Mob *can* take the Move action twice if they are fleeing or charging.
+*   **The Boredom Rule:** Mobs have short attention spans. When acting (Ordered, Loitering, or Out of Control), a Mob cannot perform the exact same action twice (e.g., they cannot Attack twice, or Plunder twice). *Exception:* A Mob *can* take the Move action twice if they are fleeing or charging.
 *   **Free Orders & Maximum Mobs:** Your ability to command the swarm is dictated strictly by your **Mouth** stat progression (see [[Stats]]). As you level up Mouth, you can command more Mobs simultaneously, and you are granted additional **Free Orders** per round. You never have to spend your Standard Actions to issue these Free Orders!
 
 
@@ -80,8 +89,10 @@ If any side gets reinforcements they are placed on the board now in a suitable z
 #### Points
 The GM updates if there are any changes to the points to be awarded, such as a new location being discovered or a special character now appeared. 
 ### Players active turn
-On the Players *active* turn they can use any actions they want, to move, plunder, attack or whatever shenanigans they might conjure up. 
-In this phase the GM might use some actions of the enemies to *react* to anything the players are doing, such as shooting at a moving target, trying to fight anyone trying to take something etc. 
+On the Players *active* turn, they can use any actions they want to move, plunder, attack, or execute other shenanigans.
+1.  **Player Actions:** All player characters take their actions in any order. This is when Bosses can move, attack, or issue orders to control their Mobs.
+2.  **Unordered Mobs:** Once all players have finished taking their actions, any Mobs that were **not ordered** this turn (both **Loitering** and **Out of Control** Mobs) resolve their behaviors. Roll on the appropriate behavior table for each.
+During this phase, the GM may use enemy reactions to respond to players or mobs (e.g., taking opportunity shots or counter-attacking). 
 ### Enemy active turn
 On the Enemies active turn, they can use whatever action they have left, which might have been spent on reactions. 
 In this phase the Players might react to anything a enemy is doing, if they saved up any actions from their active phase. 
@@ -89,7 +100,7 @@ In this phase the Players might react to anything a enemy is doing, if they save
 #### Points
 Raid points are calculated, including currently held as well as confirmed, based on objectives and the basic Raid rules. 
 #### Conditions
-All around the table are recommended to do a short assessment of the current standing. How hurt any mobs are, where the enemies are and whatever conditions they might have. Any conditions with End of Round abilities is carried out now. 
+All around the table are recommended to do a short assessment of the current standing. How hurt any mobs are, where the enemies are and whatever conditions they might have. Any conditions with End of Round abilities is carried out now. Additionally, all **Staggered** conditions on PCs, Mobs, and Enemies are automatically removed. 
 #### Moral check
 The GM and the players do a Morale Check if needed, to see if some or all flees. Few opponents fight to the death, unless there is no alternatives (or they are immune to Morale)
 #### Environmental effects

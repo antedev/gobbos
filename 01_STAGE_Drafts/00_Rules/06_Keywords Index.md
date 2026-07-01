@@ -31,8 +31,9 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 *   **Glory (Raid Points):** Weightless points awarded for objective completion. At the end of the raid, all points are pooled, and the XP payout is shared equally among surviving PCs.
 *   **Greed (Loot Value):** The raw value of stolen goods. Pooled to upgrade the Lair and grant shared XP.
 *   **Bulk:** A measure of how heavy/unwieldy an item is. High bulk reduces movement or requires multiple goblins.
-*   **Tags:** Keywords attached to equipment that define how it works (e.g., Bashing, Fast, Cutting for weapons; Light, Heavy, Loud for armor). Custom Gear can have additional Tags granted by Oddities. Tags on standard equipment are listed in [[Equipment]]. Tags from Oddities are defined by the Oddity's properties.
-*   **Status Effects:** [TODO: Define] Negative conditions applied to characters (e.g., Prone, Stunned, Bleeding, Poisoned).
+*   **Tags:** Dynamic elements and physical forces (always bracketed, e.g., `[Fire]`, `[Sticky]`, `[Toxic]`) that can be dynamically slapped onto or stripped away from zones, weapons, and creatures. For a full glossary of baseline tag behaviors and element synthesis rules, see [Master Tag Index](08_Master_Tag_Index.md).
+*   **Traits (Weapon/Armor):** Static physical properties built into equipment (e.g., `Bashing`, `Cutting`, `Heavy`, `Loud`). They are permanent properties of the item's design, modify core rules math, and do not participate in element synthesis. See [Equipment](33_Equipment.md).
+*   **Status Effects (Conditions):** Volatile states applied to characters (e.g., **Prone**, **Stunned**, **Weakened**, **Restrained**, **Blinded**, **Terrified**, and **Staggered**). See [Grit and Death](07_Wounds_Conditions.md#conditions).
 *   **First Pick ("My Mob, My Loot"):** If a specific PC's Mob physically carries a usable item out of the dungeon, their Gang gets First Pick to claim it before the rest of the loot is pooled.
 *   **Raid Boss (MVP):** A title voted upon at the end of a raid. Grants the winner a Flair Item or Temporary Boon for the next raid.
 *   **Lair Upgrades:** Improvements to the base bought with pooled Loot, granting permanent boons to all raiding goblins.

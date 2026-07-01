@@ -54,20 +54,41 @@ Mobs from different player Gangs *can* merge if both Bosses agree. This creates 
 *   **The Command Struggle:** The new Super-Mob is extremely volatile. Every time *either* Boss wants to issue an Order to the Super-Mob, it requires a **Grunt test** (Testing [[Tough]] if in the same Zone, or [[Mouth]] from afar).
 *   **In-Fighting:** Whenever a Cross-Gang Mob rolls a dice pool for *any reason* (like an Attack roll, or a Manipulate check), **every 1 rolled results in 1 damage to the Mob itself.** They cannot help themselves; they just start stabbing the other gang! This happens regardless of whether the action is successful or not.
 
-## Action Economy
-*   A Mob gets **2 Actions** per round.
-*   They only take these actions when commanded by a Boss, or when left to their own "Priority AI" (see below).
+### Action Economy & Combat States
 
-## Inherent Nature (Uncontrolled Mobs)
-Goblins are driven by strong feelings and sudden urges. If a Boss does not use an Order on a Mob, if a Mob breaks line of sight with their Boss, or if a Boss merges a Mob until it exceeds their Grunt stat, the GM takes control of the Mob. The Mob will automatically use their 2 Actions based on their Inherent Nature:
+A Mob gets **two (2) actions** per round, reset at the start of each round. A Mob's behavior, actions spent, and defensive capabilities are determined strictly by their combat state:
 
-**Survival > Loot/Eat > Violence > Trash Stuff > Wander Off**
+1.  **Ordered:** The Mob receives direct instructions from the Boss (using a Standard Action or Free Order). They use **both actions** as per the player's instructions (e.g., moving and attacking). They have **0 saved actions** left for defense (**0d6 Defence**).
+2.  **Loitering:** The Mob is under control but receives no orders on their turn. Goblins are naturally distracted and lazy; they use **1 action** to loiter (roll/choose on the **Loitering Table** below) and save **1 action** for defense. When attacked, they spend their saved action to roll **1d6 Defence**.
+3.  **Out of Control:** The Mob is uncontrolled (see below). They spend **both actions** running amok under GM control (roll/choose on the **Out of Control Table** below), leaving them with **0 saved actions** left for defense (**0d6 Defence**).
 
-1.  **Survival:** If there is a terrifying (TODO: What is terrifying?) enemy in their Zone, they will use their actions to run away to cover, or group up with another Mob. If cornered, they fight in a panic.
-2.  **Loot/Eat:** If safe, they will pick up any unattended Loot or Food in their Zone. Eating food heals 1d6 points of damage on their Health dice.
-3.  **Violence:** If there is a weak or beatable foe in their Zone, they will swarm and attack it.
-4.  **Trash Stuff:** If nothing else is around, they smash the room they are in.
-5.  **Wander Off:** If totally bored, they wander 1 Zone in a random direction (usually toward loud noises or shiny things).
+### Command Limits (Control vs. Out of Control)
+A Mob is under command as long as they are within line of sight of their Boss and the Mob's current **Size** does not exceed the Boss's maximum **Grunt** stat. A Mob immediately becomes **Out of Control** if:
+1.  **Broken Command:** They break line of sight with their Boss (e.g., they move behind a solid wall or enter a separate room).
+2.  **Command Limit Exceeded:** The Mob's **Size** increases beyond the Boss's current **Grunt** (often due to merging or the Boss losing Grunt from a Fumble).
+3.  **Morale Failure:** The Mob fails a group **Morale Check** and panics.
+
+#### Regaining Control
+To bring an Out of Control Mob back under command, the Boss must spend a Standard Action to **Order** them, resolving it using the standard command test rules in [Giving Orders](../00_Rules/04_Giving%20orders.md). On a success, the Mob becomes controlled and receives their instructions; on a failure, they ignore the Boss and remain Out of Control.
+
+---
+
+## Behavior Tables
+
+When a Mob is **Loitering** or **Out of Control**, roll **1d6** on the appropriate table during their turn to determine how they act:
+
+### Loitering Table (d6)
+*   **1 (Bicker):** They argue, push, and complain. (Uses 1 action. Saves 1 action for **1d6 Defence**).
+*   **2 (Inspect):** They pick their noses, stare at walls, or draw crude graffiti. (Uses 1 action. Saves 1 action for **1d6 Defence**).
+*   **3 (Snatch):** They pick up a nearby shiny object or eat a mushroom (resolves as a Plunder action if loot is present; otherwise narrative). (Uses 1 action. Saves 1 action for **1d6 Defence**).
+*   **4 (Wander):** They move **one (1) Zone** in a random direction (but they will not willingly leave line of sight of their Boss). (Uses 1 action. Saves 1 action for **1d6 Defence**).
+*   **5 (Snoop):** They peer around curiously, granting a **Boon** to the next PC who tests to spot hidden traps or doors in the Zone. (Uses 1 action. Saves 1 action for **1d6 Defence**).
+*   **6 (Taunt):** They make rude gestures, moon, or scream insults at the nearest enemy. (Uses 1 action. Saves 1 action for **1d6 Defence**).
+
+### Out of Control Table (d6)
+*   **1–2 (Panic / Flee):** If there is a **Terrifying Enemy** (any Elite or Boss, any creature with the `[Frightening]` or `[Huge]` tag, or any hazard/enemy that dealt damage to them this round) in their Zone, they spend both actions fleeing toward the nearest exit or cover. Otherwise, they squabble: the Mob takes **1 damage** and gains the **Staggered** condition. (Uses 2 actions. **0d6 Defence**).
+*   **3–4 (Loot / Trash):** If unattended loot or food is present, they plunder it (eating food heals **1d6** damage on their Mob health dice). Otherwise, they spend both actions trashing doors, crates, and furniture in their Zone. (Uses 2 actions. **0d6 Defence**).
+*   **5–6 (Frenzy):** They swarm and attack the nearest living creature in their Zone (enemy or ally!). If no creatures are present, they wander **one (1) Zone** toward the nearest noise. (Uses 2 actions. **0d6 Defence**).
 
 ---
 

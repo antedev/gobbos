@@ -220,7 +220,14 @@ While the combat-focused matrix is the default player-facing interface, custom Q
 
 ## 5. Modularity & Assembly
 
-To build a power, a player chooses one **Narrative Descriptor (Tag)** and attaches it to a **Mechanical Effect (Tier)** of the appropriate level.
+To build a power, a player chooses one **Narrative Descriptor (Tag)** (detailed in the [Master Tag Index](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md)) and attaches it to a **Mechanical Effect (Tier)** of the appropriate level.
+
+### Scaling Rules: Tag Baselines vs. Power Tiers
+To prevent mathematical stacking conflicts, custom powers scale as follows:
+*   **Math Override:** Custom powers use the **Tier's successes, damage, or healing values** instead of the tag's baseline successes/damage.
+*   **Persistent Baselines:** The tag's baseline conditions (e.g. *Restrained*), environmental behaviors, and element syntheses still apply in full.
+*   *Example (T1 Fire Dagger):* A T1 power deals +1 success/damage, matching `[Fire]`'s baseline +1 success.
+*   *Example (T3 Fire Sword):* A T3 power deals +3 successes/damage, overriding `[Fire]`'s +1 success baseline. The sword now deals +3 successes and ignites the zone on a hit.
 
 ### Narrative Descriptors (Tags)
 Descriptors (written as `[Tag]`) represent the physical or magical manifestation of the power (e.g., `[Fire]`, `[Sticky]`, `[Chilled]`, `[Loud]`, `[Toxic]`, `[Elastic]`, `[Angelic]`, `[Undead]`). Descriptors do not contain math. Instead, they define:
@@ -280,8 +287,4 @@ The second tag provides narrative utility and environmental interaction, not ext
 *   `[Fire]` + `[Sticky]` creates a burning glue that ignites wooden shields, but mechanically it just deals the base fire **successes** and imposes *Restrained*.
 
 ### Standard Condition Mapping
-Narrative tags must map directly onto the standardized condition system in [07_Wounds_Conditions.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md):
-*   `[Toxic]` or `[Sickening]` $\rightarrow$ imposes *Weakened* (**-1d** **Tough** / **-1d** Attack).
-*   `[Sticky]`, `[Chilled]`, or `[Entangled]` $\rightarrow$ imposes *Restrained* (**-1d** **Slink** / **-1d** Dodge, **Movement** 0).
-*   `[Terrifying]` or `[Horrific]` $\rightarrow$ imposes *Terrified* (**-1d** **Brains**/**Mouth**, cannot approach).
-*   *Other tags* not covered by the matrix default to a simple **Bane** on tests involving a specific stat (e.g., `[Loud]` $\rightarrow$ a **Bane** on **Slink**/Sneak tests), which automatically clears at the end of combat.
+Narrative tags map directly to the condition baseline rules established in the [Master Tag Index](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md). Refer to the Tag Index to find specific condition effects (such as **Stunned**, **Weakened**, **Restrained**, **Terrified**, or **Blinded**). Any tag not listed in the index defaults to a simple situational **Bane** on tests involving a relevant stat.
