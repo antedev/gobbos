@@ -1,70 +1,51 @@
 # Goblin Warren Culture
 
-*“Gobbos do not have moms. We have the soup. When Snik-Snik got squashed by a metal train, we did not cry. We cut off his head, ran past the human guards, and threw it back into the well. Two days later, a new runt crawled out of the muck, picked up Snik-Snik's wrench, and pointed out the loose steam valve. That is how the warrens keep running.”*
-— *Snatch-Gears, Cartel Lieutenant*
+*“Gobbos do not have schools or books. We do not need them. When you crawl out of the mud, your fingers already know which way to spin a brass nut, and your teeth itch to bite a merchant from the Aurelian Cartel. If you are too soft to hit back when the older boys throw soot at you, you clean the grease vats. If you are quick, you get a spear and a boar.”*
+— *Muck-Eye, Cartel Scout*
 
-## The Spawning: Coagulum Wells
-Goblins do not mate, carry young, or have traditional families. Instead, the entire species is generated alchemically within subterranean stone cisterns known as Coagulum Wells.
+## The Mud Pits: Coagulum Wells
+Goblins do not mate, nest, or raise families. Their entire population crawls out of the Coagulum Wells—deep, subterranean mud pits located in the lowest sewers and vaulted boiler rooms of the Heartland.
 
-*   **Location**: These ancient stone cisterns are built directly over raw Black Ichor fissures and shattered Sol-Quartz junctions deep in the underbelly of the Heartland.
-*   **The Mixture**: The runoff of the Black Ichor mixes with stagnant groundwater, pulverized Sol-Quartz dust, and organic waste, creating a thick, bubbling alchemical mire.
-*   **The Spawning**: Under tectonic pressure and the ambient warmth of the fissures, the mire forms heavy, rubbery pods. When a pod bursts, a fully formed, adolescent Goblin crawls out into the mud.
-
-```
-[ Active Life & Mutations ] ──► Experiences, Scars, and Grudges
-                                        │
-                                        ▼
-[ Death or Voluntary Dive ] ──► Corpse returned to the Coagulum Well
-                                        │
-                                        ▼
-[ Somatic Dissolution ]    ──► Flesh melts; somatic memory is suspended
-                                        │
-                                        ▼
-[ The Spawning Pods ]      ──► Mud boils and forms pods
-                                        │
-                                        ▼
-[ New Generation Spawn ]   ──► Fully formed, pre-skilled Goblins hatch
-```
+*   **The Environment**: Goblins treat the wells as wild, chaotic mud pits. They do not attempt to construct tidy brick cisterns or regulate the flow of alchemical materials. Instead, they let the raw Black Ichor runoff, groundwater, Sol-Quartz silt, and discarded bones mix and flood the cavern floors naturally, adapting their settlements to the shifting flows.
+*   **The Spawning**: Under the ambient heat of the deep earth fissures, rubbery, oil-slick pods swell in the mud. When a pod reaches critical mass, it bursts with a wet hiss. A fully formed, adolescent Goblin crawls out into the muck.
+*   **Environmental Adaptation**: Goblins physically adapt directly to the chemical quirks of their birth pit. Goblins born in flooded, cold sewer sumps hatch with slick, amphibian skin and webbed digits. Those spawned near boiling steam vents emerge with thick, soot-crusted, heat-resistant hides.
 
 ---
 
-## Lamarckian Rapid Inheritance
-Goblins operate on a system of rapid-lifetime genetic adaptation and inherited muscle memory. When a dead Goblin is thrown into a Coagulum Well, the alchemical mire processes the remains:
+## Somatic Inheritance: The Wordless Reflex
+The alchemical mixture inside a Coagulum Well serves as a somatic database. When Goblins return their dead to the mud, the alchemical Ichor dissolves the flesh but holds the physical changes, muscle memory, and skills in suspension.
 
-### 1. The Software (The Head)
-The brain and upper spine are the absolute minimum required to preserve a Goblin's identity.
-*   **The Upload**: When thrown into the well, the deceased's skills, tool proficiencies, and personal grudges are saved.
-*   **The Spawns**: The successor spawned from this pool inherits these talents. However, because there was no physical mass to process, the successor spawns small and scrawny, resetting any physical mutation tracks.
-
-### 2. The Hardware (The Body)
-The torso and limbs contain the somatic, physical adaptations.
-*   **The Upload**: Dumping an intact, whole corpse into the well uploads physical adaptations like thickened hide, poison immunity, or raw muscle mass.
-*   **The Spawns**: The successor inherits both the skills and the physical mutations, spawning as a hulking, pre-adapted veteran.
-
-### 3. Mire Schizophrenia ("The Babble")
-If a Goblin **Gang** steals the corpse of an enemy boss from a rival tribe and drops the body into their own Coagulum Well, the resulting offspring suffer from severe mental fracturing.
-*   **The Conflict**: The competing ancestral ghosts fight for control of the new Goblin's brain.
-*   **The Effect**: The character inherits cross-class hybrid talents but carries a permanent madness trait. Under stress, the Goblin may freeze, speak in two different voices, or attack allies.
+*   **The Instinctual Reflex**: Newborn Goblins do not hear voices in their heads, nor do they see dreams of the past. Instead, the legacy manifests as a wordless, physical reflex. A newly hatched Goblin picks up a file or a wrench, and their fingers simply know how to align the tool or calibrate a steam valve.
+*   **The Alchemical Impulse**: Grudges are inherited as physical reactions. When a Goblin encounters a human soldier wearing the insignia of a specific merchant house or guild, the Goblin does not recall a historical grievance; instead, they feel a sudden, hot impulse of raw, physical hatred or fear.
+*   **Mire Schizophrenia ("The Babble")**: 
+    > **Example:** A Goblin **Gang** ambushes a rival workshop, kills their master-tinkerer, and hurls the body into their own mud pit. The next batch of Goblins spawned from the pit suffer from conflicting reflexes. Their left hand instinctively moves to wire a steam furnace, while their right hand tries to slit their own throat due to the warring muscle memory of the rival lineages.
 
 ---
 
-## The Cult of the Useful Death
-The alchemical cycle of the Coagulum Wells shape Goblin morality and traditions:
+## The Schoolyard Warren: Adolescent Hierarchy
+Because Goblins crawl out of the mud fully adolescent, they undergo no formal education. Instead, their society is structured around a chaotic, informal hierarchy resembling a schoolyard bully dynamic.
 
-*   **The Stagnation Taboo**: Dying of old age, sickness, or cowardice is a severe social taboo. Goblins who live passive lives bring no new data or physical adaptations back to the well, and are viewed as genetic parasites who took from the blood pool but gave nothing back.
-*   **The Useful Death**: A violent, spectacular death that yields new technical or tactical data for the well is celebrated. Goblins do not wish each other safety or good fortune. Their common parting phrase is: *"Make it worth the soup."*
-*   **Corpse Theft**: The ultimate act of war between rival Goblin **Gangs**. Stealing a fallen enemy's master-mechanic or boss to dissolve him in your own well allows your clan to steal their generational secrets and base layouts.
-
----
-
-## Elder Runts and the Return to the Stew
-In Goblin society, chronological age holds no authority. Authority is dictated by ancestral age:
-
-*   **The Hatched General**: A tiny, scrawny runt who crawled out of the slime yesterday can walk into a workshop and command a horde of massive veterans. If the runt carries the uncorrupted martial memory of the clan's previous three war-bosses, the veterans obey instantly, recognizing the exact, authoritative snarl and posture.
-*   **The Discarded Old**: Goblins who survive for three years without dying are looked upon with pity and suspicion. They are seen as hoarders of experience that belongs to the community pool.
-*   **The Return to the Stew**: When a highly skilled Goblin feels their body slowing down due to injury or age, they do not wait to grow weak. They host a rowdy, alcohol-fueled feast with their **Gang**. At the height of the party, they willingly leap into the Coagulum Well to melt their flesh while their skills are at their peak.
+*   **The Testing**: Nameless hatchlings ("Fresh Meat") gather in the communal areas of the Lair. Older, larger Goblins push them around, steal their food, and test their tempers.
+*   **The Servants**: Goblins who are too weak, slow, or meek submit to the bullying. They spend their lives at the bottom of the social ladder, performing domestic tasks in the Lair—cleaning the grease traps, carrying coal, and serving as permanent lackeys.
+*   **The Raiders**: Goblins who are quick, aggressive, or clever enough to stand up for themselves, hit back, or pull off a successful theft are recruited into the active **Mobs** led by the **Goblin Boss** to raid the surface.
+*   **The Voluntary Dive**: 
+    > **Example:** A veteran scout's knee is shattered by a human crossbow bolt, making the scout too slow to run with the **Mob**. Rather than live as a slow, pitied target for the younger bullies, the scout hosts a loud, rowdy feast. At the height of the party, surrounded by the screaming cheers of the gang, the scout dives directly into the Coagulum Well, returning their peak reflexes to the communal soup.
 
 ---
 
-## Geographic Tethering
-While individual Goblins are decentralized and can leave the Heartland to sail the oceans or live in foreign lands for decades, their reproduction remains geographically tethered to the Coagulum Wells. Goblins cannot reproduce in the colonies. This constraint drives their Viking-style raiding loop: they must launch expeditions to plunder the world but are forced to return to their home warrens to deposit their dead and harvest the next generation.
+## The Scribing of the Mire: Ichor Tattoos
+Goblins practice a permanent alchemical modification known as **Ichor-Scribing**.
+
+*   **The Process**: Goblins use sharp bone needles to tap raw, unrefined Black Ichor directly into their skin, forming thick, obsidian-black geometric tattoos.
+*   **The Power**: The alchemical properties of the Ichor bond permanently with the Goblin's nerves. These tattoos grant physical gifts—such as patches of hide that shrug off fire, eyes that see in pitch darkness, or a permanent bonus to **Slink** and **Tough** tests.
+*   **The Legacy**: Because these alchemical tattoos physically warp the Goblin's somatic biology, the modifications are preserved when the Goblin dies and is melted down in the Coagulum Well. The alchemical soot of the tattoo enriches the mud, ensuring future generations inherit those physical traits naturally.
+
+---
+
+## The Surface Presence: Rails and Boars
+While the Goblins use the deep tunnels for safety and spawning, they maintain a heavy, mobile presence on the surface ruins, claiming the dense, overgrown "Soot-Fringes."
+
+*   **Fortified Outposts**: Goblins build shantytowns inside roofless gothic factories, cathedral vaults, and abandoned train stations, using the stone walls as shields.
+*   **Rail-Trolleys**: Goblins build hand-cranked flatcars and heavy iron rail-scooters to travel along the surviving imperial tracks, hauling heavy alchemical **Loot** back to their outposts.
+*   **Boar-Caravans**: For off-road travel, Goblins build mobile shanties and decorated wagons pulled by massive, bad-tempered **Tusk-Boars**. These caravans are built of dark oak and decorated with polished brass plates and velvet drapes.
+*   **Unstable Neutrality**: Goblins do not operate under a strict "kill-on-sight" dynamic with humans. The caravans act as mobile merchants, trading salvaged **Oddities** with human Squatters and Colonists at Grey Ports. However, if the Goblins spot a weak merchant convoy or a human wearing a shiny brass monocle, they will pivot instantly, launch a screaming ambush to plunder the convoy, and splay into the woods with the **Loot**.
