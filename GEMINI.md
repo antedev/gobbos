@@ -78,13 +78,61 @@ This repository is split into specific top-level folders that represent the "rel
 3. **Review:** Run probability simulations or lawyer audits (saving reports to `System_Tools/`).
 4. **Publishing:** Move the finalized file into its proper sequential place in `PROD_Core_Rules/`.
 
+### The Lore Pipeline
+The setting's history, themes, culture, and geography are kept separate in the `LORE/` main folder. It follows a parallel lifecycle to manage the development of setting and narrative canon.
+
+#### 1. `LORE/00_DEV_Lore/` (Volatile Lore Brainstorms)
+*   **What goes here:** Raw world-building ideas, loose historical notes, alternative concepts, and cultural brainstorms.
+*   **The Rules:** Volatile and lawless. Concepts here are not canon and do not supersede Stage or Prod.
+*   **Next Step:** When a lore concept is polished and aligned with current world-building goals, synthesize it and move it to `LORE/01_STAGE_Lore/`.
+
+#### 2. `LORE/01_STAGE_Lore/` (Synthesized Lore Drafts)
+*   **What goes here:** Fully realized setting drafts, history reports, and cultural systems that are undergoing review for consistency and continuity.
+*   **The Rules:** Files must be written in Markdown, using clean, authoritative language.
+*   **Next Step:** Once the draft has been audited by the Lore Keeper (for continuity and gap resolution), it is promoted to `LORE/03_PROD_Lore/`.
+
+#### 3. `LORE/03_PROD_Lore/` (Locked Canon)
+*   **What goes here:** The single source of truth for the game's setting, factions, history, and geography.
+*   **The Rules:** Immutable canon. Files here represent the established facts of the world. Any changes here require a structured migration plan (retcon) to ensure continuity.
+
+### How to Handle New Lore
+1. **Ideation:** Draft loose ideas or alternative setting concepts in `LORE/00_DEV_Lore/`.
+2. **Drafting:** Synthesize ideas into a clear, structured document in `LORE/01_STAGE_Lore/`.
+3. **Review:** Audit the drafts for continuity and compatibility with existing canon using the Lore Keeper.
+4. **Publishing:** Move the finalized, locked canon document into `LORE/03_PROD_Lore/`.
+
 ---
 
-## 3. Markdown Formatting Guide
+## 3. Official Style & Formatting Guide
 
-This document defines the strict formatting rules for all text written for the Gobbos TTRPG. It ensures that output can easily be converted into printed PDFs and website pages, maintaining visual hierarchy, scanning ease, and logical flow.
+This document defines the rules for all text written for the Gobbos TTRPG. It ensures that rules are mechanically precise, feel chaotic and goblin-esque, and can easily be converted into printed PDFs and website pages, maintaining visual hierarchy, scanning ease, and logical flow.
 
-If you are an AI Agent or a Human contributor, **you must read and follow these formatting principles.**
+### System Design Philosophy: High chaos, zero math bloat, absolute precision.
+
+---
+
+### The Three Language Tiers
+To balance fast mechanical play with hilarious goblin flavor, all writing within **Gobbos** must be strictly separated into one of three distinct linguistic profiles. Never mix these profiles within the same sentence.
+
+*   **Tier A: The Rules Engine (Mechanical Rules):**
+    *   **Purpose:** To explain the system framework clearly, concisely, and with simple, natural language.
+    *   **Tone:** Objective, direct, authoritative, and instructional.
+    *   **Linguistic Rules:** Use active, present tense. Avoid narrative filler, flavor text, or descriptive adjectives. A player must understand exactly how a mechanic functions on the first pass.
+    *   **Example:** *“Spending a Move action allows you to cross up to your maximum Movement stat in environmental Zones.”*
+*   **Tier B: Contextual Framing (Introductory Fluff):**
+    *   **Purpose:** To set the mood around a rule or chapter before introducing mechanics.
+    *   **Tone:** Evocative, mischievous, gritty, and low-fantasy.
+    *   **Linguistic Rules:** Use punchy, physical verbs (**plunder**, **wreck**, **backstab**, **squash**). Capture the erratic, short-attention-span nature of goblins. Flavor text, lore, or in-world quotes must be written in *Italics*, usually placed at the beginning of a Chapter or Section.
+    *   **Example:** *“Goblins don’t fight fair. They fight weird. When a tall-man swings a shiny sword, a goblin Boss doesn’t block it—they duck, bite their ankle, and shove a friend in the way.”*
+*   **Tier C: Examples & Lore (The Swarm Atmosphere):**
+    *   **Purpose:** To show mechanics in action or expand the world through storytelling.
+    *   **Tone:** Flowery, crazy, dynamic, and hilarious.
+    *   **Linguistic Rules:** Use named goblin characters, hyper-specific table situations, exclamation points, and visceral sensory details (loud noises, smells, explosions).
+    *   **Format:** Always use the standard markdown blockquote tag (`>`) and begin with **Example:**.
+    *   **Example:**
+        > **Example:** Fizzle wants a bigger explosion. He locks the two 5s and rerolls the other 3 dice... He unleashes a T3 Effect using the [Fire] tag, engulfing the entire adjacent zone in a beautiful, screaming wall of flames!
+
+---
 
 ### Hierarchy and Headers (Semantic Structure)
 Strict semantic hierarchy is required for automatic Table of Contents (ToC) generation.
@@ -93,37 +141,112 @@ Strict semantic hierarchy is required for automatic Table of Contents (ToC) gene
 *   `###` **H3:** Used for specific Sub-rules (e.g., `### Hitting a Gobbo`, `### Fumbles`).
 *   **Rule:** Never skip a heading level. Do not jump from H1 directly to H3. You must use H2 between them.
 
-### Highlighting Mechanics and Dice
-To make the text instantly scannable for the reader at the table:
-*   **Core Stats & Mechanics:** Must be **Bold**. (e.g., **Grit**, **Boon**, **Bane**, **Vigor**, **Slink**, **Brain**, **Renown**).
-*   **Dice Expressions:** Must be **Bold**. (e.g., **1d6**, **3 successes**, **2d6**).
+---
 
-### Flavor Text vs. Rules
-Gobbos relies on clear, punchy rules mixed with chaotic, funny lore. These must be kept visually distinct.
-*   **Evocative Flavor:** Write flavor text, lore, or in-world quotes in *Italics*. Usually placed at the beginning of a Chapter or Section.
-*   **Rules Language:** Must be clear, precise, and literal. Do not mix flavor adjectives into the actual mechanical instructions.
+### Rules Notation & Check Math System
+To minimize cognitive load at the table and completely eliminate "+1 modifier math," **Gobbos** uses a direct, custom visual shorthand for all dice tests.
 
-### Examples of Play
-Examples clarify the rules but must not be confused for the rules themselves.
-*   **Format:** Always use the standard markdown blockquote tag (`>`) and begin with **Example:**.
-> **Example:** Grub tries to stab the tall-man. Because the tall-man has a shield, Grub suffers a **Bane**. He rolls **3d6** and needs **2 successes**...
+#### The Slash Standard: `[Stat] [Target Face]+/[Required Successes]`
+*   All checks represent a pool of d6 dice rolled against a required target face to generate a specific number of successes.
+*   **For targets 4 and 5:** Always include a `+` symbol to remind the player that higher die faces also count as a success.
+*   **For target 6:** Never include a `+` symbol, as 6 is the absolute ceiling on a standard d6. Including it is visually redundant.
+
+#### Notation Rules by Text Context:
+1.  **In Narrative Text (Tier B/C):** Write the rules out naturally in plain English.
+    *   *“You must pass a Slink test, needing at least 2 successes on a 4 or higher.”*
+2.  **In System Paragraphs (Tier A Rules):** Use the bracketed hybrid format.
+    *   *“Climbing a crumbling wall requires a Slink test against the zone's default profile of 4+ (2 successes).”*
+3.  **In Statblocks, Overviews, & Modules (Shorthand Layout):** Use the razor-sharp slash code.
+    *   **Pit Trap:** `Slink 5+/2`
+    *   **Rusty Lock:** `Brains 4+/1`
+    *   **Ancient Curse:** `Brains 6/2`
+
+---
+
+### Strict Linguistic Mandates
+
+#### Total De-Gendering (The Anti-Clunk Framework)
+To ensure the rulebook remains fully inclusive, highly professional, and easy to read for international players (using English as a second language), gendered pronouns and singular "they" are entirely banned. Use these two structural alternatives:
+1.  **Direct Second-Person Address:** Write rules directly to the player using **You** and **Your**.
+2.  **Explicit Imperative Nouns:** Refer directly to the specific roles within the game system: **The GM**, **The Player**, **The Goblin Boss**, or **The Mob**.
+
+*   ❌ **Incorrect:** *“When a player orders his mob, he must roll a check. If they fail, they disperse.”*
+*   ✔️ **Correct:** *“When you order your **Mob**, you must make a check. If the **Mob** fails, the units disperse.”*
+
+#### Mechanical Capitalization & Bold-Typing
+To make the text formats instantly scannable mid-game, specific game elements must always be capitalized and **bolded**:
+*   **Core Faction Roles:** **Player**, **Game Master (GM)**, **Goblin Boss**, **Mob**, **Runts**, **PC**, **NPC**.
+*   **System Attributes & Metrics:** **Tough**, **Slink**, **Mouth**, **Brains**, **Grit**, **Grunt**, **Size**, **Bulk**, **Loot Value**, **Scrap**, **Infamy Marks**, **Bangaranga Pool**, **Target Number (TN)**.
+*   **Action Types:** **Standard Action**, **Free Action**, **Reaction**, **Move**, **Attack**, **Plunder**, **Manipulate**, **Order**, **Dodge**, **Parry**, **Scatter**.
+*   **In-Game States:** **Weakened**, **Restrained**, **Dumb**, **Silenced**, **Blinded**, **Terrified**, **Stunned**, **Prone**.
+
+---
+
+### Thematic Glossary & Verb Matrix
+When drafting Tier B context or Tier C flavor text, replace standard, generic tabletop vocabulary with high-energy, physical goblin terminology:
+
+| Generic Tabletop Term | Approved Gobbos Goblin-esque Term |
+| :--- | :--- |
+| Loot / Take | **Plunder, salvage, snatch, harvest, scavenge** |
+| Destroy / Damage | **Wreck, smash, trash, splinter, dismantle, crack, puncture** |
+| Kill / Defeat | **Slaughter, backstab, squash, flatten, bite, execute** |
+| Command / Direct | **Yell, scream, whip-crack, bully, herd, orchestrate** |
+| Run / Retreat | **Scurry, flee, scatter, slip away, scramble** |
+
+---
 
 ### Break-out Boxes / Golden Rules
 For critical rules, important warnings, overarching principles, or sidebars that must stand out from the rest of the text.
 *   **Format:** Use a special blockquote with a bolded header. To ensure layout programs and CSS can identify these differently than standard examples, we will use a double blockquote `>>`.
->> **IMPORTANT:** Goblins never leave a shiny object behind...
+*   **Example:**
+    >> **IMPORTANT:** Goblins never leave a shiny object behind...
+
+---
 
 ### Lists and Procedures
 *   **Numbered Lists (1., 2., 3.):** Use ONLY for strict procedures where the sequence of operations matters (e.g., The Sequence of Combat, Steps for Character Creation).
 *   **Bullet Points (- or *):** Use for non-sequential options, lists of gear, or traits.
+*   **Box-Out Bullets:** Use bullet points to cleanly isolate specific mechanical choices or sub-rules.
+
+---
 
 ### Internal Linking
 Because the rulebook will become a website/digital PDF, cross-referencing is essential.
 *   **Format:** Use standard markdown internal linking syntax when referencing a rule defined in a different file.
 *   **Example:** `For details on mob attacks, see [Mob Combat](06_Mob_Combat.md).`
 
+---
+
 ### Tables
 Use standard Markdown tables for content like Loot, Weapons, Fumble results, or quick-reference stats. Ensure the columns align logically.
 
+---
+
 ### Statblocks
 All NPCs and Mobs must be formatted identically to allow for easy reading and predictable layout transition. *(Note: The precise template for Statblocks is to be established)*.
+
+---
+
+### The Anti-AI Phrase Clause ("The Nonsense Filter")
+To maintain a grounded, gritty, and distinctively punchy tabletop tone, **all writers and AI generation agents must completely avoid melodramatic, clinical, or overly poetic 'AI-isms.'** Goblins do not speak or think in grand cinematic clichés.
+
+*   ❌ **Banned AI Phrasing:** *“It's not just an attack, it's a statement of violence,”* *“A dance of blades and blood,”* *“The battlefield became a canvas of chaos,”* or *“They struck with lethal intent.”*
+*   ✔️ **Approved Gobbos Phrasing:** *“They swarmed the knight and poked him until he stopped moving,”* *“The boss smacked the grunt out of the way,”* or *“A messy, loud scrap.”*
+
+**Linguistic Rule:** Keep descriptions physical, messy, and humorous. If a sentence sounds like a generic fantasy video game trailer or an overly polished marketing pitch, delete it and replace it with direct, blunt goblin energy.
+
+---
+
+### Strict Keyword Constancy (The Synonym Ban)
+To prevent rules confusion and ensure a completely watertight system, **synonyms are strictly forbidden when referring to core game terms.** Once a term is defined in the system index, that exact phrase must be used every single time the mechanic is invoked.
+
+*   **The Rule of Truth:** You cannot introduce alternative words for established mechanical systems just to avoid repetition in a paragraph.
+
+#### Key Examples of the Synonym Ban:
+*   **Loot & Loot Value:** When discussing the tangible mechanic of treasure value, it must always be called **Loot** or **Loot Value**.
+    *   *Prose Exception:* You may use the word "plunder" flavorfully in introductory text (*“There is plunder to be had!”*), but if there is *any* risk of tactical confusion at the table, default immediately back to the capitalized, system-indexed keyword **Loot**.
+*   **Mob vs. Squad/Unit:** A collection of lesser goblins under a player's command is exclusively a **Mob**. Never call them a *squad*, *swarm*, *group*, or *unit* unless explicitly utilizing an indexed exception like **Enemy Swarm** or **Group Attack**.
+*   **Grit vs. Health:** Player hit points are strictly **Grit**. Never refer to a PC's survival tracker as *health*, *hit points*, or *stamina*. **Health** or **Health Dice** belongs exclusively to tracking **Mobs**.
+
+#### The Core Vocabulary Checklist
+Always check your writing against the master **Keywords Index** from **STAGE Drafts — Gobbos.pdf**. If a word isn't listed there verbatim, it cannot be used as a rules descriptor.
