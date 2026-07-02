@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movement & Zones — STAGE Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Playtesting & review materials">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab env-tab--active">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">STAGE Rules</h2>
+        <p class="sidebar-subtitle">Playtesting & review materials</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="true" data-target="rules"><span class="toggle-icon">▾</span>Rules</button><ul class="nav-pages" id="nav-rules" ><li><a href="stage.html" class="nav-link" data-target="rules--overview">Overview</a></li><li><a href="stage--rules--combat.html" class="nav-link" data-target="rules--combat">Combat</a></li><li><a href="stage--rules--movement-and-zones.html" class="nav-link nav-link--active" data-target="rules--movement-and-zones">Movement &amp; Zones</a></li><li><a href="stage--rules--giving-orders.html" class="nav-link" data-target="rules--giving-orders">Giving orders</a></li><li><a href="stage--rules--raid-points.html" class="nav-link" data-target="rules--raid-points">Raid points</a></li><li><a href="stage--rules--keywords-index.html" class="nav-link" data-target="rules--keywords-index">Keywords Index</a></li><li><a href="stage--rules--wounds-conditions.html" class="nav-link" data-target="rules--wounds-conditions">Wounds_Conditions</a></li><li><a href="stage--rules--master-tag-index.html" class="nav-link" data-target="rules--master-tag-index">Master_Tag_Index</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="characters-and-mobs"><span class="toggle-icon">▸</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" style="display: none;"><li><a href="stage--characters-and-mobs--character-creation.html" class="nav-link" data-target="characters-and-mobs--character-creation">Character Creation</a></li><li><a href="stage--characters-and-mobs--gang.html" class="nav-link" data-target="characters-and-mobs--gang">Gang</a></li><li><a href="stage--characters-and-mobs--boons-and-banes.html" class="nav-link" data-target="characters-and-mobs--boons-and-banes">Boons_and_Banes</a></li><li><a href="stage--characters-and-mobs--goblin-mob.html" class="nav-link" data-target="characters-and-mobs--goblin-mob">Goblin_mob</a></li><li><a href="stage--characters-and-mobs--quirks.html" class="nav-link" data-target="characters-and-mobs--quirks">Quirks</a></li><li><a href="stage--characters-and-mobs--level-up-and-death.html" class="nav-link" data-target="characters-and-mobs--level-up-and-death">Level_Up and death</a></li><li><a href="stage--characters-and-mobs--unified-modular-powers-system.html" class="nav-link" data-target="characters-and-mobs--unified-modular-powers-system">Unified_Modular_Powers_System</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="loot"><span class="toggle-icon">▸</span>Loot</button><ul class="nav-pages" id="nav-loot" style="display: none;"><li><a href="stage--loot--loot.html" class="nav-link" data-target="loot--loot">loot</a></li><li><a href="stage--loot--carry-stuff.html" class="nav-link" data-target="loot--carry-stuff">Carry Stuff</a></li><li><a href="stage--loot--equipment.html" class="nav-link" data-target="loot--equipment">Equipment</a></li><li><a href="stage--loot--crafting.html" class="nav-link" data-target="loot--crafting">Crafting</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="enemies"><span class="toggle-icon">▸</span>Enemies</button><ul class="nav-pages" id="nav-enemies" style="display: none;"><li><a href="stage--enemies--enemies.html" class="nav-link" data-target="enemies--enemies">Enemies</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="base"><span class="toggle-icon">▸</span>Base</button><ul class="nav-pages" id="nav-base" style="display: none;"><li><a href="stage--base--lair-rules.html" class="nav-link" data-target="base--lair-rules">Lair_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="travel"><span class="toggle-icon">▸</span>Travel</button><ul class="nav-pages" id="nav-travel" style="display: none;"><li><a href="stage--travel--journey-rules.html" class="nav-link" data-target="travel--journey-rules">Journey_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="magic"><span class="toggle-icon">▸</span>Magic</button><ul class="nav-pages" id="nav-magic" style="display: none;"><li><a href="stage--magic--magic-rules.html" class="nav-link" data-target="magic--magic-rules">Magic_Rules</a></li></ul></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="movement-zones-and-map-layout" tabindex="-1">Movement, Zones, &amp; Map Layout</h1>
+<p>The map architecture in <strong>Gobbos</strong> is designed to solve the “Panzer Brigade” dilemma: balancing a massive, chaotic horde of multiple players and 6 to 8 active squads without clogging the physical tabletop or turning a fast-paced rogue-lite delve into a slow traffic jam.</p>
+<p>The layout gives a clear, high-level sense of macro-exploration while dropping into highly dynamic, multi-level, gridless tactical theaters only when a fight breaks out.</p>
+<hr>
+<h2 id="the-tabletop-layout-visual-sketch" tabindex="-1">The Tabletop Layout (Visual Sketch)</h2>
+<p>At the physical gaming table, the components are arranged to keep macro-exploration and micro-skirmishes visually separated, ensuring clear command lines and zero clutter:</p>
+<pre><code>+---------------------------------------------------------------------------------+
+|                                 THE GAMING TABLE                                |
++---------------------------------------------------------------------------------+
+|                                                                                 |
+|   [ Lair Sheet &amp; Communal Hoard ]                     [ GM Screen ]             |
+|   Tracks pooled Loot, Scrap, and Lair rooms.          Reference tables,         |
+|                                                       encounter notes.          |
+|                                                                                 |
+|   +-----------------------------+         +---------------------------------+   |
+|   |     MACRO MINIMAP           |         |        ACTIVE CLASH CLUSTER     |   |
+|   |     (Point-Crawl Nodes)     |         |        (Micro Battleground)     |   |
+|   |                             |         |                                 |   |
+|   |  [Node A] &lt;-- (Locked) --&gt;  |         |   +---------+     +---------+   |   |
+|   |     |                       |         |   | Zone 1  |     | Zone 2  |   |   |
+|   |     v                       |         |   | Balcony |&lt;---&gt;| Hallway |   |   |
+|   |  [Node B] (Horde Token)     |         |   | [Cover] |     | [Narrow]|   |   |
+|   |     |                       |         |   +---------+     +---------+   |   |
+|   |     v                       |         |        ^               ^        |   |
+|   |  [Node C] (Active Encounter)|         |        |               |        |   |
+|   |                             |         |        v               v        |   |
+|   |                             |         |   +-------------------------+   |   |
+|   |                             |         |   |         Zone 3          |   |   |
+|   |                             |         |   |        Courtyard        |   |   |
+|   |                             |         |   |        [Burning]        |   |   |
+|   |                             |         |   +-------------------------+   |   |
+|   +-----------------------------+         +---------------------------------+   |
+|                                                                                 |
+|                                                                                 |
+|   [Player 1: Boss + Mob]        [Player 2: Boss + Mob]     [Player 3: Boss + Mob] |
+|   - Boss Character Sheet        - Boss Character Sheet     - Boss Character Sheet |
+|   - Mob D6 Health Tracker       - Mob D6 Health Tracker    - Mob D6 Health Tracker|
+|   - Active Quirks &amp; Gear        - Active Quirks &amp; Gear     - Active Quirks &amp; Gear |
+|                                                                                 |
++---------------------------------------------------------------------------------+
+</code></pre>
+<hr>
+<h2 id="core-architectural-concept-the-hybrid-map-system" tabindex="-1">Core Architectural Concept: The Hybrid Map System</h2>
+<p>The physical table is split into two distinct visual tracking spaces: the macro-world where the horde travels, and the active micro-world where the blood spills.</p>
+<h3 id="1-the-macro-minimap-the-point-crawl-blueprint" tabindex="-1">1. The Macro Minimap (The Point-Crawl Blueprint)</h3>
+<p>Instead of a sprawling, room-by-room grid layout, the overall raid location (castle, village, or crypt) is tracked on a central node map.</p>
+<ul>
+<li><strong>The Scale:</strong> Individual goblin tokens do not live here. Instead, a single token representing the bulk of the horde moves along connected nodes.</li>
+<li><strong>The Function:</strong> It shows the pathways between major sections of the raid, locked doorways, known hazards, and designated escape zones used for tactical retreats. It tracks the progression of the raid at a glance without requiring any drawn architecture.</li>
+</ul>
+<h3 id="2-the-micro-battleground-interconnected-clash-clusters" tabindex="-1">2. The Micro Battleground (Interconnected Clash Clusters)</h3>
+<p>When an encounter triggers at a node, the GM deploys a localized “Clash Cluster” consisting of 3 to 4 abstract, interconnected physical tiles or cards to represent the immediate environment.</p>
+<ul>
+<li><strong>The Scale:</strong> This is where the actual goblin boss miniatures and physical piles of <strong>d6</strong> squad dice are placed to resolve combat.</li>
+<li><strong>The Fluidity:</strong> A single battle easily bleeds across these local zones. For example, a street skirmish can seamlessly transition into a house interior or climb up onto a rooftop zone in real-time.</li>
+</ul>
+<hr>
+<h2 id="abstract-gridless-zones" tabindex="-1">Abstract, Gridless Zones</h2>
+<p>In Gobbos, <strong>Zones</strong> are used to create a framework for movement, especially in combat. A Zone can be of any shape, but is often clearly defined by the environment, such as a room, a corridor, or a field.</p>
+<p>A player’s movement is measured in number of Zones, and a normal movement speed is to move 2 Zones per round and action.</p>
+<hr>
+<h2 id="zone-profiles" tabindex="-1">Zone Profiles</h2>
+<p>Every Zone in an encounter is assigned a default <strong>Zone Profile</strong> consisting of a <strong>Difficulty</strong> and a <strong>Target Number (TN)</strong> (e.g., <strong>Normal:1</strong>, <strong>Normal:2</strong>, or <strong>Hard:1</strong>).</p>
+<blockquote>
+<blockquote>
+<p><strong>THE ZONE PROFILE RULE:</strong>
+Any general environmental interaction, traversal, or search test attempted within a Zone defaults to using that Zone’s Profile. GMs do not invent DCs for individual tasks; they simply use the Zone Profile.</p>
+<ul>
+<li><em>Example:</em> Climbing a wall, forcing a door, jumping a trench, or searching a junk pile in a Zone with a <strong>Normal:2</strong> profile all require <strong>2 successes</strong> on a <strong>Normal</strong> test.</li>
+</ul>
+</blockquote>
+</blockquote>
+<p>GMs can adjust the Difficulty level of a specific task based on tools or circumstances using standard <strong>Boons</strong> and <strong>Banes</strong> (e.g., using professional climbing gear grants a <strong>Boon</strong> (+1d) to the traversal test, while a rusty lock imposes a <strong>Bane</strong> (-1d) on the test), but the base TN and Difficulty remain tied to the Zone itself.</p>
+<hr>
+<h2 id="zone-traits" tabindex="-1">Zone Traits</h2>
+<p>A <strong>Zone Trait</strong> is a mechanical modifier or effect associated with a specific Zone. Traits represent either obstacles players must overcome or advantages they can exploit. All traits fall under two general categories:</p>
+<h3 id="problems-hazards-and-obstacles" tabindex="-1">Problems (Hazards &amp; Obstacles)</h3>
+<p>These are negative environmental features.</p>
+<ul>
+<li><strong>Triggering:</strong> Problems trigger passively (continuous effect while occupying the zone), on entry (as soon as a creature enters the zone), or at a specific phase in the round (e.g., End of Round).</li>
+<li><strong>Resolution:</strong> To avoid negative effects, a player must make a relevant test (typically <strong>Slink</strong> or <strong>Tough</strong>) against the <strong>Zone Profile</strong>. On a failure, they suffer Wounds (Grit Loss), or a negative <strong>Condition</strong>.</li>
+<li><strong>GM Rolling:</strong> GMs never roll to see if a hazard succeeds; the GM simply announces the hazard’s trigger and the affected player rolls to resist.</li>
+<li><strong>Hazard Damage Scaling:</strong> Environmental hazard damage scales by severity:
+<ul>
+<li><strong>T1 Hazard (Minor):</strong> Deals <strong>1 damage</strong> to a PC’s Grit or a Mob’s active health die on a failed test.</li>
+<li><strong>T2 Hazard (Dangerous):</strong> Deals <strong>2 damage</strong>.</li>
+<li><strong>T3 Hazard (Lethal):</strong> Deals <strong>3 damage</strong> or applies a severe condition.</li>
+<li><em>Note:</em> Extreme catastrophic events (like a collapsing cave-in) can deal direct <strong>Size damage</strong> (removing the Mob’s lowest-value D6).</li>
+</ul>
+</li>
+</ul>
+<h3 id="opportunities-tactical-features-and-treats" tabindex="-1">Opportunities (Tactical Features &amp; Treats)</h3>
+<p>These are interactive or beneficial environmental features.</p>
+<ul>
+<li><strong>Passive Benefits:</strong> Some opportunities provide constant benefits (e.g., providing cover or granting a <strong>Boon</strong> to attacks).</li>
+<li><strong>Interactive Benefits:</strong> Goblins can interact with an opportunity by spending a Standard Action (<strong>Manipulate</strong> or <strong>Attack</strong>) and testing a relevant stat against the <strong>Zone Profile</strong> to yield a benefit.</li>
+</ul>
+<hr>
+<h2 id="predefined-zone-traits" tabindex="-1">Predefined Zone Traits</h2>
+<p>GMs can customize battlefields by placing these standardized, modular traits onto Zones.</p>
+<h3 id="1-static-environment-terrain-and-obstacles" tabindex="-1">1. Static Environment (Terrain &amp; Obstacles)</h3>
+<ul>
+<li><strong>Chasm / Pit (T3 Obstacle):</strong> A gaping hole, trench, or cliff edge.
+<ul>
+<li><em>Trigger:</em> Attempting to cross, or being pushed toward the edge.</li>
+<li><em>Rules:</em> Traversing requires a <strong>Slink</strong> test against the <strong>Zone Profile</strong>. On a failure, the creature falls in, taking <strong>3 damage</strong> and gaining the <strong>Restrained</strong> condition. Clambering out requires spending a Standard Action to test <strong>Tough</strong> against the profile.</li>
+</ul>
+</li>
+<li><strong>Deep Water (Obstacle):</strong> Flooded chambers, sewer channels, or rapid rivers.
+<ul>
+<li><em>Trigger:</em> Passive / Interactive (for swimming).</li>
+<li><em>Rules:</em> Traversing this Zone requires a <strong>Move</strong> action to travel only <strong>1 Zone</strong> (ignoring standard movement speed). If forced to swim or stay afloat (directly in the water without a boat or bridge), a creature starting their turn in this Zone must test <strong>Tough</strong> against the <strong>Zone Profile</strong> or begin drowning (taking <strong>1 damage</strong> per round).</li>
+</ul>
+</li>
+<li><strong>Narrow (Obstacle):</strong> A tight crawlspace, pipe, or rocky crevice.
+<ul>
+<li><em>Trigger:</em> Passive.</li>
+<li><em>Rules:</em> The maximum Mob size that can occupy this Zone without penalty is <strong>Size 2</strong>. Mobs of <strong>Size 3+</strong> suffer a <strong>Bane</strong> (-1d) to all attack rolls and physical tests while in this Zone, and their Movement is capped at <strong>1 Zone</strong>. Giant enemies cannot enter.</li>
+</ul>
+</li>
+<li><strong>Pillars / Statues (Tactical Feature):</strong> Solid stone pillars or crumbling carvings.
+<ul>
+<li><em>Trigger:</em> Passive.</li>
+<li><em>Rules:</em> Anyone occupying this Zone can declare they are taking cover behind a pillar (as a Free Action), granting them <strong>Full Cover</strong> against attacks coming from one specific adjacent Zone.</li>
+</ul>
+</li>
+<li><strong>Rubble (Obstacle):</strong> Loose stones, steep scree, or collapsed vaults.
+<ul>
+<li><em>Trigger:</em> Traversing.</li>
+<li><em>Rules:</em> Moving through this Zone costs double movement (spending 2 Zones’ worth of movement speed to cross).</li>
+</ul>
+</li>
+<li><strong>Vertical Cliff (Obstacle):</strong> A sheer stone wall, scaffold, or ladder.
+<ul>
+<li><em>Trigger:</em> Traversing vertically.</li>
+<li><em>Rules:</em> Climbing requires a <strong>Move</strong> action and a <strong>Slink</strong> test against the <strong>Zone Profile</strong>. On a failure, the creature falls back to the bottom, taking <strong>1 damage</strong> for every Zone’s worth of height fallen and landing <strong>Prone</strong>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-dynamic-environment-hazards-and-triggers" tabindex="-1">2. Dynamic Environment (Hazards &amp; Triggers)</h3>
+<ul>
+<li><strong>Burning (T2 Hazard):</strong> Spreading fire, hot lava pools, or burning oil.
+<ul>
+<li><em>Trigger:</em> Entering the Zone, or starting a turn inside it.</li>
+<li><em>Rules:</em> Must pass a <strong>Slink</strong> test against the <strong>Zone Profile</strong> or take <strong>2 damage</strong> to Grit (PC) or active health die (Mob). Fire spreads to adjacent wooden/flammable zones at the End of Round on a roll of 5–6 on <strong>1d6</strong> (rolled by the GM or a player).</li>
+</ul>
+</li>
+<li><strong>Crumbling Ceiling (T3 Hazard):</strong> Loose rock vaults, rotting timber supports, or ice stalactites.
+<ul>
+<li><em>Trigger:</em> Announce at Round Start or when triggered by structural damage.</li>
+<li><em>Rules:</em> All creatures occupying the Zone must test <strong>Slink</strong> against the <strong>Zone Profile</strong>. On a failure, they take <strong>3 damage</strong> and are knocked <strong>Prone</strong>. After collapsing, the Zone permanently gains the <strong>Rubble</strong> trait.</li>
+</ul>
+</li>
+<li><strong>Howling Wind (T1 Hazard):</strong> Heavy drafts, storm winds, or venting steam.
+<ul>
+<li><em>Trigger:</em> Passive.</li>
+<li><em>Rules:</em> Ranged attacks passing through or targeting someone inside this Zone suffer a <strong>Bane</strong> (-1d). Moving against the direction of the wind requires a <strong>Tough</strong> test against the profile; on a failure, movement speed is halved.</li>
+</ul>
+</li>
+<li><strong>Quicksand / Mud (T2 Hazard):</strong> Sticky tar pits, thick sewer sludge, or quicksand.
+<ul>
+<li><em>Trigger:</em> Entering the Zone.</li>
+<li><em>Rules:</em> Must test <strong>Slink</strong> against the <strong>Zone Profile</strong>. On a failure, the creature gains the <strong>Restrained</strong> condition. Breaking free requires spending a Standard Action to test <strong>Tough</strong> against the profile.</li>
+</ul>
+</li>
+<li><strong>Slippery (Obstacle):</strong> Smooth ice, wet grease, or organic slime.
+<ul>
+<li><em>Trigger:</em> Entering the Zone.</li>
+<li><em>Rules:</em> Must test <strong>Slink</strong> against the <strong>Zone Profile</strong>. On a failure, the creature falls <strong>Prone</strong> and their movement ends immediately.</li>
+</ul>
+</li>
+<li><strong>Toxic Spores / Gas (T2 Hazard):</strong> Poisonous sewer gases, acid clouds, or mold spores.
+<ul>
+<li><em>Trigger:</em> Starting a turn inside the Zone.</li>
+<li><em>Rules:</em> Must test <strong>Tough</strong> against the <strong>Zone Profile</strong>. On a failure, they suffer the <strong>Weakened</strong> condition until they spend a Standard Action to catch their breath in a clean zone.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-opportunities-treats-and-cover" tabindex="-1">3. Opportunities (Treats &amp; Cover)</h3>
+<ul>
+<li><strong>Hedges / Thickets (Tactical Feature):</strong> Heavy brambles, bushes, or hanging tapestries.
+<ul>
+<li><em>Trigger:</em> Passive.</li>
+<li><em>Rules:</em> Anyone inside this Zone gains <strong>Partial Cover</strong> (ranged attacks targeting them suffer a <strong>Bane</strong> (-1d), and they gain a <strong>Boon</strong> (+1d) to <strong>Dodge</strong> reactions).</li>
+</ul>
+</li>
+<li><strong>Junk Pile (Treat):</strong> Stacks of dungeon scrap, refuse, or broken weapons.
+<ul>
+<li><em>Trigger:</em> Interactive (Standard Action: <strong>Manipulate</strong>).</li>
+<li><em>Rules:</em> Goblins can search the pile (test <strong>Brains</strong> against the <strong>Zone Profile</strong>). On a success, they find a throw-able object (deals <strong>1 damage</strong> ranged) or a random piece of low-grade loot. Once successfully searched, the Junk Pile is exhausted and cannot be searched again during the raid.</li>
+</ul>
+</li>
+<li><strong>Shadowy (Tactical Feature):</strong> Deep alcoves, heavy curtains, or dim corners.
+<ul>
+<li><em>Trigger:</em> Passive.</li>
+<li><em>Rules:</em> Goblins attempting to Hide in this Zone gain a <strong>Boon</strong> (+1d) on their stealth-related <strong>Slink</strong> tests.</li>
+</ul>
+</li>
+<li><strong>Shoring (Interactive Opportunity):</strong> Wooden structural beams supporting the ceiling.
+<ul>
+<li><em>Trigger:</em> Interactive (Standard Action: <strong>Manipulate</strong> or <strong>Attack</strong>).</li>
+<li><em>Rules:</em> Goblins can collapse the beams. Test <strong>Brains</strong> (to sabotage) or make a successful melee attack against the <strong>Zone Profile</strong>. On a success, the Zone immediately gains the <strong>Crumbling Ceiling</strong> hazard (everyone in the zone tests <strong>Slink</strong> or takes <strong>3 damage</strong>), and all exits to adjacent Zones are blocked. Clearing a blocked exit requires spending a Standard Action to successfully test <strong>Tough</strong> against the <strong>Zone Profile</strong>.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="examples-of-play" tabindex="-1">Examples of Play</h2>
+<p>These scenarios illustrate how different hazards, opportunities, and Mob rules play out at the table.</p>
+<h3 id="example-1-slipping-on-the-ice-slink-tests" tabindex="-1">Example 1: Slipping on the Ice (Slink Tests)</h3>
+<blockquote>
+<p><strong>Example:</strong> Grub (PC) and his <strong>Size 3</strong> Mob run from town guards into a frozen courtyard designated as <strong>Zone A</strong> (Profile: <strong>Normal:2</strong>; Trait: <strong>Slippery</strong>).</p>
+<ul>
+<li><strong>The PC:</strong> Grub enters the zone and must make a Slink test. Grub has <strong>Slink 2</strong>, rolling <strong>2d6</strong> (Stat). He rolls <code>5, 5</code>—two successes! He keeps his footing.</li>
+<li><strong>The Mob:</strong> The Mob enters the zone. Mobs roll exactly <strong>1d6</strong> for <strong>Slink</strong> tests. The player rolls <code>5</code>—only one success! The Mob fails the test against the <strong>Normal:2</strong> profile. The Mob falls <strong>Prone</strong> and their movement ends immediately in the middle of the ice sheet.</li>
+</ul>
+</blockquote>
+<h3 id="example-2-braving-the-toxic-fumes-tough-tests-and-mob-scaling" tabindex="-1">Example 2: Braving the Toxic Fumes (Tough Tests &amp; Mob Scaling)</h3>
+<blockquote>
+<p><strong>Example:</strong> Snarl (PC) and her massive <strong>Size 5</strong> Mob are pursuing a dwarf through a sewer pipe designated as <strong>Zone B</strong> (Profile: <strong>Normal:2</strong>; Traits: <strong>Toxic</strong> and <strong>Narrow</strong>). They start their turn in the zone.</p>
+<ul>
+<li><strong>The PC:</strong> Snarl has <strong>Tough 2</strong>, rolling <strong>2d6</strong> (Stat). She rolls <code>6, 3</code>. The <code>6</code> explodes and she rolls another <code>3</code>. The total is one success—not enough for the <strong>Normal:2</strong> profile! Snarl fails and gains the <strong>Weakened</strong> condition.</li>
+<li><strong>The Mob:</strong> Because it is a Tough test, the Mob rolls <strong>Size</strong> dice (<strong>5d6</strong>). However, the zone has the <strong>Narrow</strong> trait, imposing a permanent <strong>Bane</strong> (-1d) on all physical tests. The Mob’s dice pool is reduced to <strong>4d6</strong>. The player rolls <code>6, 5, 5, 2</code>. The <code>6</code> explodes and rolls a <code>4</code>. That is three successes! The Mob easily passes the test and is unaffected by the gas, their sheer numbers and mass helping them pull each other through.</li>
+</ul>
+</blockquote>
+<h3 id="example-3-collapsing-the-support-shoring-opportunity" tabindex="-1">Example 3: Collapsing the Support (Shoring Opportunity)</h3>
+<blockquote>
+<p><strong>Example:</strong> Wizgog (PC) is cornered by a heavily armored knight in a crypt (<strong>Zone C</strong>, Profile: <strong>Normal:1</strong>; Trait: <strong>Shoring</strong>). Wizgog wants to collapse the ceiling on the knight.</p>
+<ul>
+<li><strong>The Action:</strong> Wizgog spends a Standard Action to smash the rotten wooden support column. Since this is an interactive opportunity, he tests <strong>Brains</strong> (his stat is 3, so he rolls <strong>3d6</strong>) against the zone’s <strong>Normal:1</strong> profile.</li>
+<li><strong>The Result:</strong> He rolls <code>5, 2, 1</code>—one success! The column splinters. The Zone immediately triggers a cave-in (<strong>Crumbling Ceiling</strong>).</li>
+<li><strong>The Resisting Tests:</strong>
+<ul>
+<li>Wizgog tests Slink (<strong>2d6</strong>) and rolls <code>5, 1</code> (success), jumping clear of the debris.</li>
+<li>The Knight tests Slink. The GM rules the heavy armor imposes a <strong>Bane</strong> (-1d). The Knight rolls <code>3, 2</code> (failure). The Knight takes <strong>3 damage</strong> and is knocked <strong>Prone</strong>, buried under rubble.</li>
+<li>The adjacent exit is blocked, cutting off the knight’s allies.</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="background-node-resolution-the-chaos-tick" tabindex="-1">Background Node Resolution (The Chaos Tick)</h2>
+<p>If a player chooses to abandon a Mob in a previously cleared node on the macro minimap (for example, leaving them behind to forage for treasure or guard a chokepoint while the main party moves forward), that node is physically swept from the main table’s active tactical space.</p>
+<p>Because they lack a Boss to command them, the split-off Mob is tracked purely on the macro node map. They default entirely to their automated Priority AI list:</p>
+<ol>
+<li><strong>Survival</strong></li>
+<li><strong>Loot/Eat</strong></li>
+<li><strong>Violence</strong></li>
+<li><strong>Trash Stuff</strong></li>
+<li><strong>Wander Off</strong></li>
+</ol>
+<h3 id="resolving-the-chaos-tick" tabindex="-1">Resolving the Chaos Tick</h3>
+<p>At the end of each combat round, the player resolves the unsupervised Mob’s actions using the <strong>Chaos Tick</strong>.</p>
+<blockquote>
+<blockquote>
+<p><strong>THE CHAOS TICK RULE:</strong>
+Roll a number of <strong>d6</strong> equal to the unsupervised Mob’s current <strong>Size</strong>. The Target Number and Difficulty default to the cleared zone’s Profile (typically <strong>Normal:1</strong>).</p>
+<ul>
+<li><strong>Successes (5+):</strong> Count successes to resolve the Priority AI’s progress.</li>
+<li><strong>Ones (1s):</strong> Each <strong>1</strong> rolled represents growing chaos and bickering. Tally the <strong>1s</strong> and consult the <strong>Gobbo Mischief Table</strong> below. Each <strong>1</strong> also adds <strong>1 die</strong> to the communal <strong>Bangaranga Pool</strong> as the background racket hypes up the horde.</li>
+<li><strong>The Farkle:</strong> If the roll yields <strong>zero successes</strong> and <strong>two or more 1s</strong>, the Mob fumbles catastrophically, triggering a disastrous event.</li>
+</ul>
+</blockquote>
+</blockquote>
+<h3 id="the-gobbo-mischief-table-tally-of-1s" tabindex="-1">The Gobbo Mischief Table (Tally of 1s)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">1s Rolled</th>
+<th style="text-align:left">Mischief Result</th>
+<th style="text-align:left">Mechanical Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>0</strong></td>
+<td style="text-align:left"><strong>Smooth Operations</strong></td>
+<td style="text-align:left">No chaos! Gobbos cooperate perfectly.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>1</strong></td>
+<td style="text-align:left"><strong>Bickering</strong></td>
+<td style="text-align:left">Goblins fight over a shiny rock. The Mob takes <strong>1 damage</strong> to its active health die.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>2</strong></td>
+<td style="text-align:left"><strong>Tasting Time</strong></td>
+<td style="text-align:left">They eat glowing mushrooms or lick rusty gears. The Mob gains the <strong>Weakened</strong> condition.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>3</strong></td>
+<td style="text-align:left"><strong>Straying</strong></td>
+<td style="text-align:left">A few runts wander off into the dark. The Mob’s <strong>Size</strong> decreases by 1.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>4+</strong></td>
+<td style="text-align:left"><strong>Mutiny / Riot</strong></td>
+<td style="text-align:left">The Mob tears itself apart or rebels. The Mob becomes <strong>Uncontrolled</strong> and hostile to all Gangs, splitting into two smaller hostile mobs or wandering off the map entirely.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="resolution-of-successes-5-on-normal" tabindex="-1">Resolution of Successes (5+ on Normal)</h3>
+<ul>
+<li><strong>0 Successes:</strong> The Mob gets distracted pick-nosing. No progress is made.</li>
+<li><strong>1 Success:</strong> The Mob accomplishes a basic task. If foraging, they add <strong>1d6 Scrap</strong> to the Hoard, or they heal <strong>1d6 damage</strong> on their health dice by eating old rations found in the zone.</li>
+<li><strong>2 Successes:</strong> They find a cache of useful garbage. Add <strong>2d6 Scrap</strong> to the Hoard, or find a low-grade <strong>Oddity</strong>.</li>
+<li><strong>3+ Successes:</strong> Outstanding teamwork! The Mob secures the node, making future travel through it <strong>Safe</strong> (no hazard checks required), and finds a piece of <strong>Standard Loot</strong>.</li>
+</ul>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

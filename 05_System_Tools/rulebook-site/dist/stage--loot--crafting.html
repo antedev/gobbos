@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crafting — STAGE Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Playtesting & review materials">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab env-tab--active">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">STAGE Rules</h2>
+        <p class="sidebar-subtitle">Playtesting & review materials</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="stage.html" class="nav-link" data-target="rules--overview">Overview</a></li><li><a href="stage--rules--combat.html" class="nav-link" data-target="rules--combat">Combat</a></li><li><a href="stage--rules--movement-and-zones.html" class="nav-link" data-target="rules--movement-and-zones">Movement &amp; Zones</a></li><li><a href="stage--rules--giving-orders.html" class="nav-link" data-target="rules--giving-orders">Giving orders</a></li><li><a href="stage--rules--raid-points.html" class="nav-link" data-target="rules--raid-points">Raid points</a></li><li><a href="stage--rules--keywords-index.html" class="nav-link" data-target="rules--keywords-index">Keywords Index</a></li><li><a href="stage--rules--wounds-conditions.html" class="nav-link" data-target="rules--wounds-conditions">Wounds_Conditions</a></li><li><a href="stage--rules--master-tag-index.html" class="nav-link" data-target="rules--master-tag-index">Master_Tag_Index</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="characters-and-mobs"><span class="toggle-icon">▸</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" style="display: none;"><li><a href="stage--characters-and-mobs--character-creation.html" class="nav-link" data-target="characters-and-mobs--character-creation">Character Creation</a></li><li><a href="stage--characters-and-mobs--gang.html" class="nav-link" data-target="characters-and-mobs--gang">Gang</a></li><li><a href="stage--characters-and-mobs--boons-and-banes.html" class="nav-link" data-target="characters-and-mobs--boons-and-banes">Boons_and_Banes</a></li><li><a href="stage--characters-and-mobs--goblin-mob.html" class="nav-link" data-target="characters-and-mobs--goblin-mob">Goblin_mob</a></li><li><a href="stage--characters-and-mobs--quirks.html" class="nav-link" data-target="characters-and-mobs--quirks">Quirks</a></li><li><a href="stage--characters-and-mobs--level-up-and-death.html" class="nav-link" data-target="characters-and-mobs--level-up-and-death">Level_Up and death</a></li><li><a href="stage--characters-and-mobs--unified-modular-powers-system.html" class="nav-link" data-target="characters-and-mobs--unified-modular-powers-system">Unified_Modular_Powers_System</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="true" data-target="loot"><span class="toggle-icon">▾</span>Loot</button><ul class="nav-pages" id="nav-loot" ><li><a href="stage--loot--loot.html" class="nav-link" data-target="loot--loot">loot</a></li><li><a href="stage--loot--carry-stuff.html" class="nav-link" data-target="loot--carry-stuff">Carry Stuff</a></li><li><a href="stage--loot--equipment.html" class="nav-link" data-target="loot--equipment">Equipment</a></li><li><a href="stage--loot--crafting.html" class="nav-link nav-link--active" data-target="loot--crafting">Crafting</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="enemies"><span class="toggle-icon">▸</span>Enemies</button><ul class="nav-pages" id="nav-enemies" style="display: none;"><li><a href="stage--enemies--enemies.html" class="nav-link" data-target="enemies--enemies">Enemies</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="base"><span class="toggle-icon">▸</span>Base</button><ul class="nav-pages" id="nav-base" style="display: none;"><li><a href="stage--base--lair-rules.html" class="nav-link" data-target="base--lair-rules">Lair_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="travel"><span class="toggle-icon">▸</span>Travel</button><ul class="nav-pages" id="nav-travel" style="display: none;"><li><a href="stage--travel--journey-rules.html" class="nav-link" data-target="travel--journey-rules">Journey_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="magic"><span class="toggle-icon">▸</span>Magic</button><ul class="nav-pages" id="nav-magic" style="display: none;"><li><a href="stage--magic--magic-rules.html" class="nav-link" data-target="magic--magic-rules">Magic_Rules</a></li></ul></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="crafting-and-custom-gear" tabindex="-1">Crafting &amp; Custom Gear</h1>
+<blockquote>
+<p><strong>Design Principle:</strong> Crafting is how Gobbo Bosses turn scrap, monster guts, and stolen relics into something that can <em>actually</em> win a fight. It encourages creativity and reckless experimentation. Typically, if a goblin has the workshop and the Brains to pull it off, the build always produces something functional. The dice don’t determine <em>if</em> you succeed—they determine <em>how chaotic and unstable</em> the result is.</p>
+</blockquote>
+<p>Crafting takes place during the <strong>Lair Phase</strong> (see <a href="#lair-and-downtime" class="wikilink" title="Lair &amp; Downtime">Lair &amp; Downtime</a>). Every piece of Custom Gear is defined by three fundamental questions:</p>
+<ol>
+<li><strong>What are you building?</strong> (The Base Item &amp; Quality)</li>
+<li><strong>What are you taping to it?</strong> (Oddities &amp; Bite)</li>
+<li><strong>How are you building it?</strong> (Your Workshop)</li>
+</ol>
+<hr>
+<h2 id="the-three-layers-of-crafting" tabindex="-1">The Three Layers of Crafting</h2>
+<h3 id="layer-1-the-base-item-and-quality" tabindex="-1">Layer 1 — The Base Item &amp; Quality</h3>
+<p>When crafting, you don’t track individual pieces of lumber, iron ingots, or nails. As long as your gang’s Lair has access to basic scavenging territory, raw materials are assumed to be on hand.</p>
+<p>Instead, you choose a <strong>Base Item</strong> from the standard equipment categories (e.g., Light Weapon, Medium Armor, Heavy Weapon, Shield; see <a href="#33-equipment" class="wikilink" title="33_Equipment">33_Equipment</a>). The Base Item defines the fundamental stats: Bulk, Handedness, and base Damage or Defense dice.</p>
+<p>The item’s <strong>Quality</strong> is determined by your Lair’s Workshop level or the origin of looted gear. Quality sets how durable the item is in combat (see The Break Roll below) and sets the maximum Tier of Oddities it can safely contain.</p>
+<table>
+<thead>
+<tr>
+<th>Quality Level</th>
+<th>Equivalent Tier</th>
+<th>Flavour &amp; Origin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Junk</strong></td>
+<td>T1</td>
+<td>Sticks, bones, rusty wire, and wishful thinking.</td>
+</tr>
+<tr>
+<td><strong>Scrappy</strong></td>
+<td>T2</td>
+<td>Rough forged iron, splintered planks, standard goblin make.</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>T3</td>
+<td>Proper steel, cured leather, stolen human/knight gear.</td>
+</tr>
+<tr>
+<td><strong>Superior</strong></td>
+<td>T4</td>
+<td>Dwarven steel, reinforced dragon-hide, masterwork alloy.</td>
+</tr>
+<tr>
+<td><strong>Legendary</strong></td>
+<td>T5</td>
+<td>Godstone, void-touched crystal, ancient relic metal.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Found &amp; Looted Gear:</em> Items discovered during raids or stolen from enemies have an innate Quality based on their origin. A peasant’s pitchfork is Scrappy; a royal guard’s halberd is Standard; a dwarven waraxe is Superior.</p>
+<h3 id="layer-2-oddities-unique-components" tabindex="-1">Layer 2 — Oddities (Unique Components)</h3>
+<p>Oddities are the special parts that give Custom Gear its magical, bizarre, or terrifying character—glowing crystals, twitchy monster organs, alchemical valves, or clockwork gyros.</p>
+<p>Every Oddity has two numbers: its <strong>Tier (T)</strong> and its <strong>Bite (B)</strong>, written as <code>(T / B)</code>.</p>
+<ul>
+<li><strong>Tier (T1–T5):</strong> The maximum power level and scope of the positive Tag or active effect.</li>
+<li><strong>Bite (B0–B3):</strong> The innate instability and drawbacks of the component.</li>
+</ul>
+<p>A <code>(T3 / B0)</code> Suncrystal is a flawless, stable component with powerful effects and zero downsides—a legendary prize. A <code>(T3 / B3)</code> Demon Heart grants the same immense power but comes with terrifying consequences.</p>
+<h4 id="bite-levels" tabindex="-1">Bite Levels</h4>
+<table>
+<thead>
+<tr>
+<th>Bite</th>
+<th>Level</th>
+<th>In-Game Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>B0</strong></td>
+<td>Pure</td>
+<td>Completely stable. No negative tags or side effects.</td>
+</tr>
+<tr>
+<td><strong>B1</strong></td>
+<td>Irritating</td>
+<td>Minor cosmetic or annoying drawbacks (smells terrible, constantly smokes, loud humming).</td>
+</tr>
+<tr>
+<td><strong>B2</strong></td>
+<td>Painful</td>
+<td>Mechanical drawbacks—damages the wielder (costs Grit) on a 1 during combat, requires a resource/blood to activate, or imposes a minor condition while held.</td>
+</tr>
+<tr>
+<td><strong>B3</strong></td>
+<td>Dangerous</td>
+<td>Serious campaign consequences—attracts dangerous predators, mutates the wielder over time, or risks catastrophic explosion when destroyed.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="oddity-roles-and-synergy" tabindex="-1">Oddity Roles &amp; Synergy</h4>
+<p>Oddities come in three functional categories. A single Oddity can fill any role; the GM decides based on the component’s nature:</p>
+<ul>
+<li><strong>Cores:</strong> Provide the primary active power (e.g., a fire crystal <em>is</em> the fire blast).</li>
+<li><strong>Modifiers:</strong> Transform how another Oddity works (e.g., a focusing lens turns a fire blast into a cutting beam; fungal spores turn a single strike into an area cloud).</li>
+<li><strong>Stabilisers:</strong> Enhance the item’s physical properties (e.g., lightweight alloy reduces Bulk by -1; monster plating reinforces durability).</li>
+</ul>
+<p><strong>Tag Synergy:</strong> When two Oddity Tags interact, they can create an emergent third effect (e.g., “Fire” + “Pressure” = “Explosion”; “Thorn” + “Reach” = “Entangle”). The GM adjudicates these combinations, leaning toward whatever produces the most spectacular chaos.</p>
+<h4 id="oddity-limits-and-capacity" tabindex="-1">Oddity Limits &amp; Capacity</h4>
+<p>Your character’s <strong>Brains</strong> score determines your <strong>Crafting Capacity</strong>—the maximum number of Oddities you can attach to a single item. (Note: This is completely independent of your Brains Power Word slots). A Brains 1 goblin can attach 1 Oddity. A Brains 3 goblin can attach 3 Oddities. You cannot exceed this limit; the contraption simply becomes too complicated for your goblin brain to operate.</p>
+<h4 id="the-oddity-ceiling-rule" tabindex="-1">The Oddity Ceiling Rule</h4>
+<p>Your Lair’s Workshop sets the baseline Quality (T1 = Junk, T2 = Scrappy, T3 = Standard, T4 = Superior, T5 = Legendary). If you attach an Oddity whose Tier is <em>higher</em> than your Workshop’s Quality level, the Oddity’s <strong>Bite automatically increases by +1 for every Tier it exceeds the Workshop</strong>.</p>
+<blockquote>
+<p><em>Example: Taping a T4 Demon Eye onto a Scrappy (T2) sword adds +2 Bite to the Oddity because your crude workshop lacks the proper containment runes and brackets.</em></p>
+</blockquote>
+<h3 id="layer-3-your-workshop" tabindex="-1">Layer 3 — Your Workshop</h3>
+<p>Your Lair’s Workshop determines what Quality of Base Item you can craft during downtime. While basic scrap is unlimited, upgrading your Workshop requires specific Lair Upgrades or secured territory (like conquering a dwarven mine or securing a trade pact for refined steel).</p>
+<table>
+<thead>
+<tr>
+<th>Workshop Level</th>
+<th>Base Quality</th>
+<th>Territory / Lair Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Open Fire</strong></td>
+<td>Junk (T1)</td>
+<td>Always available in any damp cave.</td>
+</tr>
+<tr>
+<td><strong>Scrap Forge</strong></td>
+<td>Scrappy (T2)</td>
+<td>Basic Lair Upgrade (Scrap pile &amp; crude bellows).</td>
+</tr>
+<tr>
+<td><strong>Proper Smithy</strong></td>
+<td>Standard (T3)</td>
+<td>Advanced Lair Upgrade or secured iron mine.</td>
+</tr>
+<tr>
+<td><strong>Master Workshop</strong></td>
+<td>Superior (T4)</td>
+<td>Captured dwarven forge or master smith thrall.</td>
+</tr>
+<tr>
+<td><strong>Legendary Forge</strong></td>
+<td>Legendary (T5)</td>
+<td>Mythic Lair Upgrade or ancient relic chamber.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="the-crafting-roll" tabindex="-1">The Crafting Roll</h2>
+<p>Once you have selected your Base Item, chosen your attached Oddities, and stepped up to your Workshop during the Lair Phase, the crafting begins. <strong>The build always produces a working item.</strong> The Crafting Roll determines how well you tame the component’s instability.</p>
+<h3 id="rolling" tabindex="-1">Rolling</h3>
+<p>The Crafting Roll uses a dice pool of <strong>Brains + 1</strong>, plus any extra bonus dice granted by specialized Lair Workshop upgrades. Roll all dice simultaneously. Standard exploding dice rules apply (every 6 explodes into an additional die).</p>
+<p><em>Note: Standard Fumble rules (loosing Grunt in front of your gang) do not apply during downtime crafting in the Lair.</em></p>
+<h3 id="taming" tabindex="-1">Taming</h3>
+<p>Count all <strong>6s</strong> in your final result (including exploded dice). Each 6 is a <strong>Taming Success</strong>, which can be spent immediately on the following upgrades:</p>
+<ul>
+<li><strong>Reduce Bite by 1:</strong> The item’s active Bite level drops by one step (minimum B0). You can spend multiple successes to reduce high Bite levels.</li>
+<li><strong>Boost Base Item Stats:</strong> Increase the weapon’s base damage or armor’s defense by +1d, or decrease its Bulk by 1. (Costs 1 Taming Success per step).</li>
+<li><strong>Add a Flavour Tag:</strong> Add a delightful aesthetic quirk (e.g., <em>Perfectly Balanced, Gleaming, Intimidating Spikes</em>). (Costs 1 Taming Success).</li>
+</ul>
+<p>Any unspent Taming Successes are lost when the crafting session ends.</p>
+<h3 id="chaos-results-the-1s" tabindex="-1">Chaos Results (The 1s)</h3>
+<p>Count all <strong>1s</strong> rolled in the initial pool (do not count 1s on exploded extra dice). For each 1 rolled, a minor <strong>Chaos Result</strong> is permanently built into the item. The GM picks or rolls on a quirky flavor table. These are always aesthetic roleplaying quirks, never mechanical penalties.</p>
+<blockquote>
+<p><em>Examples: A hammer that whistles an off-key tune when swung. Boots that leave glowing footprints in the dark. A shield that smells strongly of roasted garlic.</em></p>
+</blockquote>
+<hr>
+<h2 id="custom-gear-in-play" tabindex="-1">Custom Gear in Play</h2>
+<h3 id="breaking-and-durability" tabindex="-1">Breaking &amp; Durability</h3>
+<p>Custom Gear is put under extreme stress during combat. Gear breaks only when an Attack roll using the item results in a <strong>Fumble</strong> (zero successes and two or more 1s), or when a specific Oddity effect pushes its active Bite level above B3. Non-combat skill checks never break gear.</p>
+<p>When you Fumble an attack, roll 1d6 for <strong>The Break Roll</strong> and compare it to the item’s Quality. Each Oddity attached to the item increases the break range by +1.</p>
+<table>
+<thead>
+<tr>
+<th>Base Quality</th>
+<th>Base Break Threshold (0 Oddities)</th>
+<th>Break Threshold with +2 Oddities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Junk</strong></td>
+<td>Breaks on 1–4</td>
+<td>Breaks on 1–6 (Guaranteed break!)</td>
+</tr>
+<tr>
+<td><strong>Scrappy</strong></td>
+<td>Breaks on 1–3</td>
+<td>Breaks on 1–5</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Breaks on 1–2</td>
+<td>Breaks on 1–4</td>
+</tr>
+<tr>
+<td><strong>Superior</strong></td>
+<td>Breaks on 1</td>
+<td>Breaks on 1–3</td>
+</tr>
+<tr>
+<td><strong>Legendary</strong></td>
+<td>Never breaks on Fumble</td>
+<td>Breaks on 1–2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>If the Break Roll succeeds (higher than threshold):</strong> The item holds together, but temporarily emits a strange noise, sparks, or smoke.</li>
+<li><strong>If the Break Roll fails (equal to or below threshold):</strong> The Base Item shatters into jagged pieces. Trigger the <strong>Scrap Cascade</strong> immediately.</li>
+</ul>
+<h3 id="the-scrap-cascade" tabindex="-1">The Scrap Cascade</h3>
+<p>When Custom Gear shatters, the Base Item is destroyed, but the magical junk taped to it might survive. For <strong>each Oddity attached to the broken item</strong>, roll 1d6:</p>
+<ul>
+<li><strong>Equal to or below the Oddity’s current Bite level:</strong> The Oddity is obliterated in a shower of sparks and goo. It is permanently lost.</li>
+<li><strong>Higher than the Oddity’s current Bite level:</strong> The Oddity survives! You fish it out of the smoking wreckage. However, the trauma leaves it permanently scarred, increasing its innate Bite rating by <strong>+1 Bite</strong> (becoming a <strong>Scarred Oddity</strong>).</li>
+</ul>
+<p>A B0 Oddity always survives its first break. A B3 Oddity has a 50% chance of survival. Scarred Oddities can be reattached to new creations during the next downtime, but their mounting instability makes them increasingly dangerous to handle.</p>
+<table>
+<thead>
+<tr>
+<th>Current Bite</th>
+<th>Survival Roll Required</th>
+<th>New Bite If Survives</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>B0</strong></td>
+<td>1+ (100% chance)</td>
+<td>B1</td>
+</tr>
+<tr>
+<td><strong>B1</strong></td>
+<td>2+ (83% chance)</td>
+<td>B2</td>
+</tr>
+<tr>
+<td><strong>B2</strong></td>
+<td>3+ (67% chance)</td>
+<td>B3</td>
+</tr>
+<tr>
+<td><strong>B3</strong></td>
+<td>4+ (50% chance)</td>
+<td>B4</td>
+</tr>
+<tr>
+<td><strong>B4</strong></td>
+<td>5+ (33% chance)</td>
+<td>B5</td>
+</tr>
+<tr>
+<td><strong>B5</strong></td>
+<td>6 (17% chance)</td>
+<td>Obliterated on next break</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-bonded-tag" tabindex="-1">The [Bonded] Tag</h3>
+<p>Certain rare Oddities (often cursed relics or parasitic demonic organs at T3 / B3) possess the <code>[Bonded]</code> tag. Once installed and gripped, they fuse directly to the wielder’s flesh or soul and cannot be voluntarily unequipped. Removing a Bonded item requires a gruesome amputation, a specialized GM quest, or ritual cleansing in the Lair. Until severed, all Bite drawbacks remain active at all times.</p>
+<hr>
+<h2 id="overclocking" tabindex="-1">Overclocking</h2>
+<p>At any point before declaring an Attack action in combat, you may announce an <strong>Overclock</strong>. This is a dramatic declaration that pushes your unstable gear past its absolute limits:</p>
+<ul>
+<li><strong>Maximum Overload:</strong> All positive Oddity effects and Tags are magnified to their ultimate extreme (e.g., massive area blast, double damage dice, ignoring all armor). The GM adjudicates this with extreme generosity under the Rule of Cool.</li>
+<li><strong>Unstoppable Force:</strong> The Overclocked attack ignores the target’s Passive Defense dice entirely.</li>
+<li><strong>Total Annihilation:</strong> The moment the attack resolves, the Custom Gear is instantly and permanently vaporized. There is no Break Roll, no Scrap Cascade, and no Oddity survival check. Everything is reduced to fine grey ash.</li>
+</ul>
+<hr>
+<h2 id="reverse-engineering-and-blueprints" tabindex="-1">Reverse Engineering &amp; Blueprints</h2>
+<p>When your gang loots unfamiliar enemy gear, ancient dwarven clockwork, or strange magical contraptions, you can choose to <strong>Reverse Engineer</strong> them during the Lair Phase.</p>
+<p>Reverse Engineering is an automatic success with no roll required. However, the process <strong>completely destroys the source item</strong>. The components are dismantled and ruined in the process of uncovering their underlying mechanical secrets.</p>
+<h3 id="blueprints" tabindex="-1">Blueprints</h3>
+<p>The tangible result of Reverse Engineering is a <strong>Blueprint</strong> (Bulk 0). Blueprints record the precise schematic for a specific Oddity Tag or specialized Base Item structure.</p>
+<p>Blueprints are incredibly valuable gang assets that can be traded, stolen, or hoarded in your Lair’s vault. A gang known for hoarding Blueprints wields significant strategic influence.</p>
+<p><strong>Using a Blueprint:</strong> To construct an item from a Blueprint during downtime, your character must have a Brains score equal to or higher than the Blueprint’s Tier. You can own a T4 Blueprint, but until your Brains reaches 4, the diagrams look like incomprehensible scribbles.</p>
+<hr>
+<h2 id="mob-scale-crafting" tabindex="-1">Mob-Scale Crafting</h2>
+<p>Gobbo Bosses don’t just fight alone—they lead screeching mobs into battle. During the Lair Phase, a Boss with access to a Workshop (Scrap Forge or better) can engage in <strong>Mob-Scale Crafting</strong> to equip their entire fighting gang with standardized tactical gear for the upcoming raid.</p>
+<p>To outfit a Mob, you must sacrifice one Oddity from your Lair’s inventory (it is permanently consumed to create coatings, crude mechanisms, or enchanted banners for your troops). In return, your Mob gains a temporary Tag matching the Oddity’s positive effect (e.g., <em>Flaming Spears, Choking Smoke Bombs, Spiked Barricades</em>) for the duration of the next raid. Regardless of whether the troops survive or wipe out, the makeshift gear falls apart at the end of the raid.</p>
+<hr>
+<h2 id="bone-oddities" tabindex="-1">Bone Oddities</h2>
+<p>When a Gobbo Boss meets their glorious, inevitable demise, their skeletal remains are tossed onto the Lair’s Pile of Bones. During downtime, a surviving Boss or ambitious underling can harvest their deceased predecessor’s skull or thighbone to craft a <strong>Bone Oddity</strong>.</p>
+<p>Bone Oddities are ancestral relics that carry the lingering spirit of the fallen Boss:</p>
+<ul>
+<li><strong>Tier:</strong> T1 or T2 (bones are sentimental keepsakes, not divine artefacts).</li>
+<li><strong>Bite:</strong> B0 or B1 (ancestral loyalty makes them remarkably stable).</li>
+<li><strong>Tags:</strong> Inherited directly from how the Boss died. A Boss incinerated by a dragon produces a <code>[Fire-Scarred]</code> bone. A Boss squashed by a cave troll grants <code>[Grudge: Trolls]</code>, granting bonus dice when fighting troll-kin.</li>
+</ul>
+<hr>
+<h2 id="brains-quirks-for-crafters" tabindex="-1">Brains Quirks for Crafters</h2>
+<p>The following specialized Quirks are available to Gobbo Bosses who invest in their Brains stat (see <a href="stage--characters-and-mobs--quirks.html" class="wikilink" title="Quirks">Quirks</a>).</p>
+<h3 id="jury-rig" tabindex="-1">Jury-Rig</h3>
+<p><em>Prerequisite: Brains 2</em>
+You can attempt to craft a Scrappy or Junk Base Item out in the field during a raid without a Workshop, cobbling together debris and duct tape. The Crafting Roll is Hard (only rolled 6s count as Taming successes; exploded dice do not generate additional successes). The makeshift contraption lasts for exactly one encounter before falling apart.</p>
+<h3 id="mob-tinker-master" tabindex="-1">Mob Tinker Master</h3>
+<p><em>Prerequisite: Brains 3</em>
+When performing Mob-Scale Crafting during downtime, your efficient design techniques allow you to outfit two separate Mobs using only a single sacrificed Oddity, or grant one Mob two distinct temporary Tags for the upcoming raid.</p>
+<h3 id="salvage-expert" tabindex="-1">Salvage Expert</h3>
+<p><em>Prerequisite: Brains 3</em>
+When your Custom Gear shatters and triggers the Scrap Cascade during combat, you may reroll any one Oddity’s survival check. You must accept the second result.</p>
+<h3 id="overclock-master" tabindex="-1">Overclock Master</h3>
+<p><em>Prerequisite: Brains 4</em>
+When you declare an Overclock during combat, your brilliant understanding of structural stress allows you to save one attached Oddity. Before the weapon disintegrates into ash, you snatch that specific Oddity out of the chassis. It survives the blast but gains +1 Bite from the severe heat.</p>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

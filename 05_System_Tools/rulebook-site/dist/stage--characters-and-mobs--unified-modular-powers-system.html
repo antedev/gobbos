@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unified_Modular_Powers_System — STAGE Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Playtesting & review materials">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab env-tab--active">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">STAGE Rules</h2>
+        <p class="sidebar-subtitle">Playtesting & review materials</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="stage.html" class="nav-link" data-target="rules--overview">Overview</a></li><li><a href="stage--rules--combat.html" class="nav-link" data-target="rules--combat">Combat</a></li><li><a href="stage--rules--movement-and-zones.html" class="nav-link" data-target="rules--movement-and-zones">Movement &amp; Zones</a></li><li><a href="stage--rules--giving-orders.html" class="nav-link" data-target="rules--giving-orders">Giving orders</a></li><li><a href="stage--rules--raid-points.html" class="nav-link" data-target="rules--raid-points">Raid points</a></li><li><a href="stage--rules--keywords-index.html" class="nav-link" data-target="rules--keywords-index">Keywords Index</a></li><li><a href="stage--rules--wounds-conditions.html" class="nav-link" data-target="rules--wounds-conditions">Wounds_Conditions</a></li><li><a href="stage--rules--master-tag-index.html" class="nav-link" data-target="rules--master-tag-index">Master_Tag_Index</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="true" data-target="characters-and-mobs"><span class="toggle-icon">▾</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" ><li><a href="stage--characters-and-mobs--character-creation.html" class="nav-link" data-target="characters-and-mobs--character-creation">Character Creation</a></li><li><a href="stage--characters-and-mobs--gang.html" class="nav-link" data-target="characters-and-mobs--gang">Gang</a></li><li><a href="stage--characters-and-mobs--boons-and-banes.html" class="nav-link" data-target="characters-and-mobs--boons-and-banes">Boons_and_Banes</a></li><li><a href="stage--characters-and-mobs--goblin-mob.html" class="nav-link" data-target="characters-and-mobs--goblin-mob">Goblin_mob</a></li><li><a href="stage--characters-and-mobs--quirks.html" class="nav-link" data-target="characters-and-mobs--quirks">Quirks</a></li><li><a href="stage--characters-and-mobs--level-up-and-death.html" class="nav-link" data-target="characters-and-mobs--level-up-and-death">Level_Up and death</a></li><li><a href="stage--characters-and-mobs--unified-modular-powers-system.html" class="nav-link nav-link--active" data-target="characters-and-mobs--unified-modular-powers-system">Unified_Modular_Powers_System</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="loot"><span class="toggle-icon">▸</span>Loot</button><ul class="nav-pages" id="nav-loot" style="display: none;"><li><a href="stage--loot--loot.html" class="nav-link" data-target="loot--loot">loot</a></li><li><a href="stage--loot--carry-stuff.html" class="nav-link" data-target="loot--carry-stuff">Carry Stuff</a></li><li><a href="stage--loot--equipment.html" class="nav-link" data-target="loot--equipment">Equipment</a></li><li><a href="stage--loot--crafting.html" class="nav-link" data-target="loot--crafting">Crafting</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="enemies"><span class="toggle-icon">▸</span>Enemies</button><ul class="nav-pages" id="nav-enemies" style="display: none;"><li><a href="stage--enemies--enemies.html" class="nav-link" data-target="enemies--enemies">Enemies</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="base"><span class="toggle-icon">▸</span>Base</button><ul class="nav-pages" id="nav-base" style="display: none;"><li><a href="stage--base--lair-rules.html" class="nav-link" data-target="base--lair-rules">Lair_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="travel"><span class="toggle-icon">▸</span>Travel</button><ul class="nav-pages" id="nav-travel" style="display: none;"><li><a href="stage--travel--journey-rules.html" class="nav-link" data-target="travel--journey-rules">Journey_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="magic"><span class="toggle-icon">▸</span>Magic</button><ul class="nav-pages" id="nav-magic" style="display: none;"><li><a href="stage--magic--magic-rules.html" class="nav-link" data-target="magic--magic-rules">Magic_Rules</a></li></ul></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="16-unified-modular-powers-system" tabindex="-1">16. Unified Modular Powers System</h1>
+<p><em>Goblins don’t follow formulas, unless it is a formula for making things go boom. A bit of glowing scrap, a twitching monster eyeball, a sudden chemical itch in the skin—mix them all together, tape it to a sword, and you have got a plan.</em></p>
+<p>The <strong>Unified Modular Powers System</strong> is the core framework for all custom abilities, mutations, and specialized gear in Gobbos. It unifies three separate paths of progression under a single rules architecture:</p>
+<ol>
+<li><strong>Quirks &amp; Twists:</strong> Personal abilities customized by the Boss, detailed in [14_Quirks.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters &amp; Mobs/14_Quirks.md).</li>
+<li><strong>Shenanigans:</strong> The core culture and compulsive traits of a <strong>Gang</strong>, detailed in [12_Gangs.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters &amp; Mobs/12_Gang.md).</li>
+<li><strong>Oddities &amp; Relics:</strong> Strange materials and magical scrap crafted into custom equipment, detailed in [34_Crafting.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/03_Loot/34_Crafting.md).</li>
+</ol>
+<hr>
+<h2 id="1-the-core-architecture-the-6-building-blocks" tabindex="-1">1. The Core Architecture (The 6 Building Blocks)</h2>
+<p>To ensure mechanical consistency and ease of GM ruling, every custom power, spell, or item is composed of six distinct structural components. These blocks isolate the narrative flavor from the underlying rules variables:</p>
+<h3 id="category-1-the-modification-what-it-does" tabindex="-1">Category 1: The Modification (What it does)</h3>
+<p>The actual mechanical change or rule-breaking effect introduced to the game engine.</p>
+<ul>
+<li><strong>Dice Pool Adjustments:</strong>
+<ul>
+<li><em>Extra Dice:</em> Adds a number of <strong>Boon</strong> dice (<strong>+Xd</strong>) to the test pool.</li>
+<li><em>Penalty Dice:</em> Deducts a number of <strong>Bane</strong> dice (<strong>-Xd</strong>) from the test pool.</li>
+<li><em>Bangaranga Extraction Override:</em> Allows the wielder to draw dice from the shared <strong>Bangaranga Pool</strong> up to their <strong>Grunt</strong> stat, regardless of standard test limits.</li>
+</ul>
+</li>
+<li><strong>Probability Engineering:</strong>
+<ul>
+<li><em>Reroll Permission:</em> Grants permission to reroll a specified subset of failed dice.</li>
+<li><em>Specific Face Reroll:</em> Forces or allows rerolling specific die faces (e.g., rerolling all 1s).</li>
+<li><em>Spiteful Reroll:</em> Allows a full reroll of failed dice, but you suffer <strong>1 Grit</strong> damage if the second attempt fails.</li>
+</ul>
+</li>
+<li><strong>Explosion Engineering:</strong>
+<ul>
+<li><em>Exploding 5s:</em> Standard tests now explode on both 5s and 6s.</li>
+<li><em>Double Explosion:</em> Landing a 6 generates two additional dice instead of one (native to Bangaranga dice).</li>
+<li><em>Explosion Removal:</em> Suppresses explosion mechanics entirely (6s count as successes but do not explode).</li>
+</ul>
+</li>
+<li><strong>Success &amp; Difficulty Gauges:</strong>
+<ul>
+<li><em>Target Number (TN) Adjustment:</em> Alters the required successes by a flat number (<strong>+/- X</strong>).</li>
+<li><em>Difficulty Step Shift:</em> Shifts the success threshold up or down (Easy: 4+, Normal: 5+, Hard: 6).</li>
+<li><em>Success Face Override:</em> Treats a specific face value as a success regardless of difficulty (e.g., treating 4s as successes on Normal tests).</li>
+<li><em>Fumble Parameter Shift:</em> Expands the Fumble boundary (e.g., fumbling if you roll any 1s).</li>
+</ul>
+</li>
+<li><strong>Stat &amp; Derived Metric Adjustments:</strong>
+<ul>
+<li><em>Main Stat Optimization:</em> Evaluates a main stat (<strong>Tough</strong>, <strong>Slink</strong>, <strong>Brains</strong>, <strong>Mouth</strong>) as a flat value for specific triggers.</li>
+<li><em>Secondary Stat Override:</em> Applies flat changes to <strong>Grit</strong> limits, <strong>Carry</strong>, <strong>Movement</strong>, <strong>Max Mobs</strong>, <strong>Free Orders</strong>, <strong>Power Words</strong>, or <strong>Crafting Capacity</strong>.</li>
+</ul>
+</li>
+<li><strong>Combat Payloads (Damage &amp; Defense):</strong>
+<ul>
+<li><em>Flat Damage/Success Increment:</em> Adds automatic successes to attacks (against standard foes) or automatic <strong>Grit</strong> or Mob <strong>Size</strong> damage (against PCs and Mobs).</li>
+<li><em>Cleave Damage Vector:</em> Excess successes beyond defense spill over to damage extra units in a Mob.</li>
+<li><em>Area of Effect (AoE) Duplication:</em> Duplicates damage to apply to every single die in a Mob’s pool.</li>
+<li><em>Overkill Multiplier:</em> Deals an extra Wound for every exact multiple of the target’s Defence TN.</li>
+<li><em>Passive Defence Dice Grant:</em> Grants bonus passive defence dice (<strong>+Xd</strong>).</li>
+<li><em>Passive Defence Bypass:</em> Bypasses the target’s passive defence dice and armor completely.</li>
+</ul>
+</li>
+<li><strong>Status State Toggles:</strong>
+<ul>
+<li><em>Condition Infliction:</em> Imposes a condition (Weakened, Restrained, Dumb, Silenced, Blinded, Terrified, Stunned, Prone).</li>
+<li><em>Condition Negation:</em> Grants immunity to a specific condition.</li>
+<li><em>Condition Acceleration:</em> Allows clearing a condition ahead of normal phase boundaries.</li>
+</ul>
+</li>
+<li><strong>Arcane &amp; Magic Vectors:</strong>
+<ul>
+<li><em>Spell Potency Targeting:</em> Spell targets one additional enemy in the delivery area per potency unit.</li>
+<li><em>Spell Potency Escalation:</em> Adds <strong>+1 Grit/Size damage</strong> or <strong>+1 automatic success</strong> to a spell per potency unit.</li>
+<li><em>Leakage Venting:</em> Reduces or cancels the severity of Side Effects from non-success dice.</li>
+</ul>
+</li>
+</ul>
+<h3 id="category-2-the-target-what-it-affects" tabindex="-1">Category 2: The Target (What it affects)</h3>
+<p>The specific rules, stats, actions, or trackers that the modification acts upon. Target mechanics are grouped into five <strong>Target Hubs</strong>:</p>
+<ul>
+<li><strong>Stats:</strong> Tough Test, Slink Test, Brains Test, Mouth Test.</li>
+<li><strong>Actions &amp; Reactions:</strong> Attack Action (Melee/Ranged), Move Action, Plunder Action, Manipulate Action, Order Action, Dodge Reaction, Parry Reaction, Scatter Order, Opportunity Attack, Disengage, Group Attack.</li>
+<li><strong>Horde &amp; Command:</strong> Mob <strong>Size</strong>, Mob <strong>Slink</strong> Normalization, Mob Cognitive Normalization, Boredom Rule, Cross-Gang Command Struggle, In-Fighting Damage.</li>
+<li><strong>Campaign &amp; Lair:</strong> Zone Profile (Base TN), Movement Cost Multiplier, Size Capacity Threshold, Cover State, Hazard Resolution Test, Route Test, Travel Event, <strong>Laden</strong> or <strong>Over-Laden</strong> Penalties, Lair labor allocation, Recruitment loops, Slot clearance, Dominance contribution, Supply routes.</li>
+<li><strong>Arcane:</strong> Spell Activation Brains Pool, Push-Your-Luck Reroll, Chaotic Leakage (Side Effects), Spell Mishap (Farkle).</li>
+<li><strong>Equipment:</strong> Durability Break Roll, Scrap Cascade, Oddity Ceiling.</li>
+</ul>
+<h3 id="category-3-the-trigger-or-constraint-when-it-applies" tabindex="-1">Category 3: The Trigger or Constraint (When it applies)</h3>
+<p>The specific conditions, circumstances, or events required for the ability to activate:</p>
+<ul>
+<li><strong>Environmental Context:</strong>
+<ul>
+<li><em>Active Hazard:</em> Target/occupied zone has a damaging trait (e.g. Burning, Toxic Spores).</li>
+<li><em>Physical Obstacle:</em> Interacting with terrain impairments (e.g. Rubble, Chasm, vertical cliffs).</li>
+<li><em>Spatial Bottleneck:</em> Volume limits (e.g. Narrow space penalizing <strong>Size</strong> 3+ mobs).</li>
+<li><em>Tactical Feature:</em> Positive cover/terrain features (e.g. pillars, shadow zones).</li>
+<li><em>Ambient Atmospheric States:</em> Weather/lighting conditions (e.g. total darkness, heavy rain).</li>
+</ul>
+</li>
+<li><strong>Tactical &amp; Positioning:</strong>
+<ul>
+<li><em>Spatial Vector Check:</em> Geometry (e.g. attacking from behind or above).</li>
+<li><em>Numerical Disadvantage:</em> Outnumbered by hostiles in the zone.</li>
+<li><em>Macro Movement State:</em> Currently Fleeing or in a Tactical Retreat.</li>
+<li><em>Inventory Burden State:</em> Carrying weight profile (e.g. completely naked, carrying zero Bulk, or wielding a two-handed weapon).</li>
+<li><em>Alternative Sensory Check:</em> Relying on non-visual parameters (e.g. smelling instead of looking).</li>
+</ul>
+</li>
+<li><strong>Target &amp; Adversary:</strong>
+<ul>
+<li><em>Defensive Tier Match:</em> Target armor type (e.g. Unarmored, Heavily Armored).</li>
+<li><em>Volumetric Scale Check:</em> Target <strong>Size</strong> is strictly larger or strictly smaller.</li>
+<li><em>Ancestry / Faction Specificity:</em> Target belongs to a specific biological/structural group.</li>
+</ul>
+</li>
+<li><strong>Trigger Events (Post-Roll):</strong>
+<ul>
+<li><em>Deterministic Success Outcome:</em> Triggers immediately following a successful test resolution (e.g., successfully dodging an attack).</li>
+<li><em>Probability Failure State (Fumble):</em> Triggers if a roll has zero successes and two or more 1s.</li>
+<li><em>Probability Failure State (Expanded Fumble):</em> Triggers if a roll contains any 1s.</li>
+<li><em>Probability Success State (Critical):</em> Triggers if a roll generates consecutive exploding 6s.</li>
+<li><em>Dice Pool Verification:</em> Evaluates the exact count of 1s in a roll.</li>
+</ul>
+</li>
+<li><strong>Operational &amp; Health States:</strong>
+<ul>
+<li><em>Direct Damage Gate (Wounding):</em> Triggers when a sheet registers <strong>Grit</strong> or Mob <strong>Size</strong> loss.</li>
+<li><em>Biological Deprivation State:</em> Deprived of resource inputs (e.g., gross food).</li>
+<li><em>Uncontrolled Minion Status:</em> Mob scales past <strong>Grunt</strong>, breaks line of sight, or fails morale.</li>
+<li><em>Encumbrance Travel State:</em> Mob is <strong>Laden</strong> or <strong>Over-Laden</strong>.</li>
+</ul>
+</li>
+<li><strong>Identity &amp; Structural:</strong>
+<ul>
+<li><em>Gang Faction Alignment:</em> Character sheet matches parent faction tag.</li>
+<li><em>Faction Defiance (Cursed):</em> Item gang tag doesn’t match wielder’s rival gang.</li>
+<li><em>Attribute Tier Gating:</em> Primary stat score is at or above a designated value.</li>
+<li><em>Component Mismatch (Ceiling Rule):</em> Oddity tier exceeds workshop level.</li>
+<li><em>Arcane Difficulty Constraint:</em> Successes are locked strictly to face value 6 (Hard casting).</li>
+</ul>
+</li>
+</ul>
+<h3 id="category-4-the-delivery-who-and-where-it-targets" tabindex="-1">Category 4: The Delivery (Who and where it targets)</h3>
+<p>The range (how far the effect travels) and area of effect (who is caught in the footprint):</p>
+<ul>
+<li><strong>Range (Origin to Target):</strong>
+<ul>
+<li><em>Personal:</em> Affects only the wielder’s space/sheet.</li>
+<li><em>Touch:</em> Direct contact in the same zone.</li>
+<li><em>Melee (Same Zone):</em> Target is in the same zone.</li>
+<li><em>Ranged (Adjacent Zone):</em> Target is exactly 1 zone away.</li>
+<li><em>Ranged (X Zones):</em> Target is up to X zones away (governed by stat/weapon).</li>
+</ul>
+</li>
+<li><strong>Area of Effect (AoE Scope):</strong>
+<ul>
+<li><em>Single Target:</em> Exactly one distinct entity/pool.</li>
+<li><em>Zone-Wide:</em> All units, terrain, and structures in the target zone.</li>
+<li><em>Blast:</em> Targets the zone + all adjacent connected zones.</li>
+<li><em>Encounter Scale:</em> Alters rules across the entire active battleground node map.</li>
+</ul>
+</li>
+<li><strong>Target Filtering:</strong>
+<ul>
+<li><em>Personal Only:</em> Limits effect strictly to the wielder.</li>
+<li><em>Own Mob Only:</em> Applies only to the wielder’s commanded Mob.</li>
+<li><em>Any Friendly Mob:</em> Applies to any allied Mob in the area.</li>
+<li><em>Friends Only:</em> Bypasses hostiles in the area.</li>
+<li><em>Enemies Only:</em> Bypasses allies in the area.</li>
+<li><em>Any Whole Mob:</em> Applies collectively to all health dice in a Mob.</li>
+<li><em>Multiple Mobs:</em> Applies across several distinct Mob squads.</li>
+</ul>
+</li>
+</ul>
+<h3 id="category-5-the-cost-what-it-takes-to-use" tabindex="-1">Category 5: The Cost (What it takes to use)</h3>
+<p>The action, resource (<strong>Grunt</strong>, <strong>Grit</strong>, or <strong>Size</strong>), or item spent to activate the power:</p>
+<ul>
+<li><strong>Action Economy:</strong>
+<ul>
+<li><em>Passive:</em> Triggers automatically or constantly active (0 Cost).</li>
+<li><em>Free Action:</em> Instant during active turn for minor triggers.</li>
+<li><em>Standard Action:</em> Consumes 1 of 3 standard combat actions.</li>
+<li><em>Reaction (Saved Action):</em> Consumes a saved Standard Action out of turn.</li>
+<li><em>Free Order Action:</em> Consumes 1 Free Order Mouth allocation.</li>
+</ul>
+</li>
+<li><strong>Personal Resource Pools:</strong>
+<ul>
+<li><em>Current Grunt Spend:</em> Deducts 1 to 3 points from current <strong>Grunt</strong> pool.</li>
+<li><em>Grit Loss:</em> Inflicts flat <strong>Grit</strong> damage directly, bypassing defense rolls.</li>
+</ul>
+</li>
+<li><strong>Minion / Mob Resources:</strong>
+<ul>
+<li><em>Mob Size Sacrifice:</em> Permanently reduces a Mob’s <strong>Size</strong> (e.g., by 1 or 1d3).</li>
+<li><em>Mob Action Consumption:</em> Mob must spend 1 or both of its actions.</li>
+<li><em>Garrison Cost:</em> Leaving a Mob behind, removing them from the Gobbo Pool.</li>
+</ul>
+</li>
+<li><strong>Inventory &amp; Wealth:</strong>
+<ul>
+<li><em>Scrap / Component Consumption:</em> Consumes a piece of Scrap or item held in inventory.</li>
+<li><em>Oddity Sacrifice:</em> Permanently erases a component from Lair inventory.</li>
+<li><em>Bribe / Loot Value Expenditure:</em> Deducts raw wealth (e.g. 5 Loot) from hoard.</li>
+</ul>
+</li>
+<li><strong>Equipment Lifecycle:</strong>
+<ul>
+<li><em>Overclock Disintegration:</em> Instantly vaporizes the item chassis.</li>
+<li><em>Active Bite Level Escalation:</em> Increases item’s instability by +1 Bite.</li>
+</ul>
+</li>
+<li><strong>Downtime Subsystems:</strong>
+<ul>
+<li><em>Laborer Die Allocation:</em> Assigns a Lair laborer die to a chore.</li>
+<li><em>Laborer Die Consumption:</em> Consumes a laborer die permanently/temporarily.</li>
+<li><em>Lair Turn Infirmary Lock:</em> Places a laborer die in the medical tent.</li>
+</ul>
+</li>
+<li><strong>Tactical Trade-Offs:</strong>
+<ul>
+<li><em>Loot / Bulk Jettison:</em> Immediately dropping Bulk/treasure to validate action.</li>
+<li><em>Mandatory Friendly Targeting:</em> Targeting a friendly Mob to trigger a loop (e.g., Asserting Dominance).</li>
+<li><em>Action Restriction (Disengage):</em> Requires spending a standard action to safely exit zone.</li>
+</ul>
+</li>
+<li><strong>Risk &amp; Pool Penalties:</strong>
+<ul>
+<li><em>Push-Your-Luck Reroll Lock:</em> Locks successes, forces reroll of non-successes.</li>
+<li><em>Bangaranga Pool Drainage Tax:</em> Drainage of Bangaranga dice on fail.</li>
+<li><em>Forced Hazard Roll Trigger:</em> Triggers unrolled GM check on a complication table.</li>
+</ul>
+</li>
+</ul>
+<h3 id="category-6-the-duration-how-long-it-lasts" tabindex="-1">Category 6: The Duration (How long it lasts)</h3>
+<p>The timeline showing when the modified effect ends:</p>
+<ul>
+<li><strong>Tactical Scale (Combat &amp; Round-Based):</strong>
+<ul>
+<li><em>Instant:</em> Resolves immediately with no lingering state.</li>
+<li><em>Active Round-Sustained:</em> Persists until End of Turn, Start of Round, or Round Closure.</li>
+<li><em>Sustained (Manual Clear):</em> Lasts until an action/test clears it.</li>
+<li><em>Round-Bounded:</em> Persists for X rounds.</li>
+<li><em>Encounter-Bounded:</em> Lasts until Combat End.</li>
+</ul>
+</li>
+<li><strong>Frequency Gates (Charging Systems):</strong>
+<ul>
+<li><em>Round-Frequency Limit:</em> Limits activation to X times per round.</li>
+<li><em>Encounter-Frequency Limit:</em> Limits activation to X times per fight.</li>
+<li><em>Raid-Frequency Limit:</em> X charges per exploration map, resetting at Lair.</li>
+<li><em>Campaign Usage Limit:</em> Absolute total uses before breaking.</li>
+</ul>
+</li>
+<li><strong>Strategic Scale (Macro &amp; Campaign):</strong>
+<ul>
+<li><em>Journey Stage-Bounded:</em> Active during wilderness travel, clearing at destination.</li>
+<li><em>Raid-Bounded:</em> Persists for entire raid, breaks during Homecoming.</li>
+<li><em>Lair Turn-Bounded:</em> Active strictly during Lair weekly downtime phase.</li>
+<li><em>Permanent (Character Lifecycle):</em> Hard-coded to PC until death/retirement.</li>
+<li><em>Permanent (Gang / Lair Scale):</em> Irreversibly alters Lair or Gang sheets.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2-core-target-hubs" tabindex="-1">2. Core Target Hubs</h2>
+<p>To prevent rules bloat and keep scripting simple, all target mechanics are grouped into five <strong>Target Hubs</strong>:</p>
+<ol>
+<li><strong>Stats:</strong> Modifies tests using <strong>Tough</strong>, <strong>Slink</strong>, <strong>Brains</strong>, or <strong>Mouth</strong>.</li>
+<li><strong>Actions &amp; Reactions:</strong> Modifies Attack Actions, Dodge Reactions, Parry Reactions, or <strong>Passive Defence</strong>.</li>
+<li><strong>Horde &amp; Command:</strong> Modifies Mob <strong>Size</strong>, <strong>Max Mobs</strong>, <strong>Free Orders</strong>, or Mob <strong>Morale</strong>.</li>
+<li><strong>Campaign &amp; Lair:</strong> Modifies Lair labor rolls, travel route tests, or <strong>Carry</strong> capacity.</li>
+<li><strong>Arcane:</strong> Modifies magic words casting, push rerolls, or spell mishap resolution.</li>
+</ol>
+<hr>
+<h2 id="3-the-t1-t5-mechanical-toolkit-pre-bundled-blocks" tabindex="-1">3. The T1–T5 Mechanical Toolkit (Pre-Bundled Blocks)</h2>
+<p>To simplify play, the rules pre-bundle the positive building blocks (<strong>Modification</strong>, <strong>Delivery</strong>, and <strong>Duration</strong>) into five standard <strong>Tiers (T1–T5)</strong>. This universal scale aligns with Boss stats, gear quality, and Lair workshop tiers:</p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Successes / Grit Loss</th>
+<th>Range &amp; Area</th>
+<th>Duration &amp; Conditions</th>
+<th>Narrative &amp; Utility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>T1 (Niche/Minor)</strong></td>
+<td><strong>+1 Success</strong> (on attack) OR <strong>1</strong> <strong>Grit</strong>/<strong>Size</strong> damage (on hit).</td>
+<td><strong>Melee</strong> (Same <strong>Zone</strong>).</td>
+<td><strong>Instant</strong> (Effect resolves immediately).</td>
+<td>Move <strong>1 Zone</strong> as part of the action, or bypass a minor physical obstacle (e.g., climb a fence).</td>
+</tr>
+<tr>
+<td><strong>T2 (Standard)</strong></td>
+<td><strong>+2 Successes</strong> (on attack) OR <strong>2</strong> <strong>Grit</strong>/<strong>Size</strong> damage (on hit).</td>
+<td><strong>Ranged: 1 Zone</strong> (Adjacent).</td>
+<td><strong>Sustained</strong> (Basic condition like <em>Weakened</em> or <em>Restrained</em> until target spends <strong>1 Action</strong> to shake it off).</td>
+<td>Medium utility (e.g., stick to walls, breathe underwater, make loud noise that ruins stealth).</td>
+</tr>
+<tr>
+<td><strong>T3 (Heroic/Area)</strong></td>
+<td><strong>+3 Successes</strong> (on attack) OR <strong>3</strong> <strong>Grit</strong>/<strong>Size</strong> damage (on hit); OR heal <strong>2</strong> <strong>Grit</strong>.</td>
+<td><strong>Zone</strong> (Affects all targets in a single <strong>Zone</strong>).</td>
+<td><strong>Persistent</strong> (Severe condition like <em>Blinded</em> or <em>Terrified</em> until target spends <strong>1 Action</strong> to shake it off).</td>
+<td>Zone-wide utility (e.g., ignite a zone, fill it with thick smoke, block exits).</td>
+</tr>
+<tr>
+<td><strong>T4 (Destructive)</strong></td>
+<td><strong>+4 Successes</strong> (on attack) OR <strong>4</strong> <strong>Grit</strong>/<strong>Size</strong> damage (on hit); OR double <strong>successes</strong>.</td>
+<td><strong>Blast</strong> (Affects own + all adjacent <strong>Zones</strong>).</td>
+<td><strong>Encounter</strong> (Condition lasts for the duration of the fight).</td>
+<td>Destroys permanent structures, creates new paths, or permanently alters zone boundaries.</td>
+</tr>
+<tr>
+<td><strong>T5 (Legendary)</strong></td>
+<td>Target is instantly defeated; OR double Wounds.</td>
+<td><strong>Encounter Scale</strong> (Affects entire map).</td>
+<td><strong>Permanent</strong> (Can only be cured in the Lair).</td>
+<td>Alter the landscape, summon mythic weather, or permanently warp magic in the region.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<blockquote>
+<p><strong>GOLDEN RULE: Applying Successes vs. Damage</strong>
+To keep combat fast and respect the deterministic nature of standard enemies, modular math adjusts based on the target:</p>
+<ul>
+<li><strong>Against standard enemies:</strong> The value is added as <strong>automatic successes</strong> directly to the player’s attack pool toward meeting the target’s <strong>Defence</strong> <strong>Target Number (TN)</strong>.</li>
+<li><strong>Against Bosses, PCs, and Mobs:</strong> The value is subtracted directly as <strong>Grit</strong> loss (for Bosses and PCs) or Mob <strong>Size</strong> damage (for Mobs) on a successful hit.</li>
+</ul>
+</blockquote>
+</blockquote>
+<hr>
+<h2 id="4-non-combat-and-campaign-tiering" tabindex="-1">4. Non-Combat &amp; Campaign Tiering</h2>
+<p>While the combat-focused matrix is the default player-facing interface, custom Quirks and Oddities that modify non-combat loops (such as travel routes, downtime labor, or item durability) are tiered using these guidelines:</p>
+<ul>
+<li><strong>Tier 1 (Niche/Minor):</strong> Modifies a single-target, minor non-combat utility (e.g., granting a <strong>Boon</strong> to a specific travel role, or reducing an item’s Bulk by 1).</li>
+<li><strong>Tier 2 (Standard):</strong> Modifies a standard non-combat mechanic (e.g., shifting a travel test difficulty step, or reducing an item’s active Bite level by 1).</li>
+<li><strong>Tier 3 (Heroic/Area):</strong> Modifies a group-wide or zone-wide campaign metric (e.g., granting <strong>+1 success</strong> to Lair labor rolls, or allowing a Mob to ignore the <strong>Laden</strong> travel penalty).</li>
+<li><strong>Tier 4 (Destructive):</strong> Modifies macro-campaign structures (e.g., preventing any gear breakage on a fumbled attack, or allowing a Mob to ignore <strong>Over-Laden</strong> travel penalties).</li>
+<li><strong>Tier 5 (Legendary):</strong> Permanently alters campaign systems globally (e.g., granting a permanent Lair labor bonus, or generating permanent Lair resources).</li>
+</ul>
+<hr>
+<h2 id="5-modularity-and-assembly" tabindex="-1">5. Modularity &amp; Assembly</h2>
+<p>To build a power, a player chooses one <strong>Narrative Descriptor (Tag)</strong> (detailed in the [Master Tag Index](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md)) and attaches it to a <strong>Mechanical Effect (Tier)</strong> of the appropriate level.</p>
+<h3 id="scaling-rules-tag-baselines-vs-power-tiers" tabindex="-1">Scaling Rules: Tag Baselines vs. Power Tiers</h3>
+<p>To prevent mathematical stacking conflicts, custom powers scale as follows:</p>
+<ul>
+<li><strong>Math Override:</strong> Custom powers use the <strong>Tier’s successes, damage, or healing values</strong> instead of the tag’s baseline successes/damage.</li>
+<li><strong>Persistent Baselines:</strong> The tag’s baseline conditions (e.g. <em>Restrained</em>), environmental behaviors, and element syntheses still apply in full.</li>
+<li><em>Example (T1 Fire Dagger):</em> A T1 power deals +1 success/damage, matching <code>[Fire]</code>'s baseline +1 success.</li>
+<li><em>Example (T3 Fire Sword):</em> A T3 power deals +3 successes/damage, overriding <code>[Fire]</code>'s +1 success baseline. The sword now deals +3 successes and ignites the zone on a hit.</li>
+</ul>
+<h3 id="narrative-descriptors-tags" tabindex="-1">Narrative Descriptors (Tags)</h3>
+<p>Descriptors (written as <code>[Tag]</code>) represent the physical or magical manifestation of the power (e.g., <code>[Fire]</code>, <code>[Sticky]</code>, <code>[Chilled]</code>, <code>[Loud]</code>, <code>[Toxic]</code>, <code>[Elastic]</code>, <code>[Angelic]</code>, <code>[Undead]</code>). Descriptors do not contain math. Instead, they define:</p>
+<ul>
+<li>How the power behaves in the fiction (e.g., <code>[Elastic]</code> lets a goblin stretch their limbs to reach high places).</li>
+<li>How it interacts with the environment (e.g., <code>[Chilled]</code> freezes water; <code>[Fire]</code> ignites dry vegetation).</li>
+<li>How different elements combine during <strong>Element Synthesis</strong>.</li>
+</ul>
+<h3 id="the-power-blueprint-template" tabindex="-1">The Power Blueprint Template</h3>
+<p>GMs and developers write abilities using this standardized blueprint card:</p>
+<pre><code class="language-markdown">### [Power/Item Name]
+*   **Targets:** [Which core rules, stats, or trackers does this modify?]
+*   **Modification:** [What baseline rule is altered, bypassed, or injected?]
+*   **Delivery:** [Who or what does this affect, at what range, or across what area?]
+*   **Trigger/Constraint:** [Under what specific tactical triggers or conditions does this activate?]
+*   **Cost:** [What resources, actions, or structural sacrifices are paid to use it?]
+*   **Duration:** [How long does this altered rule-state persist before clearing?]
+</code></pre>
+<blockquote>
+<p><strong>Example (Quirk):</strong> Grub has a <strong>Slink</strong> of 2. They select a <strong>Slink</strong> <strong>T2</strong> <strong>Quirk</strong>. They combine the <strong>T2</strong> Mechanical Effect (<em>imposes a Sustained condition</em>) with the Descriptor <code>[Sticky]</code> to create the <strong>Sticky Spit</strong> <strong>Quirk</strong>. When activated, the target is covered in glue and gains the <em>Restrained</em> condition.</p>
+<p><strong>Example (Oddity):</strong> A crafter builds a <strong>T3</strong> weapon using a fire crystal. They choose the <strong>T3</strong> Mechanical Effect (<em>Zone Area</em>) and the Descriptor <code>[Fire]</code>. The weapon is a <strong>Flameslasher</strong>. When swung, it sweeps fire across the entire <strong>Zone</strong>.</p>
+</blockquote>
+<h3 id="the-activation-cost-economy" tabindex="-1">The Activation Cost Economy</h3>
+<p>To use an active modular power or <strong>Oddity</strong>, a Boss must pay its associated activation cost. Because <strong>Grunt</strong> is a limited pool that determines maximum commanded Mob <strong>Size</strong>, spending <strong>Grunt</strong> is a significant tactical sacrifice:</p>
+<ul>
+<li><strong>T1–T2 Powers:</strong> May be <strong>Passive</strong>, cost <strong>1 Action</strong>, or cost <strong>1 Grunt</strong>.</li>
+<li><strong>T3 Powers:</strong> Cost <strong>1 Action</strong> OR <strong>1 Grunt</strong>.</li>
+<li><strong>T4 Powers:</strong> Cost <strong>1 Action</strong> + <strong>1 Grunt</strong> OR <strong>2 Grunt</strong>.</li>
+<li><strong>T5 Powers:</strong> Cost <strong>3 Grunt</strong> OR trigger an immediate <strong>Overclock</strong> (completely destroying the gear chassis upon resolution).</li>
+</ul>
+<h3 id="balancing-area-of-effect-aoe-powers" tabindex="-1">Balancing Area of Effect (AoE) Powers</h3>
+<p>Area attacks are highly lethal in Gobbos because <strong>Area of Effect (AoE)</strong> or <strong>Cleave</strong> damage applies to <strong>every single die</strong> in a <strong>Mob</strong>’s pool (see [13_Goblin_mob.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters &amp; Mobs/13_Goblin_mob.md)).</p>
+<ul>
+<li><strong>The Multi-Oddity Rule:</strong> An item or power cannot possess both a high-tier damage effect and a wide Area/Blast delivery without paying the modular cost.</li>
+<li>To build an Area-damage weapon, a player must install both a <strong>Core</strong> <strong>Oddity</strong> (representing the successes/damage) and a <strong>Modifier</strong> <strong>Oddity</strong> (representing the Area/Blast delivery).</li>
+<li>Because a goblin’s <strong>Brains</strong> stat caps their <strong>Crafting Capacity</strong> (max Oddities per item), low-<strong>Brains</strong> goblins cannot build wide-area high-tier weapons. A <strong>Brains</strong> 1 goblin can only build a single-target <strong>T3</strong> weapon. A <strong>Brains</strong> 3+ goblin is required to combine a <strong>T3</strong> <strong>Core</strong> and a <strong>T3</strong> Area <strong>Modifier</strong>.</li>
+</ul>
+<hr>
+<h2 id="6-element-synthesis" tabindex="-1">6. Element Synthesis</h2>
+<p>When players combine multiple descriptors (e.g., custom gear with multiple Oddities or environmental combos), the outcome is resolved using the following guidelines:</p>
+<h3 id="resolution-at-creation" tabindex="-1">Resolution at Creation</h3>
+<p>To prevent combat speed-bumps, <strong>Element Synthesis must be resolved at the point of weapon creation/customization</strong>, rather than negotiated during combat rounds. The player designs the combination during downtime, the GM approves the emergent synergy, and a static final statblock is written onto the item sheet.</p>
+<h3 id="single-condition-constraint" tabindex="-1">Single Condition Constraint</h3>
+<p>A single attack or weapon can never apply more than one mechanical condition.</p>
+<h3 id="synthesis-upgrade" tabindex="-1">Synthesis Upgrade</h3>
+<p>If two elements with conditions combine, they upgrade into a single, higher-tier condition from the standard conditions list:</p>
+<ul>
+<li>A <strong>Slink</strong> <strong>Bane</strong> + <strong>Tough</strong> <strong>Bane</strong> upgrade to <strong>Restrained</strong> (<strong>Slink</strong> 0, <strong>Movement</strong> 0) or <strong>Stunned</strong> (Cannot act).</li>
+<li>A <code>[Toxic]</code> element + <code>[Chilled]</code> element combines into <strong>Numbing Venom</strong> (imposes <strong>Restrained</strong>).</li>
+</ul>
+<h3 id="narrative-only-secondary-effects" tabindex="-1">Narrative-Only Secondary Effects</h3>
+<p>The second tag provides narrative utility and environmental interaction, not extra combat math.</p>
+<ul>
+<li><code>[Fire]</code> + <code>[Sticky]</code> creates a burning glue that ignites wooden shields, but mechanically it just deals the base fire <strong>successes</strong> and imposes <em>Restrained</em>.</li>
+</ul>
+<h3 id="standard-condition-mapping" tabindex="-1">Standard Condition Mapping</h3>
+<p>Narrative tags map directly to the condition baseline rules established in the [Master Tag Index](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md). Refer to the Tag Index to find specific condition effects (such as <strong>Stunned</strong>, <strong>Weakened</strong>, <strong>Restrained</strong>, <strong>Terrified</strong>, or <strong>Blinded</strong>). Any tag not listed in the index defaults to a simple situational <strong>Bane</strong> on tests involving a relevant stat.</p>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

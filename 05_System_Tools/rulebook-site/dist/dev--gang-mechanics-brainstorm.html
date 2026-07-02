@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gang_Mechanics_Brainstorm — DEV Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Raw ideas and brainstorms">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab env-tab--active">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">DEV Rules</h2>
+        <p class="sidebar-subtitle">Raw ideas and brainstorms</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="gdrs"><span class="toggle-icon">▸</span>GDRs</button><ul class="nav-pages" id="nav-gdrs" style="display: none;"><li><a href="dev.html" class="nav-link" data-target="gdrs--gdr-001-macro-audit-and-unified-effects">GDR-001_Macro_Audit_And_Unified_Effects</a></li><li><a href="dev--gdrs--gdr-002-gang-pillar-and-lair-economy.html" class="nav-link" data-target="gdrs--gdr-002-gang-pillar-and-lair-economy">GDR-002_Gang_Pillar_And_Lair_Economy</a></li><li><a href="dev--gdrs--gdr-003-unified-modular-powers-system.html" class="nav-link" data-target="gdrs--gdr-003-unified-modular-powers-system">GDR-003_Unified_Modular_Powers_System</a></li><li><a href="dev--gdrs--gdr-004-enemy-stat-framework-and-mobs.html" class="nav-link" data-target="gdrs--gdr-004-enemy-stat-framework-and-mobs">GDR-004_Enemy_Stat_Framework_And_Mobs</a></li><li><a href="dev--gdrs--gdr-005-goblin-magic-dice-system.html" class="nav-link" data-target="gdrs--gdr-005-goblin-magic-dice-system">GDR-005_Goblin_Magic_Dice_System</a></li><li><a href="dev--gdrs--gdr-006-environmental-hazards-and-zone-statblocks.html" class="nav-link" data-target="gdrs--gdr-006-environmental-hazards-and-zone-statblocks">GDR-006_Environmental_Hazards_and_Zone_Statblocks</a></li><li><a href="dev--gdrs--gdr-template.html" class="nav-link" data-target="gdrs--gdr-template">GDR-TEMPLATE</a></li></ul></div><div class="nav-group nav-group--solo"><a href="dev--crafting-creative-analysis.html" class="nav-link nav-link--solo" data-target="crafting-creative-analysis">crafting_creative_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-framework-brainstorm">crafting_framework_brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-mechanics-audit.html" class="nav-link nav-link--solo" data-target="crafting-mechanics-audit">crafting_mechanics_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-brainstorm">crafting-brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--creative-genius-crafting-analysis.html" class="nav-link nav-link--solo" data-target="creative-genius-crafting-analysis">creative_genius_crafting_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-modular-threat-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="enemy-modular-threat-framework-brainstorm">Enemy_Modular_Threat_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-stats-draft.html" class="nav-link nav-link--solo" data-target="enemy-stats-draft">Enemy_Stats_Draft</a></div><div class="nav-group nav-group--solo"><a href="dev--equipment-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="equipment-framework-brainstorm">Equipment_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--gang-mechanics-brainstorm.html" class="nav-link nav-link--solo nav-link--active" data-target="gang-mechanics-brainstorm">Gang_Mechanics_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--generic-trick-mechanics.html" class="nav-link nav-link--solo" data-target="generic-trick-mechanics">Generic_Trick_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--initial-trick-list.html" class="nav-link nav-link--solo" data-target="initial-trick-list">Initial_Trick_List</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-brainstorm.html" class="nav-link nav-link--solo" data-target="lair-brainstorm">Lair_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-mechanics-game-engineering-audit.html" class="nav-link nav-link--solo" data-target="lair-mechanics-game-engineering-audit">Lair_Mechanics_Game_Engineering_Audit</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-refined-framework.html" class="nav-link nav-link--solo" data-target="lair-system-refined-framework">Lair_System_Refined_Framework</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-research-deep-dive.html" class="nav-link nav-link--solo" data-target="lair-system-research-deep-dive">Lair_System_Research_Deep_Dive</a></div><div class="nav-group nav-group--solo"><a href="dev--mob-combat-design-advice.html" class="nav-link nav-link--solo" data-target="mob-combat-design-advice">Mob_Combat_Design_Advice</a></div><div class="nav-group nav-group--solo"><a href="dev--research-crafting-systems.html" class="nav-link nav-link--solo" data-target="research-crafting-systems">research_crafting_systems</a></div><div class="nav-group nav-group--solo"><a href="dev--research-deeds-award-mechanics.html" class="nav-link nav-link--solo" data-target="research-deeds-award-mechanics">Research_Deeds_Award_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-base-building.html" class="nav-link nav-link--solo" data-target="researcher-findings-base-building">Researcher_Findings_Base_Building</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-conditions.html" class="nav-link nav-link--solo" data-target="researcher-findings-conditions">Researcher_Findings_Conditions</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-environmental-hazards.html" class="nav-link nav-link--solo" data-target="researcher-findings-environmental-hazards">Researcher_Findings_Environmental_Hazards</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-analysis.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-analysis">Researcher_Findings_OSR_Analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-sources.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-sources">Researcher_Findings_OSR_Sources</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-notes.html" class="nav-link nav-link--solo" data-target="researcher-notes">Researcher_Notes</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-audit-equipment.html" class="nav-link nav-link--solo" data-target="rules-lawyer-audit-equipment">Rules_Lawyer_Audit_Equipment</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-crafting-audit.html" class="nav-link nav-link--solo" data-target="rules-lawyer-crafting-audit">rules_lawyer_crafting_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-system-audit-report.html" class="nav-link nav-link--solo" data-target="rules-lawyer-system-audit-report">Rules_Lawyer_System_Audit_Report</a></div><div class="nav-group nav-group--solo"><a href="dev--static-resistances-opposed-tests.html" class="nav-link nav-link--solo" data-target="static-resistances-opposed-tests">Static_Resistances_Opposed_Tests</a></div><div class="nav-group nav-group--solo"><a href="dev--trick-mechanics-master-list.html" class="nav-link nav-link--solo" data-target="trick-mechanics-master-list">Trick_Mechanics_Master_List</a></div><div class="nav-group nav-group--solo"><a href="dev--unified-modular-power-system.html" class="nav-link nav-link--solo" data-target="unified-modular-power-system">Unified Modular Power System</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="brainstorm-gang-mechanics" tabindex="-1">Brainstorm: Gang Mechanics</h1>
+<p><em>Role: Game Engineer</em></p>
+<p>The Gang serves as the persistent “Class” and progression tracker for the player. Since individual Gobbos will inevitably die (and it’s a feature, not a bug!), the Gang ensures that the player’s overall power and narrative weight in the world continues to grow.</p>
+<h2 id="1-what-is-infamy-really-formerly-renown" tabindex="-1">1. What is Infamy, Really? (Formerly Renown)</h2>
+<p><strong>Infamy</strong> is the “Level” of your Gang. It represents the Gang’s reputation, fear factor, resources, and influence within the Lair and the wider world.</p>
+<ul>
+<li><strong>Mechanically:</strong> It dictates the baseline competence of your <em>next</em> Boss. As written in <code>15_Death.md</code>, a new PC gets Stat Advances based on the Infamy Level. Instead of starting completely fresh at 1,1,1,1, a high Infamy gang acts as an “XP-boost” for the next Boss (e.g., letting them start at 4,1,2,1). This gives them a running start while still allowing the player to pivot to a brand new build and style.</li>
+<li><strong>Narratively:</strong> It’s how much respect and fear you command. High Infamy means other gangs step aside when you walk through the Lair.</li>
+<li><strong>Progression:</strong> Infamy increases by bringing Loot back to the Lair and completing <strong>Gang Agendas</strong> (see below).</li>
+</ul>
+<h2 id="2-gang-attributes-and-the-gang-sheet" tabindex="-1">2. Gang Attributes &amp; The “Gang Sheet”</h2>
+<p>If the Gang acts like a flexible Class, it needs its own identity outside of the current Boss. A <strong>Gang Sheet</strong> is a fantastic idea to anchor the player. Here are attributes a Gang could have:</p>
+<h3 id="core-gang-attributes-suggested" tabindex="-1">Core Gang Attributes (Suggested)</h3>
+<p>Instead of rolling stats, a Gang could have a few core descriptors or “Tags” that function mechanically:</p>
+<ol>
+<li><strong>The Hoard:</strong> A measure of abstract wealth and gear. When a Boss needs a specific mundane item, they can test against The Hoard to see if the Gang already stole one. Crucially, The Hoard is the starting point for <strong>outfitting your Mob before a raid</strong>—you equip them from the Hoard, and then need to get hold of more loot to buy more stuff in the Lair.</li>
+<li><strong>Specialty (The “Class” Aspect):</strong>
+<ul>
+<li>At Gang creation, the player picks a Specialty (e.g., <em>Sneak-Thieves, Muck-Brawlers, Weird-Tinkerers</em>).</li>
+<li><strong>Mechanic:</strong> Any Boss from this Gang always gets +1d when doing a test related to their Specialty. This gives the Gang a distinct flavor that persists across all characters.</li>
+</ul>
+</li>
+</ol>
+<h3 id="what-goes-on-the-gang-sheet" tabindex="-1">What goes on the Gang Sheet?</h3>
+<ul>
+<li><strong>Gang Name / Specialty</strong></li>
+<li><strong>Current Boss:</strong> (Who is in charge right now)</li>
+<li><strong>Infamy Level:</strong> (And XP tracker towards the next level)</li>
+<li><strong>The Hoard / Resources:</strong> (Shared pool, used to outfit the mob)</li>
+<li><strong>The Bone Pile:</strong> (List of dead Bosses, their relics, and kept talents/inspiration)</li>
+<li><strong>Elders:</strong> (List of retired Bosses and what they do)</li>
+<li><strong>Active Grudges / Agendas:</strong> (Current personal missions)</li>
+</ul>
+<h2 id="3-elders-and-the-pile-of-bones" tabindex="-1">3. Elders &amp; The “Pile of Bones”</h2>
+<p><em>Should they belong to one gang or the whole Lair?</em></p>
+<p><strong>Recommendation: They should primarily belong to the Gang.</strong>
+Here is why: You want the player to feel a sense of <em>personal</em> lineage and reward. If my awesome PC Grurr dies and goes to the Pile of Bones, I want <em>my</em> next character to benefit from Saint Grurr. If it benefits the whole Lair, it waters down the impact of my specific character’s death.</p>
+<p><em>However, we can do a hybrid to enhance the Lair mechanic:</em></p>
+<ul>
+<li><strong>The Bone Pile (Dead Legends):</strong> Purely Gang-specific. These are your Patron Saints. Players draw <strong>“Inspiration”</strong> from their dead PCs, allowing the new Boss to keep a highly iconic, cool talent/trick that the old PC had (though not all of them, to maintain balance). Furthermore, tying into Crafting, a player could take a literal <strong>Bone</strong> from a dead PC and attach it to an item to create a <strong>Relic</strong>, granting an even larger, specific boon from that ancestor.</li>
+<li><strong>Elders (Retired PCs):</strong> Gang-specific, BUT they can be “spent” to unlock Lair Upgrades. An Elder sits around demanding food from your Gang, giving you a passive buff (e.g., “Better prices at the merchant”). But if you want a massive Lair Upgrade (like a new Blacksmith for everyone), you might have to assign an Elder to permanently run it. This gives players a choice: keep the Elder for personal benefit, or sacrifice their personal benefit for a Lair-wide upgrade.
+<em>Name suggestion for “Pile of Bones”:</em> The Bone Pile, The Ancestor Shrines, The Wall of Skulls.</li>
+</ul>
+<h2 id="4-personal-missions-quests-gang-agendas" tabindex="-1">4. Personal Missions / Quests (Gang Agendas)</h2>
+<p>Unlocking personal missions via the Gang is a brilliant way to drive raid behavior and add chaos. Let’s call them <strong>Gang Agendas</strong> or <strong>Grudges</strong>.</p>
+<ul>
+<li><strong>How it works:</strong> A Gang always has one active Agenda. These are specific, highly flavorful objectives that must be completed during a Raid.</li>
+<li><strong>Examples:</strong>
+<ul>
+<li><em>The Shiny-Snatchers Agenda:</em> Steal something from a locked chest without fighting the guards.</li>
+<li><em>The Muck-Brawlers Agenda:</em> Defeat the biggest enemy in the dungeon using only improvised weapons.</li>
+<li><em>The Weird-Tinkerers Agenda:</em> Trigger a trap on purpose and survive.</li>
+</ul>
+</li>
+<li><strong>The Reward:</strong> Completing an Agenda grants immediate bonus Loot, Renown XP, or even a unique Trick that can be added to the Gang’s permanent repertoire.</li>
+<li><strong>Rivalries:</strong> Agendas could also target other players! “Ensure your Gang steals more Loot than [Player B’s Gang] on this raid.” (If this fits the chaotic PvP-lite tone of the game).</li>
+</ul>
+<h2 id="summary-and-next-steps" tabindex="-1">Summary &amp; Next Steps</h2>
+<p>By defining Gangs with specific <strong>Specialties</strong>, giving them a <strong>Gang Sheet</strong> to track <strong>Infamy</strong> and <strong>The Bone Pile</strong>, and injecting <strong>Gang Agendas</strong> to push raid behavior, the Gang truly becomes a persistent, highly flexible “Class.”</p>
+<p>Do you want to solidify these attribute names and create a mock-up of what the Gang Sheet would look like? Or dive deeper into how specialties branch out?</p>
+<hr>
+<h2 id="5-creative-genius-additions-the-spice" tabindex="-1">5. Creative Genius Additions (The Spice!)</h2>
+<p><em>Role: Creative Genius</em></p>
+<p>If we step back and look at the big picture, the Gang framework is solid, but we can turn the dial up on the chaos and “goblin flavor” even more. Here are some grand, fun, and highly flavorful ideas to expand the Gangs:</p>
+<h3 id="a-gang-turf-micro-lair-customization" tabindex="-1">A. Gang “Turf” (Micro-Lair Customization)</h3>
+<p>The Lair is big, but your Gang needs a specific corner to call home.</p>
+<ul>
+<li><strong>The Idea:</strong> Beyond macro Lair Upgrades (like a Blacksmith), players can customize their Gang’s <strong>Turf</strong>.</li>
+<li><strong>Mechanic:</strong> Do you sleep in hanging rusty cages? Do you have an indoor mushroom farm that smells terrible? Your Turf grants highly specific, flavorful micro-boons. E.g., a “Stolen Chandelier” in your Turf means your Grunts are slightly braver (they feel fancy). It gives the players a mini base-building game within the larger base-building game.</li>
+</ul>
+<h3 id="b-generational-grudges-and-phobias-organic-flaws" tabindex="-1">B. Generational Grudges &amp; Phobias (Organic Flaws)</h3>
+<p>Goblins learn from their mistakes… sort of.</p>
+<ul>
+<li><strong>The Idea:</strong> The way your <em>last</em> Boss died permanently affects the Gang’s psychology.</li>
+<li><strong>Mechanic:</strong> If Boss #1 gets eaten by a Troll, the Gang develops a <strong>Troll Grudge</strong>. The next Boss gets +1d when fighting Trolls, but the Mob suffers -1d on morale tests around them. The Gang evolves organically based on the hilarious failures of past sessions!</li>
+</ul>
+<h3 id="c-gang-quirks-hysterias" tabindex="-1">C. Gang Quirks / Hysterias</h3>
+<p>A Specialty (like Sneak-Thieves) is a benefit. A Quirk is a shared madness.</p>
+<ul>
+<li><strong>The Idea:</strong> Every Gang rolls for a mandatory, chaotic behavioral Quirk at creation.</li>
+<li><strong>Examples:</strong>
+<ul>
+<li><em>Pyromaniacs:</em> Cannot resist throwing bombs if they have them.</li>
+<li><em>Shiny-Blindness:</em> Always prioritize grabbing the most reflective loot, even if it’s worthless glass, over actual gold.</li>
+<li><em>Vocal Tics:</em> The player must shout their orders.</li>
+</ul>
+</li>
+<li><strong>Reward:</strong> Playing into your Gang’s Quirk when it is <em>inconvenient</em> grants a free Trick or Grit point for that raid. It incentivizes players to act like unhinged goblins.</li>
+</ul>
+<h3 id="d-inter-gang-rivalries-the-lair-is-a-powder-keg" tabindex="-1">D. Inter-Gang Rivalries (The Lair is a Powder Keg)</h3>
+<p>The players are ostensibly on the same side, but goblins are petty.</p>
+<ul>
+<li><strong>The Idea:</strong> Formalize the friction between the players’ Gangs back at the Lair.</li>
+<li><strong>Mechanic:</strong> If <em>The Sneak-Thieves</em> and <em>The Muck-Brawlers</em> both want the same Lair Upgrade or the last shiny sword in the shop, they can use their Infamy to “Flex” on each other. Or perhaps they can place <strong>Wagers</strong> before a raid: “Whoever brings back the most teeth gets the other Gang to clean out their mushroom farm for a week.”</li>
+</ul>
+<h3 id="e-the-mob-mutiny-gauge" tabindex="-1">E. The Mob Mutiny Gauge</h3>
+<p>As Infamy grows, so does the ego of your Grunts.</p>
+<ul>
+<li><strong>The Idea:</strong> High Infamy is great, but Grunts who think they are part of a “legendary” gang expect to be treated like it (more food, more loot).</li>
+<li><strong>Mechanic:</strong> If the Boss fails too many Orders or hoarding goes poorly, the Grunts might demand a new Boss. This creates a funny tension where the Boss has to constantly impress their own followers to avoid a hostile (and violent) workplace transition!</li>
+</ul>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

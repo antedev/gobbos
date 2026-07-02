@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stats — PROD Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. The official rulebook">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab env-tab--active">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">PROD Rules</h2>
+        <p class="sidebar-subtitle">The official rulebook</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="prod.html" class="nav-link" data-target="rules--dice">Dice</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="true" data-target="characters-and-mobs"><span class="toggle-icon">▾</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" ><li><a href="prod--characters-and-mobs--stats.html" class="nav-link nav-link--active" data-target="characters-and-mobs--stats">Stats</a></li></ul></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="stats" tabindex="-1">Stats</h1>
+<p>Your Boss has four <strong>Main Stats</strong>, a set of derived <strong>Secondary Stats</strong> tied to them, and <strong>Grunt</strong>, which represents your authority and command energy. Your <strong>Main Stats</strong>, as well as your maximum <strong>Grunt</strong>, range from <strong>Level 1</strong> to <strong>Level 5</strong>. Level 1 is the starting value. Increasing a stat not only adds more dice to your <strong>Dice Pool</strong> for related tests, but it also provides mechanical upgrades to your Boss’s capabilities.</p>
+<hr>
+<h2 id="tough-t" tabindex="-1">Tough (T)</h2>
+<p>Used for violence, resilience, intimidation, and lifting stuff. <strong>Tough</strong> is simply how strong in body the Boss is, and the most important stat for direct combat. Most attacks will use <strong>Tough</strong> as the basis for your <strong>Dice Pool</strong>.</p>
+<p><strong>Tough</strong> has two secondary stats: <strong>Grit</strong> (your health) and <strong>Carry</strong> (how much equipment and loot you can carry).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Level</th>
+<th style="text-align:center">Grit</th>
+<th style="text-align:center">Carry</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Level 1</strong></td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">6</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Level 2</strong></td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">8</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Level 3</strong></td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">10</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Level 4</strong></td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">12</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Level 5</strong></td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">14</td>
+</tr>
+</tbody>
+</table>
+<h3 id="grit" tabindex="-1">Grit</h3>
+<p><strong>Grit</strong> is your health, which defines how many hits the Boss can take before he dies. When your <strong>Grit</strong> is 0, you are dying and probably dead very soon. A higher <strong>Tough</strong> score is vital to survive the <strong>Raids</strong>, while a low <strong>Tough</strong> makes you rely on your Gobbos or stealth to survive.</p>
+<h3 id="carry" tabindex="-1">Carry</h3>
+<p><strong>Carry</strong> defines how many units of <strong>Bulk</strong> you can carry. Both equipment and loot have a <strong>Bulk</strong> rating, and with a higher <strong>Tough</strong>, you can both go well armed to the <strong>Raid</strong> as well as carry a lot of loot back. While a low <strong>Carry</strong> means hard priorities.</p>
+<hr>
+<h2 id="slink-s" tabindex="-1">Slink (S)</h2>
+<p>Used for sneaking, dodging, and all manners of dirty tricks. <strong>Slink</strong> is how agile, dexterous, and quick on your feet you are. A higher <strong>Slink</strong> allows for greater movement on the battle map, and a higher chance to dodge any incoming attack.</p>
+<p><strong>Slink</strong> has two secondary stats: <strong>Movement</strong> (how far you can move per action) and <strong>Passive Defence</strong> (which allows you to dodge attacks without spending actions, much like armor, but without the bulk).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Level</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Passive Defence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Level 1</strong></td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Level 2</strong></td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Level 3</strong></td>
+<td style="text-align:center">3</td>
+<td style="text-align:center"><strong>1d</strong></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Level 4</strong></td>
+<td style="text-align:center">4</td>
+<td style="text-align:center"><strong>1d</strong></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Level 5</strong></td>
+<td style="text-align:center">5</td>
+<td style="text-align:center"><strong>2d</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="movement" tabindex="-1">Movement</h3>
+<p>Your movement stat determines how many zones you can move per <strong>Move</strong> action. Higher stats allow for greater mobility on the battle map. A higher <strong>Slink</strong> makes you move faster over the battlefield, while a low score means you have to plan ahead a bit more.</p>
+<h3 id="passive-defence" tabindex="-1">Passive Defence</h3>
+<p><strong>Passive Defence</strong> gives you passive protection against enemy attacks, which essentially means that you have that many extra dice to roll when you are making a save against an attack, even if you don’t even spend an action to dodge!</p>
+<hr>
+<h2 id="mouth-m" tabindex="-1">Mouth (M)</h2>
+<p>Used for shouting orders, bullying, lying, and just talking a lot and loud. It is how good you are at shouting orders, and a high <strong>Mouth</strong> score allows you both to control more <strong>Mobs</strong> as well as getting more out of your <strong>Mobs</strong> for free. A low <strong>Mouth</strong> score will make you rely more on your own skills, and less on your <strong>Mobs</strong>.</p>
+<p><strong>Mouth</strong> has two secondary stats: <strong>Max Mobs</strong> (how many different mobs you can have under your control) and <strong>Free Orders</strong> (which allows you to do things with your mobs without spending standard actions).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Level</th>
+<th style="text-align:center">Max Mobs</th>
+<th style="text-align:center">Free Orders per Round</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Level 1</strong></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Level 2</strong></td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Level 3</strong></td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Level 4</strong></td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Level 5</strong></td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="max-mobs" tabindex="-1">Max Mobs</h3>
+<p>This is the maximum number of different <strong>Mobs</strong> you can have under your control. If your <strong>Grunt</strong> is low, you might just kick around a few gobbs. But if you are seen as fanciest, meanest, smartest, sneakiest, bulkiest (Gobbos can admire many different aspects, as long as is much of it), you can soon command a legion of greenies.</p>
+<h3 id="free-orders-per-round" tabindex="-1">Free Orders per Round</h3>
+<p>A high <strong>Mouth</strong> score makes giving orders such a natural thing you can do it while you are doing other things. This means you can use a standard action for something else and still give an order to a mob, as long as you do not exceed your <strong>Free Orders per Round</strong>.</p>
+<hr>
+<h2 id="brains-b" tabindex="-1">Brains (B)</h2>
+<p><strong>Brains</strong> is used for understanding and noticing things, crafting, and magic. <strong>Brains</strong> is simply how good you are at understanding the complexity of Gobbo magic and Gobbo crafting, but it is also used for awareness and understanding of the world. A high <strong>Brains</strong> score allows you to use magic in <strong>Raids</strong>, but also better arm yourselves or your gang between <strong>Raids</strong>. While a low score instead makes you trust your or your <strong>Mobs’</strong> physical abilities instead.</p>
+<p><strong>Brains</strong> has two secondary stats: <strong>Power Words</strong> (your capacity to hold volatile magical formulas/spell tags in your head) and <strong>Crafting Capacity</strong> (which controls how many oddities you can attach to any single item).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Level</th>
+<th style="text-align:center">Power Words</th>
+<th style="text-align:center">Crafting Capacity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Level 1</strong></td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Level 2</strong></td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Level 3</strong></td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Level 4</strong></td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Level 5</strong></td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="power-words" tabindex="-1">Power Words</h3>
+<p>Gobbo magic is short, loud, and volatile. It is more words and complex spells, but a Gobbo brain is still not that big, and can only hold so much. With a higher score you can start using <strong>Power Words</strong> to your advantage, remembering even more as your <strong>Brains</strong> score increases. It is only when you reach the base level of 3 that you can even attempt to use them.</p>
+<h3 id="crafting-capacity" tabindex="-1">Crafting Capacity</h3>
+<p>Crafting is an excellent way to get more out of your loot, and to create weapons, contraptions, and potions. Equipment is one of the most important tools to add more dice to your <strong>Dice Pool</strong>. A low score means you can craft more simple things, while a high score allows you to craft more complex and powerful items.</p>
+<hr>
+<h2 id="grunt" tabindex="-1">Grunt</h2>
+<p>Your authority and energy. Gobbos respect a Boss that is strong, sneaky, loud, or seems smart. They can respect many qualities as long as it is a lot of it. <strong>Grunt</strong> is equal to your second highest Main Stat. So if you have <strong>Tough</strong> 2, <strong>Slink</strong> 4, <strong>Mouth</strong> 2, <strong>Brains</strong> 2, your <strong>Grunt</strong> is 2. If you have <strong>Tough</strong> 2, <strong>Slink</strong> 4, <strong>Mouth</strong> 5, <strong>Brains</strong> 2, your <strong>Grunt</strong> is 4.</p>
+<p>Your <strong>Grunt</strong> determines the maximum <strong>Size</strong> of a <strong>Mob</strong> you can command (e.g., <strong>Grunt</strong> 3 means you can command a maximum <strong>Size</strong> 3 <strong>Mob</strong>). <strong>Grunt</strong> also limits how many <strong>Bangaranga Dice</strong> you can use.</p>
+<p>Unlike the other <strong>Main Stats</strong>, <strong>Grunt</strong> has a maximum value as well as a current value, as you can both lose and gain <strong>Grunt</strong> during a <strong>Raid</strong>.</p>
+<h3 id="losing-and-gaining-grunt" tabindex="-1">Losing and Gaining Grunt</h3>
+<p>If you <strong>Fumbled</strong> when performing a test, or simply fail when using <strong>Bangaranga Dice</strong>, you lose one <strong>Grunt</strong>. However, if you score a <strong>Critical</strong> result on the test, you gain one <strong>Grunt</strong>.</p>
+<h3 id="rebellion" tabindex="-1">Rebellion</h3>
+<p>If you are trying to control a <strong>Mob</strong> that is now bigger than your <strong>Grunt</strong> allows, you must pass a <strong>Mouth</strong> or <strong>Tough</strong> test (your choice) against the <strong>Mob’s</strong> <strong>Size</strong> as the <strong>Target Number (TN)</strong>. If you fail, they realize you are weak and will rebel, becoming <strong>Uncontrolled</strong>!</p>
+<h3 id="defeating-enemies" tabindex="-1">Defeating Enemies</h3>
+<p>You can gain <strong>Grunt</strong>. The most common way is to defeat an enemy yourself. Each defeated enemy when in the same or adjacent zone automatically gains you one <strong>Grunt</strong>, up to your maximum.</p>
+<h3 id="asserting-dominance" tabindex="-1">Asserting Dominance</h3>
+<p>But in a dire situation you can also simply kill some of your own goblins to reassert dominance. Make an undefended attack against a <strong>Mob</strong> under your control that you can attack. If you do damage, increase your <strong>Grunt</strong> by 1. If you however fail to deal out any damage, you are indeed weak and lose another <strong>Grunt</strong>!</p>
+<h3 id="showing-off" tabindex="-1">Showing Off</h3>
+<p>If you roll a <a href="../00_Rules/01_Dice.md#criticals">Critical Success</a> on a test, your Gobbos are impressed and you gain <strong>1 Grunt</strong> (up to your maximum) and a bonus action as detailed in the dice rules.</p>
+<hr>
+<h2 id="abilities" tabindex="-1">Abilities</h2>
+<h3 id="quirks" tabindex="-1">Quirks</h3>
+<p><strong>Quirks</strong> are what make your Gobbo unique from any other Gobbos, giving you an edge in specific circumstances. Typically you can gain <strong>Quirks</strong> as you play, but you also get some <strong>Quirks</strong> when you start, depending on the level you start at.</p>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

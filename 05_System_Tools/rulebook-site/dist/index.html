@@ -39,24 +39,46 @@
       </p>
     </div>
 
+    <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px; max-width: 800px; width: 100%; text-align: left;">
+      ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules and lore below may be outdated.
+    </div>
+
     <div class="env-cards">
       <a href="dev.html" class="env-card card--active">
       <span class="env-card-icon">💡</span>
-      <h2>DEV Brainstorms</h2>
+      <h2>DEV Rules</h2>
       <p>Raw ideas and brainstorms</p>
       <span class="env-card-status">Has content</span>
     </a>
 <a href="stage.html" class="env-card card--active">
       <span class="env-card-icon">🧪</span>
-      <h2>STAGE Drafts</h2>
+      <h2>STAGE Rules</h2>
       <p>Playtesting &amp; review materials</p>
       <span class="env-card-status">Has content</span>
     </a>
-<a href="prod.html" class="env-card card--empty">
+<a href="prod.html" class="env-card card--active">
       <span class="env-card-icon">📖</span>
-      <h2>PROD Core Rules</h2>
+      <h2>PROD Rules</h2>
       <p>The official rulebook</p>
-      <span class="env-card-status">Empty</span>
+      <span class="env-card-status">Has content</span>
+    </a>
+<a href="dev-lore.html" class="env-card card--active">
+      <span class="env-card-icon">🔮</span>
+      <h2>DEV Lore</h2>
+      <p>Volatile lore brainstorms</p>
+      <span class="env-card-status">Has content</span>
+    </a>
+<a href="stage-lore.html" class="env-card card--active">
+      <span class="env-card-icon">📜</span>
+      <h2>STAGE Lore</h2>
+      <p>Synthesized lore drafts</p>
+      <span class="env-card-status">Has content</span>
+    </a>
+<a href="prod-lore.html" class="env-card card--active">
+      <span class="env-card-icon">🏛️</span>
+      <h2>PROD Lore</h2>
+      <p>Locked canon</p>
+      <span class="env-card-status">Has content</span>
     </a>
     </div>
 
@@ -78,6 +100,22 @@
         html.setAttribute('data-theme', next);
         localStorage.setItem('gobbos-theme', next);
       });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
     })();
   </script>
 

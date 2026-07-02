@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Researcher_Notes — DEV Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Raw ideas and brainstorms">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab env-tab--active">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">DEV Rules</h2>
+        <p class="sidebar-subtitle">Raw ideas and brainstorms</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="gdrs"><span class="toggle-icon">▸</span>GDRs</button><ul class="nav-pages" id="nav-gdrs" style="display: none;"><li><a href="dev.html" class="nav-link" data-target="gdrs--gdr-001-macro-audit-and-unified-effects">GDR-001_Macro_Audit_And_Unified_Effects</a></li><li><a href="dev--gdrs--gdr-002-gang-pillar-and-lair-economy.html" class="nav-link" data-target="gdrs--gdr-002-gang-pillar-and-lair-economy">GDR-002_Gang_Pillar_And_Lair_Economy</a></li><li><a href="dev--gdrs--gdr-003-unified-modular-powers-system.html" class="nav-link" data-target="gdrs--gdr-003-unified-modular-powers-system">GDR-003_Unified_Modular_Powers_System</a></li><li><a href="dev--gdrs--gdr-004-enemy-stat-framework-and-mobs.html" class="nav-link" data-target="gdrs--gdr-004-enemy-stat-framework-and-mobs">GDR-004_Enemy_Stat_Framework_And_Mobs</a></li><li><a href="dev--gdrs--gdr-005-goblin-magic-dice-system.html" class="nav-link" data-target="gdrs--gdr-005-goblin-magic-dice-system">GDR-005_Goblin_Magic_Dice_System</a></li><li><a href="dev--gdrs--gdr-006-environmental-hazards-and-zone-statblocks.html" class="nav-link" data-target="gdrs--gdr-006-environmental-hazards-and-zone-statblocks">GDR-006_Environmental_Hazards_and_Zone_Statblocks</a></li><li><a href="dev--gdrs--gdr-template.html" class="nav-link" data-target="gdrs--gdr-template">GDR-TEMPLATE</a></li></ul></div><div class="nav-group nav-group--solo"><a href="dev--crafting-creative-analysis.html" class="nav-link nav-link--solo" data-target="crafting-creative-analysis">crafting_creative_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-framework-brainstorm">crafting_framework_brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-mechanics-audit.html" class="nav-link nav-link--solo" data-target="crafting-mechanics-audit">crafting_mechanics_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-brainstorm">crafting-brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--creative-genius-crafting-analysis.html" class="nav-link nav-link--solo" data-target="creative-genius-crafting-analysis">creative_genius_crafting_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-modular-threat-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="enemy-modular-threat-framework-brainstorm">Enemy_Modular_Threat_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-stats-draft.html" class="nav-link nav-link--solo" data-target="enemy-stats-draft">Enemy_Stats_Draft</a></div><div class="nav-group nav-group--solo"><a href="dev--equipment-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="equipment-framework-brainstorm">Equipment_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--gang-mechanics-brainstorm.html" class="nav-link nav-link--solo" data-target="gang-mechanics-brainstorm">Gang_Mechanics_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--generic-trick-mechanics.html" class="nav-link nav-link--solo" data-target="generic-trick-mechanics">Generic_Trick_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--initial-trick-list.html" class="nav-link nav-link--solo" data-target="initial-trick-list">Initial_Trick_List</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-brainstorm.html" class="nav-link nav-link--solo" data-target="lair-brainstorm">Lair_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-mechanics-game-engineering-audit.html" class="nav-link nav-link--solo" data-target="lair-mechanics-game-engineering-audit">Lair_Mechanics_Game_Engineering_Audit</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-refined-framework.html" class="nav-link nav-link--solo" data-target="lair-system-refined-framework">Lair_System_Refined_Framework</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-research-deep-dive.html" class="nav-link nav-link--solo" data-target="lair-system-research-deep-dive">Lair_System_Research_Deep_Dive</a></div><div class="nav-group nav-group--solo"><a href="dev--mob-combat-design-advice.html" class="nav-link nav-link--solo" data-target="mob-combat-design-advice">Mob_Combat_Design_Advice</a></div><div class="nav-group nav-group--solo"><a href="dev--research-crafting-systems.html" class="nav-link nav-link--solo" data-target="research-crafting-systems">research_crafting_systems</a></div><div class="nav-group nav-group--solo"><a href="dev--research-deeds-award-mechanics.html" class="nav-link nav-link--solo" data-target="research-deeds-award-mechanics">Research_Deeds_Award_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-base-building.html" class="nav-link nav-link--solo" data-target="researcher-findings-base-building">Researcher_Findings_Base_Building</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-conditions.html" class="nav-link nav-link--solo" data-target="researcher-findings-conditions">Researcher_Findings_Conditions</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-environmental-hazards.html" class="nav-link nav-link--solo" data-target="researcher-findings-environmental-hazards">Researcher_Findings_Environmental_Hazards</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-analysis.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-analysis">Researcher_Findings_OSR_Analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-sources.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-sources">Researcher_Findings_OSR_Sources</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-notes.html" class="nav-link nav-link--solo nav-link--active" data-target="researcher-notes">Researcher_Notes</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-audit-equipment.html" class="nav-link nav-link--solo" data-target="rules-lawyer-audit-equipment">Rules_Lawyer_Audit_Equipment</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-crafting-audit.html" class="nav-link nav-link--solo" data-target="rules-lawyer-crafting-audit">rules_lawyer_crafting_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-system-audit-report.html" class="nav-link nav-link--solo" data-target="rules-lawyer-system-audit-report">Rules_Lawyer_System_Audit_Report</a></div><div class="nav-group nav-group--solo"><a href="dev--static-resistances-opposed-tests.html" class="nav-link nav-link--solo" data-target="static-resistances-opposed-tests">Static_Resistances_Opposed_Tests</a></div><div class="nav-group nav-group--solo"><a href="dev--trick-mechanics-master-list.html" class="nav-link nav-link--solo" data-target="trick-mechanics-master-list">Trick_Mechanics_Master_List</a></div><div class="nav-group nav-group--solo"><a href="dev--unified-modular-power-system.html" class="nav-link nav-link--solo" data-target="unified-modular-power-system">Unified Modular Power System</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="inspiration-notes-updated-for-osr-focus" tabindex="-1">Inspiration Notes (Updated for OSR focus)</h1>
+<p>As requested, I have pivoted from modern narrative games like 5e and looked into Old-School Renaissance (OSR) and B/X D&amp;D-style reference materials. These systems focus on fast, deadly combat, rulings over rules, and resource management. Here is what is relevant for Gobbos:</p>
+<h2 id="1-basic-fantasy-rpg-old-school-essentials-ose" tabindex="-1">1. Basic Fantasy RPG / Old-School Essentials (OSE)</h2>
+<p><strong>Why it’s interesting:</strong></p>
+<ul>
+<li><strong>OSR Simplicity:</strong> These systems strip back the rules to create fast, dangerous combat. Their mechanics are an excellent template for Gobbos.</li>
+<li><strong>Retainer/Grunt Mechanics:</strong> OSR features standard rules for hiring retainers (“Grunts”), tracking their morale, and detailing how they follow orders. Morale checks specifically (usually rolling 2d6 under a morale score) dictate if units break or flee when hit, which is perfect for “Orders” in Gobbos.</li>
+<li><strong>Lethality:</strong> Goblins are famously fragile, and OSR games excel at presenting extremely dangerous environments where low-level characters die easily if they don’t use tactics or gang up on enemies.</li>
+</ul>
+<h2 id="2-osr-mob-combat-design-advice" tabindex="-1">2. OSR Mob Combat Design Advice</h2>
+<p><strong>Why it’s interesting:</strong></p>
+<ul>
+<li>A compiled summary of OSR community best practices for mass combat (such as the old BECMI “War Machine” or fan-made One-Roll systems).</li>
+<li>Highlights include treating a mob as a single hit die entity, simplifying attack rolls (e.g., auto-hits based on numbers), and heavily relying on Reaction and Morale rolls instead of just hit-point attrition.</li>
+<li>These principles should directly inspire the “Mob Flavors” and how Mobs take damage and flee in Gobbos!</li>
+</ul>
+<h2 id="alternate-systems-honorable-mentions" tabindex="-1">Alternate Systems (Honorable Mentions)</h2>
+<ul>
+<li><strong>Wicked Ones (Free Edition):</strong> A Forged in the Dark game where you <em>play as the monsters</em> building a dungeon. Great inspiration for monster-centric play.</li>
+<li><strong>Goblin Quest:</strong> A slapstick RPG specifically about Goblins trying to accomplish fatal tasks. Good for looking at “Order Fumbles” and hilarious consequence tables.</li>
+<li><strong>Mausritter:</strong> Contains excellent “Warband” rules where squads of mice fight as single units using very streamlined OSR rules.</li>
+</ul>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

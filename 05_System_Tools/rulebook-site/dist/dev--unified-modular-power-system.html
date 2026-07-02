@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unified Modular Power System — DEV Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Raw ideas and brainstorms">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab env-tab--active">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">DEV Rules</h2>
+        <p class="sidebar-subtitle">Raw ideas and brainstorms</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="gdrs"><span class="toggle-icon">▸</span>GDRs</button><ul class="nav-pages" id="nav-gdrs" style="display: none;"><li><a href="dev.html" class="nav-link" data-target="gdrs--gdr-001-macro-audit-and-unified-effects">GDR-001_Macro_Audit_And_Unified_Effects</a></li><li><a href="dev--gdrs--gdr-002-gang-pillar-and-lair-economy.html" class="nav-link" data-target="gdrs--gdr-002-gang-pillar-and-lair-economy">GDR-002_Gang_Pillar_And_Lair_Economy</a></li><li><a href="dev--gdrs--gdr-003-unified-modular-powers-system.html" class="nav-link" data-target="gdrs--gdr-003-unified-modular-powers-system">GDR-003_Unified_Modular_Powers_System</a></li><li><a href="dev--gdrs--gdr-004-enemy-stat-framework-and-mobs.html" class="nav-link" data-target="gdrs--gdr-004-enemy-stat-framework-and-mobs">GDR-004_Enemy_Stat_Framework_And_Mobs</a></li><li><a href="dev--gdrs--gdr-005-goblin-magic-dice-system.html" class="nav-link" data-target="gdrs--gdr-005-goblin-magic-dice-system">GDR-005_Goblin_Magic_Dice_System</a></li><li><a href="dev--gdrs--gdr-006-environmental-hazards-and-zone-statblocks.html" class="nav-link" data-target="gdrs--gdr-006-environmental-hazards-and-zone-statblocks">GDR-006_Environmental_Hazards_and_Zone_Statblocks</a></li><li><a href="dev--gdrs--gdr-template.html" class="nav-link" data-target="gdrs--gdr-template">GDR-TEMPLATE</a></li></ul></div><div class="nav-group nav-group--solo"><a href="dev--crafting-creative-analysis.html" class="nav-link nav-link--solo" data-target="crafting-creative-analysis">crafting_creative_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-framework-brainstorm">crafting_framework_brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-mechanics-audit.html" class="nav-link nav-link--solo" data-target="crafting-mechanics-audit">crafting_mechanics_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-brainstorm">crafting-brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--creative-genius-crafting-analysis.html" class="nav-link nav-link--solo" data-target="creative-genius-crafting-analysis">creative_genius_crafting_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-modular-threat-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="enemy-modular-threat-framework-brainstorm">Enemy_Modular_Threat_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-stats-draft.html" class="nav-link nav-link--solo" data-target="enemy-stats-draft">Enemy_Stats_Draft</a></div><div class="nav-group nav-group--solo"><a href="dev--equipment-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="equipment-framework-brainstorm">Equipment_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--gang-mechanics-brainstorm.html" class="nav-link nav-link--solo" data-target="gang-mechanics-brainstorm">Gang_Mechanics_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--generic-trick-mechanics.html" class="nav-link nav-link--solo" data-target="generic-trick-mechanics">Generic_Trick_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--initial-trick-list.html" class="nav-link nav-link--solo" data-target="initial-trick-list">Initial_Trick_List</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-brainstorm.html" class="nav-link nav-link--solo" data-target="lair-brainstorm">Lair_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-mechanics-game-engineering-audit.html" class="nav-link nav-link--solo" data-target="lair-mechanics-game-engineering-audit">Lair_Mechanics_Game_Engineering_Audit</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-refined-framework.html" class="nav-link nav-link--solo" data-target="lair-system-refined-framework">Lair_System_Refined_Framework</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-research-deep-dive.html" class="nav-link nav-link--solo" data-target="lair-system-research-deep-dive">Lair_System_Research_Deep_Dive</a></div><div class="nav-group nav-group--solo"><a href="dev--mob-combat-design-advice.html" class="nav-link nav-link--solo" data-target="mob-combat-design-advice">Mob_Combat_Design_Advice</a></div><div class="nav-group nav-group--solo"><a href="dev--research-crafting-systems.html" class="nav-link nav-link--solo" data-target="research-crafting-systems">research_crafting_systems</a></div><div class="nav-group nav-group--solo"><a href="dev--research-deeds-award-mechanics.html" class="nav-link nav-link--solo" data-target="research-deeds-award-mechanics">Research_Deeds_Award_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-base-building.html" class="nav-link nav-link--solo" data-target="researcher-findings-base-building">Researcher_Findings_Base_Building</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-conditions.html" class="nav-link nav-link--solo" data-target="researcher-findings-conditions">Researcher_Findings_Conditions</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-environmental-hazards.html" class="nav-link nav-link--solo" data-target="researcher-findings-environmental-hazards">Researcher_Findings_Environmental_Hazards</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-analysis.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-analysis">Researcher_Findings_OSR_Analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-sources.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-sources">Researcher_Findings_OSR_Sources</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-notes.html" class="nav-link nav-link--solo" data-target="researcher-notes">Researcher_Notes</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-audit-equipment.html" class="nav-link nav-link--solo" data-target="rules-lawyer-audit-equipment">Rules_Lawyer_Audit_Equipment</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-crafting-audit.html" class="nav-link nav-link--solo" data-target="rules-lawyer-crafting-audit">rules_lawyer_crafting_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-system-audit-report.html" class="nav-link nav-link--solo" data-target="rules-lawyer-system-audit-report">Rules_Lawyer_System_Audit_Report</a></div><div class="nav-group nav-group--solo"><a href="dev--static-resistances-opposed-tests.html" class="nav-link nav-link--solo" data-target="static-resistances-opposed-tests">Static_Resistances_Opposed_Tests</a></div><div class="nav-group nav-group--solo"><a href="dev--trick-mechanics-master-list.html" class="nav-link nav-link--solo" data-target="trick-mechanics-master-list">Trick_Mechanics_Master_List</a></div><div class="nav-group nav-group--solo"><a href="dev--unified-modular-power-system.html" class="nav-link nav-link--solo nav-link--active" data-target="unified-modular-power-system">Unified Modular Power System</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="gobbos-ttrpg-unified-modular-powers-system-ruleset" tabindex="-1">Gobbos TTRPG: Unified Modular Powers System Ruleset</h1>
+<p>This document establishes the official architectural framework for the <strong>Unified Modular Powers System</strong>[cite: 1]. This engine governs all personal quirks[cite: 1], gang shenanigans[cite: 1], custom equipment abilities[cite: 1], and volatile power words[cite: 1].</p>
+<p>By breaking abilities down into dry, distinct system components (“Lego bricks”), any player or GM can construct custom content that automatically hooks directly into the core rules without breaking game balance[cite: 1].</p>
+<hr>
+<h2 id="the-compilation-syntax-template" tabindex="-1">The Compilation Syntax Template</h2>
+<p>Every ability generated within this system must be parsed and written to match this exact structural blueprint[cite: 1]:</p>
+<p><strong>[Activation Cost] + [Constraint] ➔ [Modification] applied to [Target Mechanic] delivered via [Delivery Dynamics] lasting for [Lifespan]</strong></p>
+<hr>
+<h2 id="the-6-core-categories-explained" tabindex="-1">The 6 Core Categories Explained</h2>
+<h3 id="category-1-the-modification" tabindex="-1">Category 1: The Modification</h3>
+<ul>
+<li><strong>The System Role:</strong> The Mechanical Payload[cite: 1].</li>
+<li><strong>The Explanation:</strong> The Modification is the raw mathematical payload or rule-breaking variable forced into the game engine[cite: 1]. It has no identity of its own; it doesn’t know who is using it, where it is going, or what action it belongs to[cite: 1]. It is simply a packet of probability data waiting to alter a number, bypass a rule, or inflict a state change[cite: 1].</li>
+<li><strong>The Question it Answers:</strong> <em>“What physical or mathematical change is happening to the baseline rule structure?”</em>[cite: 1]</li>
+<li><strong>Why it is Detached:</strong> Separating the modification from the mechanic it alters allows you to use the exact same mathematical brick (such as a +1d Boon) across completely unrelated parts of the game (such as a melee swing, a wilderness navigation test, or a downtime recruitment roll) without needing to rewrite separate rules for each[cite: 1, 2].</li>
+</ul>
+<h3 id="category-2-the-target-mechanic" tabindex="-1">Category 2: The Target Mechanic</h3>
+<ul>
+<li><strong>The System Role:</strong> The Destination Wire[cite: 1, 2].</li>
+<li><strong>The Explanation:</strong> The Target Mechanic is the exact destination socket within your rules layout[cite: 1, 2]. Because your game runs on several independent sub-engines (real-time combat rounds[cite: 1], travel roles[cite: 1], downtime lair labor[cite: 1], and automated background mob ticks[cite: 1]), this brick specifies exactly which native rule, roll, pool, or capacity is being hijacked by the Modification[cite: 1, 2].</li>
+<li><strong>The Question it Answers:</strong> <em>“Which specific row, column, action, or tracker on the character sheet or lair sheet is receiving this payload?”</em>[cite: 1, 2]</li>
+<li><strong>Why it is Detached:</strong> This acts as your system anchor[cite: 1]. Instead of writing hard-coded individual abilities for “Melee Attacking” versus “Ranged Attacking,” you write a single standalone modification (like <em>Double Explosion</em>) and snap it into whichever target socket you want to augment[cite: 1, 2].</li>
+</ul>
+<h3 id="category-3-the-constraint-trigger" tabindex="-1">Category 3: The Constraint / Trigger</h3>
+<ul>
+<li><strong>The System Role:</strong> The Conditional Gatekeeper[cite: 1].</li>
+<li><strong>The Explanation:</strong> The Constraint or Trigger is a conditional security guard standing at the door of the ability[cite: 1]. It represents a system check that evaluates to a simple <strong>TRUE</strong> or <strong>FALSE</strong> based on the real-time context of the zones, character sheets, or dice outcomes[cite: 1]. If the context matches the checklist (TRUE), the power activates; if it does not (FALSE), the power remains completely dormant[cite: 1].</li>
+<li><strong>The Question it Answers:</strong> <em>“Under what exact environmental/tactical conditions, or immediately following what numerical roll result, is this power allowed to trigger?”</em>[cite: 1]</li>
+<li><strong>Why it is Detached:</strong> This is your primary narrative injector and engine balancer[cite: 1]. It forces roleplay flavor directly into the math by preventing powerful modifications from being active 100% of the time[cite: 1]. Niche, restrictive constraints (like “only while completely naked” or “only when standing in a Burning zone”) naturally lower the point cost of an ability[cite: 1].</li>
+</ul>
+<h3 id="category-4-the-delivery-dynamics" tabindex="-1">Category 4: The Delivery Dynamics</h3>
+<ul>
+<li><strong>The System Role:</strong> The Spatial Mapping Filter[cite: 1].</li>
+<li><strong>The Explanation:</strong> Delivery Dynamics control how an ability projects across your abstract battlegrounds[cite: 1]. It tracks two specific spatial vectors: <strong>Range</strong> (the linear distance from the origin point the effect can cross) and <strong>Target Filtering/Area of Effect</strong> (the volumetric footprint of the drop-zone, and who inside that footprint actually suffers the effect versus who is ignored)[cite: 1].</li>
+<li><strong>The Question it Answers:</strong> <em>“Where does this effect go, how many zone boundaries can it cross, and does it filter out friends from enemies?”</em>[cite: 1]</li>
+<li><strong>Why it is Detached:</strong> Your game relies heavily on gridless zone-based tactical skirmishing and massive squad management[cite: 1]. Detaching delivery dynamics prevents high-tier damage modifications from automatically becoming wide-area nuclear blasts, forcing low-IQ goblins to invest heavily in multiple components if they want to build bombs[cite: 1].</li>
+</ul>
+<h3 id="category-5-the-activation-cost" tabindex="-1">Category 5: The Activation Cost</h3>
+<ul>
+<li><strong>The System Role:</strong> The Immediate Transaction Toll[cite: 1, 2].</li>
+<li><strong>The Explanation:</strong> Activation Cost is the immediate economic transaction or resource drain a player must make to flip an ability from “off” to “on”[cite: 1, 2]. It requires a player to pay upfront using the game’s various distinct currencies: time currency (actions or reactions from the round economy)[cite: 1], pool currency (spending active Grunt or taking Grit damage)[cite: 1, 2], inventory currency (consuming held scrap)[cite: 1], or structural currency (overclocking a weapon to total vaporization)[cite: 1].</li>
+<li><strong>The Question it Answers:</strong> <em>“What must the character sheet immediately spend, lose, or permanently sacrifice to buy this modification?”</em>[cite: 1, 2]</li>
+<li><strong>Why it is Detached:</strong> It forces intense tactical choice[cite: 1]. Because your Grunt pool directly sets your maximum commanded Mob size, spending Grunt to activate an ability means a player is deliberately choosing to lose grip over their troops to save their own skin[cite: 1, 2]. Separating costs from lifespans lets you build cheap quick-draw traits or massive, sacrificial powers cleanly[cite: 1].</li>
+</ul>
+<h3 id="category-6-the-lifespan-duration" tabindex="-1">Category 6: The Lifespan / Duration</h3>
+<ul>
+<li><strong>The System Role:</strong> The Temporal Tracking Window[cite: 1].</li>
+<li><strong>The Explanation:</strong> The Lifespan or Duration block dictates the exact expiration timeline and structural phase checkpoints that govern an active modification[cite: 1]. It defines how long an altered rule state forces itself onto the system trackers, scaling cleanly from single-roll flashes up to permanent, multi-generational global lair modifications[cite: 1, 2].</li>
+<li><strong>The Question it Answers:</strong> <em>“How long must the players and GM manually track this altered state before it automatically clicks back to the default baseline rules?”</em>[cite: 1]</li>
+<li><strong>Why it is Detached:</strong> It keeps your tabletop free of tracking clutter[cite: 1]. By treating duration as its own clean Lego brick, you cleanly regulate exactly when status conditions fall off, when temporary equipment tags fall apart, and when macro-upgrades apply permanent changes to the campaign[cite: 1].</li>
+</ul>
+<hr>
+<h2 id="the-balancing-engine-framework" tabindex="-1">The Balancing Engine Framework</h2>
+<p>To evaluate, balance, and distribute these compiled blocks into character progression loops or downtime crafting, use this uniform point tracking ledger[cite: 1]. Total power tier calculation is deterministic[cite: 1].</p>
+<h3 id="1-value-adders-increase-points" tabindex="-1">1. Value Adders (Increase Points)</h3>
+<ul>
+<li><strong>Modifications:</strong>
+<ul>
+<li>Minor (+1 point) -&gt; Basic +1d Boon, -1d Bane, or minor single-point tracker tweaks[cite: 1].</li>
+<li>Standard (+2 points) -&gt; Shifting a Difficulty Step (Normal to Easy)[cite: 1, 2], or standard conditions (Prone, Weakened)[cite: 1].</li>
+<li>Severe (+4 points) -&gt; Altering explosions (Exploding 5s, Double Explosions)[cite: 1, 2] or critical conditions (Stunned, Terrified)[cite: 1].</li>
+<li>Catastrophic (+6 points) -&gt; Bypassing passive armor defenses entirely[cite: 1] or executing single-target instant defeats[cite: 1].</li>
+</ul>
+</li>
+<li><strong>Delivery Dynamics:</strong>
+<ul>
+<li>Isolated (+0 points) -&gt; Personal scale or single isolated target die[cite: 1].</li>
+<li>Squad-Scale (+2 points) -&gt; Targets an entire single Mob squad concurrently[cite: 1].</li>
+<li>Zone-Scale (+4 points) -&gt; Blankets an entire abstract local Zone completely[cite: 1].</li>
+<li>Encounter-Scale (+6 points) -&gt; Affects the entire active micro battleground node map[cite: 1].</li>
+</ul>
+</li>
+<li><strong>Lifespan:</strong>
+<ul>
+<li>Instant (+0 points) -&gt; Resolves and disappears immediately within the current action loop[cite: 1].</li>
+<li>Phase/Turn-Bound (+1 point) -&gt; Clears at a milestone checkpoint (e.g., End of Active Turn)[cite: 1].</li>
+<li>Encounter-Bound (+3 points) -&gt; Lasts across the combat layout until explicitly cleared or combat ends[cite: 1].</li>
+<li>Permanent (+6 points) -&gt; Forever hardcoded onto an identity or lair sheet[cite: 1, 2].</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-value-discounters-decrease-points" tabindex="-1">2. Value Discounters (Decrease Points)</h3>
+<ul>
+<li><strong>Constraints &amp; Triggers:</strong>
+<ul>
+<li>No Constraint (+2 points) -&gt; Functional unconditionally at any point during active gameplay.</li>
+<li>Broad Context (-1 point) -&gt; Common states (“while in darkness”[cite: 1], “using a Melee weapon”[cite: 1, 2]).</li>
+<li>Tight Context (-2 points) -&gt; Specific hazards/scales (“while in a Burning zone”[cite: 1], “target is Strictly Smaller”[cite: 1]).</li>
+<li>Hyper-Specific Trigger (-3 points) -&gt; Low-probability event sequencing (“rolling a Fumble during a pushed spell”)[cite: 1, 2].</li>
+</ul>
+</li>
+<li><strong>Activation Costs:</strong>
+<ul>
+<li>Passive / Free (0 points) -&gt; Drains zero resource tickers and zero actions[cite: 1].</li>
+<li>Standard Action (-1 point) -&gt; Consumes exactly 1 basic combat round action[cite: 1].</li>
+<li>Resource Drain (-2 points) -&gt; Deducts current Grunt[cite: 1, 2], inflicts Grit damage[cite: 1], or trims a point of Mob Size[cite: 1, 2].</li>
+<li>Severe Sacrifice (-4 points) -&gt; Demands total asset vaporization (Overclocking gear chassis destruction)[cite: 1].</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="universal-acquisition-matrix" tabindex="-1">Universal Acquisition Matrix</h2>
+<p>Sum the points from your compiled components to determine the ability’s final Universal Tier[cite: 1]. This tier mandates the precise stat gating, workshop requirements, and character advancement costs[cite: 1, 2]:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Calculated Score</th>
+<th style="text-align:center">Power Level</th>
+<th style="text-align:center">Required Stat Gate[cite: 1, 2]</th>
+<th style="text-align:center">Crafted Gear Quality &amp; Workshop Required[cite: 1]</th>
+<th style="text-align:center">Quirk XP Cost[cite: 1, 2]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>0 to 1</strong></td>
+<td style="text-align:center"><strong>Tier 1 (Junk)</strong></td>
+<td style="text-align:center">Level 1+ Stat</td>
+<td style="text-align:center">T1 Oddity / Open Fire (Junk Quality)</td>
+<td style="text-align:center">1 XP</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>2 to 3</strong></td>
+<td style="text-align:center"><strong>Tier 2 (Scrappy)</strong></td>
+<td style="text-align:center">Level 2+ Stat</td>
+<td style="text-align:center">T2 Oddity / Scrap Forge (Scrappy Quality)</td>
+<td style="text-align:center">2 XP</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>4 to 5</strong></td>
+<td style="text-align:center"><strong>Tier 3 (Standard)</strong></td>
+<td style="text-align:center">Level 3+ Stat</td>
+<td style="text-align:center">T3 Oddity / Proper Smithy (Standard Quality)</td>
+<td style="text-align:center">3 XP</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>6 to 7</strong></td>
+<td style="text-align:center"><strong>Tier 4 (Superior)</strong></td>
+<td style="text-align:center">Level 4+ Stat</td>
+<td style="text-align:center">T4 Oddity / Master Workshop (Superior Quality)</td>
+<td style="text-align:center">4 XP</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>8 or higher</strong></td>
+<td style="text-align:center"><strong>Tier 5 (Legendary)</strong></td>
+<td style="text-align:center">Level 5 Stat</td>
+<td style="text-align:center">T5 Oddity / Legendary Forge (Legendary Quality)</td>
+<td style="text-align:center">5 XP</td>
+</tr>
+</tbody>
+</table>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

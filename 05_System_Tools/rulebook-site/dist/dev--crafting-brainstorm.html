@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>crafting-brainstorm — DEV Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Raw ideas and brainstorms">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab env-tab--active">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">DEV Rules</h2>
+        <p class="sidebar-subtitle">Raw ideas and brainstorms</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="gdrs"><span class="toggle-icon">▸</span>GDRs</button><ul class="nav-pages" id="nav-gdrs" style="display: none;"><li><a href="dev.html" class="nav-link" data-target="gdrs--gdr-001-macro-audit-and-unified-effects">GDR-001_Macro_Audit_And_Unified_Effects</a></li><li><a href="dev--gdrs--gdr-002-gang-pillar-and-lair-economy.html" class="nav-link" data-target="gdrs--gdr-002-gang-pillar-and-lair-economy">GDR-002_Gang_Pillar_And_Lair_Economy</a></li><li><a href="dev--gdrs--gdr-003-unified-modular-powers-system.html" class="nav-link" data-target="gdrs--gdr-003-unified-modular-powers-system">GDR-003_Unified_Modular_Powers_System</a></li><li><a href="dev--gdrs--gdr-004-enemy-stat-framework-and-mobs.html" class="nav-link" data-target="gdrs--gdr-004-enemy-stat-framework-and-mobs">GDR-004_Enemy_Stat_Framework_And_Mobs</a></li><li><a href="dev--gdrs--gdr-005-goblin-magic-dice-system.html" class="nav-link" data-target="gdrs--gdr-005-goblin-magic-dice-system">GDR-005_Goblin_Magic_Dice_System</a></li><li><a href="dev--gdrs--gdr-006-environmental-hazards-and-zone-statblocks.html" class="nav-link" data-target="gdrs--gdr-006-environmental-hazards-and-zone-statblocks">GDR-006_Environmental_Hazards_and_Zone_Statblocks</a></li><li><a href="dev--gdrs--gdr-template.html" class="nav-link" data-target="gdrs--gdr-template">GDR-TEMPLATE</a></li></ul></div><div class="nav-group nav-group--solo"><a href="dev--crafting-creative-analysis.html" class="nav-link nav-link--solo" data-target="crafting-creative-analysis">crafting_creative_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-framework-brainstorm">crafting_framework_brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-mechanics-audit.html" class="nav-link nav-link--solo" data-target="crafting-mechanics-audit">crafting_mechanics_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-brainstorm.html" class="nav-link nav-link--solo nav-link--active" data-target="crafting-brainstorm">crafting-brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--creative-genius-crafting-analysis.html" class="nav-link nav-link--solo" data-target="creative-genius-crafting-analysis">creative_genius_crafting_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-modular-threat-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="enemy-modular-threat-framework-brainstorm">Enemy_Modular_Threat_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-stats-draft.html" class="nav-link nav-link--solo" data-target="enemy-stats-draft">Enemy_Stats_Draft</a></div><div class="nav-group nav-group--solo"><a href="dev--equipment-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="equipment-framework-brainstorm">Equipment_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--gang-mechanics-brainstorm.html" class="nav-link nav-link--solo" data-target="gang-mechanics-brainstorm">Gang_Mechanics_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--generic-trick-mechanics.html" class="nav-link nav-link--solo" data-target="generic-trick-mechanics">Generic_Trick_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--initial-trick-list.html" class="nav-link nav-link--solo" data-target="initial-trick-list">Initial_Trick_List</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-brainstorm.html" class="nav-link nav-link--solo" data-target="lair-brainstorm">Lair_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-mechanics-game-engineering-audit.html" class="nav-link nav-link--solo" data-target="lair-mechanics-game-engineering-audit">Lair_Mechanics_Game_Engineering_Audit</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-refined-framework.html" class="nav-link nav-link--solo" data-target="lair-system-refined-framework">Lair_System_Refined_Framework</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-research-deep-dive.html" class="nav-link nav-link--solo" data-target="lair-system-research-deep-dive">Lair_System_Research_Deep_Dive</a></div><div class="nav-group nav-group--solo"><a href="dev--mob-combat-design-advice.html" class="nav-link nav-link--solo" data-target="mob-combat-design-advice">Mob_Combat_Design_Advice</a></div><div class="nav-group nav-group--solo"><a href="dev--research-crafting-systems.html" class="nav-link nav-link--solo" data-target="research-crafting-systems">research_crafting_systems</a></div><div class="nav-group nav-group--solo"><a href="dev--research-deeds-award-mechanics.html" class="nav-link nav-link--solo" data-target="research-deeds-award-mechanics">Research_Deeds_Award_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-base-building.html" class="nav-link nav-link--solo" data-target="researcher-findings-base-building">Researcher_Findings_Base_Building</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-conditions.html" class="nav-link nav-link--solo" data-target="researcher-findings-conditions">Researcher_Findings_Conditions</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-environmental-hazards.html" class="nav-link nav-link--solo" data-target="researcher-findings-environmental-hazards">Researcher_Findings_Environmental_Hazards</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-analysis.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-analysis">Researcher_Findings_OSR_Analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-sources.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-sources">Researcher_Findings_OSR_Sources</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-notes.html" class="nav-link nav-link--solo" data-target="researcher-notes">Researcher_Notes</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-audit-equipment.html" class="nav-link nav-link--solo" data-target="rules-lawyer-audit-equipment">Rules_Lawyer_Audit_Equipment</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-crafting-audit.html" class="nav-link nav-link--solo" data-target="rules-lawyer-crafting-audit">rules_lawyer_crafting_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-system-audit-report.html" class="nav-link nav-link--solo" data-target="rules-lawyer-system-audit-report">Rules_Lawyer_System_Audit_Report</a></div><div class="nav-group nav-group--solo"><a href="dev--static-resistances-opposed-tests.html" class="nav-link nav-link--solo" data-target="static-resistances-opposed-tests">Static_Resistances_Opposed_Tests</a></div><div class="nav-group nav-group--solo"><a href="dev--trick-mechanics-master-list.html" class="nav-link nav-link--solo" data-target="trick-mechanics-master-list">Trick_Mechanics_Master_List</a></div><div class="nav-group nav-group--solo"><a href="dev--unified-modular-power-system.html" class="nav-link nav-link--solo" data-target="unified-modular-power-system">Unified Modular Power System</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="prompt-1" tabindex="-1">Prompt 1</h1>
+<p>I mitt spel så används det primärt d6-pools med exploderande 6:or. Så att ha en usage dice eller liknande är en bra, enkel mekanik.</p>
+<p>Jag ser ett antal komponenter i ett craftingsystem som jag skulle vilja simulera:</p>
+<ul>
+<li>Resurser
+Tänker att det finns basresurser och unika resurer. Basresurser kan sätta en nedre gräns för generell kvalitet. OM man jobbar med skräp så får man lägre kvalitet, men om man får tag på en bättre typ av resurs så kan man då istället få en högre baskvalitet. T.ex. normalt sett kan goblins göra saker av lite vad som helst, pinnar och skräp med silvertejp (men finns ju inte silvertejp i en fantasyvärld, men du förstår). Medan om de kanske på något sätt får kontroll över en gruva, eller gör ett avtal med några som levererar plankor så kan de ha tillgång till bättre basresurser, vilket gör att baskvalitet på saker som görs blir bättrer. Här kan man kanske också jobba med generell kvantitet, för att se hur mycket man kan skapa. För ett enskilt föremål är det sällan ett problem, men om man ska göra det till en mindre arme är det relevant hur mycket man har av den resursen.</li>
+</ul>
+<p>Sedan finns det unika resurser som gör att det inte bara blir ett svärd eller en sköld, utan som ger dem mer unika egenskaper. Allt från mindre situationsbaserade förbättringar, till rent magiska egenskaper. De blir värdefulla att hitta och upptäcka.</p>
+<ul>
+<li>Egenskaper</li>
+</ul>
+<p>Ett roligt och enkelt sätt att faktiskt ge olika egenskaper till ett föremål. Det här skulle mekaniskt vara olika “taggar” man kan sätta på ett föremål. Såsom att det är Smidigt, Tungt, Brinnande, Drageon bane, etc etc. Genom att skapa en mängd mindre egenskaper, så kan man sedan skapa en oändlig kombination av egenskaper som ger väldigt unika egenskaper. Egenskaperna i sig kan sedan förbättra någon stat, såsom mer skada eller skydd, eller kanske effektivt mot vissa varelser, eller ge egenskaper så att man kan flyga, bli osynlig eller andra fantastiska (eller bara fåniga) egenskaper.</p>
+<p>Det här skulle också kunna fungera på samma sätt med negativa egenskaper, så att det finns en balans i att det inte bara blir bra. Ibland så kanske de är länkade, så en egenskap som är positiv, ger en automatisk negativ effekt.</p>
+<p>Gissningsvis skulle man kunna ha ett system där ett föremål kan ha ett visst antal “slots” för förbättringar, och vissa bättre kanske konsumerar en slot för nått bra och en slot för nått dåligt. Lite som många tv-spel där man kan sätta ett antal krystaller eller runes på ett vapen för att ge det olika egenskaper.</p>
+<ul>
+<li>Kvalitet</li>
+</ul>
+<p>Vi har redan varit inne på det, men kvalitet är en viktig sak. Saker ska kunna gå sönder, och det baseras då på vilka resurser man använt, egenskaper men kanske triggas av händleser i spelet, såsom att man fumlar eller liknande vid ett tärningsslag</p>
+<ul>
+<li>Själva reglerna för crafting</li>
+</ul>
+<p>Det ska inte vara så mycket att bara slå ett slag så är det k   lart, men det bör inte heller vara en tidskrävande del vid bordet att faktiskt försöka skapa något. Kunskapen hos den som skapar det bör vara relevant, men kanske mer i att en högre “skill level” låser upp fler möjligheter, än att det är massa tärningsslag som gör att man kanske misslyckas med något. Har man resurser, tid och kunskap så bör det oftast lyckas. Men samtidigt vill man ha någon form av “spänning” i det hela, och inte bara en book-keeping övning där man kryssar för på ett papper. Svår balans, men spelet ska ju inte handla eg om crafting. Men föremålen ska ha en stor påverkan på vad spelaren kan göra, så det är viktigt. Det är en stor del av utvecklingen av spelarna att de får bättre vapen, itne bara automatiskt bättre förmågor när de levlar som i D&amp;D. Det finns även det till viss del, men föremål ska spela en större roll också.</p>
+<p>Vi börjar där. Utifrån de exempel du föreslagit, och de skisser jag dragit upp här, utan att vi går in på att definera exakta egenskaper, +1, -1 eller liknande, kan vi börja skissa på ett ramverk.</p>
+<h1 id="svar-1" tabindex="-1">Svar 1</h1>
+<p>Det här är en otroligt bra och tydlig kravspecifikation! Du har ringat in exakt de element som gör ett crafting-system djupt nog för att vara intressant, men undviker fällan där det bara blir matematik och bokföring.</p>
+<p>Att utrustningen är spelarnas primära “leveling” är också en fantastisk drivkraft i ett rollspel. Då blir skrotletandet inte bara en sidohobby, utan vägen till makt.</p>
+<p>Låt oss skissa på ett ramverk som använder d6-pölar med exploderande 6:or och en Usage Die (Hållbarhetstärning), anpassat för dina goblins!</p>
+<hr>
+<h3 id="ramverk-f-r-goblin-hantverk-skiss-1" tabindex="-1">Ramverk för Goblin-Hantverk (Skiss 1)</h3>
+<p>Vi delar upp processen i tre naturliga steg: <strong>Chassit</strong> (grunden), <strong>Moddandet</strong> (egenskaperna) och <strong>Bygget</strong> (tärningsslaget/kaoset).</p>
+<h4 id="1-basresurser-och-chassit-kvalitet" tabindex="-1">1. Basresurser och Chassit (Kvalitet)</h4>
+<p>Istället för att räkna plankor och spik, tänker vi i <em>Tier-nivåer</em> av basresurser. Basresursen bestämmer föremålets “Chassi”, vilket i sin tur avgör dess <strong>Hållbarhetstärning (Usage Die)</strong>.</p>
+<ul>
+<li><strong>Tier 1: Goblinskrot.</strong> Pinnar, lera, rostig plåt, torkade tarmar.
+<ul>
+<li><em>Hållbarhet:</em> T4 (Går sönder väldigt lätt).</li>
+</ul>
+</li>
+<li><strong>Tier 2: Riktigt Material.</strong> Smitt järn, hyvlat trä, garvat läder (kräver tillgång till gruva/avtal, precis som du nämnde).
+<ul>
+<li><em>Hållbarhet:</em> T6 eller T8.</li>
+</ul>
+</li>
+<li><strong>Tier 3: Exklusivt Material.</strong> Alvstål, drakben, meteoritjärn.
+<ul>
+<li><em>Hållbarhet:</em> T10 eller T12.</li>
+</ul>
+</li>
+</ul>
+<p><strong>När slås Hållbarhetstärningen?</strong>
+Exempelvis när en spelare rullar en 1:a i sin d6-pool under strid/användning (ett fummel). Då slår de chassits Hållbarhetstärning. Rullar de 1-2 krymper tärningen ett steg (T8 blir T6). Krymper en T4 går vapnet i bitar (eller exploderar!).</p>
+<h4 id="2-unika-resurser-och-egenskaper-slots" tabindex="-1">2. Unika Resurser och Egenskaper (Slots)</h4>
+<p>Varje vapen/pryl har ett antal <strong>Slots</strong> (modifikations-platser). Hur många slots en goblin kan utnyttja på ett bygge bestäms av deras <em>Skill Level</em> i hantverk.</p>
+<ul>
+<li><em>Nybörjare:</em> Kan sätta fast 1 Unik Resurs (1 Slot).</li>
+<li><em>Mäster-skrotskalle:</em> Kan bygga komplexa maskiner med 3 Unika Resurser (3 Slots).</li>
+</ul>
+<p><strong>Taggar (Positiva och Negativa):</strong>
+När spelaren trycker in en Unik Resurs (t.ex. <em>En glödande röd kristall</em> hittad i en ruin) i en Slot, ger det föremålet en Tag.</p>
+<ul>
+<li><strong>Positiv Tag:</strong> <em>Brinnande</em> (Gör extra skada).</li>
+<li><strong>Goblin-Balansen:</strong> Eftersom goblins är kaotiska, kommer varje kraftfull Positiv Tag med en risk. Spelaren (eller spelledaren) måste välja en <strong>Negativ Tag</strong> att para ihop den med. Vapnet är <em>Brinnande</em>, men det är också <em>Varmt</em> (Goblinen tar lite skada vid fummel) eller <em>Otympligt</em> (Minus på att träffa).</li>
+</ul>
+<p><em>Undantag:</em> Om man sätter in en kraftfull kristall i ett Tier 1-chassi (pinnar), kan den negativa effekten vara att chassit inte orkar med kraften, och Hållbarhetstärningen sänks ett steg direkt från start.</p>
+<h4 id="3-sj-lva-bygget-kaosslaget" tabindex="-1">3. Själva bygget – “Kaosslaget”</h4>
+<p>Detta är kärnan. Om goblinen har resurserna och kunskapen (rätt Skill Level för antalet slots) så <strong>lyckas bygget alltid</strong>. De får sin pryl. Men för att få in spänningen slår de sin d6-pool (baserat på deras stat/skill för hantverk).</p>
+<p>Slaget handlar inte om pass/fail, utan om <em>Optimering vs. Kaos</em>.</p>
+<ul>
+<li><strong>Varje 6:a (Exploderande):</strong> Succé! Spelaren får “Tweak-poäng”. En 6:a kan användas för att:
+<ul>
+<li>Sudda ut en Negativ Tag från en av de Unika Resurserna (Goblinen var ett geni och löste problemet!).</li>
+<li>Öka Hållbarhetstärningen ett steg (Det är ett extra robust bygge).</li>
+<li>Lägga till en liten bonus (Vapnet är <em>Smidigt</em> och kan dras snabbt).</li>
+</ul>
+</li>
+<li><strong>Varje 1:a i pölen:</strong> Kaos/Slump! Goblinen blev distraherad eller lade till en del som inte fanns i ritningen.
+<ul>
+<li>Spelledaren rullar på en “Märkliga Effekter-tabell”. Vapnet kanske piper högt när det svingas, luktar ost, eller byter färg i mörker. (Dessa är sällan rent spelförstörande, men adderar rollspelsmöjligheter och humor).</li>
+</ul>
+</li>
+<li><strong>Övriga resultat (2-5):</strong> Standard. Inget speciellt händer, bygget går enligt plan.</li>
+</ul>
+<hr>
+<p>På detta sätt blir book-keepingen extremt låg (“Jag har material för Tier 2, och en eldkristall”), bygget går snabbt vid bordet (“Jag slår 4 tärningar för mitt bygge för att se om jag får bort den negativa taggen”), och föremålet får massor av karaktär.</p>
+<p>Vad tycker du om balansen med Taggar – låter det intressant att spelarna själva alltid måste “betala” för en häftig egenskap med en negativ egenskap (som de sedan kan försöka bygga bort med tärningsslaget)?</p>
+<h1 id="prompt-2" tabindex="-1">Prompt 2</h1>
+<p>Kan du försöka att utveckla. Nu upprepade du ju bara vad jag sa här. Det skapade inte så mycket nytt. Och strunta i att ge konkreta exempel såsom storlek på tärning eller liknande. Vi går inte in på regelsystemet än. UTan nu försöker vi skapa ett ramverk för vilka delar vi har, och hur de samspelar. Tänk mer struktur och abstrakt här, vi vill ha ett teoretiskt och struktuellt ramverk bara i det här. Hur komponenter samspelar och vilka delar som vi behöver förhålla oss till.</p>
+<p>Och kalla  det inte “pölar” för dice pools, det låter dumt. Kör hellre på svengelska.</p>
+<p>Så prova igen: En kritik och analys av ramverket, inte en upprapning av vad jag redan sagt. Se vilka delar vi inte täckt in, basera det på dina kunskaper av alla andra rollspel som finns och vad som faktiskt funkar bra och folk tycker om.</p>
+<h1 id="svar-2" tabindex="-1">Svar 2</h1>
+<p>Du har helt rätt, jag ber om ursäkt för det. Jag stannade för mycket i dina befintliga tankar och var för snabb på att kasta in tärningar. Vi backar bandet och tittar rent teoretiskt och strukturellt på vad ett sådant här ramverk behöver för att fungera i ett faktiskt spel, och framförallt – vad som saknas i skissen hittills.</p>
+<p>Om vi analyserar den struktur du föreslagit, så bygger den på en stark grund: <strong>Abstraktion av material -&gt; Modulära egenskaper (tags) -&gt; Spelardriven riskanalys -&gt; Taktil nedbrytning (usage mechanics).</strong> Att bygget alltid lyckas, men att “dice pool”-slaget avgör hur bra eller kaotiskt det blir, löser det klassiska problemet med att crafting tar för mycket tid vid bordet.</p>
+<p>Men om vi tittar på hur TTRPG-kampanjer utvecklas över tid, och vad spelare tenderar att älska (eller tröttna på) i system som handlar mycket om utrustning, så är det ett par viktiga strukturella komponenter vi inte har täckt in:</p>
+<h3 id="1-arbetsstationen-infrastruktur" tabindex="-1">1. Arbetsstationen (Infrastruktur)</h3>
+<p>Att ha resurser och kunskap är bra, men var sker bygget? I många system faller crafting platt för att karaktärerna plötsligt bygger avancerade maskiner mitt i en fuktig grotta bara för att de “har grejerna i ryggsäcken”.</p>
+<ul>
+<li><strong>Den strukturella lösningen:</strong> Verkstaden behöver vara en egen entitet. Infrastrukturen sätter ett tak för <em>vad</em> som kan byggas. En enkel lägereld tillåter grundläggande modifikationer, medan en fullskalig smedja/skrotgård låter spelarna utnyttja fler slots eller applicera kraftfullare tags. Att uppgradera sin gemensamma arbetsstation blir därmed en central del av gruppens progression.</li>
+</ul>
+<h3 id="2-kunskapsinh-mtning-reverse-engineering-and-ritningar" tabindex="-1">2. Kunskapsinhämtning (Reverse Engineering &amp; Ritningar)</h3>
+<p>Du nämner att en högre skill level låser upp fler möjligheter (exempelvis fler slots). Men hur lär sig en goblin att skapa <em>specifika</em> effekter? Om de bara slänger ihop saker på måfå försvinner känslan av belöning när de hittar något värdefullt.</p>
+<ul>
+<li><strong>Den strukturella lösningen:</strong> Vi behöver en mekanik för att <em>upptäcka</em> tags. Istället för att bara hitta unika resurser, kan spelarna hitta färdiga artefakter (som de inte kan använda fullt ut). Genom att demontera (“reverse engineer”) en fungerande mackapär förstörs den, men de låser upp kunskapen att replikera en specifik egenskap (tag) till sina egna framtida byggen. Detta skapar en fantastisk loop där spelare aktivt söker efter fiendens teknologi för att sno deras idéer.</li>
+</ul>
+<h3 id="3-synergier-och-emergent-gameplay" tabindex="-1">3. Synergier och Emergent Gameplay</h3>
+<p>Om vi har ett system med slots och tags (positiva/negativa) riskerar det att bli väldigt platt om de bara existerar isolerade från varandra. Spelare älskar att hitta kombinationer som bryter spelet (på ett bra sätt).</p>
+<ul>
+<li><strong>Den strukturella lösningen:</strong> Systemet behöver en regelstruktur för <em>kombinatorik</em>. Om en spelare kombinerar en tag för “Eld” med en tag för “Tryck”, blir resultatet inte bara Eld + Tryck, utan det muterar strukturellt till “Explosion”. Samma sak gäller negativa tags: om “Tung” kombineras med “Ömtålig”, kanske det skapar en helt ny nackdel i stil med “Livsfarlig att tappa”. Detta kräver ingen tung bokföring, utan snarare tydliga nyckelord som logiskt kan reagera med varandra.</li>
+</ul>
+<h3 id="4-livscykeln-reparation-underh-ll-och-tervinning" tabindex="-1">4. Livscykeln (Reparation, Underhåll och Återvinning)</h3>
+<p>Kvalitet och nedbrytning är redan identifierat. Men vad händer när föremålet faktiskt går sönder? Om ett vapen är centralt för en spelares identitet och “level”, blir det otroligt frustrerande om det bara försvinner.</p>
+<ul>
+<li><strong>Den strukturella lösningen:</strong> Föremål behöver en uttalad livscykel. När något går sönder förvandlas det tillbaka till “Skrot” (basresurser) plus att man kanske kan rädda den unika resursen. Det måste också finnas en mekanik för underhåll: att spendera basresurser mellan äventyr för att återställa kvaliteten (återställa degradationen) innan den når noll. Detta skapar ett konstant behov av basresurser, vilket driver spelets ekonomi.</li>
+</ul>
+<h3 id="5-den-sociala-eller-fysiska-kostnaden-tid" tabindex="-1">5. Den Sociala eller Fysiska Kostnaden (Tid)</h3>
+<p>Även om vi sa att vi inte vill att crafting ska ta tid <em>vid bordet</em>, måste det ta tid <em>i spelets värld</em>. Annars kommer spelarna att bygga om sina vapen inför varje enskilt rum i en dungeon.</p>
+<ul>
+<li><strong>Den strukturella lösningen:</strong> Crafting måste ha en “opportunity cost”. Det kan knytas till en “Rast/Läger”-fas i spelet. Om du spenderar din rast på att bygga om ditt vapen, kan du inte samtidigt läka skador, samla information eller vila. Detta tvingar fram strategiska val.</li>
+</ul>
+<p>Om vi tittar på denna struktur – där infrastrukturen agerar tak, reverse engineering driver utforskandet, och underhåll/tid skapar kostnaden – känns det som att vi börjar få ett komplett ekosystem.</p>
+<p>När det gäller att koppla positiva tags med negativa tags för balans; hur ställer du dig till att låta spelarna medvetet bygga in <em>fler</em> negativa tags i ett vapen för att på så sätt tvinga fram en extremt kraftfull, tillfällig positiv effekt?</p>
+<p>Att hantera reverse-engineering precis så är en briljant avvägning. Det skapar en fantastisk “risk vs. reward”-situation: du måste offra ett unikt, kanske ovärderligt föremål bara för att förstå <em>principen</em>, och sedan måste du ändå ge dig ut i världen för att hitta materialen för att återskapa effekten. Det driver äventyrandet framåt.</p>
+<p>Om vi går vidare till <strong>Unika Resurser</strong> och hur de kan struktureras, så är det bästa sättet att kategorisera dem ofta att titta på <em>vad de tillför spelet</em>, både narrativt (var man hittar dem) och mekaniskt (vad de gör i ett bygge).</p>
+<p>Här är tre olika teoretiska sätt att kategorisera unika resurser för att skapa ett djupt men lättöverskådligt system:</p>
+<h3 id="1-kategorisering-utifr-n-funktion-mekanisk-roll" tabindex="-1">1. Kategorisering utifrån Funktion (Mekanisk roll)</h3>
+<p>Istället för att alla unika resurser bara “gör något ballt”, kan de ha specifika roller i ett bygge. Det gör att spelarna aktivt letar efter den pusselbit de saknar, snarare än att bara samla på sig en osorterad hög med magiskt skräp.</p>
+<ul>
+<li><strong>Drivkrafter (Cores/Engines):</strong> Detta är resursen som ger föremålet dess primära aktiva effekt. Det kan vara en eldkristall (ger eldskada), en demonisk lunga (ger förmågan att blåsa ut rök) eller en uppskruvad fjäder (ger enorm rörelseenergi). Det är motorn i bygget.</li>
+<li><strong>Katalysatorer (Modifiers):</strong> Dessa gör ingenting på egen hand, utan förändrar <em>hur</em> en Drivkraft fungerar. En lins som förvandlar en eldslåga till en koncentrerad stråle, eller ett sporigt svampnätverk som får effekten att spridas över en större yta istället för att träffa ett enda mål.</li>
+<li><strong>Stabilisatorer/Förstärkare (Utility):</strong> Resurser som påverkar själva chassit, hållbarheten eller interaktionen med användaren. Kanske en seg monsterkörtel som sänker risken att bygget går sönder, eller en märklig metall som gör vapnet orimligt lätt.</li>
+</ul>
+<h3 id="2-kategorisering-utifr-n-ursprung-tematisk-k-lla" tabindex="-1">2. Kategorisering utifrån Ursprung (Tematisk källa)</h3>
+<p>Denna struktur hjälper spelledaren att placera loot, och låter spelarna dra logiska slutsatser kring vilka negativa tags en resurs bär med sig.</p>
+<ul>
+<li><strong>Biologiskt/Organiskt:</strong> Monsterdelar, tentakler, giftblåsor. Dessa resurser tenderar att ha effekter relaterade till liv, syra, läkning eller förfall. Deras naturliga negativa tags lutar ofta åt att de ruttnar, luktar, drar till sig rovdjur eller måste “matas”.</li>
+<li><strong>Geologiskt/Mineraliskt:</strong> Malmer, kristaller, magisk sten. Fokuserar ofta på elementära krafter, tyngd, struktur och defensiva egenskaper. Deras negativa tags handlar ofta om otymplighet, skörhet eller oönskad magnetism.</li>
+<li><strong>Artefakter/Arkaniskt:</strong> Forntida mekanik, magiska runor, spillror av förlorade civilisationer. Ger mer esoteriska eller extremt mekaniska effekter (teleportation, tidsförskjutning, automatik). Negativa tags här handlar om ren instabilitet, magisk strålning eller att de drar till sig oönskad uppmärksamhet från övernaturliga väsen.</li>
+</ul>
+<h3 id="3-kategorisering-utifr-n-stabilitet-riskfaktorn" tabindex="-1">3. Kategorisering utifrån Stabilitet (Riskfaktorn)</h3>
+<p>Eftersom du letar efter en känsla av kaos (Goblins!), kan unika resurser graderas efter hur farliga de är att överhuvudtaget integrera.</p>
+<ul>
+<li><strong>Inerta (Stabila):</strong> Resurser som i princip är säkra. De ger en tydlig, pålitlig tag och har en förutsägbar, hanterbar negativ tag. Bra för vardagsföremål.</li>
+<li><strong>Volatila (Instabila):</strong> Extremt kraftfulla effekter, men de kräver att spelaren tar på sig multipla negativa tags, eller ökar risken markant för att bygget exploderar vid ett fummel i dice-poolen.</li>
+<li><strong>Parasitiska/Krävande:</strong> Resurser som aktiveras genom att ta något från användaren eller omgivningen. Det kan vara en kristall som ger enorm skada, men som “drivs” av goblinsens eget blod (kostar HP vid användning), eller en sköld som slukar värdefulla metaller varje gång den avvärjer ett slag.</li>
+</ul>
+<p>Genom att korsa dessa kategorier får du snabbt enorm variation. En spelare kanske hittar en “Biologisk Drivkraft som är Volatil” (t.ex. en pulserande spindelkörtel som skjuter frätande nät, men som ibland spricker och skadar användaren).</p>
+<p>Skulle du föredra att en unik resurs har en fast, inneboende egenskap oavsett hur den används, eller ska effekten förändras beroende på <em>vilken typ av föremål</em> den monteras på (exempelvis: en vind-kristall gör att ett svärd svingas extremt snabbt, men på ett par stövlar ger den förmågan att sväva)?</p>
+<h1 id="prompt-3" tabindex="-1">Prompt 3</h1>
+<p>Mycket bättre, och bra tillägg.</p>
+<p>Jag tror att vi löser plats och tid med att det sker i deras bas, i downtime som man så ofta använder i ttrpg. Det är en förberedande tid, där man kan vara lite loosy goosy med tiden och vad som händer, det blir lite abstrakt, men det får en effekt i spelet. Kanske är tiden där viktig, så att spendera in-game-time är begränsat, eller så är det inte. Det ge upphov till olika val, men mer tid gör att du kan göra mer eller bättre, men kanske får andra konsekvenser som inte direkt relaterar till crafting-reglerna.</p>
+<p>Kunskapsinhämtningen och reverser-engineering gillar jag! Det ska vi plocka upp. Att betala kostnaden för ett bra föremål genom att kanske lära sig något genom att förstöra det låter helt rätt tematiskt. Men det bör inte göra att man automatiskt kan skapa det igen, utan man lär sig bara en del av hemligheten bakom det. Annars blir det ingen riktig kostnad, för man kan bara skapa den igen. Alternativ eller som tillägg så kan man också tänka sig att resurserna går förlorade, så att det inte är så lätt att göra den igen , för man behöver hitta nya resurser.</p>
+<p>Kan vi kanske nu titta lite på unika resurser, och hur man skulle ev kunna kategorisera dem?=</p>
+<h1 id="svar-3" tabindex="-1">Svar 3</h1>
+<p>Att hantera reverse-engineering precis så är en briljant avvägning. Det skapar en fantastisk “risk vs. reward”-situation: du måste offra ett unikt, kanske ovärderligt föremål bara för att förstå <em>principen</em>, och sedan måste du ändå ge dig ut i världen för att hitta materialen för att återskapa effekten. Det driver äventyrandet framåt.</p>
+<p>Om vi går vidare till <strong>Unika Resurser</strong> och hur de kan struktureras, så är det bästa sättet att kategorisera dem ofta att titta på <em>vad de tillför spelet</em>, både narrativt (var man hittar dem) och mekaniskt (vad de gör i ett bygge).</p>
+<p>Här är tre olika teoretiska sätt att kategorisera unika resurser för att skapa ett djupt men lättöverskådligt system:</p>
+<h3 id="1-kategorisering-utifr-n-funktion-mekanisk-roll-1" tabindex="-1">1. Kategorisering utifrån Funktion (Mekanisk roll)</h3>
+<p>Istället för att alla unika resurser bara “gör något ballt”, kan de ha specifika roller i ett bygge. Det gör att spelarna aktivt letar efter den pusselbit de saknar, snarare än att bara samla på sig en osorterad hög med magiskt skräp.</p>
+<ul>
+<li><strong>Drivkrafter (Cores/Engines):</strong> Detta är resursen som ger föremålet dess primära aktiva effekt. Det kan vara en eldkristall (ger eldskada), en demonisk lunga (ger förmågan att blåsa ut rök) eller en uppskruvad fjäder (ger enorm rörelseenergi). Det är motorn i bygget.</li>
+<li><strong>Katalysatorer (Modifiers):</strong> Dessa gör ingenting på egen hand, utan förändrar <em>hur</em> en Drivkraft fungerar. En lins som förvandlar en eldslåga till en koncentrerad stråle, eller ett sporigt svampnätverk som får effekten att spridas över en större yta istället för att träffa ett enda mål.</li>
+<li><strong>Stabilisatorer/Förstärkare (Utility):</strong> Resurser som påverkar själva chassit, hållbarheten eller interaktionen med användaren. Kanske en seg monsterkörtel som sänker risken att bygget går sönder, eller en märklig metall som gör vapnet orimligt lätt.</li>
+</ul>
+<h3 id="2-kategorisering-utifr-n-ursprung-tematisk-k-lla-1" tabindex="-1">2. Kategorisering utifrån Ursprung (Tematisk källa)</h3>
+<p>Denna struktur hjälper spelledaren att placera loot, och låter spelarna dra logiska slutsatser kring vilka negativa tags en resurs bär med sig.</p>
+<ul>
+<li><strong>Biologiskt/Organiskt:</strong> Monsterdelar, tentakler, giftblåsor. Dessa resurser tenderar att ha effekter relaterade till liv, syra, läkning eller förfall. Deras naturliga negativa tags lutar ofta åt att de ruttnar, luktar, drar till sig rovdjur eller måste “matas”.</li>
+<li><strong>Geologiskt/Mineraliskt:</strong> Malmer, kristaller, magisk sten. Fokuserar ofta på elementära krafter, tyngd, struktur och defensiva egenskaper. Deras negativa tags handlar ofta om otymplighet, skörhet eller oönskad magnetism.</li>
+<li><strong>Artefakter/Arkaniskt:</strong> Forntida mekanik, magiska runor, spillror av förlorade civilisationer. Ger mer esoteriska eller extremt mekaniska effekter (teleportation, tidsförskjutning, automatik). Negativa tags här handlar om ren instabilitet, magisk strålning eller att de drar till sig oönskad uppmärksamhet från övernaturliga väsen.</li>
+</ul>
+<h3 id="3-kategorisering-utifr-n-stabilitet-riskfaktorn-1" tabindex="-1">3. Kategorisering utifrån Stabilitet (Riskfaktorn)</h3>
+<p>Eftersom du letar efter en känsla av kaos (Goblins!), kan unika resurser graderas efter hur farliga de är att överhuvudtaget integrera.</p>
+<ul>
+<li><strong>Inerta (Stabila):</strong> Resurser som i princip är säkra. De ger en tydlig, pålitlig tag och har en förutsägbar, hanterbar negativ tag. Bra för vardagsföremål.</li>
+<li><strong>Volatila (Instabila):</strong> Extremt kraftfulla effekter, men de kräver att spelaren tar på sig multipla negativa tags, eller ökar risken markant för att bygget exploderar vid ett fummel i dice-poolen.</li>
+<li><strong>Parasitiska/Krävande:</strong> Resurser som aktiveras genom att ta något från användaren eller omgivningen. Det kan vara en kristall som ger enorm skada, men som “drivs” av goblinsens eget blod (kostar HP vid användning), eller en sköld som slukar värdefulla metaller varje gång den avvärjer ett slag.</li>
+</ul>
+<p>Genom att korsa dessa kategorier får du snabbt enorm variation. En spelare kanske hittar en “Biologisk Drivkraft som är Volatil” (t.ex. en pulserande spindelkörtel som skjuter frätande nät, men som ibland spricker och skadar användaren).</p>
+<p>Skulle du föredra att en unik resurs har en fast, inneboende egenskap oavsett hur den används, eller ska effekten förändras beroende på <em>vilken typ av föremål</em> den monteras på (exempelvis: en vind-kristall gör att ett svärd svingas extremt snabbt, men på ett par stövlar ger den förmågan att sväva)?</p>
+<h1 id="prompt-4" tabindex="-1">Prompt 4</h1>
+<p>I love it! Det här är fantastiskt, mycket bra och bättre än jag tänkte mig. Med de här så har vi ett riktigt bra ramverk. Nu är frågan hur man skapar tematiska funktioner tilll det här. Här tänker jag på de faktiska egenskaperna som de olika resurserna ger. Det kan bli en ganska tidskrävande och svår uppgift att hitta på alla de här olika egenskaperna för t.ex. monsterdelar. En del från en drake kan ju vara både något som ger skydd, eldkrafter, ha högt värde, öka kvalitet, etc etc.</p>
+<p>Sedan så ska det inte bli Monster Hunter av allt, utan vissa saker kanske också kan framställas i laboratorier eller liknande. Men det spelar ju mindre roll, det viktiga här är nu hur vi bygger upp det här så att det finns en stor del av kreativ frihet, hos spelledare såväl som spelare att skapa förmågor hos resurserna, utan att för den del helt tappa balansen. Tänker att man vill hitta ett mekaniskt ramverk som gör det lätt att klassa det.</p>
+<p>T.ex. kanske något som gör +1 i skada vara en lvl 1 föremål. Medan om något ger förmågan att flyga så är det lvl4, eller nått. Men även här så stöter vi på problem att försöka definera något. Så kanske vi kan abstrahera även det här. SÅ säga att lvl1 ger en “Minor” ökning av skada eller en förbättring av redan existerande förmåga, så du kan röra dig lite snabbare. Medan att få en ny form av skada eller en ny form av förflyttning är en högre nivå av resurs. Så vill du skapa broom of flying så behöver du ett ganska avancerat föremål, en harpyas fjädrar eller nått. Medan för någon som redan kan flyga, kanske det då eg bara ger en ökning av rörelse, eftersom flyga + flyga = flyga? Kanske blir för krångligt…</p>
+<p>Hjälp mig sortera lite här hur vi kan skapa nästa form av kategorisering. Eller om det är en lista med massor spelmekaniska egenskaper som vi sedan knyta till det mer tematiska, fjäder från harpya, tand från drake, kugghjul från dvärgmaskin, etc…</p>
+<h1 id="svar-4" tabindex="-1">Svar 4</h1>
+<p>I love it! Det här är fantastiskt, mycket bra och bättre än jag tänkte mig. Med de här så har vi ett riktigt bra ramverk. Nu är frågan hur man skapar tematiska funktioner tilll det här. Här tänker jag på de faktiska egenskaperna som de olika resurserna ger. Det kan bli en ganska tidskrävande och svår uppgift att hitta på alla de här olika egenskaperna för t.ex. monsterdelar. En del från en drake kan ju vara både något som ger skydd, eldkrafter, ha högt värde, öka kvalitet, etc etc.</p>
+<p>Sedan så ska det inte bli Monster Hunter av allt, utan vissa saker kanske också kan framställas i laboratorier eller liknande. Men det spelar ju mindre roll, det viktiga här är nu hur vi bygger upp det här så att det finns en stor del av kreativ frihet, hos spelledare såväl som spelare att skapa förmågor hos resurserna, utan att för den del helt tappa balansen. Tänker att man vill hitta ett mekaniskt ramverk som gör det lätt att klassa det.</p>
+<p>T.ex. kanske något som gör +1 i skada vara en lvl 1 föremål. Medan om något ger förmågan att flyga så är det lvl4, eller nått. Men även här så stöter vi på problem att försöka definera något. Så kanske vi kan abstrahera även det här. SÅ säga att lvl1 ger en “Minor” ökning av skada eller en förbättring av redan existerande förmåga, så du kan röra dig lite snabbare. Medan att få en ny form av skada eller en ny form av förflyttning är en högre nivå av resurs. Så vill du skapa broom of flying så behöver du ett ganska avancerat föremål, en harpyas fjädrar eller nått. Medan för någon som redan kan flyga, kanske det då eg bara ger en ökning av rörelse, eftersom flyga + flyga = flyga? Kanske blir för krångligt…</p>
+<p>Hjälp mig sortera lite här hur vi kan skapa nästa form av kategorisering. Eller om det är en lista med massor spelmekaniska egenskaper som vi sedan knyta till det mer tematiska, fjäder från harpya, tand från drake, kugghjul från dvärgmaskin, etc…</p>
+<h1 id="prompt-5" tabindex="-1">Prompt 5</h1>
+<p>Ja, jag tror det här är något vi kan utveckla vidare. Det ger en tematisk flärd på något som bör vara ganska lätt att hitta på om de stöter på något man inte riktigt planerat. Det är skönt för spelledaren att kunna hitta på saker on the fly, utan att behöva preppa. Det skulle kunna ev vara så att man hittar ytterilgare en nivå här, för att styra det hela så det inte utnyttjas för mycket.
+Man skulle kunna sätta en maxgräns på ett föremål. Så en del från en drake eller demon har en Tier 3-gräns, det är mäktiga föremål som kan ge mäktiga effekter. Medan en speciell sorts kristall kanske bara kan ge Tier 1 effekter. Sedan kan man alltid använda en sak för en lägre tier.</p>
+<p>Men för att ytterligare skapa utrymme skulle man kunna också säga att den har någon form av max tier för negativa saker. Tänker t.ex. att ett föremål från en demon alltid kanske drar med sig upp en negativ effekt till samma tier som den positiva effekten. Medan säg en sällsynt solkristall ger Tier 3 postiv effekt men är så ren och pure att den ändå inte bidrar med något negativt. Vilket gör den ännu mer värdefull.</p>
+<p>Kan vi brainstorma lite runt det här? Hur kan vi skapa något sånt här utan att det blir för krånligt?</p>
+<h1 id="svar-5" tabindex="-1">Svar 5</h1>
+<p>Det här är en klockren insikt! Genom att frikoppla “Maximal Potential” från “Inneboende Risk” löser vi problemet med att all loot på en viss nivå känns likadan. Det gör också spelets ekonomi oändligt mycket mer intressant. En Solkristall blir ju spelvärldens motsvarighet till en ovärderlig diamant, medan demonhjärtan är farligt, billigt smuggelgods.</p>
+<p>För att hålla detta extremt enkelt för spelledaren (så att det går snabbt att hitta på under spelets gång) kan vi koda varje unik resurs med två enkla värden: <strong>Max Tier</strong> (Kapacitet) och <strong>Defekt</strong> (Inneboende risk).</p>
+<p>Låt oss skissa på hur den här balansen kan se ut i praktiken utan att tynga ner systemet.</p>
+<h3 id="notationen-hur-det-ser-ut-p-papperet" tabindex="-1">Notationen (Hur det ser ut på papperet)</h3>
+<p>Spelledaren behöver bara hitta på tre saker när spelarna plundrar: Nyckelord, Max Tier (T) och Defekt (D).</p>
+<ul>
+<li><strong>Demonhjärta:</strong> <code>[Eld, Organisk] (T3 / D3)</code> – <em>Maximal kraft, men drar alltid med sig en brutal negativ tag.</em></li>
+<li><strong>Ren Solkristall:</strong> <code>[Ljus, Helig] (T3 / D0)</code> – <em>Maximal kraft, noll risk. Den heliga graalen av crafting-resurser.</em></li>
+<li><strong>Radioaktivt Skrot:</strong> <code>[Energi, Instabilt] (T2 / D3)</code> – <em>Genuint goblin-material. Nackdelen är högre än nyttan, men man tager vad man haver.</em></li>
+<li><strong>Vässad Jättebenkota:</strong> <code>[Vass, Tung] (T1 / D1)</code> – <em>En pålitlig, vardaglig resurs.</em></li>
+</ul>
+<h3 id="defekt-niv-erna-hur-farligt-r-det" tabindex="-1">Defekt-nivåerna (Hur farligt är det?)</h3>
+<p>Precis som vi definierade vad positiva Tier 1-3 betyder, måste vi definiera vad de negativa Defekt-nivåerna innebär i spelet. Detta ger spelledaren en ram att improvisera utifrån när spelarna bygger.</p>
+<ul>
+<li><strong>Defekt 0 (Ren):</strong> Ingen negativ tag alls.</li>
+<li><strong>Defekt 1 (Irriterande):</strong> Kosmetiska eller milt speltekniska nackdelar. Vapnet ryker konstant, luktar bränt kött, är tyngre än det borde vara, eller har en kortare Usage Die.</li>
+<li><strong>Defekt 2 (Begränsande/Smärtsam):</strong> Mekaniska hinder. Vapnet bränner dig (kostar lite HP) varje gång du slår en 1:a i din dice pool, det kräver blod/dyrt bränsle för att aktiveras, eller det ger dig en permanent negativ status (t.ex. -1 på rörlighet) så länge du bär det.</li>
+<li><strong>Defekt 3 (Livsfarlig/Kampanjpåverkande):</strong> Fruktansvärda konsekvenser. Föremålet skriker telepatiskt och drar ständigt till sig fiender, det muterar långsamt goblinen som bär det, eller så finns det risk att det exploderar och utplånar hela arbetsstationen om hållbarheten (Usage Die) når noll.</li>
+</ul>
+<h3 id="samspelet-med-downtime-och-crafting-slaget" tabindex="-1">Samspelet med Downtime och Crafting-slaget</h3>
+<p>Det är här ditt tidigare förslag om att “slå tärningar för att lyckas hantera bygget” verkligen knyts ihop med detta!</p>
+<p>När spelarna är i sin bas under downtime och ska foga in sitt <code>(T3 / D3)</code> Demonhjärta i ett chassi, så <strong>vet</strong> de att bygget kommer få en livsfarlig Defekt 3-tag.
+Men! Det är nu deras exploderande 6:or i crafting-slaget kommer in.</p>
+<p>Istället för att bara använda succéer (6:or) för att lägga till roliga extra-grejer, måste en skrotskalle som bygger med instabila material förmodligen spendera sina hårt förvärvade 6:or på att <em>reducera Defekt-nivån</em>.
+En 6:a kanske kan sänka Defekten från 3 till 2. En till 6:a sänker den från 2 till 1.</p>
+<p>Har goblinen en hög skill level (många tärningar i sin pool) och en bra arbetsstation, har de stor chans att “tämja” det farliga demonhjärtat och sänka nackdelen till Defekt 1. Misslyckas de slå några 6:or… ja, då får de sitta där med ett vapen som gör monstruös skada men som sakta äter deras själ. Det är perfekt kaos!</p>
+<p>Om vi knyter detta till tidsaspekten under downtime: Tycker du att spelarna ska ha möjligheten att betala extra in-game tid i sin bas (till exempel missa en chans att vila eller samla info) för att automatiskt “köpa bort” en nivå av Defekt på ett föremål innan de ens rullar tärningarna?</p>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

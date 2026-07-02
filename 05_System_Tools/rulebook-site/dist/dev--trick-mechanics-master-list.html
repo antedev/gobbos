@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trick_Mechanics_Master_List — DEV Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Raw ideas and brainstorms">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab env-tab--active">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">DEV Rules</h2>
+        <p class="sidebar-subtitle">Raw ideas and brainstorms</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="gdrs"><span class="toggle-icon">▸</span>GDRs</button><ul class="nav-pages" id="nav-gdrs" style="display: none;"><li><a href="dev.html" class="nav-link" data-target="gdrs--gdr-001-macro-audit-and-unified-effects">GDR-001_Macro_Audit_And_Unified_Effects</a></li><li><a href="dev--gdrs--gdr-002-gang-pillar-and-lair-economy.html" class="nav-link" data-target="gdrs--gdr-002-gang-pillar-and-lair-economy">GDR-002_Gang_Pillar_And_Lair_Economy</a></li><li><a href="dev--gdrs--gdr-003-unified-modular-powers-system.html" class="nav-link" data-target="gdrs--gdr-003-unified-modular-powers-system">GDR-003_Unified_Modular_Powers_System</a></li><li><a href="dev--gdrs--gdr-004-enemy-stat-framework-and-mobs.html" class="nav-link" data-target="gdrs--gdr-004-enemy-stat-framework-and-mobs">GDR-004_Enemy_Stat_Framework_And_Mobs</a></li><li><a href="dev--gdrs--gdr-005-goblin-magic-dice-system.html" class="nav-link" data-target="gdrs--gdr-005-goblin-magic-dice-system">GDR-005_Goblin_Magic_Dice_System</a></li><li><a href="dev--gdrs--gdr-006-environmental-hazards-and-zone-statblocks.html" class="nav-link" data-target="gdrs--gdr-006-environmental-hazards-and-zone-statblocks">GDR-006_Environmental_Hazards_and_Zone_Statblocks</a></li><li><a href="dev--gdrs--gdr-template.html" class="nav-link" data-target="gdrs--gdr-template">GDR-TEMPLATE</a></li></ul></div><div class="nav-group nav-group--solo"><a href="dev--crafting-creative-analysis.html" class="nav-link nav-link--solo" data-target="crafting-creative-analysis">crafting_creative_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-framework-brainstorm">crafting_framework_brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-mechanics-audit.html" class="nav-link nav-link--solo" data-target="crafting-mechanics-audit">crafting_mechanics_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-brainstorm">crafting-brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--creative-genius-crafting-analysis.html" class="nav-link nav-link--solo" data-target="creative-genius-crafting-analysis">creative_genius_crafting_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-modular-threat-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="enemy-modular-threat-framework-brainstorm">Enemy_Modular_Threat_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-stats-draft.html" class="nav-link nav-link--solo" data-target="enemy-stats-draft">Enemy_Stats_Draft</a></div><div class="nav-group nav-group--solo"><a href="dev--equipment-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="equipment-framework-brainstorm">Equipment_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--gang-mechanics-brainstorm.html" class="nav-link nav-link--solo" data-target="gang-mechanics-brainstorm">Gang_Mechanics_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--generic-trick-mechanics.html" class="nav-link nav-link--solo" data-target="generic-trick-mechanics">Generic_Trick_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--initial-trick-list.html" class="nav-link nav-link--solo" data-target="initial-trick-list">Initial_Trick_List</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-brainstorm.html" class="nav-link nav-link--solo" data-target="lair-brainstorm">Lair_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-mechanics-game-engineering-audit.html" class="nav-link nav-link--solo" data-target="lair-mechanics-game-engineering-audit">Lair_Mechanics_Game_Engineering_Audit</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-refined-framework.html" class="nav-link nav-link--solo" data-target="lair-system-refined-framework">Lair_System_Refined_Framework</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-research-deep-dive.html" class="nav-link nav-link--solo" data-target="lair-system-research-deep-dive">Lair_System_Research_Deep_Dive</a></div><div class="nav-group nav-group--solo"><a href="dev--mob-combat-design-advice.html" class="nav-link nav-link--solo" data-target="mob-combat-design-advice">Mob_Combat_Design_Advice</a></div><div class="nav-group nav-group--solo"><a href="dev--research-crafting-systems.html" class="nav-link nav-link--solo" data-target="research-crafting-systems">research_crafting_systems</a></div><div class="nav-group nav-group--solo"><a href="dev--research-deeds-award-mechanics.html" class="nav-link nav-link--solo" data-target="research-deeds-award-mechanics">Research_Deeds_Award_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-base-building.html" class="nav-link nav-link--solo" data-target="researcher-findings-base-building">Researcher_Findings_Base_Building</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-conditions.html" class="nav-link nav-link--solo" data-target="researcher-findings-conditions">Researcher_Findings_Conditions</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-environmental-hazards.html" class="nav-link nav-link--solo" data-target="researcher-findings-environmental-hazards">Researcher_Findings_Environmental_Hazards</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-analysis.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-analysis">Researcher_Findings_OSR_Analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-sources.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-sources">Researcher_Findings_OSR_Sources</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-notes.html" class="nav-link nav-link--solo" data-target="researcher-notes">Researcher_Notes</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-audit-equipment.html" class="nav-link nav-link--solo" data-target="rules-lawyer-audit-equipment">Rules_Lawyer_Audit_Equipment</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-crafting-audit.html" class="nav-link nav-link--solo" data-target="rules-lawyer-crafting-audit">rules_lawyer_crafting_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-system-audit-report.html" class="nav-link nav-link--solo" data-target="rules-lawyer-system-audit-report">Rules_Lawyer_System_Audit_Report</a></div><div class="nav-group nav-group--solo"><a href="dev--static-resistances-opposed-tests.html" class="nav-link nav-link--solo" data-target="static-resistances-opposed-tests">Static_Resistances_Opposed_Tests</a></div><div class="nav-group nav-group--solo"><a href="dev--trick-mechanics-master-list.html" class="nav-link nav-link--solo nav-link--active" data-target="trick-mechanics-master-list">Trick_Mechanics_Master_List</a></div><div class="nav-group nav-group--solo"><a href="dev--unified-modular-power-system.html" class="nav-link nav-link--solo" data-target="unified-modular-power-system">Unified Modular Power System</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="trick-mechanics-master-list" tabindex="-1">Trick Mechanics Master List</h1>
+<p>This is a brainstormed list of purely mechanical effects for Tricks, stripped of flavor text and balanced considerations, organized by category.</p>
+<h2 id="1-boons-and-dice-manipulation" tabindex="-1">1. Boons &amp; Dice Manipulation</h2>
+<ul>
+<li><strong>Static Bonus:</strong> +1d on [Specific Action/Skill/Weapon type] (e.g., +1d on Dodge, +1d on Shooting).</li>
+<li><strong>Conditional Bonus:</strong> +1d on tests when you are at exactly 1 Grit.</li>
+<li><strong>Penalty to Enemies:</strong> Enemies get -1d when attacking you with [Ranged/Melee].</li>
+<li><strong>Rerolls:</strong> Reroll 1 failed die on a [Specific Stat] test.</li>
+<li><strong>Target Adjustment:</strong> Treat one 4 as a 5 / Treat one failure as a success on [Action].</li>
+<li><strong>Exploding Dice:</strong> If you roll a 6 on [Action], roll an additional die.</li>
+<li><strong>Crit manipulation:</strong> On a roll with multiple 5s/6s, inflict a free [Status] (e.g., Bleeding, Stunned, Prone) in addition to normal damage.</li>
+<li><strong>Success Multiplier:</strong> When attacking with [Weapon], 6s count as two successes instead of one.</li>
+<li><strong>Lowest Die Drop:</strong> Discard the lowest die result from your pool instead of accepting a failure.</li>
+<li><strong>Pushing:</strong> Take 1 Grit damage to reroll all failed dice on a crucial test.</li>
+<li><strong>Critical Shift:</strong> 5s and 6s count as critical successes instead of just 6s.</li>
+<li><strong>Fail Forward:</strong> When you fail a roll completely (no successes), gain 1 Grunt, 1 Grit, or +1d on your next test.</li>
+<li><strong>Shared Success:</strong> If you generate more successes than required for a test, grant an ally +1d on their next action.</li>
+</ul>
+<h2 id="2-economy-bending-actions-and-time" tabindex="-1">2. Economy Bending (Actions &amp; Time)</h2>
+<ul>
+<li><strong>Conditional Extra Action:</strong> Do an extra action when you only have one Grit left.</li>
+<li><strong>Momentum Action:</strong> Move 1 zone as a Free Action after performing a successful Melee Attack.</li>
+<li><strong>Cleave Action:</strong> If you reduce an enemy to 0 HP, immediately make another Attack action (Limit: once per turn).</li>
+<li><strong>Free Object Interaction:</strong> Swap weapons, ready a thrown weapon, or drink a potion as a Free Action.</li>
+<li><strong>Reaction Attack:</strong> When an enemy misses you with a Melee Attack, make one Melee Attack against them as a Reaction.</li>
+<li><strong>Free Recovery:</strong> Stand up from Prone as a Free Action.</li>
+<li><strong>Action Downgrade:</strong> Perform [Specific Standard Action] (e.g., Hide/Sneak) as a Free Action once per turn.</li>
+<li><strong>Interrupt:</strong> Activate this Trick to take your turn immediately before an enemy acts in the initiative order.</li>
+<li><strong>Quick Reload:</strong> Reloading a [Specific Weapon Type] is a Free Action instead of a standard action.</li>
+<li><strong>Double Move:</strong> Move 2 zones using a single Move action, but suffer -1d to any attacks made later this turn.</li>
+<li><strong>Preparation:</strong> If you do not make any attack actions this turn, you gain an extra Standard Action on your <em>next</em> turn.</li>
+</ul>
+<h2 id="3-rule-breaking-and-bypassing" tabindex="-1">3. Rule Breaking &amp; Bypassing</h2>
+<ul>
+<li><strong>Auto-Pass:</strong> Can climb without making a Slink test.</li>
+<li><strong>Stat Swapping:</strong> Use [Stat X] instead of [Stat Y] for [Specific Action] (e.g., Roll Brains instead of Brawn to attack with an odd weapon).</li>
+<li><strong>Property Ignorance:</strong> Ignore the “Heavy” penalty on weapons.</li>
+<li><strong>Property Ignorance 2:</strong> Ignore the “Loud” property on specific weapons.</li>
+<li><strong>Constraint Breaking:</strong> You can wield a Two-Handed weapon in one hand.</li>
+<li><strong>Movement Bypassing:</strong> Move through enemy zones without triggering attacks of opportunity or movement penalties.</li>
+<li><strong>Hazard Bypassing:</strong> You do not trigger traps that rely on weight or tripwires.</li>
+<li><strong>Damage Mitigation:</strong> Ignore the first point of fall damage / ignore the first X meters of falling.</li>
+<li><strong>Size Matters:</strong> Treat yourself as one Size category larger for the purposes of grappling, carrying, or being shoved.</li>
+<li><strong>Cover Ignoral:</strong> Your ranged attacks ignore aiming penalties and automatically bypass Partial Cover.</li>
+<li><strong>Blind Fighting:</strong> Ignore all penalties for fighting in darkness or against invisible enemies.</li>
+<li><strong>Wall Runner:</strong> You can end your move action on vertical surfaces without falling down immediately.</li>
+<li><strong>Unarmed Lethality:</strong> Your unarmed strikes deal actual damage (e.g., 2 points instead of 1 or 0) and can inflict damage statuses like a real weapon.</li>
+</ul>
+<h2 id="4-resource-manipulation-grit-grunt-and-costs" tabindex="-1">4. Resource Manipulation (Grit, Grunt, &amp; Costs)</h2>
+<ul>
+<li><strong>Capacity Increase:</strong> Gain +1 Max Grunt capacity.</li>
+<li><strong>Cost Reduction:</strong> Reduce the cost of [Specific Order] by 1 Grunt (minimum 1).</li>
+<li><strong>Grunt for Dice:</strong> Spend 1 Grunt to gain +1d on any test (can be declared after rolling).</li>
+<li><strong>Grunt for Defense:</strong> Spend 1 Grunt to reduce incoming damage by 1.</li>
+<li><strong>Refunds:</strong> Regain 1 Grunt when you critically succeed on an attack.</li>
+<li><strong>Desperation Buff:</strong> When you spend your last Grunt, gain +1d on all actions until the end of the turn.</li>
+<li><strong>Auto-Success:</strong> Spend 1 Grunt to automatically pass a Morale test for your Mob.</li>
+<li><strong>Overcharge:</strong> Spend 2 Grunt to add an extra d6 to a pool that normally cannot exceed a specific hard limit.</li>
+<li><strong>Efficient Leader:</strong> Once per raid, issue an Order without spending any Grunt points.</li>
+<li><strong>Blood for Grunt:</strong> Take 1 Grit point of damage to instantly gain 1 Grunt.</li>
+<li><strong>Rest Recovery:</strong> When completing a short rest/breather, regain +1 extra Grunt or Grit on top of the normal roll.</li>
+</ul>
+<h2 id="5-mob-and-leadership" tabindex="-1">5. Mob &amp; Leadership</h2>
+<ul>
+<li><strong>Meat Shield:</strong> When you take damage, you can assign it to a Grunt in your current Mob instead (costs 1 Action or active Reaction).</li>
+<li><strong>Mob Speed:</strong> Grunts in your Mob gain +1 to their Speed or Move distance.</li>
+<li><strong>Mob Boons:</strong> Mobs you lead roll +1d when making a specific attack (e.g., Volley/Ranged).</li>
+<li><strong>Penalty Negation:</strong> Mobs you lead do not suffer penalties when at half-size or under.</li>
+<li><strong>Free Merging:</strong> You can merge two smaller friendly Mobs into one as a Free Action.</li>
+<li><strong>Casualty Resistance:</strong> Mobs you lead ignore the first casualty they take each combat/raid.</li>
+<li><strong>Rallying Cry:</strong> Spend an Action. Any broken, fleeing, or panicking Mobs in your zone automatically rally and reform.</li>
+<li><strong>Loot Carriers:</strong> Grunts in your Mob can carry 1 extra Loot item each.</li>
+<li><strong>Forced March:</strong> A Mob can accompany you on a Dash/Double Move without scattering or falling behind.</li>
+<li><strong>Living Wall:</strong> Mobs you lead automatically provide you with Full Cover from Ranged attacks as long as they have 3+ Grunts remaining.</li>
+<li><strong>Suicide Charge:</strong> Order a Mob to attack with +2d, but they automatically take 1 casualty after the attack resolves due to their reckless frenzy.</li>
+</ul>
+<h2 id="6-survivability-and-defense" tabindex="-1">6. Survivability &amp; Defense</h2>
+<ul>
+<li><strong>Armor Bypass:</strong> Ignore the “Clunky” penalty of Heavy Armor.</li>
+<li><strong>Damage Type Resistance:</strong> Ignore the first point of damage from [Specific Damage Type, e.g., Fire/Explosions] each turn.</li>
+<li><strong>Death Defy:</strong> When taking damage that would reduce Grit to 0, roll 1d6. On a 5+, stay at 1 Grit. (Limit: once per raid).</li>
+<li><strong>Vampiric:</strong> Gain 1 temporary Grit when defeating an enemy.</li>
+<li><strong>Hard to Kill:</strong> When reduced to 0 Grit, you can still take Actions on your next turn before officially dying (Last Stand).</li>
+<li><strong>Fast Healing:</strong> Regain 1 Grit automatically at the start of any combat encounter.</li>
+<li><strong>Status Immunity:</strong> You can never be [Stunned / Bleeding / Poisoned / Prone] (pick one).</li>
+<li><strong>Iron Stomach:</strong> You can eat spoiled rations, dungeon mold, or weird junk to regain Grit without suffering sickness penalties.</li>
+<li><strong>Evasive Roll:</strong> If you take damage from an explosion or an Area-of-Effect attack, reduce it by half (rounded up) or avoid it entirely if you pass a quick Slink test.</li>
+</ul>
+<h2 id="7-loot-and-gear-interaction" tabindex="-1">7. Loot &amp; Gear Interaction</h2>
+<ul>
+<li><strong>Scavenger:</strong> When searching a room or body for Loot, you always find at least one minor item automatically in addition to what’s rolled.</li>
+<li><strong>Jury-Rigger:</strong> You can repair a broken weapon, armor, or item with random scrap in the middle of a raid.</li>
+<li><strong>Pack Mule:</strong> You can carry +2 additional Bulky items without suffering encumbrance penalties.</li>
+<li><strong>Weapon Juggler:</strong> You can equip two different weapons and alternate between them without spending actions to “Swap.”</li>
+<li><strong>Explosives Expert:</strong> Bombs, potions, and throwables you use have their effect radius increased by 1 zone.</li>
+</ul>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

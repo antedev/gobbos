@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The_Shadow_Economy — STAGE Lore — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Synthesized lore drafts">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab env-tab--active">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">STAGE Lore</h2>
+        <p class="sidebar-subtitle">Synthesized lore drafts</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group nav-group--solo"><a href="stage-lore.html" class="nav-link nav-link--solo" data-target="geography-and-history">Geography_and_History</a></div><div class="nav-group nav-group--solo"><a href="stage-lore--solar-ichor-technology.html" class="nav-link nav-link--solo" data-target="solar-ichor-technology">Solar_Ichor_Technology</a></div><div class="nav-group nav-group--solo"><a href="stage-lore--high-aurelians.html" class="nav-link nav-link--solo" data-target="high-aurelians">High_Aurelians</a></div><div class="nav-group nav-group--solo"><a href="stage-lore--goblin-warren-culture.html" class="nav-link nav-link--solo" data-target="goblin-warren-culture">Goblin_Warren_Culture</a></div><div class="nav-group nav-group--solo"><a href="stage-lore--the-shadow-economy.html" class="nav-link nav-link--solo nav-link--active" data-target="the-shadow-economy">The_Shadow_Economy</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="the-shadow-economy" tabindex="-1">The Shadow Economy</h1>
+<p><em>“You want to keep your white marble castle warm, yes? But you are too scared to go into the basement because a giant spider lives in the pipe. We are not scared of the spider. We eat the spider. You pay us three crates of black powder and ten barrels of sour cider, and we turn the brass wheel in the dark. Your castle stays warm, and we stay happy. If the powder does not arrive by next Tuesday, we turn the wheel back. Then, the black sludge comes up your bath drain.”</em>
+— <em>Attributed to an anonymous Goblin Boss negotiating with a human Governor</em></p>
+<h2 id="the-three-way-friction" tabindex="-1">The Three-Way Friction</h2>
+<p>The Heartland today is a chaotic, lawless frontier defined by a tense three-way clash between those who survived, those who returned, and the creatures of the dark:</p>
+<pre><code>                  ┌───────────────────────────────┐
+                  │       THE WILD INTERIOR       │
+                  │   (Trolls, Giants, Beasts)    │
+                  └──────────────┬────────────────┘
+                                 │
+                                 ▼ Wild incursions
+┌─────────────────────────┐   Gang war   ┌──────────────────────────┐
+│   THE GOBLIN CLANS      ├─────────────►│  THE COLONIAL BEACHHEAD  │
+│ (Players, Scrap-Gangs)  │◄─────────────┤ (Companies, Cults, Lords)│
+└─────────────────────────┘ Over-looting └──────────────────────────┘
+</code></pre>
+<ol>
+<li><strong>The Surface Squatters (The Scrap-Barons)</strong>: Descendants of the Low Provincials left behind. They have carved the ruined marble cities into competitive fiefdoms, building wooden palisades inside imperial structures. They treat the ruins as quarries, melting down monuments to forge crude weapons.</li>
+<li><strong>The Returning Colonists</strong>: Expeditions from the Sovereign Arch-Provinces (Merchant Houses, Solar Cults, and Feudal Lords). Equipped with matchlock muskets and wooden galleons, they hunt for intact Sol-Quartz crystals to rebuild their technology.</li>
+<li><strong>The Goblin Syndicates (The Players)</strong>: Descendants of the slave class who survived the collapse. They rule the subterranean underbelly, treating the ruins as an open hardware store. They use their knowledge of the maintenance tunnels to ambush human supply lines and harvest scrap.</li>
+</ol>
+<hr>
+<h2 id="the-grey-ports-black-market-pipelines" tabindex="-1">The Grey Ports: Black Market Pipelines</h2>
+<p>While major colonial ports are locked down by corporate marksmen, the frontier coast features lawless bays known as Grey Ports. Here, Goblin Bosses and human privateers meet face-to-face to conduct illegal trade:</p>
+<ul>
+<li><strong>The Canister Laundering Scheme</strong>: The Actuarial Guilds of the Arch-Provinces levy high tariffs on certified alchemical fuel. To bypass these taxes, human merchants buy salvaged, unrefined fuel canisters from the Goblins at Grey Ports for a fraction of the cost. The merchants then illegally forge the church’s Sacred Solar Pictogram onto the canisters and sell them back in the colonies as legal fuel.</li>
+<li><strong>The Trade Barter</strong>: Goblins have no use for human gold coins. Instead, they trade their salvaged canisters and refined scrap for black powder, precision iron gears, steel files, and human alcohol.</li>
+</ul>
+<hr>
+<h2 id="sabotage-contracts-deniable-assets" tabindex="-1">Sabotage Contracts (Deniable Assets)</h2>
+<p>Competition between the major merchant companies of the Arch-Provinces (such as House Vane and the Aurelian Cartel) is fierce. However, open warfare between human corporations violates guild regulations, which would immediately cancel their monster insurance policies.</p>
+<ul>
+<li><strong>The Deal</strong>: Corporate agents meet secretly with Goblin Bosses in tavern cellars. The humans provide maps of a competitor’s Citadel-Farm or refinery, paying the Goblins in muskets, powder, and steel.</li>
+<li><strong>The Sabotage</strong>: The Goblin <strong>Mob</strong> launches a chaotic, screaming raid on the target. To the public and the Actuarial Guilds, the event is recorded as a tragic, random monster attack. The Goblins keep all the loose machinery and scrap-metal they tear loose, while the hiring company successfully cripples its competitor’s quarterly supply.</li>
+</ul>
+<hr>
+<h2 id="sub-surface-maintenance-monopolies" tabindex="-1">Sub-Surface Maintenance Monopolies</h2>
+<p>Many of the ancient imperial utilities (sewer networks, deep-water pumps, and geothermal steam vents) run directly beneath the newly established colonial port cities. Human engineers are too terrified of the subterranean fauna to descend and maintain them.</p>
+<ul>
+<li><strong>The Accords</strong>: Shady colonial governors sign secret non-aggression pacts with local Goblin Syndicates. The humans turn a blind eye when Goblins steal scrap-metal from the surface docks.</li>
+<li><strong>The Service</strong>: In exchange, the Goblin Boss sends toxic-immune, fast-repairing Goblins into the boiling sub-tunnels to manually clear sludge blockages and keep the city’s heating lines stable.</li>
+<li><strong>The Leverage</strong>: If a governor defaults on their payments of iron rations, powder, or files, the Goblins turn the primary sub-surface valves in the dark, cutting off fresh water and steam to the wealthy human districts above until the trade items are delivered.</li>
+</ul>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

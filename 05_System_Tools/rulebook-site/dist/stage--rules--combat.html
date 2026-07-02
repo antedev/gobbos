@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combat — STAGE Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Playtesting & review materials">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab env-tab--active">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">STAGE Rules</h2>
+        <p class="sidebar-subtitle">Playtesting & review materials</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="true" data-target="rules"><span class="toggle-icon">▾</span>Rules</button><ul class="nav-pages" id="nav-rules" ><li><a href="stage.html" class="nav-link" data-target="rules--overview">Overview</a></li><li><a href="stage--rules--combat.html" class="nav-link nav-link--active" data-target="rules--combat">Combat</a></li><li><a href="stage--rules--movement-and-zones.html" class="nav-link" data-target="rules--movement-and-zones">Movement &amp; Zones</a></li><li><a href="stage--rules--giving-orders.html" class="nav-link" data-target="rules--giving-orders">Giving orders</a></li><li><a href="stage--rules--raid-points.html" class="nav-link" data-target="rules--raid-points">Raid points</a></li><li><a href="stage--rules--keywords-index.html" class="nav-link" data-target="rules--keywords-index">Keywords Index</a></li><li><a href="stage--rules--wounds-conditions.html" class="nav-link" data-target="rules--wounds-conditions">Wounds_Conditions</a></li><li><a href="stage--rules--master-tag-index.html" class="nav-link" data-target="rules--master-tag-index">Master_Tag_Index</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="characters-and-mobs"><span class="toggle-icon">▸</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" style="display: none;"><li><a href="stage--characters-and-mobs--character-creation.html" class="nav-link" data-target="characters-and-mobs--character-creation">Character Creation</a></li><li><a href="stage--characters-and-mobs--gang.html" class="nav-link" data-target="characters-and-mobs--gang">Gang</a></li><li><a href="stage--characters-and-mobs--boons-and-banes.html" class="nav-link" data-target="characters-and-mobs--boons-and-banes">Boons_and_Banes</a></li><li><a href="stage--characters-and-mobs--goblin-mob.html" class="nav-link" data-target="characters-and-mobs--goblin-mob">Goblin_mob</a></li><li><a href="stage--characters-and-mobs--quirks.html" class="nav-link" data-target="characters-and-mobs--quirks">Quirks</a></li><li><a href="stage--characters-and-mobs--level-up-and-death.html" class="nav-link" data-target="characters-and-mobs--level-up-and-death">Level_Up and death</a></li><li><a href="stage--characters-and-mobs--unified-modular-powers-system.html" class="nav-link" data-target="characters-and-mobs--unified-modular-powers-system">Unified_Modular_Powers_System</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="loot"><span class="toggle-icon">▸</span>Loot</button><ul class="nav-pages" id="nav-loot" style="display: none;"><li><a href="stage--loot--loot.html" class="nav-link" data-target="loot--loot">loot</a></li><li><a href="stage--loot--carry-stuff.html" class="nav-link" data-target="loot--carry-stuff">Carry Stuff</a></li><li><a href="stage--loot--equipment.html" class="nav-link" data-target="loot--equipment">Equipment</a></li><li><a href="stage--loot--crafting.html" class="nav-link" data-target="loot--crafting">Crafting</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="enemies"><span class="toggle-icon">▸</span>Enemies</button><ul class="nav-pages" id="nav-enemies" style="display: none;"><li><a href="stage--enemies--enemies.html" class="nav-link" data-target="enemies--enemies">Enemies</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="base"><span class="toggle-icon">▸</span>Base</button><ul class="nav-pages" id="nav-base" style="display: none;"><li><a href="stage--base--lair-rules.html" class="nav-link" data-target="base--lair-rules">Lair_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="travel"><span class="toggle-icon">▸</span>Travel</button><ul class="nav-pages" id="nav-travel" style="display: none;"><li><a href="stage--travel--journey-rules.html" class="nav-link" data-target="travel--journey-rules">Journey_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="magic"><span class="toggle-icon">▸</span>Magic</button><ul class="nav-pages" id="nav-magic" style="display: none;"><li><a href="stage--magic--magic-rules.html" class="nav-link" data-target="magic--magic-rules">Magic_Rules</a></li></ul></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="combat-and-actions" tabindex="-1">Combat and Actions</h1>
+<p>Combat is a key mechanic in Gobbos. The combat can either be only the PC against some foe, or a more tactical battle with loads of Goblins piling on.
+The combat is structured in a number of rounds, that are repeated until the combat ends. All the players act in the Players Active turn, and then the enemies act in the Enemy Active turn. But both can use Reactions to react to anything that the other does.</p>
+<h2 id="actions" tabindex="-1">Actions</h2>
+<p>Actions represent how much a goblin can accomplish in a round. There are three types of actions:</p>
+<ol>
+<li><strong>Standard Actions:</strong> Every PC has <strong>three (3) Standard Actions</strong> per round, reset at the start of each round. Standard Actions are spent to Move, Attack, Plunder, Manipulate, or Order. They can be saved to be used as Reactions.</li>
+<li><strong>Free Actions:</strong> Minor tasks that cost no Standard Actions (e.g., dropping an item, speaking, or activating passive quirks).</li>
+<li><strong>Reactions:</strong> Actions taken out of turn in response to enemy actions (e.g., Dodge or Parry). You must spend a saved Standard Action to perform a Reaction.
+Additionally, PCs have <strong>one (1) Free Order Action</strong> per round (which does not count toward their 3 Standard Actions).</li>
+</ol>
+<p>Each Mob has <strong>two (2) actions</strong>, which are also reset at the start of each round, but they only act when Ordered. When they are left to their own devices (see <a href="#uncontrolled-mobs" class="wikilink" title="Uncontrolled Mobs">Uncontrolled Mobs</a>), they act on their own as per a predefined priority list</p>
+<h3 id="actionlist" tabindex="-1">Actionlist</h3>
+<h4 id="move-mob-or-pc" tabindex="-1">Move (Mob or PC)</h4>
+<p>With a Move action, you can move up to your <a href="#movement" class="wikilink" title="Movement">Movement</a> number of zones. The different conditions of the zones are taken into account, and the movement might be limited or even impossible. If a climb, swim, jump or other action is required based on the circumstances in the zone, you must typically make a <a href="#slink" class="wikilink" title="Slink">Slink</a> test, with the <a href="#difficulty" class="wikilink" title="Difficulty">Difficulty</a> and <a href="#tn" class="wikilink" title="TN">TN</a> set by the GM, but typically clearly denoted by the zone.</p>
+<h4 id="attack-mob-or-pc" tabindex="-1">Attack (Mob or PC)</h4>
+<p>The Attack action can only be used in the Players Active turn.
+To Attack, the player’s base dice pool is based on the player’s <a href="#tough" class="wikilink" title="Tough">Tough</a> for <a href="#melee-attack" class="wikilink" title="Melee attack">Melee attack</a> and <a href="#slink" class="wikilink" title="Slink">Slink</a> for <a href="#ranged-attack" class="wikilink" title="Ranged attack">Ranged attack</a>, modified by any equipment, Quirks, or other circumstances.</p>
+<ul>
+<li><strong>Kill / Wound:</strong> If you roll successes equal to or greater than the target’s current <strong>Defence</strong>, you instantly defeat a standard enemy, deal <strong>1 Wound</strong> to a Boss/Elite (see <a href="../04_Enemies/20_Enemies.md">Enemies</a>), or reduce a Mob’s <strong>Size</strong> by the number of successes scored.</li>
+<li><strong>Stagger:</strong> If you roll at least <strong>one (1) success</strong> but fewer than the target’s current <strong>Defence</strong>, the attack does not deal damage, but it throws them off balance. The target gains the <strong>Staggered</strong> condition until the end of the round.</li>
+<li><strong>Bounce:</strong> If you roll <strong>zero (0) successes</strong>, the attack bounces harmlessly off their armor. Nothing happens.</li>
+</ul>
+<h4 id="plunder-mob-or-pc" tabindex="-1">Plunder (Mob or PC)</h4>
+<p>The <a href="#plunder" class="wikilink" title="Plunder">Plunder</a> action is to pick up any <a href="stage--loot--loot.html" class="wikilink" title="Loot">Loot</a> at where the Player or the Mob stands.</p>
+<h4 id="dodge-parry-reaction" tabindex="-1">Dodge / Parry (Reaction)</h4>
+<p>The Dodge or Parry action can only be used as a <strong>Reaction</strong> to an incoming Attack or Environmental effect. Typically this is in the Enemy Active turn. You <strong>must</strong> have saved a Standard Action from your turn to use this.cor If you are out of actions, you simply take the damage!</p>
+<ul>
+<li><strong>Dodge:</strong> Test <a href="#slink" class="wikilink" title="Slink">Slink</a>.</li>
+<li><strong>Parry:</strong> Test <a href="#tough" class="wikilink" title="Tough">Tough</a> (requires a shield).</li>
+<li><strong>Armor</strong> Armor adds Passive defence dice that do NOT need an action. See more under equipment.</li>
+<li><strong>The Math:</strong> Every success you roll reduces the incoming Damage by 1. If any damage remains, your Gobbo or Mob takes it.</li>
+</ul>
+<p><strong>Mob Defense:</strong>
+Mobs do not naturally dodge. They are a chaotic swarm and simply absorb damage. However, a Mob’s defensive capabilities depend on their equipment and their current combat state (saved actions):</p>
+<ol>
+<li><strong>Armored (Passive):</strong> If a Mob is equipped with Armor, they gain passive defense dice (e.g., <strong>+1d6</strong> or <strong>+2d6</strong>) which are rolled against every incoming attack.</li>
+<li><strong>Saved Actions (Active Defense):</strong> If a Mob has saved actions (because they are <strong>Loitering</strong> and only used 1 action on their turn), they can use their saved action as a Reaction to defend. For each saved action spent, the Mob rolls <strong>1d6</strong> Defence.
+<ul>
+<li><em>Loitering Mobs (1 Saved Action):</em> Rolls <strong>1d6</strong> Defence.</li>
+<li><em>Ordered or Out of Control Mobs (0 Saved Actions):</em> Rolls <strong>0d6</strong> Defence (relying only on passive Armor).</li>
+<li><em>Bane:</em> A <strong>Staggered</strong> Mob suffers a <strong>Bane (-1d)</strong> to their Defence rolls, reducing a loitering Mob’s active defense roll to <strong>0d6</strong>.</li>
+</ul>
+</li>
+<li><strong>Ordered Scatter (Reaction):</strong> If a Mob with 0 saved actions is targeted by an attack, the Boss can spend a saved action (or an unused Free Order Reaction) to yell at them to “Scatter!”. The Mob rolls defence dice equal to the Boss’s <strong>Mouth</strong> stat. If they survive the attack, they may immediately Move 1 Zone to take cover.</li>
+</ol>
+<h3 id="gm-tactics-group-attacks-enemy-swarms" tabindex="-1">GM Tactics: Group Attacks (Enemy Swarms)</h3>
+<p>If multiple enemies surround and attack a Gobbo, the GM should NOT make separate attacks. Instead, they combine into a <strong>Group Attack</strong>. While a PC can only be attacked by a maximum of 3 enemies, there is no limit on attacker on a Mob</p>
+<ul>
+<li>The base damage is the primary enemy’s Attack stat, <strong>+1 damage</strong> for every additional enemy in the swarm.</li>
+<li>The player only spends <strong>one</strong> saved Action to Dodge/Parry the entire Group Attack.</li>
+</ul>
+<blockquote>
+<p><em>GM Advice:</em> Avoid splitting enemies into many small attacks against a single PC. This will instantly drain their saved actions and create a frustrating “death by a thousand cuts.” Swarm them into Group Attacks instead!</p>
+</blockquote>
+<h4 id="manipulate" tabindex="-1">Manipulate</h4>
+<p>The Mainpulate action is a catch all for whenever a Mob or PC tries to interact with an item or the environment in any way. The base dice pool is based on whatever attribute is most relevant to the action, modified by any equipment, Quirks or other circumstances. The <a href="#difficulty" class="wikilink" title="Difficulty">Difficulty</a> and <a href="#tn" class="wikilink" title="TN">TN</a> set by the GM.</p>
+<h4 id="order" tabindex="-1">Order</h4>
+<p>The Order action is used to give commands to your goblins, directing a Mob to use both of their actions for the round. Standard Orders to controlled Mobs do not require a dice roll.</p>
+<ul>
+<li><strong>The 3 Mob States:</strong> A Mob is always in one of three states on their turn:
+<ul>
+<li><strong>Ordered:</strong> Direct instructions from the Boss. They spend both actions as ordered (0 saved actions for defense).</li>
+<li><strong>Loitering:</strong> Under control, but receives no orders. Goblins use <strong>1 action</strong> to loiter (roll/choose on the Loitering Table in <a href="../01_Characters%20&amp;%20Mobs/13_Goblin_mob.md">Goblin Mobs</a>) and save <strong>1 action</strong> for defense (<strong>1d6 Defence</strong>).</li>
+<li><strong>Out of Control:</strong> Broken command (out of sight, size exceeds Grunt, or failed morale). They spend both actions running amok under GM control (roll/choose on the Out of Control Table in <a href="../01_Characters%20&amp;%20Mobs/13_Goblin_mob.md">Goblin Mobs</a>), leaving them with 0 saved actions for defense.</li>
+</ul>
+</li>
+<li><strong>Regaining Control:</strong> To regain control of an Out of Control Mob, the Boss must spend a Standard Action to <strong>Order</strong> them, resolving it using the standard command test rules in <a href="04_Giving%20orders.md">Giving Orders</a>. On a success, the Mob becomes controlled and receives their instructions; on a failure, they ignore the Boss and remain Out of Control.</li>
+<li><strong>Cross-Gang Super Mobs:</strong> Issuing an Order to a Mob merged from multiple different player Gangs <em>always</em> requires a Grunt test (Test <a href="#tough" class="wikilink" title="Tough">Tough</a> if in the same Zone, or <a href="#mouth" class="wikilink" title="Mouth">Mouth</a> from afar).</li>
+<li><strong>The Boredom Rule:</strong> Mobs have short attention spans. When acting (Ordered, Loitering, or Out of Control), a Mob cannot perform the exact same action twice (e.g., they cannot Attack twice, or Plunder twice). <em>Exception:</em> A Mob <em>can</em> take the Move action twice if they are fleeing or charging.</li>
+<li><strong>Free Orders &amp; Maximum Mobs:</strong> Your ability to command the swarm is dictated strictly by your <strong>Mouth</strong> stat progression (see <a href="#stats" class="wikilink" title="Stats">Stats</a>). As you level up Mouth, you can command more Mobs simultaneously, and you are granted additional <strong>Free Orders</strong> per round. You never have to spend your Standard Actions to issue these Free Orders!</li>
+</ul>
+<h2 id="cover" tabindex="-1">Cover</h2>
+<p>Taking cover behind walls, pillars, or upturned tables protects you from ranged attacks. There are two levels of cover:</p>
+<ul>
+<li><strong>Partial Cover:</strong> You are partially blocked (e.g., behind a low barricade, crate, or thick foliage).
+<ul>
+<li><strong>Attacking a target in Partial Cover:</strong> If a PC or Mob attacks a target in Partial Cover, the attack roll suffers a <strong>Bane</strong> (-1d).</li>
+<li><strong>Defending while in Partial Cover:</strong> If you are in Partial Cover and are targeted by a ranged attack, you gain a <strong>Boon</strong> (+1d) to your <strong>Dodge</strong> test.</li>
+</ul>
+</li>
+<li><strong>Full Cover:</strong> You are completely hidden behind a solid obstacle (e.g., a stone pillar, wall, or closed door).
+<ul>
+<li>You cannot be targeted by ranged attacks from that direction. An attacker must move to clear their line of sight or bypass the obstacle before they can attack.</li>
+</ul>
+</li>
+</ul>
+<h2 id="the-combat-loop" tabindex="-1">The Combat loop</h2>
+<p>The combat follows a structured loop, that is repeated until the combat ends.
+0. Combat Setup</p>
+<ol>
+<li>Round start</li>
+<li>Players active turn</li>
+<li>Enemy active turn</li>
+<li>Round closure</li>
+<li>Combat End</li>
+</ol>
+<h3 id="combat-setup" tabindex="-1">Combat Setup</h3>
+<p>The GM sets up any combat at the start of the combat. This typically include a map of the environment, where the goblins and their enemy stands. The GM should point out any obvious places where there is environmental hazard, special conditions or so. However, not all might be visible to the players at once. There might be hidden traps, enemies in hiding or loot that is hidden.
+The GM should also mention what the objectives of the battle, in regards to where there are  <a href="stage--rules--raid-points.html" class="wikilink" title="Raid-Points">Raid-Points</a> to be gain.
+The Setup happens once, and the rest of the steps are looped until you get to the Combat End.</p>
+<h3 id="round-start" tabindex="-1">Round start</h3>
+<p>Make a quick assessment on the status, who is where, who is hiding, and such to give everyone a fair view of the battlefield.</p>
+<h4 id="conditions" tabindex="-1">Conditions</h4>
+<p>Any Conditions with Start of Round-activations happens now for all participants.</p>
+<h4 id="reinforcments" tabindex="-1">Reinforcments</h4>
+<p>If any side gets reinforcements they are placed on the board now in a suitable zone.</p>
+<h4 id="points" tabindex="-1">Points</h4>
+<p>The GM updates if there are any changes to the points to be awarded, such as a new location being discovered or a special character now appeared.</p>
+<h3 id="players-active-turn" tabindex="-1">Players active turn</h3>
+<p>On the Players <em>active</em> turn, they can use any actions they want to move, plunder, attack, or execute other shenanigans.</p>
+<ol>
+<li><strong>Player Actions:</strong> All player characters take their actions in any order. This is when Bosses can move, attack, or issue orders to control their Mobs.</li>
+<li><strong>Unordered Mobs:</strong> Once all players have finished taking their actions, any Mobs that were <strong>not ordered</strong> this turn (both <strong>Loitering</strong> and <strong>Out of Control</strong> Mobs) resolve their behaviors. Roll on the appropriate behavior table for each.
+During this phase, the GM may use enemy reactions to respond to players or mobs (e.g., taking opportunity shots or counter-attacking).</li>
+</ol>
+<h3 id="enemy-active-turn" tabindex="-1">Enemy active turn</h3>
+<p>On the Enemies active turn, they can use whatever action they have left, which might have been spent on reactions.
+In this phase the Players might react to anything a enemy is doing, if they saved up any actions from their active phase.</p>
+<h3 id="round-closure" tabindex="-1">Round closure</h3>
+<h4 id="points-1" tabindex="-1">Points</h4>
+<p>Raid points are calculated, including currently held as well as confirmed, based on objectives and the basic Raid rules.</p>
+<h4 id="conditions-1" tabindex="-1">Conditions</h4>
+<p>All around the table are recommended to do a short assessment of the current standing. How hurt any mobs are, where the enemies are and whatever conditions they might have. Any conditions with End of Round abilities is carried out now. Additionally, all <strong>Staggered</strong> conditions on PCs, Mobs, and Enemies are automatically removed.</p>
+<h4 id="moral-check" tabindex="-1">Moral check</h4>
+<p>The GM and the players do a Morale Check if needed, to see if some or all flees. Few opponents fight to the death, unless there is no alternatives (or they are immune to Morale)</p>
+<h4 id="environmental-effects" tabindex="-1">Environmental effects</h4>
+<p>The GM checks for any changes in the Environment, such as spreading fire or smoke. Perhaps the a damn has been broken floods the battlefield or a fissure in the ground spews out lava. Note down any zones affected by these changes.</p>
+<h4 id="reset-actions" tabindex="-1">Reset actions</h4>
+<p>If the combatants are still willing to fight, go back to the Round start, and resets everyone’s actions.</p>
+<h3 id="combat-end" tabindex="-1">Combat End</h3>
+<p>If there are no one fighting on one side, or one side gives up or flees, the Combat ends.</p>
+<h4 id="fleeing-tactical-retreat" tabindex="-1">Fleeing (Tactical Retreat)</h4>
+<p>Goblins are cowards at heart, and running away is a highly viable survival strategy.</p>
+<ul>
+<li><strong>Escape Zones:</strong> To flee an encounter, a PC or Mob must move into a designated escape zone or exit.</li>
+<li><strong>Disengaging &amp; Opportunity Attacks:</strong> If a PC or Mob attempts to leave a Zone containing alert enemies, they trigger a reactionary Opportunity Attack from each enemy in the zone. To prevent this, they must spend a Standard Action to Disengage (testing <strong>Slink</strong> against the highest enemy <strong>Defence TN</strong>). On a success, they may move out of the Zone safely.</li>
+<li><strong>Carrying Bulk:</strong> Goblins fleeing with heavy treasure are slowed. Standard movement and dragging penalties for <strong>Bulk</strong> apply while fleeing. A PC or Mob can choose to drop their loot as a Free Action to restore full movement speed.</li>
+<li><strong>Mob Fleeing:</strong> Mobs flee when given a “Scatter” or “Retreat” Order, or automatically when a failed <strong>Morale Check</strong> triggers group panic.</li>
+</ul>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

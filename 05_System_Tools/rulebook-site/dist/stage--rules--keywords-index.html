@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keywords Index — STAGE Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Playtesting & review materials">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab env-tab--active">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">STAGE Rules</h2>
+        <p class="sidebar-subtitle">Playtesting & review materials</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="true" data-target="rules"><span class="toggle-icon">▾</span>Rules</button><ul class="nav-pages" id="nav-rules" ><li><a href="stage.html" class="nav-link" data-target="rules--overview">Overview</a></li><li><a href="stage--rules--combat.html" class="nav-link" data-target="rules--combat">Combat</a></li><li><a href="stage--rules--movement-and-zones.html" class="nav-link" data-target="rules--movement-and-zones">Movement &amp; Zones</a></li><li><a href="stage--rules--giving-orders.html" class="nav-link" data-target="rules--giving-orders">Giving orders</a></li><li><a href="stage--rules--raid-points.html" class="nav-link" data-target="rules--raid-points">Raid points</a></li><li><a href="stage--rules--keywords-index.html" class="nav-link nav-link--active" data-target="rules--keywords-index">Keywords Index</a></li><li><a href="stage--rules--wounds-conditions.html" class="nav-link" data-target="rules--wounds-conditions">Wounds_Conditions</a></li><li><a href="stage--rules--master-tag-index.html" class="nav-link" data-target="rules--master-tag-index">Master_Tag_Index</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="characters-and-mobs"><span class="toggle-icon">▸</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" style="display: none;"><li><a href="stage--characters-and-mobs--character-creation.html" class="nav-link" data-target="characters-and-mobs--character-creation">Character Creation</a></li><li><a href="stage--characters-and-mobs--gang.html" class="nav-link" data-target="characters-and-mobs--gang">Gang</a></li><li><a href="stage--characters-and-mobs--boons-and-banes.html" class="nav-link" data-target="characters-and-mobs--boons-and-banes">Boons_and_Banes</a></li><li><a href="stage--characters-and-mobs--goblin-mob.html" class="nav-link" data-target="characters-and-mobs--goblin-mob">Goblin_mob</a></li><li><a href="stage--characters-and-mobs--quirks.html" class="nav-link" data-target="characters-and-mobs--quirks">Quirks</a></li><li><a href="stage--characters-and-mobs--level-up-and-death.html" class="nav-link" data-target="characters-and-mobs--level-up-and-death">Level_Up and death</a></li><li><a href="stage--characters-and-mobs--unified-modular-powers-system.html" class="nav-link" data-target="characters-and-mobs--unified-modular-powers-system">Unified_Modular_Powers_System</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="loot"><span class="toggle-icon">▸</span>Loot</button><ul class="nav-pages" id="nav-loot" style="display: none;"><li><a href="stage--loot--loot.html" class="nav-link" data-target="loot--loot">loot</a></li><li><a href="stage--loot--carry-stuff.html" class="nav-link" data-target="loot--carry-stuff">Carry Stuff</a></li><li><a href="stage--loot--equipment.html" class="nav-link" data-target="loot--equipment">Equipment</a></li><li><a href="stage--loot--crafting.html" class="nav-link" data-target="loot--crafting">Crafting</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="enemies"><span class="toggle-icon">▸</span>Enemies</button><ul class="nav-pages" id="nav-enemies" style="display: none;"><li><a href="stage--enemies--enemies.html" class="nav-link" data-target="enemies--enemies">Enemies</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="base"><span class="toggle-icon">▸</span>Base</button><ul class="nav-pages" id="nav-base" style="display: none;"><li><a href="stage--base--lair-rules.html" class="nav-link" data-target="base--lair-rules">Lair_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="travel"><span class="toggle-icon">▸</span>Travel</button><ul class="nav-pages" id="nav-travel" style="display: none;"><li><a href="stage--travel--journey-rules.html" class="nav-link" data-target="travel--journey-rules">Journey_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="magic"><span class="toggle-icon">▸</span>Magic</button><ul class="nav-pages" id="nav-magic" style="display: none;"><li><a href="stage--magic--magic-rules.html" class="nav-link" data-target="magic--magic-rules">Magic_Rules</a></li></ul></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="keywords-index" tabindex="-1">Keywords Index</h1>
+<p>This is a master list of the core game mechanics and goblin keywords to quickly reference while playing.</p>
+<h2 id="dice-and-tests" tabindex="-1">Dice &amp; Tests</h2>
+<ul>
+<li><strong>Difficulty:</strong> The die face needed to score a “success” (Easy: 4-6, Normal: 5-6, Hard: 6). This is typically dependent on the circumstances of the test.</li>
+<li><strong>Target Number (TN):</strong> The total number of successes required to pass a test. (e.g., Normal:1 means you need one die to land on 5 or 6).This is typically a fixed number.</li>
+<li><strong>Exploding Dice:</strong> Rolling a 6 counts as a success and allows you to roll another die.</li>
+<li><strong>Fumble:</strong> Rolling two or more 1s and zero successes. If you fumble near your Gobbos, you lose 1 Grunt.</li>
+<li><strong>Critical:</strong> Rolling a <strong>6</strong> that explodes, and rolling another <strong>6</strong> on the resulting die (a double-six chain). It grants <strong>+1 Grunt</strong> and an immediate bonus action. See <a href="01_Dice.md#criticals">Dice</a>.</li>
+</ul>
+<h2 id="stats-and-player-characters" tabindex="-1">Stats &amp; Player Characters</h2>
+<ul>
+<li><strong>Stats (Main):</strong> Tough (T), Slink (S), Brains (B), and Mouth (M). Range from 1 to 5. Defines how many dice you roll.</li>
+<li><strong>Grit:</strong> [TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.</li>
+<li><strong>Grunt:</strong> Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).</li>
+<li><strong>Mob:</strong> A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.</li>
+<li><strong>Size:</strong> [TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.</li>
+<li><strong>Quirk:</strong> A modular base ability (a “Knack” or action) that defines a character’s fighting style or special talent. Measured in Tiers (T1-T5).</li>
+<li><strong>Twist:</strong> A modifier attached to a Quirk that alters how it works or adds an extra effect. Multiple Twists can be attached to the same Quirk to create a “Molecule.”</li>
+</ul>
+<h2 id="combat-and-movement" tabindex="-1">Combat &amp; Movement</h2>
+<ul>
+<li><strong>Zone:</strong> An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.</li>
+<li><strong>Cover:</strong> Defensive positioning against ranged attacks. Partial cover grants a <strong>Boon</strong> (+1d) to Dodge, or imposes a <strong>Bane</strong> (-1d) on attacks. Full cover blocks targeting. See <a href="#02-combat" class="wikilink" title="02 Combat">02 Combat</a>.</li>
+<li><strong>Dragging:</strong> Pulling Loot that exceeds your carry capacity. Halves your Movement and imposes penalties.</li>
+<li><strong>Standard Action:</strong> The primary actions spent on a turn (3 per round). Used for Move, Attack, Plunder, Order, or Manipulate. See <a href="#02-combat" class="wikilink" title="02 Combat">02 Combat</a>.</li>
+<li><strong>Free Action:</strong> Minor or immediate actions that cost no Standard Actions (e.g. dropping a weapon or speaking). See <a href="#02-combat" class="wikilink" title="02 Combat">02 Combat</a>.</li>
+<li><strong>Reaction:</strong> An action taken out of turn in response to a trigger (e.g., Dodge/Parry), costing a saved Standard Action. See <a href="#02-combat" class="wikilink" title="02 Combat">02 Combat</a>.</li>
+<li><strong>Passive:</strong> A Quirk or rule that is either always active or triggered automatically without costing a Standard Action, Grunt, or Free Order.</li>
+</ul>
+<h2 id="loot-gear-and-conditions" tabindex="-1">Loot, Gear &amp; Conditions</h2>
+<ul>
+<li><strong>Glory (Raid Points):</strong> Weightless points awarded for objective completion. At the end of the raid, all points are pooled, and the XP payout is shared equally among surviving PCs.</li>
+<li><strong>Greed (Loot Value):</strong> The raw value of stolen goods. Pooled to upgrade the Lair and grant shared XP.</li>
+<li><strong>Bulk:</strong> A measure of how heavy/unwieldy an item is. High bulk reduces movement or requires multiple goblins.</li>
+<li><strong>Tags:</strong> Dynamic elements and physical forces (always bracketed, e.g., <code>[Fire]</code>, <code>[Sticky]</code>, <code>[Toxic]</code>) that can be dynamically slapped onto or stripped away from zones, weapons, and creatures. For a full glossary of baseline tag behaviors and element synthesis rules, see <a href="08_Master_Tag_Index.md">Master Tag Index</a>.</li>
+<li><strong>Traits (Weapon/Armor):</strong> Static physical properties built into equipment (e.g., <code>Bashing</code>, <code>Cutting</code>, <code>Heavy</code>, <code>Loud</code>). They are permanent properties of the item’s design, modify core rules math, and do not participate in element synthesis. See <a href="33_Equipment.md">Equipment</a>.</li>
+<li><strong>Status Effects (Conditions):</strong> Volatile states applied to characters (e.g., <strong>Prone</strong>, <strong>Stunned</strong>, <strong>Weakened</strong>, <strong>Restrained</strong>, <strong>Blinded</strong>, <strong>Terrified</strong>, and <strong>Staggered</strong>). See <a href="07_Wounds_Conditions.md#conditions">Grit and Death</a>.</li>
+<li><strong>First Pick (“My Mob, My Loot”):</strong> If a specific PC’s Mob physically carries a usable item out of the dungeon, their Gang gets First Pick to claim it before the rest of the loot is pooled.</li>
+<li><strong>Raid Boss (MVP):</strong> A title voted upon at the end of a raid. Grants the winner a Flair Item or Temporary Boon for the next raid.</li>
+<li><strong>Lair Upgrades:</strong> Improvements to the base bought with pooled Loot, granting permanent boons to all raiding goblins.</li>
+</ul>
+<h2 id="gangs-and-death" tabindex="-1">Gangs &amp; Death</h2>
+<ul>
+<li><strong>Gang:</strong> A PC’s overarching group (e.g., <em>The Gnashers</em>). Death of a PC results in another gobbo from the same Gang taking over.</li>
+<li><strong>Infamy Level:</strong> A measure of a Gang’s overall standing based on their Loot contributions. Determines how many Stat Advances a newly respawned PC within that Gang starts out with.</li>
+<li><strong>Elder:</strong> A player character who reaches a stat of 6 and automatically retires, granting a permanent passive boon to their Gang.</li>
+<li><strong>Pile of Bones:</strong> The resting place for glorious dead PCs.</li>
+<li><strong>Patron Saint:</strong> A chosen spirit of a dead PC from the Pile of Bones that grants a new PC a highly specific situational boon (so long as the new PC appeases them).</li>
+<li><strong>Named Item:</strong> A piece of gear imbued with the spirit of a dead PC, possessing minor magical properties and “Gang Loyalty.”</li>
+</ul>
+<h2 id="crafting" tabindex="-1">Crafting</h2>
+<ul>
+<li><strong>Custom Gear:</strong> Equipment built by a Gobbo Boss using a Chassis and one or more Oddities. Defined by Tier and Bite rather than a simple quality rating.</li>
+<li><strong>Chassis:</strong> The base item that forms the body of a piece of Custom Gear. Built from Scrap. Determines the item type, Bulk, and base dice.</li>
+<li><strong>Scrap:</strong> Base resources used to build a Chassis. Comes in Tiers 1–5.</li>
+<li><strong>Oddity:</strong> A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.</li>
+<li><strong>Tier (T):</strong> The power level of an Oddity’s positive effect. Ranges from 1 to 5.</li>
+<li><strong>Bite (B):</strong> The instability of an Oddity. Ranges from 0 (pure, stable) to 3 (dangerous). Represents the negative consequences of using the Oddity.</li>
+<li><strong>Taming:</strong> Spending 6s from the Crafting Roll to reduce an Oddity’s active Bite level, boost base item stats, or add flavour tags.</li>
+<li><strong>Crafting Capacity:</strong> The maximum number of Oddities that can be attached to a single item. Equal to the crafter’s Brains score.</li>
+<li><strong>Blueprint:</strong> A physical item (Bulk 0) that records the structure of a specific Oddity effect. Produced by Reverse Engineering. Tradeable.</li>
+<li><strong>Scrap Cascade:</strong> When Custom Gear breaks, each Oddity rolls a d6 for survival. An Oddity that survives becomes Scarred (+1 Bite).</li>
+<li><strong>Scarred:</strong> An Oddity that has survived a Scrap Cascade. Has permanently gained +1 Bite.</li>
+<li><strong>[Bonded]:</strong> A Tag on an Oddity that cannot be freely removed once installed. Removing it requires a specific condition defined by the GM.</li>
+<li><strong>Overclock:</strong> A declaration made before an Attack Action that amplifies Custom Gear’s effect to its maximum, destroys the item, and ignores the target’s Passive Defence dice.</li>
+<li><strong>Bone Oddity:</strong> An Oddity crafted from the remains of a dead Gobbo Boss. Always T1–T2, always B0–B1. Tags reflect how the Boss died.</li>
+</ul>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

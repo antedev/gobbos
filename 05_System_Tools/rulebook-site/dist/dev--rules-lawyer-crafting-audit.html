@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rules_lawyer_crafting_audit — DEV Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Raw ideas and brainstorms">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab env-tab--active">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">DEV Rules</h2>
+        <p class="sidebar-subtitle">Raw ideas and brainstorms</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="gdrs"><span class="toggle-icon">▸</span>GDRs</button><ul class="nav-pages" id="nav-gdrs" style="display: none;"><li><a href="dev.html" class="nav-link" data-target="gdrs--gdr-001-macro-audit-and-unified-effects">GDR-001_Macro_Audit_And_Unified_Effects</a></li><li><a href="dev--gdrs--gdr-002-gang-pillar-and-lair-economy.html" class="nav-link" data-target="gdrs--gdr-002-gang-pillar-and-lair-economy">GDR-002_Gang_Pillar_And_Lair_Economy</a></li><li><a href="dev--gdrs--gdr-003-unified-modular-powers-system.html" class="nav-link" data-target="gdrs--gdr-003-unified-modular-powers-system">GDR-003_Unified_Modular_Powers_System</a></li><li><a href="dev--gdrs--gdr-004-enemy-stat-framework-and-mobs.html" class="nav-link" data-target="gdrs--gdr-004-enemy-stat-framework-and-mobs">GDR-004_Enemy_Stat_Framework_And_Mobs</a></li><li><a href="dev--gdrs--gdr-005-goblin-magic-dice-system.html" class="nav-link" data-target="gdrs--gdr-005-goblin-magic-dice-system">GDR-005_Goblin_Magic_Dice_System</a></li><li><a href="dev--gdrs--gdr-006-environmental-hazards-and-zone-statblocks.html" class="nav-link" data-target="gdrs--gdr-006-environmental-hazards-and-zone-statblocks">GDR-006_Environmental_Hazards_and_Zone_Statblocks</a></li><li><a href="dev--gdrs--gdr-template.html" class="nav-link" data-target="gdrs--gdr-template">GDR-TEMPLATE</a></li></ul></div><div class="nav-group nav-group--solo"><a href="dev--crafting-creative-analysis.html" class="nav-link nav-link--solo" data-target="crafting-creative-analysis">crafting_creative_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-framework-brainstorm">crafting_framework_brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-mechanics-audit.html" class="nav-link nav-link--solo" data-target="crafting-mechanics-audit">crafting_mechanics_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-brainstorm">crafting-brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--creative-genius-crafting-analysis.html" class="nav-link nav-link--solo" data-target="creative-genius-crafting-analysis">creative_genius_crafting_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-modular-threat-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="enemy-modular-threat-framework-brainstorm">Enemy_Modular_Threat_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-stats-draft.html" class="nav-link nav-link--solo" data-target="enemy-stats-draft">Enemy_Stats_Draft</a></div><div class="nav-group nav-group--solo"><a href="dev--equipment-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="equipment-framework-brainstorm">Equipment_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--gang-mechanics-brainstorm.html" class="nav-link nav-link--solo" data-target="gang-mechanics-brainstorm">Gang_Mechanics_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--generic-trick-mechanics.html" class="nav-link nav-link--solo" data-target="generic-trick-mechanics">Generic_Trick_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--initial-trick-list.html" class="nav-link nav-link--solo" data-target="initial-trick-list">Initial_Trick_List</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-brainstorm.html" class="nav-link nav-link--solo" data-target="lair-brainstorm">Lair_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-mechanics-game-engineering-audit.html" class="nav-link nav-link--solo" data-target="lair-mechanics-game-engineering-audit">Lair_Mechanics_Game_Engineering_Audit</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-refined-framework.html" class="nav-link nav-link--solo" data-target="lair-system-refined-framework">Lair_System_Refined_Framework</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-research-deep-dive.html" class="nav-link nav-link--solo" data-target="lair-system-research-deep-dive">Lair_System_Research_Deep_Dive</a></div><div class="nav-group nav-group--solo"><a href="dev--mob-combat-design-advice.html" class="nav-link nav-link--solo" data-target="mob-combat-design-advice">Mob_Combat_Design_Advice</a></div><div class="nav-group nav-group--solo"><a href="dev--research-crafting-systems.html" class="nav-link nav-link--solo" data-target="research-crafting-systems">research_crafting_systems</a></div><div class="nav-group nav-group--solo"><a href="dev--research-deeds-award-mechanics.html" class="nav-link nav-link--solo" data-target="research-deeds-award-mechanics">Research_Deeds_Award_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-base-building.html" class="nav-link nav-link--solo" data-target="researcher-findings-base-building">Researcher_Findings_Base_Building</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-conditions.html" class="nav-link nav-link--solo" data-target="researcher-findings-conditions">Researcher_Findings_Conditions</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-environmental-hazards.html" class="nav-link nav-link--solo" data-target="researcher-findings-environmental-hazards">Researcher_Findings_Environmental_Hazards</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-analysis.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-analysis">Researcher_Findings_OSR_Analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-sources.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-sources">Researcher_Findings_OSR_Sources</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-notes.html" class="nav-link nav-link--solo" data-target="researcher-notes">Researcher_Notes</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-audit-equipment.html" class="nav-link nav-link--solo" data-target="rules-lawyer-audit-equipment">Rules_Lawyer_Audit_Equipment</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-crafting-audit.html" class="nav-link nav-link--solo nav-link--active" data-target="rules-lawyer-crafting-audit">rules_lawyer_crafting_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-system-audit-report.html" class="nav-link nav-link--solo" data-target="rules-lawyer-system-audit-report">Rules_Lawyer_System_Audit_Report</a></div><div class="nav-group nav-group--solo"><a href="dev--static-resistances-opposed-tests.html" class="nav-link nav-link--solo" data-target="static-resistances-opposed-tests">Static_Resistances_Opposed_Tests</a></div><div class="nav-group nav-group--solo"><a href="dev--trick-mechanics-master-list.html" class="nav-link nav-link--solo" data-target="trick-mechanics-master-list">Trick_Mechanics_Master_List</a></div><div class="nav-group nav-group--solo"><a href="dev--unified-modular-power-system.html" class="nav-link nav-link--solo" data-target="unified-modular-power-system">Unified Modular Power System</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="rules-lawyer-audit-crafting-system-vs-stage-rules" tabindex="-1">⚖️ Rules Lawyer Audit: Crafting System vs. Stage Rules</h1>
+<blockquote>
+<p><strong>Scope:</strong> Cross-referencing <code>crafting-brainstorm.md</code>, <code>creative_genius_crafting_analysis.md</code>, and <code>crafting_mechanics_audit.md</code> against all Stage rules (<code>01_Dice.md</code>, <code>02 Combat.md</code>, <code>10_Stats.md</code>, <code>33_Equipment.md</code>, <code>06_Keywords Index.md</code>, <code>07_Wounds_Conditions.md</code>).</p>
+<p><strong>Directive:</strong> The crafting brainstorms supersede <code>33_Equipment.md</code> where there is a conflict, as those rules are undercooked.</p>
+</blockquote>
+<hr>
+<h2 id="critical-conflicts-must-resolve-before-stage-draft" tabindex="-1">🔴 CRITICAL CONFLICTS (Must resolve before Stage draft)</h2>
+<p>These are hard contradictions between two or more rule texts that cannot coexist.</p>
+<h3 id="conflict-1-quality-system-two-incompatible-models" tabindex="-1">CONFLICT 1 — Quality System: Two Incompatible Models</h3>
+<p><strong>Source A (<code>33_Equipment.md</code>, lines 12–17):</strong></p>
+<blockquote>
+<p>Junk: <em>“Breaks on 1 on the gear dice, cannot be repaired.”</em>
+Scrappy: <em>“Breaks on 1 on the gear die, can be repaired.”</em>
+Normal: <em>“Breaks on a Fumble, can be repaired.”</em>
+Superior: <em>“Never breaks.”</em></p>
+</blockquote>
+<p><strong>Source B (crafting-brainstorm Svar 1 + Svar 5):</strong>
+The crafting system defines breakage via a <strong>Usage Die</strong> that degrades when a 1 is rolled, and a <strong>T/D notation</strong> (Tier / Defect) that replaces quality tiers with a two-value shorthand.</p>
+<p><strong>Conflict:</strong> The brainstorm model and the Equipment table use completely different mechanics to define the same concept (when does gear break?). The breakage trigger in <code>33_Equipment.md</code> fires on “the gear dice” — a term that does not exist anywhere in the dice rules (<code>01_Dice.md</code>). There is no such thing as a “gear die” defined in the system.</p>
+<p><strong>Ruling:</strong> <code>33_Equipment.md</code> Quality table is <strong>superseded</strong> by the crafting system per the user’s directive. The entire Quality table must be deleted and replaced. The term “gear die” / “gear dice” is undefined and must be removed from all rules.</p>
+<p><strong>Action Required:</strong> Delete the Quality table from <code>33_Equipment.md</code>. Replace with the T/D framework from the crafting brainstorm when the Stage draft is written.</p>
+<hr>
+<h3 id="conflict-2-the-gear-die-is-a-phantom-mechanic" tabindex="-1">CONFLICT 2 — The “Gear Die” Is a Phantom Mechanic</h3>
+<p><strong>Source A (<code>33_Equipment.md</code>, lines 14–17):</strong></p>
+<blockquote>
+<p>Repeatedly references “the gear dice” and “the gear die” as a trigger for breakage.</p>
+</blockquote>
+<p><strong>Source B (<code>01_Dice.md</code>):</strong></p>
+<blockquote>
+<p>Defines <em>exactly</em> two things that generate dice: the <strong>Dice Pool</strong> (Stat + 1) and <strong>Exploding Dice</strong> (rolling extra d6 on a 6). No “gear die” exists.</p>
+</blockquote>
+<p><strong>Ruling:</strong> The term “gear die” is an undefined phantom. No player reading <code>01_Dice.md</code> and <code>33_Equipment.md</code> together would know what die to roll, how many to roll, or when. This is a broken rule, not merely an undercooked one.</p>
+<p><strong>Action Required:</strong> Every reference to “gear die/dice” must be excised from all documents and replaced with a defined mechanic (either the Usage Die from the brainstorm, or the d6 Scrap Cascade roll from the Mechanics Audit).</p>
+<hr>
+<h3 id="conflict-3-reaction-vs-interrupt-terminology-mismatch" tabindex="-1">CONFLICT 3 — “Reaction” vs. “Interrupt” — Terminology Mismatch</h3>
+<p><strong>Source A (<code>02 Combat.md</code>, line 21):</strong></p>
+<blockquote>
+<p><em>“The Dodge or Parry action can only be used as a <strong>Reaction</strong> to an incoming Attack…”</em></p>
+</blockquote>
+<p><strong>Source A (<code>02 Combat.md</code>, line 44):</strong></p>
+<blockquote>
+<p>Refers to <em>“a Grunt test”</em> for Cross-Gang Super Mobs.</p>
+</blockquote>
+<p><strong>Source B (<code>06_Keywords Index.md</code>, line 25):</strong></p>
+<blockquote>
+<p><em>“<strong>Interrupt / Reaction:</strong> [TODO: Resolve Conflict] An action taken out of turn. The system needs to standardize to one term.”</em></p>
+</blockquote>
+<p><strong>Source C (<code>33_Equipment.md</code>, line 28):</strong></p>
+<blockquote>
+<p>Weapon Trait “Slow”: <em>“Allows the enemy to use a <strong>Reaction</strong> to counterattack…”</em>
+Weapon Trait “Long”: <em>“Allows the wielder to use a <strong>Reaction</strong> to attack…”</em></p>
+</blockquote>
+<p><strong>Ruling:</strong> The game uses “Reaction” throughout <code>02 Combat.md</code> and <code>33_Equipment.md</code>. The Keywords Index explicitly flags that this is an unresolved conflict with “Interrupt.” Since “Reaction” is the dominant term (appears in multiple files), <strong>“Interrupt” should be retired and “Reaction” standardized.</strong> This must be resolved before crafting adds any more uses of these terms — the crafting system’s “Overclock” mechanic and “Scrap Cascade” (triggered on gear break) will need to reference this term.</p>
+<p><strong>Action Required:</strong> Remove “Interrupt” from the Keywords Index. Standardize on “Reaction” system-wide. Flag in <code>06_Keywords Index.md</code>.</p>
+<hr>
+<h2 id="mechanical-gaps-undefined-rules-the-crafting-system-depends-on" tabindex="-1">🟠 MECHANICAL GAPS (Undefined rules the crafting system depends on)</h2>
+<p>These are places where the crafting system references a mechanic that doesn’t exist yet anywhere in Stage.</p>
+<h3 id="gap-1-the-crafting-roll-pool-undefined" tabindex="-1">GAP 1 — The Crafting Roll: Pool Undefined</h3>
+<p><strong>Problem:</strong> The brainstorm (<code>crafting-brainstorm.md</code>, Svar 5, Svar 1) repeatedly says the crafter “rolls their dice pool” during crafting. But <code>01_Dice.md</code> states: <em>“The dice pool is usually equal to their main stat + 1.”</em></p>
+<p>Which stat governs crafting? The Mechanics Audit assumes <strong>Brains</strong>, and this is the logical choice — but it is <strong>not stated anywhere in the Stage rules</strong>. <code>10_Stats.md</code> lists Brains as: <em>“Used for noticing stuff, tinkering, traps, and magic.”</em> The word “crafting” does not appear in the Brains description.</p>
+<p><strong>Action Required:</strong> Add “crafting” explicitly to the Brains stat description in <code>10_Stats.md</code>. Define the crafting roll as: <strong>Brains + 1</strong> (plus any Infrastructure/Workshop bonus).</p>
+<hr>
+<h3 id="gap-2-utility-slots-vs-crafting-capacity-two-uses-of-the-same-number" tabindex="-1">GAP 2 — Utility Slots vs. Crafting Capacity: Two Uses of the Same Number</h3>
+<p><strong>Problem (<code>10_Stats.md</code>, line 35–40):</strong></p>
+<blockquote>
+<p><em>“Brains determines your <strong>Utility Slots</strong> (for carrying Magic Words or Contraptions without consuming standard Bulk).”</em></p>
+</blockquote>
+<p><strong>Problem (crafting system):</strong>
+The crafting brainstorm defines that the number of Oddity <strong>slots</strong> on a Chassis is gated by <strong>Brains</strong>. The Mechanics Audit (Part 4, Issue 2) correctly identifies this collision, and recommends splitting into two distinct pools — <strong>Utility Slots</strong> (inventory) and <strong>Crafting Capacity</strong> (max Oddities per item) — both numerically equal to Brains but independent.</p>
+<p><strong>Ruling:</strong> This is a legitimate conflict between two undercooked rules. Both the Magic system (<code>10_Stats.md</code> explicitly calls out <code>TODO: These mechanics will be expanded in the upcoming Magic and Crafting rules</code>) and the Crafting system are trying to use the same mechanical hook. The <code>TODO</code> note confirms this is <strong>known and unresolved</strong>. The dual-pool solution from the Mechanics Audit is clean and consistent.</p>
+<p><strong>Action Required:</strong> When <code>10_Stats.md</code> is updated, the Brains section must explicitly define both pools. The rule must be: <em>“Brains = Utility Slots (for Magic Words and Contraptions). Brains also = your maximum Crafting Capacity (max number of Oddities that can be attached to a single item). These are two separate budgets.”</em></p>
+<hr>
+<h3 id="gap-3-fumble-in-a-crafting-roll-no-rule-exists" tabindex="-1">GAP 3 — Fumble in a Crafting Roll: No Rule Exists</h3>
+<p><strong>Problem:</strong> The core dice rules (<code>01_Dice.md</code>, line 27) state:</p>
+<blockquote>
+<p><em>“If your final result has zero successes, and the physical dice show at least two 1s, you have fumbled! For a PC this could mean loosing Grunt as you humiliate yourself in front of your goblins.”</em></p>
+</blockquote>
+<p>The crafting brainstorm (Svar 1, line 78) proposes that rolling 1s in the crafting pool triggers “weird effects from a random table.” These two outcomes are <strong>incompatible</strong>: standard Fumble costs Grunt; crafting Fumble should cause a “weird effect.” There is no explicit rule saying crafting uses a modified Fumble procedure.</p>
+<p>Furthermore: Grunt loss requires <em>“one or more mobs in the same zone or adjacent zone.”</em> The crafter is in their <strong>Lair</strong> during Downtime, likely surrounded by their Mob. So a Fumble during crafting would technically cause Grunt loss AND potentially a chaos table result, with no rule saying which takes priority.</p>
+<p><strong>Action Required:</strong> The Stage draft for crafting <strong>must</strong> explicitly state whether the standard Fumble rule applies during the crafting roll, or whether crafting uses a separate resolution (e.g., Chaos Table for 1s, no Grunt penalty during Downtime). <strong>Recommendation:</strong> State that Fumble rules do <strong>not</strong> apply during Downtime crafting rolls. Instead, each 1 rolled contributes to a “Chaos Result” (a short table of flavor effects, not mechanical penalties). This aligns with Tenet #1 (fun at table) and Tenet #4 (feel like playing goblins).</p>
+<hr>
+<h3 id="gap-4-exploding-6s-in-the-crafting-roll-ambiguity" tabindex="-1">GAP 4 — Exploding 6s in the Crafting Roll: Ambiguity</h3>
+<p><strong>Problem:</strong> The core dice rules (<code>01_Dice.md</code>, line 23–24) state:</p>
+<blockquote>
+<p><em>“Every time you roll a 6, it is not only a success but allows you to roll an additional dice.”</em></p>
+</blockquote>
+<p>The crafting brainstorm states that 6s are spent to <strong>Tame Defects</strong> (reduce D level). If a 6 explodes and generates another die that is also a 6, do <em>both</em> 6s count as Taming? Does the second 6 also explode?</p>
+<p>If yes: this dramatically improves high-Brains crafter odds and needs to be reflected in probability tables.
+If no: you must explicitly say <em>“In a crafting roll, 6s do not explode”</em> — which creates an exception to a core rule, violating Tenet #2 (no interpretation after rolling).</p>
+<p><strong>Action Required:</strong> The Stage draft must explicitly state the behavior. <strong>Recommendation:</strong> 6s in crafting <strong>do</strong> explode (keeping rules consistent with <code>01_Dice.md</code>) and the explosion die <strong>does</strong> generate an additional Taming success. This avoids a rules exception and rewards high-Brains crafters more meaningfully.</p>
+<hr>
+<h3 id="gap-5-gear-breaks-trigger-when-does-it-happen-in-custom-gear" tabindex="-1">GAP 5 — “Gear Breaks” Trigger: When Does It Happen in Custom Gear?</h3>
+<p><strong>Problem:</strong> The old <code>33_Equipment.md</code> table triggered breakage on “rolling a 1 on the gear die.” The brainstorm proposes the Usage Die (degrades when a 1 is rolled in the dice pool). But the core dice rules (<code>01_Dice.md</code>, line 26) explicitly state:</p>
+<blockquote>
+<p><em>“Note that rolling a 1 <strong>never cancels out a success</strong>. You simply count your successes and you count your 1s.”</em></p>
+</blockquote>
+<p>If a 1 in the dice pool triggers gear degradation AND the rule says 1s don’t cancel successes, those two rules are consistent with each other. However, the question becomes: does gear degrade on <strong>any</strong> roll (including Manipulate, Brains tests, etc.) or <strong>only on attack rolls</strong>? This is undefined.</p>
+<p><strong>Action Required:</strong> The Stage draft must specify: Custom Gear only degrades on the <strong>Attack roll</strong> (the moment of use under stress). Non-combat use does not trigger degradation. This prevents absurd outcomes like a weapon degrading when you use Brains to pick a lock.</p>
+<hr>
+<h3 id="gap-6-scrap-cascade-and-the-breaks-event-no-definition-in-stage" tabindex="-1">GAP 6 — Scrap Cascade and the “Breaks” Event: No Definition in Stage</h3>
+<p><strong>Problem:</strong> The Mechanics Audit proposes a Scrap Cascade rule (roll 1d6 per attached Oddity when the item breaks). However, “the item breaks” has no currently defined trigger in Stage. The old <code>33_Equipment.md</code> table used “the gear die” (which doesn’t exist). Without a defined break event, the Scrap Cascade has no activation condition.</p>
+<p><strong>Action Required:</strong> Define what “gear breaking” means mechanically for Custom Gear. <strong>Proposed rule:</strong> <em>“Custom Gear is destroyed when its Quality Die (if using a Usage Die) reaches its minimum face, OR when a weapon Attack roll produces a Fumble.”</em>. The Scrap Cascade then triggers immediately.</p>
+<hr>
+<h3 id="gap-7-the-overclocking-action-not-defined-as-an-action-type" tabindex="-1">GAP 7 — The Overclocking Action: Not Defined as an Action Type</h3>
+<p><strong>Problem:</strong> The Mechanics Audit proposes “Overclock” as a pre-roll declaration. <code>02 Combat.md</code> defines three action types: Standard Action, Free Order, and Reaction. Overclock does not fit cleanly into any of these. It is a <strong>modifier declared before the Attack roll</strong>, not an action itself.</p>
+<p><strong>Action Required:</strong> Define Overclock as a <strong>declaration made before spending the Attack action</strong>, not as a separate action. Syntactically: <em>“Before declaring an Attack Action, you may declare an Overclock…”</em> This preserves action economy and doesn’t add a fourth action type.</p>
+<hr>
+<h3 id="gap-8-downtime-phase-not-defined-anywhere-in-stage" tabindex="-1">GAP 8 — Downtime Phase: Not Defined Anywhere in Stage</h3>
+<p><strong>Problem:</strong> The crafting brainstorm (Prompt 3, line 162) and Creative Genius Analysis both reference the “Lair Phase” and “Downtime” as the context for crafting. <strong>No Downtime or Lair Phase rules exist in Stage.</strong> The <code>01_STAGE_Drafts/05_Base/</code> folder is empty.</p>
+<p><strong>Action Required:</strong> Before the Crafting Stage draft can be fully self-contained, a minimal Downtime/Lair Phase skeleton must exist in <code>05_Base/</code>. Crafting rules should reference it. At minimum, the Downtime section needs to define: what activities are available, whether time is a resource, and whether Downtime actions are limited.</p>
+<hr>
+<h2 id="terminology-issues-rules-are-inconsistent-in-language" tabindex="-1">🟡 TERMINOLOGY ISSUES (Rules are inconsistent in language)</h2>
+<p>These don’t break mechanics but will cause confusion at the table.</p>
+<h3 id="term-1-dice-pool-vs-unnamed-concept" tabindex="-1">TERM 1 — “Dice Pool” vs. unnamed concept</h3>
+<p>The core rules (<code>01_Dice.md</code>) never names the rolling mechanic beyond “dice pool.” The brainstorm (Prompt 2, line 92) notes: <em>“Och kalla det inte ‘pölar’ för dice pools, det låter dumt.”</em> This Swedish session note reveals the design intent is to avoid the term “dice pool” in final rules text. However, <code>01_Dice.md</code> uses it (line 22). This should be standardized to a consistent term — the rules currently just say “your dice pool” which is fine in English, but the heading section <code>01_Dice.md</code> should use the same term consistently throughout.</p>
+<p><strong>Not a blocker.</strong> Flag for text layout review.</p>
+<hr>
+<h3 id="term-2-weapon-traits-vs-item-traits-vs-tags" tabindex="-1">TERM 2 — “Weapon Traits” vs. “Item Traits” vs. “Tags”</h3>
+<p><code>33_Equipment.md</code> uses “Weapon Traits” (line 19) and “Armor Traits” (line 32) for properties.
+<code>06_Keywords Index.md</code> uses “Item Traits” (line 32) as a <code>[TODO]</code> placeholder.
+The crafting brainstorm uses “Tags” throughout as the name for Oddity properties.</p>
+<p>These are three names for the same concept. A unified term must be chosen:</p>
+<ul>
+<li><strong>Tags</strong> — short, goblin-appropriate, aligns with brainstorm</li>
+<li><strong>Traits</strong> — more traditional TTRPG terminology, already in <code>33_Equipment.md</code></li>
+</ul>
+<p><strong>Action Required:</strong> Choose one term system-wide. <strong>Recommendation: “Tags.”</strong> It’s shorter, more goblin-flavored, and used consistently in the crafting brainstorm. Update <code>33_Equipment.md</code> weapon/armor sections to say “Tags” not “Traits.” Update <code>06_Keywords Index.md</code> to define “Tags” rather than “Item Traits.”</p>
+<hr>
+<h3 id="term-3-grit-vs-wounds-vs-hp" tabindex="-1">TERM 3 — “Grit” vs. “Wounds” vs. “HP”</h3>
+<p><code>10_Stats.md</code> defines <strong>Grit</strong> as health (line 44). <code>07_Wounds_Conditions.md</code> uses “wounds” (line 1, 2, heading). The Conditions table in <code>07_Wounds_Conditions.md</code> uses “Wound” in the title but the condition “Weakened” says <em>“-1d on Tough”</em> — it doesn’t reduce Grit.</p>
+<p>The crafting brainstorm (<code>crafting-brainstorm.md</code> Svar 5, line 248) describes a D2 Defect as <em>“Vapnet bränner dig (kostar lite HP)”</em> — using “HP,” not “Grit.” The Mechanics Audit translates this as “costs HP (Grit).”</p>
+<p><strong>Action Required:</strong> Standardize on <strong>Grit</strong> exclusively. Every reference to “wounds,” “HP,” or “health” in all documents must become “Grit.” The <code>07_Wounds_Conditions.md</code> title should be “Grit &amp; Conditions.”</p>
+<hr>
+<h3 id="term-4-mob-size-referenced-without-consistent-definition" tabindex="-1">TERM 4 — “Mob Size” Referenced Without Consistent Definition</h3>
+<p><code>10_Stats.md</code> (line 47) states: <em>“Grunt 3 means you can command a maximum Size 3 Mob.”</em>
+<code>02 Combat.md</code> (line 8) says <em>“Each Mob has two (2) actions.”</em>
+<code>13_Goblin_mob.md</code> presumably defines Mob Size in detail (not audited here), but the Keywords Index (line 16–17) says <em>“Size: [TODO: Define for PCs]”</em> — confirming it is still incomplete.</p>
+<p><strong>Action Required:</strong> Before crafting’s “Mob-Scale Crafting” (even as a Brains Trick) is drafted, Mob Size must be formally defined. The Brains Trick proposal gates on Mob size/mechanics that are currently undefined.</p>
+<hr>
+<h2 id="clean-approved-no-conflicts-found" tabindex="-1">🟢 CLEAN / APPROVED (No conflicts found)</h2>
+<p>These crafting proposals have <strong>no conflicts</strong> with existing Stage rules:</p>
+<table>
+<thead>
+<tr>
+<th>Proposal</th>
+<th>Status</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Three-Layer Resource Model</td>
+<td>✅ Clean</td>
+<td>No conflict. Slots naturally into existing Loot framework.</td>
+</tr>
+<tr>
+<td>“Build Always Succeeds” Principle</td>
+<td>✅ Clean</td>
+<td>No conflict. Aligns with all Tenets.</td>
+</tr>
+<tr>
+<td>T/D Notation</td>
+<td>✅ Clean</td>
+<td>Elegant. No conflicts. Needs the Defect scale defined.</td>
+</tr>
+<tr>
+<td>Reverse Engineering</td>
+<td>✅ Clean</td>
+<td>Maps to Manipulate action in <code>02 Combat.md</code>.</td>
+</tr>
+<tr>
+<td>Blueprints as Social Currency</td>
+<td>✅ Clean</td>
+<td>Slots into Loot system as a special item type.</td>
+</tr>
+<tr>
+<td>Scrap Cascade Formula (d6 survival roll)</td>
+<td>✅ Clean</td>
+<td>Once “gear break” trigger is defined (see GAP 6).</td>
+</tr>
+<tr>
+<td>Cursed Relics / Bonded Tag</td>
+<td>✅ Clean</td>
+<td>Lightweight. Just a Tag.</td>
+</tr>
+<tr>
+<td>Bone Oddities</td>
+<td>✅ Clean</td>
+<td>Direct extension of Named Item / Patron Saint keywords.</td>
+</tr>
+<tr>
+<td>Modifier-Type Oddities (Katalysatorer)</td>
+<td>✅ Clean</td>
+<td>Good design space. No conflicts.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="summary-action-items-prioritized" tabindex="-1">Summary: Action Items Prioritized</h2>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Issue</th>
+<th>Blocking Stage?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔴 1</td>
+<td>Define and delete the phantom “gear die/dice” term everywhere</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>🔴 2</td>
+<td>Delete old Quality table from <code>33_Equipment.md</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>🔴 3</td>
+<td>Standardize “Reaction” (retire “Interrupt”) in Keywords Index</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>🟠 4</td>
+<td>Define the crafting roll explicitly (Brains + 1, Workshop bonus)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>🟠 5</td>
+<td>Split Brains into Utility Slots + Crafting Capacity in <code>10_Stats.md</code></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>🟠 6</td>
+<td>Decide: Fumble rule in crafting? Or Chaos Table?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>🟠 7</td>
+<td>Decide: Do 6s explode in crafting, and do explosion dice Tame?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>🟠 8</td>
+<td>Define “gear break” trigger for Custom Gear</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>🟠 9</td>
+<td>Define “Overclock” as a pre-Attack declaration, not a separate Action</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>🟡 10</td>
+<td>Create Downtime/Lair Phase skeleton in <code>05_Base/</code></td>
+<td>Partial</td>
+</tr>
+<tr>
+<td>🟡 11</td>
+<td>Standardize “Tags” system-wide (retire “Traits” and “Item Traits”)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>🟡 12</td>
+<td>Standardize “Grit” system-wide (retire “HP,” “wounds,” “health”)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>🟡 13</td>
+<td>Define Mob Size formally before Mob-Scale Crafting can be drafted</td>
+<td>Partial</td>
+</tr>
+</tbody>
+</table>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enemies — STAGE Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Playtesting & review materials">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab env-tab--active">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">STAGE Rules</h2>
+        <p class="sidebar-subtitle">Playtesting & review materials</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="stage.html" class="nav-link" data-target="rules--overview">Overview</a></li><li><a href="stage--rules--combat.html" class="nav-link" data-target="rules--combat">Combat</a></li><li><a href="stage--rules--movement-and-zones.html" class="nav-link" data-target="rules--movement-and-zones">Movement &amp; Zones</a></li><li><a href="stage--rules--giving-orders.html" class="nav-link" data-target="rules--giving-orders">Giving orders</a></li><li><a href="stage--rules--raid-points.html" class="nav-link" data-target="rules--raid-points">Raid points</a></li><li><a href="stage--rules--keywords-index.html" class="nav-link" data-target="rules--keywords-index">Keywords Index</a></li><li><a href="stage--rules--wounds-conditions.html" class="nav-link" data-target="rules--wounds-conditions">Wounds_Conditions</a></li><li><a href="stage--rules--master-tag-index.html" class="nav-link" data-target="rules--master-tag-index">Master_Tag_Index</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="characters-and-mobs"><span class="toggle-icon">▸</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" style="display: none;"><li><a href="stage--characters-and-mobs--character-creation.html" class="nav-link" data-target="characters-and-mobs--character-creation">Character Creation</a></li><li><a href="stage--characters-and-mobs--gang.html" class="nav-link" data-target="characters-and-mobs--gang">Gang</a></li><li><a href="stage--characters-and-mobs--boons-and-banes.html" class="nav-link" data-target="characters-and-mobs--boons-and-banes">Boons_and_Banes</a></li><li><a href="stage--characters-and-mobs--goblin-mob.html" class="nav-link" data-target="characters-and-mobs--goblin-mob">Goblin_mob</a></li><li><a href="stage--characters-and-mobs--quirks.html" class="nav-link" data-target="characters-and-mobs--quirks">Quirks</a></li><li><a href="stage--characters-and-mobs--level-up-and-death.html" class="nav-link" data-target="characters-and-mobs--level-up-and-death">Level_Up and death</a></li><li><a href="stage--characters-and-mobs--unified-modular-powers-system.html" class="nav-link" data-target="characters-and-mobs--unified-modular-powers-system">Unified_Modular_Powers_System</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="loot"><span class="toggle-icon">▸</span>Loot</button><ul class="nav-pages" id="nav-loot" style="display: none;"><li><a href="stage--loot--loot.html" class="nav-link" data-target="loot--loot">loot</a></li><li><a href="stage--loot--carry-stuff.html" class="nav-link" data-target="loot--carry-stuff">Carry Stuff</a></li><li><a href="stage--loot--equipment.html" class="nav-link" data-target="loot--equipment">Equipment</a></li><li><a href="stage--loot--crafting.html" class="nav-link" data-target="loot--crafting">Crafting</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="true" data-target="enemies"><span class="toggle-icon">▾</span>Enemies</button><ul class="nav-pages" id="nav-enemies" ><li><a href="stage--enemies--enemies.html" class="nav-link nav-link--active" data-target="enemies--enemies">Enemies</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="base"><span class="toggle-icon">▸</span>Base</button><ul class="nav-pages" id="nav-base" style="display: none;"><li><a href="stage--base--lair-rules.html" class="nav-link" data-target="base--lair-rules">Lair_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="travel"><span class="toggle-icon">▸</span>Travel</button><ul class="nav-pages" id="nav-travel" style="display: none;"><li><a href="stage--travel--journey-rules.html" class="nav-link" data-target="travel--journey-rules">Journey_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="magic"><span class="toggle-icon">▸</span>Magic</button><ul class="nav-pages" id="nav-magic" style="display: none;"><li><a href="stage--magic--magic-rules.html" class="nav-link" data-target="magic--magic-rules">Magic_Rules</a></li></ul></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="20-enemies" tabindex="-1">20. Enemies</h1>
+<p><em>Goblins are small, weak, and easily squished. The world is full of big, scary things that want to squash them. But a goblin doesn’t fight one-on-one—they fight as a screeching horde, using dirty tricks and chaotic numbers to bring down the tall-men.</em></p>
+<hr>
+<h2 id="1-core-enemy-framework" tabindex="-1">1. Core Enemy Framework</h2>
+<p>All combat encounters in Gobbos are governed by three overarching rules that define how enemies operate:</p>
+<h3 id="deterministic-threats" tabindex="-1">Deterministic Threats</h3>
+<p>The GM never rolls dice. Enemies do not test for success or roll to hit. Their actions are guaranteed threats. If an enemy attacks a PC or <strong>Mob</strong>, it deals its listed damage automatically unless the player spends a saved action to <strong>Dodge</strong> (testing <strong>Slink</strong>) or <strong>Parry</strong> (testing <strong>Tough</strong>).</p>
+<h3 id="the-three-enemy-scales" tabindex="-1">The Three Enemy Scales</h3>
+<p>Enemies are structured into three distinct mechanical types to determine how they take damage and die:</p>
+<ol>
+<li><strong>Standard Enemies:</strong> The default foe. They are <strong>One-Hit Kill</strong>. Rolling successes equal to or greater than their <strong>Defence</strong> <strong>Target Number (TN)</strong> instantly defeats them.</li>
+<li><strong>Bosses &amp; Elites:</strong> Powerhouses that cannot be killed in a single strike. They track damage using a <strong>Wounds</strong> track.</li>
+<li><strong>Enemy Mobs:</strong> Groups of standard enemies acting as a single unit, using a shared <strong>Dice-HP</strong> pool.</li>
+</ol>
+<hr>
+<h2 id="2-the-stat-block" tabindex="-1">2. The Stat Block</h2>
+<p>Every enemy is defined by a simple five-part stat block:</p>
+<ul>
+<li><strong>Attack:</strong> The base physical damage the enemy deals automatically when it performs an attack action.</li>
+<li><strong>Defence (Target Number):</strong> The number of <strong>successes</strong> a player must roll on an Attack test to deal a <strong>Wound</strong> or instantly kill the enemy.</li>
+<li><strong>Movement:</strong> How many <strong>Zones</strong> the enemy can cross with a single action.</li>
+<li><strong>Range:</strong> The distance at which the enemy can attack: Melee (same <strong>Zone</strong>) or Ranged (X <strong>Zones</strong>).</li>
+<li><strong>Special:</strong> The creature’s Ancestry, physical tags, and unique combat behaviors.</li>
+</ul>
+<blockquote>
+<p><strong>Example: Angry Farmer</strong></p>
+<ul>
+<li><strong>Attack:</strong> 1 (Pitchfork)</li>
+<li><strong>Defence:</strong> 1 (Unarmored)</li>
+<li><strong>Movement:</strong> 1</li>
+<li><strong>Range:</strong> Melee</li>
+<li><strong>Special:</strong> None</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="3-the-trait-hierarchy-framework" tabindex="-1">3. The Trait Hierarchy Framework</h2>
+<p>To minimize GM cognitive load and prevent rules bloat, all enemy behaviors and custom capabilities are structured into a strict three-layer rules hierarchy. This framework categorizes creature properties based on their scope and how they are resolved during play.</p>
+<h3 id="layer-1-ancestries" tabindex="-1">Layer 1: Ancestries</h3>
+<p>Every creature belongs to exactly <strong>one</strong> Ancestry, which establishes its core behavioral and psychological foundation.</p>
+<ul>
+<li><strong>The Behavioral Foundation:</strong> The Ancestry dictates how the creature reacts to <strong>Morale Checks</strong>, psychological conditions (such as <strong>Terrified</strong> or <strong>Dumb</strong>), and natural healing.</li>
+<li><strong>GM Resolution:</strong> Ancestry rules are universal. The GM resolves ancestry behaviors using the main rules reference, meaning individual stat blocks do not need to print these rules.</li>
+</ul>
+<h3 id="layer-2-standardized-tags" tabindex="-1">Layer 2: Standardized Tags</h3>
+<p>Standardized Tags modify a creature’s physical properties, movement, or targeting capabilities. A creature may possess zero, one, or more standardized tags.</p>
+<ul>
+<li><strong>The Physical Modifier:</strong> A tag represents a common physiological trait (such as flight, size scaling, passive armor, or stealth). Each tag applies a fixed, standard mechanical modifier to the core combat and movement rules.</li>
+<li><strong>GM Resolution:</strong> Tags are standardized keywords. If an enemy has a tag on its stat block, its effect is resolved using the universal tags reference catalog.</li>
+</ul>
+<h3 id="layer-3-unique-statblock-traits" tabindex="-1">Layer 3: Unique Statblock Traits</h3>
+<p>Unique Statblock Traits are specialized behaviors or combat tactics custom-written for a specific creature type.</p>
+<ul>
+<li><strong>The Local Exception:</strong> A unique trait is written directly in the “Special” field of the enemy’s stat block. It applies a custom modifier that overrides standard rules when its specific trigger is met.</li>
+<li><strong>The Slot Limit:</strong> To prevent rules bloat, standard enemies are strictly limited to a maximum of <strong>one (1) unique statblock trait</strong>. Elites and Bosses may hold a maximum of <strong>two (2) unique statblock traits</strong>.</li>
+<li><strong>GM Resolution:</strong> Because unique traits are spelled out directly on the monster’s stat block, the GM can read and resolve them in real-time without flipping to other rule documents.</li>
+</ul>
+<hr>
+<h2 id="4-enemy-mobs-swarms" tabindex="-1">4. Enemy Mobs (Swarms)</h2>
+<p>Enemy Mobs represent swarms of standard, weak units acting as a single tactical squad.</p>
+<h3 id="symmetrical-health-dice-hp" tabindex="-1">Symmetrical Health (Dice-HP)</h3>
+<p>An Enemy <strong>Mob</strong> of <strong>Size X</strong> (Size 1–5) is tracked using <strong>X physical D6s</strong> on the table, starting at the “6” face.</p>
+<ul>
+<li><strong>Standard Damage:</strong> Damage reduces the face of a single die. Spillover damage applies.</li>
+<li><strong>AoE / Cleave:</strong> <strong>Area of Effect (AoE)</strong> and Cleave attacks apply their damage to <strong>every single die</strong> in the Mob’s pool simultaneously.
+<ul>
+<li><em>Cleave Attacks:</em> A player using a weapon/ability with the <code>Cleave</code> trait can distribute their excess <strong>successes</strong> to kill multiple units in the Mob (each multiple of the unit’s <strong>Defence TN</strong> removes 1 point of Mob Size).</li>
+<li><em>AoE Attacks:</em> An <code>AoE</code> attack (like a fire bomb) deals its flat damage directly to every die in the Mob’s pool.</li>
+</ul>
+</li>
+</ul>
+<h3 id="deterministic-attack-scaling" tabindex="-1">Deterministic Attack Scaling</h3>
+<p>An Enemy <strong>Mob</strong>’s automatic attack damage scales with its size:
+$\text{Mob Attack Damage} = \text{Base Unit Attack} + (\text{Current Size} - 1)$</p>
+<h3 id="mob-constraints" tabindex="-1">Mob Constraints</h3>
+<ul>
+<li><strong>No Elite Mobs:</strong> <strong>Mobs</strong> can only consist of standard, one-hit-kill enemies. Elite and Boss enemies must always be fought as individual units.</li>
+<li><strong>Mob Morale Units:</strong> Each point of current <strong>Mob</strong> <strong>Size</strong> counts as one “unit” when calculating the 50% catastrophic loss threshold for group <strong>Morale Checks</strong>.</li>
+</ul>
+<hr>
+<h2 id="5-bosses-elites-and-wounds" tabindex="-1">5. Bosses, Elites, and Wounds</h2>
+<p>Elite units and Bosses utilize a <strong>Wounds</strong> track.</p>
+<ul>
+<li>To deal <strong>1 Wound</strong> to a Boss, a player must roll <strong>successes</strong> equal to or greater than its <strong>Defence</strong> <strong>Target Number (TN)</strong> in a single attack.</li>
+</ul>
+<blockquote>
+<blockquote>
+<p><strong>GOLDEN RULE: The Overkill Rule</strong>
+For every multiple of the <strong>Defence</strong> <strong>Target Number (TN)</strong> achieved on a single roll, the Boss takes an additional <strong>Wound</strong>.</p>
+</blockquote>
+</blockquote>
+<hr>
+<h2 id="6-morale-and-group-flight" tabindex="-1">6. Morale &amp; Group Flight</h2>
+<p>Every enemy group has a static <strong>Morale TN</strong> (e.g. Peasant = <strong>Morale TN 1</strong>, Guard = <strong>Morale TN 3</strong>).</p>
+<h3 id="the-morale-check" tabindex="-1">The Morale Check</h3>
+<p>A group <strong>Morale Check</strong> is triggered at the end of the round if the enemies suffered a catastrophic loss (e.g. losing 50% of their total units/<strong>Mob</strong> <strong>Size</strong>, their Commander dying, or suffering massive explosive damage).</p>
+<ul>
+<li><strong>The Roll:</strong> The players roll a combined <code>Swarm Terror</code> pool of <strong>d6s</strong> as a <strong>Normal</strong> test (successes on 5 or 6). The number of dice in the pool equals the <strong>total Size of all surviving Mobs + surviving PCs</strong> in the current and adjacent <strong>Zones</strong>.</li>
+<li><strong>The Result:</strong> If the players roll <strong>successes</strong> equal to or greater than the enemy group’s <strong>Morale TN</strong>, the enemies break!</li>
+</ul>
+<h3 id="fleeing" tabindex="-1">Fleeing</h3>
+<p>When enemies break, they drop all heavy loot and must use their 2 Actions on their turns to move toward the nearest exit or safety. If their escape path is physically blocked, fleeing enemies will use their actions to shove, smash, or attack whatever stands in their way.</p>
+<h3 id="regrouping-the-rally" tabindex="-1">Regrouping (The Rally)</h3>
+<p>If there is a surviving <strong>Enemy Commander</strong> who did not break, they can use an action to rally the fleeing troops. This triggers an opposed Morale Check:</p>
+<ul>
+<li>The players roll their Swarm Terror pool against the Commander’s <strong>Morale TN</strong>.
+<ul>
+<li><em>Fiction:</em> The players roll to represent the Goblins banging their shields, screaming, and actively drowning out the Commander’s orders to keep the enemies panicked.</li>
+</ul>
+</li>
+<li>If the players succeed, the troops keep running.</li>
+<li>If the players fail, the Commander successfully rallies the troops, and they stop fleeing.</li>
+</ul>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

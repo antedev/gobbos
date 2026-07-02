@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Researcher_Findings_Conditions — DEV Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Raw ideas and brainstorms">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab env-tab--active">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">DEV Rules</h2>
+        <p class="sidebar-subtitle">Raw ideas and brainstorms</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="gdrs"><span class="toggle-icon">▸</span>GDRs</button><ul class="nav-pages" id="nav-gdrs" style="display: none;"><li><a href="dev.html" class="nav-link" data-target="gdrs--gdr-001-macro-audit-and-unified-effects">GDR-001_Macro_Audit_And_Unified_Effects</a></li><li><a href="dev--gdrs--gdr-002-gang-pillar-and-lair-economy.html" class="nav-link" data-target="gdrs--gdr-002-gang-pillar-and-lair-economy">GDR-002_Gang_Pillar_And_Lair_Economy</a></li><li><a href="dev--gdrs--gdr-003-unified-modular-powers-system.html" class="nav-link" data-target="gdrs--gdr-003-unified-modular-powers-system">GDR-003_Unified_Modular_Powers_System</a></li><li><a href="dev--gdrs--gdr-004-enemy-stat-framework-and-mobs.html" class="nav-link" data-target="gdrs--gdr-004-enemy-stat-framework-and-mobs">GDR-004_Enemy_Stat_Framework_And_Mobs</a></li><li><a href="dev--gdrs--gdr-005-goblin-magic-dice-system.html" class="nav-link" data-target="gdrs--gdr-005-goblin-magic-dice-system">GDR-005_Goblin_Magic_Dice_System</a></li><li><a href="dev--gdrs--gdr-006-environmental-hazards-and-zone-statblocks.html" class="nav-link" data-target="gdrs--gdr-006-environmental-hazards-and-zone-statblocks">GDR-006_Environmental_Hazards_and_Zone_Statblocks</a></li><li><a href="dev--gdrs--gdr-template.html" class="nav-link" data-target="gdrs--gdr-template">GDR-TEMPLATE</a></li></ul></div><div class="nav-group nav-group--solo"><a href="dev--crafting-creative-analysis.html" class="nav-link nav-link--solo" data-target="crafting-creative-analysis">crafting_creative_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-framework-brainstorm">crafting_framework_brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-mechanics-audit.html" class="nav-link nav-link--solo" data-target="crafting-mechanics-audit">crafting_mechanics_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-brainstorm">crafting-brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--creative-genius-crafting-analysis.html" class="nav-link nav-link--solo" data-target="creative-genius-crafting-analysis">creative_genius_crafting_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-modular-threat-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="enemy-modular-threat-framework-brainstorm">Enemy_Modular_Threat_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-stats-draft.html" class="nav-link nav-link--solo" data-target="enemy-stats-draft">Enemy_Stats_Draft</a></div><div class="nav-group nav-group--solo"><a href="dev--equipment-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="equipment-framework-brainstorm">Equipment_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--gang-mechanics-brainstorm.html" class="nav-link nav-link--solo" data-target="gang-mechanics-brainstorm">Gang_Mechanics_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--generic-trick-mechanics.html" class="nav-link nav-link--solo" data-target="generic-trick-mechanics">Generic_Trick_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--initial-trick-list.html" class="nav-link nav-link--solo" data-target="initial-trick-list">Initial_Trick_List</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-brainstorm.html" class="nav-link nav-link--solo" data-target="lair-brainstorm">Lair_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-mechanics-game-engineering-audit.html" class="nav-link nav-link--solo" data-target="lair-mechanics-game-engineering-audit">Lair_Mechanics_Game_Engineering_Audit</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-refined-framework.html" class="nav-link nav-link--solo" data-target="lair-system-refined-framework">Lair_System_Refined_Framework</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-research-deep-dive.html" class="nav-link nav-link--solo" data-target="lair-system-research-deep-dive">Lair_System_Research_Deep_Dive</a></div><div class="nav-group nav-group--solo"><a href="dev--mob-combat-design-advice.html" class="nav-link nav-link--solo" data-target="mob-combat-design-advice">Mob_Combat_Design_Advice</a></div><div class="nav-group nav-group--solo"><a href="dev--research-crafting-systems.html" class="nav-link nav-link--solo" data-target="research-crafting-systems">research_crafting_systems</a></div><div class="nav-group nav-group--solo"><a href="dev--research-deeds-award-mechanics.html" class="nav-link nav-link--solo" data-target="research-deeds-award-mechanics">Research_Deeds_Award_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-base-building.html" class="nav-link nav-link--solo" data-target="researcher-findings-base-building">Researcher_Findings_Base_Building</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-conditions.html" class="nav-link nav-link--solo nav-link--active" data-target="researcher-findings-conditions">Researcher_Findings_Conditions</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-environmental-hazards.html" class="nav-link nav-link--solo" data-target="researcher-findings-environmental-hazards">Researcher_Findings_Environmental_Hazards</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-analysis.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-analysis">Researcher_Findings_OSR_Analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-sources.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-sources">Researcher_Findings_OSR_Sources</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-notes.html" class="nav-link nav-link--solo" data-target="researcher-notes">Researcher_Notes</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-audit-equipment.html" class="nav-link nav-link--solo" data-target="rules-lawyer-audit-equipment">Rules_Lawyer_Audit_Equipment</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-crafting-audit.html" class="nav-link nav-link--solo" data-target="rules-lawyer-crafting-audit">rules_lawyer_crafting_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-system-audit-report.html" class="nav-link nav-link--solo" data-target="rules-lawyer-system-audit-report">Rules_Lawyer_System_Audit_Report</a></div><div class="nav-group nav-group--solo"><a href="dev--static-resistances-opposed-tests.html" class="nav-link nav-link--solo" data-target="static-resistances-opposed-tests">Static_Resistances_Opposed_Tests</a></div><div class="nav-group nav-group--solo"><a href="dev--trick-mechanics-master-list.html" class="nav-link nav-link--solo" data-target="trick-mechanics-master-list">Trick_Mechanics_Master_List</a></div><div class="nav-group nav-group--solo"><a href="dev--unified-modular-power-system.html" class="nav-link nav-link--solo" data-target="unified-modular-power-system">Unified Modular Power System</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="researcher-findings-common-ttrpg-conditions-and-status-effects" tabindex="-1">Researcher Findings: Common TTRPG Conditions &amp; Status Effects</h1>
+<p><strong>Role:</strong> The Researcher
+<strong>Objective:</strong> Analyze the most common and essential status conditions used in major TTRPGs (like D&amp;D 5e and Pathfinder 2e) to provide a curated list for the Gobbos system.</p>
+<h2 id="the-consensus-the-top-8-essential-conditions" tabindex="-1">The Consensus: The “Top 8” Essential Conditions</h2>
+<p>Across the most popular tactical TTRPGs, the following conditions form the mechanical backbone of combat debuffs. I have grouped them thematically and suggested how they might cleanly map to Gobbos’ existing Mechanics (Tough, Slink, Brains, Mouth, Notice, and Movement).</p>
+<h3 id="1-blinded-dazzled-sensory" tabindex="-1">1. Blinded / Dazzled (Sensory)</h3>
+<ul>
+<li><strong>How it works elsewhere:</strong> Disadvantage/Penalties on attacks; enemies get advantage against the blinded target. Auto-fail on sight-based checks.</li>
+<li><strong>Gobbo Application:</strong> You already have this listed (<code>-1 on any Physical tests and Notice</code>). Very standard and universally applied.</li>
+</ul>
+<h3 id="2-restrained-grappled-mobility" tabindex="-1">2. Restrained / Grappled (Mobility)</h3>
+<ul>
+<li><strong>How it works elsewhere:</strong> Speed drops to 0. Penalties to Dexterity (Slink) and attacks.</li>
+<li><strong>Gobbo Application:</strong> You have <em>Restrained</em> as <code>-1d on Slink tests</code>. You should also explicitly state that their <strong>Movement becomes 0</strong> (or they cannot Move as a Standard Action).</li>
+</ul>
+<h3 id="3-frightened-terrified-morale" tabindex="-1">3. Frightened / Terrified (Morale)</h3>
+<ul>
+<li><strong>How it works elsewhere:</strong> Cannot willingly move closer to the source of fear. Penalties to all checks/attacks while in line of sight of the source.</li>
+<li><strong>Gobbo Application:</strong> A goblin staple. <em>Terrified:</em> “Cannot move closer to the source of fear. -1d to all attacks/tests against the source.”</li>
+</ul>
+<h3 id="4-prone-positioning" tabindex="-1">4. Prone (Positioning)</h3>
+<ul>
+<li><strong>How it works elsewhere:</strong> Being knocked down. Costs movement to stand up. Melee attacks against the prone target have an advantage; ranged attacks have a disadvantage (because they are a smaller target).</li>
+<li><strong>Gobbo Application:</strong> <em>Prone:</em> “Costs a Standard Action (or 1 Movement) to stand up. Enemies get +1d to melee attacks against you.”</li>
+</ul>
+<h3 id="5-poisoned-sickened-biological" tabindex="-1">5. Poisoned / Sickened (Biological)</h3>
+<ul>
+<li><strong>How it works elsewhere:</strong> Flat penalty/disadvantage to all attacks and ability checks. Sometimes causes persistent damage at the end of a turn.</li>
+<li><strong>Gobbo Application:</strong> <em>Poisoned:</em> “-1d on all Tough and Slink tests” OR “Take 1 Damage at the end of your turn until you pass a Tough test.”</li>
+</ul>
+<h3 id="6-stunned-incapacitated-action-economy" tabindex="-1">6. Stunned / Incapacitated (Action Economy)</h3>
+<ul>
+<li><strong>How it works elsewhere:</strong> The harshest condition. The creature cannot take actions or reactions, cannot move, and automatically fails physical saves.</li>
+<li><strong>Gobbo Application:</strong> <em>Stunned:</em> “You lose your next Standard Action. Enemies get +1d to attack you.” (Keep it simple since Gobbos action economy is precious).</li>
+</ul>
+<h3 id="7-exhausted-enfeebled-fatigue" tabindex="-1">7. Exhausted / Enfeebled (Fatigue)</h3>
+<ul>
+<li><strong>How it works elsewhere:</strong> Often a tiered system (D&amp;D) or flat penalty to Strength (Pathfinder).</li>
+<li><strong>Gobbo Application:</strong> <em>Weakened</em> (which you have): <code>-1d on Tough tests</code>. This perfectly covers the exhaustion/enfeebled archetype.</li>
+</ul>
+<h3 id="8-flat-footed-off-guard-defense-distracted" tabindex="-1">8. Flat-Footed / Off-Guard (Defense/Distracted)</h3>
+<ul>
+<li><strong>How it works elsewhere:</strong> Represents being flanked or surprised. Lowers Armor Class / Defense.</li>
+<li><strong>Gobbo Application:</strong> <em>Confused</em> (which you have): <code>-1d on Brains tests</code>. We could expand “Distracted/Off-Guard” to mean enemies roll +1d to attack you because your guard is down.</li>
+</ul>
+<hr>
+<h2 id="the-gobbos-condition-list-review-of-your-drafted-list" tabindex="-1">The Gobbos Condition List (Review of your drafted list)</h2>
+<p>Your current list is very clean because it directly targets the core stats:</p>
+<ul>
+<li><strong>Weakened</strong> (-1d Tough) - <em>Great.</em></li>
+<li><strong>Restrained</strong> (-1d Slink) - <em>Great, just add “Movement becomes 0.”</em></li>
+<li><strong>Confused</strong> (-1d Brains) - <em>Great.</em></li>
+<li><strong>Silenced</strong> (-1d Mouth) - <em>Great, very funny for goblin spellcasters or commanders.</em></li>
+<li><strong>Blinded</strong> (-1 on Physical/Notice) - <em>Great.</em></li>
+<li><strong>Deafened</strong> (-1 on Notice) - <em>Great.</em></li>
+</ul>
+<p><strong>What to fill in:</strong></p>
+<ul>
+<li><strong>Poisoned:</strong> Suggest either persistent damage (e.g., lose 1 Grit/Grunt per turn) OR a flat -1d to all Combat actions.</li>
+<li><strong>Terrified:</strong> Suggest positional control (e.g., “Must spend your Move action running away from the source, or -1d on all actions”).</li>
+<li><em>(Missing but Recommended)</em> <strong>Prone:</strong> Highly recommend adding Prone, as getting knocked down in a chaotic goblin fight is a classic trope.</li>
+<li><em>(Missing but Recommended)</em> <strong>Stunned:</strong> Missing a turn is a big deal, but necessary for heavy blows.</li>
+</ul>
+<p>Does this list align with the level of complexity you want? If so, I can draft the exact rules text for Poisoned, Terrified, Prone, and Stunned to insert directly into <code>07_Wounds_Conditions.md</code>!</p>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

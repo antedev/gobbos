@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generic_Trick_Mechanics — DEV Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Raw ideas and brainstorms">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab env-tab--active">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">DEV Rules</h2>
+        <p class="sidebar-subtitle">Raw ideas and brainstorms</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="gdrs"><span class="toggle-icon">▸</span>GDRs</button><ul class="nav-pages" id="nav-gdrs" style="display: none;"><li><a href="dev.html" class="nav-link" data-target="gdrs--gdr-001-macro-audit-and-unified-effects">GDR-001_Macro_Audit_And_Unified_Effects</a></li><li><a href="dev--gdrs--gdr-002-gang-pillar-and-lair-economy.html" class="nav-link" data-target="gdrs--gdr-002-gang-pillar-and-lair-economy">GDR-002_Gang_Pillar_And_Lair_Economy</a></li><li><a href="dev--gdrs--gdr-003-unified-modular-powers-system.html" class="nav-link" data-target="gdrs--gdr-003-unified-modular-powers-system">GDR-003_Unified_Modular_Powers_System</a></li><li><a href="dev--gdrs--gdr-004-enemy-stat-framework-and-mobs.html" class="nav-link" data-target="gdrs--gdr-004-enemy-stat-framework-and-mobs">GDR-004_Enemy_Stat_Framework_And_Mobs</a></li><li><a href="dev--gdrs--gdr-005-goblin-magic-dice-system.html" class="nav-link" data-target="gdrs--gdr-005-goblin-magic-dice-system">GDR-005_Goblin_Magic_Dice_System</a></li><li><a href="dev--gdrs--gdr-006-environmental-hazards-and-zone-statblocks.html" class="nav-link" data-target="gdrs--gdr-006-environmental-hazards-and-zone-statblocks">GDR-006_Environmental_Hazards_and_Zone_Statblocks</a></li><li><a href="dev--gdrs--gdr-template.html" class="nav-link" data-target="gdrs--gdr-template">GDR-TEMPLATE</a></li></ul></div><div class="nav-group nav-group--solo"><a href="dev--crafting-creative-analysis.html" class="nav-link nav-link--solo" data-target="crafting-creative-analysis">crafting_creative_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-framework-brainstorm">crafting_framework_brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-mechanics-audit.html" class="nav-link nav-link--solo" data-target="crafting-mechanics-audit">crafting_mechanics_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-brainstorm">crafting-brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--creative-genius-crafting-analysis.html" class="nav-link nav-link--solo" data-target="creative-genius-crafting-analysis">creative_genius_crafting_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-modular-threat-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="enemy-modular-threat-framework-brainstorm">Enemy_Modular_Threat_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-stats-draft.html" class="nav-link nav-link--solo" data-target="enemy-stats-draft">Enemy_Stats_Draft</a></div><div class="nav-group nav-group--solo"><a href="dev--equipment-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="equipment-framework-brainstorm">Equipment_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--gang-mechanics-brainstorm.html" class="nav-link nav-link--solo" data-target="gang-mechanics-brainstorm">Gang_Mechanics_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--generic-trick-mechanics.html" class="nav-link nav-link--solo nav-link--active" data-target="generic-trick-mechanics">Generic_Trick_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--initial-trick-list.html" class="nav-link nav-link--solo" data-target="initial-trick-list">Initial_Trick_List</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-brainstorm.html" class="nav-link nav-link--solo" data-target="lair-brainstorm">Lair_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-mechanics-game-engineering-audit.html" class="nav-link nav-link--solo" data-target="lair-mechanics-game-engineering-audit">Lair_Mechanics_Game_Engineering_Audit</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-refined-framework.html" class="nav-link nav-link--solo" data-target="lair-system-refined-framework">Lair_System_Refined_Framework</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-research-deep-dive.html" class="nav-link nav-link--solo" data-target="lair-system-research-deep-dive">Lair_System_Research_Deep_Dive</a></div><div class="nav-group nav-group--solo"><a href="dev--mob-combat-design-advice.html" class="nav-link nav-link--solo" data-target="mob-combat-design-advice">Mob_Combat_Design_Advice</a></div><div class="nav-group nav-group--solo"><a href="dev--research-crafting-systems.html" class="nav-link nav-link--solo" data-target="research-crafting-systems">research_crafting_systems</a></div><div class="nav-group nav-group--solo"><a href="dev--research-deeds-award-mechanics.html" class="nav-link nav-link--solo" data-target="research-deeds-award-mechanics">Research_Deeds_Award_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-base-building.html" class="nav-link nav-link--solo" data-target="researcher-findings-base-building">Researcher_Findings_Base_Building</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-conditions.html" class="nav-link nav-link--solo" data-target="researcher-findings-conditions">Researcher_Findings_Conditions</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-environmental-hazards.html" class="nav-link nav-link--solo" data-target="researcher-findings-environmental-hazards">Researcher_Findings_Environmental_Hazards</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-analysis.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-analysis">Researcher_Findings_OSR_Analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-sources.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-sources">Researcher_Findings_OSR_Sources</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-notes.html" class="nav-link nav-link--solo" data-target="researcher-notes">Researcher_Notes</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-audit-equipment.html" class="nav-link nav-link--solo" data-target="rules-lawyer-audit-equipment">Rules_Lawyer_Audit_Equipment</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-crafting-audit.html" class="nav-link nav-link--solo" data-target="rules-lawyer-crafting-audit">rules_lawyer_crafting_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-system-audit-report.html" class="nav-link nav-link--solo" data-target="rules-lawyer-system-audit-report">Rules_Lawyer_System_Audit_Report</a></div><div class="nav-group nav-group--solo"><a href="dev--static-resistances-opposed-tests.html" class="nav-link nav-link--solo" data-target="static-resistances-opposed-tests">Static_Resistances_Opposed_Tests</a></div><div class="nav-group nav-group--solo"><a href="dev--trick-mechanics-master-list.html" class="nav-link nav-link--solo" data-target="trick-mechanics-master-list">Trick_Mechanics_Master_List</a></div><div class="nav-group nav-group--solo"><a href="dev--unified-modular-power-system.html" class="nav-link nav-link--solo" data-target="unified-modular-power-system">Unified Modular Power System</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="generic-trick-mechanics-framework" tabindex="-1">Generic Trick Mechanics Framework</h1>
+<p>This document takes the mechanical concepts of Tricks and distills them into their raw, generic mathematical and rule-bending templates. These can be used as “formulas” to quickly construct specific Tricks by plugging in different Stats, Conditions, or Equipment.</p>
+<h2 id="1-boons-and-dice-manipulation" tabindex="-1">1. Boons &amp; Dice Manipulation</h2>
+<p>Formulas that alter the raw dice probabilities.</p>
+<ul>
+<li><strong>Static Bonus:</strong> Gain <code>+X d6</code> on <code>[Specific Action / Stat / Skill]</code>.</li>
+<li><strong>Contextual Bonus:</strong> Gain <code>+X d6</code> on <code>[Action / Stat]</code> when <code>[Specific Condition is met]</code>.</li>
+<li><strong>Enemy Penalty:</strong> Enemies suffer <code>-X d6</code> when <code>[Specific Trigger happens]</code>.</li>
+<li><strong>Target Adjustment:</strong> Treat a roll of <code>[Number/Face]</code> as <code>[Better Number/Success]</code> on <code>[Specific Action]</code>.</li>
+<li><strong>Exploding Dice:</strong> If you roll <code>[Specific Number]</code> on <code>[Action]</code>, roll 1 additional die.</li>
+<li><strong>Reroll Allocation:</strong> Reroll up to <code>[X]</code> failed dice on <code>[Specific Test / Condition]</code>.</li>
+<li><strong>Die Discard:</strong> Discard the lowest die result from your pool instead of counting it, when <code>[Condition]</code>.</li>
+<li><strong>Success Multiplier:</strong> On <code>[Action]</code>, a roll of <code>[Specific Number]</code> counts as <code>[X]</code> successes instead of 1.</li>
+<li><strong>Critical Shift:</strong> Rolls of <code>[Number]</code>, in addition to being a success, also inflict <code>[Status Effect]</code>.</li>
+<li><strong>Fail Forward:</strong> On a roll with zero successes for <code>[Action]</code>, automatically gain <code>[Resource or Temporary Bonus]</code>.</li>
+<li><strong>Success Share:</strong> If you generate <code>[X]</code> more successes than required for <code>[Test]</code>, grant <code>[Bonus]</code> to <code>[Ally / Mob]</code>.</li>
+</ul>
+<h2 id="2-economy-bending-actions-and-time" tabindex="-1">2. Economy Bending (Actions &amp; Time)</h2>
+<p>Formulas that bend the rules of turn phases, action economy, and initiative.</p>
+<ul>
+<li><strong>Conditional Extra Action:</strong> Gain 1 additional <code>[Action Type]</code> when <code>[Extremely Specific Condition]</code>.</li>
+<li><strong>Action Chaining:</strong> Perform <code>[Action A]</code> as a Free Action immediately after succeeding at <code>[Action B]</code>.</li>
+<li><strong>Reaction Action:</strong> When <code>[Enemy Action / Trigger]</code> occurs, you may immediately perform <code>[Specific Action]</code> as a Reaction.</li>
+<li><strong>Action Downgrade:</strong> Perform <code>[Standard Action]</code> as a <code>[Free Action / Cheaper Action]</code> under <code>[Condition]</code>.</li>
+<li><strong>Initiative Shift:</strong> You may choose to take your turn immediately before <code>[Enemy Type / Event]</code> acts.</li>
+<li><strong>Action Investment:</strong> If you forgo <code>[Action Type]</code> this turn, gain <code>[Bonus / Action]</code> on your next turn.</li>
+<li><strong>Speed Override:</strong> Performing <code>[Action]</code> takes <code>[Less Time / Fewer Actions]</code> than the standard rules dictate.</li>
+</ul>
+<h2 id="3-rule-breaking-and-bypassing" tabindex="-1">3. Rule Breaking &amp; Bypassing</h2>
+<p>Formulas that let a Boss safely ignore the negative constraints that govern normal characters.</p>
+<ul>
+<li><strong>Auto-Pass / Exemption:</strong> You automatically succeed at <code>[Specific Test / Hazard]</code> without needing to roll.</li>
+<li><strong>Stat Swapping:</strong> You may roll <code>[Stat A]</code> instead of <code>[Stat B]</code> when performing <code>[Specific Action]</code>.</li>
+<li><strong>Trait Ignorance:</strong> Ignore the <code>[Negative Trait]</code> rule on <code>[Equipment / Weapon / Armor]</code>.</li>
+<li><strong>Constraint Breaking:</strong> Bypass <code>[Specific Usage Rule]</code> for <code>[Equipment]</code> (e.g., wielding a 2-handed item in 1 hand).</li>
+<li><strong>Environmental Bypass:</strong> Ignore <code>[Specific Hazard / Terrain Penalty / Cover]</code> when resolving <code>[Action / Move]</code>.</li>
+<li><strong>Condition Immunity:</strong> You can never be afflicted by <code>[Specific Status Effect / Condition]</code>.</li>
+<li><strong>Scale / Size Adjustment:</strong> You count as <code>[Larger / Smaller]</code> for the specific purpose of <code>[Grappling / Carrying / Line of Sight]</code>.</li>
+</ul>
+<h2 id="4-resource-manipulation-grit-grunt-costs" tabindex="-1">4. Resource Manipulation (Grit, Grunt, Costs)</h2>
+<p>Formulas that alter the economy of health, command points, or other meta-currencies.</p>
+<ul>
+<li><strong>Capacity Increase:</strong> Gain <code>+X</code> to Max <code>[Resource Type]</code>.</li>
+<li><strong>Cost Reduction:</strong> Reduce the activation cost of <code>[Specific Action / Order]</code> by <code>[X] Resource</code> (minimum 1).</li>
+<li><strong>Resource for Bonus:</strong> Spend <code>[X] Resource</code> to instantly gain <code>+Y d6</code> on <code>[Specific Action]</code>.</li>
+<li><strong>Resource for Mitigation:</strong> Spend <code>[X] Resource</code> to reduce incoming <code>[Damage / Consequence]</code> by <code>[Y]</code>.</li>
+<li><strong>Resource Refund:</strong> Regain <code>[X] Resource</code> whenever <code>[Trigger / Success Condition]</code> occurs.</li>
+<li><strong>Desperation Buff:</strong> While at exactly <code>[Number] Resource</code>, gain <code>[Specific Bonus]</code>.</li>
+<li><strong>Auto-Success via Resource:</strong> Spend <code>[X] Resource</code> to automatically pass <code>[Specific Test / Morale]</code>.</li>
+<li><strong>Resource Conversion:</strong> Take <code>[X] Damage to Resource A</code> to instantly gain <code>[Y] of Resource B</code>.</li>
+<li><strong>Rest Enhancement:</strong> Regain <code>+[X] additional Resource</code> whenever you <code>[Rest / Recover]</code>.</li>
+</ul>
+<h2 id="5-mob-and-leadership" tabindex="-1">5. Mob &amp; Leadership</h2>
+<p>Formulas relating exclusively to the interaction with and command of Mobs.</p>
+<ul>
+<li><strong>Damage Reassignment:</strong> Redirect <code>[X]</code> damage you take to a Grunt in your Mob under <code>[Condition]</code>.</li>
+<li><strong>Mob Stat Boost:</strong> Mobs you lead gain <code>+[X]</code> to their base <code>[Stat / Speed / Damage]</code> under <code>[Condition]</code>.</li>
+<li><strong>Mob Boon:</strong> Mobs you lead gain <code>+[X] d6</code> when performing <code>[Specific Action]</code>.</li>
+<li><strong>Mob Penalty Negation:</strong> Mobs you lead ignore <code>[Specific Penalty]</code> (e.g., half-size penalties).</li>
+<li><strong>Free Command:</strong> Issue <code>[Specific Order]</code> without spending an Action or Grunt under <code>[Condition]</code>.</li>
+<li><strong>Casualty Mitigation:</strong> Mobs you lead ignore the first casualty they suffer from <code>[Specific Source]</code>.</li>
+<li><strong>Mob Recovery Shortcut:</strong> <code>[Action / Resource]</code> automatically rallies or reforms Mobs in <code>[Area]</code>.</li>
+<li><strong>Mob Utility Boost:</strong> Mobs you lead gain <code>[Utility Rule]</code> (e.g., extra carry slots, providing better cover).</li>
+<li><strong>Sacrificial Boost:</strong> Command a Mob to gain <code>+[X] Bonus</code>, but they automatically suffer <code>[Y] Casualty / Penalty</code> afterwards.</li>
+</ul>
+<h2 id="6-survivability-and-defense" tabindex="-1">6. Survivability &amp; Defense</h2>
+<p>Formulas that prevent a Boss from dying to stray arrows or unlucky rolls.</p>
+<ul>
+<li><strong>Damage Ceiling:</strong> You cannot take more than <code>[X]</code> damage from a single <code>[Source / Attack]</code>.</li>
+<li><strong>Damage Type Mitigation:</strong> Reduce or ignore <code>[Damage / Effects]</code> from <code>[Specific Damage Type]</code>.</li>
+<li><strong>Death Defy:</strong> When reduced to 0 <code>[Health Resource]</code>, roll <code>[X] d6</code>. On a <code>[Target Number]+</code>, stay at 1.</li>
+<li><strong>Vampirism:</strong> Regain <code>[X] Health Resource</code> whenever you <code>[Defeat Enemy / Trigger Condition]</code>.</li>
+<li><strong>Last Stand:</strong> When reduced to 0 <code>[Health Resource]</code>, you may immediately perform <code>[Specific Action]</code> before dying.</li>
+<li><strong>Fast Healing:</strong> Automatically regain <code>[X] Health Resource</code> when <code>[Trigger, e.g., combat starts]</code>.</li>
+</ul>
+<h2 id="7-loot-and-gear-interaction" tabindex="-1">7. Loot &amp; Gear Interaction</h2>
+<p>Formulas based on manipulating items in the world.</p>
+<ul>
+<li><strong>Guaranteed Loot:</strong> When rolling for Loot after <code>[Condition]</code>, automatically find at least <code>[X]</code> of <code>[Item Type]</code>.</li>
+<li><strong>Field Repair:</strong> You can repair <code>[Item Type]</code> using <code>[Alternative Resource / Action]</code>.</li>
+<li><strong>Carry Capacity:</strong> You can hold <code>+[X]</code> items of <code>[Bulk / Specific Type]</code> without suffering encumbrance.</li>
+<li><strong>Equipment Juggler:</strong> Swap or equip <code>[Item Type]</code> as a <code>[Free Action / Cheaper Action]</code>.</li>
+<li><strong>Effect Area Increase:</strong> <code>[Item Type, e.g., grenades]</code> have their Area of Effect increased by <code>[X] zones</code>.</li>
+</ul>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

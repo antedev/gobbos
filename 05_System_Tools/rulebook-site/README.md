@@ -22,16 +22,25 @@ npm run serve    # Serve dist/ without rebuilding
 rulebook-site/
 │
 ├── build.js               ← The build script (all the logic lives here)
-├── template.html           ← HTML shell for environment pages (stage, dev, prod)
+├── template.html           ← HTML shell for environment pages
 ├── index-template.html     ← HTML shell for the landing page
 ├── style.css               ← All styling (copied to dist/ on build)
 ├── package.json            ← Dependencies and npm scripts
 │
 └── dist/                   ← Generated output (do not edit by hand)
-    ├── index.html
-    ├── dev.html
-    ├── stage.html
-    ├── prod.html
+    ├── index.html          ← Landing page
+    ├── dev.html            ← DEV Rules index (first page of DEV Rules)
+    ├── dev--*.html         ← Individual DEV Rules pages
+    ├── stage.html          ← STAGE Rules index (first page of STAGE Rules)
+    ├── stage--*.html       ← Individual STAGE Rules pages
+    ├── prod.html           ← PROD Rules index (first page of PROD Rules)
+    ├── prod--*.html        ← Individual PROD Rules pages
+    ├── dev-lore.html       ← DEV Lore index (first page of DEV Lore)
+    ├── dev-lore--*.html    ← Individual DEV Lore pages
+    ├── stage-lore.html     ← STAGE Lore index (first page of STAGE Lore)
+    ├── stage-lore--*.html  ← Individual STAGE Lore pages
+    ├── prod-lore.html      ← PROD Lore index (first page of PROD Lore)
+    ├── prod-lore--*.html   ← Individual PROD Lore pages
     └── style.css
 ```
 
@@ -39,8 +48,8 @@ rulebook-site/
 
 | File | Purpose |
 |---|---|
-| `build.js` | Scans the repo's rule directories, reads all `.md` files, parses them to HTML, generates sidebar navigation, and writes the final pages to `dist/`. |
-| `template.html` | The HTML skeleton for content pages. Contains placeholders like `{{TITLE}}`, `{{NAV_CONTENT}}`, `{{MAIN_CONTENT}}` that the build script fills in. Also contains all client-side JavaScript (theme toggle, sidebar, scroll spy). |
+| `build.js` | Scans the repo's rules and lore directories, reads all `.md` files, parses them to HTML, resolves wiki links, generates sidebar navigation, and writes individual static pages to `dist/`. |
+| `template.html` | The HTML skeleton for content pages. Contains placeholders like `{{TITLE}}`, `{{NAV_CONTENT}}`, `{{MAIN_CONTENT}}` that the build script fills in. |
 | `index-template.html` | The landing page template. Only has one placeholder: `{{ENV_CARDS}}`. |
 | `style.css` | Complete stylesheet with CSS custom properties for theming. Defines both light and dark mode. |
 
@@ -53,22 +62,25 @@ The build script follows this pipeline:
 ```
 1. Scan directories     →  Find all .md files, sorted by numeric prefix
 2. Build data model     →  Sections (folders) containing Pages (files)
-3. Concatenate markdown →  One big markdown string per environment
-4. Parse to HTML        →  markdown-it with anchor + wikilink plugins
-5. Generate sidebar     →  HTML nav from the data model
+3. Build Wiki Link map  →  Map Obsidian-style [[Wiki Links]] to page URLs
+4. Render each page     →  Compile markdown to standalone HTML files
+5. Generate sidebar     →  HTML nav with statically highlighted active states
 6. Inject into template →  Replace {{placeholders}} with generated content
-7. Write to dist/       →  One .html file per environment + index + CSS
+7. Write to dist/       →  Separate .html files per page + index + CSS
 ```
 
 ### Content Discovery
 
-The script scans three directories relative to the repo root:
+The script scans six directories relative to the repo root:
 
-| Directory | Output file | Description |
-|---|---|---|
-| `00_DEV_Brainstorms/` | `dev.html` | Flat structure — loose `.md` files become standalone sections |
-| `01_STAGE_Drafts/` | `stage.html` | Nested structure — subfolders become collapsible sidebar groups |
-| `02_PROD_Core_Rules/` | `prod.html` | Same as STAGE; currently empty (shows placeholder) |
+| Directory | Output index | Output pages | Description |
+|---|---|---|---|
+| `00_DEV_Brainstorms/` | `dev.html` | `dev--*.html` | Flat structure — rules ideas and brainstorms |
+| `01_STAGE_Drafts/` | `stage.html` | `stage--*.html` | Nested structure — stage rules drafts |
+| `02_PROD_Core_Rules/` | `prod.html` | `prod--*.html` | Locked-in rules structure |
+| `LORE/00_DEV_Lore/` | `dev-lore.html` | `dev-lore--*.html` | Volatile lore concepts and brainstorms |
+| `LORE/01_STAGE_Lore/` | `stage-lore.html` | `stage-lore--*.html` | Synthesized lore drafts undergoing review |
+| `LORE/03_PROD_Lore/` | `prod-lore.html` | `prod-lore--*.html` | Locked, authoritative setting canon |
 
 ### Sorting & Naming
 

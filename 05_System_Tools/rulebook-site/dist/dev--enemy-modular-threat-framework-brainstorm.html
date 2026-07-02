@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enemy_Modular_Threat_Framework_Brainstorm — DEV Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Raw ideas and brainstorms">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab env-tab--active">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">DEV Rules</h2>
+        <p class="sidebar-subtitle">Raw ideas and brainstorms</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="gdrs"><span class="toggle-icon">▸</span>GDRs</button><ul class="nav-pages" id="nav-gdrs" style="display: none;"><li><a href="dev.html" class="nav-link" data-target="gdrs--gdr-001-macro-audit-and-unified-effects">GDR-001_Macro_Audit_And_Unified_Effects</a></li><li><a href="dev--gdrs--gdr-002-gang-pillar-and-lair-economy.html" class="nav-link" data-target="gdrs--gdr-002-gang-pillar-and-lair-economy">GDR-002_Gang_Pillar_And_Lair_Economy</a></li><li><a href="dev--gdrs--gdr-003-unified-modular-powers-system.html" class="nav-link" data-target="gdrs--gdr-003-unified-modular-powers-system">GDR-003_Unified_Modular_Powers_System</a></li><li><a href="dev--gdrs--gdr-004-enemy-stat-framework-and-mobs.html" class="nav-link" data-target="gdrs--gdr-004-enemy-stat-framework-and-mobs">GDR-004_Enemy_Stat_Framework_And_Mobs</a></li><li><a href="dev--gdrs--gdr-005-goblin-magic-dice-system.html" class="nav-link" data-target="gdrs--gdr-005-goblin-magic-dice-system">GDR-005_Goblin_Magic_Dice_System</a></li><li><a href="dev--gdrs--gdr-006-environmental-hazards-and-zone-statblocks.html" class="nav-link" data-target="gdrs--gdr-006-environmental-hazards-and-zone-statblocks">GDR-006_Environmental_Hazards_and_Zone_Statblocks</a></li><li><a href="dev--gdrs--gdr-template.html" class="nav-link" data-target="gdrs--gdr-template">GDR-TEMPLATE</a></li></ul></div><div class="nav-group nav-group--solo"><a href="dev--crafting-creative-analysis.html" class="nav-link nav-link--solo" data-target="crafting-creative-analysis">crafting_creative_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-framework-brainstorm">crafting_framework_brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-mechanics-audit.html" class="nav-link nav-link--solo" data-target="crafting-mechanics-audit">crafting_mechanics_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-brainstorm">crafting-brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--creative-genius-crafting-analysis.html" class="nav-link nav-link--solo" data-target="creative-genius-crafting-analysis">creative_genius_crafting_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-modular-threat-framework-brainstorm.html" class="nav-link nav-link--solo nav-link--active" data-target="enemy-modular-threat-framework-brainstorm">Enemy_Modular_Threat_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-stats-draft.html" class="nav-link nav-link--solo" data-target="enemy-stats-draft">Enemy_Stats_Draft</a></div><div class="nav-group nav-group--solo"><a href="dev--equipment-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="equipment-framework-brainstorm">Equipment_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--gang-mechanics-brainstorm.html" class="nav-link nav-link--solo" data-target="gang-mechanics-brainstorm">Gang_Mechanics_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--generic-trick-mechanics.html" class="nav-link nav-link--solo" data-target="generic-trick-mechanics">Generic_Trick_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--initial-trick-list.html" class="nav-link nav-link--solo" data-target="initial-trick-list">Initial_Trick_List</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-brainstorm.html" class="nav-link nav-link--solo" data-target="lair-brainstorm">Lair_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-mechanics-game-engineering-audit.html" class="nav-link nav-link--solo" data-target="lair-mechanics-game-engineering-audit">Lair_Mechanics_Game_Engineering_Audit</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-refined-framework.html" class="nav-link nav-link--solo" data-target="lair-system-refined-framework">Lair_System_Refined_Framework</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-research-deep-dive.html" class="nav-link nav-link--solo" data-target="lair-system-research-deep-dive">Lair_System_Research_Deep_Dive</a></div><div class="nav-group nav-group--solo"><a href="dev--mob-combat-design-advice.html" class="nav-link nav-link--solo" data-target="mob-combat-design-advice">Mob_Combat_Design_Advice</a></div><div class="nav-group nav-group--solo"><a href="dev--research-crafting-systems.html" class="nav-link nav-link--solo" data-target="research-crafting-systems">research_crafting_systems</a></div><div class="nav-group nav-group--solo"><a href="dev--research-deeds-award-mechanics.html" class="nav-link nav-link--solo" data-target="research-deeds-award-mechanics">Research_Deeds_Award_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-base-building.html" class="nav-link nav-link--solo" data-target="researcher-findings-base-building">Researcher_Findings_Base_Building</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-conditions.html" class="nav-link nav-link--solo" data-target="researcher-findings-conditions">Researcher_Findings_Conditions</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-environmental-hazards.html" class="nav-link nav-link--solo" data-target="researcher-findings-environmental-hazards">Researcher_Findings_Environmental_Hazards</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-analysis.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-analysis">Researcher_Findings_OSR_Analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-sources.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-sources">Researcher_Findings_OSR_Sources</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-notes.html" class="nav-link nav-link--solo" data-target="researcher-notes">Researcher_Notes</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-audit-equipment.html" class="nav-link nav-link--solo" data-target="rules-lawyer-audit-equipment">Rules_Lawyer_Audit_Equipment</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-crafting-audit.html" class="nav-link nav-link--solo" data-target="rules-lawyer-crafting-audit">rules_lawyer_crafting_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-system-audit-report.html" class="nav-link nav-link--solo" data-target="rules-lawyer-system-audit-report">Rules_Lawyer_System_Audit_Report</a></div><div class="nav-group nav-group--solo"><a href="dev--static-resistances-opposed-tests.html" class="nav-link nav-link--solo" data-target="static-resistances-opposed-tests">Static_Resistances_Opposed_Tests</a></div><div class="nav-group nav-group--solo"><a href="dev--trick-mechanics-master-list.html" class="nav-link nav-link--solo" data-target="trick-mechanics-master-list">Trick_Mechanics_Master_List</a></div><div class="nav-group nav-group--solo"><a href="dev--unified-modular-power-system.html" class="nav-link nav-link--solo" data-target="unified-modular-power-system">Unified Modular Power System</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="brainstorm-enemy-and-npc-modular-threat-framework" tabindex="-1">Brainstorm: Enemy &amp; NPC Modular Threat Framework</h1>
+<p><em>Goblins don’t fight fair, but neither do the things trying to eat them. A troll isn’t just big; it’s sticky, rubbery, and smells like a swamp that has been dead for a week. To capture this without making the GM roll a single die, we need threats that feel active, reactive, and beautifully chaotic.</em></p>
+<p>This brainstorm explores how to expand the <strong>Unified Modular Powers System</strong> to Enemies, Elites, and Bosses. Because the GM never rolls dice, enemy abilities cannot use player-style rolls. Instead, they operate as <strong>Deterministic Threats</strong>, <strong>Roll Obstacles</strong>, <strong>Behavioral Schedules (Automata)</strong>, and <strong>Reaction Loops</strong>, all tied together by the same element/trait tags used by the players.</p>
+<hr>
+<h2 id="the-core-design-goals" tabindex="-1">The Core Design Goals</h2>
+<ol>
+<li><strong>Zero GM Dice Rolls:</strong> Every enemy ability must be resolved either deterministically (automatic damage/conditions) or by prompting a player roll (Dodge/Parry/Morale).</li>
+<li><strong>Symmetrical Architecture:</strong> Use a similar structure to the 6-block player blueprint so that designing an enemy feels familiar and interfaces cleanly with the player’s gear and spells.</li>
+<li><strong>Low GM Cognitive Load:</strong> The system must run on simple priority loops or schedules that require no mental math or complex decision-making during a chaotic battle.</li>
+<li><strong>Tag Synergy:</strong> Enemy properties should utilize the same narrative descriptors (<code>[Fire]</code>, <code>[Sticky]</code>, <code>[Undead]</code>) as player gear, enabling emergent <strong>Element Synthesis</strong> in both directions.</li>
+</ol>
+<hr>
+<h2 id="proposal-1-symmetrical-enemy-threat-blocks" tabindex="-1">Proposal 1: Symmetrical Enemy “Threat Blocks”</h2>
+<p>Just as player powers use the 6-block blueprint, we can adapt the framework for enemies into a <strong>Modular Threat Block</strong>:</p>
+<pre><code class="language-markdown">### [Threat/Ability Name]
+*   **Target:** [Who or what does this affect? (e.g., Player Grit, Mob Size, a specific Zone)]
+*   **Threat Effect:** [The deterministic modification to the rules (e.g., -2d Bane, +1 TN, automatic Condition)]
+*   **Trigger/Reaction:** [What event fires this? (e.g., Player Fumbles, Player enters Zone, Enemy takes a Wound)]
+*   **Delivery:** [The range and area of effect (e.g., Melee, Ranged 1 Zone, Zone-Wide, Blast)]
+*   **Schedule/Cost:** [How does the enemy pay for/rate-limit this? (e.g., Once per Encounter, ticks on Round Clock)]
+*   **Duration:** [How long does the rule modification persist? (e.g., Sustained, End of Round, Permanent)]
+</code></pre>
+<h3 id="adapting-the-6-blocks-to-gm-language" tabindex="-1">Adapting the 6 Blocks to GM Language:</h3>
+<ol>
+<li><strong>The Target:</strong> Instead of stats like Brains or Mouth, enemies target <strong>Player Action Pools</strong>, <strong>Grit</strong>, <strong>Mob Size</strong>, <strong>Zone Profiles</strong> (TN), or <strong>Bangaranga Pools</strong>.</li>
+<li><strong>Threat Effect (The “Anti-Modification”):</strong>
+<ul>
+<li><em>Roll Impediments:</em> Grants the player a <strong>Bane</strong> (<strong>-1d</strong> to <strong>-3d</strong>) on certain tests.</li>
+<li><em>Difficulty Spikes:</em> Shakes up success parameters. E.g., <strong>Hard Tests</strong> (successes on 6s only) or <strong>Fumble Expansion</strong> (fumble on 1s and 2s).</li>
+<li><em>Deterministic Payloads:</em> Automatic damage or conditions (e.g., “Deals 1 Grit/Size damage at the end of the round if you remain in the Zone”).</li>
+</ul>
+</li>
+<li><strong>Triggers (The GM’s Reactivity):</strong> Since the GM doesn’t roll, the enemy reacts to player actions or roll results:
+<ul>
+<li><em>On Player Fumble:</em> The classic retaliatory strike.</li>
+<li><em>On Player Strike (Thorns):</em> Damaging the enemy triggers a splash or explosion.</li>
+<li><em>On State Change:</em> Activates when the enemy drops to half Wounds, or when a Mob size is halved.</li>
+</ul>
+</li>
+<li><strong>Delivery:</strong> Symmetrical to player rules. Melee, Ranged, Zone-Wide, or Blast.</li>
+<li><strong>Schedule/Cost (The Automata):</strong> Enemies don’t have “Grunt” pools. Instead, they use a <strong>Round Clock</strong> or <strong>Priority Queue</strong> (see below).</li>
+<li><strong>Duration:</strong> Symmetrical. Instant, Sustained (players must spend an action to shake it off), or Round/Encounter-bounded.</li>
+</ol>
+<hr>
+<h2 id="proposal-2-the-schedule-simple-automata-clocks" tabindex="-1">Proposal 2: The “Schedule” (Simple Automata Clocks)</h2>
+<p>For Bosses and Elites, we can implement a <strong>Schedule</strong>—a simple, deterministic script that runs on a countdown timer or a priority queue. This makes the boss feel like an active puzzle.</p>
+<h3 id="option-a-the-action-clock-the-tick-tock-boss" tabindex="-1">Option A: The Action Clock (The Tick-Tock Boss)</h3>
+<p>The enemy has a numbered track. At the end of every round, the clock ticks forward.</p>
+<ul>
+<li><strong>Dragon Clock:</strong>
+<ul>
+<li><strong>Round 1 (Sweep):</strong> Tail Sweep. Everyone in Melee range must Dodge (Slink) or Parry (Tough) or take 2 damage and be knocked <strong>Prone</strong>.</li>
+<li><strong>Round 2 (Breathe):</strong> Inhale. The dragon’s throat glows. Fire tags are laid out in the front Zone.</li>
+<li><strong>Round 3 (Release):</strong> Breath of Fire. The front Zone suffers a <strong>T4 Blast</strong> dealing 4 automatic damage (reduced by Slink Dodge). Reset Clock to 1.</li>
+</ul>
+</li>
+</ul>
+<h3 id="option-b-the-priority-queue-the-tactical-ai" tabindex="-1">Option B: The Priority Queue (The Tactical AI)</h3>
+<p>A simple “If-Then” checklist that the GM resolves in order. The first condition met is the action the enemy takes.</p>
+<ul>
+<li><strong>Elven Ranger AI:</strong>
+<ol>
+<li><strong>Fleeing?</strong> If a Gobbo is in Melee range, spend 1 Action to <em>Disengage</em> and 1 Action to <em>Move</em> to an adjacent zone with cover.</li>
+<li><strong>Low Health ally?</strong> If an allied soldier is wounded, fire a healing potion arrow (Range: 2 Zones, heals 1 Wound).</li>
+<li><strong>Default:</strong> Fire a piercing arrow at the Gobbo Boss carrying the most Loot (Range: 3 Zones, 2 Damage, Parry test is <strong>Hard</strong>).</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 id="proposal-3-symmetrical-tag-based-synthesis-interactive-environment" tabindex="-1">Proposal 3: Symmetrical Tag-Based Synthesis (Interactive Environment)</h2>
+<p>One of the coolest elements of Gobbos is the interaction of physical descriptors (<code>[Sticky]</code>, <code>[Fire]</code>, <code>[Heavy Armored]</code>, <code>[Spooky]</code>). We can write enemy abilities as simple modifications of these tags.</p>
+<p>By using the <strong>Element Synthesis</strong> table symmetrically, we get emergent gameplay out of very short rules text:</p>
+<table>
+<thead>
+<tr>
+<th>Enemy Tag</th>
+<th>Deterministic Effect</th>
+<th>Player Synergy / Interaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[Acidic]</code></td>
+<td>When hit in Melee, attacker takes <strong>1 Grit</strong> damage unless they sacrifice a weapon/shield durability.</td>
+<td>A player using a <code>[Glass]</code> weapon instantly shatters it, but a <code>[Stone]</code> weapon is immune.</td>
+</tr>
+<tr>
+<td><code>[Ghostly]</code></td>
+<td>Physical attacks suffer <strong>+2 TN</strong> successes to hit.</td>
+<td><code>[Magical]</code> or <code>[Holy]</code> weapons bypass this completely.</td>
+</tr>
+<tr>
+<td><code>[Sticky]</code></td>
+<td>Attacks automatically inflict the <strong>Restrained</strong> condition.</td>
+<td>Any <code>[Fire]</code> source or <code>[Slick]</code> grease immediately clears this condition.</td>
+</tr>
+<tr>
+<td><code>[Heated]</code></td>
+<td>Deals <strong>1 automatic damage</strong> to anyone entering Melee.</td>
+<td><code>[Chilled]</code> or <code>[Water]</code> tags extinguish this for 1 round.</td>
+</tr>
+<tr>
+<td><code>[Rubbery]</code></td>
+<td>Blunt physical attacks are bounced back.</td>
+<td><code>[Piercing]</code> or <code>[Slashing]</code> attacks work normally.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="how-this-reduces-rules-text" tabindex="-1">How this reduces rules text:</h3>
+<p>Instead of writing out long text for a <em>Gelatinous Ooze</em>:</p>
+<blockquote>
+<p><strong>Ooze Statblock:</strong></p>
+<ul>
+<li><strong>Attack:</strong> 1 | <strong>Defence:</strong> 1 | <strong>Movement:</strong> 1</li>
+<li><strong>Tags:</strong> <code>[Sticky]</code>, <code>[Acidic]</code>, <code>[Rubbery]</code></li>
+<li><em>Special:</em> <strong>Split:</strong> If hit by a <code>[Slashing]</code> attack, the Ooze does not die. Instead, it splits into two Oozes of the same stats.</li>
+</ul>
+</blockquote>
+<p>Because the GM and players already know what <code>[Sticky]</code>, <code>[Acidic]</code>, and <code>[Rubbery]</code> do from the universal tags list, the statblock is tiny, readable, and highly interactive.</p>
+<hr>
+<h2 id="brainstorming-options-for-the-framework" tabindex="-1">Brainstorming Options for the Framework</h2>
+<p>To choose the best approach, let’s look at three ways to bundle these mechanics:</p>
+<h3 id="option-1-the-anti-blueprint-high-symmetry" tabindex="-1">Option 1: The “Anti-Blueprint” (High Symmetry)</h3>
+<ul>
+<li><strong>Concept:</strong> Every monster ability is written using the exact same 6-block card format as player abilities.</li>
+<li><strong>Pros:</strong> Perfect symmetry. If a player uses a spell to tame a monster, the GM can hand them the card, and it reads exactly like their own Quirks or Gang features.</li>
+<li><strong>Cons:</strong> Might be too verbose for a GM running multiple types of monsters in a single combat scene.</li>
+</ul>
+<h3 id="option-2-the-behavior-reaction-split-tactical-focus" tabindex="-1">Option 2: The “Behavior / Reaction” Split (Tactical Focus)</h3>
+<ul>
+<li><strong>Concept:</strong> Split enemy abilities into <strong>Behavior</strong> (what they do on their turn automatically via AI schedule) and <strong>Reactions</strong> (what happens when players attack them or interact with their Zone).</li>
+<li><strong>Pros:</strong> Highly functional at the table. When it is the enemy’s turn, the GM looks at <strong>Behavior</strong>. When players are attacking, the GM looks at <strong>Reactions</strong>.</li>
+<li><strong>Cons:</strong> Loses the direct 1:1 mapping with the player modular system.</li>
+</ul>
+<h3 id="option-3-the-tag-and-stat-overlays-minimalist-focus" tabindex="-1">Option 3: The “Tag &amp; Stat Overlays” (Minimalist Focus)</h3>
+<ul>
+<li><strong>Concept:</strong> Keep statblocks to a single line. The enemy has standard stats, and all their abilities are represented by 1 to 3 Tags. The rules for these tags are printed in a single cheat sheet on the GM screen.</li>
+<li><strong>Pros:</strong> Fastest combat resolution. Zero reading required during the fight once tags are memorized.</li>
+<li><strong>Cons:</strong> Harder to write highly unique, narrative “set-piece” boss fights without adding extra special text.</li>
+</ul>
+<hr>
+<h2 id="creative-recommendation-the-triptych-threat-block" tabindex="-1">Creative Recommendation: The “Triptych” Threat Block</h2>
+<p>To get the best of all worlds, we could design the NPC/Enemy ability framework around a three-part structure: <strong>Schedule (Active)</strong>, <strong>Hazard (Reactive)</strong>, and <strong>Tags (Passive)</strong>.</p>
+<ol>
+<li><strong>Passive (Tags):</strong> Direct physical properties (e.g. <code>[Heated]</code>, <code>[Sticky]</code>, <code>[Heavy Armored]</code>) that interact symmetrically with player actions and elements.</li>
+<li><strong>Active (The Schedule):</strong> Simple deterministic actions they perform on their turn, governed by a priority checklist or a round clock.</li>
+<li><strong>Reactive (The Hazards):</strong> Interrupts or modifications to player rolls (e.g. “If you Fumble: [Effect]”).</li>
+</ol>
+<p>This structure maintains the design tenets of Gobbos: <strong>Fun at the table</strong>, <strong>No GM math</strong>, and <strong>Embracing chaotic goblin energy</strong>.</p>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{TITLE}}</title>
-  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. {{SUBTITLE}}">
+  <title>README — PROD Lore — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Locked canon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -24,7 +24,12 @@
       </a>
     </div>
     <nav class="env-nav" id="envNav">
-      {{ENV_NAV}}
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab env-tab--active">🏛️ PROD Lore</a>
     </nav>
     <div class="top-bar-right">
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
@@ -39,11 +44,11 @@
     <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-header">
-        <h2 class="sidebar-title">{{PAGE_TITLE}}</h2>
-        <p class="sidebar-subtitle">{{SUBTITLE}}</p>
+        <h2 class="sidebar-title">PROD Lore</h2>
+        <p class="sidebar-subtitle">Locked canon</p>
       </div>
       <nav class="sidebar-nav" id="sidebarNav">
-        {{NAV_CONTENT}}
+        <div class="nav-group nav-group--solo"><a href="prod-lore.html" class="nav-link nav-link--solo nav-link--active" data-target="readme">README</a></div>
       </nav>
     </aside>
 
@@ -55,7 +60,10 @@
       <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
         ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
       </div>
-      {{MAIN_CONTENT}}
+      <h1 id="prod-lore-locked-canon" tabindex="-1">PROD Lore - Locked Canon</h1>
+<p>Welcome to the PROD Lore repository!</p>
+<p>This folder contains the official, locked-in, and immutable canon of the Gobbos universe, including geography, culture, history, and factions.</p>
+
     </main>
   </div>
 

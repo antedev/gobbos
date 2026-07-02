@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rules_Lawyer_System_Audit_Report — DEV Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Raw ideas and brainstorms">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab env-tab--active">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">DEV Rules</h2>
+        <p class="sidebar-subtitle">Raw ideas and brainstorms</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="gdrs"><span class="toggle-icon">▸</span>GDRs</button><ul class="nav-pages" id="nav-gdrs" style="display: none;"><li><a href="dev.html" class="nav-link" data-target="gdrs--gdr-001-macro-audit-and-unified-effects">GDR-001_Macro_Audit_And_Unified_Effects</a></li><li><a href="dev--gdrs--gdr-002-gang-pillar-and-lair-economy.html" class="nav-link" data-target="gdrs--gdr-002-gang-pillar-and-lair-economy">GDR-002_Gang_Pillar_And_Lair_Economy</a></li><li><a href="dev--gdrs--gdr-003-unified-modular-powers-system.html" class="nav-link" data-target="gdrs--gdr-003-unified-modular-powers-system">GDR-003_Unified_Modular_Powers_System</a></li><li><a href="dev--gdrs--gdr-004-enemy-stat-framework-and-mobs.html" class="nav-link" data-target="gdrs--gdr-004-enemy-stat-framework-and-mobs">GDR-004_Enemy_Stat_Framework_And_Mobs</a></li><li><a href="dev--gdrs--gdr-005-goblin-magic-dice-system.html" class="nav-link" data-target="gdrs--gdr-005-goblin-magic-dice-system">GDR-005_Goblin_Magic_Dice_System</a></li><li><a href="dev--gdrs--gdr-006-environmental-hazards-and-zone-statblocks.html" class="nav-link" data-target="gdrs--gdr-006-environmental-hazards-and-zone-statblocks">GDR-006_Environmental_Hazards_and_Zone_Statblocks</a></li><li><a href="dev--gdrs--gdr-template.html" class="nav-link" data-target="gdrs--gdr-template">GDR-TEMPLATE</a></li></ul></div><div class="nav-group nav-group--solo"><a href="dev--crafting-creative-analysis.html" class="nav-link nav-link--solo" data-target="crafting-creative-analysis">crafting_creative_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-framework-brainstorm">crafting_framework_brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-mechanics-audit.html" class="nav-link nav-link--solo" data-target="crafting-mechanics-audit">crafting_mechanics_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-brainstorm">crafting-brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--creative-genius-crafting-analysis.html" class="nav-link nav-link--solo" data-target="creative-genius-crafting-analysis">creative_genius_crafting_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-modular-threat-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="enemy-modular-threat-framework-brainstorm">Enemy_Modular_Threat_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-stats-draft.html" class="nav-link nav-link--solo" data-target="enemy-stats-draft">Enemy_Stats_Draft</a></div><div class="nav-group nav-group--solo"><a href="dev--equipment-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="equipment-framework-brainstorm">Equipment_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--gang-mechanics-brainstorm.html" class="nav-link nav-link--solo" data-target="gang-mechanics-brainstorm">Gang_Mechanics_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--generic-trick-mechanics.html" class="nav-link nav-link--solo" data-target="generic-trick-mechanics">Generic_Trick_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--initial-trick-list.html" class="nav-link nav-link--solo" data-target="initial-trick-list">Initial_Trick_List</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-brainstorm.html" class="nav-link nav-link--solo" data-target="lair-brainstorm">Lair_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-mechanics-game-engineering-audit.html" class="nav-link nav-link--solo" data-target="lair-mechanics-game-engineering-audit">Lair_Mechanics_Game_Engineering_Audit</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-refined-framework.html" class="nav-link nav-link--solo" data-target="lair-system-refined-framework">Lair_System_Refined_Framework</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-research-deep-dive.html" class="nav-link nav-link--solo" data-target="lair-system-research-deep-dive">Lair_System_Research_Deep_Dive</a></div><div class="nav-group nav-group--solo"><a href="dev--mob-combat-design-advice.html" class="nav-link nav-link--solo" data-target="mob-combat-design-advice">Mob_Combat_Design_Advice</a></div><div class="nav-group nav-group--solo"><a href="dev--research-crafting-systems.html" class="nav-link nav-link--solo" data-target="research-crafting-systems">research_crafting_systems</a></div><div class="nav-group nav-group--solo"><a href="dev--research-deeds-award-mechanics.html" class="nav-link nav-link--solo" data-target="research-deeds-award-mechanics">Research_Deeds_Award_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-base-building.html" class="nav-link nav-link--solo" data-target="researcher-findings-base-building">Researcher_Findings_Base_Building</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-conditions.html" class="nav-link nav-link--solo" data-target="researcher-findings-conditions">Researcher_Findings_Conditions</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-environmental-hazards.html" class="nav-link nav-link--solo" data-target="researcher-findings-environmental-hazards">Researcher_Findings_Environmental_Hazards</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-analysis.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-analysis">Researcher_Findings_OSR_Analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-sources.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-sources">Researcher_Findings_OSR_Sources</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-notes.html" class="nav-link nav-link--solo" data-target="researcher-notes">Researcher_Notes</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-audit-equipment.html" class="nav-link nav-link--solo" data-target="rules-lawyer-audit-equipment">Rules_Lawyer_Audit_Equipment</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-crafting-audit.html" class="nav-link nav-link--solo" data-target="rules-lawyer-crafting-audit">rules_lawyer_crafting_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-system-audit-report.html" class="nav-link nav-link--solo nav-link--active" data-target="rules-lawyer-system-audit-report">Rules_Lawyer_System_Audit_Report</a></div><div class="nav-group nav-group--solo"><a href="dev--static-resistances-opposed-tests.html" class="nav-link nav-link--solo" data-target="static-resistances-opposed-tests">Static_Resistances_Opposed_Tests</a></div><div class="nav-group nav-group--solo"><a href="dev--trick-mechanics-master-list.html" class="nav-link nav-link--solo" data-target="trick-mechanics-master-list">Trick_Mechanics_Master_List</a></div><div class="nav-group nav-group--solo"><a href="dev--unified-modular-power-system.html" class="nav-link nav-link--solo" data-target="unified-modular-power-system">Unified Modular Power System</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="rules-lawyer-system-audit-report" tabindex="-1">Rules Lawyer System Audit Report</h1>
+<p><em>Date: May 30, 2026</em><br>
+<em>Role: Meticulous TTRPG Systems Analyst</em><br>
+<em>Scope: Full audit of <code>01_STAGE_Drafts/</code> rules files</em></p>
+<hr>
+<h2 id="executive-summary" tabindex="-1">Executive Summary</h2>
+<p>This audit is a comprehensive evaluation of the Gobbos TTRPG rules currently residing in <code>01_STAGE_Drafts/</code>. Since the <code>02_PROD_Core_Rules/</code> directory is currently empty, the STAGE drafts represent the active state of the rules.</p>
+<p>While the core game loops (Tactical Raid, Lair Downtime, and Roguelite Legacy) are mechanically compelling and thematic, several inconsistencies, logical contradictions, terminology drifts, and mathematical errors have emerged due to rapid iterative development.</p>
+<p>This report details <strong>15 specific issues</strong> categorized by system area, assigning a severity level to each, and providing a direct resolution pathway to align the rules with the core <strong>Design Tenets</strong> of the game.</p>
+<hr>
+<h2 id="table-of-contents" tabindex="-1">Table of Contents</h2>
+<ol>
+<li><a href="#1-core-resolution--dice-mechanics">Core Resolution &amp; Dice Mechanics</a></li>
+<li><a href="#2-stat-tracks--progression-anomalies">Stat Tracks &amp; Progression Anomalies</a></li>
+<li><a href="#3-combat-orders--mob-mechanics">Combat, Orders, &amp; Mob Mechanics</a></li>
+<li><a href="#4-inventory-carry--equipment-discrepancies">Inventory, Carry, &amp; Equipment Discrepancies</a></li>
+<li><a href="#5-lair-magic--system-gaps">Lair, Magic, &amp; System Gaps</a></li>
+<li><a href="#6-summary-matrix--action-plan">Summary Matrix &amp; Action Plan</a></li>
+</ol>
+<hr>
+<h2 id="1-core-resolution-and-dice-mechanics" tabindex="-1">1. Core Resolution &amp; Dice Mechanics</h2>
+<h3 id="issue-1-1-the-0d6-dice-pool-rule-location-gap" tabindex="-1">Issue 1.1: The 0d6 Dice Pool Rule Location Gap</h3>
+<ul>
+<li><strong>Severity:</strong> Medium</li>
+<li><strong>Description:</strong> In [00_Journey_Rules.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/07_Travel/00_Journey_Rules.md) (Example 1), a critical core rule is introduced in a sidebar note:
+<blockquote>
+<p><em>“In Gobbos, if a dice pool is reduced to 0d6 or less, the test automatically fails, but you still roll 1d6 and need a 6 to salvage it, while a 1 is a fumble.”</em></p>
+</blockquote>
+</li>
+<li><strong>Inconsistency:</strong> This resolution rule is entirely absent from [01_Dice.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/01_Dice.md) (where dice pool assembly is defined) and [06_Keywords <a href="http://Index.md">Index.md</a>](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/06_Keywords <a href="http://Index.md">Index.md</a>).</li>
+<li><strong>Resolution Pathway:</strong> Copy this rule into the “Dice Pool” section of <code>01_Dice.md</code> and add it to <code>06_Keywords Index.md</code> under “Dice &amp; Tests.”</li>
+</ul>
+<h3 id="issue-1-2-gm-dice-rolling-vs-design-tenets" tabindex="-1">Issue 1.2: GM Dice Rolling vs. Design Tenets</h3>
+<ul>
+<li><strong>Severity:</strong> Medium</li>
+<li><strong>Description:</strong> The Gobbos Golden Rule states that the GM never rolls dice in combat or standard checks. However, multiple draft files direct the GM to roll:
+<ol>
+<li>In [05_Raid <a href="http://points.md">points.md</a>](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/05_Raid <a href="http://points.md">points.md</a>) (Alert Checks): <em>“the GM rolls 1d6 [to check Alert level].”</em></li>
+<li>In [00_Journey_Rules.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/07_Travel/00_Journey_Rules.md) (Travel Events): <em>“The GM rolls 1d6 on the Gobbo Travel Event Table.”</em></li>
+<li>In [03_Movement &amp; <a href="http://Zones.md">Zones.md</a>](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/03_Movement &amp; <a href="http://Zones.md">Zones.md</a>) (Burning): <em>“Fire spreads… on a roll of 5–6 on 1d6 (rolled by the GM or a player).”</em></li>
+</ol>
+</li>
+<li><strong>Inconsistency:</strong> Direct GM rolling violates the design tenet that the GM’s threats are deterministic, and that players roll all the dice.</li>
+<li><strong>Resolution Pathway:</strong> Update the text in these files to state that <strong>players roll</strong> for these environmental/procedural occurrences (e.g., <em>“The active player rolls 1d6 on the Travel Event Table on behalf of the horde”</em>).</li>
+</ul>
+<h3 id="issue-1-3-character-death-last-act-resolution-rule" tabindex="-1">Issue 1.3: Character Death “Last Act” Resolution Rule</h3>
+<ul>
+<li><strong>Severity:</strong> Low</li>
+<li><strong>Description:</strong> In [07_Wounds_Conditions.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md), the “Last Act” rule states: <em>“This action is always Easy, no matter the circumstances.”</em></li>
+<li><strong>Inconsistency:</strong> [01_Dice.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/01_Dice.md) lists Easy, Normal, and Hard difficulties but does not cross-reference or mention this specific death exception.</li>
+<li><strong>Resolution Pathway:</strong> Add a brief cross-reference in <code>01_Dice.md</code> under “Difficulty and Target Number” noting that character death actions are a default exception (always Easy).</li>
+</ul>
+<hr>
+<h2 id="2-stat-tracks-and-progression-anomalies" tabindex="-1">2. Stat Tracks &amp; Progression Anomalies</h2>
+<h3 id="issue-2-1-slink-movement-speed-vs-zone-movement-speed" tabindex="-1">Issue 2.1: Slink Movement Speed vs. Zone Movement Speed</h3>
+<ul>
+<li><strong>Severity:</strong> High</li>
+<li><strong>Description:</strong> In [03_Movement &amp; <a href="http://Zones.md">Zones.md</a>](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/03_Movement &amp; <a href="http://Zones.md">Zones.md</a>), it is stated:
+<blockquote>
+<p><em>“a normal movement speed is to move 2 Zones per round and action.”</em></p>
+</blockquote>
+</li>
+<li><strong>Inconsistency:</strong> This directly contradicts the <strong>Slink</strong> stat tracks in both [10_Stats.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters &amp; Mobs/10_Stats.md) and [11_Character <a href="http://Creation.md">Creation.md</a>](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters &amp; Mobs/11_Character <a href="http://Creation.md">Creation.md</a>), which define Movement speeds as:
+<ul>
+<li><strong>Slink 1:</strong> Movement 4 Zones</li>
+<li><strong>Slink 2:</strong> Movement 5 Zones</li>
+<li><strong>Slink 3:</strong> Movement 5 Zones</li>
+<li><strong>Slink 4:</strong> Movement 6 Zones</li>
+<li><strong>Slink 5:</strong> Movement 7 Zones
+Additionally, [02 <a href="http://Combat.md">Combat.md</a>](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/02 <a href="http://Combat.md">Combat.md</a>) (Move action) says: <em>“With a Move action, you can move up to your Movement number of zones.”</em>
+If PCs move 4–7 Zones per action, but the zones guide says “normal movement speed is 2 Zones,” there is a massive tactical scaling breakdown.</li>
+</ul>
+</li>
+<li><strong>Resolution Pathway:</strong> Clarify that <strong>2 Zones per action</strong> is the base movement speed for <strong>Mobs</strong> (who do not have a Slink score) or unburdened standard enemies, while <strong>Boss PCs</strong> utilize their specific Slink-derived <strong>Movement</strong> score (4 to 7 Zones per action).</li>
+</ul>
+<h3 id="issue-2-2-terminology-drift-vigor-vs-tough" tabindex="-1">Issue 2.2: Terminology Drift — “Vigor” vs. “Tough”</h3>
+<ul>
+<li><strong>Severity:</strong> Medium</li>
+<li><strong>Description:</strong> The term <strong>Vigor</strong> appears as a core stat in two locations:
+<ol>
+<li>In [00_Magic_Rules.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/08_Magic/00_Magic_Rules.md) (line 113): <em>“You suffer a Bane on all physical actions (Vigor and Slink) until the end of the encounter.”</em></li>
+<li>In [<a href="http://GEMINI.md">GEMINI.md</a>](file:///c:/Users/ante/Documents/github/gobbos/GEMINI.md) (line 98): <em>“Core Stats &amp; Mechanics: Must be Bold. (e.g., Grit, Boon, Bane, Vigor, Slink, Brain, Renown).”</em></li>
+</ol>
+</li>
+<li><strong>Inconsistency:</strong> <strong>Vigor</strong> is a legacy stat or typo. The actual Gobbos stat is <strong>Tough</strong>.</li>
+<li><strong>Resolution Pathway:</strong> Replace all occurrences of <strong>Vigor</strong> with <strong>Tough</strong> across the rulebooks and templates.</li>
+</ul>
+<h3 id="issue-2-3-stat-level-6-and-elder-retirement-wording" tabindex="-1">Issue 2.3: Stat level 6 and Elder Retirement Wording</h3>
+<ul>
+<li><strong>Severity:</strong> Low</li>
+<li><strong>Description:</strong> In [10_Stats.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters &amp; Mobs/10_Stats.md), the main stats are defined as ranging from <strong>1 to 5</strong>, with Level 5 designated as “(Max)”.</li>
+<li><strong>Inconsistency:</strong> [12_Gang.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters &amp; Mobs/12_Gang.md) and [15_Level_Up and <a href="http://death.md">death.md</a>](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters &amp; Mobs/15_Level_Up and <a href="http://death.md">death.md</a>) state that: <em>“When a Boss reaches Level 6 in any stat, they automatically retire [costing 6 XP].”</em> This makes Level 6 the trigger point, meaning Level 5 is the maximum <em>playable</em> rank, not the absolute stat ceiling.</li>
+<li><strong>Resolution Pathway:</strong> Update the stat tracks in <code>10_Stats.md</code> to append a note: <em>“Reaching Level 6 in any stat is impossible to play; buying this rank triggers immediate Retirement as an Elder.”</em></li>
+</ul>
+<hr>
+<h2 id="3-combat-orders-and-mob-mechanics" tabindex="-1">3. Combat, Orders, &amp; Mob Mechanics</h2>
+<h3 id="issue-3-1-giving-orders-standard-orders-roll-contradiction" tabindex="-1">Issue 3.1: Giving Orders — Standard Orders Roll Contradiction</h3>
+<ul>
+<li><strong>Severity:</strong> High</li>
+<li><strong>Description:</strong> There is a direct logical contradiction between the combat action definitions and the ordering guide:
+<ol>
+<li>In [02 <a href="http://Combat.md">Combat.md</a>](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/02 <a href="http://Combat.md">Combat.md</a>): <em>“Standard Orders do not require a dice roll.”</em></li>
+<li>In [04_Giving <a href="http://orders.md">orders.md</a>](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/04_Giving <a href="http://orders.md">orders.md</a>): <em>“If they are smaller or equal to your command size, the TN is 1. If they are bigger, the TN goes up… If they are in a zone further away, the test is Normal if the distance is equal or less than your Mouth. One zone further away increases the difficulty to Hard…”</em></li>
+</ol>
+</li>
+<li><strong>Inconsistency:</strong> If standard orders don’t require rolls, then why does the distance check require a roll for any Mob not in the same zone? (Only the same zone grants an automatic success). Additionally, <code>04_Giving orders.md</code> never explicitly states <strong>which stat is rolled</strong> for the test, though it implies <strong>Mouth</strong> or <strong>Grunt</strong>.</li>
+<li><strong>Resolution Pathway:</strong> Reconcile the rules:
+<ul>
+<li>Clarify that <strong>Orders issued to Mobs in the same Zone never require a roll</strong> (provided the Mob size is &lt;= current Grunt).</li>
+<li>Clarify that <strong>Orders issued to Mobs in adjacent/remote Zones require a Mouth test</strong> against the designated TN and difficulty.</li>
+<li>Explicitly write: <em>“The player rolls a Mouth test”</em> in <code>04_Giving orders.md</code>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="issue-3-2-mob-damage-rearrangement-healing-confusion" tabindex="-1">Issue 3.2: Mob Damage Rearrangement (Healing) Confusion</h3>
+<ul>
+<li><strong>Severity:</strong> Medium</li>
+<li><strong>Description:</strong> In [07_Wounds_Conditions.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md), the Mob healing example states:
+<blockquote>
+<p><em>“A 3d6 mob has taken some beating and their damage after the battle are 3,4,2. The Boss can now rearrange the damage dices to 6,2,1 or perhaps 5,4. In the latter case, effectively reducing the size of the mob in order to make it more stable.”</em></p>
+</blockquote>
+</li>
+<li><strong>Inconsistency:</strong> Gobbos Mobs track health by turning physical dice faces down. A die is removed only when it drops below 1.
+<ul>
+<li>If the dice read <code>3</code>, <code>4</code>, and <code>2</code> (Size 3, Total Health 9), rearranging them to <code>6</code>, <code>2</code>, and <code>1</code> keeps them at Size 3 (Total Health 9).</li>
+<li>Rearranging them to <code>5</code> and <code>4</code> voluntarily drops them to Size 2.
+Since combat power is directly tied to Mob Size (rolling Size in dice for attacks and Tough tests), there is <strong>no mechanical advantage</strong> to voluntarily reducing Mob Size to “make it stable.” In fact, doing so is strictly disadvantageous.</li>
+</ul>
+</li>
+<li><strong>Resolution Pathway:</strong> Clarify why stability matters. (e.g., if a Mob has a die at <code>1</code> and takes <em>any</em> environmental damage, that die is destroyed, which might trigger a morale check or drop loot. If they consolidate health into fewer, higher-valued dice, they avoid low-health vulnerabilities at the cost of immediate combat power). Alternatively, remove the voluntary size-reduction option if it serves no practical purpose.</li>
+</ul>
+<h3 id="issue-3-3-meat-shield-quirk-damage-discrepancy" tabindex="-1">Issue 3.3: Meat Shield Quirk Damage Discrepancy</h3>
+<ul>
+<li><strong>Severity:</strong> Medium</li>
+<li><strong>Description:</strong> The <strong>Meat Shield</strong> ability has two different damage scales:
+<ol>
+<li>In [13_Boons_and_Banes.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters &amp; Mobs/13_Boons_and_Banes.md): <em>“redirect an attack meant for you to an adjacent friendly Mob [the Mob takes the attack’s standard damage].”</em></li>
+<li>In [14_Quirks.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters &amp; Mobs/14_Quirks.md): <em>“The Mob takes the hit instead (losing 1d3 Mob Size), and you take 0 Wounds.”</em></li>
+</ol>
+</li>
+<li><strong>Inconsistency:</strong> Losing <strong>1d3 Mob Size</strong> is a devastating penalty (equivalent to 1 to 3 fully killed Gobbos, or up to 18 points of damage). Taking the attack’s standard damage (usually 1 or 2 damage to a single die face) is far lighter.</li>
+<li><strong>Resolution Pathway:</strong> Align the two rules. The Mob should simply take the standard damage of the attack, which naturally reduces its dice faces and may (or may not) result in a Size reduction if a die drops below 1.</li>
+</ul>
+<hr>
+<h2 id="4-inventory-carry-and-equipment-discrepancies" tabindex="-1">4. Inventory, Carry, &amp; Equipment Discrepancies</h2>
+<h3 id="issue-4-1-pc-carry-capacity-example-math-error" tabindex="-1">Issue 4.1: PC Carry Capacity Example Math Error</h3>
+<ul>
+<li><strong>Severity:</strong> Medium</li>
+<li><strong>Description:</strong> In [32_Carry <a href="http://Stuff.md">Stuff.md</a>](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/03_Loot/32_Carry <a href="http://Stuff.md">Stuff.md</a>), the PC example states:
+<blockquote>
+<p><em>“Grugor has a Tough of 3. He can carry loot up to a total of bulk of 8 (4 starting + 4 for level 3)…”</em></p>
+</blockquote>
+</li>
+<li><strong>Inconsistency:</strong> The core rules and formulas establish a different capacity:
+<ul>
+<li>The formula in the same file states: <em>“A Goblin can carry 4 Bulk and then + 2 for each level of Tough.”</em> For Tough 3, this is $4 + (2 \times 3) = 10$ Bulk.</li>
+<li>The stat tracks in [10_Stats.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters &amp; Mobs/10_Stats.md) and [11_Character <a href="http://Creation.md">Creation.md</a>](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters &amp; Mobs/11_Character <a href="http://Creation.md">Creation.md</a>) explicitly state: <em>“Level 3 [Tough]: Carry Capacity 10.”</em>
+The example calculation “4 starting + 4 for level 3 = 8” is incorrect.</li>
+</ul>
+</li>
+<li><strong>Resolution Pathway:</strong> Correct the example text: <em>“Grugor has a Tough of 3. He can carry loot up to a total of 10 Bulk…”</em> Update the item totals in the example to match this budget.</li>
+</ul>
+<h3 id="issue-4-2-mob-carry-capacity-example-math-error" tabindex="-1">Issue 4.2: Mob Carry Capacity Example Math Error</h3>
+<ul>
+<li><strong>Severity:</strong> Medium</li>
+<li><strong>Description:</strong> In [32_Carry <a href="http://Stuff.md">Stuff.md</a>](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/03_Loot/32_Carry <a href="http://Stuff.md">Stuff.md</a>), the Mob example states:
+<blockquote>
+<p><em>“A large Troop of goblin warriors of size 3 has been plundering… They are within their limit of Bulk 9…”</em></p>
+</blockquote>
+</li>
+<li><strong>Inconsistency:</strong> The rules in <code>32_Carry Stuff.md</code> and [13_Goblin_mob.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters &amp; Mobs/13_Goblin_mob.md) state that a Mob’s carry capacity is <strong>Size x 4 Bulk</strong>. For a Size 3 Mob, the limit is <strong>12 Bulk</strong>, not 9 (which represents a legacy Size x 3 formula).</li>
+<li><strong>Resolution Pathway:</strong> Correct the example text: <em>“A large Troop of goblin warriors of size 3 has a limit of 12 Bulk. They are currently carrying 8 Bulk, which is well within their capacity.”</em></li>
+</ul>
+<h3 id="issue-4-3-weapons-damage-vs-attack-dice-pool-modifier" tabindex="-1">Issue 4.3: Weapons “Damage” vs. “Attack Dice Pool Modifier”</h3>
+<ul>
+<li><strong>Severity:</strong> Medium</li>
+<li><strong>Description:</strong> In [33_Equipment.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/03_Loot/33_Equipment.md) and [11_Character <a href="http://Creation.md">Creation.md</a>](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters &amp; Mobs/11_Character <a href="http://Creation.md">Creation.md</a>), weapons list a <strong>Damage</strong> value (e.g., Unarmed: <code>+1d</code>, Light Melee: <code>+2d</code>, Medium Melee: <code>+3d</code>, Heavy Melee: <code>+4d</code>).</li>
+<li><strong>Inconsistency:</strong> Gobbos combat is deterministic for enemies—successes equal to Defence instantly kill them. The player rolls <code>Tough</code> (Melee) or <code>Slink</code> (Ranged) plus the weapon modifier. The weapon modifier adds <strong>dice to the attack roll</strong>, not “damage” to a secondary health bar. Calling this column “Damage” is highly misleading.</li>
+<li><strong>Resolution Pathway:</strong> Rename the column in equipment tables from <strong>Damage</strong> to <strong>Attack Pool</strong> or <strong>Attack Dice (+d)</strong> to match the system mechanics.</li>
+</ul>
+<hr>
+<h2 id="5-lair-magic-and-system-gaps" tabindex="-1">5. Lair, Magic, &amp; System Gaps</h2>
+<h3 id="issue-5-1-magic-power-words-learning-progression-gap" tabindex="-1">Issue 5.1: Magic Power Words Learning Progression Gap</h3>
+<ul>
+<li><strong>Severity:</strong> High</li>
+<li><strong>Description:</strong> In [00_Magic_Rules.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/08_Magic/00_Magic_Rules.md), spellcasters utilize Power Words (Narrative Tags) to cast spells.</li>
+<li><strong>Inconsistency:</strong> While there are clear XP rules for learning and upgrading Quirks and Twists, there are <strong>no rules or costs for learning new Power Words</strong>. The text states: <em>“If you have access to a Tag through Quirks, Gear, Lair upgrades, or Gang traits, you can shout it…”</em> but offers no progression mechanism for a dedicated mage to expand their vocabulary independently of gear/quirks.</li>
+<li><strong>Resolution Pathway:</strong> Establish a mechanical cost (e.g., spending XP or Lair research labor) to permanently learn a Power Word/Tag as a spell, or state clearly that Power Words can <em>only</em> be channeled if actively present on the Boss’s equipped gear or Quirks.</li>
+</ul>
+<h3 id="issue-5-2-lair-upgrades-vs-dominance-room-mismatch" tabindex="-1">Issue 5.2: Lair Upgrades vs. Dominance Room Mismatch</h3>
+<ul>
+<li><strong>Severity:</strong> Medium</li>
+<li><strong>Description:</strong> In [00_Lair_Rules.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/05_Base/00_Lair_Rules.md):
+<ul>
+<li>The listed structural room upgrades are: <code>Breeding Pits</code> (T1/T2), <code>Mud Tavern</code>, <code>Scrap Collector Yard</code>, and <code>Dwarven Forge</code>.</li>
+<li>The Lair Dominance example list refers to: <code>Proper Smithy</code> and <code>Brewery Cavern</code>.</li>
+</ul>
+</li>
+<li><strong>Inconsistency:</strong> <code>Proper Smithy</code> is listed as a Workshop Quality tier in [34_Crafting.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/03_Loot/34_Crafting.md), not a separate Lair Room upgrade. The Lair rooms and their dominance kickbacks do not map consistently between the base rules and the crafting rules.</li>
+<li><strong>Resolution Pathway:</strong> Harmonize the room lists. Specify that the Workshop is a single Lair room that can be upgraded in Tiers (Open Fire $\rightarrow$ Scrap Forge $\rightarrow$ Proper Smithy $\rightarrow$ Master Workshop $\rightarrow$ Legendary Forge), and that a Gang can claim Dominance over the Workshop itself. Ensure all room examples in the Dominance section exist in the Lair Upgrades database.</li>
+</ul>
+<h3 id="issue-5-3-glossary-placeholders-todos" tabindex="-1">Issue 5.3: Glossary Placeholders [TODOs]</h3>
+<ul>
+<li><strong>Severity:</strong> Low</li>
+<li><strong>Description:</strong> In [06_Keywords <a href="http://Index.md">Index.md</a>](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/06_Keywords <a href="http://Index.md">Index.md</a>), several critical terms contain placeholders:
+<ul>
+<li><code>Grit: [TODO: Define]</code></li>
+<li><code>Size: [TODO: Define for PCs]</code></li>
+<li><code>Status Effects: [TODO: Define]</code></li>
+</ul>
+</li>
+<li><strong>Inconsistency:</strong> Core terms are undefined. Specifically, PC <strong>Size</strong> is used in rules (e.g. <code>Butcher</code> Quirk: <em>“against an enemy whose Size is strictly smaller than yours”</em>), but a PC’s default Size is never stated.</li>
+<li><strong>Resolution Pathway:</strong> Write out these definitions. Define PC <strong>Size</strong> as a default of <strong>1</strong> (unless modified by mutations or specific heavy gear). Map Status Effects directly to the condition list in <code>07_Wounds_Conditions.md</code>.</li>
+</ul>
+<hr>
+<h2 id="6-summary-matrix-and-action-plan" tabindex="-1">6. Summary Matrix &amp; Action Plan</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Title</th>
+<th>Component / File</th>
+<th>Severity</th>
+<th>Action Recommended</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1.1</strong></td>
+<td>0d6 resolution location</td>
+<td><code>01_Dice.md</code></td>
+<td>Medium</td>
+<td>Copy rule from travel example to core dice rules.</td>
+</tr>
+<tr>
+<td><strong>1.2</strong></td>
+<td>GM rolling events</td>
+<td><code>05_Raid points.md</code>, <code>00_Journey_Rules.md</code></td>
+<td>Medium</td>
+<td>Change GM rolls to Player rolls on behalf of the GM.</td>
+</tr>
+<tr>
+<td><strong>1.3</strong></td>
+<td>Last Act Easy difficulty</td>
+<td><code>01_Dice.md</code>, <code>07_Wounds_Conditions.md</code></td>
+<td>Low</td>
+<td>Cross-reference Easy difficulty rule in core dice chapter.</td>
+</tr>
+<tr>
+<td><strong>2.1</strong></td>
+<td>Slink movement scaling</td>
+<td><code>03_Movement &amp; Zones.md</code></td>
+<td>High</td>
+<td>Clarify that 2 Zones is Mob speed; PCs use Slink-Movement.</td>
+</tr>
+<tr>
+<td><strong>2.2</strong></td>
+<td>Vigor vs. Tough typo</td>
+<td><code>00_Magic_Rules.md</code>, <code>GEMINI.md</code></td>
+<td>Medium</td>
+<td>Rename all occurrences of <strong>Vigor</strong> to <strong>Tough</strong>.</td>
+</tr>
+<tr>
+<td><strong>2.3</strong></td>
+<td>Level 6 retirement</td>
+<td><code>10_Stats.md</code></td>
+<td>Low</td>
+<td>Add note to stat tracks clarifying Level 6 retirement buy.</td>
+</tr>
+<tr>
+<td><strong>3.1</strong></td>
+<td>Order action rolls</td>
+<td><code>02 Combat.md</code>, <code>04_Giving orders.md</code></td>
+<td>High</td>
+<td>Harmonize same-zone auto-success vs. remote Mouth tests.</td>
+</tr>
+<tr>
+<td><strong>3.2</strong></td>
+<td>Mob healing stability</td>
+<td><code>07_Wounds_Conditions.md</code></td>
+<td>Medium</td>
+<td>Clarify why consolidating health into fewer dice is useful.</td>
+</tr>
+<tr>
+<td><strong>3.3</strong></td>
+<td>Meat Shield damage</td>
+<td><code>13_Boons_and_Banes.md</code>, <code>14_Quirks.md</code></td>
+<td>Medium</td>
+<td>Align: Mob takes normal attack damage, not 1d3 Size loss.</td>
+</tr>
+<tr>
+<td><strong>4.1</strong></td>
+<td>Grugor Carry math</td>
+<td><code>32_Carry Stuff.md</code></td>
+<td>Medium</td>
+<td>Change Tough 3 carry limit in example from 8 to 10.</td>
+</tr>
+<tr>
+<td><strong>4.2</strong></td>
+<td>Mob Carry math</td>
+<td><code>32_Carry Stuff.md</code></td>
+<td>Medium</td>
+<td>Change Size 3 Mob limit in example from 9 to 12.</td>
+</tr>
+<tr>
+<td><strong>4.3</strong></td>
+<td>Weapon “Damage” label</td>
+<td><code>33_Equipment.md</code>, <code>11_Character Creation.md</code></td>
+<td>Medium</td>
+<td>Rename “Damage” column to “Attack Pool (+d)”.</td>
+</tr>
+<tr>
+<td><strong>5.1</strong></td>
+<td>Magic Word learning</td>
+<td><code>00_Magic_Rules.md</code></td>
+<td>High</td>
+<td>Define how Power Words are acquired/progressed.</td>
+</tr>
+<tr>
+<td><strong>5.2</strong></td>
+<td>Lair Rooms vs Workshop</td>
+<td><code>00_Lair_Rules.md</code>, <code>34_Crafting.md</code></td>
+<td>Medium</td>
+<td>Harmonize room names and clarify workshop dominance.</td>
+</tr>
+<tr>
+<td><strong>5.3</strong></td>
+<td>Glossary [TODOs]</td>
+<td><code>06_Keywords Index.md</code></td>
+<td>Low</td>
+<td>Write out definitions for Grit, PC Size, and Status Effects.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>Report compiled by the Rules Lawyer. Ready for refinement and implementation.</em></p>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

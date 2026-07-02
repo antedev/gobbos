@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lair_Rules — STAGE Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Playtesting & review materials">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab env-tab--active">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">STAGE Rules</h2>
+        <p class="sidebar-subtitle">Playtesting & review materials</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="stage.html" class="nav-link" data-target="rules--overview">Overview</a></li><li><a href="stage--rules--combat.html" class="nav-link" data-target="rules--combat">Combat</a></li><li><a href="stage--rules--movement-and-zones.html" class="nav-link" data-target="rules--movement-and-zones">Movement &amp; Zones</a></li><li><a href="stage--rules--giving-orders.html" class="nav-link" data-target="rules--giving-orders">Giving orders</a></li><li><a href="stage--rules--raid-points.html" class="nav-link" data-target="rules--raid-points">Raid points</a></li><li><a href="stage--rules--keywords-index.html" class="nav-link" data-target="rules--keywords-index">Keywords Index</a></li><li><a href="stage--rules--wounds-conditions.html" class="nav-link" data-target="rules--wounds-conditions">Wounds_Conditions</a></li><li><a href="stage--rules--master-tag-index.html" class="nav-link" data-target="rules--master-tag-index">Master_Tag_Index</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="characters-and-mobs"><span class="toggle-icon">▸</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" style="display: none;"><li><a href="stage--characters-and-mobs--character-creation.html" class="nav-link" data-target="characters-and-mobs--character-creation">Character Creation</a></li><li><a href="stage--characters-and-mobs--gang.html" class="nav-link" data-target="characters-and-mobs--gang">Gang</a></li><li><a href="stage--characters-and-mobs--boons-and-banes.html" class="nav-link" data-target="characters-and-mobs--boons-and-banes">Boons_and_Banes</a></li><li><a href="stage--characters-and-mobs--goblin-mob.html" class="nav-link" data-target="characters-and-mobs--goblin-mob">Goblin_mob</a></li><li><a href="stage--characters-and-mobs--quirks.html" class="nav-link" data-target="characters-and-mobs--quirks">Quirks</a></li><li><a href="stage--characters-and-mobs--level-up-and-death.html" class="nav-link" data-target="characters-and-mobs--level-up-and-death">Level_Up and death</a></li><li><a href="stage--characters-and-mobs--unified-modular-powers-system.html" class="nav-link" data-target="characters-and-mobs--unified-modular-powers-system">Unified_Modular_Powers_System</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="loot"><span class="toggle-icon">▸</span>Loot</button><ul class="nav-pages" id="nav-loot" style="display: none;"><li><a href="stage--loot--loot.html" class="nav-link" data-target="loot--loot">loot</a></li><li><a href="stage--loot--carry-stuff.html" class="nav-link" data-target="loot--carry-stuff">Carry Stuff</a></li><li><a href="stage--loot--equipment.html" class="nav-link" data-target="loot--equipment">Equipment</a></li><li><a href="stage--loot--crafting.html" class="nav-link" data-target="loot--crafting">Crafting</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="enemies"><span class="toggle-icon">▸</span>Enemies</button><ul class="nav-pages" id="nav-enemies" style="display: none;"><li><a href="stage--enemies--enemies.html" class="nav-link" data-target="enemies--enemies">Enemies</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="true" data-target="base"><span class="toggle-icon">▾</span>Base</button><ul class="nav-pages" id="nav-base" ><li><a href="stage--base--lair-rules.html" class="nav-link nav-link--active" data-target="base--lair-rules">Lair_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="travel"><span class="toggle-icon">▸</span>Travel</button><ul class="nav-pages" id="nav-travel" style="display: none;"><li><a href="stage--travel--journey-rules.html" class="nav-link" data-target="travel--journey-rules">Journey_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="magic"><span class="toggle-icon">▸</span>Magic</button><ul class="nav-pages" id="nav-magic" style="display: none;"><li><a href="stage--magic--magic-rules.html" class="nav-link" data-target="magic--magic-rules">Magic_Rules</a></li></ul></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="lair-and-base-building" tabindex="-1">Lair &amp; Base Building</h1>
+<p><em>Goblins are weak, stupid, and easily squashed. But a Warren of goblins? That is a swarm. That is a society. The Lair is the heart of your gang—a place to heal, lick your wounds, build ridiculous weapons, and plot the next raid. Expand the warren, secure outposts, and build an empire of scrap.</em></p>
+<p>The Lair is a shared, cooperative project managed by all players. It grows, levels up, and unlocks new options for characters and Mobs alike.</p>
+<hr>
+<h2 id="the-lair-turn" tabindex="-1">The Lair Turn</h2>
+<p>Campaign play in <em>Gobbos</em> is divided into <strong>Lair Turns</strong>. A Lair Turn represents roughly <strong>one week</strong> of in-game time, split into two phases:</p>
+<ol>
+<li><strong>The Raid Phase:</strong> Bosses and their Mobs travel to a location, attempt a raid, gather loot, and return (or die trying).</li>
+<li><strong>The Lair Phase:</strong> Gobbos return to safety. Players resolve recovery, handle random events, allocate labor, craft gear, and expand the Lair.</li>
+</ol>
+<h3 id="sequence-of-the-lair-phase" tabindex="-1">Sequence of the Lair Phase</h3>
+<p>When returning from a raid, resolve the following steps in order:</p>
+<ol>
+<li><strong>Homecoming &amp; Casualties:</strong> Pool all <strong>Loot</strong> and <strong>Scrap</strong> into the Communal Hoard. Calculate XP. Dead Bosses are added to the <strong>Bone Pile</strong>.</li>
+<li><strong>Lair Event:</strong> The GM draws and resolves a random card from the Lair Event deck.</li>
+<li><strong>Labor Allocation:</strong> Players count their available workforce and allocate them to Lair tasks.</li>
+<li><strong>Labor Resolution:</strong> Roll dice pools for all assigned Lair tasks to generate Scrap, recruit new gobbos, or clear rooms.</li>
+<li><strong>Construction &amp; Upgrades:</strong> Spend resources from the Communal Hoard to clear new slots or build facilities. Construction completes at the end of the phase.</li>
+</ol>
+<hr>
+<h2 id="the-gobbo-pool-population" tabindex="-1">The Gobbo Pool (Population)</h2>
+<p>Instead of tracking individual goblins, the Lair’s population is tracked as a single, communal pool of dice: <strong>The Gobbo Pool</strong> (measured in <strong>d6s</strong>).</p>
+<p>The Gobbo Pool represents the total healthy workforce of the Lair. At the start of a Lair Turn, players must divide the Gobbo Pool into two groups:</p>
+<ul>
+<li><strong>Raider Mobs:</strong> Dice taken from the Gobbo Pool to go on the raid. A Boss can command a Mob with a <strong>Size</strong> up to their <strong>Grunt</strong> stat. Any d6s allocated to Raider Mobs risk permanent death.</li>
+<li><strong>Laborer Dice:</strong> The remaining d6s left behind in the safety of the Lair. These dice are rolled during the Lair Phase to perform work.</li>
+</ul>
+<blockquote>
+<p><strong>Example:</strong> A Lair has a <strong>Gobbo Pool</strong> of <strong>12d6</strong>. At the start of the week, three players each take a <strong>2d6</strong> Mob for the raid (<strong>6d6</strong> total Raiders). This leaves <strong>6d6</strong> Laborer Dice in the Lair to do chores.</p>
+</blockquote>
+<h3 id="casualties-and-auto-healing" tabindex="-1">Casualties &amp; Auto-Healing</h3>
+<p>Combat is lethal, but goblins are resilient:</p>
+<ul>
+<li><strong>Resilient Survival:</strong> If a Raider Mob returns from a raid with <em>at least 1 point of health on at least one die</em> (meaning the Mob was not completely reduced to Size 0), they immediately <strong>auto-heal back to their full allocated Size</strong> for free during Homecoming.</li>
+<li><strong>Wiped Mobs:</strong> If a Mob is reduced to Size 0 during the raid, those d6s are <strong>permanently removed</strong> from the Lair’s Gobbo Pool. They are dead.</li>
+</ul>
+<h3 id="preventing-the-death-spiral" tabindex="-1">Preventing the Death Spiral</h3>
+<p>If the Lair suffers catastrophic casualties, the game does not grind to a halt. The Lair has built-in safety valves:</p>
+<ol>
+<li><strong>Communal Runts (The Floor):</strong> The Lair always has a baseline of <strong>3d6 communal runts</strong>. These runts cannot be used as Laborers, but they ensure each player can always take at least a <strong>Size 1 Runt Mob (1d6)</strong> on a raid, even if the Gobbo Pool is reduced to 0d6.</li>
+<li><strong>Vacant Nest Growth:</strong> During the Homecoming step, if the total Gobbo Pool is less than <strong>3d6 per player</strong> (e.g., under 9d6 in a 3-player game), the Lair automatically recruits <strong>1d6</strong> to the pool for free as wandering wild runts move into the empty warrens.</li>
+</ol>
+<hr>
+<h2 id="labor-and-lair-actions" tabindex="-1">Labor &amp; Lair Actions</h2>
+<p>During the Labor step of the Lair Phase, players assign their available <strong>Laborer Dice</strong> to various tasks. To resolve these tasks, roll the assigned dice pool. Standard exploding dice rules apply (every 6 explodes into an additional die). Successes are <strong>4, 5, or 6</strong>.</p>
+<h3 id="lair-tasks" tabindex="-1">Lair Tasks</h3>
+<ul>
+<li><strong>Gathering Scrap:</strong> Assign any number of Laborer dice and roll them. Every success (<strong>4+</strong>) generates <strong>1 Scrap</strong> for the Hoard.</li>
+<li><strong>Scouting Locations:</strong> Assign Laborer dice to survey your next target location. Successes (<strong>4+</strong>) reveal Danger Ratings, Main Objectives, and Targets of Opportunity (see <a href="05_Raid%20points.md">Raid Points &amp; Scouting</a>).</li>
+<li><strong>Recruiting Gobbos:</strong> Assign any number of Laborer dice to go out and capture or bribe wild runts. Roll them. Every <strong>6</strong> rolled (exploding!) permanently adds <strong>1d6</strong> to the Lair’s <strong>Gobbo Pool</strong> (up to the Lair Cap).
+<ul>
+<li><em>Boss Assist:</em> A Boss can spend their personal Lair action to lead the recruiters, adding their <strong>Mouth</strong> stat as bonus dice to the roll.</li>
+<li><em>Bribes:</em> Spend <strong>5 Loot</strong> from the Hoard to buy shiny junk, granting a <strong>Boon (+1d6)</strong> to the recruitment roll.</li>
+</ul>
+</li>
+<li><strong>Clearing Slots:</strong> Assign Laborer dice to an unexplored or blocked slot. Each success (<strong>4+</strong>) adds 1 progress toward clearing it. (See Lair Expansion below).</li>
+<li><strong>Crafting Custom Gear:</strong> See <a href="34_Crafting.md">Crafting &amp; Custom Gear</a> for details. Crafting requires <strong>Brains</strong> and a Workshop, and consumes <strong>1 Laborer die</strong> to operate.</li>
+</ul>
+<h3 id="building-the-engine-guaranteed-successes" tabindex="-1">Building the Engine (Guaranteed Successes)</h3>
+<p>While rolling dice is chaotic and fun, players can invest Loot and Scrap to upgrade Lair rooms, transforming the Lair into a self-sustaining engine. Upgrades grant <strong>guaranteed successes</strong> or <strong>automatic growth</strong> that bypasses the dice roll:</p>
+<ul>
+<li><strong>Breeding Pits:</strong> Automatically generates <strong>1d6</strong> new Gobbos to the pool every Lair Turn for free (up to the Lair Cap), without requiring a recruitment roll. Upgrading to Tier 2 Breeding Pits generates <strong>2d6</strong> per turn.</li>
+<li><strong>Mud Tavern:</strong> Grants <strong>1 guaranteed success</strong> on all active Recruitment rolls (meaning you always recruit at least 1 Gobbo, plus whatever you roll).</li>
+<li><strong>Scrap Collector Yard:</strong> Passively generates <strong>2 Scrap</strong> every Lair Turn (no dice roll required).</li>
+<li><strong>Dwarven Forge:</strong> Grants <strong>1 guaranteed success</strong> (1 Taming success) to all Crafting rolls performed in the Lair.</li>
+</ul>
+<hr>
+<h2 id="lair-expansion-clear-and-build" tabindex="-1">Lair Expansion (Clear &amp; Build)</h2>
+<p>Every Lair has a layout of <strong>Slots</strong>. Initially, only a few slots are open. The rest are Locked (blocked by cave-ins, ruins, or thick briars).</p>
+<p>To unlock a Slot, players must pay its <strong>Scrap Cost</strong> and assign at least <strong>1 Laborer die</strong> to clear it.</p>
+<ol>
+<li><strong>Guaranteed Clearance:</strong> The slot is always successfully cleared when its target progress (e.g., 5 successes) is met.</li>
+<li><strong>The Clear Roll:</strong> When a Slot is cleared, the active player rolls <strong>1d6</strong> for complications:
+<ul>
+<li><strong>6 (Lucky Find):</strong> The workers uncover a hidden stash. Gain <strong>+1d6 Loot</strong> or a random Tier 1/2 Oddity.</li>
+<li><strong>2–5 (Smooth Work):</strong> The slot is cleared without incident.</li>
+<li><strong>1 (Goblin Complication):</strong> The slot is cleared, but something goes wrong. The GM rolls on the Site-specific Complication table.</li>
+</ul>
+</li>
+</ol>
+<h3 id="lair-site-types" tabindex="-1">Lair Site Types</h3>
+<p>At campaign start, players choose one of three Lair Site Types, which dictates their layout and complication table:</p>
+<h4 id="the-caverns-underground" tabindex="-1">The Caverns (Underground)</h4>
+<ul>
+<li><strong>Theme:</strong> Digging out rock.</li>
+<li><strong>Complication (1):</strong> <strong>Cave-in!</strong> A laboring Gobbo is crushed. Remove <strong>1d6</strong> from the Gobbo Pool for the next Lair Turn (they are in the medical tent).</li>
+</ul>
+<h4 id="the-feral-camp-wilds" tabindex="-1">The Feral Camp (Wilds)</h4>
+<ul>
+<li><strong>Theme:</strong> Clearing thick swamp, forest, or jungle.</li>
+<li><strong>Complication (1):</strong> <strong>Beast Attack!</strong> Disturbed wild fauna attacks. The Lair takes a <strong>Bane</strong> on all Lair Actions next turn unless players spend <strong>5 Loot</strong> to buy meat to distract the beasts.</li>
+</ul>
+<h4 id="the-ruined-keep-structures" tabindex="-1">The Ruined Keep (Structures)</h4>
+<ul>
+<li><strong>Theme:</strong> Restoring crumbled stone halls and cellars.</li>
+<li><strong>Complication (1):</strong> <strong>Ancient Wards!</strong> An old magical trap triggers. The noise and magic increase Lair Alert by <strong>+1</strong> and inflict a <strong>Bane</strong> on the next Lair Event roll.</li>
+</ul>
+<hr>
+<h2 id="the-communal-hoard-and-dominance" tabindex="-1">The Communal Hoard &amp; Dominance</h2>
+<p>Goblins cooperate because they must, but they are greedy by nature. The Lair’s resources are stored in the <strong>Communal Hoard</strong>, but tracked via <strong>The Ledger</strong> to determine <strong>Dominance</strong>.</p>
+<blockquote>
+<blockquote>
+<p><strong>THE GOLDEN RULE OF DOMINANCE:</strong>
+Da Lair belongs to everyone, but if my Gang dragged back da most shiny rocks to build da Blacksmith, den my Gang gets to skip da line when we want swords made. Dat’s just fair.</p>
+</blockquote>
+</blockquote>
+<h3 id="dominance-mechanics" tabindex="-1">Dominance Mechanics</h3>
+<ol>
+<li><strong>Contributions:</strong> When building or upgrading a room, players contribute Loot and Scrap. The GM records which Gang contributed the most resources (or dedicated the most Laborer dice) to that room.</li>
+<li><strong>Claiming Dominance:</strong> The Gang with the highest contribution gains <strong>Dominance</strong> over that room.</li>
+<li><strong>Dominance Benefits:</strong>
+<ul>
+<li><strong>Renaming Rights:</strong> The dominant Gang names the room (e.g., <em>“The Smelly-Feet Brewery”</em>).</li>
+<li><strong>Priority Use:</strong> If multiple players want to use the room in the same turn, the dominant Gang goes first.</li>
+<li><strong>Specialty Kickback:</strong> The room grants a passive bonus exclusive to the dominant Gang.
+<ul>
+<li><em>Example (Proper Smithy):</em> The dominant Gang’s Boss gets a free <strong>Taming Success</strong> when crafting weapons here.</li>
+<li><em>Example (Brewery Cavern):</em> The dominant Gang’s Mobs gain <strong>+1 Grit</strong> when fueled by the special reserve brew.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="populating-the-lair-elders-and-npcs" tabindex="-1">Populating the Lair: Elders &amp; NPCs</h2>
+<p>The Lair is empty and useless without people running the facilities. Rooms must be staffed to unlock their functions.</p>
+<pre><code>                  ┌───────────────────────────┐
+                  │      LAIR POPULATION      │
+                  └─────────────┬─────────────┘
+                                │
+        ┌───────────────────────┼───────────────────────┐
+        ▼                       ▼                       ▼
+ ┌─────────────┐         ┌─────────────┐         ┌─────────────┐
+ │   ELDERS    │         │ SPECIALISTS │         │  CAPTIVES   │
+ │ Retired PCs │         │ Hired/Saved │         │ Dragged In  │
+ └─────────────┘         └─────────────┘         └─────────────┘
+</code></pre>
+<h3 id="1-elders-retired-bosses" tabindex="-1">1. Elders (Retired Bosses)</h3>
+<p>When a player Boss reaches Max Level (Level 6 in any stat) or suffers too many permanent injuries, they can <strong>Retire</strong>.</p>
+<ul>
+<li><strong>The Transition:</strong> The retired Boss becomes a permanent <strong>Elder NPC</strong> on the Lair sheet. The player rolls a new Level 1 Boss.</li>
+<li><strong>Staffing:</strong> Assigning an Elder to run a Lair room unlocks its advanced functions.
+<ul>
+<li><em>Example:</em> An Elder placed in the <strong>Training Grounds</strong> unlocks high-tier <strong>Quirks</strong> that other players can pay Loot to learn.</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-specialist-npcs" tabindex="-1">2. Specialist NPCs</h3>
+<p>Specialists are friendly (or highly bribable) experts recruited during raids or random events.</p>
+<ul>
+<li><strong>The Pig-Whisperer:</strong> Staffs the Pig Sties. Unlocks pig-riding skirmishers.</li>
+<li><strong>The Scrap-Shaman:</strong> Staffs the Scrap Yard. Passively generates <strong>+2 Scrap</strong> every Lair Turn.</li>
+</ul>
+<h3 id="3-captives-forced-labor" tabindex="-1">3. Captives (Forced Labor)</h3>
+<p>During raids, players can kidnap human, elven, or dwarven NPCs and drag them back to the Lair.</p>
+<ul>
+<li><strong>The Prisoner Cage:</strong> A Lair room required to house Captives.</li>
+<li><strong>Labor:</strong> Captives can be forced to work in workshops to provide free successes, but they increase the chance of negative <strong>Lair Events</strong> (sabotage, escape attempts).</li>
+</ul>
+<hr>
+<h2 id="outposts-and-trade-routes" tabindex="-1">Outposts &amp; Trade Routes</h2>
+<p>As the Lair’s <strong>Infamy</strong> grows, the Gobbos can expand their territory, establishing a network of outposts to feed the Lair’s engine.</p>
+<pre><code>       [Lumber Outpost]
+              \ (Trade Route: Wilds)
+               \
+                v
+          [THE LAIR] &lt;=========&gt; [Dwarven Mine Outpost]
+                        (Trade Route: High Risk)
+</code></pre>
+<h3 id="1-establishing-an-outpost" tabindex="-1">1. Establishing an Outpost</h3>
+<p>If the players clear an external location during a raid (e.g., an abandoned mine, a human lumber mill), they can choose to establish an <strong>Outpost</strong> instead of just looting and leaving.</p>
+<ul>
+<li><strong>Garrison Cost:</strong> The players must leave one of their Mobs behind as a permanent garrison. This temporarily reduces the Lair’s total Gobbo Pool by the size of that Mob.</li>
+<li><strong>Yield:</strong> The Outpost generates a specific resource yield every turn (e.g., +5 Scrap from the Mine, +3 Loot from a toll-road).</li>
+</ul>
+<h3 id="2-trade-routes-and-supply-runs" tabindex="-1">2. Trade Routes &amp; Supply Runs</h3>
+<p>To get the Outpost’s yield back to the Lair, you must maintain a <strong>Trade Route</strong>. Trade routes are rated by danger: <strong>Safe</strong>, <strong>Wilds</strong>, or <strong>High Risk</strong>.
+During the Lair Phase, the players make a <strong>Supply Roll</strong> for each active trade route:</p>
+<ul>
+<li><strong>Safe Route:</strong> Auto-success. The resources arrive safely in the Hoard.</li>
+<li><strong>Wilds Route:</strong> Roll <strong>1d6</strong>. On a <strong>1–2</strong>, the shipment is ambushed. Gobbos must spend a Mob action to rescue it, or lose the shipment.</li>
+<li><strong>High Risk Route:</strong> Roll <strong>2d6</strong>. Needs a success (<strong>4+</strong>) to get through. Fumbles (all 1s) mean the Outpost is besieged and must be defended in a combat encounter.</li>
+<li><strong>Smuggler Pact:</strong> Players can spend <strong>5 Loot</strong> to hire a merchant guild to run the route. This turns a <em>High Risk</em> route into a <em>Safe</em> route, but the guild takes a 20% cut of the yield.</li>
+</ul>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

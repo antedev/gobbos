@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master_Tag_Index — STAGE Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Playtesting & review materials">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab env-tab--active">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">STAGE Rules</h2>
+        <p class="sidebar-subtitle">Playtesting & review materials</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="true" data-target="rules"><span class="toggle-icon">▾</span>Rules</button><ul class="nav-pages" id="nav-rules" ><li><a href="stage.html" class="nav-link" data-target="rules--overview">Overview</a></li><li><a href="stage--rules--combat.html" class="nav-link" data-target="rules--combat">Combat</a></li><li><a href="stage--rules--movement-and-zones.html" class="nav-link" data-target="rules--movement-and-zones">Movement &amp; Zones</a></li><li><a href="stage--rules--giving-orders.html" class="nav-link" data-target="rules--giving-orders">Giving orders</a></li><li><a href="stage--rules--raid-points.html" class="nav-link" data-target="rules--raid-points">Raid points</a></li><li><a href="stage--rules--keywords-index.html" class="nav-link" data-target="rules--keywords-index">Keywords Index</a></li><li><a href="stage--rules--wounds-conditions.html" class="nav-link" data-target="rules--wounds-conditions">Wounds_Conditions</a></li><li><a href="stage--rules--master-tag-index.html" class="nav-link nav-link--active" data-target="rules--master-tag-index">Master_Tag_Index</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="characters-and-mobs"><span class="toggle-icon">▸</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" style="display: none;"><li><a href="stage--characters-and-mobs--character-creation.html" class="nav-link" data-target="characters-and-mobs--character-creation">Character Creation</a></li><li><a href="stage--characters-and-mobs--gang.html" class="nav-link" data-target="characters-and-mobs--gang">Gang</a></li><li><a href="stage--characters-and-mobs--boons-and-banes.html" class="nav-link" data-target="characters-and-mobs--boons-and-banes">Boons_and_Banes</a></li><li><a href="stage--characters-and-mobs--goblin-mob.html" class="nav-link" data-target="characters-and-mobs--goblin-mob">Goblin_mob</a></li><li><a href="stage--characters-and-mobs--quirks.html" class="nav-link" data-target="characters-and-mobs--quirks">Quirks</a></li><li><a href="stage--characters-and-mobs--level-up-and-death.html" class="nav-link" data-target="characters-and-mobs--level-up-and-death">Level_Up and death</a></li><li><a href="stage--characters-and-mobs--unified-modular-powers-system.html" class="nav-link" data-target="characters-and-mobs--unified-modular-powers-system">Unified_Modular_Powers_System</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="loot"><span class="toggle-icon">▸</span>Loot</button><ul class="nav-pages" id="nav-loot" style="display: none;"><li><a href="stage--loot--loot.html" class="nav-link" data-target="loot--loot">loot</a></li><li><a href="stage--loot--carry-stuff.html" class="nav-link" data-target="loot--carry-stuff">Carry Stuff</a></li><li><a href="stage--loot--equipment.html" class="nav-link" data-target="loot--equipment">Equipment</a></li><li><a href="stage--loot--crafting.html" class="nav-link" data-target="loot--crafting">Crafting</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="enemies"><span class="toggle-icon">▸</span>Enemies</button><ul class="nav-pages" id="nav-enemies" style="display: none;"><li><a href="stage--enemies--enemies.html" class="nav-link" data-target="enemies--enemies">Enemies</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="base"><span class="toggle-icon">▸</span>Base</button><ul class="nav-pages" id="nav-base" style="display: none;"><li><a href="stage--base--lair-rules.html" class="nav-link" data-target="base--lair-rules">Lair_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="travel"><span class="toggle-icon">▸</span>Travel</button><ul class="nav-pages" id="nav-travel" style="display: none;"><li><a href="stage--travel--journey-rules.html" class="nav-link" data-target="travel--journey-rules">Journey_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="magic"><span class="toggle-icon">▸</span>Magic</button><ul class="nav-pages" id="nav-magic" style="display: none;"><li><a href="stage--magic--magic-rules.html" class="nav-link" data-target="magic--magic-rules">Magic_Rules</a></li></ul></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="08-master-tag-index" tabindex="-1">08. Master Tag Index</h1>
+<p><em>Goblins don’t write dictionaries, but they do have a lot of words for things that burn, melt, smell, or go squish. A [Fire] blade sets a peasant alight; a [Sticky] Net keeps him from running; an [Angelic] word makes a knight’s heavy plate feel like tissue paper. This is the master ledger of the active forces in the world.</em></p>
+<hr>
+<h2 id="1-the-core-architecture-what-is-a-tag" tabindex="-1">1. The Core Architecture: What is a Tag?</h2>
+<p>A <strong>Tag</strong> (always written in brackets, e.g., <code>[Fire]</code>, <code>[Sticky]</code>) is the dynamic systemic vocabulary of Gobbos. It represents a transient physical force, element, substance, or magical state that can be slung as a spell, crafted into an item, or applied to a zone.</p>
+<p>Unlike a creature’s <strong>Ancestry</strong> (what it <em>is</em>) or an item’s <strong>Trait</strong> (how it is <em>constructed</em>), a Tag represents a temporary state that can be dynamically attached or stripped away during play.</p>
+<hr>
+<h2 id="2-pre-roll-profile-calculations" tabindex="-1">2. Pre-Roll Profile Calculations</h2>
+<blockquote>
+<blockquote>
+<p><strong>GOLDEN RULE: No Post-Roll Math</strong>
+To keep combat fast and chaotic, all tag interactions, vulnerabilities, and environmental modifiers must be resolved <strong>before</strong> the dice are thrown. Once the dice land, the result must be instantly clear.</p>
+</blockquote>
+</blockquote>
+<p>When a player makes a test involving tags (e.g., attacking a monster with an elemental weapon), they calculate the <strong>Roll Profile</strong> in three quick steps:</p>
+<ol>
+<li><strong>Check Base Stats:</strong> Look up the attacker’s pool (<strong>Tough</strong> or <strong>Slink</strong>) and the target’s base <strong>Defence TN</strong> and <strong>Difficulty</strong> (Normal: 5+).</li>
+<li><strong>Check Monster Hooks (Local Overrides):</strong> Compare the attacker’s weapon tags with the target’s printed <strong>Flaw Hooks</strong> or <strong>Resistance Hooks</strong>:
+<ul>
+<li><em>Flaws:</em> If a tag matches a Flaw, it typically reduces <strong>Defence TN</strong> or makes the test <strong>Easy (4+)</strong>.</li>
+<li><em>Resistances:</em> If a tag matches a Resistance, it typically increases <strong>Defence TN</strong> or makes the test <strong>Hard (6)</strong>.</li>
+</ul>
+</li>
+<li><strong>Apply the Boon/Bane Cap:</strong> Apply any environmental zone tags (e.g., a <code>[Slick]</code> floor or <code>[Strong Wind]</code> battlefield).
+<ul>
+<li><em>The Cap:</em> Multiple environmental Boons or Banes do not stack. You either have one Boon (<strong>+1d</strong>), one Bane (<strong>-1d</strong>), or they cancel to <strong>0</strong> bonus dice.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="3-element-synthesis" tabindex="-1">3. Element Synthesis</h2>
+<p>When two dynamic elements meet (either combined in custom gear crafting or overlapping in a zone), they synthesize into a new state. Element synthesis is resolved at creation or downtime to avoid combat speed-bumps.</p>
+<ul>
+<li><code>[Fire]</code> + <code>[Sticky]</code> $\rightarrow$ <strong>Burning Glue:</strong> Inflicts the <em>Restrained</em> condition and deals <strong>+1 success</strong> on the attack.</li>
+<li><code>[Toxic]</code> + <code>[Chilled]</code> $\rightarrow$ <strong>Numbing Venom:</strong> Inflicts the <em>Restrained</em> condition (movement becomes 0).</li>
+<li><code>[Wet]</code> + <code>[Shock]</code> $\rightarrow$ <strong>Conduction:</strong> Shakes the target’s defenses, making all attack tests against them <strong>Easy (4+)</strong> for 1 round.</li>
+<li><code>[Wet]</code> + <code>[Fire]</code> $\rightarrow$ <strong>Steam Cloud:</strong> Immediately strips the <code>[Fire]</code> tag and creates a <code>[Dark]</code> zone hazard.</li>
+<li><code>[Fire]</code> + <code>[Volatile]</code> $\rightarrow$ <strong>Detonation:</strong> Immediately triggers a <code>[Explosive]</code> payload, clearing the source items.</li>
+</ul>
+<hr>
+<h2 id="4-the-master-tag-catalog" tabindex="-1">4. The Master Tag Catalog</h2>
+<hr>
+<h3 id="group-1-elemental-and-material-states-alchemical-hazards" tabindex="-1">Group 1: Elemental &amp; Material States (Alchemical Hazards)</h3>
+<h4 id="acidic" tabindex="-1"><code>[Acidic]</code></h4>
+<ul>
+<li><em>Flavor:</em> Sizzling green slime, corrosive bile, or rusted metal-eating juice.</li>
+<li><em>Universal Baseline:</em> Corrosion. Destroys 1 Passive Defense die granted by the target’s armor on a hit.</li>
+<li><em>Fictional Interaction:</em> Eats through wood, leather, and metal, but is inert against glass or stone.</li>
+</ul>
+<h4 id="chilled" tabindex="-1"><code>[Chilled]</code></h4>
+<ul>
+<li><em>Flavor:</em> Frost-covered metal, frozen wind, or magical numbing cold.</li>
+<li><em>Universal Baseline:</em> Reduces the target’s <strong>Movement</strong> by 1 Zone (minimum 0) for 1 round.</li>
+<li><em>Fictional Interaction:</em> Freezes standing water, cracks brittle stone, and extinguishes fires.</li>
+</ul>
+<h4 id="fire" tabindex="-1"><code>[Fire]</code></h4>
+<ul>
+<li><em>Flavor:</em> Crackling embers, liquid pitch, or sudden alchemical heat.</li>
+<li><em>Universal Baseline:</em> Deals <strong>+1 Success</strong> on attack tests and places the <code>[Burning]</code> tag on the target’s Zone.</li>
+<li><em>Fictional Interaction:</em> Ignites dry wood, melts ice, burns away ropes, and strips <code>[Wet]</code> tags.</li>
+</ul>
+<h4 id="gaseous" tabindex="-1"><code>[Gaseous]</code></h4>
+<ul>
+<li><em>Flavor:</em> Choking green fumes, heavy mist, or toxic sulfur.</li>
+<li><em>Universal Baseline:</em> Suffocating screen. The Zone becomes <code>[Dark]</code> (ranged attacks suffer a <strong>Bane</strong>).</li>
+<li><em>Fictional Interaction:</em> Dispersed instantly by wind tags (<code>[Gale]</code>).</li>
+</ul>
+<h4 id="shock" tabindex="-1"><code>[Shock]</code></h4>
+<ul>
+<li><em>Flavor:</em> Blue static sparks, crackling lightning, or sudden nerve spasms.</li>
+<li><em>Universal Baseline:</em> Arc damage. If the attack hits, it deals <strong>1 automatic success</strong> (against standard enemies) or <strong>1 automatic Grit/Size damage</strong> (against PCs/Bosses/Mobs) to one additional target in the same <strong>Zone</strong>.</li>
+<li><em>Fictional Interaction:</em> Conducts instantly through metal armor (<code>Corporeal:Metal</code>) or water (<code>[Wet]</code>), making tests against them <strong>Easy (4+)</strong>.</li>
+</ul>
+<h4 id="slick" tabindex="-1"><code>[Slick]</code></h4>
+<ul>
+<li><em>Flavor:</em> Buttered grease, wet ice, or slimy oil.</li>
+<li><em>Universal Baseline:</em> Slippery footing. Any creature attempting to Move into or out of the Zone must succeed on a <strong>Slink</strong> test or fall <strong>Prone</strong> (wasting their movement).</li>
+<li><em>Fictional Interaction:</em> Can be ignited by <code>[Fire]</code>, turning the zone into a raging greasefire.</li>
+</ul>
+<h4 id="sticky" tabindex="-1"><code>[Sticky]</code></h4>
+<ul>
+<li><em>Flavor:</em> Spider webs, boiling sap, or thick industrial glue.</li>
+<li><em>Universal Baseline:</em> Inflicts the <strong>Restrained</strong> condition (target cannot Move; suffers <strong>-1d</strong> to Dodge).</li>
+<li><em>Fictional Interaction:</em> Can be burned away by <code>[Fire]</code>, clearing the restraint but dealing 1 Grit damage.</li>
+</ul>
+<h4 id="toxic" tabindex="-1"><code>[Toxic]</code></h4>
+<ul>
+<li><em>Flavor:</em> Serpent venom, bubbling sewer gas, or glowing fungal spores.</li>
+<li><em>Universal Baseline:</em> Inflicts the <strong>Weakened</strong> condition (<strong>-1d</strong> to all action tests).</li>
+<li><em>Fictional Interaction:</em> Can be washed away with clean water. Ignored by constructs (<code>Construct</code>) and undead (<code>Undead</code>).</li>
+</ul>
+<h4 id="wet" tabindex="-1"><code>[Wet]</code></h4>
+<ul>
+<li><em>Flavor:</em> Splashing water, damp swamp moss, or heavy rain.</li>
+<li><em>Universal Baseline:</em> Extinguishes the <code>[Burning]</code> tag on a creature or zone.</li>
+<li><em>Fictional Interaction:</em> Conducts electricity (triggers conduction with <code>[Shock]</code>), washes away poisons, and increases the difficulty of climbing.</li>
+</ul>
+<hr>
+<h3 id="group-2-kinetic-and-spatial-forces-movement-and-positioning" tabindex="-1">Group 2: Kinetic &amp; Spatial Forces (Movement &amp; Positioning)</h3>
+<h4 id="anchored" tabindex="-1"><code>[Anchored]</code></h4>
+<ul>
+<li><em>Flavor:</em> Heavy gravity, roots wrapping feet, or electromagnetic clamps.</li>
+<li><em>Universal Baseline:</em> Target cannot move vertically, leap over hazards, fly, or use the <code>[Teleport]</code> tag.</li>
+<li><em>Fictional Interaction:</em> Forces flying beasts to land; keeps incorporeal spirits from phasing through floors.</li>
+</ul>
+<h4 id="bouncy" tabindex="-1"><code>[Bouncy]</code></h4>
+<ul>
+<li><em>Flavor:</em> Rubbery alloys, compressed springs, or gelatinous membranes.</li>
+<li><em>Universal Baseline:</em> Kinetic ricochet. If a ranged attack using this tag misses, the projectile bounces, making an immediate attack check against a random adjacent target in the <strong>Zone</strong>. A projectile can only bounce once per attack.</li>
+<li><em>Fictional Interaction:</em> Allows gobbos to bounce off walls, adding <strong>+1 Zone</strong> of movement on a jump.</li>
+</ul>
+<h4 id="crushing" tabindex="-1"><code>[Crushing]</code></h4>
+<ul>
+<li><em>Flavor:</em> High-gravity fields, massive atmospheric pressure, or giant weights.</li>
+<li><em>Universal Baseline:</em> Compression. Target is slowed to a maximum of 1 Zone of movement. Attacks against the compressed target are <strong>Easy (4+)</strong> due to their restricted mobility.</li>
+<li><em>Fictional Interaction:</em> Collapses wooden structures, triggers cave-ins, and snaps tree branches.</li>
+</ul>
+<h4 id="elastic" tabindex="-1"><code>[Elastic]</code></h4>
+<ul>
+<li><em>Flavor:</em> Rubbery limbs, stretchy skin, or weirdly double-jointed bones.</li>
+<li><em>Universal Baseline:</em> Stretch. Increases melee range to Adjacent Zone (1 zone away) and grants a <strong>Boon (+1d)</strong> to escape physical restraints.</li>
+<li><em>Fictional Interaction:</em> Allows reaching high ledges, squeezing through narrow pipes, and bouncing back blunt physical impacts.</li>
+</ul>
+<h4 id="fast" tabindex="-1"><code>[Fast]</code></h4>
+<ul>
+<li><em>Flavor:</em> Twitchy legs, high-velocity reflexes, or caffeinated energy.</li>
+<li><em>Universal Baseline:</em> High speed. Allows moving <strong>1 Zone</strong> as a Free Action once per round.</li>
+<li><em>Fictional Interaction:</em> Harder to pin down; grants a <strong>Boon (+1d)</strong> to Dodge reactions.</li>
+</ul>
+<h4 id="gale" tabindex="-1"><code>[Gale]</code></h4>
+<ul>
+<li><em>Flavor:</em> Whirling typhoons, blast valves, or wind spells.</li>
+<li><em>Universal Baseline:</em> Air current. All ranged attacks passing through the Zone suffer a <strong>Bane (-1d)</strong>. The wielder can spend 1 action to push a target to an adjacent Zone.</li>
+<li><em>Fictional Interaction:</em> Disperses gaseous clouds (<code>[Gaseous]</code>), blows away light bulk items, and deflects arrows.</li>
+</ul>
+<h4 id="heavy" tabindex="-1"><code>[Heavy]</code></h4>
+<ul>
+<li><em>Flavor:</em> Dense lead alloys, black-stone cores, or massive bulk.</li>
+<li><em>Universal Baseline:</em> Exhausting weight. The wielder suffers a <strong>Bane (-1d)</strong> on all tests unless they spend a Standard Action to brace. Target’s carrying capacity is halved.</li>
+<li><em>Fictional Interaction:</em> Sinks instantly in water, collapses thin floors, and anchors items against wind.</li>
+</ul>
+<h4 id="magnetic" tabindex="-1"><code>[Magnetic]</code></h4>
+<ul>
+<li><em>Flavor:</em> Lodestone shards, copper wire windings, or lightning-charged steel.</li>
+<li><em>Universal Baseline:</em> Pull. Pulls all metal objects or metal-armored creatures (<code>Corporeal:Metal</code>) in the Zone to the center. Metal targets suffer a <strong>Bane (-1d)</strong> to Dodge.</li>
+<li><em>Fictional Interaction:</em> Disarms metal weapons, forces iron doors open, and yanks knights into melee range.</li>
+</ul>
+<h4 id="sinking" tabindex="-1"><code>[Sinking]</code></h4>
+<ul>
+<li><em>Flavor:</em> Quicksand, boiling tar pools, or loose mud.</li>
+<li><em>Universal Baseline:</em> Downward drag. Any creature entering or moving in the Zone must succeed on a <strong>Slink</strong> test or become <strong>Restrained</strong>.</li>
+<li><em>Fictional Interaction:</em> Heavy items sink instantly. Can be neutralized by freezing the surface with <code>[Chilled]</code>.</li>
+</ul>
+<h4 id="teleport" tabindex="-1"><code>[Teleport]</code></h4>
+<ul>
+<li><em>Flavor:</em> Purple smoke, folding space, or sudden pops.</li>
+<li><em>Universal Baseline:</em> Warp. Instantly move 1 Zone, ignoring all intervening obstacles, zones, and enemies.</li>
+<li><em>Fictional Interaction:</em> Bypasses physical locks, walls, and opportunity attacks.</li>
+</ul>
+<h4 id="weightless" tabindex="-1"><code>[Weightless]</code></h4>
+<ul>
+<li><em>Flavor:</em> Buoyant gas, levitation runes, or gravity negation.</li>
+<li><em>Universal Baseline:</em> Levitation. Target ignores vertical terrain, mud, and ground hazards. However, the lack of leverage causes a <strong>Bane (-1d)</strong> on Melee attacks.</li>
+<li><em>Fictional Interaction:</em> Allows crossing chasms, floating to ceilings, and drifting away in heavy wind.</li>
+</ul>
+<hr>
+<h3 id="group-3-sensory-and-mental-distortions-perception-and-focus" tabindex="-1">Group 3: Sensory &amp; Mental Distortions (Perception &amp; Focus)</h3>
+<h4 id="blinding" tabindex="-1"><code>[Blinding]</code></h4>
+<ul>
+<li><em>Flavor:</em> Piercing flashes, pocket sand, or burning smoke.</li>
+<li><em>Universal Baseline:</em> Blindness. Target suffers the <strong>Blinded</strong> condition (attacks are Hard [6 only]; Dodge reactions are impossible) for 1 round.</li>
+<li><em>Fictional Interaction:</em> Clears shadow-camouflage and triggers panic in cave beasts.</li>
+</ul>
+<h4 id="confusing" tabindex="-1"><code>[Confusing]</code></h4>
+<ul>
+<li><em>Flavor:</em> Swirling colors, off-key humming, or backwards speech.</li>
+<li><em>Universal Baseline:</em> Bewilderment. Inflicts the <strong>Dumb</strong> condition (target cannot cast spells or issue orders; spends actions wandering aimlessly).</li>
+<li><em>Fictional Interaction:</em> Breaks concentration, ruins coordinated guard ranks.</li>
+</ul>
+<h4 id="dark" tabindex="-1"><code>[Dark]</code></h4>
+<ul>
+<li><em>Flavor:</em> Thick shadows, magical gloom, or heavy black smoke.</li>
+<li><em>Universal Baseline:</em> Poor visibility. All attacks and notice tests in the Zone suffer a <strong>Bane (-1d)</strong>.</li>
+<li><em>Fictional Interaction:</em> Can be dispelled by <code>[Light]</code>. Enables stealth tests without cover.</li>
+</ul>
+<h4 id="deafening" tabindex="-1"><code>[Deafening]</code></h4>
+<ul>
+<li><em>Flavor:</em> Thunderstones, shrieking metal, or explosions.</li>
+<li><em>Universal Baseline:</em> Silence. Target is immune to verbal Mouth/Order actions and cannot hear incoming threats (attacks against them from behind gain a <strong>Boon</strong>). A deafened Mob cannot receive <strong>Orders</strong> from their Boss.</li>
+<li><em>Fictional Interaction:</em> Disrupts verbal spellcasting, ruins coordinated troop maneuvers.</li>
+</ul>
+<h4 id="echoing" tabindex="-1"><code>[Echoing]</code></h4>
+<ul>
+<li><em>Flavor:</em> Hollow cavern chambers, metallic halls, or soundboards.</li>
+<li><em>Universal Baseline:</em> Amplification. Any noise or sound-based tag (like <code>[Loud]</code> or <code>[Deafening]</code>) has its duration doubled in this Zone.</li>
+<li><em>Fictional Interaction:</em> Shatters fragile glass structures if sonic tags are used.</li>
+</ul>
+<h4 id="light" tabindex="-1"><code>[Light]</code></h4>
+<ul>
+<li><em>Flavor:</em> Glowing sun-stones, holy lanterns, or dancing sprites.</li>
+<li><em>Universal Baseline:</em> Illumination. Strips the <code>[Dark]</code> tag from the Zone.</li>
+<li><em>Fictional Interaction:</em> Blinds shadow-dwelling creatures and triggers panic checks in cave beasts.</li>
+</ul>
+<h4 id="loud" tabindex="-1"><code>[Loud]</code></h4>
+<ul>
+<li><em>Flavor:</em> Clattering copper pots, screeching alarms, or whistling gears.</li>
+<li><em>Universal Baseline:</em> Noise. Automatically fails any Slink/Stealth tests while active.</li>
+<li><em>Fictional Interaction:</em> Wakes up adjacent zones, alerts sleeping guards, and interrupts quiet spellcasting.</li>
+</ul>
+<h4 id="phantasmal" tabindex="-1"><code>[Phantasmal]</code></h4>
+<ul>
+<li><em>Flavor:</em> Shimmering light, auditory illusions, or ghost lights.</li>
+<li><em>Universal Baseline:</em> Illusion. Target suffers a <strong>Bane (-1d)</strong> to all attacks as they swing at illusory copies.</li>
+<li><em>Fictional Interaction:</em> Has zero physical mass. Can be disbelieved with a <strong>Brains</strong> test.</li>
+</ul>
+<h4 id="shiny" tabindex="-1"><code>[Shiny]</code></h4>
+<ul>
+<li><em>Flavor:</em> Gleaming gold coins, polished brass, or cut gems.</li>
+<li><em>Universal Baseline:</em> Distraction. Greed-obsessed minds (including player Goblins, dragons, and kobolds) suffer a <strong>Bane (-1d)</strong> to attacks/dodge unless they spend their turn moving toward the shiny object.</li>
+<li><em>Fictional Interaction:</em> Lures guards, distracts monsters, and triggers infighting among mobs.</li>
+</ul>
+<h4 id="soporific" tabindex="-1"><code>[Soporific]</code></h4>
+<ul>
+<li><em>Flavor:</em> Sweet poppy vapors, rhythmic humming, or sleep dust.</li>
+<li><em>Universal Baseline:</em> Drowsiness. Target suffers a <strong>Bane (-1d)</strong> to all tests. If they roll a Fumble, they fall asleep (<strong>Stunned</strong> until damaged).</li>
+<li><em>Fictional Interaction:</em> Lulls guard beasts, quietens rowdy mobs.</li>
+</ul>
+<h4 id="tasty" tabindex="-1"><code>[Tasty]</code></h4>
+<ul>
+<li><em>Flavor:</em> Roasted meat aromas, alchemical beast-lure, or sweet blood.</li>
+<li><em>Universal Baseline:</em> Bait. All beasts (<code>Beast</code>) gain a <strong>Boon (+1d)</strong> to attack rolls against the target and will prioritize them over all others.</li>
+<li><em>Fictional Interaction:</em> Triggers ravenous feeding frenzies.</li>
+</ul>
+<h4 id="terrifying" tabindex="-1"><code>[Terrifying]</code></h4>
+<ul>
+<li><em>Flavor:</em> Overwhelming majesty, horror runes, or bloodcurdling shrieks.</li>
+<li><em>Universal Baseline:</em> Dread. Inflicts the <strong>Terrified</strong> condition (target suffers <strong>-1d</strong> to Brains/Mouth and must move away).</li>
+<li><em>Fictional Interaction:</em> Ignored by mindless constructs and undead.</li>
+</ul>
+<hr>
+<h3 id="group-4-physiological-and-physical-conditions-health-and-hardiness" tabindex="-1">Group 4: Physiological &amp; Physical Conditions (Health &amp; Hardiness)</h3>
+<h4 id="bleeding" tabindex="-1"><code>[Bleeding]</code></h4>
+<ul>
+<li><em>Flavor:</em> Deep gashes, severed veins, or jagged iron wounds.</li>
+<li><em>Universal Baseline:</em> Lingering harm. The target takes <strong>1 automatic Grit/Size damage</strong> at the start of their round until treated.</li>
+<li><em>Fictional Interaction:</em> Attracts beasts, leaves a clear trail, and is ignored by undead and constructs.</li>
+</ul>
+<h4 id="exposed" tabindex="-1"><code>[Exposed]</code></h4>
+<ul>
+<li><em>Flavor:</em> Broken guard, off-balance posture, or shattered shields.</li>
+<li><em>Universal Baseline:</em> Open defense. All attacks against the target are <strong>Easy (4+)</strong> and ignore passive defense.</li>
+<li><em>Fictional Interaction:</em> Represents a perfect opening to strike.</li>
+</ul>
+<h4 id="feral" tabindex="-1"><code>[Feral]</code></h4>
+<ul>
+<li><em>Flavor:</em> Beast blood, regression spells, or wild madness.</li>
+<li><em>Universal Baseline:</em> Beast regression. The target cannot cast spells, use complex items, or speak/issue orders. However, Melee attacks gain <strong>+1 Success</strong>.</li>
+<li><em>Fictional Interaction:</em> Governed by basic survival instincts.</li>
+</ul>
+<h4 id="frenzied" tabindex="-1"><code>[Frenzied]</code></h4>
+<ul>
+<li><em>Flavor:</em> Boiling blood, red mist, or uncontrollable rage.</li>
+<li><em>Universal Baseline:</em> Berserk state. Target must spend all standard actions to Move toward and Melee Attack the nearest creature (friend or foe) in melee range on its turn.</li>
+<li><em>Fictional Interaction:</em> Bypasses self-preservation, ignores pain, and causes the target to break tactical cover.</li>
+</ul>
+<h4 id="hardened" tabindex="-1"><code>[Hardened]</code></h4>
+<ul>
+<li><em>Flavor:</em> Spiked scales, stone hide, or thick chitin.</li>
+<li><em>Universal Baseline:</em> Reinforcement. Increases Defence TN by +1 (maximum 5) against <code>Cutting</code> and <code>Poking</code> attacks.</li>
+<li><em>Fictional Interaction:</em> Impervious to minor cuts and arrows.</li>
+</ul>
+<h4 id="itchy" tabindex="-1"><code>[Itchy]</code></h4>
+<ul>
+<li><em>Flavor:</em> Fungal rash, stinging spores, or hives.</li>
+<li><em>Universal Baseline:</em> Distraction. Frantic scratching. Target cannot use Reactions (no Dodge/Parry) as they scratch.</li>
+<li><em>Fictional Interaction:</em> Ruin concentration, breaks guard.</li>
+</ul>
+<h4 id="mindless" tabindex="-1"><code>[Mindless]</code></h4>
+<ul>
+<li><em>Flavor:</em> Lobotomized servants, hollow puppets, or simple plants.</li>
+<li><em>Universal Baseline:</em> Cognitive void. Immune to <code>[Spooky]</code> (fear) and <code>[Confusing]</code> (dumb) tags. Cannot take independent actions; must be ordered.</li>
+<li><em>Fictional Interaction:</em> Unaffected by illusions or mental manipulation.</li>
+</ul>
+<h4 id="puppet" tabindex="-1"><code>[Puppet]</code></h4>
+<ul>
+<li><em>Flavor:</em> Soul-strings, blood magic, or master-runes.</li>
+<li><em>Universal Baseline:</em> Domination. The caster can spend <strong>1 Standard Action</strong> on their turn to force the target to perform a Move or basic Attack action on the target’s turn.</li>
+<li><em>Fictional Interaction:</em> Forces enemies to attack their own allies.</li>
+</ul>
+<h4 id="regenerating" tabindex="-1"><code>[Regenerating]</code></h4>
+<ul>
+<li><em>Flavor:</em> Troll blood, rapid cell division, or life-magic.</li>
+<li><em>Universal Baseline:</em> Rapid healing. Target heals <strong>1 Wound</strong> or <strong>1 Grit</strong> at the start of their turn.</li>
+<li><em>Fictional Interaction:</em> Cannot regenerate if damaged by <code>[Fire]</code> or <code>[Acidic]</code> tags this round.</li>
+</ul>
+<h4 id="rotting" tabindex="-1"><code>[Rotting]</code></h4>
+<ul>
+<li><em>Flavor:</em> Putrid flesh, necrosis, or gangrenous moss.</li>
+<li><em>Universal Baseline:</em> Decay. The target cannot recover <strong>Grit</strong> or heal wounds while this tag is active.</li>
+<li><em>Fictional Interaction:</em> Smells terrible, spoils food, and ruins non-metal gear over time.</li>
+</ul>
+<h4 id="spiky" tabindex="-1"><code>[Spiky]</code></h4>
+<ul>
+<li><em>Flavor:</em> Covered in sharp barbs, glass shards, or rusted nails.</li>
+<li><em>Universal Baseline:</em> Thorns. Any creature attacking the target in Melee takes <strong>1 automatic success</strong> (against standard enemies) or <strong>1 automatic Grit/Size damage</strong> (against PCs/Bosses/Mobs) on a hit.</li>
+<li><em>Fictional Interaction:</em> Ruin grappling attempts, damages ropes and nets.</li>
+</ul>
+<h4 id="swollen" tabindex="-1"><code>[Swollen]</code></h4>
+<ul>
+<li><em>Flavor:</em> Giant mass, muscle bloat, or alchemical growth.</li>
+<li><em>Universal Baseline:</em> Gigantism. The target’s <strong>Size</strong> increases by 1. Melee attacks gain a <strong>Boon (+1d)</strong>, but Slink/Stealth tests suffer a <strong>Bane (-1d)</strong>.</li>
+<li><em>Fictional Interaction:</em> Cannot fit through narrow bottlenecks.</li>
+</ul>
+<h4 id="teeny" tabindex="-1"><code>[Teeny]</code></h4>
+<ul>
+<li><em>Flavor:</em> Pixie dust, shrinking potions, or magic runes.</li>
+<li><em>Universal Baseline:</em> Shrinking. The target’s <strong>Size</strong> decreases to 0. Slink/Stealth tests and Dodge tests gain a <strong>Boon (+1d)</strong>, but carrying capacity is 0.</li>
+<li><em>Fictional Interaction:</em> Can slip through keyholes and under doors.</li>
+</ul>
+<hr>
+<h3 id="group-5-metaphysical-and-cosmic-anomalies-reality-bending-laws" tabindex="-1">Group 5: Metaphysical &amp; Cosmic Anomalies (Reality-Bending Laws)</h3>
+<h4 id="angelic" tabindex="-1"><code>[Angelic]</code></h4>
+<ul>
+<li><em>Flavor:</em> Blinding gold radiance, choral echoes, or pure law.</li>
+<li><em>Universal Baseline:</em> Holy aura. Attacks against standard foes are <strong>Easy (4+)</strong>.</li>
+<li><em>Fictional Interaction:</em> Highly destructive to undead (<code>Undead</code>) and demons, reducing their Defence TN by 1.</li>
+</ul>
+<h4 id="blessed" tabindex="-1"><code>[Blessed]</code></h4>
+<ul>
+<li><em>Flavor:</em> Fortunate whispers, gleaming luck, or a patron’s favor.</li>
+<li><em>Universal Baseline:</em> Good fortune. The target ignores their first Fumble during an encounter.</li>
+<li><em>Fictional Interaction:</em> Clears minor curses and dark tags on contact.</li>
+</ul>
+<h4 id="cursed" tabindex="-1"><code>[Cursed]</code></h4>
+<ul>
+<li><em>Flavor:</em> Dark runes, weeping blood, or terrible luck.</li>
+<li><em>Universal Baseline:</em> Bad fortune. The target fumbles on <em>any</em> rolled 1s (rather than needing two 1s).</li>
+<li><em>Fictional Interaction:</em> Can only be cleared by a Lair ritual or a specialized quest.</li>
+</ul>
+<h4 id="haunted" tabindex="-1"><code>[Haunted]</code></h4>
+<ul>
+<li><em>Flavor:</em> Lingering ghosts, cold drafts, or phantom hands.</li>
+<li><em>Universal Baseline:</em> Spectral curse. The target suffers a <strong>Bane (-1d)</strong> to Slink and Mouth tests. Any fumbled roll summons a minor ghost (<code>Undead:Spirit</code>) that attacks the target.</li>
+<li><em>Fictional Interaction:</em> Can be cleansed with holy tags (<code>[Angelic]</code>) or exorcisms.</li>
+</ul>
+<h4 id="laggy" tabindex="-1"><code>[Laggy]</code></h4>
+<ul>
+<li><em>Flavor:</em> Temporal distortion, slow-motion fields, or stuttering movements.</li>
+<li><em>Universal Baseline:</em> Time lag. The target’s declared action does not resolve until the End of Round phase.</li>
+<li><em>Fictional Interaction:</em> Allows allies to interrupt, flee, or block the attack before it hits.</li>
+</ul>
+<h4 id="linked" tabindex="-1"><code>[Linked]</code></h4>
+<ul>
+<li><em>Flavor:</em> Sympathetic soul-tethering, silver threads, or blood pacts.</li>
+<li><em>Universal Baseline:</em> Soul-tether. When two targets are <code>[Linked]</code>, any damage or conditions suffered by one are instantly mirrored onto the other. Damage or conditions mirrored by <code>[Linked]</code> cannot trigger further <code>[Linked]</code> mirrors.</li>
+<li><em>Fictional Interaction:</em> Allows clever players to harm bosses by attacking linked minions.</li>
+</ul>
+<h4 id="nullified" tabindex="-1"><code>[Nullified]</code></h4>
+<ul>
+<li><em>Flavor:</em> Anti-magic circles, lead runes, or cold iron anchors.</li>
+<li><em>Universal Baseline:</em> Dead-zone. Temporarily deactivates all active supernatural traits, magical tags, and oddities in the <strong>Zone</strong>.</li>
+<li><em>Fictional Interaction:</em> Turns magic weapons back into normal scrap, shuts down spellcasting.</li>
+</ul>
+<h4 id="petrified" tabindex="-1"><code>[Petrified]</code></h4>
+<ul>
+<li><em>Flavor:</em> Medusa glare, basilisk breath, or stone-flesh curses.</li>
+<li><em>Universal Baseline:</em> Stone state. Target is <strong>Stunned</strong> (cannot act) but gains +3 Passive Defense dice.</li>
+<li><em>Fictional Interaction:</em> Target becomes incredibly heavy and brittle to blunt impacts.</li>
+</ul>
+<h4 id="poofed" tabindex="-1"><code>[Poofed]</code></h4>
+<ul>
+<li><em>Flavor:</em> Banishing smoke, planar rifts, or sudden displacement.</li>
+<li><em>Universal Baseline:</em> Planar banishment. Target is removed from the map entirely. They return at the start of the next round in the same spot. If the spot is occupied when they return, they appear in the nearest unoccupied space.</li>
+<li><em>Fictional Interaction:</em> Traps targets in a timeless pocket dimension.</li>
+</ul>
+<h4 id="purified" tabindex="-1"><code>[Purified]</code></h4>
+<ul>
+<li><em>Flavor:</em> Healing water, clean sunlight, or restorative runes.</li>
+<li><em>Universal Baseline:</em> Exorcism. Instantly removes all poison, decay, curses, and diseases from the target.</li>
+<li><em>Fictional Interaction:</em> Cleanses corrupted objects or defiled zones.</li>
+</ul>
+<h4 id="revealing" tabindex="-1"><code>[Revealing]</code></h4>
+<ul>
+<li><em>Flavor:</em> Glowing lenses, true-sight dust, or magical lanterns.</li>
+<li><em>Universal Baseline:</em> Expose. Instantly reveals invisible entities, ignores illusions, and exposes hidden doors.</li>
+<li><em>Fictional Interaction:</em> Discredits <code>[Phantasmal]</code> tags.</li>
+</ul>
+<h4 id="serene" tabindex="-1"><code>[Serene]</code></h4>
+<ul>
+<li><em>Flavor:</em> Calming incense, pacifism runes, or angelic presence.</li>
+<li><em>Universal Baseline:</em> Pacifism. Attacks and violence are impossible in this <strong>Zone</strong>; characters must spend 1 <strong>Grunt</strong> or 1 <strong>Grit</strong> to override the calm.</li>
+<li><em>Fictional Interaction:</em> Forces negotiations, halts raging mobs.</li>
+</ul>
+<h4 id="siphoning" tabindex="-1"><code>[Siphoning]</code></h4>
+<ul>
+<li><em>Flavor:</em> Vampiric runes, soul-drain valves, or parasitic thorns.</li>
+<li><em>Universal Baseline:</em> Life drain. Successful attacks recover 1 Grit/Size for the attacker (up to their maximum limit).</li>
+<li><em>Fictional Interaction:</em> Feeds the wielder’s vitality.</li>
+</ul>
+<h4 id="spectral" tabindex="-1"><code>[Spectral]</code></h4>
+<ul>
+<li><em>Flavor:</em> Intangible, ghost-like properties that allow slipping through physical walls and armor.</li>
+<li><em>Universal Baseline:</em> Intangibility. Bypasses physical walls and ignores Passive Defense dice from armor.</li>
+<li><em>Fictional Interaction:</em> Attacker cannot be physically touched or blocked.</li>
+</ul>
+<h4 id="vile" tabindex="-1"><code>[Vile]</code></h4>
+<ul>
+<li><em>Flavor:</em> Demonic corruption, defiled blood, or dark runes.</li>
+<li><em>Universal Baseline:</em> Defilement. Corrupts holy or blessed things, converting them into cursed states.</li>
+<li><em>Fictional Interaction:</em> Spoils holy water, defiles shrines.</li>
+</ul>
+<hr>
+<h3 id="group-6-mechanical-and-material-flaws-systemic-failures" tabindex="-1">Group 6: Mechanical &amp; Material Flaws (Systemic Failures)</h3>
+<h4 id="bonded" tabindex="-1"><code>[Bonded]</code></h4>
+<ul>
+<li><em>Flavor:</em> Grafted flesh, parasitic spirits, or soul-locked steel.</li>
+<li><em>Universal Baseline:</em> Soulbind. Once equipped, the item cannot be removed, discarded, or stored.</li>
+<li><em>Fictional Interaction:</em> Bypasses standard disarm attacks. Removing the item requires a Lair ritual, an amputation, or a specialized GM quest.</li>
+</ul>
+<h4 id="fragile" tabindex="-1"><code>[Fragile]</code></h4>
+<ul>
+<li><em>Flavor:</em> Brittle clay, cheap alloys, or rusty wires.</li>
+<li><em>Universal Baseline:</em> Cheap build. Item breaks permanently on a Fumble (ignoring standard durability break checks).</li>
+<li><em>Fictional Interaction:</em> Shatters under sudden impact or stress.</li>
+</ul>
+<h4 id="jammed" tabindex="-1"><code>[Jammed]</code></h4>
+<ul>
+<li><em>Flavor:</em> Clogged gears, snapped springs, or dirt in the barrel.</li>
+<li><em>Universal Baseline:</em> Gridlock. Item cannot be used until a <strong>Standard Action</strong> (and a <strong>Brains</strong> test) is spent to clear the jam.</li>
+<li><em>Fictional Interaction:</em> Disables mechanical devices.</li>
+</ul>
+<h4 id="overcharged" tabindex="-1"><code>[Overcharged]</code></h4>
+<ul>
+<li><em>Flavor:</em> Humming power cells, unstable alchemical pressure, or magical feedback.</li>
+<li><em>Universal Baseline:</em> Volts. Next attack gains <strong>+2 Successes</strong>, then the tag is consumed.</li>
+<li><em>Fictional Interaction:</em> Risks exploding if the attack fumbles.</li>
+</ul>
+<h4 id="unstable" tabindex="-1"><code>[Unstable]</code></h4>
+<ul>
+<li><em>Flavor:</em> Nitroglycerin canisters, loose gears, or cursed runes.</li>
+<li><em>Universal Baseline:</em> Fragility. <strong>Fumbling</strong> an action triggers a T3 explosion (<code>[Explosive]</code>) in the <strong>Zone</strong>.</li>
+<li><em>Fictional Interaction:</em> Detonates at the slightest bump.</li>
+</ul>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gang — STAGE Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Playtesting & review materials">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab env-tab--active">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">STAGE Rules</h2>
+        <p class="sidebar-subtitle">Playtesting & review materials</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="stage.html" class="nav-link" data-target="rules--overview">Overview</a></li><li><a href="stage--rules--combat.html" class="nav-link" data-target="rules--combat">Combat</a></li><li><a href="stage--rules--movement-and-zones.html" class="nav-link" data-target="rules--movement-and-zones">Movement &amp; Zones</a></li><li><a href="stage--rules--giving-orders.html" class="nav-link" data-target="rules--giving-orders">Giving orders</a></li><li><a href="stage--rules--raid-points.html" class="nav-link" data-target="rules--raid-points">Raid points</a></li><li><a href="stage--rules--keywords-index.html" class="nav-link" data-target="rules--keywords-index">Keywords Index</a></li><li><a href="stage--rules--wounds-conditions.html" class="nav-link" data-target="rules--wounds-conditions">Wounds_Conditions</a></li><li><a href="stage--rules--master-tag-index.html" class="nav-link" data-target="rules--master-tag-index">Master_Tag_Index</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="true" data-target="characters-and-mobs"><span class="toggle-icon">▾</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" ><li><a href="stage--characters-and-mobs--character-creation.html" class="nav-link" data-target="characters-and-mobs--character-creation">Character Creation</a></li><li><a href="stage--characters-and-mobs--gang.html" class="nav-link nav-link--active" data-target="characters-and-mobs--gang">Gang</a></li><li><a href="stage--characters-and-mobs--boons-and-banes.html" class="nav-link" data-target="characters-and-mobs--boons-and-banes">Boons_and_Banes</a></li><li><a href="stage--characters-and-mobs--goblin-mob.html" class="nav-link" data-target="characters-and-mobs--goblin-mob">Goblin_mob</a></li><li><a href="stage--characters-and-mobs--quirks.html" class="nav-link" data-target="characters-and-mobs--quirks">Quirks</a></li><li><a href="stage--characters-and-mobs--level-up-and-death.html" class="nav-link" data-target="characters-and-mobs--level-up-and-death">Level_Up and death</a></li><li><a href="stage--characters-and-mobs--unified-modular-powers-system.html" class="nav-link" data-target="characters-and-mobs--unified-modular-powers-system">Unified_Modular_Powers_System</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="loot"><span class="toggle-icon">▸</span>Loot</button><ul class="nav-pages" id="nav-loot" style="display: none;"><li><a href="stage--loot--loot.html" class="nav-link" data-target="loot--loot">loot</a></li><li><a href="stage--loot--carry-stuff.html" class="nav-link" data-target="loot--carry-stuff">Carry Stuff</a></li><li><a href="stage--loot--equipment.html" class="nav-link" data-target="loot--equipment">Equipment</a></li><li><a href="stage--loot--crafting.html" class="nav-link" data-target="loot--crafting">Crafting</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="enemies"><span class="toggle-icon">▸</span>Enemies</button><ul class="nav-pages" id="nav-enemies" style="display: none;"><li><a href="stage--enemies--enemies.html" class="nav-link" data-target="enemies--enemies">Enemies</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="base"><span class="toggle-icon">▸</span>Base</button><ul class="nav-pages" id="nav-base" style="display: none;"><li><a href="stage--base--lair-rules.html" class="nav-link" data-target="base--lair-rules">Lair_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="travel"><span class="toggle-icon">▸</span>Travel</button><ul class="nav-pages" id="nav-travel" style="display: none;"><li><a href="stage--travel--journey-rules.html" class="nav-link" data-target="travel--journey-rules">Journey_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="magic"><span class="toggle-icon">▸</span>Magic</button><ul class="nav-pages" id="nav-magic" style="display: none;"><li><a href="stage--magic--magic-rules.html" class="nav-link" data-target="magic--magic-rules">Magic_Rules</a></li></ul></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="12-gangs" tabindex="-1">12. Gangs</h1>
+<p>Goblins die… frequently. It is a fact of life in the Lair. However, a player’s progression does not end just because their current character caught an arrow with their eye. To solve this, players don’t just play a single Gobbo; they play the absolute Boss of a <strong>Gang</strong>.</p>
+<p>When you create your first character, you also name your Gang and choose its defining traits. Your Boss commands this Gang until they inevitably die, at which point the next biggest Gobbo in your Gang takes over. The Gang itself is the persistent, leveling entity that you carry from session to session.</p>
+<h2 id="gang-attributes" tabindex="-1">Gang Attributes</h2>
+<p>Every Gang is unique, characterized by the following attributes tracked on your <strong>Gang Sheet</strong>:</p>
+<ul>
+<li><strong>Current Boss:</strong> The PC currently in charge.</li>
+<li><strong>Infamy:</strong> The overall “Level” of your Gang.</li>
+<li><strong>Shenanigan:</strong> What your Gang is famous for, which acts as both a mechanical boon and a behavioral flaw.</li>
+<li><strong>The Hoard:</strong> Your Gang’s shared pool of physical resources and abstract wealth.</li>
+<li><strong>The Bone Pile:</strong> A historical record of dead Bosses, yielding Relics and permanent Gang Marks for their successors.</li>
+<li><strong>Elders:</strong> Retired Bosses that provide passive boons or can be staffed at Lair facilities to unlock upgrades.</li>
+</ul>
+<hr>
+<h2 id="infamy" tabindex="-1">Infamy</h2>
+<p><strong>Infamy</strong> represents how feared and respected your specific group of gobbos is within the larger Lair. It acts as the overall progression level of the Gang, moving from <strong>Infamy 1</strong> to <strong>Infamy 5</strong>.</p>
+<h3 id="gaining-infamy-marks" tabindex="-1">Gaining Infamy Marks</h3>
+<p>To level up your Gang’s <strong>Infamy</strong>, players must accumulate <strong>Infamy Marks</strong>. These marks represent your Gang’s rising prestige and are earned in two ways:</p>
+<ol>
+<li><strong>Contribute Loot:</strong> Every <strong>10 Loot Value</strong> brought back and contributed to the Lair’s Communal Hoard by your Gang grants <strong>1 Infamy Mark</strong>.</li>
+<li><strong>Complete Agendas:</strong> At the start of a raid, each player selects or draws one <strong>Gang Agenda</strong> (e.g., steal a specific relic, burn a local building, kidnap a notable figure). Completing the Agenda during the raid grants <strong>1 Infamy Mark</strong> (max 1 per raid).</li>
+</ol>
+<h3 id="infamy-milestones" tabindex="-1">Infamy Milestones</h3>
+<p>Your Gang’s <strong>Infamy</strong> increases when you reach the following cumulative totals of <strong>Infamy Marks</strong>:</p>
+<ul>
+<li><strong>Infamy 1 to Infamy 2:</strong> <strong>3 Marks</strong></li>
+<li><strong>Infamy 2 to Infamy 3:</strong> <strong>6 Marks</strong></li>
+<li><strong>Infamy 3 to Infamy 4:</strong> <strong>10 Marks</strong></li>
+<li><strong>Infamy 4 to Infamy 5 (Max):</strong> <strong>15 Marks</strong></li>
+</ul>
+<h3 id="mechanics" tabindex="-1">Mechanics</h3>
+<p><strong>Infamy</strong> determines the starting resources and structural benefits available to your Gang:</p>
+<ul>
+<li><strong>Successor XP Pool:</strong> When a Boss dies, the successor Boss starts with <strong>1</strong> in all stats, gets <strong>1 starting advance</strong> (just like standard character creation), and receives a starting pool of <strong>Successor XP</strong> equal to <strong>Infamy Level × 4</strong> to buy stats at standard XP costs.
+<ul>
+<li><em>Successor Caps:</em> A successor Boss cannot raise any stat above <strong>Level 4</strong> at creation, and can never start as an <strong>Elder</strong> (Level 6).</li>
+</ul>
+</li>
+<li><strong>Gang Quirks:</strong> Your <strong>Infamy</strong> determines the maximum number of <strong>Gang Quirks</strong> your Boss can equip and bring on a raid (equal to your <strong>Infamy</strong> score).</li>
+</ul>
+<blockquote>
+<p><strong>Example:</strong> Snikt’s Gang has reached <strong>Infamy 3</strong> after contributing 20 Loot Value (2 Marks) and completing 4 Agendas (4 Marks). If Snikt dies on the next raid, his successor starts with <strong>1</strong> in all stats plus <strong>1 starting point</strong>, receives <strong>12 Successor XP</strong> (Infamy 3 × 4) to buy stats, and can equip up to <strong>3 Gang Quirks</strong> from the Lair’s active pool.</p>
+</blockquote>
+<hr>
+<h2 id="shenanigans-the-gang-s-nature" tabindex="-1">Shenanigans (The Gang’s Nature)</h2>
+<p>Goblins are chaotic, and every Gang has a defining nature that is simultaneously their greatest strength and their worst habit. When you create a Gang, you choose a starting <strong>Shenanigan</strong> (e.g., <em>Pyromaniacs, Sneak-Thieves, Shiny-Snatchers</em>). This acts as the “seed” of your Gang’s backstory, representing the culture left behind by your dead Founder.</p>
+<p><strong>Mechanics (The Double-Edged Sword):</strong></p>
+<ul>
+<li><strong>The Boon:</strong> Any Boss belonging to this Gang rolls <strong>+1d</strong> on tests directly related to their Shenanigan (e.g., Pyromaniacs are great at blowing things up).</li>
+<li><strong>The Madness (“For Fuck Sake”):</strong> The Shenanigan is a mandatory compulsion. It is often inconvenient (e.g., Pyromaniacs cannot resist throwing bombs even when stealth is needed; Shiny-Snatchers prioritize worthless reflective glass over actual gold).</li>
+<li><strong>The Reward (Feeding the Bangaranga):</strong> Leaning into your Shenanigan compulsion (the “For Fuck Sake” moment) is highly entertaining to the horde. Whenever you act on your Shenanigan to the detriment of your current task, you immediately add <strong>1 die</strong> to the communal <a href="01_Dice.md#the-bangaranga-pool">Bangaranga Pool</a>.</li>
+</ul>
+<p><em>Note: The Shenanigan you pick at creation is just the seed. As your Gang grows, your Bosses might acquire new Quirks or lean into different stats, organically “multiclassing” the Gang over generations.</em></p>
+<hr>
+<h2 id="the-hoard" tabindex="-1">The Hoard</h2>
+<p><strong>The Hoard</strong> is the Gang’s central stash. It represents the abstract wealth, stolen junk, and raw materials you have accumulated that isn’t directly spent on massive Lair Upgrades.</p>
+<p><strong>Mechanic:</strong> You use The Hoard to physically outfit your Mob before a raid. (See <a href="#mob-equipment-and-loot-tradeoff" class="wikilink" title="Mob Equipment &amp; Loot Tradeoff">Mob Equipment &amp; Loot Tradeoff</a>).</p>
+<hr>
+<h2 id="the-bone-pile" tabindex="-1">The Bone Pile</h2>
+<p>The <strong>Bone Pile</strong> is a literal pile of remains belonging to your Gang’s glorious dead Bosses. Bringing at least <em>some</em> piece of your dead Boss back to the Lair unlocks their legacy.</p>
+<p><strong>Mechanics:</strong>
+The dead are not forgotten. A new Boss can draw upon the <strong>Bone Pile</strong> in two specific ways:</p>
+<ol>
+<li><strong>Gang Marks:</strong> The successor Boss honors their predecessor by receiving a permanent <strong>Gang Mark</strong>—a crude tattoo inked in mud and soot. The new Boss chooses one <strong>Quirk</strong> or <strong>Twist</strong> the deceased Boss possessed; this becomes their permanent <strong>Gang Mark</strong>, ignoring normal stat requirements. (Note: This Quirk counts toward the Boss’s limit of <strong>3 Personal Quirks</strong>).</li>
+<li><strong>Relics:</strong> You may salvage a physical souvenir or remain (such as a bone) from a deceased Boss in the <strong>Bone Pile</strong> and attach it to a piece of gear to forge a <strong>Relic</strong>. The <strong>Relic</strong> grants a mechanical boon determined by the deceased Boss’s highest <strong>Main Stat</strong> at their time of death (see the Crafting rules for details). <strong>A Boss may only equip one Relic at a time.</strong></li>
+</ol>
+<hr>
+<h2 id="elders" tabindex="-1">Elders</h2>
+<p>When a Boss reaches Level 6 in any stat, they automatically retire. They don’t die; they just get old, fat, and start demanding other Gobbos bring them food. They become an <strong>Elder</strong>.</p>
+<h3 id="elder-benefits" tabindex="-1">Elder Benefits</h3>
+<p>Elders provide passive benefits to the Gang (e.g., better prices at the Lair merchant). However, they can also be permanently staffed at Lair rooms to unlock major, Lair-wide upgrades:</p>
+<ul>
+<li><strong>Elder of Tough (Staffed at the Training Ring):</strong> <strong>“Iron Hide.”</strong> All Mobs under the Gang’s command gain <strong>+1 passive Defense Die</strong> (Armor) for free, without consuming Bulk or reducing Carry Capacity.</li>
+<li><strong>Elder of Slink (Staffed at the Shadow Den):</strong> <strong>“Trap Sweepers.”</strong> All traps in a raid location have their Target Number (<strong>TN</strong>) reduced by <strong>1</strong> (minimum 1) for your Gang’s tests.</li>
+<li><strong>Elder of Mouth (Staffed at the Council Room):</strong> <strong>“Riot Shouter.”</strong> The Gang’s Boss has their starting and maximum <strong>Grunt</strong> command cap increased by <strong>+1</strong>. Additionally, once per raid, the Boss can rally all fleeing or uncontrolled Mobs in their Zone as a free action.</li>
+<li><strong>Elder of Brains (Staffed at the Tinker Yard):</strong> <strong>“Master Alchemist.”</strong> Your Boss can install <strong>1 extra Oddity</strong> on any piece of Custom Gear, exceeding the Boss’s standard Crafting Capacity by <strong>1</strong>.</li>
+</ul>
+<hr>
+<h2 id="gang-rivalries-and-agendas" tabindex="-1">Gang Rivalries &amp; Agendas</h2>
+<p>Goblins are petty. While Gangs ostensibly cooperate on raids to extract loot for the Lair, they compete fiercely at home.</p>
+<h3 id="gang-agendas" tabindex="-1">Gang Agendas</h3>
+<p><strong>Gang Agendas</strong> are personal, semi-secret missions chosen by each player at the start of a raid. They represent your Gang’s specific sub-goals and are the primary way to earn <strong>Infamy Marks</strong> to increase your Gang’s overall <strong>Infamy</strong>.</p>
+<ul>
+<li><strong>Setup:</strong> Before leaving the Lair for a raid, each player draws or chooses <strong>one</strong> Gang Agenda.</li>
+<li><strong>Resolution:</strong> If you complete the Agenda’s conditions during the raid and return home alive, your Gang immediately earns <strong>1 Infamy Mark</strong>.</li>
+<li><strong>The Limit:</strong> A Gang can earn a maximum of <strong>1 Infamy Mark</strong> from Agendas per raid.</li>
+</ul>
+<h4 id="example-gang-agendas" tabindex="-1">Example Gang Agendas</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Gang Shenanigan / Theme</th>
+<th style="text-align:left">Agenda Name</th>
+<th style="text-align:left">Objective</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Pyromaniacs</strong></td>
+<td style="text-align:left"><em>Burn Baby Burn</em></td>
+<td style="text-align:left">Set fire to at least two distinct structures, barricades, or Zones during the raid.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Sneak-Thieves</strong></td>
+<td style="text-align:left"><em>Silent Grab</em></td>
+<td style="text-align:left">Extract an item of at least <strong>1 Bulk</strong> from a container in a Zone containing active enemies without triggering combat in that Zone.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Shiny-Snatchers</strong></td>
+<td style="text-align:left"><em>Heavy Carry</em></td>
+<td style="text-align:left">Drag a single decorative or non-essential item (like a silver candelabra or statue) of at least <strong>3 Bulk</strong> all the way back to the Lair.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Any Gang (General)</strong></td>
+<td style="text-align:left"><em>Vengeance Quest</em></td>
+<td style="text-align:left">Personally land the killing blow on an enemy who wounded you or reduced your Mob’s size.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Any Gang (General)</strong></td>
+<td style="text-align:left"><em>Scrap Collector</em></td>
+<td style="text-align:left">Successfully dismantle or smash three pieces of dungeon infrastructure (e.g., doors, tables, mechanisms) using <strong>Tough</strong> tests.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Any Gang (General)</strong></td>
+<td style="text-align:left"><em>Bones of the Past</em></td>
+<td style="text-align:left">Recover a bone or gear item from a deceased goblin on the battlefield and carry it back to the Lair’s Hoard.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rivalries-pvp" tabindex="-1">Rivalries (PvP)</h3>
+<p>Direct conflict and sabotage between players’ Gangs is strictly resolved during the <strong>Lair Phase</strong>. Player-versus-Player combat or direct physical sabotage during a raid is not supported (unless you want your Mobs to annihilate each other instantly).</p>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

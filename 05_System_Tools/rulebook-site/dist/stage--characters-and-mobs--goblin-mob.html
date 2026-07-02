@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goblin_mob — STAGE Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Playtesting & review materials">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab env-tab--active">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">STAGE Rules</h2>
+        <p class="sidebar-subtitle">Playtesting & review materials</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="stage.html" class="nav-link" data-target="rules--overview">Overview</a></li><li><a href="stage--rules--combat.html" class="nav-link" data-target="rules--combat">Combat</a></li><li><a href="stage--rules--movement-and-zones.html" class="nav-link" data-target="rules--movement-and-zones">Movement &amp; Zones</a></li><li><a href="stage--rules--giving-orders.html" class="nav-link" data-target="rules--giving-orders">Giving orders</a></li><li><a href="stage--rules--raid-points.html" class="nav-link" data-target="rules--raid-points">Raid points</a></li><li><a href="stage--rules--keywords-index.html" class="nav-link" data-target="rules--keywords-index">Keywords Index</a></li><li><a href="stage--rules--wounds-conditions.html" class="nav-link" data-target="rules--wounds-conditions">Wounds_Conditions</a></li><li><a href="stage--rules--master-tag-index.html" class="nav-link" data-target="rules--master-tag-index">Master_Tag_Index</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="true" data-target="characters-and-mobs"><span class="toggle-icon">▾</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" ><li><a href="stage--characters-and-mobs--character-creation.html" class="nav-link" data-target="characters-and-mobs--character-creation">Character Creation</a></li><li><a href="stage--characters-and-mobs--gang.html" class="nav-link" data-target="characters-and-mobs--gang">Gang</a></li><li><a href="stage--characters-and-mobs--boons-and-banes.html" class="nav-link" data-target="characters-and-mobs--boons-and-banes">Boons_and_Banes</a></li><li><a href="stage--characters-and-mobs--goblin-mob.html" class="nav-link nav-link--active" data-target="characters-and-mobs--goblin-mob">Goblin_mob</a></li><li><a href="stage--characters-and-mobs--quirks.html" class="nav-link" data-target="characters-and-mobs--quirks">Quirks</a></li><li><a href="stage--characters-and-mobs--level-up-and-death.html" class="nav-link" data-target="characters-and-mobs--level-up-and-death">Level_Up and death</a></li><li><a href="stage--characters-and-mobs--unified-modular-powers-system.html" class="nav-link" data-target="characters-and-mobs--unified-modular-powers-system">Unified_Modular_Powers_System</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="loot"><span class="toggle-icon">▸</span>Loot</button><ul class="nav-pages" id="nav-loot" style="display: none;"><li><a href="stage--loot--loot.html" class="nav-link" data-target="loot--loot">loot</a></li><li><a href="stage--loot--carry-stuff.html" class="nav-link" data-target="loot--carry-stuff">Carry Stuff</a></li><li><a href="stage--loot--equipment.html" class="nav-link" data-target="loot--equipment">Equipment</a></li><li><a href="stage--loot--crafting.html" class="nav-link" data-target="loot--crafting">Crafting</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="enemies"><span class="toggle-icon">▸</span>Enemies</button><ul class="nav-pages" id="nav-enemies" style="display: none;"><li><a href="stage--enemies--enemies.html" class="nav-link" data-target="enemies--enemies">Enemies</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="base"><span class="toggle-icon">▸</span>Base</button><ul class="nav-pages" id="nav-base" style="display: none;"><li><a href="stage--base--lair-rules.html" class="nav-link" data-target="base--lair-rules">Lair_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="travel"><span class="toggle-icon">▸</span>Travel</button><ul class="nav-pages" id="nav-travel" style="display: none;"><li><a href="stage--travel--journey-rules.html" class="nav-link" data-target="travel--journey-rules">Journey_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="magic"><span class="toggle-icon">▸</span>Magic</button><ul class="nav-pages" id="nav-magic" style="display: none;"><li><a href="stage--magic--magic-rules.html" class="nav-link" data-target="magic--magic-rules">Magic_Rules</a></li></ul></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="goblin-mobs" tabindex="-1">Goblin Mobs</h1>
+<p>A Boss is nothing without their Gobbos. A Mob is your weapon, your shield, and your pack mule. But keeping a mob together requires a Boss with enough <strong>Grunt</strong>. Otherwise, they simply will not listen, and an ambitious goblin in the ranks might try to take your spot.</p>
+<h2 id="size-power" tabindex="-1">Size = Power</h2>
+<p>The absolute most important stat for a Mob is its <strong>Size</strong>. Size determines everything: how many dice they roll in combat, how much Grunt you need to control them, and how much Loot they carry.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Size</th>
+<th style="text-align:left">Combat Dice</th>
+<th style="text-align:left">Required Grunt</th>
+<th style="text-align:left">Loot Capacity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Runts</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">1d6</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">4 Bulk</td>
+</tr>
+<tr>
+<td style="text-align:left">Group</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">2d6</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">8 Bulk</td>
+</tr>
+<tr>
+<td style="text-align:left">Troop</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">3d6</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">12 Bulk</td>
+</tr>
+<tr>
+<td style="text-align:left">Gang</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">4d6</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">16 Bulk</td>
+</tr>
+<tr>
+<td style="text-align:left">Company</td>
+<td style="text-align:left">5</td>
+<td style="text-align:left">5d6</td>
+<td style="text-align:left">5</td>
+<td style="text-align:left">20 Bulk</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: The number of goblins in a Mob is abstract. A Size 1 Mob might be 3-5 goblins, while a Size 5 Mob is a swarming horde of 30+.</em></p>
+<h2 id="mob-equipment-and-loot-tradeoff" tabindex="-1">Mob Equipment &amp; Loot Tradeoff</h2>
+<p>Mobs can be equipped with scavenged weapons and armor, but this comes at a steep cost to their greed.</p>
+<ul>
+<li><strong>Mob Armor:</strong> Equipping a Mob with Armor grants them passive Defense Dice (e.g., +1d6 or +2d6). Whenever the Mob is attacked, you roll these bonus dice, and every success reduces the incoming damage.</li>
+<li><strong>The Tradeoff:</strong> Every piece of Gear a Mob is equipped with reduces their <strong>Carry / Loot Capacity</strong> by an equal amount of Bulk. A heavily armored Mob will survive longer, but they will not be able to carry the raiding loot back to the lair! A naked, feral Mob will die quickly but can carry a horde of treasure.</li>
+</ul>
+<h3 id="health-and-taking-damage" tabindex="-1">Health &amp; Taking Damage</h3>
+<p>A Mob’s health is tracked physically on the table using a number of D6s equal to its Size (e.g., A Size 3 mob starts with three physical dice turned to the “6” face).</p>
+<p>When a Mob takes standard damage, you turn the face down on one of those dice by the damage amount. When a die drops below 1, that die is removed, and the Mob permanently shrinks 1 point in Size.</p>
+<ul>
+<li><strong>Damage Spillover:</strong> In Gobbos, damage is lethal and always carries over! If a die is removed and there is still incoming damage left over, that remaining damage spills over into the next die.</li>
+</ul>
+<blockquote>
+<p><em>Example: A Size 3 mob has one die currently reading “2”. They take 3 damage. The die is turned to 0 and removed (the mob is now Size 2). The remaining 1 damage spills over to the next die, turning a “6” into a “5”.</em></p>
+</blockquote>
+<p><strong>AoE &amp; Cleave Damage (The Mob Killer):</strong>
+Mobs are strong against single-target damage, but incredibly weak to Area of Effect (AoE) or Cleave attacks (like a roaring dragon’s breath or a wizard’s fireball).
+If an attack explicitly has the AoE or Cleave trait, the incoming damage is applied to <strong>EVERY SINGLE DIE</strong> in the Mob.</p>
+<blockquote>
+<p><em>Example: A Fireball deals 3 Damage to a Size 5 Mob. Instead of just reducing one die by 3, you reduce ALL 5 dice by 3. That single fireball just dealt 15 total damage!</em></p>
+</blockquote>
+<p><strong>Dropping Loot:</strong> If a Mob shrinks in Size, their Loot Capacity also drops! If they are suddenly carrying more Bulk than their new Size allows, the controlling PC must immediately choose which Loot is dropped on the floor.</p>
+<h2 id="splitting-and-merging-mobs" tabindex="-1">Splitting and Merging Mobs</h2>
+<p>A Boss can dynamically manage their swarm by splitting Mobs apart or merging them together.</p>
+<h3 id="splitting-a-mob" tabindex="-1">Splitting a Mob</h3>
+<p>A Boss can use an <strong>Order</strong> to tell a Mob to split instead of taking their normal 2 actions.</p>
+<ul>
+<li><strong>The Math:</strong> A Size 5 mob splits into two smaller mobs (e.g., Size 3 and Size 2). The Boss decides how to distribute the current physical dice.</li>
+<li><strong>The Benefit:</strong> Splitting is an excellent way to mitigate AoE/Cleave damage, or to fit Mobs into narrow terrain.</li>
+</ul>
+<h3 id="merging-mobs" tabindex="-1">Merging Mobs</h3>
+<p>If two Mobs belonging to the same player end their turn in the same Zone, the Boss can use an <strong>Order</strong> or <strong>Manipulate</strong> action to merge them.</p>
+<ul>
+<li><strong>The Math:</strong> You add the D6s together (e.g., a Size 2 and Size 3 Mob become a new Size 5 Mob).</li>
+<li><strong>The Grunt Cap:</strong> The total Size of the new Mob <em>cannot exceed</em> the Boss’s <strong>Grunt</strong>. If a Boss merges a Mob until it exceeds their Grunt, it immediately becomes Uncontrolled (see below).</li>
+</ul>
+<h3 id="the-super-mob-cross-gang-merging" tabindex="-1">The Super-Mob (Cross-Gang Merging)</h3>
+<p>Mobs from different player Gangs <em>can</em> merge if both Bosses agree. This creates a terrifying, chaotic massive dice pool.</p>
+<ul>
+<li><strong>The Command Struggle:</strong> The new Super-Mob is extremely volatile. Every time <em>either</em> Boss wants to issue an Order to the Super-Mob, it requires a <strong>Grunt test</strong> (Testing <a href="#tough" class="wikilink" title="Tough">Tough</a> if in the same Zone, or <a href="#mouth" class="wikilink" title="Mouth">Mouth</a> from afar).</li>
+<li><strong>In-Fighting:</strong> Whenever a Cross-Gang Mob rolls a dice pool for <em>any reason</em> (like an Attack roll, or a Manipulate check), <strong>every 1 rolled results in 1 damage to the Mob itself.</strong> They cannot help themselves; they just start stabbing the other gang! This happens regardless of whether the action is successful or not.</li>
+</ul>
+<h3 id="action-economy-and-combat-states" tabindex="-1">Action Economy &amp; Combat States</h3>
+<p>A Mob gets <strong>two (2) actions</strong> per round, reset at the start of each round. A Mob’s behavior, actions spent, and defensive capabilities are determined strictly by their combat state:</p>
+<ol>
+<li><strong>Ordered:</strong> The Mob receives direct instructions from the Boss (using a Standard Action or Free Order). They use <strong>both actions</strong> as per the player’s instructions (e.g., moving and attacking). They have <strong>0 saved actions</strong> left for defense (<strong>0d6 Defence</strong>).</li>
+<li><strong>Loitering:</strong> The Mob is under control but receives no orders on their turn. Goblins are naturally distracted and lazy; they use <strong>1 action</strong> to loiter (roll/choose on the <strong>Loitering Table</strong> below) and save <strong>1 action</strong> for defense. When attacked, they spend their saved action to roll <strong>1d6 Defence</strong>.</li>
+<li><strong>Out of Control:</strong> The Mob is uncontrolled (see below). They spend <strong>both actions</strong> running amok under GM control (roll/choose on the <strong>Out of Control Table</strong> below), leaving them with <strong>0 saved actions</strong> left for defense (<strong>0d6 Defence</strong>).</li>
+</ol>
+<h3 id="command-limits-control-vs-out-of-control" tabindex="-1">Command Limits (Control vs. Out of Control)</h3>
+<p>A Mob is under command as long as they are within line of sight of their Boss and the Mob’s current <strong>Size</strong> does not exceed the Boss’s maximum <strong>Grunt</strong> stat. A Mob immediately becomes <strong>Out of Control</strong> if:</p>
+<ol>
+<li><strong>Broken Command:</strong> They break line of sight with their Boss (e.g., they move behind a solid wall or enter a separate room).</li>
+<li><strong>Command Limit Exceeded:</strong> The Mob’s <strong>Size</strong> increases beyond the Boss’s current <strong>Grunt</strong> (often due to merging or the Boss losing Grunt from a Fumble).</li>
+<li><strong>Morale Failure:</strong> The Mob fails a group <strong>Morale Check</strong> and panics.</li>
+</ol>
+<h4 id="regaining-control" tabindex="-1">Regaining Control</h4>
+<p>To bring an Out of Control Mob back under command, the Boss must spend a Standard Action to <strong>Order</strong> them, resolving it using the standard command test rules in <a href="../00_Rules/04_Giving%20orders.md">Giving Orders</a>. On a success, the Mob becomes controlled and receives their instructions; on a failure, they ignore the Boss and remain Out of Control.</p>
+<hr>
+<h2 id="behavior-tables" tabindex="-1">Behavior Tables</h2>
+<p>When a Mob is <strong>Loitering</strong> or <strong>Out of Control</strong>, roll <strong>1d6</strong> on the appropriate table during their turn to determine how they act:</p>
+<h3 id="loitering-table-d6" tabindex="-1">Loitering Table (d6)</h3>
+<ul>
+<li><strong>1 (Bicker):</strong> They argue, push, and complain. (Uses 1 action. Saves 1 action for <strong>1d6 Defence</strong>).</li>
+<li><strong>2 (Inspect):</strong> They pick their noses, stare at walls, or draw crude graffiti. (Uses 1 action. Saves 1 action for <strong>1d6 Defence</strong>).</li>
+<li><strong>3 (Snatch):</strong> They pick up a nearby shiny object or eat a mushroom (resolves as a Plunder action if loot is present; otherwise narrative). (Uses 1 action. Saves 1 action for <strong>1d6 Defence</strong>).</li>
+<li><strong>4 (Wander):</strong> They move <strong>one (1) Zone</strong> in a random direction (but they will not willingly leave line of sight of their Boss). (Uses 1 action. Saves 1 action for <strong>1d6 Defence</strong>).</li>
+<li><strong>5 (Snoop):</strong> They peer around curiously, granting a <strong>Boon</strong> to the next PC who tests to spot hidden traps or doors in the Zone. (Uses 1 action. Saves 1 action for <strong>1d6 Defence</strong>).</li>
+<li><strong>6 (Taunt):</strong> They make rude gestures, moon, or scream insults at the nearest enemy. (Uses 1 action. Saves 1 action for <strong>1d6 Defence</strong>).</li>
+</ul>
+<h3 id="out-of-control-table-d6" tabindex="-1">Out of Control Table (d6)</h3>
+<ul>
+<li><strong>1–2 (Panic / Flee):</strong> If there is a <strong>Terrifying Enemy</strong> (any Elite or Boss, any creature with the <code>[Frightening]</code> or <code>[Huge]</code> tag, or any hazard/enemy that dealt damage to them this round) in their Zone, they spend both actions fleeing toward the nearest exit or cover. Otherwise, they squabble: the Mob takes <strong>1 damage</strong> and gains the <strong>Staggered</strong> condition. (Uses 2 actions. <strong>0d6 Defence</strong>).</li>
+<li><strong>3–4 (Loot / Trash):</strong> If unattended loot or food is present, they plunder it (eating food heals <strong>1d6</strong> damage on their Mob health dice). Otherwise, they spend both actions trashing doors, crates, and furniture in their Zone. (Uses 2 actions. <strong>0d6 Defence</strong>).</li>
+<li><strong>5–6 (Frenzy):</strong> They swarm and attack the nearest living creature in their Zone (enemy or ally!). If no creatures are present, they wander <strong>one (1) Zone</strong> toward the nearest noise. (Uses 2 actions. <strong>0d6 Defence</strong>).</li>
+</ul>
+<hr>
+<h2 id="mob-tests-and-attributes" tabindex="-1">Mob Tests &amp; Attributes</h2>
+<p>Goblins in a Mob do not have individual stats (like <strong>Tough</strong>, <strong>Slink</strong>, <strong>Brains</strong>, or <strong>Mouth</strong>). Instead, their dice pool for any non-combat test is resolved using the core <strong>Stat</strong> dice rule based on the nature of the test:</p>
+<ul>
+<li><strong>Tough Tests (Strength, Endurance, Mass):</strong> Roll <strong>Size</strong> dice. A Mob’s collective strength and body mass are directly tied to their <strong>Size</strong>. Larger Mobs are much better at lifting gates, swimming against currents, or resisting toxic gas.</li>
+<li><strong>Slink Tests (Stealth, Dodging, Balance):</strong> Always roll exactly <strong>1d6</strong> (representing a default stat value of 1). A crowd is inherently loud and clumsy. Regardless of the Mob’s <strong>Size</strong>, one goblin tripping cascades to others, making stealth, balance, and quick dodging difficult.</li>
+<li><strong>Brains &amp; Mouth Tests (Thinking, Social):</strong> Always roll exactly <strong>1d6</strong> (representing a default stat value of 1). Without their Boss’s direct instructions, a Mob is a disorganized mess and cannot coordinate complex tasks or trade.</li>
+</ul>
+<h3 id="mob-gear-upgrades" tabindex="-1">Mob Gear Upgrades</h3>
+<p>Any gear equipped to a Mob that assists with specific tests (like <em>silent shoes</em> for Slink tests or <em>protective masks</em> for Tough tests against gas) applies its benefits as standard <strong>Boons</strong> (+1d per Boon) to these base rolls.</p>
+<blockquote>
+<p><strong>Example:</strong> A Mob equipped with <em>silent shoes</em> gains a <strong>Boon</strong> (+1d) to Slink tests, rolling <strong>2d6</strong> instead of the base <strong>1d6</strong>.</p>
+</blockquote>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

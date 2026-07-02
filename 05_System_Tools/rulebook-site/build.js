@@ -16,9 +16,12 @@ const INDEX_TEMPLATE_PATH = path.join(__dirname, 'index-template.html');
 const STYLE_PATH = path.join(__dirname, 'style.css');
 
 const ENVIRONMENTS = [
-  { key: 'dev',   dir: '00_DEV_Brainstorms',  title: 'DEV Brainstorms',  subtitle: 'Raw ideas and brainstorms', icon: '💡' },
-  { key: 'stage', dir: '01_STAGE_Drafts',     title: 'STAGE Drafts',     subtitle: 'Playtesting & review materials', icon: '🧪' },
-  { key: 'prod',  dir: '02_PROD_Core_Rules',  title: 'PROD Core Rules',  subtitle: 'The official rulebook', icon: '📖' },
+  { key: 'dev',        dir: '00_DEV_Brainstorms',  title: 'DEV Rules',        subtitle: 'Raw ideas and brainstorms', icon: '💡' },
+  { key: 'stage',      dir: '01_STAGE_Drafts',     title: 'STAGE Rules',      subtitle: 'Playtesting & review materials', icon: '🧪' },
+  { key: 'prod',       dir: '02_PROD_Core_Rules',  title: 'PROD Rules',       subtitle: 'The official rulebook', icon: '📖' },
+  { key: 'dev-lore',   dir: 'LORE/00_DEV_Lore',    title: 'DEV Lore',         subtitle: 'Volatile lore brainstorms', icon: '🔮' },
+  { key: 'stage-lore', dir: 'LORE/01_STAGE_Lore',   title: 'STAGE Lore',       subtitle: 'Synthesized lore drafts',   icon: '📜' },
+  { key: 'prod-lore',  dir: 'LORE/03_PROD_Lore',    title: 'PROD Lore',        subtitle: 'Locked canon',              icon: '🏛️' },
 ];
 
 // ============================================================
@@ -47,6 +50,26 @@ function escapeHtml(text) {
   return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
+function getPageFilename(envKey, pageSlug, isFirstPage) {
+  if (isFirstPage) {
+    return `${envKey}.html`;
+  }
+  return `${envKey}--${pageSlug}.html`;
+}
+
+function resolveWikiLink(linkText, env) {
+  const trimmed = linkText.trim();
+  const slug = slugify(trimmed);
+
+  // If a wikiMap is provided in the markdown-it env object, look up the target URL
+  if (env && env.wikiMap && env.wikiMap.has(slug)) {
+    return env.wikiMap.get(slug);
+  }
+
+  // Fallback to section/heading anchor on the current page
+  return `#${slug}`;
+}
+
 // ============================================================
 // Wikilinks Plugin for markdown-it
 // ============================================================
@@ -63,8 +86,8 @@ function wikilinksPlugin(md) {
     }
     return content.replace(wikiRe, (_, linkText) => {
       const trimmed = linkText.trim();
-      const slug = slugify(trimmed);
-      return `<a href="#${slug}" class="wikilink" title="${escapeHtml(trimmed)}">${escapeHtml(trimmed)}</a>`;
+      const targetUrl = resolveWikiLink(trimmed, env);
+      return `<a href="${targetUrl}" class="wikilink" title="${escapeHtml(trimmed)}">${escapeHtml(trimmed)}</a>`;
     });
   };
 }
@@ -139,46 +162,40 @@ function scanEnvironment(envDirName) {
 }
 
 // ============================================================
-// Build combined Markdown → HTML for one environment
-// ============================================================
-function buildContent(sections, md) {
-  let combined = '';
-
-  for (const section of sections) {
-    if (section.isFolder) {
-      combined += `\n<div class="section-divider" id="${section.slug}"></div>\n\n`;
-      for (const page of section.pages) {
-        combined += `<div class="page-start" id="${page.slug}"></div>\n\n`;
-        combined += page.content + '\n\n';
-      }
-    } else {
-      combined += `\n<div class="page-start" id="${section.slug}"></div>\n\n`;
-      combined += section.pages[0].content + '\n\n';
-    }
-  }
-
-  return md.render(combined);
-}
-
-// ============================================================
 // Build sidebar navigation HTML
 // ============================================================
-function buildSidebarNav(sections) {
+function buildSidebarNav(sections, envKey, firstPageSlug, currentPageSlug) {
   let nav = '';
 
   for (const section of sections) {
     if (section.isFolder) {
+      const isCurrentSection = section.pages.some(p => p.slug === currentPageSlug);
+      const expandedAttr = isCurrentSection ? 'aria-expanded="true"' : 'aria-expanded="false"';
+      const displayStyle = isCurrentSection ? '' : 'style="display: none;"';
+
       nav += `<div class="nav-group">`;
-      nav += `<button class="nav-group-toggle" aria-expanded="true" data-target="${section.slug}">`;
-      nav += `<span class="toggle-icon">▾</span>${escapeHtml(section.name)}</button>`;
-      nav += `<ul class="nav-pages" id="nav-${section.slug}">`;
+      nav += `<button class="nav-group-toggle" ${expandedAttr} data-target="${section.slug}">`;
+      nav += `<span class="toggle-icon">${isCurrentSection ? '▾' : '▸'}</span>${escapeHtml(section.name)}</button>`;
+      nav += `<ul class="nav-pages" id="nav-${section.slug}" ${displayStyle}>`;
+      
       for (const page of section.pages) {
-        nav += `<li><a href="#${page.slug}" class="nav-link" data-target="${page.slug}">${escapeHtml(page.name)}</a></li>`;
+        const isFirst = page.slug === firstPageSlug;
+        const pageUrl = getPageFilename(envKey, page.slug, isFirst);
+        const isActive = page.slug === currentPageSlug;
+        const activeClass = isActive ? ' nav-link--active' : '';
+        
+        nav += `<li><a href="${pageUrl}" class="nav-link${activeClass}" data-target="${page.slug}">${escapeHtml(page.name)}</a></li>`;
       }
       nav += `</ul></div>`;
     } else {
+      const page = section.pages[0];
+      const isFirst = page.slug === firstPageSlug;
+      const pageUrl = getPageFilename(envKey, page.slug, isFirst);
+      const isActive = page.slug === currentPageSlug;
+      const activeClass = isActive ? ' nav-link--active' : '';
+
       nav += `<div class="nav-group nav-group--solo">`;
-      nav += `<a href="#${section.slug}" class="nav-link nav-link--solo" data-target="${section.slug}">${escapeHtml(section.name)}</a>`;
+      nav += `<a href="${pageUrl}" class="nav-link nav-link--solo${activeClass}" data-target="${page.slug}">${escapeHtml(section.name)}</a>`;
       nav += `</div>`;
     }
   }
@@ -201,7 +218,7 @@ function buildEnvNav(activeKey) {
 // Main Build
 // ============================================================
 async function build() {
-  console.log('🔨 Building Gobbos Rulebook Site...\n');
+  console.log('🔨 Building Gobbos Rulebook & Lore Site (Multi-Page Agent-Friendly)...\n');
 
   // Ensure dist exists and is clean
   await fs.emptyDir(DIST_DIR);
@@ -221,27 +238,70 @@ async function build() {
   for (const env of ENVIRONMENTS) {
     const { sections, hasContent } = scanEnvironment(env.dir);
 
-    let mainContent;
-    let sidebarNav;
+    if (!hasContent) {
+      // Empty state page (e.g. stage.html or prod.html when empty)
+      const mainContent = `<div class="empty-state"><h2>No content yet</h2><p>Rules will appear here once they are added to <code>${env.dir}/</code>.</p></div>`;
+      const sidebarNav = '<p class="nav-empty">No sections yet</p>';
+      
+      const html = template
+        .replace(/\{\{TITLE\}\}/g, `${env.title} — Gobbos`)
+        .replace(/\{\{PAGE_TITLE\}\}/g, env.title)
+        .replace(/\{\{SUBTITLE\}\}/g, env.subtitle)
+        .replace('{{NAV_CONTENT}}', sidebarNav)
+        .replace('{{MAIN_CONTENT}}', mainContent)
+        .replace('{{ENV_NAV}}', buildEnvNav(env.key));
 
-    if (hasContent) {
-      mainContent = buildContent(sections, md);
-      sidebarNav = buildSidebarNav(sections);
-    } else {
-      mainContent = `<div class="empty-state"><h2>No content yet</h2><p>Rules will appear here once they are added to <code>${env.dir}/</code>.</p></div>`;
-      sidebarNav = '<p class="nav-empty">No sections yet</p>';
+      await fs.writeFile(path.join(DIST_DIR, `${env.key}.html`), html, 'utf-8');
+      console.log(`  ✅ Built ${env.key}.html (Empty State)`);
+      continue;
     }
 
-    const html = template
-      .replace(/\{\{TITLE\}\}/g, `${env.title} — Gobbos`)
-      .replace(/\{\{PAGE_TITLE\}\}/g, env.title)
-      .replace(/\{\{SUBTITLE\}\}/g, env.subtitle)
-      .replace('{{NAV_CONTENT}}', sidebarNav)
-      .replace('{{MAIN_CONTENT}}', mainContent)
-      .replace('{{ENV_NAV}}', buildEnvNav(env.key));
+    // Determine the first page's slug to map it to env.key.html
+    let firstPageSlug = null;
+    if (sections.length > 0 && sections[0].pages.length > 0) {
+      firstPageSlug = sections[0].pages[0].slug;
+    }
 
-    await fs.writeFile(path.join(DIST_DIR, `${env.key}.html`), html, 'utf-8');
-    console.log(`  ✅ Built ${env.key}.html (${sections.length} sections)`);
+    // Build the wikiMap for wikilinks lookup
+    const wikiMap = new Map();
+    for (const section of sections) {
+      for (const page of section.pages) {
+        const isFirst = page.slug === firstPageSlug;
+        const pageUrl = getPageFilename(env.key, page.slug, isFirst);
+        wikiMap.set(page.slug, pageUrl);
+        wikiMap.set(slugify(page.name), pageUrl);
+      }
+      if (section.pages.length > 0) {
+        const isFirst = section.pages[0].slug === firstPageSlug;
+        const sectionUrl = getPageFilename(env.key, section.pages[0].slug, isFirst);
+        wikiMap.set(slugify(section.name), sectionUrl);
+      }
+    }
+
+    // Build a separate page for each page in every section
+    let pagesCount = 0;
+    for (const section of sections) {
+      for (const page of section.pages) {
+        const isFirst = page.slug === firstPageSlug;
+        const pageFilename = getPageFilename(env.key, page.slug, isFirst);
+        
+        const mainContent = md.render(page.content, { wikiMap });
+        const sidebarNav = buildSidebarNav(sections, env.key, firstPageSlug, page.slug);
+
+        const html = template
+          .replace(/\{\{TITLE\}\}/g, `${page.name} — ${env.title} — Gobbos`)
+          .replace(/\{\{PAGE_TITLE\}\}/g, env.title)
+          .replace(/\{\{SUBTITLE\}\}/g, env.subtitle)
+          .replace('{{NAV_CONTENT}}', sidebarNav)
+          .replace('{{MAIN_CONTENT}}', mainContent)
+          .replace('{{ENV_NAV}}', buildEnvNav(env.key));
+
+        await fs.writeFile(path.join(DIST_DIR, pageFilename), html, 'utf-8');
+        pagesCount++;
+      }
+    }
+    
+    console.log(`  ✅ Built environment ${env.key} (${sections.length} sections, ${pagesCount} pages)`);
   }
 
   // Build index page
@@ -260,6 +320,14 @@ async function build() {
   const indexHtml = indexTemplate.replace('{{ENV_CARDS}}', envCards);
   await fs.writeFile(path.join(DIST_DIR, 'index.html'), indexHtml, 'utf-8');
   console.log('  ✅ Built index.html\n');
+
+  // Write success status.json
+  const statusData = {
+    status: 'success',
+    timestamp: new Date().toISOString()
+  };
+  await fs.writeJson(path.join(DIST_DIR, 'status.json'), statusData, { spaces: 2 });
+  console.log('  ✅ Written status.json (success)\n');
 
   console.log('🎉 Build complete! Files in:', DIST_DIR);
 }

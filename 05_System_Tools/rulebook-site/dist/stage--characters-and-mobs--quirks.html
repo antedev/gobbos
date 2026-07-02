@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quirks — STAGE Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Playtesting & review materials">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab env-tab--active">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">STAGE Rules</h2>
+        <p class="sidebar-subtitle">Playtesting & review materials</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="stage.html" class="nav-link" data-target="rules--overview">Overview</a></li><li><a href="stage--rules--combat.html" class="nav-link" data-target="rules--combat">Combat</a></li><li><a href="stage--rules--movement-and-zones.html" class="nav-link" data-target="rules--movement-and-zones">Movement &amp; Zones</a></li><li><a href="stage--rules--giving-orders.html" class="nav-link" data-target="rules--giving-orders">Giving orders</a></li><li><a href="stage--rules--raid-points.html" class="nav-link" data-target="rules--raid-points">Raid points</a></li><li><a href="stage--rules--keywords-index.html" class="nav-link" data-target="rules--keywords-index">Keywords Index</a></li><li><a href="stage--rules--wounds-conditions.html" class="nav-link" data-target="rules--wounds-conditions">Wounds_Conditions</a></li><li><a href="stage--rules--master-tag-index.html" class="nav-link" data-target="rules--master-tag-index">Master_Tag_Index</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="true" data-target="characters-and-mobs"><span class="toggle-icon">▾</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" ><li><a href="stage--characters-and-mobs--character-creation.html" class="nav-link" data-target="characters-and-mobs--character-creation">Character Creation</a></li><li><a href="stage--characters-and-mobs--gang.html" class="nav-link" data-target="characters-and-mobs--gang">Gang</a></li><li><a href="stage--characters-and-mobs--boons-and-banes.html" class="nav-link" data-target="characters-and-mobs--boons-and-banes">Boons_and_Banes</a></li><li><a href="stage--characters-and-mobs--goblin-mob.html" class="nav-link" data-target="characters-and-mobs--goblin-mob">Goblin_mob</a></li><li><a href="stage--characters-and-mobs--quirks.html" class="nav-link nav-link--active" data-target="characters-and-mobs--quirks">Quirks</a></li><li><a href="stage--characters-and-mobs--level-up-and-death.html" class="nav-link" data-target="characters-and-mobs--level-up-and-death">Level_Up and death</a></li><li><a href="stage--characters-and-mobs--unified-modular-powers-system.html" class="nav-link" data-target="characters-and-mobs--unified-modular-powers-system">Unified_Modular_Powers_System</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="loot"><span class="toggle-icon">▸</span>Loot</button><ul class="nav-pages" id="nav-loot" style="display: none;"><li><a href="stage--loot--loot.html" class="nav-link" data-target="loot--loot">loot</a></li><li><a href="stage--loot--carry-stuff.html" class="nav-link" data-target="loot--carry-stuff">Carry Stuff</a></li><li><a href="stage--loot--equipment.html" class="nav-link" data-target="loot--equipment">Equipment</a></li><li><a href="stage--loot--crafting.html" class="nav-link" data-target="loot--crafting">Crafting</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="enemies"><span class="toggle-icon">▸</span>Enemies</button><ul class="nav-pages" id="nav-enemies" style="display: none;"><li><a href="stage--enemies--enemies.html" class="nav-link" data-target="enemies--enemies">Enemies</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="base"><span class="toggle-icon">▸</span>Base</button><ul class="nav-pages" id="nav-base" style="display: none;"><li><a href="stage--base--lair-rules.html" class="nav-link" data-target="base--lair-rules">Lair_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="travel"><span class="toggle-icon">▸</span>Travel</button><ul class="nav-pages" id="nav-travel" style="display: none;"><li><a href="stage--travel--journey-rules.html" class="nav-link" data-target="travel--journey-rules">Journey_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="magic"><span class="toggle-icon">▸</span>Magic</button><ul class="nav-pages" id="nav-magic" style="display: none;"><li><a href="stage--magic--magic-rules.html" class="nav-link" data-target="magic--magic-rules">Magic_Rules</a></li></ul></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="14-quirks-and-twists" tabindex="-1">14. Quirks &amp; Twists</h1>
+<p><em>Goblins don’t fight fair. They fight weird. When a tall-man swings a shiny sword, a goblin Boss doesn’t block it—they duck, bite their ankle, and shove a friend in the way.</em></p>
+<p><strong>Quirks</strong> are unique personal abilities that allow a Boss to manipulate dice outcomes, bypass combat restrictions, or alter the action economy. A <strong>Quirk</strong> is a modular base action. The true chaos happens when you attach a <strong>Twist</strong>—a modifier that alters how the <strong>Quirk</strong> works, creating a customized, volatile combination.</p>
+<p>All <strong>Quirks</strong> and <strong>Twists</strong> are governed by the modular structure detailed in [16. Unified Modular Powers System](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters &amp; Mobs/16_Unified_Modular_Powers_System.md).</p>
+<hr>
+<h2 id="1-acquiring-quirks-and-the-limit" tabindex="-1">1. Acquiring Quirks &amp; The Limit</h2>
+<p>To prevent Bosses from forgetting their own chaotic repertoire mid-raid, a Boss is strictly limited in how many personal <strong>Quirks</strong> they can maintain.</p>
+<ul>
+<li><strong>The Personal Limit:</strong> A Boss can hold a maximum of <strong>3 Personal Quirks</strong>.</li>
+<li><strong>Twist Limits:</strong> Each <strong>Quirk</strong> can hold exactly <strong>1 Twist</strong>.</li>
+</ul>
+<h3 id="progression" tabindex="-1">Progression</h3>
+<p>New <strong>Quirks</strong> and <strong>Twists</strong> are acquired and upgraded during downtime:</p>
+<ol>
+<li><strong>Character Creation:</strong> A newly rolled Boss starts with <strong>1 Basic Quirk</strong> of their choice, and <strong>0 Twists</strong>.</li>
+<li><strong>Leveling Up:</strong> Every time a Boss permanently upgrades <em>any</em> stat by 1 point, they may choose to:
+<ul>
+<li>Learn 1 new <strong>Quirk</strong> (if under the cap of 3).</li>
+<li>Learn 1 new <strong>Twist</strong> and attach it to an existing <strong>Quirk</strong>.</li>
+<li>Upgrade an existing <strong>Quirk</strong> or <strong>Twist</strong> to a higher <strong>Tier</strong>.</li>
+</ul>
+</li>
+</ol>
+<h3 id="stat-gating-tier-requirements" tabindex="-1">Stat Gating (Tier Requirements)</h3>
+<p><strong>Quirks</strong> and <strong>Twists</strong> are rated by <strong>Tier (T1–T5)</strong>. To learn or upgrade to a <strong>Tier</strong> X <strong>Quirk</strong> or <strong>Twist</strong>, the Boss’s underlying relevant Stat (<strong>Tough</strong>, <strong>Slink</strong>, <strong>Mouth</strong>, or <strong>Brains</strong>) must be equal to or greater than X.</p>
+<blockquote>
+<p><strong>Example:</strong> To learn the <strong>T3</strong> <strong>Tough</strong> <strong>Quirk</strong> <strong>Head Chopper</strong>, you must have <strong>Tough</strong> 3 or higher.</p>
+</blockquote>
+<hr>
+<h2 id="2-gang-quirks-and-infamy" tabindex="-1">2. Gang Quirks &amp; Infamy</h2>
+<p><strong>Gang Quirks</strong> are powerful, legendary abilities that belong to the <strong>Gang</strong> as a whole. They are acquired when a Boss reaches Level 6 in any stat and retires as an <strong>Elder</strong>, or dies gloriously and joins the <strong>Pile of Bones</strong> (see [12. Gangs](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters &amp; Mobs/12_Gang.md)).</p>
+<ul>
+<li><strong>The Infamy Limit:</strong> <strong>Gang Quirks</strong> <strong>do not</strong> count toward a Boss’s personal limit of 3. Instead, the maximum number of <strong>Gang Quirks</strong> a starting Boss can bring on a raid is determined by the <strong>Gang</strong>’s <strong>Infamy</strong> score.</li>
+</ul>
+<hr>
+<h2 id="3-activation-costs" tabindex="-1">3. Activation Costs</h2>
+<p>To use a <strong>Quirk</strong>, the Boss must pay its associated cost (detailed in [16. Unified Modular Powers System](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters &amp; Mobs/16_Unified_Modular_Powers_System.md)):</p>
+<ul>
+<li><strong>[Cost: Passive]</strong> - The <strong>Quirk</strong> is always active or triggers automatically based on a stated condition. It costs zero actions or <strong>Grunt</strong>.</li>
+<li><strong>[Cost: Grunt]</strong> - The Boss must spend the stated number of <strong>Grunt</strong> points to activate the <strong>Quirk</strong>.</li>
+<li><strong>[Cost: 1 Action]</strong> - The Boss must spend one of their Standard Actions (Move, Attack, Order) to activate the <strong>Quirk</strong>.</li>
+</ul>
+<hr>
+<h2 id="4-example-quirks-base-atoms" tabindex="-1">4. Example Quirks (Base Atoms)</h2>
+<p>The following <strong>Quirks</strong> are assembled using the successes and condition standards of the modular powers toolkit.</p>
+<h3 id="tough-quirks" tabindex="-1">Tough Quirks</h3>
+<ul>
+<li><strong>Meat Shield (T1) | [Cost: 1 Grunt]</strong>
+<ul>
+<li><em>Trigger:</em> When you take a <strong>Wound</strong> from an incoming attack.</li>
+<li><em>Effect:</em> Instantly shove an allied <strong>Mob</strong> in your <strong>Zone</strong> into the way. The <strong>Mob</strong> takes the hit instead (losing <strong>1d3</strong> <strong>Mob</strong> <strong>Size</strong>), and you take <strong>0 Wounds</strong>.</li>
+</ul>
+</li>
+<li><strong>Butcher (T2) | [Cost: Passive]</strong>
+<ul>
+<li><em>Effect:</em> Gain <strong>+1 Boon Die</strong> when making an Attack test against an enemy whose Size is strictly smaller than yours.</li>
+</ul>
+</li>
+</ul>
+<h3 id="slink-quirks" tabindex="-1">Slink Quirks</h3>
+<ul>
+<li><strong>Ankle-Biter (T1) | [Cost: Passive]</strong>
+<ul>
+<li><em>Trigger:</em> Whenever you successfully Dodge an incoming attack.</li>
+<li><em>Effect:</em> You may immediately make a free melee attack against the attacker’s legs (if they are in your <strong>Zone</strong>) adding <strong>+1 Success</strong> to the attack roll.</li>
+</ul>
+</li>
+<li><strong>Slippery (T2) | [Cost: Passive]</strong>
+<ul>
+<li><em>Effect:</em> Enemies do not get free reactionary Opportunity Attacks against you when you leave their <strong>Zone</strong>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="general-quirks" tabindex="-1">General Quirks</h3>
+<ul>
+<li><strong>Coward’s Luck (T1) | [Cost: 1 Grunt]</strong>
+<ul>
+<li><em>Trigger:</em> After you roll the dice pool for any test.</li>
+<li><em>Effect:</em> Spend 1 <strong>Grunt</strong> to completely reroll all dice that did not land on a 1 (You cannot reroll <strong>Fumbles</strong>).</li>
+</ul>
+</li>
+<li><strong>Iron Stomach (T1) | [Cost: Passive]</strong>
+<ul>
+<li><em>Effect:</em> You can carry up to <strong>2 Bulk</strong> worth of items by swallowing them. Swallowed items do not count toward your Carry Capacity. <em>It requires 1 Action to regurgitate them.</em></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="5-example-twists-modifiers" tabindex="-1">5. Example Twists (Modifiers)</h2>
+<p><strong>Twists</strong> modify the behaviors of <strong>Quirks</strong> to add utility, change delivery, or adjust action costs.</p>
+<ul>
+<li><strong>Spiteful (T1)</strong>
+<ul>
+<li><em>Effect:</em> Whenever the attached <strong>Quirk</strong> is activated, deal <strong>1</strong> <strong>Grit</strong> damage (on hit) or add <strong>+1 Success</strong> (on attack) to the nearest enemy.</li>
+</ul>
+</li>
+<li><strong>Loud (T1)</strong>
+<ul>
+<li><em>Effect:</em> Activating this <strong>Quirk</strong> automatically rallies 1 Fleeing <strong>Mob</strong> in your <strong>Zone</strong>, but imposes a <strong>Bane</strong> on all stealth-related <strong>Slink</strong> tests for the rest of the round.</li>
+</ul>
+</li>
+<li><strong>Efficient (T2)</strong>
+<ul>
+<li><em>Effect:</em> Reduces the <strong>Grunt</strong> cost of the attached <strong>Quirk</strong> by 1 (minimum 0). Cannot be attached to Passive <strong>Quirks</strong>.</li>
+</ul>
+</li>
+<li><strong>Reflexive (T3)</strong>
+<ul>
+<li><em>Effect:</em> If the attached <strong>Quirk</strong> normally costs 1 Action, it now costs a Free Action.</li>
+</ul>
+</li>
+</ul>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

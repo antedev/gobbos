@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lair_System_Research_Deep_Dive — DEV Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Raw ideas and brainstorms">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab env-tab--active">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">DEV Rules</h2>
+        <p class="sidebar-subtitle">Raw ideas and brainstorms</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="gdrs"><span class="toggle-icon">▸</span>GDRs</button><ul class="nav-pages" id="nav-gdrs" style="display: none;"><li><a href="dev.html" class="nav-link" data-target="gdrs--gdr-001-macro-audit-and-unified-effects">GDR-001_Macro_Audit_And_Unified_Effects</a></li><li><a href="dev--gdrs--gdr-002-gang-pillar-and-lair-economy.html" class="nav-link" data-target="gdrs--gdr-002-gang-pillar-and-lair-economy">GDR-002_Gang_Pillar_And_Lair_Economy</a></li><li><a href="dev--gdrs--gdr-003-unified-modular-powers-system.html" class="nav-link" data-target="gdrs--gdr-003-unified-modular-powers-system">GDR-003_Unified_Modular_Powers_System</a></li><li><a href="dev--gdrs--gdr-004-enemy-stat-framework-and-mobs.html" class="nav-link" data-target="gdrs--gdr-004-enemy-stat-framework-and-mobs">GDR-004_Enemy_Stat_Framework_And_Mobs</a></li><li><a href="dev--gdrs--gdr-005-goblin-magic-dice-system.html" class="nav-link" data-target="gdrs--gdr-005-goblin-magic-dice-system">GDR-005_Goblin_Magic_Dice_System</a></li><li><a href="dev--gdrs--gdr-006-environmental-hazards-and-zone-statblocks.html" class="nav-link" data-target="gdrs--gdr-006-environmental-hazards-and-zone-statblocks">GDR-006_Environmental_Hazards_and_Zone_Statblocks</a></li><li><a href="dev--gdrs--gdr-template.html" class="nav-link" data-target="gdrs--gdr-template">GDR-TEMPLATE</a></li></ul></div><div class="nav-group nav-group--solo"><a href="dev--crafting-creative-analysis.html" class="nav-link nav-link--solo" data-target="crafting-creative-analysis">crafting_creative_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-framework-brainstorm">crafting_framework_brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-mechanics-audit.html" class="nav-link nav-link--solo" data-target="crafting-mechanics-audit">crafting_mechanics_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-brainstorm">crafting-brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--creative-genius-crafting-analysis.html" class="nav-link nav-link--solo" data-target="creative-genius-crafting-analysis">creative_genius_crafting_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-modular-threat-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="enemy-modular-threat-framework-brainstorm">Enemy_Modular_Threat_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-stats-draft.html" class="nav-link nav-link--solo" data-target="enemy-stats-draft">Enemy_Stats_Draft</a></div><div class="nav-group nav-group--solo"><a href="dev--equipment-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="equipment-framework-brainstorm">Equipment_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--gang-mechanics-brainstorm.html" class="nav-link nav-link--solo" data-target="gang-mechanics-brainstorm">Gang_Mechanics_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--generic-trick-mechanics.html" class="nav-link nav-link--solo" data-target="generic-trick-mechanics">Generic_Trick_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--initial-trick-list.html" class="nav-link nav-link--solo" data-target="initial-trick-list">Initial_Trick_List</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-brainstorm.html" class="nav-link nav-link--solo" data-target="lair-brainstorm">Lair_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-mechanics-game-engineering-audit.html" class="nav-link nav-link--solo" data-target="lair-mechanics-game-engineering-audit">Lair_Mechanics_Game_Engineering_Audit</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-refined-framework.html" class="nav-link nav-link--solo" data-target="lair-system-refined-framework">Lair_System_Refined_Framework</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-research-deep-dive.html" class="nav-link nav-link--solo nav-link--active" data-target="lair-system-research-deep-dive">Lair_System_Research_Deep_Dive</a></div><div class="nav-group nav-group--solo"><a href="dev--mob-combat-design-advice.html" class="nav-link nav-link--solo" data-target="mob-combat-design-advice">Mob_Combat_Design_Advice</a></div><div class="nav-group nav-group--solo"><a href="dev--research-crafting-systems.html" class="nav-link nav-link--solo" data-target="research-crafting-systems">research_crafting_systems</a></div><div class="nav-group nav-group--solo"><a href="dev--research-deeds-award-mechanics.html" class="nav-link nav-link--solo" data-target="research-deeds-award-mechanics">Research_Deeds_Award_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-base-building.html" class="nav-link nav-link--solo" data-target="researcher-findings-base-building">Researcher_Findings_Base_Building</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-conditions.html" class="nav-link nav-link--solo" data-target="researcher-findings-conditions">Researcher_Findings_Conditions</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-environmental-hazards.html" class="nav-link nav-link--solo" data-target="researcher-findings-environmental-hazards">Researcher_Findings_Environmental_Hazards</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-analysis.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-analysis">Researcher_Findings_OSR_Analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-sources.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-sources">Researcher_Findings_OSR_Sources</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-notes.html" class="nav-link nav-link--solo" data-target="researcher-notes">Researcher_Notes</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-audit-equipment.html" class="nav-link nav-link--solo" data-target="rules-lawyer-audit-equipment">Rules_Lawyer_Audit_Equipment</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-crafting-audit.html" class="nav-link nav-link--solo" data-target="rules-lawyer-crafting-audit">rules_lawyer_crafting_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-system-audit-report.html" class="nav-link nav-link--solo" data-target="rules-lawyer-system-audit-report">Rules_Lawyer_System_Audit_Report</a></div><div class="nav-group nav-group--solo"><a href="dev--static-resistances-opposed-tests.html" class="nav-link nav-link--solo" data-target="static-resistances-opposed-tests">Static_Resistances_Opposed_Tests</a></div><div class="nav-group nav-group--solo"><a href="dev--trick-mechanics-master-list.html" class="nav-link nav-link--solo" data-target="trick-mechanics-master-list">Trick_Mechanics_Master_List</a></div><div class="nav-group nav-group--solo"><a href="dev--unified-modular-power-system.html" class="nav-link nav-link--solo" data-target="unified-modular-power-system">Unified Modular Power System</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="researcher-findings-the-lair-outposts-and-communal-goblin-society" tabindex="-1">Researcher Findings: The Lair, Outposts &amp; Communal Goblin Society</h1>
+<p><strong>Role:</strong> The Researcher<br>
+<strong>Objective:</strong> Perform a deep-dive analysis of base-building, trade, and settlement mechanics in board games and TTRPGs to design a cooperative, mechanically rich, and chaotic Lair Phase for the <em>Gobbos</em> TTRPG.</p>
+<hr>
+<h2 id="part-1-sources-we-can-steal-with-pride-from" tabindex="-1">Part 1: Sources We Can “Steal with Pride” From</h2>
+<p>To make the Lair Phase feel like a cooperative tabletop game rather than spreadsheet bookkeeping, we analyze six major influences across board games and TTRPGs.</p>
+<pre><code class="language-mermaid">graph TD
+    A[Gobbos Lair Phase] --&gt; B(Frosthaven: Outpost Loop)
+    A --&gt; C(KDM: Survival &amp; Timeline)
+    A --&gt; D(Wicked Ones: Dungeon Digging)
+    A --&gt; E(Blades in the Dark: Claims Map)
+    A --&gt; F(Forbidden Lands: Hirelings &amp; Elders)
+    A --&gt; G(Legacy: Outposts &amp; Family/Faction Scale)
+</code></pre>
+<h3 id="1-frosthaven-communal-growth-and-upkeep" tabindex="-1">1. Frosthaven (Communal Growth &amp; Upkeep)</h3>
+<ul>
+<li><strong>The Mechanic:</strong> A structured downtime loop containing: <strong>Calendar/Time -&gt; Event -&gt; Building Resolution -&gt; Crafting/Downtime -&gt; Construction</strong>.</li>
+<li><strong>Why it works:</strong> It forces players to play by a clear sequence of phases. “Operations” happen before players spend money, making the base feel like a living machine.</li>
+<li><strong>Gobbo Translation:</strong> Keep a strict Lair Phase sequence:
+<ol>
+<li><strong>Homecoming &amp; Tally:</strong> Pool Loot, resolve character deaths (add bones to the Pile).</li>
+<li><strong>Lair Event:</strong> Draw a card (e.g., “Mushroom Blight,” “Tax Collector Raid,” “Communal Feast”).</li>
+<li><strong>Cavern Income:</strong> Buildings and Outposts produce resources.</li>
+<li><strong>Downtime Actions:</strong> Each player spends actions (taming, crafting, recruiting, starting bar fights).</li>
+<li><strong>Communal Digging/Construction:</strong> Pool resources to excavate new chambers or upgrade buildings.</li>
+</ol>
+</li>
+</ul>
+<h3 id="2-kingdom-death-monster-endeavors-and-lethal-settlement-events" tabindex="-1">2. Kingdom Death: Monster (Endeavors &amp; Lethal Settlement Events)</h3>
+<ul>
+<li><strong>The Mechanic:</strong> Returning survivors generate “Endeavors” (time/action tokens) used to innovate, craft, or trigger events. The settlement itself faces brutal timeline events that force progression or survival choices.</li>
+<li><strong>Why it works:</strong> Endeavors turn time into a strict, spendable currency. You don’t just “do stuff”; you budget your population’s collective energy.</li>
+<li><strong>Gobbo Translation:</strong> Every returning Boss and Mob generates <strong>Labor Actions</strong>. Upgrading a room isn’t instant; it requires a player to allocate their Boss’s Labor Actions or assign a Mob to “Dig.”</li>
+</ul>
+<h3 id="3-wicked-ones-dungeon-excavation-and-discoveries" tabindex="-1">3. Wicked Ones (Dungeon Excavation &amp; Discoveries)</h3>
+<ul>
+<li><strong>The Mechanic:</strong> Players spend downtime actions digging new tunnels. The GM rolls on a “Discovery Table,” meaning expanding the base can unearth forgotten crypts, gold veins, or subterranean monsters.</li>
+<li><strong>Why it works:</strong> It gamifies base building. Digging is an exploration system, not just a purchase order.</li>
+<li><strong>Gobbo Translation:</strong> When the group pays to build a new chamber, they roll a <strong>Digging Pool</strong>.
+<ul>
+<li><em>6s (Successes):</em> Progresses construction.</li>
+<li><em>1s (Chaos):</em> Triggers a <strong>Cavern Discovery</strong>. They might breach a cave of giant centipedes, find a vein of glowing crystals (an Oddity!), or cause a cave-in.</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-blades-in-the-dark-the-claims-map" tabindex="-1">4. Blades in the Dark (The Claims Map)</h3>
+<ul>
+<li><strong>The Mechanic:</strong> The Crew advances by conquering adjacent nodes on a visual map of Turf/Claims. You cannot unlock the “Opium Den” until you seize the “Dockside Warehouse” next to it.</li>
+<li><strong>Why it works:</strong> Spatial progression. It replaces text lists with a visual map, making base-building feel like physical expansion.</li>
+<li><strong>Gobbo Translation:</strong> The Lair is represented by a <strong>Tech Cavern Map</strong>. Caverns are interconnected. The Gobbos start in the <em>Great Mud Pit</em> (center). To build a <em>Wolf Pen</em>, they must first excavate and clear the adjacent <em>Howling Caves</em> node.</li>
+</ul>
+<h3 id="5-forbidden-lands-elders-and-hireling-tax" tabindex="-1">5. Forbidden Lands (Elders &amp; Hireling Tax)</h3>
+<ul>
+<li><strong>The Mechanic:</strong> Stronghold rooms require specific NPCs (smiths, guards, tailors) to function.</li>
+<li><strong>Why it works:</strong> It connects base-building directly to NPCs. You can’t just build a forge; you need to hire a dwarf or drag back a captive.</li>
+<li><strong>Gobbo Translation:</strong> Lair rooms are static structures until staffed. A <strong>Gobbo Elder</strong> (a retired player Boss) must run key facilities to unlock their elite bonuses. Other rooms require recruiting/capturing <strong>Specialist NPCs</strong> from the outside world.</li>
+</ul>
+<h3 id="6-legacy-life-among-the-ruins-outposts-and-faction-scale" tabindex="-1">6. Legacy: Life Among the Ruins (Outposts &amp; Faction Scale)</h3>
+<ul>
+<li><strong>The Mechanic:</strong> Players control both a singular character and a macro-level Family/Faction. They establish “Treaties” and expand influence across a map, establishing Outposts.</li>
+<li><strong>Why it works:</strong> It bridges the gap between local skirmishes and macro-level trade and warfare.</li>
+<li><strong>Gobbo Translation:</strong> As the Lair’s <strong>Infamy</strong> grows, the Gobbos can establish <strong>Outposts</strong> in conquered raid sites. These Outposts must be staffed by a Mob and linked to the Lair via trade routes, generating abstract <strong>Scrap</strong> and specific components.</li>
+</ul>
+<hr>
+<h2 id="part-2-the-tech-cavern-map-the-lair-boardgame" tabindex="-1">Part 2: The Tech Cavern Map (The Lair Boardgame)</h2>
+<p>Instead of a spreadsheet, the Lair is tracked on a shared sheet containing the <strong>Tech Caverns</strong>—a grid or node map representing the underground warren.</p>
+<pre><code>   [Fungal Nursery] &lt;---&gt; [Great Mud Pit] &lt;---&gt; [Scrap Yard]
+                                |                     |
+                                v                     v
+                        [Brewery Cavern]      [Howling Caves]
+</code></pre>
+<h3 id="cavern-state" tabindex="-1">Cavern State</h3>
+<p>Caverns on the map have three states:</p>
+<ol>
+<li><strong>Unexplored (Blacked out):</strong> Requires a <strong>Raid</strong> or a <strong>Dig Action</strong> to open.</li>
+<li><strong>Infested (Red outline):</strong> Contains monsters, hazards, or subterranean rivals. Gobbos must clear them in a tactical skirmish (using a Mob or their Bosses) before they can build here.</li>
+<li><strong>Excavated (Clean):</strong> Ready for construction.</li>
+</ol>
+<h3 id="construction-costs" tabindex="-1">Construction Costs</h3>
+<p>Excavating and building requires two resources pooled in the Lair’s <strong>Communal Hoard</strong>:</p>
+<ul>
+<li><strong>Loot:</strong> Gold, jewelry, and valuable garbage looted from the Tall-Men. Used to pay for specialized materials or hire external experts.</li>
+<li><strong>Scrap:</strong> The abstract infrastructure resource. Wood, iron beams, rusty gears, and stones. Generated passively by the Lair’s territory and Outposts.</li>
+</ul>
+<hr>
+<h2 id="part-3-the-lair-loop-and-labor-actions" tabindex="-1">Part 3: The Lair Loop &amp; Labor Actions</h2>
+<p>When a raid ends, the game transitions to the Lair Phase.</p>
+<h3 id="step-1-homecoming-and-the-bone-pile" tabindex="-1">Step 1: Homecoming &amp; The Bone Pile</h3>
+<ul>
+<li><strong>XP Distribution:</strong> Players calculate Raid Points and Loot.</li>
+<li><strong>Ceremony of the Dead:</strong> Any Bosses who died are tossed onto the <strong>Bone Pile</strong>. The player adds a tick to the Bone Pile track. Every 5 ticks, the Lair gains a permanent ancestral trait (e.g., <em>Haunted Caverns:</em> +1d to defense against magic raids; <em>Ancestral Grudge:</em> All new Gobbos gain a free combat trait against the faction that killed the most Bosses).</li>
+<li><strong>Bone Harvesting:</strong> Players can harvest bones to craft <strong>Bone Oddities</strong> (ancestral relics).</li>
+</ul>
+<h3 id="step-2-lair-event" tabindex="-1">Step 2: Lair Event</h3>
+<p>Draw one card from the <strong>Lair Event Deck</strong>. Events are resolved collectively:</p>
+<ul>
+<li><em>Example: “Mushroom Rot.”</em> The Fungal Nursery is shut down for this phase unless the group pays 5 Loot or a Boss spends a Brains test to cure it.</li>
+<li><em>Example: “Tax Collector.”</em> Human guards have tracked you back. Pay 15 Loot from the Hoard, or fight an immediate <strong>Lair Defense</strong> encounter using your Mobs!</li>
+</ul>
+<h3 id="step-3-labor-phase-downtime-actions" tabindex="-1">Step 3: Labor Phase (Downtime Actions)</h3>
+<p>Each player gets <strong>1 Boss Action</strong> and <strong>1 Mob Action</strong> (representing their Gang’s workforce) to spend on the following tasks:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Action</th>
+<th style="text-align:left">Who Does It</th>
+<th style="text-align:left">Test Required</th>
+<th style="text-align:left">Mechanical Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Dig Cavern</strong></td>
+<td style="text-align:left">Mob</td>
+<td style="text-align:left"><strong>Tough</strong> (Mob size)</td>
+<td style="text-align:left">Progresses excavation of an unexplored node. Rolls of 1 trigger a <strong>Cavern Discovery</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Craft Gear</strong></td>
+<td style="text-align:left">Boss</td>
+<td style="text-align:left"><strong>Brains</strong></td>
+<td style="text-align:left">Create custom weapons/armor (see <a href="#34-crafting" class="wikilink" title="34_Crafting">34_Crafting</a>).</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Gather Scrap</strong></td>
+<td style="text-align:left">Mob</td>
+<td style="text-align:left">None</td>
+<td style="text-align:left">Venture into the immediate wilderness. Generates +1d6 Scrap for the Hoard.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Recruit Grunts</strong></td>
+<td style="text-align:left">Boss</td>
+<td style="text-align:left"><strong>Mouth</strong></td>
+<td style="text-align:left">Pitch the next raid to increase your Mob’s size or recruit a specialist.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Bar Fight</strong></td>
+<td style="text-align:left">Boss</td>
+<td style="text-align:left"><strong>Tough</strong></td>
+<td style="text-align:left">Start a brawl at the Tavern. If you win, you gain +1 Infamy and steal 1d6 Loot from a rival Gang.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Tame Beast</strong></td>
+<td style="text-align:left">Boss</td>
+<td style="text-align:left"><strong>Tough</strong> or <strong>Brain</strong></td>
+<td style="text-align:left">Attempt to domesticate a captured beast (e.g., giant spider, wolf) to unlock animal Mob tags.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-4-construction-and-expansion" tabindex="-1">Step 4: Construction &amp; Expansion</h3>
+<p>The group spends pooled <strong>Loot</strong> and <strong>Scrap</strong> from the Communal Hoard to build or upgrade facilities in excavated caverns.</p>
+<hr>
+<h2 id="part-4-the-communal-hoard-and-dominance" tabindex="-1">Part 4: The Communal Hoard &amp; Dominance</h2>
+<p>Goblins are cooperative out of survival, but greedy by nature. The Lair economy bridges this with the <strong>Dominance Mechanic</strong>.</p>
+<pre><code>[COMMUNAL HOARD]
+- Pooled Loot: 45
+- Pooled Scrap: 12
+-------------------------------
+[ROOM: SCRAP FORGE]
+Contributed:
+- Smelly-Feet Gang: 10 Loot (DOMINANT)
+- Red-Eye Gang: 5 Loot
+</code></pre>
+<h3 id="the-rules-of-dominance" tabindex="-1">The Rules of Dominance:</h3>
+<ol>
+<li><strong>Shared Costs:</strong> When building a Room (e.g., <em>Proper Smithy</em> costs 20 Loot and 10 Scrap), all players contribute resources from their Gangs or the Communal Hoard.</li>
+<li><strong>The Ledger:</strong> Players note down how much Loot/Scrap their specific Gang contributed to that room’s construction or upgrade.</li>
+<li><strong>Claiming Dominance:</strong> The Gang that contributed the <em>most</em> resources (or spent their Labor actions on it) gains <strong>Dominance</strong> over that room.</li>
+<li><strong>Dominance Perks:</strong>
+<ul>
+<li><strong>Renaming Rights:</strong> The dominant Gang names the facility (e.g., <em>“The Smelly-Feet Iron-Works”</em>).</li>
+<li><strong>Priority Use:</strong> If multiple players want to use the room in the same Lair Phase (e.g., both want to craft at the Smithy, but there is only one smith), the dominant Gang goes first.</li>
+<li><strong>Specialty Kickback:</strong> The room grants a passive bonus exclusive to the dominant Gang.
+<ul>
+<li><em>Example (Proper Smithy):</em> The dominant Gang’s Boss gets a free <strong>Taming Success</strong> when crafting weapons here.</li>
+<li><em>Example (Brewery Cavern):</em> The dominant Gang’s Mobs gain +1 Grit when fueled by the special reserve brew.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="part-5-room-directory-what-the-lair-unlocks" tabindex="-1">Part 5: Room Directory (What the Lair Unlocks)</h2>
+<p>Upgrading the Lair directly expands character options, unlocks equipment tiers, enables better quirks, and provides larger/stronger Mobs.</p>
+<h3 id="1-equipment-and-scrap-workshops" tabindex="-1">1. Equipment &amp; Scrap Workshops</h3>
+<p>These rooms set the <strong>Oddity Ceiling</strong> and determine what quality of Base Items you can craft (see <a href="#34-crafting-layer-3-your-workshop" class="wikilink" title="34_Crafting#Layer 3 — Your Workshop">34_Crafting#Layer 3 — Your Workshop</a>).</p>
+<ul>
+<li><strong>Scrap Forge (T2):</strong> Requires 10 Scrap. Unlocks crafting <strong>Scrappy</strong> gear.</li>
+<li><strong>Proper Smithy (T3):</strong> Requires 20 Loot, 15 Scrap. Unlocks crafting <strong>Standard</strong> gear. Dominant Gang gets +1d on crafting rolls.</li>
+<li><strong>Master’s Vault (T4):</strong> Requires 40 Loot, 30 Scrap, and a <strong>Captive Dwarven Smith</strong>. Unlocks <strong>Superior</strong> gear crafting.</li>
+</ul>
+<h3 id="2-quirks-and-training-grounds" tabindex="-1">2. Quirks &amp; Training Grounds</h3>
+<p>Allows Gobbos to retrain, learn advanced tricks, or unlock high-tier Quirks.</p>
+<ul>
+<li><strong>The Mud-Wrestling Ring:</strong> Gobbos can spend a Downtime Action wrestling. Test <strong>Tough</strong>. On a success, gain +1 Max Grit for the next raid. Dominant Gang gets a free roll-modifier.</li>
+<li><strong>Alchemist’s Still:</strong> Allows brewing volatile potions using monster parts (<strong>Oddities</strong>). Unlocks Brains-based potion-brewing Quirks.</li>
+<li><strong>Elder’s Council Chamber:</strong> Required to retire Bosses. Staffing this room with an Elder allows other players to pay Loot to buy advanced, high-tier <strong>Quirks</strong> taught by the retired veteran.</li>
+</ul>
+<h3 id="3-goblin-recruitment-and-mob-upgrades" tabindex="-1">3. Goblin Recruitment &amp; Mob Upgrades</h3>
+<p>Increases Mob capacity, grants new Mob types, and unlocks tactical Mob equipment.</p>
+<ul>
+<li><strong>Breeding &amp; Hatching Pits:</strong> Increases maximum Mob size by +1d6.</li>
+<li><strong>Wolf Pens:</strong> Allows capturing and housing wolves. Unlocks the <code>[Wolf Rider]</code> Mob archetype (higher movement, flanking bonuses) for the next raid.</li>
+<li><strong>War Drum Hut:</strong> Allows equipping your Mob with instrument tags, granting them moral bonuses in battle.</li>
+</ul>
+<hr>
+<h2 id="part-6-populating-the-lair-npcs-and-elders" tabindex="-1">Part 6: Populating the Lair (NPCs &amp; Elders)</h2>
+<p>The Lair is populated by characters that bring it to life. We divide them into three categories:</p>
+<pre><code>                  ┌───────────────────────────┐
+                  │      LAIR POPULATION      │
+                  └─────────────┬─────────────┘
+                                │
+        ┌───────────────────────┼───────────────────────┐
+        ▼                       ▼                       ▼
+ ┌─────────────┐         ┌─────────────┐         ┌─────────────┐
+ │   ELDERS    │         │ SPECIALISTS │         │  CAPTIVES   │
+ │ Retired PCs │         │ Hired/Saved │         │ Dragged In  │
+ └─────────────┘         └─────────────┘         └─────────────┘
+</code></pre>
+<h3 id="1-the-elders-retired-bosses" tabindex="-1">1. The Elders (Retired Bosses)</h3>
+<p>When a Gobbo Boss reaches Max Level (or suffers too many permanent injuries), they can <strong>Retire</strong>.</p>
+<ul>
+<li><strong>The Transition:</strong> The character sheet is handed over to the Lair. The player creates a new Level 1 Boss (inheriting a starting bonus from the retired veteran).</li>
+<li><strong>Active Staffing:</strong> The retired Boss becomes an <strong>Elder NPC</strong> who is assigned to run a Lair Room.
+<ul>
+<li><em>Example:</em> Retiring <em>Brak the Slasher</em> and placing him in the <strong>Training Grounds</strong> unlocks the “Slasher’s Stance” trick for all new recruits.</li>
+<li><em>Example:</em> Retiring <em>Fizzle the Mad</em> to the <strong>Alchemist’s Still</strong> reduces the Bite of all crafted potions by -1.</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-specialist-npcs" tabindex="-1">2. Specialist NPCs</h3>
+<p>These are rare goblins (or friendly outcasts) recruited from the outside world during raids or random events.</p>
+<ul>
+<li><strong>Recruitment:</strong> Requires a specific quest or paying an upfront retainer in Loot.</li>
+<li><strong>The Pig-Whisperer:</strong> Staffs the Pig Sties. Unlocks pig-riding skirmishers.</li>
+<li><strong>The Scrap-Shaman:</strong> Staffs the Scrap Yard. Passively generates +2 Scrap every Lair Phase.</li>
+<li><strong>The Rumormonger:</strong> Staffs the Tavern. Allows players to spend a Downtime Action to find hidden paths or secret weaknesses in upcoming raid locations.</li>
+</ul>
+<h3 id="3-captives-involuntary-labor" tabindex="-1">3. Captives (Involuntary Labor)</h3>
+<p>During raids, Gobbos can choose to kidnap NPCs rather than kill them, dragging them back in chains.</p>
+<ul>
+<li><strong>The Prisoner Cage:</strong> A Lair Room required to hold Captives.</li>
+<li><strong>Enforced Labor:</strong> Captives must be forced to work.
+<ul>
+<li><em>Example:</em> A <strong>Captive Human Scholar</strong> forced to work in the <em>Scrap Library</em> grants +1d to all Brains crafting checks, but increases the chance of an <strong>Outpost Event Sabotage</strong> because they are plotting an escape.</li>
+<li><em>Example:</em> A <strong>Dwarven Miner</strong> forced to dig caverns doubles the rate of excavation but requires a Boss to spend an action guarding them (Testing <strong>Tough</strong> or <strong>Mouth</strong>) to prevent a strike or rebellion.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="part-7-trade-outposts-and-territory-expansion" tabindex="-1">Part 7: Trade, Outposts &amp; Territory Expansion</h2>
+<p>Once the Lair is secure, the Gobbos want to expand their reach, transitioning from a hidden pack of thieves to a regional crime syndicate.</p>
+<pre><code>       [Lumber Outpost]
+              \ (Trade Route: Wilds)
+               \
+                v
+          [THE LAIR] &lt;=========&gt; [Dwarven Mine Outpost]
+                        (Trade Route: High Risk)
+</code></pre>
+<h3 id="1-establishing-an-outpost" tabindex="-1">1. Establishing an Outpost</h3>
+<p>During a raid, if the Gobbos clear an external location (e.g., an <em>abandoned iron mine</em>, a <em>human lumber mill</em>, or a <em>ruined temple</em>), they can declare it an <strong>Outpost</strong> instead of abandoning it.</p>
+<ul>
+<li><strong>Garrison Cost:</strong> Establishing an Outpost requires leaving a Mob behind as a permanent Garrison. This reduces the player’s available Mob pool until they recruit replacements.</li>
+<li><strong>Yield:</strong> Each Outpost produces a specific yield every Lair Phase (e.g., +5 Scrap from the Mine, +3 Herbs from the Swamp).</li>
+</ul>
+<h3 id="2-trade-routes-and-supply-runs" tabindex="-1">2. Trade Routes &amp; Supply Runs</h3>
+<p>To get the Outpost’s yield back to the Lair, you must maintain a <strong>Trade Route</strong>.</p>
+<ul>
+<li><strong>Route Risk:</strong> Trade routes are rated by danger (e.g., <em>Safe, Wilds, High Risk</em>).</li>
+<li><strong>The Supply Run:</strong> During Step 3 of the Lair Phase, the players make a <strong>Supply Roll</strong> for each active trade route:
+<ul>
+<li><strong>Safe Route:</strong> Auto-success. The resources arrive in the Hoard.</li>
+<li><strong>Wilds Route:</strong> Roll <strong>1d6</strong>. On a 1–2, the shipment is ambushed. Gobbos must spend a Mob Action to rescue it, or lose the shipment and increase the Outpost’s damage.</li>
+<li><strong>High Risk Route:</strong> Roll <strong>2d6</strong>. Needs a success (4+) to get through. Fumbles result in the Outpost being besieged!</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-outpost-upgrades-and-trade-agreements" tabindex="-1">3. Outpost Upgrades &amp; Trade Agreements</h3>
+<p>Gobbos can spend resources to secure their routes or trade with neutral factions:</p>
+<ul>
+<li><strong>Palisades / Guard Towers:</strong> Built at the Outpost to increase its Defense Value against automated counter-attacks from the Tall-Men.</li>
+<li><strong>Smuggler Pact:</strong> Pay Loot to an NPC merchant guild to run your shipments. This turns a <em>High Risk</em> route into a <em>Safe</em> route, but the guild takes a 20% cut of all hauled resources.</li>
+</ul>
+<hr>
+<h2 id="summary-of-core-loops-the-gobbos-pacing" tabindex="-1">Summary of Core Loops (The “Gobbos” Pacing)</h2>
+<ol>
+<li><strong>Raid Phase:</strong> Infiltrate, fight, collect Loot, grab Oddities, capture prisoners, or conquer key locations.</li>
+<li><strong>Homecoming:</strong> Mourn the dead (Bone Pile), calculate XP, and tax/skim the Loot.</li>
+<li><strong>Lair Events &amp; Threats:</strong> Resolve random events, protect the base from retaliation.</li>
+<li><strong>Labor &amp; Digging:</strong> Assign Bosses and Mobs to dig out new Tech Caverns, craft gear, or recruit.</li>
+<li><strong>Expand Empire:</strong> Send shipments from Outposts, manage trade routes, and retire Bosses into legendary Elders to rule the underworld.</li>
+</ol>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

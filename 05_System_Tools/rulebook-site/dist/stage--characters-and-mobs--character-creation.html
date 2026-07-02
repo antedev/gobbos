@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Creation — STAGE Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Playtesting & review materials">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab env-tab--active">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">STAGE Rules</h2>
+        <p class="sidebar-subtitle">Playtesting & review materials</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="stage.html" class="nav-link" data-target="rules--overview">Overview</a></li><li><a href="stage--rules--combat.html" class="nav-link" data-target="rules--combat">Combat</a></li><li><a href="stage--rules--movement-and-zones.html" class="nav-link" data-target="rules--movement-and-zones">Movement &amp; Zones</a></li><li><a href="stage--rules--giving-orders.html" class="nav-link" data-target="rules--giving-orders">Giving orders</a></li><li><a href="stage--rules--raid-points.html" class="nav-link" data-target="rules--raid-points">Raid points</a></li><li><a href="stage--rules--keywords-index.html" class="nav-link" data-target="rules--keywords-index">Keywords Index</a></li><li><a href="stage--rules--wounds-conditions.html" class="nav-link" data-target="rules--wounds-conditions">Wounds_Conditions</a></li><li><a href="stage--rules--master-tag-index.html" class="nav-link" data-target="rules--master-tag-index">Master_Tag_Index</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="true" data-target="characters-and-mobs"><span class="toggle-icon">▾</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" ><li><a href="stage--characters-and-mobs--character-creation.html" class="nav-link nav-link--active" data-target="characters-and-mobs--character-creation">Character Creation</a></li><li><a href="stage--characters-and-mobs--gang.html" class="nav-link" data-target="characters-and-mobs--gang">Gang</a></li><li><a href="stage--characters-and-mobs--boons-and-banes.html" class="nav-link" data-target="characters-and-mobs--boons-and-banes">Boons_and_Banes</a></li><li><a href="stage--characters-and-mobs--goblin-mob.html" class="nav-link" data-target="characters-and-mobs--goblin-mob">Goblin_mob</a></li><li><a href="stage--characters-and-mobs--quirks.html" class="nav-link" data-target="characters-and-mobs--quirks">Quirks</a></li><li><a href="stage--characters-and-mobs--level-up-and-death.html" class="nav-link" data-target="characters-and-mobs--level-up-and-death">Level_Up and death</a></li><li><a href="stage--characters-and-mobs--unified-modular-powers-system.html" class="nav-link" data-target="characters-and-mobs--unified-modular-powers-system">Unified_Modular_Powers_System</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="loot"><span class="toggle-icon">▸</span>Loot</button><ul class="nav-pages" id="nav-loot" style="display: none;"><li><a href="stage--loot--loot.html" class="nav-link" data-target="loot--loot">loot</a></li><li><a href="stage--loot--carry-stuff.html" class="nav-link" data-target="loot--carry-stuff">Carry Stuff</a></li><li><a href="stage--loot--equipment.html" class="nav-link" data-target="loot--equipment">Equipment</a></li><li><a href="stage--loot--crafting.html" class="nav-link" data-target="loot--crafting">Crafting</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="enemies"><span class="toggle-icon">▸</span>Enemies</button><ul class="nav-pages" id="nav-enemies" style="display: none;"><li><a href="stage--enemies--enemies.html" class="nav-link" data-target="enemies--enemies">Enemies</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="base"><span class="toggle-icon">▸</span>Base</button><ul class="nav-pages" id="nav-base" style="display: none;"><li><a href="stage--base--lair-rules.html" class="nav-link" data-target="base--lair-rules">Lair_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="travel"><span class="toggle-icon">▸</span>Travel</button><ul class="nav-pages" id="nav-travel" style="display: none;"><li><a href="stage--travel--journey-rules.html" class="nav-link" data-target="travel--journey-rules">Journey_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="magic"><span class="toggle-icon">▸</span>Magic</button><ul class="nav-pages" id="nav-magic" style="display: none;"><li><a href="stage--magic--magic-rules.html" class="nav-link" data-target="magic--magic-rules">Magic_Rules</a></li></ul></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="character-creation" tabindex="-1">Character Creation</h1>
+<p><em>Goblins are not born heroes. They are spawned in the mud, raised on stolen mushrooms, and rise to power by being slightly bigger, louder, or faster than the rest of the mob. To create your Boss, you must follow the steps below in order to assemble your starting character and define their Gang.</em></p>
+<p>This chapter details the sequential steps to create a starting Goblin Boss. If you are rolling a new Boss to replace one that has died or retired, see <a href="15_Level_Up%20and%20death.md">Death &amp; Legacy</a> for how your Gang’s <strong>Infamy</strong> grants additional starting advantages.</p>
+<hr>
+<h2 id="1-choose-or-create-your-gang" tabindex="-1">1. Choose or Create your Gang</h2>
+<p>Before creating your individual Boss, you must define the Gang they lead. Your Gang is the persistent, leveling entity that you carry from session to session, surviving even when individual Bosses die.</p>
+<ol>
+<li><strong>Name Your Gang:</strong> Give your Gang a fearsome, ridiculous, or dirty name (e.g., <em>The Bone-Snappers, The Wet-Ear Raiders, The Shiny-Stealers</em>).</li>
+<li><strong>Set Infamy:</strong> A starting Gang begins at <strong>Infamy 1</strong>.</li>
+<li><strong>Choose a Shenanigan:</strong> Select one starting <strong>Shenanigan</strong> tag for your Gang (e.g., <em>Pyromaniacs, Sneak-Thieves, Shiny-Snatchers</em>). This defines your Gang’s culture and provides both a boon and a compulsion during raids. For details on how these work, see <a href="12_Gang.md">Gangs</a>.</li>
+</ol>
+<hr>
+<h2 id="2-set-base-stats" tabindex="-1">2. Set Base Stats</h2>
+<p>Every Goblin Boss starts with a baseline level of competence before their specific training or natural talent is taken into account.</p>
+<p>Set all four of your main stats to <strong>1</strong>:</p>
+<ul>
+<li><strong>Tough:</strong> 1</li>
+<li><strong>Slink:</strong> 1</li>
+<li><strong>Mouth:</strong> 1</li>
+<li><strong>Brains:</strong> 1</li>
+</ul>
+<hr>
+<h2 id="3-distribute-starting-points" tabindex="-1">3. Distribute Starting Points</h2>
+<p>Your Boss has stood out from the crowd and grown slightly stronger than a common grunt.</p>
+<p>You have <strong>1 point</strong> to distribute among your four main stats.</p>
+<ul>
+<li><strong>The Limit:</strong> You cannot increase any single stat above <strong>2</strong> at character creation.</li>
+<li><strong>Distribution Options:</strong> Add the <strong>+1</strong> to any of your stats (giving you one stat at 2, and three stats at 1).</li>
+</ul>
+<hr>
+<h2 id="4-derive-secondary-stats" tabindex="-1">4. Derive Secondary Stats</h2>
+<p>Your main stats determine your derived secondary stats, which dictate your survivability, speed, carrying capacity, and command limits. Refer to <a href="10_Stats.md">Stats</a> for the full stat tracks.</p>
+<h3 id="grit-health" tabindex="-1">Grit (Health)</h3>
+<p><strong>Grit</strong> is your health. You die when it reaches 0. Your starting <strong>Grit</strong> is determined by your <strong>Tough</strong> stat:</p>
+<ul>
+<li><strong>Tough 1:</strong> 3 <strong>Grit</strong></li>
+<li><strong>Tough 2:</strong> 4 <strong>Grit</strong></li>
+<li><strong>Tough 3:</strong> 4 <strong>Grit</strong></li>
+</ul>
+<h3 id="carry-capacity-bulk-limit" tabindex="-1">Carry Capacity (Bulk Limit)</h3>
+<p><strong>Carry Capacity</strong> determines the maximum total <strong>Bulk</strong> of items you can carry. It is determined by your <strong>Tough</strong> stat:</p>
+<ul>
+<li><strong>Tough 1:</strong> 6 Carry Capacity</li>
+<li><strong>Tough 2:</strong> 8 Carry Capacity</li>
+<li><strong>Tough 3:</strong> 10 Carry Capacity</li>
+</ul>
+<h3 id="movement" tabindex="-1">Movement</h3>
+<p><strong>Movement</strong> determines how many Zones you can cross with a single Move action. It is determined by your <strong>Slink</strong> stat:</p>
+<ul>
+<li><strong>Slink 1:</strong> Movement 4</li>
+<li><strong>Slink 2:</strong> Movement 5</li>
+<li><strong>Slink 3:</strong> Movement 5</li>
+</ul>
+<h3 id="grunt" tabindex="-1">Grunt</h3>
+<p><strong>Grunt</strong> represents your personal authority and raw command energy, which dictates the maximum size of a Mob you can control. Your starting <strong>Grunt</strong> is equal to your <strong>second-highest stat</strong>.</p>
+<blockquote>
+<blockquote>
+<p><strong>IMPORTANT:</strong> Because you only have 1 point to distribute at creation, your starting stats will always feature one stat at 2 and three stats at 1. This means your second-highest stat will always be <strong>1</strong>, giving starting Bosses a starting <strong>Grunt</strong> of <strong>1</strong>.</p>
+<p>This starting <strong>Grunt</strong> limits your command to a single <strong>Size 1 Runt Mob</strong> at campaign start. As your Gang grows in <strong>Infamy</strong>, subsequent Bosses will inherit a starting <strong>Successor XP Pool</strong> (see <a href="15_Level_Up%20and%20death.md">Death &amp; Legacy</a>), allowing them to buy higher starting stats and command larger Mobs.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>Example:</strong> Grub creates a Boss and puts his 1 starting point into <strong>Tough</strong>. His stats are <strong>Tough</strong> 2, <strong>Slink</strong> 1, <strong>Brains</strong> 1, and <strong>Mouth</strong> 1. His second-highest stat is 1. His starting <strong>Grunt</strong> is <strong>1</strong>.</p>
+</blockquote>
+<hr>
+<h2 id="5-choose-a-starting-quirk" tabindex="-1">5. Choose a Starting Quirk</h2>
+<p>Your Boss starts with <strong>1 Basic Quirk</strong> of your choice.</p>
+<ul>
+<li><strong>Stat Gating:</strong> The Quirk must match a stat in which your Boss has a level equal to or greater than the Quirk’s Tier. Since your highest stat at creation will be 2, you can choose a Tier 1 or Tier 2 Quirk corresponding to your high stat, or a Tier 1 Quirk for any stat.</li>
+<li><strong>No Twists:</strong> You start with <strong>0 Twists</strong> attached to your Quirk.</li>
+<li>For the list of available starting Quirks, see <a href="14_Quirks.md">Quirks &amp; Twists</a>.</li>
+</ul>
+<hr>
+<h2 id="6-select-starting-loadout" tabindex="-1">6. Select Starting Loadout</h2>
+<p>A starting Boss receives standard equipment scavenged from the Lair’s scrap pile. All starting weapons and armor are of <strong>Junk</strong> quality (see <a href="34_Crafting.md">Crafting &amp; Custom Gear</a>).</p>
+<p>Choose one option from each of the following categories:</p>
+<h3 id="melee-weapon-choose-one" tabindex="-1">Melee Weapon (Choose One)</h3>
+<ul>
+<li><strong>Light Melee Weapon</strong> (Bulk 1, One-Handed, +2d damage)</li>
+<li><strong>Medium Melee Weapon</strong> (Bulk 2, One-Handed, +3d damage)</li>
+<li><strong>Heavy Melee Weapon</strong> (Bulk 3, Two-Handed, +4d damage)</li>
+</ul>
+<h3 id="ranged-weapon-choose-one" tabindex="-1">Ranged Weapon (Choose One)</h3>
+<ul>
+<li><strong>Sling</strong> (Bulk 1, One-Handed, +0d damage)</li>
+<li><strong>Shortbow</strong> (Bulk 2, Two-Handed, +1d damage)</li>
+<li><strong>Throwing Daggers</strong> (Bulk 1, One-Handed, +0d damage)</li>
+<li><strong>No Ranged Weapon</strong> (Choose this if you want to travel light)</li>
+</ul>
+<h3 id="defense-choose-one" tabindex="-1">Defense (Choose One)</h3>
+<ul>
+<li><strong>Light Armor</strong> (Bulk 1, +1d Passive Defense)</li>
+<li><strong>Shield</strong> (Bulk 1, +1d Passive Defense, One-Handed)</li>
+<li><strong>No Defense</strong> (Choose this if you want to travel light)</li>
+</ul>
+<blockquote>
+<blockquote>
+<p><strong>IMPORTANT:</strong> Standard starting gear does not possess any magical tags or Oddities. It is simple, rusty, and prone to breaking on a Fumble. If you roll a Fumble with Junk gear, it is highly likely to shatter (see <a href="33_Equipment.md">Standard Equipment &amp; Loadouts</a> and <a href="34_Crafting.md">Crafting &amp; Custom Gear</a> for breaking rules).</p>
+</blockquote>
+</blockquote>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

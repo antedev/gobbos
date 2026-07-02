@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>crafting_mechanics_audit — DEV Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Raw ideas and brainstorms">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab env-tab--active">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">DEV Rules</h2>
+        <p class="sidebar-subtitle">Raw ideas and brainstorms</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="gdrs"><span class="toggle-icon">▸</span>GDRs</button><ul class="nav-pages" id="nav-gdrs" style="display: none;"><li><a href="dev.html" class="nav-link" data-target="gdrs--gdr-001-macro-audit-and-unified-effects">GDR-001_Macro_Audit_And_Unified_Effects</a></li><li><a href="dev--gdrs--gdr-002-gang-pillar-and-lair-economy.html" class="nav-link" data-target="gdrs--gdr-002-gang-pillar-and-lair-economy">GDR-002_Gang_Pillar_And_Lair_Economy</a></li><li><a href="dev--gdrs--gdr-003-unified-modular-powers-system.html" class="nav-link" data-target="gdrs--gdr-003-unified-modular-powers-system">GDR-003_Unified_Modular_Powers_System</a></li><li><a href="dev--gdrs--gdr-004-enemy-stat-framework-and-mobs.html" class="nav-link" data-target="gdrs--gdr-004-enemy-stat-framework-and-mobs">GDR-004_Enemy_Stat_Framework_And_Mobs</a></li><li><a href="dev--gdrs--gdr-005-goblin-magic-dice-system.html" class="nav-link" data-target="gdrs--gdr-005-goblin-magic-dice-system">GDR-005_Goblin_Magic_Dice_System</a></li><li><a href="dev--gdrs--gdr-006-environmental-hazards-and-zone-statblocks.html" class="nav-link" data-target="gdrs--gdr-006-environmental-hazards-and-zone-statblocks">GDR-006_Environmental_Hazards_and_Zone_Statblocks</a></li><li><a href="dev--gdrs--gdr-template.html" class="nav-link" data-target="gdrs--gdr-template">GDR-TEMPLATE</a></li></ul></div><div class="nav-group nav-group--solo"><a href="dev--crafting-creative-analysis.html" class="nav-link nav-link--solo" data-target="crafting-creative-analysis">crafting_creative_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-framework-brainstorm">crafting_framework_brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-mechanics-audit.html" class="nav-link nav-link--solo nav-link--active" data-target="crafting-mechanics-audit">crafting_mechanics_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-brainstorm">crafting-brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--creative-genius-crafting-analysis.html" class="nav-link nav-link--solo" data-target="creative-genius-crafting-analysis">creative_genius_crafting_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-modular-threat-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="enemy-modular-threat-framework-brainstorm">Enemy_Modular_Threat_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-stats-draft.html" class="nav-link nav-link--solo" data-target="enemy-stats-draft">Enemy_Stats_Draft</a></div><div class="nav-group nav-group--solo"><a href="dev--equipment-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="equipment-framework-brainstorm">Equipment_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--gang-mechanics-brainstorm.html" class="nav-link nav-link--solo" data-target="gang-mechanics-brainstorm">Gang_Mechanics_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--generic-trick-mechanics.html" class="nav-link nav-link--solo" data-target="generic-trick-mechanics">Generic_Trick_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--initial-trick-list.html" class="nav-link nav-link--solo" data-target="initial-trick-list">Initial_Trick_List</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-brainstorm.html" class="nav-link nav-link--solo" data-target="lair-brainstorm">Lair_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-mechanics-game-engineering-audit.html" class="nav-link nav-link--solo" data-target="lair-mechanics-game-engineering-audit">Lair_Mechanics_Game_Engineering_Audit</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-refined-framework.html" class="nav-link nav-link--solo" data-target="lair-system-refined-framework">Lair_System_Refined_Framework</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-research-deep-dive.html" class="nav-link nav-link--solo" data-target="lair-system-research-deep-dive">Lair_System_Research_Deep_Dive</a></div><div class="nav-group nav-group--solo"><a href="dev--mob-combat-design-advice.html" class="nav-link nav-link--solo" data-target="mob-combat-design-advice">Mob_Combat_Design_Advice</a></div><div class="nav-group nav-group--solo"><a href="dev--research-crafting-systems.html" class="nav-link nav-link--solo" data-target="research-crafting-systems">research_crafting_systems</a></div><div class="nav-group nav-group--solo"><a href="dev--research-deeds-award-mechanics.html" class="nav-link nav-link--solo" data-target="research-deeds-award-mechanics">Research_Deeds_Award_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-base-building.html" class="nav-link nav-link--solo" data-target="researcher-findings-base-building">Researcher_Findings_Base_Building</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-conditions.html" class="nav-link nav-link--solo" data-target="researcher-findings-conditions">Researcher_Findings_Conditions</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-environmental-hazards.html" class="nav-link nav-link--solo" data-target="researcher-findings-environmental-hazards">Researcher_Findings_Environmental_Hazards</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-analysis.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-analysis">Researcher_Findings_OSR_Analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-sources.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-sources">Researcher_Findings_OSR_Sources</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-notes.html" class="nav-link nav-link--solo" data-target="researcher-notes">Researcher_Notes</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-audit-equipment.html" class="nav-link nav-link--solo" data-target="rules-lawyer-audit-equipment">Rules_Lawyer_Audit_Equipment</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-crafting-audit.html" class="nav-link nav-link--solo" data-target="rules-lawyer-crafting-audit">rules_lawyer_crafting_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-system-audit-report.html" class="nav-link nav-link--solo" data-target="rules-lawyer-system-audit-report">Rules_Lawyer_System_Audit_Report</a></div><div class="nav-group nav-group--solo"><a href="dev--static-resistances-opposed-tests.html" class="nav-link nav-link--solo" data-target="static-resistances-opposed-tests">Static_Resistances_Opposed_Tests</a></div><div class="nav-group nav-group--solo"><a href="dev--trick-mechanics-master-list.html" class="nav-link nav-link--solo" data-target="trick-mechanics-master-list">Trick_Mechanics_Master_List</a></div><div class="nav-group nav-group--solo"><a href="dev--unified-modular-power-system.html" class="nav-link nav-link--solo" data-target="unified-modular-power-system">Unified Modular Power System</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="game-engineer-audit-crafting-system-analysis" tabindex="-1">⚙️ Game Engineer Audit: Crafting System Analysis</h1>
+<blockquote>
+<p>Reviewing: [crafting_creative_analysis.md](file:///c:/Users/ante/Documents/github/gobbos/00_DEV_Brainstorms/crafting_creative_analysis.md)<br>
+Cross-referenced against: Stage rules ([01_Dice.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/01_Dice.md), [02 <a href="http://Combat.md">Combat.md</a>](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/02%<a href="http://20Combat.md">20Combat.md</a>), [10_Stats.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters%20%26%20Mobs/10_Stats.md), [33_Equipment.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/03_Loot/33_Equipment.md), [07_Wounds_Conditions.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md)), the [rules audit](file:///c:/Users/ante/Documents/github/gobbos/05_System_Tools/rules_audit_crafting.md), and the [archived crafting rules](file:///c:/Users/ante/Documents/github/gobbos/03_Archive_Graveyard/34_Crafting.md).</p>
+</blockquote>
+<hr>
+<h2 id="verdict-the-creative-analysis-is-strong-but-several-ideas-need-mechanical-stress-testing" tabindex="-1">Verdict: The Creative Analysis Is Strong — But Several Ideas Need Mechanical Stress-Testing</h2>
+<p>The Creative Genius identified the right keeper ideas and proposed exciting new directions. This audit examines each proposal against the <strong>existing Stage rules</strong> to find conflicts, exploits, missing mechanical definitions, and integration points. I’ll also weigh in on the Tier question with hard probability context.</p>
+<hr>
+<h2 id="part-1-auditing-the-golden-keeper-ideas" tabindex="-1">Part 1: Auditing the “Golden” Keeper Ideas</h2>
+<h3 id="1-three-layer-resource-model-approved" tabindex="-1">✅ 1. Three-Layer Resource Model — APPROVED</h3>
+<p>No mechanical conflicts. The separation of Base Resources / Oddities / Infrastructure maps cleanly onto existing systems:</p>
+<ul>
+<li>Base Resources → pairs with the Quality table in <code>33_Equipment.md</code></li>
+<li>Oddities → pairs with the “Item Traits” keyword (currently <code>[TODO]</code> in <code>06_Keywords Index.md</code>)</li>
+<li>Infrastructure → pairs with Lair Upgrades (currently empty in <code>01_STAGE_Drafts/05_Base/</code>)</li>
+</ul>
+<h3 id="2-build-always-succeeds-approved-with-a-note" tabindex="-1">✅ 2. “Build Always Succeeds” — APPROVED, with a note</h3>
+<p>Mechanically sound. Aligns with Tenet #2 (no math after dice roll) because the crafting roll <em>modifies the output</em> rather than determining pass/fail.</p>
+<blockquote>
+<p>[!NOTE]
+This creates a subtle design commitment: <strong>there is no “crafting failure state.”</strong> Every combination of Oddity + Chassis must produce <em>something</em>. The GM scaffolding framework (from [crafting_framework_brainstorm.md](file:///c:/Users/ante/Documents/github/gobbos/00_DEV_Brainstorms/crafting_framework_brainstorm.md)) — “Determine Skeleton → Apply Tags → Define Exploit/Rebound” — becomes mandatory, not optional. This should be promoted to a first-class rule.</p>
+</blockquote>
+<h3 id="3-t-d-notation-approved-mechanically-elegant" tabindex="-1">✅ 3. T/D Notation — APPROVED, mechanically elegant</h3>
+<p>Two numbers. No formulas. Immediately interpretable. This is the kind of design that <em>scales</em> — a GM can stat an Oddity in 5 seconds.</p>
+<p><strong>One mechanical gap:</strong> The notation describes the Oddity, but does not describe the <strong>positive effect magnitude</strong>. A <code>(T3 / D0)</code> Suncrystal and a <code>(T3 / D3)</code> Demon Heart both cap at Tier 3 effects — but should the Demon Heart be <em>stronger</em> because you’re paying more risk? Two options:</p>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>Rule</th>
+<th>Consequence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A) T = power cap, D is independent</strong></td>
+<td>Both T3 items give T3 effects. The Demon Heart just also hurts you.</td>
+<td>Clean, simple. But players will always prefer T3/D0 items, making high-D items strictly worse.</td>
+</tr>
+<tr>
+<td><strong>B) Effective power = T + D bonus</strong></td>
+<td>High Defect items can <em>exceed</em> their Tier in power. A T3/D3 item could produce a T4 or T5 effect.</td>
+<td>Risky items become tempting. Creates the “deal with the devil” tension. But requires defining what T4+ effects even look like.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!IMPORTANT]
+<strong>Recommendation:</strong> Go with <strong>A</strong> for simplicity, but add a single rule: <em>“When crafting with a D3 Oddity, you may choose to leave 1 point of Defect un-tamed to gain +1 Tier to the positive effect.”</em> This lets players voluntarily accept danger for power, which is peak goblin decision-making, without complicating the base system.</p>
+</blockquote>
+<h3 id="4-spending-6s-to-tame-the-defect-approved-with-concerns" tabindex="-1">⚠️ 4. Spending 6s to “Tame” the Defect — APPROVED WITH CONCERNS</h3>
+<p>The idea is mechanically beautiful in <em>concept</em>, but collides with the existing dice system in ways that need resolving.</p>
+<p><strong>Problem 1: What dice pool does the crafting roll use?</strong>
+The current dice rules (<code>01_Dice.md</code>) say: <em>“The dice pool is usually equal to their main stat + 1.”</em> For crafting, that stat would be <strong>Brains</strong>. At Brains 1 (starting), you roll <strong>2d6</strong>. The probability of rolling at least one 6 on 2d6 is only <strong>30.6%</strong>. This means:</p>
+<table>
+<thead>
+<tr>
+<th>Brains</th>
+<th>Pool</th>
+<th>P(at least one 6)</th>
+<th>P(two 6s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2d6</td>
+<td>30.6%</td>
+<td>2.8%</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3d6</td>
+<td>42.1%</td>
+<td>7.0%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4d6</td>
+<td>51.8%</td>
+<td>13.2%</td>
+</tr>
+<tr>
+<td>4</td>
+<td>5d6</td>
+<td>59.8%</td>
+<td>19.6%</td>
+</tr>
+<tr>
+<td>5</td>
+<td>6d6</td>
+<td>66.5%</td>
+<td>26.3%</td>
+</tr>
+</tbody>
+</table>
+<p>A Brains 1 goblin trying to tame a D2 Oddity (needing two 6s) has a <strong>2.8% chance</strong> of fully taming it. Even a Brains 5 genius only has 26.3%. This means <strong>high-Defect items are effectively unusable without extreme luck or multiple crafting attempts.</strong></p>
+<p><strong>Problem 2: Do exploding 6s count?</strong>
+The core dice rules say 6s explode. If a crafting 6 explodes, does the <em>explosion die</em> also count as a taming 6? If yes, the probabilities shift significantly upward. If no, you need to explicitly state this is an exception to the core exploding mechanic — which violates Tenet #2 (no post-roll interpretation).</p>
+<p><strong>Problem 3: What about 1s in the crafting roll?</strong>
+The brainstorm (Svar 1) suggested 1s in the crafting pool trigger “weird effects” from a random table. But the core rules say two or more 1s with zero successes = <strong>Fumble</strong>, and Fumbles cost Grunt. Does crafting follow standard Fumble rules? If so, a Brains 1 goblin crafting in their base can <em>lose Grunt</em> from a bad crafting roll, which feels punitive for a downtime activity.</p>
+<blockquote>
+<p>[!WARNING]
+<strong>Required decisions before this can move to Stage:</strong></p>
+<ol>
+<li>Define the crafting dice pool explicitly (Brains + 1? Brains + Workshop bonus? Flat pool from Infrastructure tier?)</li>
+<li>Clarify if exploding 6s generate taming successes</li>
+<li>Decide if Fumble rules apply to crafting, or if crafting uses a simplified success/chaos interpretation</li>
+<li>Consider allowing <strong>multiple crafting attempts</strong> on the same item during downtime (spending more time = more rolls = more chances to tame defects). This solves the probability problem naturally and ties into the “time as opportunity cost” concept from the brainstorm.</li>
+</ol>
+</blockquote>
+<h3 id="5-reverse-engineering-approved" tabindex="-1">✅ 5. Reverse Engineering — APPROVED</h3>
+<p>No mechanical conflicts. Dovetails with the existing “Manipulate” action (<code>02 Combat.md</code>) — reverse engineering during a raid could be a Brains-based Manipulate action. During downtime, it’s automatic (build always succeeds philosophy).</p>
+<hr>
+<h2 id="part-2-auditing-the-new-proposals" tabindex="-1">Part 2: Auditing the New Proposals</h2>
+<h3 id="1-blueprints-as-social-currency-mechanically-sound" tabindex="-1">🆕 1. Blueprints as Social Currency — MECHANICALLY SOUND ✅</h3>
+<p>No conflicts with existing rules. Blueprints naturally slot into the Loot system as a special loot type with <code>Usage: Blueprint</code> attribute. They have value (tradeable), bulk (presumably 0 or 1), and a clear usage.</p>
+<p><strong>One addition:</strong> Blueprints should have a <strong>Brains requirement</strong> to use. You can <em>own</em> a Blueprint for a T4 weapon, but if your Brains is only 2, you can’t execute it. This prevents low-Brains combat monsters from also being master crafters, which preserves stat specialization.</p>
+<h3 id="2-scrap-cascade-scarred-oddities-needs-mechanical-definition" tabindex="-1">🆕 2. Scrap Cascade + Scarred Oddities — NEEDS MECHANICAL DEFINITION ⚠️</h3>
+<p>The idea is great, but “a chance to survive” is not a rule. We need to define:</p>
+<p><strong>Proposal:</strong> When Custom Gear breaks, roll 1d6 per attached Oddity:</p>
+<ul>
+<li><strong>1–(current Defect):</strong> The Oddity is <strong>destroyed</strong>.</li>
+<li><strong>(Defect+1)–6:</strong> The Oddity <strong>survives</strong> but gains +1 Defect (becomes Scarred).</li>
+</ul>
+<p>This means a D0 Oddity (pure, stable) <em>always</em> survives its first break (it can’t roll below 1, and 1–6 all pass since the Defect is 0). But it becomes D1. A D3 Oddity has a 50/50 shot of dying. A D5 Oddity (after multiple scars) has only a 16.7% chance of survival. The escalating Defect naturally kills off old Oddities — no bookkeeping needed beyond updating the D number.</p>
+<table>
+<thead>
+<tr>
+<th>Defect</th>
+<th>Survival Chance</th>
+<th>After Survival, New Defect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D0</td>
+<td>100%</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>D1</td>
+<td>83.3%</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>D2</td>
+<td>66.7%</td>
+<td>D3</td>
+</tr>
+<tr>
+<td>D3</td>
+<td>50.0%</td>
+<td>D4</td>
+</tr>
+<tr>
+<td>D4</td>
+<td>33.3%</td>
+<td>D5</td>
+</tr>
+<tr>
+<td>D5</td>
+<td>16.7%</td>
+<td>D6 (destroyed on next break)</td>
+</tr>
+</tbody>
+</table>
+<p>This is clean, uses a single d6, requires zero math (just compare the roll to a number), and creates a narrative arc for each Oddity. <strong>Strongly recommended.</strong></p>
+<h3 id="3-cursed-relics-bonded-gear-approved-as-edge-case" tabindex="-1">🆕 3. Cursed Relics / Bonded Gear — APPROVED AS EDGE CASE ✅</h3>
+<p>This doesn’t need its own mechanical subsystem. It’s just a <strong>tag</strong>: <code>[Bonded]</code>. When an Oddity has the Bonded tag, it cannot be removed without a specific condition (defined by the GM when the item is found). This is a narrative tool, not a mechanical system. Keep it lightweight.</p>
+<h3 id="4-mob-scale-crafting-needs-careful-balancing" tabindex="-1">🆕 4. Mob-Scale Crafting — NEEDS CAREFUL BALANCING ⚠️</h3>
+<p>This is the proposal I’m most cautious about. The existing Mob equipment system (<code>33_Equipment.md</code> + Lair Brainstorm) is already a resource sink — you pay Loot per Mob Size to equip them. Adding a <em>second</em> crafting layer on top risks:</p>
+<ol>
+<li><strong>Decision paralysis during downtime.</strong> Players already need to: heal, craft personal gear, equip mobs with standard gear, do town activities. Adding “also craft special mob ammo” is another plate to spin.</li>
+<li><strong>Balance problem.</strong> If Burning Arrows give +1d to a Mob’s attack, and a Mob rolls <code>Size × d6</code>, then a Size 3 Mob with +1d gets 4d6. That’s the same as bumping their equipment tier. Is this cheaper than just buying better weapons? It needs to cost <em>more</em> than standard equipment upgrades, or it invalidates the existing system.</li>
+</ol>
+<p><strong>Recommendation:</strong> Don’t make this a separate crafting system. Instead, make it a <strong>Brains Trick</strong>:</p>
+<blockquote>
+<p><em>“<strong>Mob Tinker</strong> [Prerequisite: Brains 3] — During the Lair Phase, you may spend 1 Oddity (consumed) to grant one of your Mobs a temporary tag for the next raid. The Mob’s weapons gain the Oddity’s positive effect, but the tag is lost after the raid or if the Mob is destroyed.”</em></p>
+</blockquote>
+<p>This gates it behind character investment, makes it consumable (preserving the scarcity loop), and doesn’t require new subsystems.</p>
+<h3 id="5-death-loop-bone-oddities-approved-naturally-fits" tabindex="-1">🆕 5. Death Loop → Bone Oddities — APPROVED, NATURALLY FITS ✅</h3>
+<p>The existing rules <em>already</em> support this. <code>06_Keywords Index.md</code> defines:</p>
+<ul>
+<li><strong>Pile of Bones:</strong> The resting place for glorious dead PCs.</li>
+<li><strong>Patron Saint:</strong> A dead PC’s spirit granting a situational boon.</li>
+<li><strong>Named Item:</strong> Gear imbued with a dead PC’s spirit, with minor magical properties.</li>
+</ul>
+<p>Bone Oddities are just a crafting-system expression of the Named Item concept. A dead Boss’s bone becomes an Oddity with tags derived from how they died. It slots directly into the T/D notation:</p>
+<ul>
+<li><strong>Grurr’s Jawbone</strong> (died fighting a troll): <code>[Grudge: Troll, Organic] (T2 / D0)</code> — Low tier (it’s a bone, not a magic crystal), but zero defect (it’s blessed by ancestral loyalty). The <em>purity</em> of a Bone Oddity is the mechanical reward for death.</li>
+</ul>
+<blockquote>
+<p>[!TIP]
+<strong>Design implication:</strong> Bone Oddities should always be <code>D0</code> or <code>D1</code>. They are small, personal, <em>reliable</em> power. The counterbalance is that their Tier is low (T1–T2). You’re not building a superweapon from a bone — you’re adding a dependable, sentimental edge. This makes them mechanically distinct from “big power, big risk” Oddities found in the wild.</p>
+</blockquote>
+<h3 id="6-overclocking-approved-but-needs-rules" tabindex="-1">🆕 6. Overclocking — APPROVED, BUT NEEDS RULES ⚠️</h3>
+<p>The concept is excellent and aligns with Tenet #3. But “massively amplified” and “double damage” aren’t rules. Here’s a concrete proposal:</p>
+<blockquote>
+<p><strong>Overclock (Action):</strong> Declare before rolling. Your Custom Gear’s Oddity effects are amplified to their maximum possible interpretation (GM adjudicates, but should be generous — Rule of Cool). After resolving the action, the gear is permanently destroyed. All attached Oddities are lost (no Scrap Cascade, no survival roll).</p>
+<p><em>Additionally:</em> The Overclock attack ignores the target’s Passive Defence Dice entirely.</p>
+</blockquote>
+<p>Why “ignores Passive Defence”? Because the archived <code>34_Crafting.md</code> already had this as the “Overclocked” result on the Quality Die — so it’s a familiar effect being reused. And it’s <em>devastating</em> without requiring us to define what “double damage” means for every possible tag combination.</p>
+<p><strong>Cost consideration:</strong> Should Overclocking cost Grunt? I’d say <strong>no</strong> — the gear destruction IS the cost. Adding a Grunt cost on top would make players never use it. The whole point is that it’s free to activate but irreversibly expensive in consequences.</p>
+<hr>
+<h2 id="part-3-the-tier-count-question-an-engineer-s-take" tabindex="-1">Part 3: The Tier Count Question — An Engineer’s Take</h2>
+<p>The Creative Analysis laid out the 3 vs 5 vs 6 argument well. Here’s my mechanical perspective:</p>
+<h3 id="the-hidden-variable-how-many-tiers-do-you-actually-need-content-for" tabindex="-1">The Hidden Variable: How Many Tiers Do You Actually Need Content For?</h3>
+<p>Every tier needs:</p>
+<ol>
+<li>A <strong>narrative flavor</strong> (what <em>is</em> Tier 4 material?)</li>
+<li>A <strong>mechanical distinction</strong> (how does Tier 4 differ from Tier 3 in play?)</li>
+<li>A <strong>progression gate</strong> (what Lair Upgrade / quest unlocks Tier 4?)</li>
+<li><strong>Oddities at that tier</strong> (you need actual items for players to find)</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Tiers</th>
+<th>Content Required</th>
+<th>Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>3 material descriptions, 3 workshop levels, ~12 Oddities per tier = 36 total</td>
+<td>Too shallow?</td>
+</tr>
+<tr>
+<td>5</td>
+<td>5 material descriptions, 5 workshop levels, ~8 Oddities per tier = 40 total</td>
+<td>Tiers 3/4 hard to differentiate</td>
+</tr>
+<tr>
+<td>6</td>
+<td>6 material descriptions, 6 workshop levels, ~6 Oddities per tier = 36 total</td>
+<td>Spreads Oddities thin</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-mechanical-test-brains-as-gate" tabindex="-1">The Mechanical Test: Brains as Gate</h3>
+<p>If <code>Brains = Max Tier you can work</code>, then:</p>
+<table>
+<thead>
+<tr>
+<th>Brains</th>
+<th>Tier Access</th>
+<th>Campaign Phase</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>T1 only</td>
+<td>Starting — garbage weapons, pure goblin junk</td>
+</tr>
+<tr>
+<td>2</td>
+<td>T1–T2</td>
+<td>Early — first “real” materials, iron and wood</td>
+</tr>
+<tr>
+<td>3</td>
+<td>T1–T3</td>
+<td>Mid — monster parts, rare crystals</td>
+</tr>
+<tr>
+<td>4</td>
+<td>T1–T4</td>
+<td>Late — dwarven steel, demon organs</td>
+</tr>
+<tr>
+<td>5</td>
+<td>T1–T5</td>
+<td>Endgame — legendary, mythical components</td>
+</tr>
+</tbody>
+</table>
+<p>This maps cleanly to 5 tiers. The problem with 6 is that <code>06_Keywords Index.md</code> already states: <em>“A player character who reaches a stat of 6 automatically retires.”</em> So Brains 6 = retirement. There would be <strong>no PC who can work with Tier 6 material</strong> — it would require an Elder to do it, which is either a cool design feature (retirement crafters!) or a frustrating dead end.</p>
+<h3 id="the-d6-loot-table-argument" tabindex="-1">The d6 Loot Table Argument</h3>
+<p>The “roll 1d6 for random scrap tier” feature is genuinely useful. But you don’t need 6 <em>material</em> tiers to get it. You could have 5 material tiers and use the d6 table like this:</p>
+<table>
+<thead>
+<tr>
+<th>d6 Roll</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Garbage (T1 Scrap)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Goblin Junk (T1 Oddity, random)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Decent Stuff (T2 Scrap)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Quality Material (T3 Scrap)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Rare Find (T3 Oddity, random)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Remarkable (T4+ Scrap or Oddity — roll again for specifics)</td>
+</tr>
+</tbody>
+</table>
+<p>This gives you a d6 table with 5 tiers of material. Best of both worlds.</p>
+<h3 id="my-recommendation-5-tiers" tabindex="-1">My Recommendation: 5 Tiers</h3>
+<ul>
+<li>Maps 1:1 with Brains (zero extra rules)</li>
+<li>Enough granularity for a long campaign</li>
+<li>Room to expand to 6 if stats ever go to 6</li>
+<li>d6 loot tables still work with creative mapping</li>
+<li>Content requirements are manageable</li>
+</ul>
+<hr>
+<h2 id="part-4-unresolved-conflicts-with-existing-stage-rules" tabindex="-1">Part 4: Unresolved Conflicts with Existing Stage Rules</h2>
+<p>These are mechanical conflicts that <strong>must</strong> be resolved before crafting moves to Stage, regardless of which creative direction is chosen:</p>
+<h3 id="1-quality-system-collision" tabindex="-1">🔴 1. Quality System Collision</h3>
+<p><code>33_Equipment.md</code> defines Quality as: <em>“Junk: Breaks on 1-2 on the gear dice. Goblin Made: Breaks on 1 on the gear die.”</em> The crafting system proposes a completely different durability model (T/D notation + Quality Die or Usage Die). <strong>These two systems cannot coexist.</strong> When crafting rules move to Stage, the Quality section of <code>33_Equipment.md</code> must be rewritten to use the new system.</p>
+<h3 id="2-utility-slot-definition" tabindex="-1">🔴 2. Utility Slot Definition</h3>
+<p><code>10_Stats.md</code> says Brains gives “Utility Slots” for <em>“carrying Magic Words or Contraptions without consuming standard Bulk.”</em> The crafting system proposes Brains gates the number of Oddities you can attach. These are <strong>two different uses of the same stat.</strong> The rules audit already flagged this — Oddities should NOT consume Utility Slots (or you lose all your magic capacity by crafting).</p>
+<p><strong>Recommendation:</strong> Brains provides two separate budgets:</p>
+<ul>
+<li><strong>Utility Slots</strong> (for Magic Words and Contraptions — inventory)</li>
+<li><strong>Crafting Capacity</strong> (max Oddities per item — not an inventory cost, just a complexity limit)</li>
+</ul>
+<p>Both are numerically equal to Brains, but they are independent pools.</p>
+<h3 id="3-the-keywords-index-has-placeholders" tabindex="-1">🔴 3. The Keywords Index Has Placeholders</h3>
+<p><code>06_Keywords Index.md</code> has <code>[TODO]</code> entries for “Item Traits” and “Status Effects.” Crafting will generate both of these (Oddity tags = Item Traits, Defects = potential Status Effects). These TODOs should be resolved <em>as part of</em> the crafting system design, not separately.</p>
+<h3 id="4-carry-capacity-interaction" tabindex="-1">🟡 4. Carry Capacity Interaction</h3>
+<p>If Oddities don’t add Bulk (as recommended), but a Chassis still has its base Bulk, then a custom Heavy Weapon (Bulk 3) with 3 Oddities still weighs Bulk 3. This is fine. But some Oddities (like “Heavy Core” from the d66 table in <code>crafting_framework_brainstorm.md</code>) explicitly add +1 Bulk. The rules need to state: <em>“An Oddity’s tag may modify the Base Item’s Bulk. The final Bulk of Custom Gear is the Base Item’s Bulk, plus or minus any Oddity Bulk modifiers.”</em></p>
+<hr>
+<h2 id="summary-table" tabindex="-1">Summary Table</h2>
+<table>
+<thead>
+<tr>
+<th>Proposal</th>
+<th>Engineer Verdict</th>
+<th>Key Issue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Three-Layer Model</td>
+<td>✅ Approved</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Build Always Succeeds</td>
+<td>✅ Approved</td>
+<td>GM scaffold framework must be a rule, not optional</td>
+</tr>
+<tr>
+<td>T/D Notation</td>
+<td>✅ Approved</td>
+<td>Define whether high-D items can exceed their Tier</td>
+</tr>
+<tr>
+<td>6s Tame Defects</td>
+<td>⚠️ Needs work</td>
+<td>Probability too low at low Brains; define pool, exploding, fumbles</td>
+</tr>
+<tr>
+<td>Reverse Engineering</td>
+<td>✅ Approved</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Blueprints</td>
+<td>✅ Approved</td>
+<td>Add Brains requirement to use</td>
+</tr>
+<tr>
+<td>Scrap Cascade</td>
+<td>✅ Approved</td>
+<td>Use the d6 survival roll proposal above</td>
+</tr>
+<tr>
+<td>Cursed Relics</td>
+<td>✅ Approved</td>
+<td>Just a [Bonded] tag, keep lightweight</td>
+</tr>
+<tr>
+<td>Mob-Scale Crafting</td>
+<td>⚠️ Rework</td>
+<td>Make it a Brains Trick, not a subsystem</td>
+</tr>
+<tr>
+<td>Bone Oddities</td>
+<td>✅ Approved</td>
+<td>Always D0–D1, always T1–T2 for balance</td>
+</tr>
+<tr>
+<td>Overclocking</td>
+<td>✅ Approved</td>
+<td>Define as “ignores Passive Defence + GM-amplified effect”</td>
+</tr>
+<tr>
+<td><strong>5 Tiers</strong></td>
+<td>✅ Recommended</td>
+<td>Maps to Brains, d6 tables still work</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="recommended-next-steps" tabindex="-1">Recommended Next Steps</h2>
+<ol>
+<li><strong>Decide the Tier count</strong> (I recommend 5)</li>
+<li><strong>Define the crafting dice pool</strong> (most urgent mechanical gap)</li>
+<li><strong>Rewrite Quality in <code>33_Equipment.md</code></strong> to use the new system (resolve the collision)</li>
+<li><strong>Write the Brains Tricks</strong> that were left TBD — this is the natural moment</li>
+<li><strong>Build a probability simulation</strong> for the “tame defect with 6s” mechanic across all Brains levels, to validate that the curve feels right (I can set this up in <code>05_System_Tools/</code> if needed)</li>
+</ol>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

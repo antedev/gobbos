@@ -1,0 +1,9 @@
+{
+  "smtp_host": "smtp.example.com",
+  "smtp_port": 587,
+  "use_tls": true,
+  "smtp_user": "your-username@example.com",
+  "smtp_pass": "your-password",
+  "from_addr": "rulebook-updater@ante.pub",
+  "to_addr": "system@ante.pub"
+}

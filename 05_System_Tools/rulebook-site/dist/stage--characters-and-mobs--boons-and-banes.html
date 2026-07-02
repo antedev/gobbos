@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boons_and_Banes — STAGE Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Playtesting & review materials">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab env-tab--active">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">STAGE Rules</h2>
+        <p class="sidebar-subtitle">Playtesting & review materials</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="stage.html" class="nav-link" data-target="rules--overview">Overview</a></li><li><a href="stage--rules--combat.html" class="nav-link" data-target="rules--combat">Combat</a></li><li><a href="stage--rules--movement-and-zones.html" class="nav-link" data-target="rules--movement-and-zones">Movement &amp; Zones</a></li><li><a href="stage--rules--giving-orders.html" class="nav-link" data-target="rules--giving-orders">Giving orders</a></li><li><a href="stage--rules--raid-points.html" class="nav-link" data-target="rules--raid-points">Raid points</a></li><li><a href="stage--rules--keywords-index.html" class="nav-link" data-target="rules--keywords-index">Keywords Index</a></li><li><a href="stage--rules--wounds-conditions.html" class="nav-link" data-target="rules--wounds-conditions">Wounds_Conditions</a></li><li><a href="stage--rules--master-tag-index.html" class="nav-link" data-target="rules--master-tag-index">Master_Tag_Index</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="true" data-target="characters-and-mobs"><span class="toggle-icon">▾</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" ><li><a href="stage--characters-and-mobs--character-creation.html" class="nav-link" data-target="characters-and-mobs--character-creation">Character Creation</a></li><li><a href="stage--characters-and-mobs--gang.html" class="nav-link" data-target="characters-and-mobs--gang">Gang</a></li><li><a href="stage--characters-and-mobs--boons-and-banes.html" class="nav-link nav-link--active" data-target="characters-and-mobs--boons-and-banes">Boons_and_Banes</a></li><li><a href="stage--characters-and-mobs--goblin-mob.html" class="nav-link" data-target="characters-and-mobs--goblin-mob">Goblin_mob</a></li><li><a href="stage--characters-and-mobs--quirks.html" class="nav-link" data-target="characters-and-mobs--quirks">Quirks</a></li><li><a href="stage--characters-and-mobs--level-up-and-death.html" class="nav-link" data-target="characters-and-mobs--level-up-and-death">Level_Up and death</a></li><li><a href="stage--characters-and-mobs--unified-modular-powers-system.html" class="nav-link" data-target="characters-and-mobs--unified-modular-powers-system">Unified_Modular_Powers_System</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="loot"><span class="toggle-icon">▸</span>Loot</button><ul class="nav-pages" id="nav-loot" style="display: none;"><li><a href="stage--loot--loot.html" class="nav-link" data-target="loot--loot">loot</a></li><li><a href="stage--loot--carry-stuff.html" class="nav-link" data-target="loot--carry-stuff">Carry Stuff</a></li><li><a href="stage--loot--equipment.html" class="nav-link" data-target="loot--equipment">Equipment</a></li><li><a href="stage--loot--crafting.html" class="nav-link" data-target="loot--crafting">Crafting</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="enemies"><span class="toggle-icon">▸</span>Enemies</button><ul class="nav-pages" id="nav-enemies" style="display: none;"><li><a href="stage--enemies--enemies.html" class="nav-link" data-target="enemies--enemies">Enemies</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="base"><span class="toggle-icon">▸</span>Base</button><ul class="nav-pages" id="nav-base" style="display: none;"><li><a href="stage--base--lair-rules.html" class="nav-link" data-target="base--lair-rules">Lair_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="travel"><span class="toggle-icon">▸</span>Travel</button><ul class="nav-pages" id="nav-travel" style="display: none;"><li><a href="stage--travel--journey-rules.html" class="nav-link" data-target="travel--journey-rules">Journey_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="magic"><span class="toggle-icon">▸</span>Magic</button><ul class="nav-pages" id="nav-magic" style="display: none;"><li><a href="stage--magic--magic-rules.html" class="nav-link" data-target="magic--magic-rules">Magic_Rules</a></li></ul></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="boons-and-banes-building-blocks" tabindex="-1">Boons and Banes (Building Blocks)</h1>
+<p>This list contains the raw mechanical effects used to build Quirks, Items, and Mutations. The goal is to make things highly situational and flavorful, rather than just raw math increases.</p>
+<h2 id="boons-the-good-stuff" tabindex="-1">🟢 Boons (The Good Stuff)</h2>
+<h3 id="situational-1-die-the-if-then-bonuses" tabindex="-1">Situational +1 Die (The “If/Then” Bonuses)</h3>
+<ul>
+<li>+1d if attacking from behind / above.</li>
+<li>+1d against unarmoured targets.</li>
+<li>+1d against heavily armoured targets (because it’s a can opener).</li>
+<li>+1d against enemies larger than you.</li>
+<li>+1d against other goblins.</li>
+<li>+1d if wielded by [Specific Gang].</li>
+<li>+1d if it is raining, dark, or otherwise miserable.</li>
+<li>+1d if you are Currently Fleeing.</li>
+<li>+1d if you Scream a specific battle cry when rolling.</li>
+<li>+1d if you are currently on fire or poisoned.</li>
+<li>+1d to Sneak if you are completely naked (no Bulk).</li>
+<li>+1d to Notice if you are smelling instead of looking.</li>
+</ul>
+<h3 id="dice-manipulation" tabindex="-1">Dice Manipulation</h3>
+<ul>
+<li><strong>Lucky Break:</strong> Reroll one 1 per raid.</li>
+<li><strong>Fumble Guard:</strong> Ignore your first Fumble on a [Specific Skill] test.</li>
+<li><strong>The Big Boom:</strong> 5s AND 6s explode on a specific test. (Extremely rare).</li>
+<li><strong>Safe Bet:</strong> Count 4s as Successes on a Normal test (lowers difficulty to Easy).</li>
+<li><strong>Spiteful Reroll:</strong> Reroll failed dice, but if you still fail, you take 1 Damage.</li>
+</ul>
+<h3 id="action-economy-and-movement" tabindex="-1">Action Economy &amp; Movement</h3>
+<ul>
+<li><strong>Scurry:</strong> Move 1 Zone for free once per round.</li>
+<li><strong>Quick Swap:</strong> Changing held items does not cost an action.</li>
+<li><strong>Bloodlust:</strong> Gain 1 free action immediately when you reduce an enemy to 0 health.</li>
+<li><strong>Slippery:</strong> Enemies do not get free reactionary attacks when you leave their Zone.</li>
+<li><strong>Wall-Crawler:</strong> You can move vertically without a Slink test.</li>
+</ul>
+<h3 id="grunt-and-mobs" tabindex="-1">Grunt &amp; Mobs</h3>
+<ul>
+<li><strong>Bossy:</strong> +1 Max Grunt.</li>
+<li><strong>Inspiring Death:</strong> Regain 1 Grunt when one of your own Mobs is entirely wiped out in your Zone.</li>
+<li><strong>Meat Shield:</strong> Once per combat, redirect an attack meant for you to an adjacent friendly Mob.</li>
+<li><strong>Cheerleaders:</strong> Mobs in your Zone roll +1d on their attacks.</li>
+<li><strong>Whip-Cracker:</strong> You can spend an Action to give a Mob a free Action.</li>
+</ul>
+<h3 id="survival-and-utility" tabindex="-1">Survival &amp; Utility</h3>
+<ul>
+<li><strong>Hard Head:</strong> Ignore the first time you take damage in a raid.</li>
+<li><strong>Iron Stomach:</strong> You can eat literal garbage/poison to heal 1 wound (Roll a Tough test to see if you get sick instead).</li>
+<li><strong>Pack Mule:</strong> Carry Capacity increased by +2 Bulk.</li>
+<li><strong>Shiny Finder:</strong> You automatically Notice hidden Loot of Value 1 without needing to roll.</li>
+</ul>
+<hr>
+<h2 id="banes-the-bad-stuff" tabindex="-1">🔴 Banes (The Bad Stuff)</h2>
+<h3 id="situational-1-die" tabindex="-1">Situational -1 Die</h3>
+<ul>
+<li>-1d in direct sunlight.</li>
+<li>-1d if you are outnumbered.</li>
+<li>-1d to Brains tests (it makes you stupid or distracts you).</li>
+<li>-1d if you haven’t eaten something gross today.</li>
+<li>-1d against [Specific Enemy Type].</li>
+</ul>
+<h3 id="dice-penalties" tabindex="-1">Dice Penalties</h3>
+<ul>
+<li><strong>Fumble Prone:</strong> If you roll <em>any</em> 1s on this test, it counts as a Fumble (you don’t need two 1s).</li>
+<li><strong>Dull/Broken:</strong> 6s count as successes but do not “explode” and let you roll again.</li>
+<li><strong>Exhausting:</strong> Using this item/Quirk makes your next action a Hard Test.</li>
+</ul>
+<h3 id="action-and-movement-restraints" tabindex="-1">Action &amp; Movement Restraints</h3>
+<ul>
+<li><strong>Two-Handed / Heavy:</strong> Requires both hands. You cannot carry other Loot in hands while equipped.</li>
+<li><strong>Clunky:</strong> Halves your movement speed when equipped.</li>
+<li><strong>Loud:</strong> You automatically fail any Sneak tests while wearing/using this.</li>
+<li><strong>Unwieldy / Slow:</strong> Costs 2 Actions to use instead of 1.</li>
+<li><strong>Rooted:</strong> You cannot move in the same round you use this item/Quirk.</li>
+</ul>
+<h3 id="grunt-and-mob-penalties" tabindex="-1">Grunt &amp; Mob Penalties</h3>
+<ul>
+<li><strong>Revolting:</strong> Your max Grunt is reduced by 1 because the other gobbos don’t want to look at you.</li>
+<li><strong>Cowardice:</strong> If a Mob in your Zone dies, you automatically lose 1 Grunt (on top of any fumble losses).</li>
+<li><strong>Friendly Fire:</strong> On a Fumble, you accidentally deal damage to the nearest allied Mob instead of yourself.</li>
+<li><strong>Distracting:</strong> Mobs in your Zone roll -1d.</li>
+</ul>
+<h3 id="economy-penalties" tabindex="-1">Economy Penalties</h3>
+<ul>
+<li><strong>High Bulk:</strong> The item takes up 3 or 4 Bulk, crippling your ability to carry Loot.</li>
+<li><strong>Fragile:</strong> If you roll a Fumble while using this item, the item breaks completely.</li>
+<li><strong>Consumable:</strong> Can only be used once (or a few times) before it is gone forever.</li>
+<li><strong>Cursed (Gang Loyalty):</strong> If you are not from the item’s preferred Gang, all your Criticals count as Fumbles.</li>
+</ul>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

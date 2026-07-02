@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipment — STAGE Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Playtesting & review materials">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab env-tab--active">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">STAGE Rules</h2>
+        <p class="sidebar-subtitle">Playtesting & review materials</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="stage.html" class="nav-link" data-target="rules--overview">Overview</a></li><li><a href="stage--rules--combat.html" class="nav-link" data-target="rules--combat">Combat</a></li><li><a href="stage--rules--movement-and-zones.html" class="nav-link" data-target="rules--movement-and-zones">Movement &amp; Zones</a></li><li><a href="stage--rules--giving-orders.html" class="nav-link" data-target="rules--giving-orders">Giving orders</a></li><li><a href="stage--rules--raid-points.html" class="nav-link" data-target="rules--raid-points">Raid points</a></li><li><a href="stage--rules--keywords-index.html" class="nav-link" data-target="rules--keywords-index">Keywords Index</a></li><li><a href="stage--rules--wounds-conditions.html" class="nav-link" data-target="rules--wounds-conditions">Wounds_Conditions</a></li><li><a href="stage--rules--master-tag-index.html" class="nav-link" data-target="rules--master-tag-index">Master_Tag_Index</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="characters-and-mobs"><span class="toggle-icon">▸</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" style="display: none;"><li><a href="stage--characters-and-mobs--character-creation.html" class="nav-link" data-target="characters-and-mobs--character-creation">Character Creation</a></li><li><a href="stage--characters-and-mobs--gang.html" class="nav-link" data-target="characters-and-mobs--gang">Gang</a></li><li><a href="stage--characters-and-mobs--boons-and-banes.html" class="nav-link" data-target="characters-and-mobs--boons-and-banes">Boons_and_Banes</a></li><li><a href="stage--characters-and-mobs--goblin-mob.html" class="nav-link" data-target="characters-and-mobs--goblin-mob">Goblin_mob</a></li><li><a href="stage--characters-and-mobs--quirks.html" class="nav-link" data-target="characters-and-mobs--quirks">Quirks</a></li><li><a href="stage--characters-and-mobs--level-up-and-death.html" class="nav-link" data-target="characters-and-mobs--level-up-and-death">Level_Up and death</a></li><li><a href="stage--characters-and-mobs--unified-modular-powers-system.html" class="nav-link" data-target="characters-and-mobs--unified-modular-powers-system">Unified_Modular_Powers_System</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="true" data-target="loot"><span class="toggle-icon">▾</span>Loot</button><ul class="nav-pages" id="nav-loot" ><li><a href="stage--loot--loot.html" class="nav-link" data-target="loot--loot">loot</a></li><li><a href="stage--loot--carry-stuff.html" class="nav-link" data-target="loot--carry-stuff">Carry Stuff</a></li><li><a href="stage--loot--equipment.html" class="nav-link nav-link--active" data-target="loot--equipment">Equipment</a></li><li><a href="stage--loot--crafting.html" class="nav-link" data-target="loot--crafting">Crafting</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="enemies"><span class="toggle-icon">▸</span>Enemies</button><ul class="nav-pages" id="nav-enemies" style="display: none;"><li><a href="stage--enemies--enemies.html" class="nav-link" data-target="enemies--enemies">Enemies</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="base"><span class="toggle-icon">▸</span>Base</button><ul class="nav-pages" id="nav-base" style="display: none;"><li><a href="stage--base--lair-rules.html" class="nav-link" data-target="base--lair-rules">Lair_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="travel"><span class="toggle-icon">▸</span>Travel</button><ul class="nav-pages" id="nav-travel" style="display: none;"><li><a href="stage--travel--journey-rules.html" class="nav-link" data-target="travel--journey-rules">Journey_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="magic"><span class="toggle-icon">▸</span>Magic</button><ul class="nav-pages" id="nav-magic" style="display: none;"><li><a href="stage--magic--magic-rules.html" class="nav-link" data-target="magic--magic-rules">Magic_Rules</a></li></ul></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="standard-equipment-and-loadouts" tabindex="-1">Standard Equipment &amp; Loadouts</h1>
+<p><em>UPDATING NEEDED!</em> - As per the crafting rules the equipment should be an extension of the crafting rules, not the other way around. This means that the crafting rules should define the tiers of equipment, and the equipment section should reflect that.</p>
+<p>A Goblin’s power comes from the shiny junk they carry. Equipment is highly abstracted to keep the game fast and focus entirely on <strong>Bulk</strong> (inventory management) and tactical choice.</p>
+<h2 id="attributes-and-traits" tabindex="-1">Attributes and Traits</h2>
+<p>Attributes and Traits give equipment predefinced effects and abilities.</p>
+<h3 id="weapon-traits" tabindex="-1">Weapon traits</h3>
+<p>Weapon traits is used to differince weapons from each other, so that it feels different to bash with a mace instead of stab with a dagger.</p>
+<table>
+<thead>
+<tr>
+<th>Trait</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cutting</td>
+<td>TDB</td>
+</tr>
+<tr>
+<td>Bashing</td>
+<td>Gives -1d on Passive Defence</td>
+</tr>
+<tr>
+<td>Poking</td>
+<td>TDB</td>
+</tr>
+<tr>
+<td>Fast</td>
+<td>Gives -1d on Active Defence</td>
+</tr>
+<tr>
+<td>Slow</td>
+<td>Allows the enemy to use an Reaction to counterattack, instead of taking a Doge Defence</td>
+</tr>
+<tr>
+<td>Long</td>
+<td>Allows the wielder to use a Reaction to attack if a enemy moves in to attack with a shorter weapon</td>
+</tr>
+<tr>
+<td>Short</td>
+<td>TDB</td>
+</tr>
+</tbody>
+</table>
+<h3 id="armor-traits" tabindex="-1">Armor Traits</h3>
+<table>
+<thead>
+<tr>
+<th>Trait</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Light</td>
+<td>TDB</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>-1d on Slink</td>
+</tr>
+<tr>
+<td>Heavy</td>
+<td>-2d on Slink, cannot Swim</td>
+</tr>
+<tr>
+<td>Loud</td>
+<td>-2d on Slink when trying to Sneak</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="weapons" tabindex="-1">Weapons</h2>
+<p>Weapons are categorized into three simple tiers based on how clunky they are to bring into a dungeon. You can flavor the weapon however you want (a rusty cleaver, a stolen dwarf-hammer, a sharpened stick), but the mechanical stats remain the same.</p>
+<table>
+<thead>
+<tr>
+<th>Melee Weapon</th>
+<th>Bulk</th>
+<th>Handedness</th>
+<th>Damage</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unarmed</td>
+<td>0</td>
+<td>N/A</td>
+<td>+1d</td>
+<td></td>
+</tr>
+<tr>
+<td>Light Weapons</td>
+<td>1</td>
+<td>One-Handed</td>
+<td>+2d</td>
+<td></td>
+</tr>
+<tr>
+<td>Medium Weapons</td>
+<td>2</td>
+<td>One-Handed</td>
+<td>+3d</td>
+<td></td>
+</tr>
+<tr>
+<td>Heavy Weapons</td>
+<td>3</td>
+<td>Two-Handed</td>
+<td>+4d</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Ranged Weapon</th>
+<th>Bulk</th>
+<th>Handedness</th>
+<th>Damage</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sling</td>
+<td>1</td>
+<td>One-Handed</td>
+<td>+0d</td>
+<td></td>
+</tr>
+<tr>
+<td>Shortbow</td>
+<td>2</td>
+<td>Two-Handed</td>
+<td>+1d</td>
+<td></td>
+</tr>
+<tr>
+<td>Crossbow</td>
+<td>2</td>
+<td>Two-Handed</td>
+<td>+1d</td>
+<td>B2</td>
+</tr>
+<tr>
+<td>Heavy Crossbow</td>
+<td>3</td>
+<td>Two-Handed</td>
+<td>+2d</td>
+<td>T2, B2</td>
+</tr>
+<tr>
+<td>Throwing Axes</td>
+<td>1</td>
+<td>One-Handed</td>
+<td>+0d</td>
+<td></td>
+</tr>
+<tr>
+<td>Throwing Daggers</td>
+<td>1</td>
+<td>One-Handed</td>
+<td>+0d</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="armor-tough-and-grunt" tabindex="-1">Armor (Tough &amp; Grunt)</h2>
+<p>Armor is balanced exactly like weapons: trading defensive power for Bulk and situational banes.</p>
+<table>
+<thead>
+<tr>
+<th>Armor</th>
+<th>Bulk</th>
+<th>Boon</th>
+<th>Bane</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>0</td>
+<td>+0d Passive Defense</td>
+<td></td>
+</tr>
+<tr>
+<td>Light Armor</td>
+<td>1</td>
+<td>+1d Passive Defense</td>
+<td></td>
+</tr>
+<tr>
+<td>Medium Armor</td>
+<td>2</td>
+<td>+2d Passive Defense</td>
+<td>-1d Slink</td>
+</tr>
+<tr>
+<td>Heavy Armor</td>
+<td>3</td>
+<td>+3d Passive Defense</td>
+<td>-2d Slink</td>
+</tr>
+<tr>
+<td>Shield</td>
+<td>1</td>
+<td>+1d Passive Defense (One Handed)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="gadgets-and-throwables" tabindex="-1">Gadgets &amp; Throwables</h2>
+<p>Items that provide temporary or highly specific utility.</p>
+<ul>
+<li><strong>Bombs / Throwables (Bulk 1, Consumable):</strong> Grant a massive +2d to a Violence check against a Group/Mob, but are destroyed after one use.</li>
+<li><strong>Lockpicks / Crowbars (Bulk 1):</strong> Changes a <code>Hard</code> Brains (Tinker) test to a <code>Normal</code> test.</li>
+<li><strong>Flashy Bauble (Bulk 1):</strong> Grants +1d to Mouth (Order) tests to impress your Mobs or distract an enemy for one turn.</li>
+</ul>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

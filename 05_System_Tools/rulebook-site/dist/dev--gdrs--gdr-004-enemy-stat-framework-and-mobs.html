@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GDR-004_Enemy_Stat_Framework_And_Mobs — DEV Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Raw ideas and brainstorms">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab env-tab--active">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">DEV Rules</h2>
+        <p class="sidebar-subtitle">Raw ideas and brainstorms</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="true" data-target="gdrs"><span class="toggle-icon">▾</span>GDRs</button><ul class="nav-pages" id="nav-gdrs" ><li><a href="dev.html" class="nav-link" data-target="gdrs--gdr-001-macro-audit-and-unified-effects">GDR-001_Macro_Audit_And_Unified_Effects</a></li><li><a href="dev--gdrs--gdr-002-gang-pillar-and-lair-economy.html" class="nav-link" data-target="gdrs--gdr-002-gang-pillar-and-lair-economy">GDR-002_Gang_Pillar_And_Lair_Economy</a></li><li><a href="dev--gdrs--gdr-003-unified-modular-powers-system.html" class="nav-link" data-target="gdrs--gdr-003-unified-modular-powers-system">GDR-003_Unified_Modular_Powers_System</a></li><li><a href="dev--gdrs--gdr-004-enemy-stat-framework-and-mobs.html" class="nav-link nav-link--active" data-target="gdrs--gdr-004-enemy-stat-framework-and-mobs">GDR-004_Enemy_Stat_Framework_And_Mobs</a></li><li><a href="dev--gdrs--gdr-005-goblin-magic-dice-system.html" class="nav-link" data-target="gdrs--gdr-005-goblin-magic-dice-system">GDR-005_Goblin_Magic_Dice_System</a></li><li><a href="dev--gdrs--gdr-006-environmental-hazards-and-zone-statblocks.html" class="nav-link" data-target="gdrs--gdr-006-environmental-hazards-and-zone-statblocks">GDR-006_Environmental_Hazards_and_Zone_Statblocks</a></li><li><a href="dev--gdrs--gdr-template.html" class="nav-link" data-target="gdrs--gdr-template">GDR-TEMPLATE</a></li></ul></div><div class="nav-group nav-group--solo"><a href="dev--crafting-creative-analysis.html" class="nav-link nav-link--solo" data-target="crafting-creative-analysis">crafting_creative_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-framework-brainstorm">crafting_framework_brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-mechanics-audit.html" class="nav-link nav-link--solo" data-target="crafting-mechanics-audit">crafting_mechanics_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-brainstorm">crafting-brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--creative-genius-crafting-analysis.html" class="nav-link nav-link--solo" data-target="creative-genius-crafting-analysis">creative_genius_crafting_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-modular-threat-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="enemy-modular-threat-framework-brainstorm">Enemy_Modular_Threat_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-stats-draft.html" class="nav-link nav-link--solo" data-target="enemy-stats-draft">Enemy_Stats_Draft</a></div><div class="nav-group nav-group--solo"><a href="dev--equipment-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="equipment-framework-brainstorm">Equipment_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--gang-mechanics-brainstorm.html" class="nav-link nav-link--solo" data-target="gang-mechanics-brainstorm">Gang_Mechanics_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--generic-trick-mechanics.html" class="nav-link nav-link--solo" data-target="generic-trick-mechanics">Generic_Trick_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--initial-trick-list.html" class="nav-link nav-link--solo" data-target="initial-trick-list">Initial_Trick_List</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-brainstorm.html" class="nav-link nav-link--solo" data-target="lair-brainstorm">Lair_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-mechanics-game-engineering-audit.html" class="nav-link nav-link--solo" data-target="lair-mechanics-game-engineering-audit">Lair_Mechanics_Game_Engineering_Audit</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-refined-framework.html" class="nav-link nav-link--solo" data-target="lair-system-refined-framework">Lair_System_Refined_Framework</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-research-deep-dive.html" class="nav-link nav-link--solo" data-target="lair-system-research-deep-dive">Lair_System_Research_Deep_Dive</a></div><div class="nav-group nav-group--solo"><a href="dev--mob-combat-design-advice.html" class="nav-link nav-link--solo" data-target="mob-combat-design-advice">Mob_Combat_Design_Advice</a></div><div class="nav-group nav-group--solo"><a href="dev--research-crafting-systems.html" class="nav-link nav-link--solo" data-target="research-crafting-systems">research_crafting_systems</a></div><div class="nav-group nav-group--solo"><a href="dev--research-deeds-award-mechanics.html" class="nav-link nav-link--solo" data-target="research-deeds-award-mechanics">Research_Deeds_Award_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-base-building.html" class="nav-link nav-link--solo" data-target="researcher-findings-base-building">Researcher_Findings_Base_Building</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-conditions.html" class="nav-link nav-link--solo" data-target="researcher-findings-conditions">Researcher_Findings_Conditions</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-environmental-hazards.html" class="nav-link nav-link--solo" data-target="researcher-findings-environmental-hazards">Researcher_Findings_Environmental_Hazards</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-analysis.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-analysis">Researcher_Findings_OSR_Analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-sources.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-sources">Researcher_Findings_OSR_Sources</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-notes.html" class="nav-link nav-link--solo" data-target="researcher-notes">Researcher_Notes</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-audit-equipment.html" class="nav-link nav-link--solo" data-target="rules-lawyer-audit-equipment">Rules_Lawyer_Audit_Equipment</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-crafting-audit.html" class="nav-link nav-link--solo" data-target="rules-lawyer-crafting-audit">rules_lawyer_crafting_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-system-audit-report.html" class="nav-link nav-link--solo" data-target="rules-lawyer-system-audit-report">Rules_Lawyer_System_Audit_Report</a></div><div class="nav-group nav-group--solo"><a href="dev--static-resistances-opposed-tests.html" class="nav-link nav-link--solo" data-target="static-resistances-opposed-tests">Static_Resistances_Opposed_Tests</a></div><div class="nav-group nav-group--solo"><a href="dev--trick-mechanics-master-list.html" class="nav-link nav-link--solo" data-target="trick-mechanics-master-list">Trick_Mechanics_Master_List</a></div><div class="nav-group nav-group--solo"><a href="dev--unified-modular-power-system.html" class="nav-link nav-link--solo" data-target="unified-modular-power-system">Unified Modular Power System</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="gdr-004-enemy-stat-framework-and-mobs" tabindex="-1">GDR-004: Enemy Stat Framework &amp; Mobs</h1>
+<ul>
+<li><strong>Status:</strong> ACCEPTED</li>
+<li><strong>Date:</strong> 2026-05-28</li>
+<li><strong>Designer(s):</strong> User &amp; Antigravity (AI Coding Assistant)</li>
+<li><strong>Target Folder:</strong> <code>STAGE_Drafts/04_Enemies/</code></li>
+</ul>
+<hr>
+<h2 id="1-the-mechanical-challenge" tabindex="-1">1. The Mechanical Challenge</h2>
+<p>In the current draft of [20_Enemies.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/04_Enemies/20_Enemies.md), enemies are deterministic and simple. However, they lack flavor and mechanical distinctiveness: a Skeleton felt identical to a Guard, and a Dwarf felt identical to a Goblin, except for minor stat adjustments.</p>
+<p>If we add complex traits to make monsters distinct (such as in Warhammer Fantasy Roleplay 4e), running combat becomes a bookkeeping nightmare for the GM. Furthermore, we lacked a clear, unified system for <strong>Enemy Mobs</strong> (swarms of weak foes) that aligns with the player Mob rules without introducing massive stat-tracking bloat.</p>
+<hr>
+<h2 id="2-proposed-design" tabindex="-1">2. Proposed Design</h2>
+<p>This design establishes a <strong>Three-Layer Enemy Traits Hierarchy</strong> to define creature behaviors, alongside a <strong>Unified Enemy Mob Framework</strong> that keeps GM bookkeeping at absolute zero.</p>
+<h3 id="2-1-the-three-layer-enemy-traits-hierarchy" tabindex="-1">2.1. The Three-Layer Enemy Traits Hierarchy</h3>
+<p>To minimize cognitive load, creature traits are organized into three tiers based on how often they are used and where they are written:</p>
+<ol>
+<li><strong>Ancestries (Broad Archetypes):</strong> Universal, passive rules that GMs can easily memorize because they apply to entire classes of creatures.
+<ul>
+<li><em>Example: Undead.</em> All undead are immune to <strong>Morale</strong> checks (they never flee) and immune to the <strong>Terrified</strong> condition.</li>
+</ul>
+</li>
+<li><strong>Standardized Tags:</strong> Common physical or movement properties shared by multiple creatures across different categories.
+<ul>
+<li><em>Example: Flying.</em> Ignores zone terrain hazards; cannot be hit by melee attacks unless the weapon has the <code>Long</code> tag.</li>
+<li><em>Example: Giant.</em> Deals Cleave damage (applying to all dice in a Mob’s pool).</li>
+</ul>
+</li>
+<li><strong>Unique Statblock Traits:</strong> Specific mechanical behaviors written directly on the creature’s stat block. Because they are spelled out on the sheet, the GM never has to flip pages to look up monster-specific rules.
+<ul>
+<li><em>Example: Skeleton - Dry Bones.</em> Ranged/piercing attacks suffer a <strong>Bane</strong>; blunt/bashing attacks gain a <strong>Boon</strong>.</li>
+<li><em>Example: Zombie - Relentless Meat.</em> When reduced to 0 health, it stays active for one final round (cannot take Move actions) and dies automatically at the start of the next round.</li>
+<li><em>Example: Dwarf - Stubborn.</em> Immune to being shoved, moved, or knocked <strong>Prone</strong>.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="2-2-the-enemy-mob-framework" tabindex="-1">2.2. The Enemy Mob Framework</h3>
+<p>Enemy Mobs represent swarms of weak creatures (like a horde of runts or a squad of town guards) unified under a single set of rules:</p>
+<ul>
+<li><strong>Symmetrical Health (Dice-HP):</strong> An Enemy Mob of <strong>Size X</strong> (Size 1–5) is tracked on the table using <strong>X physical D6s</strong> (each starting at 6). Standard spillover damage applies. <strong>Area of Effect (AoE)</strong> and Cleave attacks apply their damage to <strong>every single die</strong> in the Mob.</li>
+<li><strong>Deterministic Attacks:</strong> Since the GM never rolls dice, an Enemy Mob’s automatic Attack damage scales deterministically:
+$\text{Mob Attack Damage} = \text{Base Unit Attack} + (\text{Size} - 1)$
+<ul>
+<li><em>Example:</em> A single Guard deals 1 damage. A <strong>Size 3</strong> Guard Mob deals <strong>3 damage</strong> automatically when it attacks.</li>
+</ul>
+</li>
+<li><strong>Defence &amp; Restricted Cleaving:</strong> Goblins attack an Enemy Mob by testing against the base unit’s <strong>Defence TN</strong>.
+<ul>
+<li>By default, a standard player attack kills exactly <strong>one enemy unit</strong> (reducing Mob Size by 1, removing one D6) on a success, regardless of excess successes.</li>
+<li>To kill multiple units in a single action, the player must use a <strong>Quirk</strong>, Weapon, or Spell with the <code>Cleave</code> or <code>AoE</code> trait.</li>
+<li>Mob-on-Mob combat cleaves naturally (damage reduces size directly).</li>
+</ul>
+</li>
+<li><strong>The “No Elite Mobs” Guardrail:</strong> Mobs can only consist of standard, one-hit-kill enemies. Elite and Boss enemies (possessing a <strong>Wounds</strong> track) must always be fought as individual units, preventing complex multi-wound tracking within swarms.</li>
+<li><strong>Mob Morale Units:</strong> Each point of current <strong>Mob Size</strong> counts as one “unit” when calculating the 50% catastrophic loss threshold to trigger a group <strong>Morale Check</strong>.</li>
+</ul>
+<hr>
+<h2 id="3-alignment-with-design-tenets" tabindex="-1">3. Alignment with Design Tenets</h2>
+<ol>
+<li><strong>Fun at the Table:</strong> Different monsters force distinct tactical choices (e.g. archers targeting zombies while blunt-wielders shatter skeletons), making combat feel alive.</li>
+<li><strong>Zero Post-Roll Math:</strong> No math is performed after rolling. Enemy mob attacks scale with a simple, static calculation. We explicitly reject traits that subtract successes post-roll (which are identical to simple high Defence anyway).</li>
+<li><strong>Embrace Chaos:</strong> Mobs swarming players and players cleaving mobs with specialized gear creates cinematic swings in combat.</li>
+<li><strong>Goblin Flavor:</strong> Facing structured human shield-walls or relentless undead hordes highlights the scrappy, chaotic underdog nature of playing goblins.</li>
+</ol>
+<hr>
+<h2 id="4-edge-cases-and-rules-lawyer-concerns" tabindex="-1">4. Edge Cases &amp; Rules Lawyer Concerns</h2>
+<ul>
+<li><strong>GM Rolling:</strong> All reassembly, infection, or survival traits are designed as passive triggers or static status updates. The GM never rolls dice to resolve monster abilities.</li>
+<li><strong>Bookkeeping Bloat:</strong> By keeping unique traits written directly on the statblock and restricting Mobs to standard (1-hit kill) units, the GM only tracks physical D6s on the table.</li>
+</ul>
+<hr>
+<h2 id="5-alternatives-considered" tabindex="-1">5. Alternatives Considered</h2>
+<ul>
+<li><strong>GM Reassembly Rolls:</strong> We rejected having Skeletons roll a d6 to stand back up on their turns. It required GM dice rolling and created tracking confusion.</li>
+<li><strong>Success Reduction Traits:</strong> We rejected having Dwarves reduce incoming successes by 1. This violated the zero post-roll math tenet and behaved identically to simple high Defence.</li>
+</ul>
+<hr>
+<blockquote>
+<blockquote>
+<p><strong>GOBLIN VERDICT:</strong> “Dry bones go crunch when ya hit ‘em wiv a club, but them soft zombies keep walkin’ even after ya poke 'em full of holes. If there’s a whole bunch of 'em, they hit harder, but ya can’t cleave 'em all unless ya got a really big axe!”</p>
+</blockquote>
+</blockquote>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

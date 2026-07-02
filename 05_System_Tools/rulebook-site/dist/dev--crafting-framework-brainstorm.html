@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>crafting_framework_brainstorm — DEV Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Raw ideas and brainstorms">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab env-tab--active">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">DEV Rules</h2>
+        <p class="sidebar-subtitle">Raw ideas and brainstorms</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="gdrs"><span class="toggle-icon">▸</span>GDRs</button><ul class="nav-pages" id="nav-gdrs" style="display: none;"><li><a href="dev.html" class="nav-link" data-target="gdrs--gdr-001-macro-audit-and-unified-effects">GDR-001_Macro_Audit_And_Unified_Effects</a></li><li><a href="dev--gdrs--gdr-002-gang-pillar-and-lair-economy.html" class="nav-link" data-target="gdrs--gdr-002-gang-pillar-and-lair-economy">GDR-002_Gang_Pillar_And_Lair_Economy</a></li><li><a href="dev--gdrs--gdr-003-unified-modular-powers-system.html" class="nav-link" data-target="gdrs--gdr-003-unified-modular-powers-system">GDR-003_Unified_Modular_Powers_System</a></li><li><a href="dev--gdrs--gdr-004-enemy-stat-framework-and-mobs.html" class="nav-link" data-target="gdrs--gdr-004-enemy-stat-framework-and-mobs">GDR-004_Enemy_Stat_Framework_And_Mobs</a></li><li><a href="dev--gdrs--gdr-005-goblin-magic-dice-system.html" class="nav-link" data-target="gdrs--gdr-005-goblin-magic-dice-system">GDR-005_Goblin_Magic_Dice_System</a></li><li><a href="dev--gdrs--gdr-006-environmental-hazards-and-zone-statblocks.html" class="nav-link" data-target="gdrs--gdr-006-environmental-hazards-and-zone-statblocks">GDR-006_Environmental_Hazards_and_Zone_Statblocks</a></li><li><a href="dev--gdrs--gdr-template.html" class="nav-link" data-target="gdrs--gdr-template">GDR-TEMPLATE</a></li></ul></div><div class="nav-group nav-group--solo"><a href="dev--crafting-creative-analysis.html" class="nav-link nav-link--solo" data-target="crafting-creative-analysis">crafting_creative_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-framework-brainstorm.html" class="nav-link nav-link--solo nav-link--active" data-target="crafting-framework-brainstorm">crafting_framework_brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-mechanics-audit.html" class="nav-link nav-link--solo" data-target="crafting-mechanics-audit">crafting_mechanics_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-brainstorm">crafting-brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--creative-genius-crafting-analysis.html" class="nav-link nav-link--solo" data-target="creative-genius-crafting-analysis">creative_genius_crafting_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-modular-threat-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="enemy-modular-threat-framework-brainstorm">Enemy_Modular_Threat_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-stats-draft.html" class="nav-link nav-link--solo" data-target="enemy-stats-draft">Enemy_Stats_Draft</a></div><div class="nav-group nav-group--solo"><a href="dev--equipment-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="equipment-framework-brainstorm">Equipment_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--gang-mechanics-brainstorm.html" class="nav-link nav-link--solo" data-target="gang-mechanics-brainstorm">Gang_Mechanics_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--generic-trick-mechanics.html" class="nav-link nav-link--solo" data-target="generic-trick-mechanics">Generic_Trick_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--initial-trick-list.html" class="nav-link nav-link--solo" data-target="initial-trick-list">Initial_Trick_List</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-brainstorm.html" class="nav-link nav-link--solo" data-target="lair-brainstorm">Lair_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-mechanics-game-engineering-audit.html" class="nav-link nav-link--solo" data-target="lair-mechanics-game-engineering-audit">Lair_Mechanics_Game_Engineering_Audit</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-refined-framework.html" class="nav-link nav-link--solo" data-target="lair-system-refined-framework">Lair_System_Refined_Framework</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-research-deep-dive.html" class="nav-link nav-link--solo" data-target="lair-system-research-deep-dive">Lair_System_Research_Deep_Dive</a></div><div class="nav-group nav-group--solo"><a href="dev--mob-combat-design-advice.html" class="nav-link nav-link--solo" data-target="mob-combat-design-advice">Mob_Combat_Design_Advice</a></div><div class="nav-group nav-group--solo"><a href="dev--research-crafting-systems.html" class="nav-link nav-link--solo" data-target="research-crafting-systems">research_crafting_systems</a></div><div class="nav-group nav-group--solo"><a href="dev--research-deeds-award-mechanics.html" class="nav-link nav-link--solo" data-target="research-deeds-award-mechanics">Research_Deeds_Award_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-base-building.html" class="nav-link nav-link--solo" data-target="researcher-findings-base-building">Researcher_Findings_Base_Building</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-conditions.html" class="nav-link nav-link--solo" data-target="researcher-findings-conditions">Researcher_Findings_Conditions</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-environmental-hazards.html" class="nav-link nav-link--solo" data-target="researcher-findings-environmental-hazards">Researcher_Findings_Environmental_Hazards</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-analysis.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-analysis">Researcher_Findings_OSR_Analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-sources.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-sources">Researcher_Findings_OSR_Sources</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-notes.html" class="nav-link nav-link--solo" data-target="researcher-notes">Researcher_Notes</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-audit-equipment.html" class="nav-link nav-link--solo" data-target="rules-lawyer-audit-equipment">Rules_Lawyer_Audit_Equipment</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-crafting-audit.html" class="nav-link nav-link--solo" data-target="rules-lawyer-crafting-audit">rules_lawyer_crafting_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-system-audit-report.html" class="nav-link nav-link--solo" data-target="rules-lawyer-system-audit-report">Rules_Lawyer_System_Audit_Report</a></div><div class="nav-group nav-group--solo"><a href="dev--static-resistances-opposed-tests.html" class="nav-link nav-link--solo" data-target="static-resistances-opposed-tests">Static_Resistances_Opposed_Tests</a></div><div class="nav-group nav-group--solo"><a href="dev--trick-mechanics-master-list.html" class="nav-link nav-link--solo" data-target="trick-mechanics-master-list">Trick_Mechanics_Master_List</a></div><div class="nav-group nav-group--solo"><a href="dev--unified-modular-power-system.html" class="nav-link nav-link--solo" data-target="unified-modular-power-system">Unified Modular Power System</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="crafting-framework-and-oddities-brainstorm" tabindex="-1">Crafting Framework &amp; Oddities Brainstorm</h1>
+<h2 id="the-core-concept" tabindex="-1">The Core Concept</h2>
+<p>The idea is to take a <strong>Base Item</strong> (like those found in <code>33_Equipment.md</code>), gather <strong>Scrap</strong> (just a generic, stackable resource), and tape <strong>Oddities</strong> (unique bits of junk that provide specific traits) onto it.</p>
+<h3 id="your-brain-limits-your-chaos" tabindex="-1">Your Brain Limits Your Chaos</h3>
+<ul>
+<li><strong>Brains Stat &amp; Utility Slots:</strong> As noted in <code>10_Stats.md</code>, your Brains score gives you “Utility Slots.” These slots represent your capacity to manage, maintain, and wield dangerously complex contraptions.</li>
+<li><strong>Rule Suggestion:</strong> An item can have a number of attached Oddities up to a maximum equal to the wielder’s <strong>Brains</strong>. If a Goblin with Brains 1 tries to pick up a weapon that has 3 attached Oddities, they can’t figure out how to pull the triggering mechanisms and it acts as a clumsy paperweight.</li>
+</ul>
+<h3 id="the-true-cost-quality-degradation" tabindex="-1">The True Cost: Quality Degradation</h3>
+<p>To balance the chaos of taping a “Fiery” oddity to a “Bouncy” oddity to a Heavy Hammer, we weaponize the <strong>Quality</strong> mechanic (<code>33_Equipment.md</code>).</p>
+<ul>
+<li><strong>The Baseline:</strong> A “Goblin Made” item breaks on a roll of 1 on the gear dice.</li>
+<li><strong>The Oddity Tax:</strong> Each Oddity attached to a weapon increases the “Break Chance” threshold by 1 on the die.
+<ul>
+<li><em>0 Oddities:</em> Breaks on a 1.</li>
+<li><em>1 Oddity:</em> Breaks on 1-2.</li>
+<li><em>2 Oddities:</em> Breaks on 1-3.</li>
+<li><em>3 Oddities:</em> Breaks on 1-4.</li>
+</ul>
+</li>
+<li><em>Why this works:</em> It creates an incredible burst of temporary power. The player gets a super-weapon, but it is statistically guaranteed to blow up in their hands soon. It balances itself through imminent destruction, forcing the player to scavenge again.</li>
+</ul>
+<hr>
+<h2 id="gm-scaffolding-framework" tabindex="-1">GM Scaffolding Framework</h2>
+<p>Players <em>will</em> combine things you didn’t anticipate. Here is a 3-step scaffold for the GM (the “Rules Lawyer”) to adjudicate any combination on the fly.</p>
+<p><strong>Step 1: Determine the Base Skeleton</strong>
+Always start with the underlying item. This provides the fundamental stats (Bulk, Handedness, base Damage output).
+<em>e.g., A “Medium Weapon” (Bulk 2, One-Handed, +3d Damage).</em></p>
+<p><strong>Step 2: Apply the Tags (The Oddities)</strong>
+Read the Oddities tags sequentially. Do <em>not</em> overthink the physics. If the Oddity says “Bouncy,” the weapon now bounces. If it says “Fiery,” it sets things on fire. Let the narrative form naturally from the tags.
+<em>e.g., Medium Weapon + Bouncy + Fiery = A fiery hunk of metal that bounces between targets.</em></p>
+<p><strong>Step 3: Define “The Exploit” and “The Rebound”</strong>
+The final step is to determine the immediate mechanical effect on a <strong>Hit</strong> vs. a <strong>Fumble/Break</strong>.</p>
+<ul>
+<li><strong>Hit (The Exploit):</strong> What cool thing happens? (e.g., The Bouncy Fire-Hammer hits two targets in the same zone).</li>
+<li><strong>Fumble/Break (The Rebound):</strong> What awful thing happens when it shatters? (e.g., It explodes in a fiery blast, hitting the Goblin and anyone nearby).</li>
+</ul>
+<hr>
+<h2 id="d66-list-of-oddities" tabindex="-1">d66 List of Oddities</h2>
+<p>Here is a starting list of 36 distinct Oddities that players can find out in the world, categorized by their dominant feature.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">d66</th>
+<th style="text-align:left">Oddity Name</th>
+<th style="text-align:left">The Tag / Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>11</strong></td>
+<td style="text-align:left"><strong>Bouncy Gland</strong></td>
+<td style="text-align:left"><strong>Bouncy:</strong> Can be thrown into an adjacent zone and returns to hand. On a miss, it hits a random target in the zone.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>12</strong></td>
+<td style="text-align:left"><strong>Sticky Sap</strong></td>
+<td style="text-align:left"><strong>Sticky:</strong> Target hit cannot willingly move to a new zone next round.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>13</strong></td>
+<td style="text-align:left"><strong>Heavy Core</strong></td>
+<td style="text-align:left"><strong>Heavy:</strong> +1d Damage, but increases the item’s Bulk by +1.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>14</strong></td>
+<td style="text-align:left"><strong>Screeching Whistle</strong></td>
+<td style="text-align:left"><strong>Loud:</strong> Forces a morale/rout test on Mobs it hits, but breaks stealth instantly for the whole group.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>15</strong></td>
+<td style="text-align:left"><strong>Rusty Spring</strong></td>
+<td style="text-align:left"><strong>Propelled:</strong> Extends melee reach to an adjacent zone, or adds +1d to movement actions.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>16</strong></td>
+<td style="text-align:left"><strong>Floaty Bladder</strong></td>
+<td style="text-align:left"><strong>Light:</strong> Reduces the item’s Bulk by -1 (minimum 0).</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>21</strong></td>
+<td style="text-align:left"><strong>Spark Battery</strong></td>
+<td style="text-align:left"><strong>Shocking:</strong> Ignores any armor based on metal. Target drops whatever they are holding.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>22</strong></td>
+<td style="text-align:left"><strong>Volatile Ooze</strong></td>
+<td style="text-align:left"><strong>Acidic:</strong> Destroys enemy armor on a critical hit, but destroys your armor if it breaks.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>23</strong></td>
+<td style="text-align:left"><strong>Spicy Pepper Box</strong></td>
+<td style="text-align:left"><strong>Blinding:</strong> Characters hit lose their passive defense dice for the round.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>24</strong></td>
+<td style="text-align:left"><strong>Magnetic Shard</strong></td>
+<td style="text-align:left"><strong>Pulling:</strong> Pulls metallic items from an adjacent zone towards you.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>25</strong></td>
+<td style="text-align:left"><strong>Glow Worm Jar</strong></td>
+<td style="text-align:left"><strong>Blazing:</strong> Illuminates the darkness. Dazzles targets in melee (+1d to hit them).</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>26</strong></td>
+<td style="text-align:left"><strong>Chilling Frost-Stone</strong></td>
+<td style="text-align:left"><strong>Freezing:</strong> Extinguishes fires. Target hit loses 1 action next turn due to shivering.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>31</strong></td>
+<td style="text-align:left"><strong>Spiked Carapace</strong></td>
+<td style="text-align:left"><strong>Jagged:</strong> Rolls of 6 deal 1 bleeding wound to the target.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>32</strong></td>
+<td style="text-align:left"><strong>Twitchy Muscle</strong></td>
+<td style="text-align:left"><strong>Alive:</strong> +1d to hit, but requires a Slink test to put the item down safely without it biting you.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>33</strong></td>
+<td style="text-align:left"><strong>Venom Gland</strong></td>
+<td style="text-align:left"><strong>Toxic:</strong> Deals damage over time, ignoring Grit entirely (requires an antidote).</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>34</strong></td>
+<td style="text-align:left"><strong>Stretchy Sinew</strong></td>
+<td style="text-align:left"><strong>Whip-like:</strong> Can hit two targets in your current zone with a single strike.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>35</strong></td>
+<td style="text-align:left"><strong>Bone-Crushing Vise</strong></td>
+<td style="text-align:left"><strong>Crushing:</strong> +2d Damage against targets with passive defense dice (armor), -1d against unarmored.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>36</strong></td>
+<td style="text-align:left"><strong>Puffball Spore</strong></td>
+<td style="text-align:left"><strong>Choking:</strong> Creates a cloud in the zone; all actions inside lose -1d next round.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>41</strong></td>
+<td style="text-align:left"><strong>Clockwork Gyro</strong></td>
+<td style="text-align:left"><strong>Whirling:</strong> Allows an attack against all enemies in the zone, but also hits all allies.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>42</strong></td>
+<td style="text-align:left"><strong>Telescoping Tube</strong></td>
+<td style="text-align:left"><strong>Extending:</strong> Can strike enemies anywhere in line-of-sight, but takes 1 action to retract.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>43</strong></td>
+<td style="text-align:left"><strong>Mirror Shard</strong></td>
+<td style="text-align:left"><strong>Reflective:</strong> Can bounce ranged attacks back at the attacker on a critical defense.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>44</strong></td>
+<td style="text-align:left"><strong>Pressure Valve</strong></td>
+<td style="text-align:left"><strong>Steaming:</strong> Pushes targets out of your zone into an adjacent zone on a hit.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>45</strong></td>
+<td style="text-align:left"><strong>Alchemical Primer</strong></td>
+<td style="text-align:left"><strong>Explosive:</strong> Converts single-target damage to an area-of-effect blast (entire zone), but always breaks on a 1-3.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>46</strong></td>
+<td style="text-align:left"><strong>Fragile Glass Hull</strong></td>
+<td style="text-align:left"><strong>Shattering:</strong> Does massive +3d damage, but breaks automatically after 1 successful hit.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>51</strong></td>
+<td style="text-align:left"><strong>Goblin-Bite Clamp</strong></td>
+<td style="text-align:left"><strong>Latching:</strong> Clamps onto the target. You gain +2d to all subsequent attacks against them, but you are attached to them.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>52</strong></td>
+<td style="text-align:left"><strong>Rat-Skull Rattle</strong></td>
+<td style="text-align:left"><strong>Spooky:</strong> Targets must pass a Brains test to willingly attack you in melee.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>53</strong></td>
+<td style="text-align:left"><strong>Thick Sludge</strong></td>
+<td style="text-align:left"><strong>Gooey:</strong> Absorbs impacts. If attached to armor, halves incoming damage but restricts Movement.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>54</strong></td>
+<td style="text-align:left"><strong>Screaming Crystal</strong></td>
+<td style="text-align:left"><strong>Shatter-Sonic:</strong> Deals damage directly to Mobs instead of Bosses, bypassing their human shields.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>55</strong></td>
+<td style="text-align:left"><strong>Hollowed Horn</strong></td>
+<td style="text-align:left"><strong>Amplifying:</strong> Any order given through this item gives a built-in +1d boon to your Mobs.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>56</strong></td>
+<td style="text-align:left"><strong>Void-Touched Rock</strong></td>
+<td style="text-align:left"><strong>Teleporting:</strong> Swap places with the target upon a successful hit.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>61</strong></td>
+<td style="text-align:left"><strong>Troll-Blood Vial</strong></td>
+<td style="text-align:left"><strong>Regenerating:</strong> Weapon repairs itself at the end of combat (negates one break).</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>62</strong></td>
+<td style="text-align:left"><strong>Shiny Coin Slot</strong></td>
+<td style="text-align:left"><strong>Greedy:</strong> Deals +1d damage for every piece of treasure/loot you shove into it before attacking.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>63</strong></td>
+<td style="text-align:left"><strong>Boomerang Fin</strong></td>
+<td style="text-align:left"><strong>Curving:</strong> Ignores any cover the target might be hiding behind.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>64</strong></td>
+<td style="text-align:left"><strong>Stolen Magic Wand</strong></td>
+<td style="text-align:left"><strong>Erratic:</strong> Roll a d6 after every attack. On a 1, you turn pink. On a 6, the target turns into a sheep.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>65</strong></td>
+<td style="text-align:left"><strong>Giant’s Toenail</strong></td>
+<td style="text-align:left"><strong>Massive Force:</strong> Any target hit is immediately knocked prone.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>66</strong></td>
+<td style="text-align:left"><strong>The Red Button</strong></td>
+<td style="text-align:left"><strong>Panic:</strong> Does something spectacular and devastating (GM’s discretion), but breaks the item permanently and irreparably.</td>
+</tr>
+</tbody>
+</table>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lair_Mechanics_Game_Engineering_Audit — DEV Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Raw ideas and brainstorms">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab env-tab--active">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">DEV Rules</h2>
+        <p class="sidebar-subtitle">Raw ideas and brainstorms</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="gdrs"><span class="toggle-icon">▸</span>GDRs</button><ul class="nav-pages" id="nav-gdrs" style="display: none;"><li><a href="dev.html" class="nav-link" data-target="gdrs--gdr-001-macro-audit-and-unified-effects">GDR-001_Macro_Audit_And_Unified_Effects</a></li><li><a href="dev--gdrs--gdr-002-gang-pillar-and-lair-economy.html" class="nav-link" data-target="gdrs--gdr-002-gang-pillar-and-lair-economy">GDR-002_Gang_Pillar_And_Lair_Economy</a></li><li><a href="dev--gdrs--gdr-003-unified-modular-powers-system.html" class="nav-link" data-target="gdrs--gdr-003-unified-modular-powers-system">GDR-003_Unified_Modular_Powers_System</a></li><li><a href="dev--gdrs--gdr-004-enemy-stat-framework-and-mobs.html" class="nav-link" data-target="gdrs--gdr-004-enemy-stat-framework-and-mobs">GDR-004_Enemy_Stat_Framework_And_Mobs</a></li><li><a href="dev--gdrs--gdr-005-goblin-magic-dice-system.html" class="nav-link" data-target="gdrs--gdr-005-goblin-magic-dice-system">GDR-005_Goblin_Magic_Dice_System</a></li><li><a href="dev--gdrs--gdr-006-environmental-hazards-and-zone-statblocks.html" class="nav-link" data-target="gdrs--gdr-006-environmental-hazards-and-zone-statblocks">GDR-006_Environmental_Hazards_and_Zone_Statblocks</a></li><li><a href="dev--gdrs--gdr-template.html" class="nav-link" data-target="gdrs--gdr-template">GDR-TEMPLATE</a></li></ul></div><div class="nav-group nav-group--solo"><a href="dev--crafting-creative-analysis.html" class="nav-link nav-link--solo" data-target="crafting-creative-analysis">crafting_creative_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-framework-brainstorm">crafting_framework_brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-mechanics-audit.html" class="nav-link nav-link--solo" data-target="crafting-mechanics-audit">crafting_mechanics_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-brainstorm">crafting-brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--creative-genius-crafting-analysis.html" class="nav-link nav-link--solo" data-target="creative-genius-crafting-analysis">creative_genius_crafting_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-modular-threat-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="enemy-modular-threat-framework-brainstorm">Enemy_Modular_Threat_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-stats-draft.html" class="nav-link nav-link--solo" data-target="enemy-stats-draft">Enemy_Stats_Draft</a></div><div class="nav-group nav-group--solo"><a href="dev--equipment-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="equipment-framework-brainstorm">Equipment_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--gang-mechanics-brainstorm.html" class="nav-link nav-link--solo" data-target="gang-mechanics-brainstorm">Gang_Mechanics_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--generic-trick-mechanics.html" class="nav-link nav-link--solo" data-target="generic-trick-mechanics">Generic_Trick_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--initial-trick-list.html" class="nav-link nav-link--solo" data-target="initial-trick-list">Initial_Trick_List</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-brainstorm.html" class="nav-link nav-link--solo" data-target="lair-brainstorm">Lair_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-mechanics-game-engineering-audit.html" class="nav-link nav-link--solo nav-link--active" data-target="lair-mechanics-game-engineering-audit">Lair_Mechanics_Game_Engineering_Audit</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-refined-framework.html" class="nav-link nav-link--solo" data-target="lair-system-refined-framework">Lair_System_Refined_Framework</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-research-deep-dive.html" class="nav-link nav-link--solo" data-target="lair-system-research-deep-dive">Lair_System_Research_Deep_Dive</a></div><div class="nav-group nav-group--solo"><a href="dev--mob-combat-design-advice.html" class="nav-link nav-link--solo" data-target="mob-combat-design-advice">Mob_Combat_Design_Advice</a></div><div class="nav-group nav-group--solo"><a href="dev--research-crafting-systems.html" class="nav-link nav-link--solo" data-target="research-crafting-systems">research_crafting_systems</a></div><div class="nav-group nav-group--solo"><a href="dev--research-deeds-award-mechanics.html" class="nav-link nav-link--solo" data-target="research-deeds-award-mechanics">Research_Deeds_Award_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-base-building.html" class="nav-link nav-link--solo" data-target="researcher-findings-base-building">Researcher_Findings_Base_Building</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-conditions.html" class="nav-link nav-link--solo" data-target="researcher-findings-conditions">Researcher_Findings_Conditions</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-environmental-hazards.html" class="nav-link nav-link--solo" data-target="researcher-findings-environmental-hazards">Researcher_Findings_Environmental_Hazards</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-analysis.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-analysis">Researcher_Findings_OSR_Analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-sources.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-sources">Researcher_Findings_OSR_Sources</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-notes.html" class="nav-link nav-link--solo" data-target="researcher-notes">Researcher_Notes</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-audit-equipment.html" class="nav-link nav-link--solo" data-target="rules-lawyer-audit-equipment">Rules_Lawyer_Audit_Equipment</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-crafting-audit.html" class="nav-link nav-link--solo" data-target="rules-lawyer-crafting-audit">rules_lawyer_crafting_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-system-audit-report.html" class="nav-link nav-link--solo" data-target="rules-lawyer-system-audit-report">Rules_Lawyer_System_Audit_Report</a></div><div class="nav-group nav-group--solo"><a href="dev--static-resistances-opposed-tests.html" class="nav-link nav-link--solo" data-target="static-resistances-opposed-tests">Static_Resistances_Opposed_Tests</a></div><div class="nav-group nav-group--solo"><a href="dev--trick-mechanics-master-list.html" class="nav-link nav-link--solo" data-target="trick-mechanics-master-list">Trick_Mechanics_Master_List</a></div><div class="nav-group nav-group--solo"><a href="dev--unified-modular-power-system.html" class="nav-link nav-link--solo" data-target="unified-modular-power-system">Unified Modular Power System</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="game-mechanics-audit-the-gobbo-pool-lair-system" tabindex="-1">Game Mechanics Audit: The Gobbo Pool Lair System</h1>
+<p><strong>Role:</strong> Game Mechanics Engineer<br>
+<strong>Objective:</strong> Analyze the mechanical coherence, probability models, and gameplay loops of the proposed d6 “Gobbo Pool” Lair system, identifying tuning points and edge cases.</p>
+<hr>
+<h2 id="1-overall-system-architecture" tabindex="-1">1. Overall System Architecture</h2>
+<p>The proposal to treat the Lair’s population as a communal pool of physical <strong>d6 dice</strong> is a major design success. It achieves three core goals:</p>
+<ol>
+<li><strong>Mechanical Coherence:</strong> It integrates base management with the core resolution mechanic of <em>Gobbos</em> (rolling d6 pools, looking for successes, and exploding 6s).</li>
+<li><strong>No Bookkeeping:</strong> Players do not track individual names, rations, or population counts. They literally slide physical dice across a table to allocate their labor force.</li>
+<li><strong>High-Stakes Tension:</strong> By linking the Lair’s labor force directly to the players’ combat Mobs, casualties suffered on a raid have immediate, painful strategic consequences.</li>
+</ol>
+<hr>
+<h2 id="2-probability-and-economy-analysis" tabindex="-1">2. Probability &amp; Economy Analysis</h2>
+<p>Let’s analyze the mathematical engine behind the Labor Phase. A standard test in this system succeeds on a <strong>4, 5, or 6</strong> (50% base success rate per die), with 6s exploding.</p>
+<h3 id="2-1-clearing-caverns-construction" tabindex="-1">2.1 — Clearing Caverns (Construction)</h3>
+<p>Assume a locked slot requires a target number of successes to clear:</p>
+<ul>
+<li><strong>Low Threat Slot:</strong> 5 successes.</li>
+<li><strong>Medium Threat Slot:</strong> 10 successes.</li>
+<li><strong>High Threat Slot:</strong> 15 successes.</li>
+</ul>
+<p>An exploding d6 has an expected value (EV) of successes calculated as:
+$\text{EV} = 0.5 \text{ (base success chance)} \times \frac{6}{5} \text{ (exploding multiplier)} = 0.6 \text{ successes per die}$</p>
+<pre><code>Labor Dice Assigned  | Expected Successes | Est. Turns to Clear Low (5) | Est. Turns to Clear High (15)
+--------------------|--------------------|----------------------------|------------------------------
+2d6                 | 1.2                | 4.2 Turns                  | 12.5 Turns
+4d6                 | 2.4                | 2.1 Turns                  | 6.3 Turns
+6d6                 | 3.6                | 1.4 Turns                  | 4.2 Turns
+8d6                 | 4.8                | 1.0 Turns                  | 3.1 Turns
+</code></pre>
+<ul>
+<li><strong>Verdict:</strong> This pacing is excellent. A small Lair with only a few spare dice will take several turns to clear a room, creating a tight bottleneck. A prosperous Lair with a large workforce can clear a basic cavern in a single week.</li>
+<li><strong>Risk Profile:</strong> The complication rate is $\frac{1}{6} \approx 16.7%$ per die rolled.
+<ul>
+<li>If you assign 6d6 to clear a room, you expect <strong>1 complication</strong> on average per turn. This guarantees that larger, faster projects generate more noise, chaos, and minor setbacks, which fits the goblin theme perfectly.</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-recruitment-math-tuning-required" tabindex="-1">2.2 — Recruitment Math (Tuning Required)</h3>
+<p>The current proposal states: <em>“Every 6 rolled (exploding!) recruits 1 new d6 to the Gobbo Pool.”</em>
+Let’s analyze the expected growth rate:</p>
+<ul>
+<li>A 6 has a $1/6$ chance of rolling. Due to explosions, the expected value of new dice recruited per die assigned is:
+$\text{EV}_{\text{recruit}} = \frac{1}{6} \times \frac{6}{5} = 0.2 \text{ new dice per Laborer die}$</li>
+</ul>
+<p>If the players assign <strong>5d6</strong> to recruitment:</p>
+<ul>
+<li>
+<p>Expected yield is <strong>1.0 new die</strong> per turn.</p>
+</li>
+<li>
+<p>However, the probability of rolling <strong>zero 6s</strong> on 5d6 is:
+$P(\text{zero } 6\text{s}) = \left(\frac{5}{6}\right)^5 \approx 40.2%$</p>
+</li>
+<li>
+<p><strong>The Issue:</strong> A 40% chance of gaining absolutely nothing after dedicating 5 Gobbos to recruitment for a whole turn is too volatile. It will feel frustratingly slow and grindy.</p>
+</li>
+<li>
+<p><strong>Engineers Recommendation:</strong> We should increase the success chance or use a “Runt” currency to smooth out the curve.</p>
+</li>
+</ul>
+<h4 id="option-a-recruitment-on-a-5-or-6-exploding" tabindex="-1">Option A: Recruitment on a 5 or 6 (Exploding)</h4>
+<ul>
+<li>Expected yield per die: $2/6 \times 6/5 = 0.4$ new dice.</li>
+<li>If you assign 3d6, you expect <strong>1.2 new dice</strong> per turn.</li>
+<li>Chance of recruiting 0 dice on 3d6 drops to $\left(\frac{4}{6}\right)^3 \approx 29.6%$. This is much more rewarding and less swingy.</li>
+</ul>
+<h4 id="option-b-the-runt-token-sub-pool-recommended" tabindex="-1">Option B: The “Runt Token” Sub-Pool (Recommended)</h4>
+<ul>
+<li>Instead of recruiting full d6s directly, recruitment rolls generate <strong>Runts</strong> (successes on a 4+).</li>
+<li><strong>3 Runts = 1 permanent d6</strong> added to the Gobbo Pool.</li>
+<li>This removes the volatility completely. Every Laborer die rolled has a 50% chance of generating a Runt, ensuring slow but guaranteed progress even with small pools.</li>
+</ul>
+<hr>
+<h2 id="3-auto-healing-and-the-casualty-threshold" tabindex="-1">3. Auto-Healing &amp; The Casualty Threshold</h2>
+<p>The decision to <strong>auto-heal returning Mobs for free</strong> (provided they have at least 1 HP remaining) is brilliant because it sets up a high-stakes, binary gamble during raids.</p>
+<h3 id="the-combat-incentive" tabindex="-1">The Combat Incentive:</h3>
+<ul>
+<li>If a player has a Size 3 Mob and it takes heavy damage, bringing it down to Size 1 with only 1 HP left, they face a choice:
+<ul>
+<li><em>Option A: Push on.</em> If the Mob takes one more point of damage and dies, those 3d6 are lost forever from the Lair’s pool.</li>
+<li><em>Option B: Retreat/Cover.</em> Shield the Mob, or order them to flee. If they survive the fight, they will return to the Lair and heal back to Size 3 completely for free.</li>
+</ul>
+</li>
+<li><strong>Design Verdict:</strong> This creates an incredibly tense push-your-luck dynamic. Players will protect their near-death Mobs with their lives, leading to heroic (and hilarious) goblin shielding maneuvers.</li>
+</ul>
+<hr>
+<h2 id="4-growth-and-scaling-caps" tabindex="-1">4. Growth and Scaling Caps</h2>
+<p>To prevent the Gobbo Pool from growing infinitely and turning the game into a massive bookkeeping chore, we must enforce a strict scaling limit.</p>
+<h3 id="recommended-capacity-math" tabindex="-1">Recommended Capacity Math:</h3>
+<p>Let $N$ be the number of players, and $I$ be the Lair’s <strong>Infamy</strong> level.</p>
+<p>$\text{Maximum Gobbo Pool} = (5 \times N) + I$</p>
+<ul>
+<li><strong>Example (3 Players, Infamy 1):</strong> Max capacity is 16d6.</li>
+<li><strong>Example (3 Players, Infamy 5):</strong> Max capacity is 20d6.</li>
+<li><strong>Upgrades:</strong> Specific Lair upgrades (e.g., <em>Sewer Warrens</em>, <em>Hut Expansions</em>) can add a flat $+2\text{d6}$ or $+4\text{d6}$ to this capacity.</li>
+</ul>
+<p>This ensures that at campaign start, players must manage a very tight pool (e.g., 9d6 to 12d6), forcing them to make hard choices between sending larger Mobs on raids or building up their Lair.</p>
+<hr>
+<h2 id="5-summary-of-recommended-adjustments" tabindex="-1">5. Summary of Recommended Adjustments</h2>
+<p>Before drafting these rules into <code>STAGE_Drafts/05_Base/</code>, I recommend implementing the following tweaks to polish the system:</p>
+<ol>
+<li><strong>Refine Recruitment:</strong> Switch to the <strong>Runt Token</strong> system (successes on 4+ generate Runts; 3 Runts = 1d6 pool growth) or make recruitment succeed on a 5–6 (exploding) to reduce frustration.</li>
+<li><strong>Explicit Dig Progress:</strong> Set clear Target Successes for room expansion based on Lair Site Type.</li>
+<li><strong>Raid vs. Labor Allocation Phase:</strong> Make the division of the Gobbo Pool an official, phase-based decision that players must lock in at the beginning of the Lair Turn.</li>
+</ol>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>
