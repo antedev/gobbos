@@ -40,4 +40,4 @@ However, once a battle is concluded, the Boss can organize their Mobs again and 
 
 Typically a condition is removed once the cause of it is removed. Usually this is obvious (e.g., leaving a smoke-filled room clears the [[Blinded]] or Smoky effect).
 
-*   **Hazard Conditions:** Conditions inflicted by environmental hazards (such as [[Weakened]] from poison gas or [[Restrained]] from sticky mud) are removed once a PC or Mob spends a Standard Action ([[Manipulate]] or catching their breath) in a clean zone, or automatically at the end of combat.
+*   **Hazard Conditions:** Conditions inflicted by environmental hazards (such as [[Weakened]] from poison gas or [[Restrained]] from sticky mud) are removed once a PC or Mob spends a [[Standard Action]] ([[Manipulate]] or catching their breath) in a clean zone, or automatically at the end of combat.

@@ -14,15 +14,15 @@ Not every goblin can channel the unstable threads of magic. To cast a spell, a g
 2. **Magical Conduit:** You must possess a magic-focused [[Quirk]] (such as *Weirdo* or *Shaman*) or be wielding a magical [[Oddity]] (such as a runic staff, crystal skull, or channeling wand).
 
 ### Power Words and Slots
-Goblins do not learn "spells." Instead, they memorize [[Power Words]], which are represented by the exact same **Narrative Descriptors (Tags)** used for Quirks, Gang Shenanigans, and Oddity Crafting (e.g., `[Fire]`, `[Sticky]`, `[Shock]`, `[Spooky]`, `[Slip]`). 
-*   **Prepared Words:** Your Power Word slots determine how many Words you can have memorized and ready to cast. Attuning to and swapping Power Words in your slots takes place in the Lair during downtime.
-*   **Accessing Tags:** If you have access to a Tag through your character's Quirks, Gear, Lair upgrades, or Gang traits, you can attune to it as a Power Word to fill one of your slots.
+Goblins do not learn "spells." Instead, they memorize [[Power Words]], which are represented by the exact same **Narrative Descriptors (Tags)** used for Quirks, Gang Shenanigans, and [[Oddity]] Crafting (e.g., `[Fire]`, `[Sticky]`, `[Shock]`, `[Spooky]`, `[Slip]`). 
+*   **Prepared Words:** Your Power Word slots determine how many Words you can have memorized and ready to cast. Attuning to and swapping [[Power Words]] in your slots takes place in the Lair during downtime.
+*   **Accessing Tags:** If you have access to a Tag through your character's Quirks, Gear, [[Lair upgrades]], or Gang traits, you can attune to it as a Power Word to fill one of your slots.
 
 ---
 
 ## The Casting Loop
 
-Casting a spell is a standard Action. When you cast a spell, perform the following steps:
+Casting a spell is a [[standard Action]]. When you cast a spell, perform the following steps:
 
 1. **Declare the Power Word:** Announce the primary Tag you are channeling (e.g., `[Fire]`).
 2. **Roll the Brains Pool:** Roll a number of **d** equal to your [[Brains]] stat. The GM determines the Difficulty (**Easy 4+**, **Normal 5+**, **Hard 6**) based on the environment or the target's resistance.
@@ -32,7 +32,7 @@ Casting a spell is a standard Action. When you cast a spell, perform the followi
    * **Push:** You lock all current successes and reroll all non-success dice to try and build larger matching sets. 
 4. **The Farkle:** If you choose to push and a reroll results in **zero new successes**, the spell fails completely. You must immediately roll on the **Spell Mishap** table corresponding to your Power Word's category.
 
->> **RULE: Exploding Dice & Magic**
+>> **RULE: [[Exploding Dice]] & Magic**
 >> Any time a **6** is rolled, it explodes. Roll an additional die and add it to your pool of non-locked dice. You can lock this new die if it counts as a success, or reroll it if you choose to Push.
 
 ---
@@ -62,7 +62,7 @@ If you roll multiple successes but none form a pair (e.g., you roll a `4`, `5`, 
 
 ## Chaotic Leakage (Side Effects)
 
-Channeling magic is sloppy. Any sets formed by non-success dice (faces that fell below the success threshold) represent magical energy leaking out of control. 
+Channeling magic is sloppy. Any sets formed by non-success dice (faces that fell below the success threshold) represent magical energy leaking [[out of control]]. 
 * A **pair** of non-success dice triggers a **T2 Side Effect**.
 * A **triple** of non-success dice triggers a **T3 Side Effect**.
 * Larger sets of non-success dice trigger higher-tier Side Effects accordingly.

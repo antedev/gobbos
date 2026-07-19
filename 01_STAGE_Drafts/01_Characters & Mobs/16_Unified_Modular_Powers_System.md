@@ -5,7 +5,7 @@
 The **Unified Modular Powers System** is the core framework for all custom abilities, mutations, and specialized gear in Gobbos. It unifies three separate paths of progression under a single rules architecture:
 1. **Quirks & Twists:** Personal abilities customized by the Boss, detailed in [14_Quirks.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md).
 2. **Shenanigans:** The core culture and compulsive traits of a [[Gang]], detailed in [12_Gangs.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md).
-3. **Oddities & Relics:** Strange materials and magical scrap crafted into custom equipment, detailed in [34_Crafting.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/03_Loot/34_Crafting.md).
+3. **[[Oddities]] & Relics:** Strange materials and magical scrap crafted into custom equipment, detailed in [34_Crafting.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/03_Loot/34_Crafting.md).
 
 ---
 
@@ -15,17 +15,17 @@ To ensure mechanical consistency and ease of GM ruling, every custom power, spel
 
 ### Category 1: The Modification (What it does)
 The actual mechanical change or rule-breaking effect introduced to the game engine.
-*   **Dice Pool Adjustments:**
+*   **[[Dice Pool]] Adjustments:**
     *   *Extra Dice:* Adds a number of [[Boon]] dice (**+Xd**) to the test pool.
     *   *Penalty Dice:* Deducts a number of [[Bane]] dice (**-Xd**) from the test pool.
-    *   *Bangaranga Extraction Override:* Allows the wielder to draw dice from the shared [[Bangaranga Pool]] up to their [[Grunt]] stat, regardless of standard test limits.
+    *   *[[Bangaranga]] Extraction Override:* Allows the wielder to draw dice from the shared [[Bangaranga Pool]] up to their [[Grunt]] stat, regardless of standard test limits.
 *   **Probability Engineering:**
     *   *Reroll Permission:* Grants permission to reroll a specified subset of failed dice.
     *   *Specific Face Reroll:* Forces or allows rerolling specific die faces (e.g., rerolling all 1s).
     *   *Spiteful Reroll:* Allows a full reroll of failed dice, but you suffer 1 [[Grit]] damage if the second attempt fails.
 *   **Explosion Engineering:**
     *   *Exploding 5s:* Standard tests now explode on both 5s and 6s.
-    *   *Double Explosion:* Landing a 6 generates two additional dice instead of one (native to Bangaranga dice).
+    *   *Double Explosion:* Landing a 6 generates two additional dice instead of one (native to [[Bangaranga dice]]).
     *   *Explosion Removal:* Suppresses explosion mechanics entirely (6s count as successes but do not explode).
 *   **Success & Difficulty Gauges:**
     *   *Target Number (TN) Adjustment:* Alters the required successes by a flat number (**+/- X**).
@@ -39,9 +39,9 @@ The actual mechanical change or rule-breaking effect introduced to the game engi
     *   *Flat Damage/Success Increment:* Adds automatic successes to attacks (against standard foes) or automatic [[Grit]] or Mob [[Size]] damage (against PCs and Mobs).
     *   *Cleave Damage Vector:* Excess successes beyond defense spill over to damage extra units in a Mob.
     *   *Area of Effect (AoE) Duplication:* Duplicates damage to apply to every single die in a Mob's pool.
-    *   *Overkill Multiplier:* Deals an extra Wound for every exact multiple of the target's Defence TN.
-    *   *Passive Defence Dice Grant:* Grants bonus passive defence dice (**+Xd**).
-    *   *Passive Defence Bypass:* Bypasses the target's passive defence dice and armor completely.
+    *   *Overkill Multiplier:* Deals an extra Wound for every exact multiple of the target's [[Defence TN]].
+    *   *[[Passive Defence]] Dice Grant:* Grants bonus [[passive defence]] dice (**+Xd**).
+    *   *[[Passive Defence]] Bypass:* Bypasses the target's [[passive defence]] dice and armor completely.
 *   **Status State Toggles:**
     *   *Condition Infliction:* Imposes a condition (Weakened, Restrained, Dumb, Silenced, Blinded, Terrified, Stunned, Prone).
     *   *Condition Negation:* Grants immunity to a specific condition.
@@ -54,11 +54,11 @@ The actual mechanical change or rule-breaking effect introduced to the game engi
 ### Category 2: The Target (What it affects)
 The specific rules, stats, actions, or trackers that the modification acts upon. Target mechanics are grouped into five **Target Hubs**:
 *   **Stats:** Tough Test, Slink Test, Brains Test, Mouth Test.
-*   **Actions & Reactions:** Attack Action (Melee/Ranged), Move Action, Plunder Action, Manipulate Action, Order Action, Dodge Reaction, Parry Reaction, Scatter Order, Opportunity Attack, Disengage, Group Attack.
+*   **Actions & Reactions:** Attack Action (Melee/Ranged), Move Action, Plunder Action, Manipulate Action, [[Order Action]], Dodge Reaction, Parry Reaction, Scatter Order, Opportunity Attack, Disengage, [[Group Attack]].
 *   **Horde & Command:** Mob [[Size]], Mob [[Slink]] Normalization, Mob Cognitive Normalization, Boredom Rule, Cross-Gang Command Struggle, In-Fighting Damage.
-*   **Campaign & Lair:** Zone Profile (Base TN), Movement Cost Multiplier, Size Capacity Threshold, Cover State, Hazard Resolution Test, Route Test, Travel Event, **Laden** or [[Over-Laden]] Penalties, Lair labor allocation, Recruitment loops, Slot clearance, Dominance contribution, Supply routes.
+*   **Campaign & Lair:** [[Zone Profile]] (Base TN), Movement Cost Multiplier, Size Capacity Threshold, Cover State, Hazard Resolution Test, [[Route Test]], [[Travel Event]], **Laden** or [[Over-Laden]] Penalties, Lair labor allocation, Recruitment loops, Slot clearance, Dominance contribution, Supply routes.
 *   **Arcane:** Spell Activation Brains Pool, Push-Your-Luck Reroll, Chaotic Leakage (Side Effects), Spell Mishap (Farkle).
-*   **Equipment:** Durability Break Roll, Scrap Cascade, Oddity Ceiling.
+*   **Equipment:** Durability Break Roll, [[Scrap Cascade]], [[Oddity]] Ceiling.
 
 ### Category 3: The Trigger or Constraint (When it applies)
 The specific conditions, circumstances, or events required for the ability to activate:
@@ -83,7 +83,7 @@ The specific conditions, circumstances, or events required for the ability to ac
     *   *Probability Failure State (Fumble):* Triggers if a roll has zero successes and two or more 1s.
     *   *Probability Failure State (Expanded Fumble):* Triggers if a roll contains any 1s.
     *   *Probability Success State (Critical):* Triggers if a roll generates consecutive exploding 6s.
-    *   *Dice Pool Verification:* Evaluates the exact count of 1s in a roll.
+    *   *[[Dice Pool]] Verification:* Evaluates the exact count of 1s in a roll.
 *   **Operational & Health States:**
     *   *Direct Damage Gate (Wounding):* Triggers when a sheet registers [[Grit]] or Mob [[Size]] loss.
     *   *Biological Deprivation State:* Deprived of resource inputs (e.g., gross food).
@@ -93,7 +93,7 @@ The specific conditions, circumstances, or events required for the ability to ac
     *   *Gang Faction Alignment:* Character sheet matches parent faction tag.
     *   *Faction Defiance (Cursed):* Item gang tag doesn't match wielder's rival gang.
     *   *Attribute Tier Gating:* Primary stat score is at or above a designated value.
-    *   *Component Mismatch (Ceiling Rule):* Oddity tier exceeds workshop level.
+    *   *Component Mismatch (Ceiling Rule):* [[Oddity]] tier exceeds workshop level.
     *   *Arcane Difficulty Constraint:* Successes are locked strictly to face value 6 (Hard casting).
 
 ### Category 4: The Delivery (Who and where it targets)
@@ -122,10 +122,10 @@ The range (how far the effect travels) and area of effect (who is caught in the 
 The action, resource ([[Grunt]], [[Grit]], or [[Size]]), or item spent to activate the power:
 *   **Action Economy:**
     *   *Passive:* Triggers automatically or constantly active (0 Cost).
-    *   *Free Action:* Instant during active turn for minor triggers.
-    *   *Standard Action:* Consumes 1 of 3 standard combat actions.
-    *   *Reaction (Saved Action):* Consumes a saved Standard Action out of turn.
-    *   *Free Order Action:* Consumes 1 Free Order Mouth allocation.
+    *   *[[Free Action]]:* Instant during active turn for minor triggers.
+    *   *[[Standard Action]]:* Consumes 1 of 3 standard combat actions.
+    *   *Reaction (Saved Action):* Consumes a saved [[Standard Action]] out of turn.
+    *   *Free [[Order Action]]:* Consumes 1 Free Order Mouth allocation.
 *   **Personal Resource Pools:**
     *   *Current Grunt Spend:* Deducts 1 to 3 points from current [[Grunt]] pool.
     *   *Grit Loss:* Inflicts flat [[Grit]] damage directly, bypassing defense rolls.
@@ -135,10 +135,10 @@ The action, resource ([[Grunt]], [[Grit]], or [[Size]]), or item spent to activa
     *   *Garrison Cost:* Leaving a Mob behind, removing them from the Gobbo Pool.
 *   **Inventory & Wealth:**
     *   *Scrap / Component Consumption:* Consumes a piece of Scrap or item held in inventory.
-    *   *Oddity Sacrifice:* Permanently erases a component from Lair inventory.
-    *   *Bribe / Loot Value Expenditure:* Deducts raw wealth (e.g. 5 Loot) from hoard.
+    *   *[[Oddity]] Sacrifice:* Permanently erases a component from Lair inventory.
+    *   *Bribe / [[Loot Value]] Expenditure:* Deducts raw wealth (e.g. 5 Loot) from hoard.
 *   **Equipment Lifecycle:**
-    *   *Overclock Disintegration:* Instantly vaporizes the item chassis.
+    *   *[[Overclock]] Disintegration:* Instantly vaporizes the item chassis.
     *   *Active Bite Level Escalation:* Increases item's instability by +1 Bite.
 *   **Downtime Subsystems:**
     *   *Laborer Die Allocation:* Assigns a Lair laborer die to a chore.
@@ -147,10 +147,10 @@ The action, resource ([[Grunt]], [[Grit]], or [[Size]]), or item spent to activa
 *   **Tactical Trade-Offs:**
     *   *Loot / Bulk Jettison:* Immediately dropping Bulk/treasure to validate action.
     *   *Mandatory Friendly Targeting:* Targeting a friendly Mob to trigger a loop (e.g., Asserting Dominance).
-    *   *Action Restriction (Disengage):* Requires spending a standard action to safely exit zone.
+    *   *Action Restriction (Disengage):* Requires spending a [[standard action]] to safely exit zone.
 *   **Risk & Pool Penalties:**
     *   *Push-Your-Luck Reroll Lock:* Locks successes, forces reroll of non-successes.
-    *   *Bangaranga Pool Drainage Tax:* Drainage of Bangaranga dice on fail.
+    *   *[[Bangaranga Pool]] Drainage Tax:* Drainage of [[Bangaranga dice]] on fail.
     *   *Forced Hazard Roll Trigger:* Triggers unrolled GM check on a complication table.
 
 ### Category 6: The Duration (How long it lasts)
@@ -208,12 +208,12 @@ To simplify play, the rules pre-bundle the positive building blocks (**Modificat
 
 ## 4. Non-Combat & Campaign Tiering
 
-While the combat-focused matrix is the default player-facing interface, custom Quirks and Oddities that modify non-combat loops (such as travel routes, downtime labor, or item durability) are tiered using these guidelines:
+While the combat-focused matrix is the default player-facing interface, custom Quirks and [[Oddities]] that modify non-combat loops (such as travel routes, downtime labor, or item durability) are tiered using these guidelines:
 
 *   **Tier 1 (Niche/Minor):** Modifies a single-target, minor non-combat utility (e.g., granting a [[Boon]] to a specific travel role, or reducing an item's Bulk by 1).
 *   **Tier 2 (Standard):** Modifies a standard non-combat mechanic (e.g., shifting a travel test difficulty step, or reducing an item's active Bite level by 1).
 *   **Tier 3 (Heroic/Area):** Modifies a group-wide or zone-wide campaign metric (e.g., granting **+1 success** to Lair labor rolls, or allowing a Mob to ignore the **Laden** travel penalty).
-*   **Tier 4 (Destructive):** Modifies macro-campaign structures (e.g., preventing any gear breakage on a fumbled attack, or allowing a Mob to ignore [[Over-Laden]] travel penalties).
+*   **Tier 4 (Destructive):** Modifies macro-campaign structures (e.g., preventing any gear breakage on a [[fumbled]] attack, or allowing a Mob to ignore [[Over-Laden]] travel penalties).
 *   **Tier 5 (Legendary):** Permanently alters campaign systems globally (e.g., granting a permanent Lair labor bonus, or generating permanent Lair resources).
 
 ---
@@ -236,7 +236,7 @@ Descriptors (written as `[Tag]`) represent the physical or magical manifestation
 * How different elements combine during **Element Synthesis**.
 
 ### The Power Blueprint Template
-GMs and developers write abilities using this standardized blueprint card:
+GMs and developers write abilities using this standardized [[blueprint]] card:
 
 ```markdown
 ### [Power/Item Name]
@@ -250,7 +250,7 @@ GMs and developers write abilities using this standardized blueprint card:
 
 > **Example (Quirk):** Grub has a [[Slink]] of 2. They select a [[Slink]] **T2** [[Quirk]]. They combine the **T2** Mechanical Effect (*imposes a Sustained condition*) with the Descriptor `[Sticky]` to create the **Sticky Spit** [[Quirk]]. When activated, the target is covered in glue and gains the *Restrained* condition.
 >
-> **Example (Oddity):** A crafter builds a **T3** weapon using a fire crystal. They choose the **T3** Mechanical Effect (*Zone Area*) and the Descriptor `[Fire]`. The weapon is a **Flameslasher**. When swung, it sweeps fire across the entire [[Zone]].
+> **Example ([[Oddity]]):** A crafter builds a **T3** weapon using a fire crystal. They choose the **T3** Mechanical Effect (*Zone Area*) and the Descriptor `[Fire]`. The weapon is a **Flameslasher**. When swung, it sweeps fire across the entire [[Zone]].
 
 ### The Activation Cost Economy
 To use an active modular power or [[Oddity]], a Boss must pay its associated activation cost. Because [[Grunt]] is a limited pool that determines maximum commanded Mob [[Size]], spending [[Grunt]] is a significant tactical sacrifice:
@@ -261,15 +261,15 @@ To use an active modular power or [[Oddity]], a Boss must pay its associated act
 
 ### Balancing Area of Effect (AoE) Powers
 Area attacks are highly lethal in Gobbos because [[Area of Effect (AoE)]] or [[Cleave]] damage applies to **every single die** in a [[Mob]]'s pool (see [13_Goblin_mob.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md)).
-*   **The Multi-Oddity Rule:** An item or power cannot possess both a high-tier damage effect and a wide Area/Blast delivery without paying the modular cost.
+*   **The Multi-[[Oddity]] Rule:** An item or power cannot possess both a high-tier damage effect and a wide Area/Blast delivery without paying the modular cost.
 *   To build an Area-damage weapon, a player must install both a **Core** [[Oddity]] (representing the successes/damage) and a **Modifier** [[Oddity]] (representing the Area/Blast delivery).
-*   Because a goblin's [[Brains]] stat caps their [[Crafting Capacity]] (max Oddities per item), low-[[Brains]] goblins cannot build wide-area high-tier weapons. A [[Brains]] 1 goblin can only build a single-target **T3** weapon. A [[Brains]] 3+ goblin is required to combine a **T3** **Core** and a **T3** Area **Modifier**.
+*   Because a goblin's [[Brains]] stat caps their [[Crafting Capacity]] (max [[Oddities]] per item), low-[[Brains]] goblins cannot build wide-area high-tier weapons. A [[Brains]] 1 goblin can only build a single-target **T3** weapon. A [[Brains]] 3+ goblin is required to combine a **T3** **Core** and a **T3** Area **Modifier**.
 
 ---
 
 ## 6. Element Synthesis
 
-When players combine multiple descriptors (e.g., custom gear with multiple Oddities or environmental combos), the outcome is resolved using the following guidelines:
+When players combine multiple descriptors (e.g., [[custom gear]] with multiple [[Oddities]] or environmental combos), the outcome is resolved using the following guidelines:
 
 ### Resolution at Creation
 To prevent combat speed-bumps, **Element Synthesis must be resolved at the point of weapon creation/customization**, rather than negotiated during combat rounds. The player designs the combination during downtime, the GM approves the emergent synergy, and a static final statblock is written onto the item sheet.

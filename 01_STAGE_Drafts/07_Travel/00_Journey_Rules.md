@@ -44,10 +44,10 @@ For each Stage of the journey, the players must resolve the following two steps 
 The **Map-Scrawler** rolls a [[Brains]] test against the terrain's difficulty (typically **5+/1**).
 
 * **Success:** The route is clear. The party progresses to the next Stage (or arrives if this was the final stage).
-* **Failure:** The party gets lost or takes a grueling detour. The entire party suffers 1 **Attrition** (every Mob in the travel party immediately takes 1 damage to its active health die), and the party suffers a [[Bane]] (-1d) on the upcoming Travel Event test.
+* **Failure:** The party gets lost or takes a grueling detour. The entire party suffers 1 **Attrition** (every Mob in the travel party immediately takes 1 damage to its active health die), and the party suffers a [[Bane]] (-1d) on the upcoming [[Travel Event]] test.
 
 ### 2. The Travel Event
-The GM rolls **1d6** on the **Gobbo Travel Event Table** below. The resulting event targets one of the other three roles, who must make a test to resolve it.
+The GM rolls **1d6** on the **Gobbo [[Travel Event]] Table** below. The resulting event targets one of the other three roles, who must make a test to resolve it.
 
 | Roll | Event Name | Role Targeted | Stat Tested | Success Outcome | Failure Outcome |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -75,7 +75,7 @@ A Mob carrying more [[Loot]] than half its maximum [[Loot Capacity]] is consider
 A Mob carrying its maximum [[Loot Capacity]] is considered [[Over-Laden]].
 * [[Over-Laden]] Mobs suffer all the penalties of being Laden.
 * [[Over-Laden]] Mobs cannot roll passive defense dice (such as armor) to reduce damage from travel hazards.
-* [[Over-Laden]] Mobs automatically take 1 damage on a failed Route Test (representing exhaustion from dragging heavy junk), in addition to the standard party Attrition.
+* [[Over-Laden]] Mobs automatically take 1 damage on a failed [[Route Test]] (representing exhaustion from dragging heavy junk), in addition to the standard party Attrition.
 * If the party is forced to flee or dodge a hazard, they must immediately discard 2 [[Bulk]] of Loot per [[Over-Laden]] Mob, or the Mob becomes [[Uncontrolled]] as they refuse to leave the treasure behind.
 
 ---
@@ -101,12 +101,12 @@ These scenarios illustrate how roles, route tests, and travel events are resolve
 > 1. [[Route Test]]: Grub rolls his Brains (**3d6**). He rolls `4, 2, 1`—zero successes! The party gets lost in a swamp. Every Mob takes 1 **Attrition damage** (the Mob's health die drops by 1). Also, the party takes a [[Bane]] (-1d) on the next event.
 > 2. [[Travel Event]]: The GM rolls a `5`: **Shadow Ambush**. This requires a [[Slink]] test from the Sniffer. Snarl's Mob is the Sniffer, rolling **1d6**, but they have a [[Bane]] from getting lost, leaving them with **0d6** to roll! 
 > 
-> *Note: In Gobbos, if a dice pool is reduced to 0d6 or less, the test automatically fails, but you still roll 1d6 and need a 6 to salvage it, while a 1 is a fumble. Snarl's player rolls `2`—a standard failure.*
+> *Note: In Gobbos, if a [[dice pool]] is reduced to 0d6 or less, the test automatically fails, but you still roll 1d6 and need a 6 to salvage it, while a 1 is a fumble. Snarl's player rolls `2`—a standard failure.*
 > 
 > The ambush is sprung. The Mob takes **2 damage**. Since they have armor, they roll their passive defense die, rolling a `5` (one success), reducing the damage to 1. The party arrives at the raid battered but alive!
 
 ### Example 2: The Laden Return (Greed is Good)
-> **Example:** Having looted a human merchant's cellar, Snarl's **Size 3 Mob** is now carrying 10 [[Bulk]] of treasure back to the Lair. Since their maximum Loot Capacity is 12 [[Bulk]], and 10 is greater than half (6 Bulk), the Mob is **Laden**.
+> **Example:** Having looted a human merchant's cellar, Snarl's **Size 3 Mob** is now carrying 10 [[Bulk]] of treasure back to the Lair. Since their maximum [[Loot Capacity]] is 12 [[Bulk]], and 10 is greater than half (6 Bulk), the Mob is **Laden**.
 >
 > On the return journey (1 Stage):
 > 1. [[Route Test]]: Grub rolls Brains (**3d6**). Because the Mob is Laden, the TN is increased by +1, meaning Grub needs **2 successes** instead of 1. Grub rolls `6, 4, 3`. The `6` explodes into a `5`. That is two successes! The party stays on track despite the heavy loads.

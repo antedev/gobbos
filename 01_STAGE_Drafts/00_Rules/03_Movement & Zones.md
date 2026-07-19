@@ -82,8 +82,8 @@ A player's movement is measured in number of Zones, and a normal movement speed 
 
 Every Zone in an encounter is assigned a default [[Zone Profile]] consisting of a [[Difficulty]] and a [[Target Number (TN)]] (e.g., **5+/1**, **5+/2**, or **6/1**).
 
->> **THE ZONE PROFILE RULE:**
->> Any general environmental interaction, traversal, or search test attempted within a Zone defaults to using that Zone's Profile. GMs do not invent DCs for individual tasks; they simply use the Zone Profile.
+>> **THE [[ZONE PROFILE]] RULE:**
+>> Any general environmental interaction, traversal, or search test attempted within a Zone defaults to using that Zone's Profile. GMs do not invent DCs for individual tasks; they simply use the [[Zone Profile]].
 >> *   *Example:* Climbing a wall, forcing a door, jumping a trench, or searching a junk pile in a Zone with a **5+/2** profile all require **2 successes** on a [[Normal]] (5+) test.
 
 GMs can adjust the Difficulty level of a specific task based on tools or circumstances using standard [[Boon|Boons]] and [[Bane|Banes]] (e.g., using professional climbing gear grants a [[Boon]] (+1d) to the traversal test, while a rusty lock imposes a [[Bane]] (-1d) on the test), but the base TN and Difficulty remain tied to the Zone itself.
@@ -108,7 +108,7 @@ These are negative environmental features.
 ### Opportunities (Tactical Features & Treats)
 These are interactive or beneficial environmental features.
 *   **Passive Benefits:** Some opportunities provide constant benefits (e.g., providing cover or granting a [[Boon]] to attacks).
-*   **Interactive Benefits:** Goblins can interact with an opportunity by spending a Standard Action ([[Manipulate]] or [[Attack]]) and testing a relevant stat against the [[Zone Profile]] to yield a benefit.
+*   **Interactive Benefits:** Goblins can interact with an opportunity by spending a [[Standard Action]] ([[Manipulate]] or [[Attack]]) and testing a relevant stat against the [[Zone Profile]] to yield a benefit.
 
 ---
 
@@ -120,7 +120,7 @@ GMs can customize battlefields by placing these standardized, modular traits ont
 
 *   **Chasm / Pit (T3 Obstacle):** A gaping hole, trench, or cliff edge.
     *   *Trigger:* Attempting to cross, or being pushed toward the edge.
-    *   *Rules:* Traversing requires a [[Slink]] test against the [[Zone Profile]]. On a failure, the creature falls in, taking **3 damage** and gaining the [[Restrained]] condition. Clambering out requires spending a Standard Action to test [[Tough]] against the profile.
+    *   *Rules:* Traversing requires a [[Slink]] test against the [[Zone Profile]]. On a failure, the creature falls in, taking **3 damage** and gaining the [[Restrained]] condition. Clambering out requires spending a [[Standard Action]] to test [[Tough]] against the profile.
 *   **Deep Water (Obstacle):** Flooded chambers, sewer channels, or rapid rivers.
     *   *Trigger:* Passive / Interactive (for swimming).
     *   *Rules:* Traversing this Zone requires a [[Move]] action to travel only 1 [[Zone]] (ignoring standard movement speed). If forced to swim or stay afloat (directly in the water without a boat or bridge), a creature starting their turn in this Zone must test [[Tough]] against the [[Zone Profile]] or begin drowning (taking 1 damage per round).
@@ -129,7 +129,7 @@ GMs can customize battlefields by placing these standardized, modular traits ont
     *   *Rules:* The maximum Mob size that can occupy this Zone without penalty is **Size 2**. Mobs of **Size 3+** suffer a [[Bane]] (-1d) to all attack rolls and physical tests while in this Zone, and their Movement is capped at 1 [[Zone]]. Giant enemies cannot enter.
 *   **Pillars / Statues (Tactical Feature):** Solid stone pillars or crumbling carvings.
     *   *Trigger:* Passive.
-    *   *Rules:* Anyone occupying this Zone can declare they are taking cover behind a pillar (as a Free Action), granting them [[Full Cover]] against attacks coming from one specific adjacent Zone.
+    *   *Rules:* Anyone occupying this Zone can declare they are taking cover behind a pillar (as a [[Free Action]]), granting them [[Full Cover]] against attacks coming from one specific adjacent Zone.
 *   **Rubble (Obstacle):** Loose stones, steep scree, or collapsed vaults.
     *   *Trigger:* Traversing.
     *   *Rules:* Moving through this Zone costs double movement (spending 2 Zones' worth of movement speed to cross).
@@ -150,13 +150,13 @@ GMs can customize battlefields by placing these standardized, modular traits ont
     *   *Rules:* The Zone imposes the active state of `[Gale]`. All ranged attacks passing through or targeting someone inside this Zone suffer a [[Bane]] (-1d). Moving against the direction of the wind requires a [[Tough]] test against the profile; on a failure, movement speed is halved.
 *   **Quicksand / Mud (T2 Hazard):** *Sticky mud or waterlogged silt.* | `[Wet]`, `[Sinking]`
     *   *Trigger:* Entering the Zone.
-    *   *Rules:* The Zone imposes the active states of `[Wet]` (conducts electricity, extinguishes fire) and `[Sinking]` (downward drag). Any creature entering or moving in the Zone must test [[Slink]] against the [[Zone Profile]]. On a failure, they gain the [[Restrained]] condition. Breaking free requires spending a Standard Action to test [[Tough]] against the profile.
+    *   *Rules:* The Zone imposes the active states of `[Wet]` (conducts electricity, extinguishes fire) and `[Sinking]` (downward drag). Any creature entering or moving in the Zone must test [[Slink]] against the [[Zone Profile]]. On a failure, they gain the [[Restrained]] condition. Breaking free requires spending a [[Standard Action]] to test [[Tough]] against the profile.
 *   **Slippery (Obstacle):** *Smooth ice, wet grease, or organic slime.* | `[Slick]`
     *   *Trigger:* Entering the Zone.
     *   *Rules:* The Zone imposes the active state of `[Slick]`. Any creature attempting to move into or out of the Zone must test [[Slink]] against the [[Zone Profile]]. On a failure, they fall [[Prone]] and their movement ends immediately.
 *   **Toxic Spores / Gas (T2 Hazard):** *Poisonous sewer gases, acid clouds, or mold spores.* | `[Toxic]`, `[Gaseous]`
     *   *Trigger:* Starting a turn inside the Zone.
-    *   *Rules:* The Zone imposes the active states of `[Toxic]` (inflicts [[Weakened]] condition) and `[Gaseous]` (creates dark screen). All creatures starting their turn inside this Zone must test [[Tough]] against the [[Zone Profile]]. On a failure, they suffer the [[Weakened]] condition until they spend a Standard Action to catch their breath in a clean zone.
+    *   *Rules:* The Zone imposes the active states of `[Toxic]` (inflicts [[Weakened]] condition) and `[Gaseous]` (creates dark screen). All creatures starting their turn inside this Zone must test [[Tough]] against the [[Zone Profile]]. On a failure, they suffer the [[Weakened]] condition until they spend a [[Standard Action]] to catch their breath in a clean zone.
 
 ### 3. Environmental Blueprints (Weather & Complex Hazards)
 
@@ -175,7 +175,7 @@ GMs can construct complex, dynamic weather events or composite environmental haz
 *   **Wildfire (T2 Hazard):** *Searing heat, open flames, and thick screens of smoke.* | `[Fire]`, `[Gaseous]`, `[Loud]`
     *   *Rules:* Flames deal automatic damage and place burning effects (`[Fire]`), choking smoke obscures vision and blocks ranged attacks (`[Gaseous]`), and the roaring timber prevents quiet action (`[Loud]`).
 *   **Flash Flood (T2 Hazard):** *A sudden wall of high-velocity water.* | `[Wet]`, `[Fast]`
-    *   *Rules:* Water washes away chemicals and coatings (`[Wet]`) while rushing down-zone, allowing creatures to move 1 Zone as a Free Action (`[Fast]`) but carrying unattended items and creatures away in the torrent at the End of Round unless they pass a [[Tough]] test.
+    *   *Rules:* Water washes away chemicals and coatings (`[Wet]`) while rushing down-zone, allowing creatures to move 1 Zone as a [[Free Action]] (`[Fast]`) but carrying unattended items and creatures away in the torrent at the End of Round unless they pass a [[Tough]] test.
 *   **Earthquake / Cave-In (T3 Hazard):** *Violent shaking and falling stone debris.* | `[Vibrating]`, `[Crushing]`
     *   *Rules:* The ground shakes violently, disrupting spellcasting and notice checks (`[Vibrating]`), while falling rocks pin creatures and slow movement to a maximum of 1 Zone (`[Crushing]`).
 *   **Smog Marsh (T2 Hazard):** *A swamp filled with thick sewer gas where light dies.* | `[Wet]`, `[Toxic]`, `[Dark]`
@@ -191,14 +191,14 @@ GMs can construct complex, dynamic weather events or composite environmental haz
     *   *Trigger:* Passive.
     *   *Rules:* Anyone inside this Zone gains [[Partial Cover]] (ranged attacks targeting them suffer a [[Bane]] (-1d), and they gain a [[Boon]] (+1d) to [[Dodge]] reactions).
 *   **Junk Pile (Treat):** Stacks of dungeon scrap, refuse, or broken weapons.
-    *   *Trigger:* Interactive (Standard Action: [[Manipulate]]).
+    *   *Trigger:* Interactive ([[Standard Action]]: [[Manipulate]]).
     *   *Rules:* Goblins can search the pile (test [[Brains]] against the [[Zone Profile]]). On a success, they find a throw-able object (deals 1 damage ranged) or a random piece of low-grade loot. Once successfully searched, the Junk Pile is exhausted and cannot be searched again during the raid.
 *   **Shadowy (Tactical Feature):** Deep alcoves, heavy curtains, or dim corners.
     *   *Trigger:* Passive.
     *   *Rules:* Goblins attempting to Hide in this Zone gain a [[Boon]] (+1d) on their stealth-related [[Slink]] tests.
 *   **Shoring (Interactive Opportunity):** Wooden structural beams supporting the ceiling.
-    *   *Trigger:* Interactive (Standard Action: [[Manipulate]] or [[Attack]]).
-    *   *Rules:* Goblins can collapse the beams. Test [[Brains]] (to sabotage) or make a successful melee attack against the [[Zone Profile]]. On a success, the Zone immediately gains the **Crumbling Ceiling** hazard (everyone in the zone tests [[Slink]] or takes **3 damage**), and all exits to adjacent Zones are blocked. Clearing a blocked exit requires spending a Standard Action to successfully test [[Tough]] against the [[Zone Profile]].
+    *   *Trigger:* Interactive ([[Standard Action]]: [[Manipulate]] or [[Attack]]).
+    *   *Rules:* Goblins can collapse the beams. Test [[Brains]] (to sabotage) or make a successful [[melee attack]] against the [[Zone Profile]]. On a success, the Zone immediately gains the **Crumbling Ceiling** hazard (everyone in the zone tests [[Slink]] or takes **3 damage**), and all exits to adjacent Zones are blocked. Clearing a blocked exit requires spending a [[Standard Action]] to successfully test [[Tough]] against the [[Zone Profile]].
 
 ---
 
@@ -214,11 +214,11 @@ These scenarios illustrate how different hazards, opportunities, and Mob rules p
 ### Example 2: Braving the Toxic Fumes (Tough Tests & Mob Scaling)
 > **Example:** Snarl (PC) and her massive **Size 5** Mob are pursuing a dwarf through a sewer pipe designated as **Zone B** (Profile: **5+/2**; Traits: [Toxic] and **Narrow**). They start their turn in the zone.
 > * **The PC**: Snarl has **Tough 2**, rolling **2d6** (Stat). She rolls `6, 3`. The `6` explodes and she rolls another `3`. The total is one success—not enough for the **5+/2** profile! Snarl fails the test and gains the [[Weakened]] condition.
-> * **The Mob**: Because it is a Tough test, the Mob rolls [[Size]] dice (**5d6**). However, the zone has the **Narrow** trait, imposing a permanent [[Bane]] (-1d) on all physical tests. The Mob's dice pool is reduced to **4d6**. The player rolls `6, 5, 5, 2`. The `6` explodes and rolls a `4`. That is three successes! The Mob easily passes the test and is unaffected by the gas, their sheer numbers and mass helping them pull each other through.
+> * **The Mob**: Because it is a Tough test, the Mob rolls [[Size]] dice (**5d6**). However, the zone has the **Narrow** trait, imposing a permanent [[Bane]] (-1d) on all physical tests. The Mob's [[dice pool]] is reduced to **4d6**. The player rolls `6, 5, 5, 2`. The `6` explodes and rolls a `4`. That is three successes! The Mob easily passes the test and is unaffected by the gas, their sheer numbers and mass helping them pull each other through.
 
 ### Example 3: Collapsing the Support (Shoring Opportunity)
 > **Example:** Wizgog (PC) is cornered by a heavily armored knight in a crypt (**Zone C**, Profile: **5+/1**; Trait: **Shoring**). Wizgog wants to collapse the ceiling on the knight.
-> * **The Action**: Wizgog spends a Standard Action to smash the rotten wooden support column. Since this is an interactive opportunity, he tests [[Brains]] (his stat is 3, so he rolls **3d6**) against the zone's **5+/1** profile.
+> * **The Action**: Wizgog spends a [[Standard Action]] to smash the rotten wooden support column. Since this is an interactive opportunity, he tests [[Brains]] (his stat is 3, so he rolls **3d6**) against the zone's **5+/1** profile.
 > * **The Result**: He rolls `5, 2, 1`—one success! The column splinters. The Zone immediately triggers a cave-in (**Crumbling Ceiling**).
 > * **The Resisting Tests**: 
 >   * Wizgog tests Slink (**2d6**) and rolls `5, 1` (success), jumping clear of the debris.

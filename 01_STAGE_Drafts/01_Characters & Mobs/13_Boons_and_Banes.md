@@ -30,7 +30,7 @@ This list contains the raw mechanical effects used to build Quirks, Items, and M
 ### Action Economy & Movement
 *   **Scurry:** Move 1 Zone for free once per round.
 *   **Quick Swap:** Changing held items does not cost an action.
-*   **Bloodlust:** Gain 1 free action immediately when you reduce an enemy to 0 health.
+*   **Bloodlust:** Gain 1 [[free action]] immediately when you reduce an enemy to 0 health.
 *   **Slippery:** Enemies do not get free reactionary attacks when you leave their Zone.
 *   **Wall-Crawler:** You can move vertically without a Slink test.
 
@@ -39,12 +39,12 @@ This list contains the raw mechanical effects used to build Quirks, Items, and M
 *   **Inspiring Death:** Regain 1 Grunt when one of your own Mobs is entirely wiped out in your Zone.
 *   **Meat Shield:** Once per combat, redirect an attack meant for you to an adjacent friendly Mob.
 *   **Cheerleaders:** Mobs in your Zone roll +1d on their attacks.
-*   **Whip-Cracker:** You can spend an Action to give a Mob a free Action.
+*   **Whip-Cracker:** You can spend an Action to give a Mob a [[free Action]].
 
 ### Survival & Utility
 *   **Hard Head:** Ignore the first time you take damage in a raid.
 *   **Iron Stomach:** You can eat literal garbage/poison to heal 1 wound (Roll a Tough test to see if you get sick instead).
-*   **Pack Mule:** Carry Capacity increased by +2 Bulk.
+*   **Pack Mule:** [[Carry Capacity]] increased by +2 Bulk.
 *   **Shiny Finder:** You automatically Notice hidden Loot of Value 1 without needing to roll.
 
 ---

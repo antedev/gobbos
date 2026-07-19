@@ -28,7 +28,7 @@ Every enemy is defined by a standardized, table-based stat block. The top sectio
 *   **Size:** The physical [[Size]] classification of the enemy. 
 *   **Defence:** The number of successes a [[Player]] must roll on an [[Attack]] test to deal a [[Wound]] or instantly kill the enemy.
 *   **Movement:** How many environmental [[Zones]] the enemy can cross with a single [[Move]] action. 
-*   **Morale:** The **Morale TN** the players roll against when forcing a morale check.
+*   **Morale:** The **Morale TN** the players roll against when forcing a [[morale check]].
 *   **Tags:** Standardized keywords representing physiological or behavioral modifiers.
 *   **Special:** Any unique, custom rules or passive abilities.
 *   **Attacks:** The combat options the enemy can execute.
@@ -121,7 +121,7 @@ A group [[Morale Check]] is triggered at the end of the round if the enemies suf
 When enemies break, they drop all heavy loot and must use their 2 Actions on their turns to move toward the nearest exit or safety. If their escape path is physically blocked, fleeing enemies will use their actions to shove, smash, or attack whatever stands in their way.
 
 ### Regrouping (The Rally)
-If there is a surviving **Enemy Commander** who did not break, they can use an action to rally the fleeing troops. This triggers an opposed Morale Check:
+If there is a surviving **Enemy Commander** who did not break, they can use an action to rally the fleeing troops. This triggers an opposed [[Morale Check]]:
 *   The players roll their Swarm Terror pool against the Commander's **Morale TN**. 
     *   *Fiction:* The players roll to represent the Goblins banging their shields, screaming, and actively drowning out the Commander's orders to keep the enemies panicked.
 *   If the players succeed, the troops keep running.

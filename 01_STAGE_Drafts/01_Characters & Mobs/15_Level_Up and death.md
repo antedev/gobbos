@@ -3,7 +3,7 @@
 ## The "Next Gobbo Up" (Death & Respawning)
 When your PC dies, the Lair doesn't mourn. They simply look at the next biggest Gobbo in your Gang to take over. 
 
-Rolling a new PC from an existing Gang means you don't start from scratch. The successor Boss B starts with Level 1 in all stats, gets **1 starting advance** (just like standard character creation), and receives a starting pool of **Successor XP** equal to **Gang Infamy × 4** to spend on buying stats (using the standard XP stat costs).
+Rolling a new PC from an existing Gang means you don't start from scratch. The successor Boss B starts with Level 1 in all stats, gets **1 starting advance** (just like standard character creation), and receives a starting pool of **Successor XP** equal to **Gang [[Infamy]] × 4** to spend on buying stats (using the standard XP stat costs).
 *   **Successor Stat Cap:** To maintain progression space and avoid starting as an Elder, no Main Stat can be raised above **Level 4** at successor creation.
 
 ### Gang Marks (Tattoos of the Dead)
@@ -20,16 +20,16 @@ When a Boss dies, the gobbos don't care about the body, but they *do* care about
 If a PC dies, their most favored piece of equipment absorbs their fighting spirit and becomes a [[Named Item]] (e.g., *Grurr's Rusty Chopper*). This imbues the item with a **T1 Boon** (see [Boons & Banes](13_Boons_and_Banes.md)) related to the deceased Boss's highest stat or their manner of death.
 *   *Example:* If the dead Boss had [[Slink]] 4, the weapon gains `[Fast]`. If they died from an explosion, the weapon gains `[Searing]` (deals +1 fire damage on hit).
 
-*   **Recovery:** If the surviving mob can manage the Bulk to drag the Named Item back to the Lair, the new PC inherits it.
-*   **The Wipe:** If the entire raid wipes, or the item is left behind, the GM gives the Named Item to whoever killed the PC. The next time the players raid that dungeon, they might find an Orc Captain wielding *Grurr's Rusty Chopper*! 
-*   **Gang Loyalty:** Named items belong to their Gang. If a *Shiny-Snatcher* tries to wield a *Gnasher's* Named Item, it actively rebels—for example, treating all Criticals as Fumbles, or constantly screaming and ruining stealth.
+*   **Recovery:** If the surviving mob can manage the Bulk to drag the [[Named Item]] back to the Lair, the new PC inherits it.
+*   **The Wipe:** If the entire raid wipes, or the item is left behind, the GM gives the [[Named Item]] to whoever killed the PC. The next time the players raid that dungeon, they might find an Orc Captain wielding *Grurr's Rusty Chopper*! 
+*   **Gang Loyalty:** Named items belong to their Gang. If a *Shiny-Snatcher* tries to wield a *Gnasher's* [[Named Item]], it actively rebels—for example, treating all Criticals as Fumbles, or constantly screaming and ruining stealth.
 
 ## The Pile of Bones & Patron Saints
 Retired Elders stay in the Lair, complain, and grant passive benefits to your Gang. But exceptionally glorious *dead* PCs do not just fade away; they are thrown onto the [[Pile of Bones]]. 
 
-When a player rolls a new PC, they may choose one deceased character from the Pile of Bones to be their personal [[Patron Saint]]. The spirit of the old dead PC watches over the new one. (Elders cannot be Patron Saints—they are still alive and too busy eating your food to help you on a raid!)
+When a player rolls a new PC, they may choose one deceased character from the [[Pile of Bones]] to be their personal [[Patron Saint]]. The spirit of the old dead PC watches over the new one. (Elders cannot be Patron Saints—they are still alive and too busy eating your food to help you on a raid!)
 
-*   **The Boon:** Choosing a Patron Saint grants the new PC a highly specific, situational boon related to how the Saint lived (or died). For example, *Saint Grurr (Who died in a massive explosion)* might grant the ability to ignore fire damage once per raid.
+*   **The Boon:** Choosing a [[Patron Saint]] grants the new PC a highly specific, situational boon related to how the Saint lived (or died). For example, *Saint Grurr (Who died in a massive explosion)* might grant the ability to ignore fire damage once per raid.
 *   **The Catch:** Patron Saints are fickle dead gobbos. To keep the boon active, you have to appease the Saint's memory by doing things they liked—such as always taking the loudest approach, or refusing to heal. 
 
 This ensures that every character you play leaves a permanent mark on the world, the Gang, and the future generations of Gobbos.
@@ -37,9 +37,9 @@ This ensures that every character you play leaves a permanent mark on the world,
 
 # Level Up!
 
-There are two main ways for a Gobbo to prove they are the biggest and the baddest: gaining [[Glory]] (Raid Points) and hoarding [[Loot]] (Loot Value). Goblins level up by going on raids, surviving, and bringing back tales of destruction or heavy sacks of shiny things. 
+There are two main ways for a Gobbo to prove they are the biggest and the baddest: gaining [[Glory]] ([[Raid Points]]) and hoarding [[Loot]] ([[Loot Value]]). Goblins level up by going on raids, surviving, and bringing back tales of destruction or heavy sacks of shiny things. 
 
-[[XP]] is used to increase your four Main Stats ([[Tough]], [[Slink]], [[Brains]], [[Mouth]]). Stats start at 1 and can naturally max out at 5. Reaching level 6 triggers automatic Retirement.
+[[XP]] is used to increase your four [[Main Stats]] ([[Tough]], [[Slink]], [[Brains]], [[Mouth]]). Stats start at 1 and can naturally max out at 5. Reaching level 6 triggers automatic Retirement.
 
 ### Stat Cost
 To increase a stat, you must spend XP equal to the **next level** of that stat:
@@ -59,9 +59,9 @@ When you return to the Lair from a raid, you tally up your rewards on two comple
 
 Glory represents the stories of destruction, survival, and sheer goblin stupidity you bring back. Glory translates directly into **Boss XP**, which is used to increase your Boss's stats. 
 
-Glory is awarded at the end of the raid based on Raid Points and personal antics:
+Glory is awarded at the end of the raid based on [[Raid Points]] and personal antics:
 
-*   **Communal Glory (Shared XP):** At raid end, all Raid Points earned by the party are pooled. Goblins convert this pooled Glory into shared Boss XP:
+*   **Communal Glory (Shared XP):** At raid end, all [[Raid Points]] earned by the party are pooled. Goblins convert this pooled Glory into shared Boss XP:
     
     | Pooled Raid Points | Shared XP Awarded | Lair Reputation |
     | :--- | :--- | :--- |
@@ -71,7 +71,7 @@ Glory is awarded at the end of the raid based on Raid Points and personal antics
     
 *   **Personal Glory (+1 XP):** A player earns **+1 Personal Glory** (max 1 per raid, which converts directly to **+1 XP** during Homecoming) if their Boss performs *at least one* of the following specific mechanical actions during a raid:
     *   **The Compulsion:** Voluntarily trigger their Gang's [[Shenanigan]] compulsion in an disadvantageous situation, generating a complication *and* adding a die to the shared [[Bangaranga Pool]].
-    *   **The Sacrifice:** Completely destroy a custom gear item by declaring an [[Overclock]] (see [Crafting & Custom Gear](34_Crafting.md)).
+    *   **The Sacrifice:** Completely destroy a [[custom gear]] item by declaring an [[Overclock]] (see [Crafting & Custom Gear](34_Crafting.md)).
     *   **The Tyrant:** Use the [[Assert Dominance]] action (attacking a Mob under their own command) to successfully regain [[Grunt]] in combat.
     *   **The Martyr:** Roll a Fumble or suffer [[Overreaching]] (see [Dice](01_Dice.md)) but successfully survive the encounter.
 
@@ -80,15 +80,15 @@ Glory is awarded at the end of the raid based on Raid Points and personal antics
 
 Loot is heavy, slows you down, and requires your mobs to carry it. **Loot does not grant personal Boss XP.** Instead, it is the only way to upgrade the Lair's base capabilities. 
 
-All basic Loot Value is pooled together at the end of the raid into the Communal Hoard. Gobbos use this collective pool to purchase Lair Upgrades (expanding caverns, building workshops, or brewing stills).
+All basic [[Loot Value]] is pooled together at the end of the raid into the Communal Hoard. Gobbos use this collective pool to purchase [[Lair Upgrades]] (expanding caverns, building workshops, or brewing stills).
 
-*   *The Dilemma:* Dropping heavy Loot during a raid might help you fight better and earn more Personal Glory. Dragging the Loot home risks getting your Boss killed, but it guarantees Lair upgrades for the next generation if you survive.
+*   *The Dilemma:* Dropping heavy Loot during a raid might help you fight better and earn more Personal Glory. Dragging the Loot home risks getting your Boss killed, but it guarantees [[Lair upgrades]] for the next generation if you survive.
 
 ### 3. Oddity Drafting (The Shiny Stuff)
 
-While abstract Loot Value goes to the Lair pool, [[Oddities]] (the rare, specific monster parts and weird items used for Crafting) are highly coveted physical items. 
+While abstract [[Loot Value]] goes to the Lair pool, [[Oddities]] (the rare, specific monster parts and weird items used for Crafting) are highly coveted physical items. 
 
-At the end of the raid, all Oddities brought back are dumped onto the table. The players must distribute them via **Player Consensus**. You argue, bargain, or trade them amongst yourselves to decide which Boss gets to keep which Oddity for their Gang.
+At the end of the raid, all [[Oddities]] brought back are dumped onto the table. The players must distribute them via **Player Consensus**. You argue, bargain, or trade them amongst yourselves to decide which Boss gets to keep which [[Oddity]] for their Gang.
 
 ---
 

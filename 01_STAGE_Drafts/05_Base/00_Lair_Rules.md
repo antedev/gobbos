@@ -11,7 +11,7 @@ The Lair is a shared, cooperative project managed by all players. It grows, leve
 Campaign play in *Gobbos* is divided into **Lair Turns**. A Lair Turn represents roughly **one week** of in-game time, split into two phases:
 
 1.  **The Raid Phase:** Bosses and their Mobs travel to a location, attempt a raid, gather loot, and return (or die trying).
-2.  **The Lair Phase:** Gobbos return to safety. Players resolve recovery, handle random events, allocate labor, craft gear, and expand the Lair.
+2.  **The [[Lair Phase]]:** Gobbos return to safety. Players resolve recovery, handle random events, allocate labor, craft gear, and expand the Lair.
 
 ### Sequence of the Lair Phase
 When returning from a raid, resolve the following steps in order:
@@ -30,7 +30,7 @@ Instead of tracking individual goblins, the Lair's population is tracked as a si
 The Gobbo Pool represents the total healthy workforce of the Lair. At the start of a Lair Turn, players must divide the Gobbo Pool into two groups:
 
 *   **Raider Mobs:** Dice taken from the Gobbo Pool to go on the raid. A Boss can command a Mob with a [[Size]] up to their [[Grunt]] stat. Any d6s allocated to Raider Mobs risk permanent death.
-*   **Laborer Dice:** The remaining d6s left behind in the safety of the Lair. These dice are rolled during the Lair Phase to perform work.
+*   **Laborer Dice:** The remaining d6s left behind in the safety of the Lair. These dice are rolled during the [[Lair Phase]] to perform work.
 
 > **Example:** A Lair has a **Gobbo Pool** of **12d6**. At the start of the week, three players each take a **2d6** Mob for the raid (**6d6** total Raiders). This leaves **6d6** Laborer Dice in the Lair to do chores.
 
@@ -48,7 +48,7 @@ If the Lair suffers catastrophic casualties, the game does not grind to a halt. 
 
 ## Labor & Lair Actions
 
-During the Labor step of the Lair Phase, players assign their available **Laborer Dice** to various tasks. To resolve these tasks, roll the assigned dice pool. Standard exploding dice rules apply (every 6 explodes into an additional die). Successes are **4, 5, or 6**.
+During the Labor step of the [[Lair Phase]], players assign their available **Laborer Dice** to various tasks. To resolve these tasks, roll the assigned [[dice pool]]. Standard [[exploding dice]] rules apply (every 6 explodes into an additional die). Successes are **4, 5, or 6**.
 
 ### Lair Tasks
 *   **Gathering Scrap:** Assign any number of Laborer dice and roll them. Every success (**4+**) generates 1 [[Scrap]] for the Hoard.
@@ -57,7 +57,7 @@ During the Labor step of the Lair Phase, players assign their available **Labore
     *   *Boss Assist:* A Boss can spend their personal Lair action to lead the recruiters, adding their [[Mouth]] stat as bonus dice to the roll.
     *   *Bribes:* Spend 5 [[Loot]] from the Hoard to buy shiny junk, granting a **Boon (+1d6)** to the recruitment roll.
 *   **Clearing Slots:** Assign Laborer dice to an unexplored or blocked slot. Each success (**4+**) adds 1 progress toward clearing it. (See Lair Expansion below).
-*   **Crafting Custom Gear:** See [Crafting & Custom Gear](34_Crafting.md) for details. Crafting requires [[Brains]] and a Workshop, and consumes 1 **Laborer die** to operate.
+*   **Crafting [[Custom Gear]]:** See [Crafting & Custom Gear](34_Crafting.md) for details. Crafting requires [[Brains]] and a Workshop, and consumes 1 **Laborer die** to operate.
 
 ### Building the Engine (Guaranteed Successes)
 While rolling dice is chaotic and fun, players can invest Loot and Scrap to upgrade Lair rooms, transforming the Lair into a self-sustaining engine. Upgrades grant **guaranteed successes** or **automatic growth** that bypasses the dice roll:
@@ -65,7 +65,7 @@ While rolling dice is chaotic and fun, players can invest Loot and Scrap to upgr
 *   **Breeding Pits:** Automatically generates **1d6** new Gobbos to the pool every Lair Turn for free (up to the Lair Cap), without requiring a recruitment roll. Upgrading to Tier 2 Breeding Pits generates **2d6** per turn.
 *   **Mud Tavern:** Grants **1 guaranteed success** on all active Recruitment rolls (meaning you always recruit at least 1 Gobbo, plus whatever you roll).
 *   **Scrap Collector Yard:** Passively generates 2 [[Scrap]] every Lair Turn (no dice roll required).
-*   **Dwarven Forge:** Grants **1 guaranteed success** (1 Taming success) to all Crafting rolls performed in the Lair.
+*   **Dwarven Forge:** Grants **1 guaranteed success** (1 [[Taming]] success) to all Crafting rolls performed in the Lair.
 
 ---
 
@@ -76,7 +76,7 @@ Every Lair has a layout of **Slots**. Initially, only a few slots are open. The 
 To unlock a Slot, players must pay its **Scrap Cost** and assign at least 1 **Laborer die** to clear it.
 1.  **Guaranteed Clearance:** The slot is always successfully cleared when its target progress (e.g., 5 successes) is met.
 2.  **The Clear Roll:** When a Slot is cleared, the active player rolls **1d6** for complications:
-    *   **6 (Lucky Find):** The workers uncover a hidden stash. Gain **+1d6 Loot** or a random Tier 1/2 Oddity.
+    *   **6 (Lucky Find):** The workers uncover a hidden stash. Gain **+1d6 Loot** or a random Tier 1/2 [[Oddity]].
     *   **2–5 (Smooth Work):** The slot is cleared without incident.
     *   **1 (Goblin Complication):** The slot is cleared, but something goes wrong. The GM rolls on the Site-specific Complication table.
 
@@ -111,7 +111,7 @@ Goblins cooperate because they must, but they are greedy by nature. The Lair's r
     *   **Renaming Rights:** The dominant Gang names the room (e.g., *"The Smelly-Feet Brewery"*).
     *   **Priority Use:** If multiple players want to use the room in the same turn, the dominant Gang goes first.
     *   **Specialty Kickback:** The room grants a passive bonus exclusive to the dominant Gang.
-        *   *Example (Proper Smithy):* The dominant Gang's Boss gets a free **Taming Success** when crafting weapons here.
+        *   *Example (Proper Smithy):* The dominant Gang's Boss gets a free **[[Taming]] Success** when crafting weapons here.
         *   *Example (Brewery Cavern):* The dominant Gang's Mobs gain **+1 Grit** when fueled by the special reserve brew.
 
 ---
@@ -171,7 +171,7 @@ If the players clear an external location during a raid (e.g., an abandoned mine
 
 ### 2. Trade Routes & Supply Runs
 To get the Outpost's yield back to the Lair, you must maintain a **Trade Route**. Trade routes are rated by danger: **Safe**, **Wilds**, or **High Risk**.
-During the Lair Phase, the players make a **Supply Roll** for each active trade route:
+During the [[Lair Phase]], the players make a **Supply Roll** for each active trade route:
 *   **Safe Route:** Auto-success. The resources arrive safely in the Hoard.
 *   **Wilds Route:** Roll **1d6**. On a **1–2**, the shipment is ambushed. Gobbos must spend a Mob action to rescue it, or lose the shipment.
 *   **High Risk Route:** Roll **2d6**. Needs a success (**4+**) to get through. Fumbles (all 1s) mean the Outpost is besieged and must be defended in a combat encounter.

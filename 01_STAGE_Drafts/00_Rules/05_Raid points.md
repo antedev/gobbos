@@ -20,16 +20,16 @@ Every Raid Location has a [[Base Danger Rating]] from **1 to 5** (T1 to T5). Thi
 
 ## The Scouting Task
 
-During the Labor step of the Lair Phase, players can allocate **Laborer Dice** to [[Scouting]] a chosen Raid Location. Roll the allocated dice pool (successes on **4+**).
+During the Labor step of the [[Lair Phase]], players can allocate **Laborer Dice** to [[Scouting]] a chosen Raid Location. Roll the allocated [[dice pool]] (successes on **4+**).
 
 The number of successes determines what the party knows and what opportunities they can target:
 
 *   **0 Successes (Going in Blind):** The party knows the location exists but nothing else. They do not know the Danger Rating or any Targets of Opportunity. The party suffers a [[Bane]] (-1d) on their first Zone entry test during the raid.
-*   **1 Success:** Reveals the [[Base Danger Rating]] and the **Main Objective** (worth **3–5 Raid Points** upon completion).
-*   **2 Successes:** In addition to the above, reveals 1 **Target of Opportunity** (worth **+2 Raid Points**).
-*   **3+ Successes:** In addition to the above, reveals 2 **Targets of Opportunity** (worth **+4 Raid Points** total) and a **Secret Bypass** (granting the party a [[Boon]] (+1d) on their first Zone entry test).
+*   **1 Success:** Reveals the [[Base Danger Rating]] and the **Main Objective** (worth **3–5 [[Raid Points]]** upon completion).
+*   **2 Successes:** In addition to the above, reveals 1 **Target of Opportunity** (worth **+2 [[Raid Points]]**).
+*   **3+ Successes:** In addition to the above, reveals 2 **Targets of Opportunity** (worth **+4 [[Raid Points]]** total) and a **Secret Bypass** (granting the party a [[Boon]] (+1d) on their first Zone entry test).
 
->> **Targets of Opportunity**: These are secondary objectives revealed by scouting (e.g., *“Steal the Captain’s ledger,” “Burn the grain store,” or “Slay the guard dog”*). Completing them is optional but increases your total Raid Points.
+>> **Targets of Opportunity**: These are secondary objectives revealed by scouting (e.g., *“Steal the Captain’s ledger,” “Burn the grain store,” or “Slay the guard dog”*). Completing them is optional but increases your total [[Raid Points]].
 
 ---
 

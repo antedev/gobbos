@@ -35,7 +35,7 @@ New [[Quirk|Quirks]] and [[Twist|Twists]] are acquired and upgraded during downt
 
 [[Gang Quirks]] are powerful, legendary abilities that belong to the [[Gang]] as a whole. They are acquired when a Boss reaches Level 6 in any stat and retires as an [[Elder]], or dies gloriously and joins the [[Pile of Bones]] (see [12. Gangs](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md)).
 
-*   **The Infamy Limit:** [[Gang Quirks]] **do not** count toward a Boss's personal limit of 3. Instead, the maximum number of [[Gang Quirks]] a starting Boss can bring on a raid is determined by the [[Gang]]'s [[Infamy]] score. 
+*   **The [[Infamy]] Limit:** [[Gang Quirks]] **do not** count toward a Boss's personal limit of 3. Instead, the maximum number of [[Gang Quirks]] a starting Boss can bring on a raid is determined by the [[Gang]]'s [[Infamy]] score. 
 
 ---
 
@@ -62,16 +62,16 @@ The following [[Quirk|Quirks]] are assembled using the successes and condition s
 ### Slink Quirks
 *   **[Cost: Passive**]
     *   *Trigger:* Whenever you successfully Dodge an incoming attack.
-    *   *Effect:* You may immediately make a free melee attack against the attacker's legs (if they are in your [[Zone]]) adding **+1 Success** to the attack roll.
+    *   *Effect:* You may immediately make a free [[melee attack]] against the attacker's legs (if they are in your [[Zone]]) adding **+1 Success** to the attack roll.
 *   **[Cost: Passive**]
     *   *Effect:* Enemies do not get free reactionary Opportunity Attacks against you when you leave their [[Zone]].
 
 ### General Quirks
 *   **[Cost: 1 Grunt**]
-    *   *Trigger:* After you roll the dice pool for any test.
+    *   *Trigger:* After you roll the [[dice pool]] for any test.
     *   *Effect:* Spend 1 [[Grunt]] to completely reroll all dice that did not land on a 1 (You cannot reroll [[Fumbles]]).
 *   **[Cost: Passive**]
-    *   *Effect:* You can carry up to 2 [[Bulk]] worth of items by swallowing them. Swallowed items do not count toward your Carry Capacity. *It requires 1 Action to regurgitate them.*
+    *   *Effect:* You can carry up to 2 [[Bulk]] worth of items by swallowing them. Swallowed items do not count toward your [[Carry Capacity]]. *It requires 1 Action to regurgitate them.*
 
 ---
 
@@ -86,4 +86,4 @@ The following [[Quirk|Quirks]] are assembled using the successes and condition s
 *   **Efficient (T2)**
     *   *Effect:* Reduces the [[Grunt]] cost of the attached [[Quirk]] by 1 (minimum 0). Cannot be attached to Passive [[Quirk|Quirks]].
 *   **Reflexive (T3)**
-    *   *Effect:* If the attached [[Quirk]] normally costs 1 Action, it now costs a Free Action.
+    *   *Effect:* If the attached [[Quirk]] normally costs 1 Action, it now costs a [[Free Action]].

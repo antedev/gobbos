@@ -8,7 +8,7 @@ Your Boss has four [[Main Stats]], a set of derived [[Secondary Stats]] tied to 
 
 Used for violence, resilience, intimidation, and lifting stuff. [[Tough]] is simply how strong in body the Boss is, and the most important stat for direct combat. Most attacks will use [[Tough]] as the basis for your [[Dice Pool]].
 
-[[Tough]] has two secondary stats: [[Grit]] (your health) and [[Carry]] (how much equipment and loot you can carry).
+[[Tough]] has two [[secondary stats]]: [[Grit]] (your health) and [[Carry]] (how much equipment and loot you can carry).
 
 | Level | Grit | Carry |
 | :---: | :---: | :---: |
@@ -32,7 +32,7 @@ Used for violence, resilience, intimidation, and lifting stuff. [[Tough]] is sim
 
 Used for sneaking, dodging, and all manners of dirty tricks. [[Slink]] is how agile, dexterous, and quick on your feet you are. A higher [[Slink]] allows for greater movement on the battle map, and a higher chance to dodge any incoming attack.
 
-[[Slink]] has two secondary stats: [[Movement]] (how far you can move per action) and [[Passive Defence]] (which allows you to dodge attacks without spending actions, much like armor, but without the bulk).
+[[Slink]] has two [[secondary stats]]: [[Movement]] (how far you can move per action) and [[Passive Defence]] (which allows you to dodge attacks without spending actions, much like armor, but without the bulk).
 
 | Level | Movement | Passive Defence |
 | :---: | :---: | :---: |
@@ -56,7 +56,7 @@ Your movement stat determines how many zones you can move per [[Move]] action. H
 
 Used for shouting orders, bullying, lying, and just talking a lot and loud. It is how good you are at shouting orders, and a high [[Mouth]] score allows you both to control more [[Mob|Mobs]] as well as getting more out of your [[Mob|Mobs]] for free. A low [[Mouth]] score will make you rely more on your own skills, and less on your [[Mob|Mobs]].
 
-[[Mouth]] has two secondary stats: [[Max Mobs]] (how many different mobs you can have under your control) and [[Free Orders]] (which allows you to do things with your mobs without spending standard actions).
+[[Mouth]] has two [[secondary stats]]: [[Max Mobs]] (how many different mobs you can have under your control) and [[Free Orders]] (which allows you to do things with your mobs without spending standard actions).
 
 | Level | Max Mobs | Free Orders per Round |
 | :---: | :---: | :---: |
@@ -72,7 +72,7 @@ This is the maximum number of different [[Mob|Mobs]] you can have under your con
 
 ### Free Orders per Round
 
-A high [[Mouth]] score makes giving orders such a natural thing you can do it while you are doing other things. This means you can use a standard action for something else and still give an order to a mob, as long as you do not exceed your **Free Orders per Round**.
+A high [[Mouth]] score makes giving orders such a natural thing you can do it while you are doing other things. This means you can use a [[standard action]] for something else and still give an order to a mob, as long as you do not exceed your **[[Free Orders]] per Round**.
 
 ---
 
@@ -80,7 +80,7 @@ A high [[Mouth]] score makes giving orders such a natural thing you can do it wh
 
 [[Brains]] is used for understanding and noticing things, crafting, and magic. [[Brains]] is simply how good you are at understanding the complexity of Gobbo magic and Gobbo crafting, but it is also used for awareness and understanding of the world. A high [[Brains]] score allows you to use magic in [[Raid|Raids]], but also better arm yourselves or your gang between [[Raid|Raids]]. While a low score instead makes you trust your or your [[Mob|Mobs']] physical abilities instead.
 
-[[Brains]] has two secondary stats: [[Power Words]] (your capacity to hold volatile magical formulas/spell tags in your head) and [[Crafting Capacity]] (which controls how many oddities you can attach to any single item).
+[[Brains]] has two [[secondary stats]]: [[Power Words]] (your capacity to hold volatile magical formulas/spell tags in your head) and [[Crafting Capacity]] (which controls how many [[oddities]] you can attach to any single item).
 
 | Level | Power Words | Crafting Capacity |
 | :---: | :---: | :---: |

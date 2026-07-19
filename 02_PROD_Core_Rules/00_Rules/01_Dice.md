@@ -1,6 +1,8 @@
 # Dice
 
-Rolling **dice** is fun, and in Gobbos you roll a lot of dice* if you are a player. The GM, on the other hand, never rolls **dice**—unless to possibly determine the outcome of a random event.
+Rolling dice is fun, and in Gobbos you roll a lot of dice if you are a player. The GM on the other hand never rolls dice, unless to possibly determine the outcome of a random event.
+
+The only dice used in Gobbos are normal 6-sided dice, or d6. It is recommended that each player have bunch of them, preferably 8-10 dice in the same color.
 
 ## Tests
 

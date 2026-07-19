@@ -30,7 +30,7 @@ When a player makes a test involving tags (e.g., attacking a monster with an ele
 
 ## 3. Element Synthesis
 
-When two dynamic elements meet (either combined in custom gear crafting or overlapping in a zone), they synthesize into a new state. Element synthesis is resolved at creation or downtime to avoid combat speed-bumps.
+When two dynamic elements meet (either combined in [[custom gear]] crafting or overlapping in a zone), they synthesize into a new state. Element synthesis is resolved at creation or downtime to avoid combat speed-bumps.
 
 *   `[Fire]` + `[Sticky]` $\rightarrow$ **Burning Glue**: Inflicts the *Restrained* condition and deals **+1 success** on the attack.
 *   `[Toxic]` + `[Chilled]` $\rightarrow$ **Numbing Venom**: Inflicts the *Restrained* condition (movement becomes 0).
@@ -102,7 +102,7 @@ When two dynamic elements meet (either combined in custom gear crafting or overl
 
 #### `[Bouncy]`
 *   *Flavor:* Rubbery alloys, compressed springs, or gelatinous membranes.
-*   *Universal Baseline:* Kinetic ricochet. If a ranged attack using this tag misses, the projectile bounces, making an immediate attack check against a random adjacent target in the [[Zone]]. A projectile can only bounce once per attack.
+*   *Universal Baseline:* Kinetic ricochet. If a [[ranged attack]] using this tag misses, the projectile bounces, making an immediate attack check against a random adjacent target in the [[Zone]]. A projectile can only bounce once per attack.
 *   *Fictional Interaction:* Allows gobbos to bounce off walls, adding **+1 Zone** of movement on a jump.
 
 #### `[Crushing]`
@@ -117,7 +117,7 @@ When two dynamic elements meet (either combined in custom gear crafting or overl
 
 #### `[Fast]`
 *   *Flavor:* Twitchy legs, high-velocity reflexes, or caffeinated energy.
-*   *Universal Baseline:* High speed. Allows moving 1 [[Zone]] as a Free Action once per round.
+*   *Universal Baseline:* High speed. Allows moving 1 [[Zone]] as a [[Free Action]] once per round.
 *   *Fictional Interaction:* Harder to pin down; grants a **Boon (+1d)** to Dodge reactions.
 
 #### `[Gale]`
@@ -127,7 +127,7 @@ When two dynamic elements meet (either combined in custom gear crafting or overl
 
 #### `[Heavy]`
 *   *Flavor:* Dense lead alloys, black-stone cores, or massive bulk.
-*   *Universal Baseline:* Exhausting weight. The wielder suffers a **Bane (-1d)** on all tests unless they spend a Standard Action to brace. Target's carrying capacity is halved.
+*   *Universal Baseline:* Exhausting weight. The wielder suffers a **Bane (-1d)** on all tests unless they spend a [[Standard Action]] to brace. Target's carrying capacity is halved.
 *   *Fictional Interaction:* Sinks instantly in water, collapses thin floors, and anchors items against wind.
 
 #### `[Magnetic]`
@@ -235,12 +235,12 @@ When two dynamic elements meet (either combined in custom gear crafting or overl
 
 #### `[Frenzied]`
 *   *Flavor:* Boiling blood, red mist, or uncontrollable rage.
-*   *Universal Baseline:* Berserk state. Target must spend all standard actions to Move toward and Melee Attack the nearest creature (friend or foe) in melee range on its turn.
+*   *Universal Baseline:* Berserk state. Target must spend all standard actions to Move toward and [[Melee Attack]] the nearest creature (friend or foe) in melee range on its turn.
 *   *Fictional Interaction:* Bypasses self-preservation, ignores pain, and causes the target to break tactical cover.
 
 #### `[Hardened]`
 *   *Flavor:* Spiked scales, stone hide, or thick chitin.
-*   *Universal Baseline:* Reinforcement. Increases Defence TN by +1 (maximum 5) against `Cutting` and `Poking` attacks.
+*   *Universal Baseline:* Reinforcement. Increases [[Defence TN]] by +1 (maximum 5) against `Cutting` and `Poking` attacks.
 *   *Fictional Interaction:* Impervious to minor cuts and arrows.
 
 #### `[Itchy]`
@@ -290,7 +290,7 @@ When two dynamic elements meet (either combined in custom gear crafting or overl
 #### `[Angelic]`
 *   *Flavor:* Blinding gold radiance, choral echoes, or pure law.
 *   *Universal Baseline:* Holy aura. Attacks against standard foes are **Easy (4+)**.
-*   *Fictional Interaction:* Highly destructive to undead (`Undead`) and demons, reducing their Defence TN by 1.
+*   *Fictional Interaction:* Highly destructive to undead (`Undead`) and demons, reducing their [[Defence TN]] by 1.
 
 #### `[Blessed]`
 *   *Flavor:* Fortunate whispers, gleaming luck, or a patron's favor.
@@ -304,7 +304,7 @@ When two dynamic elements meet (either combined in custom gear crafting or overl
 
 #### `[Haunted]`
 *   *Flavor:* Lingering ghosts, cold drafts, or phantom hands.
-*   *Universal Baseline:* Spectral curse. The target suffers a **Bane (-1d)** to Slink and Mouth tests. Any fumbled roll summons a minor ghost (`Undead:Spirit`) that attacks the target.
+*   *Universal Baseline:* Spectral curse. The target suffers a **Bane (-1d)** to Slink and Mouth tests. Any [[fumbled]] roll summons a minor ghost (`Undead:Spirit`) that attacks the target.
 *   *Fictional Interaction:* Can be cleansed with holy tags (`[Angelic]`) or exorcisms.
 
 #### `[Laggy]`
@@ -319,7 +319,7 @@ When two dynamic elements meet (either combined in custom gear crafting or overl
 
 #### `[Nullified]`
 *   *Flavor:* Anti-magic circles, lead runes, or cold iron anchors.
-*   *Universal Baseline:* Dead-zone. Temporarily deactivates all active supernatural traits, magical tags, and oddities in the [[Zone]].
+*   *Universal Baseline:* Dead-zone. Temporarily deactivates all active supernatural traits, magical tags, and [[oddities]] in the [[Zone]].
 *   *Fictional Interaction:* Turns magic weapons back into normal scrap, shuts down spellcasting.
 
 #### `[Petrified]`
