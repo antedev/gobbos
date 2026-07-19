@@ -1,5 +1,7 @@
 # 14. Quirks & Twists
 
+> **THIS SECTION IS TO BE CONSIDERED A BIT OUTDATED. ALL THE RULES AROUND STILL CHANGE THAT WILL AFFECT THIS. THIS IS THEREFORE NOT TO SEEN AS A BLOCKER TO OTHER RULE CHANGES, BUT RATHER WE WILL COME BACK AND FINISH THIS ONCE ALL THE OTHER RULES ARE SOLIDIFIED.**
+
 *Goblins don't fight fair. They fight weird. When a tall-man swings a shiny sword, a goblin Boss doesn't block it—they duck, bite their ankle, and shove a friend in the way.*
 
 **Quirks** are unique personal abilities that allow a Boss to manipulate dice outcomes, bypass combat restrictions, or alter the action economy. A **Quirk** is a modular base action. The true chaos happens when you attach a **Twist**—a modifier that alters how the **Quirk** works, creating a customized, volatile combination.

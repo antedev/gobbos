@@ -32,7 +32,7 @@ If playing with fewer than 4 players, players can assign multiple roles to a sin
 * Mobs testing **Slink**, **Brains**, or **Mouth** (Sniffer, Map-Scrawler, Loud-Mouth) are uncoordinated and always roll exactly **1d6** (representing their base stat of 1).
 
 >> **THE TRAVEL ROLL RULE:**
->> The GM never rolls dice during a journey. All tests are rolled by the players filling the designated roles. The standard success threshold is a Normal test (successes on 5 or 6). Exploding 6s and standard fumbles apply.
+>> The GM never rolls dice during a journey. All tests are rolled by the players filling the designated roles. The standard success threshold is a target of **5+** (successes on 5 or 6). Exploding 6s and standard fumbles apply.
 
 ---
 
@@ -41,7 +41,7 @@ If playing with fewer than 4 players, players can assign multiple roles to a sin
 For each Stage of the journey, the players must resolve the following two steps in order:
 
 ### 1. The Route Test
-The **Map-Scrawler** rolls a **Brains** test against the terrain's difficulty (typically **Normal:1**).
+The **Map-Scrawler** rolls a **Brains** test against the terrain's difficulty (typically **5+/1**).
 
 * **Success:** The route is clear. The party progresses to the next Stage (or arrives if this was the final stage).
 * **Failure:** The party gets lost or takes a grueling detour. The entire party suffers **1 Attrition** (every Mob in the travel party immediately takes **1 damage** to its active health die), and the party suffers a **Bane** (-1d) on the upcoming Travel Event test.
@@ -69,7 +69,7 @@ During the journey back to the Lair, Mobs carrying treasure suffer under the wei
 ### Laden Mobs
 A Mob carrying more **Loot** than half its maximum **Loot Capacity** is considered **Laden**.
 * **Laden** Mobs suffer a **Bane** (-1d) on all **Slink** and **Tough** tests during the return journey.
-* The Map-Scrawler's **Route Test** difficulty target number increases by +1 (e.g., from **Normal:1** to **Normal:2**), as the laden horde slows down and struggles to stay on the path.
+* The Map-Scrawler's **Route Test** required successes increase by 1 (e.g., from **5+/1** to **5+/2**), as the laden horde slows down and struggles to stay on the path.
 
 ### Over-Laden Mobs
 A Mob carrying its maximum **Loot Capacity** is considered **Over-Laden**.

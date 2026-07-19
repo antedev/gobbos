@@ -80,11 +80,11 @@ A player's movement is measured in number of Zones, and a normal movement speed 
 
 ## Zone Profiles
 
-Every Zone in an encounter is assigned a default **Zone Profile** consisting of a **Difficulty** and a **Target Number (TN)** (e.g., **Normal:1**, **Normal:2**, or **Hard:1**).
+Every Zone in an encounter is assigned a default **Zone Profile** consisting of a **Difficulty** and a **Target Number (TN)** (e.g., **5+/1**, **5+/2**, or **6/1**).
 
 >> **THE ZONE PROFILE RULE:**
 >> Any general environmental interaction, traversal, or search test attempted within a Zone defaults to using that Zone's Profile. GMs do not invent DCs for individual tasks; they simply use the Zone Profile.
->> *   *Example:* Climbing a wall, forcing a door, jumping a trench, or searching a junk pile in a Zone with a **Normal:2** profile all require **2 successes** on a **Normal** test.
+>> *   *Example:* Climbing a wall, forcing a door, jumping a trench, or searching a junk pile in a Zone with a **5+/2** profile all require **2 successes** on a **Normal** (5+) test.
 
 GMs can adjust the Difficulty level of a specific task based on tools or circumstances using standard **Boons** and **Banes** (e.g., using professional climbing gear grants a **Boon** (+1d) to the traversal test, while a rusty lock imposes a **Bane** (-1d) on the test), but the base TN and Difficulty remain tied to the Zone itself.
 
@@ -139,26 +139,53 @@ GMs can customize battlefields by placing these standardized, modular traits ont
 
 ### 2. Dynamic Environment (Hazards & Triggers)
 
-*   **Burning (T2 Hazard):** Spreading fire, hot lava pools, or burning oil.
+*   **Burning (T2 Hazard):** *Spreading fire, hot lava pools, or burning oil.* | `[Fire]`, `[Gaseous]`
     *   *Trigger:* Entering the Zone, or starting a turn inside it.
-    *   *Rules:* Must pass a **Slink** test against the **Zone Profile** or take **2 damage** to Grit (PC) or active health die (Mob). Fire spreads to adjacent wooden/flammable zones at the End of Round on a roll of 5–6 on **1d6** (rolled by the GM or a player).
-*   **Crumbling Ceiling (T3 Hazard):** Loose rock vaults, rotting timber supports, or ice stalactites.
+    *   *Rules:* The Zone imposes the active states of `[Fire]` (attacks deal **+1 Success**; ignites Zone) and `[Gaseous]` (ranged attacks suffer a **Bane**). Anyone entering or starting their turn in this Zone must pass a **Slink** test against the **Zone Profile** or take **2 damage** to Grit (PC) or active health die (Mob) and gain the **Burning** state. Fire spreads to adjacent wooden/flammable zones at the End of Round on a roll of 5–6 on **1d6** (rolled by the GM or a player).
+*   **Crumbling Ceiling (T3 Hazard):** *Loose rock vaults, rotting timber supports, or ice stalactites.* | `[Crushing]`
     *   *Trigger:* Announce at Round Start or when triggered by structural damage.
-    *   *Rules:* All creatures occupying the Zone must test **Slink** against the **Zone Profile**. On a failure, they take **3 damage** and are knocked **Prone**. After collapsing, the Zone permanently gains the **Rubble** trait.
-*   **Howling Wind (T1 Hazard):** Heavy drafts, storm winds, or venting steam.
+    *   *Rules:* The Zone imposes the active state of `[Crushing]` (restricted movement, attacks are Easy). All creatures occupying the Zone must test **Slink** against the **Zone Profile**. On a failure, they take **3 damage** and are knocked **Prone**. After collapsing, the Zone permanently gains the **Rubble** trait.
+*   **Howling Wind (T1 Hazard):** *Heavy drafts, storm winds, or venting steam.* | `[Gale]`
     *   *Trigger:* Passive.
-    *   *Rules:* Ranged attacks passing through or targeting someone inside this Zone suffer a **Bane** (-1d). Moving against the direction of the wind requires a **Tough** test against the profile; on a failure, movement speed is halved.
-*   **Quicksand / Mud (T2 Hazard):** Sticky tar pits, thick sewer sludge, or quicksand.
+    *   *Rules:* The Zone imposes the active state of `[Gale]`. All ranged attacks passing through or targeting someone inside this Zone suffer a **Bane** (-1d). Moving against the direction of the wind requires a **Tough** test against the profile; on a failure, movement speed is halved.
+*   **Quicksand / Mud (T2 Hazard):** *Sticky mud or waterlogged silt.* | `[Wet]`, `[Sinking]`
     *   *Trigger:* Entering the Zone.
-    *   *Rules:* Must test **Slink** against the **Zone Profile**. On a failure, the creature gains the **Restrained** condition. Breaking free requires spending a Standard Action to test **Tough** against the profile.
-*   **Slippery (Obstacle):** Smooth ice, wet grease, or organic slime.
+    *   *Rules:* The Zone imposes the active states of `[Wet]` (conducts electricity, extinguishes fire) and `[Sinking]` (downward drag). Any creature entering or moving in the Zone must test **Slink** against the **Zone Profile**. On a failure, they gain the **Restrained** condition. Breaking free requires spending a Standard Action to test **Tough** against the profile.
+*   **Slippery (Obstacle):** *Smooth ice, wet grease, or organic slime.* | `[Slick]`
     *   *Trigger:* Entering the Zone.
-    *   *Rules:* Must test **Slink** against the **Zone Profile**. On a failure, the creature falls **Prone** and their movement ends immediately.
-*   **Toxic Spores / Gas (T2 Hazard):** Poisonous sewer gases, acid clouds, or mold spores.
+    *   *Rules:* The Zone imposes the active state of `[Slick]`. Any creature attempting to move into or out of the Zone must test **Slink** against the **Zone Profile**. On a failure, they fall **Prone** and their movement ends immediately.
+*   **Toxic Spores / Gas (T2 Hazard):** *Poisonous sewer gases, acid clouds, or mold spores.* | `[Toxic]`, `[Gaseous]`
     *   *Trigger:* Starting a turn inside the Zone.
-    *   *Rules:* Must test **Tough** against the **Zone Profile**. On a failure, they suffer the **Weakened** condition until they spend a Standard Action to catch their breath in a clean zone.
+    *   *Rules:* The Zone imposes the active states of `[Toxic]` (inflicts **Weakened** condition) and `[Gaseous]` (creates dark screen). All creatures starting their turn inside this Zone must test **Tough** against the **Zone Profile**. On a failure, they suffer the **Weakened** condition until they spend a Standard Action to catch their breath in a clean zone.
 
-### 3. Opportunities (Treats & Cover)
+### 3. Environmental Blueprints (Weather & Complex Hazards)
+
+GMs can construct complex, dynamic weather events or composite environmental hazards by layering multiple tags. The combined rules resolve simultaneously based on the active tags:
+
+*   **Blizzard (T2 Hazard):** *A freezing, howling storm of snow and wind that swallows all sight.* | `[Chilled]`, `[Blinding]`, `[Slick]`
+    *   *Rules:* The Zone is treated as freezing, blind, and slippery. Movement is halved (`[Chilled]`), ranged attacks are Hard and Dodge reactions are impossible (`[Blinding]`), and moving requires a **Slink** test against the profile or the creature falls **Prone** (`[Slick]`).
+*   **Tornado (T3 Hazard):** *A roaring vortex of wind that sweeps debris and creatures into the air.* | `[Gale]`, `[Weightless]`, `[Loud]`
+    *   *Rules:* The wind lifts creatures off the ground (`[Weightless]`), creating a deafening roar that fails stealth and verbal orders (`[Loud]`), while deflecting all ranged attacks (`[Gale]`). Creatures are swept up and tossed about; leaving the zone or stabilizing requires a **Tough** test against the **Zone Profile**.
+*   **Hurricane (T3 Hazard):** *Torrential rain combined with brutal, slamming winds.* | `[Wet]`, `[Gale]`, `[Loud]`
+    *   *Rules:* Rain douses all fire and conducts sparks (`[Wet]`), violent wind gusts deflect ranged attacks (`[Gale]`), and the storm's noise drowns out all orders and stealth attempts (`[Loud]`).
+*   **Sandstorm (T2 Hazard):** *Thick, choking clouds of abrasive sand and dust.* | `[Blinding]`, `[Gale]`
+    *   *Rules:* Vision is blocked entirely (`[Blinding]`), making ranged attacks Hard and Dodge impossible, while high-velocity winds deflect projectiles and blow away loose items (`[Gale]`).
+*   **Thunderstorm (T2 Hazard):** *Soaking downpour paired with crackling static electricity.* | `[Wet]`, `[Shock]`
+    *   *Rules:* Everything is completely soaked (`[Wet]`). Any static spark or electrical attack instantly triggers the `[Shock]` tag's conduction effect, making all attacks against wet targets in the Zone **Easy (4+)** for 1 round.
+*   **Wildfire (T2 Hazard):** *Searing heat, open flames, and thick screens of smoke.* | `[Fire]`, `[Gaseous]`, `[Loud]`
+    *   *Rules:* Flames deal automatic damage and place burning effects (`[Fire]`), choking smoke obscures vision and blocks ranged attacks (`[Gaseous]`), and the roaring timber prevents quiet action (`[Loud]`).
+*   **Flash Flood (T2 Hazard):** *A sudden wall of high-velocity water.* | `[Wet]`, `[Fast]`
+    *   *Rules:* Water washes away chemicals and coatings (`[Wet]`) while rushing down-zone, allowing creatures to move 1 Zone as a Free Action (`[Fast]`) but carrying unattended items and creatures away in the torrent at the End of Round unless they pass a **Tough** test.
+*   **Earthquake / Cave-In (T3 Hazard):** *Violent shaking and falling stone debris.* | `[Vibrating]`, `[Crushing]`
+    *   *Rules:* The ground shakes violently, disrupting spellcasting and notice checks (`[Vibrating]`), while falling rocks pin creatures and slow movement to a maximum of 1 Zone (`[Crushing]`).
+*   **Smog Marsh (T2 Hazard):** *A swamp filled with thick sewer gas where light dies.* | `[Wet]`, `[Toxic]`, `[Dark]`
+    *   *Rules:* Waterlogged sumps conduct electricity (`[Wet]`), sewer gas inflicts the **Weakened** condition (`[Toxic]`), and poor visibility imposes a **Bane (-1d)** on attacks and notice checks (`[Dark]`).
+*   **Haunted Woods (T2 Hazard):** *A dark forest filled with uncanny dread and phantom hands.* | `[Terrifying]`, `[Haunted]`
+    *   *Rules:* Eldritch whispers inflict the **Terrified** condition (`[Terrifying]`), while phantom hands impose a **Bane (-1d)** to Slink and Mouth tests (`[Haunted]`).
+*   **Acid Mire (T2 Hazard):** *A factory waste dump that slips and melts boots off.* | `[Acidic]`, `[Slick]`
+    *   *Rules:* Acidic runoff eats away at armor reduction on a hit (`[Acidic]`), while slippery mud causes creatures to fall **Prone** on a failed Slink test (`[Slick]`).
+
+### 4. Opportunities (Treats & Cover)
 
 *   **Hedges / Thickets (Tactical Feature):** Heavy brambles, bushes, or hanging tapestries.
     *   *Trigger:* Passive.
@@ -180,18 +207,18 @@ GMs can customize battlefields by placing these standardized, modular traits ont
 These scenarios illustrate how different hazards, opportunities, and Mob rules play out at the table.
 
 ### Example 1: Slipping on the Ice (Slink Tests)
-> **Example:** Grub (PC) and his **Size 3** Mob run from town guards into a frozen courtyard designated as **Zone A** (Profile: **Normal:2**; Trait: **Slippery**). 
+> **Example:** Grub (PC) and his **Size 3** Mob run from town guards into a frozen courtyard designated as **Zone A** (Profile: **5+/2**; Trait: **Slippery**). 
 > * **The PC:** Grub enters the zone and must make a Slink test. Grub has **Slink 2**, rolling **2d6** (Stat). He rolls `5, 5`—two successes! He keeps his footing.
-> * **The Mob:** The Mob enters the zone. Mobs roll exactly **1d6** for **Slink** tests. The player rolls `5`—only one success! The Mob fails the test against the **Normal:2** profile. The Mob falls **Prone** and their movement ends immediately in the middle of the ice sheet.
+> * **The Mob:** The Mob enters the zone. Mobs roll exactly **1d6** for **Slink** tests. The player rolls `5`—only one success! The Mob fails the **5+/2** Slink test. The Mob falls **Prone** and their movement ends immediately in the middle of the ice sheet.
 
 ### Example 2: Braving the Toxic Fumes (Tough Tests & Mob Scaling)
-> **Example:** Snarl (PC) and her massive **Size 5** Mob are pursuing a dwarf through a sewer pipe designated as **Zone B** (Profile: **Normal:2**; Traits: **Toxic** and **Narrow**). They start their turn in the zone.
-> * **The PC:** Snarl has **Tough 2**, rolling **2d6** (Stat). She rolls `6, 3`. The `6` explodes and she rolls another `3`. The total is one success—not enough for the **Normal:2** profile! Snarl fails and gains the **Weakened** condition.
+> **Example:** Snarl (PC) and her massive **Size 5** Mob are pursuing a dwarf through a sewer pipe designated as **Zone B** (Profile: **5+/2**; Traits: **Toxic** and **Narrow**). They start their turn in the zone.
+> * **The PC:** Snarl has **Tough 2**, rolling **2d6** (Stat). She rolls `6, 3`. The `6` explodes and she rolls another `3`. The total is one success—not enough for the **5+/2** profile! Snarl fails the test and gains the **Weakened** condition.
 > * **The Mob:** Because it is a Tough test, the Mob rolls **Size** dice (**5d6**). However, the zone has the **Narrow** trait, imposing a permanent **Bane** (-1d) on all physical tests. The Mob's dice pool is reduced to **4d6**. The player rolls `6, 5, 5, 2`. The `6` explodes and rolls a `4`. That is three successes! The Mob easily passes the test and is unaffected by the gas, their sheer numbers and mass helping them pull each other through.
 
 ### Example 3: Collapsing the Support (Shoring Opportunity)
-> **Example:** Wizgog (PC) is cornered by a heavily armored knight in a crypt (**Zone C**, Profile: **Normal:1**; Trait: **Shoring**). Wizgog wants to collapse the ceiling on the knight.
-> * **The Action:** Wizgog spends a Standard Action to smash the rotten wooden support column. Since this is an interactive opportunity, he tests **Brains** (his stat is 3, so he rolls **3d6**) against the zone's **Normal:1** profile.
+> **Example:** Wizgog (PC) is cornered by a heavily armored knight in a crypt (**Zone C**, Profile: **5+/1**; Trait: **Shoring**). Wizgog wants to collapse the ceiling on the knight.
+> * **The Action:** Wizgog spends a Standard Action to smash the rotten wooden support column. Since this is an interactive opportunity, he tests **Brains** (his stat is 3, so he rolls **3d6**) against the zone's **5+/1** profile.
 > * **The Result:** He rolls `5, 2, 1`—one success! The column splinters. The Zone immediately triggers a cave-in (**Crumbling Ceiling**).
 > * **The Resisting Tests:** 
 >   * Wizgog tests Slink (**2d6**) and rolls `5, 1` (success), jumping clear of the debris.
@@ -217,7 +244,7 @@ Because they lack a Boss to command them, the split-off Mob is tracked purely on
 At the end of each combat round, the player resolves the unsupervised Mob's actions using the **Chaos Tick**.
 
 >> **THE CHAOS TICK RULE:**
->> Roll a number of **d6** equal to the unsupervised Mob's current **Size**. The Target Number and Difficulty default to the cleared zone's Profile (typically **Normal:1**). 
+>> Roll a number of **d6** equal to the unsupervised Mob's current **Size**. The Target Number and Difficulty default to the cleared zone's Profile (typically **5+/1**). 
 >> *   **Successes (5+):** Count successes to resolve the Priority AI's progress.
 >> *   **Ones (1s):** Each **1** rolled represents growing chaos and bickering. Tally the **1s** and consult the **Gobbo Mischief Table** below. Each **1** also adds **1 die** to the communal **Bangaranga Pool** as the background racket hypes up the horde.
 >> *   **The Farkle:** If the roll yields **zero successes** and **two or more 1s**, the Mob fumbles catastrophically, triggering a disastrous event.

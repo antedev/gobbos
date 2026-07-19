@@ -13,11 +13,11 @@ An Advanced Order is possible, but goblins are easily distracted and their memor
 This is the basic flow of giving an order: 
 * Select which mob to order. You must be able to see it to command it. Seeing a portion of the mob is enough. So standing outside a house with a broken window with the mob inside is fine, standing behind a wall with the mob on the other side makes it impossible to order them. 
 * Compare the size of the Mob to your current Grunt
-	* If the are smaller or equal to your command size, the TN is 1
-	* If they are bigger, the TN goes up with 1 for each difference in size! 
-		* *Example: Your current Grunt is 3. That means you can command a S3 mob. But the mob you are trying to command is a S4 mob, so therefore it is a TN 2*
+	* If the Mob's **Size** is smaller than or equal to your **Grunt**, the **TN** is 1 (requiring 1 success).
+	* If the Mob is bigger than your **Grunt**, the **TN** increases by 1 success for each point of difference in size! 
+		* *Example: Your current **Grunt** is 3, allowing you to command a **Size** 3 **Mob** at **TN 1**. But if you are trying to command a **Size** 4 **Mob**, the **TN** becomes 2 (requiring 2 successes).*
 * Calculate the distance between you and the Mob
-	* If they are in the same zone as you get one automatic success (This means giving an order to a mob within your size limit in the same zone will always succeed)
-	* If they are in a zone further away, the test is Normal if the distance is equal or less than your Mouth. On zone further away increases the difficulty to Hard, and further away than that is impossible. 
-		* *Example: You have M2, so you can shout order to any mob under your control 2 zones away. 3 zones further is hard. 4 zones away is impossible*
+	* If they are in the same **Zone** as you, you gain one automatic success (this means giving an order to a **Mob** within your size limit in the same **Zone** will always succeed).
+	* If they are in a **Zone** further away, the test is **Normal** (5+) if the distance is equal to or less than your **Mouth** stat. One **Zone** further away than your **Mouth** increases the difficulty to **Hard** (6), and further away than that is impossible. 
+		* *Example: You have **Mouth** 2, so you can shout orders to a **Mob** up to 2 **Zones** away using a **Normal** (5+) test. Shouting to a **Mob** 3 **Zones** away increases the difficulty to **Hard** (6). Shouting 4 **Zones** away is impossible.*
 	

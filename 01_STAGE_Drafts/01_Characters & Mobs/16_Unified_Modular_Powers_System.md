@@ -29,7 +29,7 @@ The actual mechanical change or rule-breaking effect introduced to the game engi
     *   *Explosion Removal:* Suppresses explosion mechanics entirely (6s count as successes but do not explode).
 *   **Success & Difficulty Gauges:**
     *   *Target Number (TN) Adjustment:* Alters the required successes by a flat number (**+/- X**).
-    *   *Difficulty Step Shift:* Shifts the success threshold up or down (Easy: 4+, Normal: 5+, Hard: 6).
+    *   *Difficulty Step Shift:* Shifts the success threshold up or down (Easy 4+, Normal 5+, Hard 6).
     *   *Success Face Override:* Treats a specific face value as a success regardless of difficulty (e.g., treating 4s as successes on Normal tests).
     *   *Fumble Parameter Shift:* Expands the Fumble boundary (e.g., fumbling if you roll any 1s).
 *   **Stat & Derived Metric Adjustments:**

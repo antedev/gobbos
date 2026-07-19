@@ -1,6 +1,6 @@
 # Dice
 
-Rolling **dice** is fun, and in Gobbos you roll a lot of **dice** if you are a player. The GM, on the other hand, never rolls **dice**—unless to possibly determine the outcome of a random event.
+Rolling **dice** is fun, and in Gobbos you roll a lot of dice* if you are a player. The GM, on the other hand, never rolls **dice**—unless to possibly determine the outcome of a random event.
 
 ## Tests
 
@@ -12,7 +12,7 @@ For any **Test**, the GM sets a **Difficulty** and a **Target Number (TN)**. **D
 
 **Target Number (TN)** is typically fixed, such as how good armor an enemy has or the quality of the lock that is about to be picked. **TN** then denotes how many **Successes** you need to make whatever you are trying to do.
 
-Most of the time, you will roll a **Normal** test with a **TN** of 1, denoted as **Normal:1**. Which means that whatever number of dice you have in your **Dice Pool**, you succeed if there is at least one **5** or **6**.
+Most of the time, you will roll a **Normal** test with a **TN** of 1, denoted as **5+/1**. This means that whatever number of dice you have in your **Dice Pool**, you succeed if there is at least one **5** or **6**.
 
 | Difficulty | Success on |
 | :--- | :--- |
@@ -20,7 +20,7 @@ Most of the time, you will roll a **Normal** test with a **TN** of 1, denoted as
 | **Normal** | 5, 6 |
 | **Hard** | 6 |
 
-> **Example:** Picking a lock is typically a [Slink](../01_Characters & Mobs/10_Stats.md#slink) **Normal:1** test. But if the lock is of extra good quality, it could be a **Normal:2**. And if the lockpicker has brought quality lockpicks, it could turn into an **Easy:2** test.
+> **Example:** Picking a lock is typically a [Slink](../01_Characters & Mobs/10_Stats.md#slink) **5+/1** test. But if the lock is of extra good quality, it could be a **5+/2** test. And if the lockpicker has brought quality lockpicks, it could turn into an **4+/2** test.
 
 ### Dice Pool
 
@@ -30,7 +30,7 @@ If rolling for a **Mob** instead, the base number of dice in your **Dice Pool** 
 
 ### Exploding Dice
 
-Every time you roll a **6**, it is not only a **Success** but it allows you to roll an additional die. If that roll is a **6** again, you keep rolling until you no longer roll **6s**. This makes it possible, but still perhaps unlikely, to get a lot of **Successes** on a single roll.
+Every time you roll a **6**, it is not only a **Success** but it allows you to roll an additional die. If that roll is a **6** again, you keep rolling until you no longer roll **6s**. This makes it possible, but still perhaps unlikely, to get a lot of **Successes** on a single roll. If you have enough dice, it is recommended to grab a new dice instead of rerolling the 6 to make it easier to see the total number of successes.
 
 ### Criticals
 
@@ -40,7 +40,11 @@ Whenever you roll a **6** that explodes, and the new die you roll also turns int
 
 ### 1s and Fumbles
 
-If your final result has zero **Successes** and at least two dice show **1s**, you have **Fumbled**! You have embarrassed yourself and lost **1 Grunt**.
+Sometimes, luck is just a bad joke waiting for a punchline. When you roll a **Test** and fail to accumulate enough **Successes** (your **Successes** are less than the **Target Number (TN)**), but you have one or more dice showing **1s**, you can choose to push your luck and re-roll all of those **1s**. 
+
+* **The Blessing:** If the re-rolled dice generate enough **Successes** to meet or exceed the **Test's** **TN**, the **Test** succeeds normally. 
+* **The Fumble:** If the **Test** still fails after re-rolling the **1s**, you have **Fumbled**! The effort backfires catastrophically, and you lose **1 Grunt**.
+* **Accepting Failure:** If you choose not to re-roll the **1s** (or if you failed the **Test** but rolled no **1s** at all), the action simply fails normally. You do not lose **1 Grunt** or trigger any Fumble effects.
 
 ## The Bangaranga Pool
 
@@ -52,11 +56,11 @@ At the start of a **Raid**, the **Bangaranga Pool** is seeded with a baseline le
 
 | Number of Gobbos | Dice to Add |
 | :--- | :--- |
-| Number of **Bosses** | **1d6** / **Boss** |
-| Number of **Mobs** (**Size** 3 or 4) | **1d6** / **Mob** |
-| Number of **Mobs** (**Size** 5) | **2d6** / **Mob** |
+| Number of **Bosses** | **1d** per **Boss** |
+| Number of **Mobs** (**Size** 3 or 4) | **1d** per **Mob** |
+| Number of **Mobs** (**Size** 5) | **2d** per **Mob** |
 
-> **Example:** A 3-player raid party has one **Size** 3 **Mob**, one **Size** 4 **Mob**, and one **Size** 2 **Mob**. The starting **Bangaranga Pool** is **5 dice** (3 baseline + 1 + 1 + 0).
+> **Example:** A 3-player raid party has one **Size** 3 **Mob**, one **Size** 4 **Mob**, and one **Size** 2 **Mob**. The starting **Bangaranga Pool** is **5d** (3 baseline + 1 + 1 + 0).
 
 ### Loading the Pool (Hype Triggers)
 
@@ -81,7 +85,7 @@ However, using the crowd's energy for mundane tasks is considered "cheating" and
 | If the number of Bangaranga dice taken is **greater than the test's TN** | It costs **1 extra die** from the pool as a tax. This tax die is simply removed from the pool and discarded back to the box (not rolled). |
 | If the pool does not contain enough dice to cover both the dice rolled and the tax die | The player cannot take that many dice. |
 
-> **Example (Normal:2 Test):**
+> **Example (5+/2 Test):**
 > *   If you take **1 or 2 Bangaranga dice**, it costs no tax. You simply take them from the pool and roll them.
 > *   If you want to take **3 Bangaranga dice**, 3 is greater than the TN of 2. You must pay a **1 die tax**. This requires a total of **4 dice** to be present in the pool. 3 dice are rolled, 1 die is discarded.
 
@@ -91,4 +95,6 @@ Every **6** rolled on a Bangaranga Die counts as **1 Success**, but it **explode
 
 ### Overreaching
 
-If the test **fails** when you use Bangaranga dice, you lose **1 Grunt**, as with a **Fumble**. If the test **fails** and you have any **1s** on the dice that you rolled, you also drain the **Bangaranga Pool** with the same amount of Bangaranga Dice you used for the test.
+If your **Test** fails when you use **Bangaranga Dice**, you lose **1 Grunt**. Because a failed **Bangaranga** roll already carries this penalty, you have nothing to lose by re-rolling any **1s** in a desperate bid for **Success**!
+
+However, using the horde's noise carries a high risk of exhausting their hype. If you fail the **Test** when using **Bangaranga Dice** (either by choosing not to re-roll **1s**, or by re-rolling them and still failing), and your final roll contains any **1s** (including those rolled on the re-roll), you immediately drain the **Bangaranga Pool**, removing a number of **Bangaranga Dice** from the pool equal to the number of **Bangaranga Dice** you took for the **Test**.

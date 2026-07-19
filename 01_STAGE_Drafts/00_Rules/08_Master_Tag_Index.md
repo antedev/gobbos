@@ -19,7 +19,7 @@ Unlike a creature's **Ancestry** (what it *is*) or an item's **Trait** (how it i
 
 When a player makes a test involving tags (e.g., attacking a monster with an elemental weapon), they calculate the **Roll Profile** in three quick steps:
 
-1.  **Check Base Stats:** Look up the attacker's pool (**Tough** or **Slink**) and the target's base **Defence TN** and **Difficulty** (Normal: 5+).
+1.  **Check Base Stats:** Look up the attacker's pool (**Tough** or **Slink**) and the target's base **Defence** TN and **Difficulty** 
 2.  **Check Monster Hooks (Local Overrides):** Compare the attacker's weapon tags with the target's printed **Flaw Hooks** or **Resistance Hooks**:
     *   *Flaws:* If a tag matches a Flaw, it typically reduces **Defence TN** or makes the test **Easy (4+)**.
     *   *Resistances:* If a tag matches a Resistance, it typically increases **Defence TN** or makes the test **Hard (6)**.

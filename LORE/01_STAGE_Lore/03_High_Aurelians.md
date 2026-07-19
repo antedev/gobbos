@@ -4,7 +4,7 @@
 — *Scavenger-Scholar Thomas of House Vane*
 
 ## Biological Caste System
-Generations of daily exposure to the refined Sol-Quartz energy grid rewrote the biology of the Heartland's population. This created a rigid, biological caste system based on proximity to the mirror towers:
+Generations of daily exposure to the refined Sol-Quartz energy grid rewrote the biology of the Aurelian Heartland's population. This created a rigid, biological caste system based on proximity to the mirror towers:
 
 ### 1. The High Aurelians
 The ruling class of the Empire proper, residing in the sun-drenched capital cities.
@@ -13,7 +13,7 @@ The ruling class of the Empire proper, residing in the sun-drenched capital citi
 *   **Social Status**: They viewed themselves as living demi-gods, using their physical superiority to justify absolute rule.
 
 ### 2. The Low Provincials
-The ordinary human citizens living in the rural fringes of the Heartland and the overseas colonies.
+The ordinary human citizens living in the rural fringes of the Aurelian Heartland and the Western Kingdoms across the sea.
 *   **Physiology**: Standard human stature and lifespans. Because Sol-Quartz crystals were rare and reserved for heavy industry in their regions, they received no biological upgrade.
 *   **Social Status**: Foremen, overseers, and garrison soldiers. They looked up at the High Aurelians with a mixture of awe and growing resentment.
 
@@ -29,7 +29,7 @@ The biological grace of the High Aurelians came with a severe, physical constrai
 
 *   **The Tether**: Their mutated biology was dependent on the silent, high-frequency harmonic vibration emitted by the active Sol-Quartz grid.
 *   **Chime-Sickness**: If a High Aurelian traveled away from the grid for more than a few weeks, their cells began to collapse. They suffered an aching, hollow fatigue, their golden eyes turned dull grey, and they underwent rapid, catastrophic aging, withering to ash.
-*   **The Golden Cage**: Because the ruling class could not leave the Heartland without dying, they were prisoners of their own utopia. They were forced to govern their overseas empires through proxy governors and corporate mercantilism.
+*   **The Golden Cage**: Because the ruling class could not leave the Aurelian Heartland without dying, they were prisoners of their own utopia. They were forced to govern the Western Kingdoms through proxy governors and corporate mercantilism.
 
 ---
 
@@ -53,8 +53,8 @@ Desperate nobles who abandoned the light and turned to the subterranean vaults.
 
 ### 2. The Crystal Cloistered (Fading Ascendants)
 Aristocrats who refused to pollute their blood with Ichor.
-*   **Survival Method**: They secluded themselves inside sealed vaults containing the last intact, unfractured Sol-Quartz arrays in the Heartland.
-*   **Current State**: Fragile, ghost-like shut-ins. They live inside their shrinking crystal fields, knowing that stepping outside into the clean air of the Heartland will turn them to ash in minutes.
+*   **Survival Method**: They secluded themselves inside sealed vaults containing the last intact, unfractured Sol-Quartz arrays in the Aurelian Heartland.
+*   **Current State**: Fragile, ghost-like shut-ins. They live inside their shrinking crystal fields, knowing that stepping outside into the clean air of the Aurelian Heartland will turn them to ash in minutes.
 
 ### 3. The Blind Zealots (Solar Fundamentalists)
 Fanatical ascetics who fled to the highest peaks and scorched deserts.
@@ -66,7 +66,7 @@ Decaying commanders and high priests who turned to industrial medicine.
 *   **Survival Method**: They arrested their cellular decay by permanently sealing their withered bodies inside alchemically pressurized clockwork suits.
 *   **Current State**: Walking, steam-belching armor sets of brass and iron. They pilot these mobile shrines through the ruins, executing squatters to reclaim their old municipal districts.
 
-### 5. The Arch-Province Exiles (Diluted Bloodlines)
-Fugitives who fled across the ocean in the final days before the collapse.
-*   **Survival Method**: They intermarried with the wealthy merchant elite of the Sovereign Arch-Provinces.
-*   **Current State**: Modern humans who carry faded, diluted traits (such as pale golden eyes). They use their families' banking houses to fund the military expeditions returning to the Heartland, eager to reclaim their ancestral birthright.
+### 5. The Exiles of the Western Kingdoms (Diluted Bloodlines)
+Fugitives who successfully fled across the ocean in the final days before the collapse.
+*   **Survival Method**: They intermarried with the wealthy merchant elite of the Western Kingdoms.
+*   **Current State**: Modern humans who carry faded, diluted traits (such as pale golden eyes). They use their families' banking houses to fund the military expeditions returning to the Aurelian Heartland, eager to reclaim their ancestral birthright.

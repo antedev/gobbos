@@ -115,7 +115,7 @@ Count all **1s** rolled in the initial pool (do not count 1s on exploded extra d
 
 ### Breaking & Durability
 
-Custom Gear is put under extreme stress during combat. Gear breaks only when an Attack roll using the item results in a **Fumble** (zero successes and two or more 1s), or when a specific Oddity effect pushes its active Bite level above B3. Non-combat skill checks never break gear.
+Custom Gear is put under extreme stress during combat. Gear breaks only when an Attack roll using the item results in a **Fumble** (see [Dice](../../02_PROD_Core_Rules/00_Rules/01_Dice.md#1s-and-fumbles)), or when a specific Oddity effect pushes its active Bite level above B3. Non-combat skill checks never break gear.
 
 When you Fumble an attack, roll 1d6 for **The Break Roll** and compare it to the item's Quality. Each Oddity attached to the item increases the break range by +1.
 

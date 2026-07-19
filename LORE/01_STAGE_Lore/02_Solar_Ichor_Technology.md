@@ -4,7 +4,7 @@
 — *Snik-Griz, Scrap-Technician*
 
 ## The Raw Elements
-Alchemical industrial technology in the Heartland relies on two primary physical components: Black Ichor and Sol-Quartz.
+Alchemical industrial technology in the Aurelian Heartland relies on two primary physical components: Black Ichor and Sol-Quartz.
 
 ### Black Ichor
 Black Ichor is a thick, volatile, metallic grease pumped from deep tectonic fissures in the earth.
@@ -54,7 +54,7 @@ A refined canister remains stable indefinitely at room temperature. To release t
 ---
 
 ## The Grand Desynchronization
-One hundred years ago, the alchemical network collapsed. To power the expanding colonies, the Empire pushed its refineries past their structural safety limits.
+One hundred years ago, the alchemical network collapsed. To power the expanding Western Kingdoms, the Empire pushed its refineries past their structural safety limits.
 
 ### Lattice Collapse
 The system suffered a universal mechanical failure of the material:

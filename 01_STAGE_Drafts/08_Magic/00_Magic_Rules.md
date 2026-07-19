@@ -25,7 +25,7 @@ Goblins do not learn "spells." Instead, they memorize **Power Words**, which are
 Casting a spell is a standard Action. When you cast a spell, perform the following steps:
 
 1. **Declare the Power Word:** Announce the primary Tag you are channeling (e.g., `[Fire]`).
-2. **Roll the Brains Pool:** Roll a number of **d6** equal to your **Brains** stat. The GM determines the Difficulty (**Easy: 4+**, **Normal: 5+**, **Hard: 6**) based on the environment or the target's resistance.
+2. **Roll the Brains Pool:** Roll a number of **d** equal to your **Brains** stat. The GM determines the Difficulty (**Easy 4+**, **Normal 5+**, **Hard 6**) based on the environment or the target's resistance.
 3. **Lock and Push:** 
    * To succeed at all, you must roll and lock in at least **1 success**.
    * **Settle:** You can stop rolling, immediately resolving the spell's effect using your current locked successes.
@@ -52,7 +52,7 @@ If you roll multiple successes but none form a pair (e.g., you roll a `4`, `5`, 
 * Target one additional enemy in the same zone.
 * Add **+1 Grit damage** or **+1 success** to the spell's effect.
 
-> **Example:** Fizzle casts `[Fire]` on Normal difficulty (success on 5+) with a **Brains** of 5 (**5d6**).
+> **Example:** Fizzle casts `[Fire]` against a profile of **5+** (1 success) with a **Brains** pool of **5d**.
 > * **First Roll:** `[5, 5, 2, 1, 1]` $\rightarrow$ Fizzle has a pair of `5`s. This is currently a **T2 Effect**.
 > * **The Push:** Fizzle wants a bigger explosion. He locks the two `5`s and rerolls the other 3 dice.
 > * **Second Roll:** `[5, 6, 3]` $\rightarrow$ He rolls a new `5` and a `6`. Since the `6` is a success, he also locks it. He now has three `5`s (a triple $\rightarrow$ **T3 Effect**).

@@ -3,8 +3,8 @@
 This is a master list of the core game mechanics and goblin keywords to quickly reference while playing.
 
 ## Dice & Tests
-*   **Difficulty:** The die face needed to score a "success" (Easy: 4-6, Normal: 5-6, Hard: 6). This is typically dependent on the circumstances of the test.
-*   **Target Number (TN):** The total number of successes required to pass a test. (e.g., Normal:1 means you need one die to land on 5 or 6).This is typically a fixed number. 
+*   **Difficulty:** The die face needed to score a success (Easy 4+, Normal 5+, Hard 6). This is typically dependent on the circumstances of the test.
+*   **Target Number (TN):** The total number of successes required to pass a test (e.g., in shorthand **5+/1**, you need one die to land on 5 or 6). This is typically a fixed number. 
 *   **Exploding Dice:** Rolling a 6 counts as a success and allows you to roll another die.
 *   **Fumble:** Rolling two or more 1s and zero successes. If you fumble near your Gobbos, you lose 1 Grunt.
 *   **Critical:** Rolling a **6** that explodes, and rolling another **6** on the resulting die (a double-six chain). It grants **+1 Grunt** and an immediate bonus action. See [Dice](01_Dice.md#criticals).

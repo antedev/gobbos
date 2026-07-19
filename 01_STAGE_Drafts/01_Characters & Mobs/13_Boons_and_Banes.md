@@ -1,5 +1,7 @@
 # Boons and Banes (Building Blocks)
 
+ **THIS SECTION IS TO BE CONSIDERED A BIT OUTDATED. ALL THE RULES AROUND STILL CHANGE THAT WILL AFFECT THIS. THIS IS THEREFORE NOT TO SEEN AS A BLOCKER TO OTHER RULE CHANGES, BUT RATHER WE WILL COME BACK AND FINISH THIS ONCE ALL THE OTHER RULES ARE SOLIDIFIED.**
+
 This list contains the raw mechanical effects used to build Quirks, Items, and Mutations. The goal is to make things highly situational and flavorful, rather than just raw math increases.
 
 ## 🟢 Boons (The Good Stuff)

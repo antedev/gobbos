@@ -13,20 +13,20 @@ Each Mob has **two (2) actions**, which are also reset at the start of each roun
 
 ### Actionlist
 #### Move (Mob or PC)
-With a Move action, you can move up to your [[Movement]] number of zones. The different conditions of the zones are taken into account, and the movement might be limited or even impossible. If a climb, swim, jump or other action is required based on the circumstances in the zone, you must typically make a [[Slink]] test, with the [[Difficulty]] and [[TN]] set by the GM, but typically clearly denoted by the zone. 
+With a Move action, you can move up to your [[Movement]] number of zones. The different conditions of the zones are taken into account, and the movement might be limited or entirely blocked by hazards. If a climb, swim, jump, or other physical feat is required based on the circumstances in the zone, you must typically make a [[Slink]] test. The [[Difficulty]] and [[TN]] default to the established zone profile (e.g., **5+/1**), subject to GM adjustment. 
 #### Attack (Mob or PC)
 The Attack action can only be used in the Players Active turn. 
 To Attack, the player's base dice pool is based on the player's [[Tough]] for [[Melee attack]] and [[Slink]] for [[Ranged attack]], modified by any equipment, Quirks, or other circumstances. 
-*   **Kill / Wound:** If you roll successes equal to or greater than the target's current **Defence**, you instantly defeat a standard enemy, deal **1 Wound** to a Boss/Elite (see [Enemies](../04_Enemies/20_Enemies.md)), or reduce a Mob's **Size** by the number of successes scored.
-*   **Stagger:** If you roll at least **one (1) success** but fewer than the target's current **Defence**, the attack does not deal damage, but it throws them off balance. The target gains the **Staggered** condition until the end of the round.
+*   **Kill / Wound:** If you roll successes equal to or greater than the target's current **Defence** (acting as the test's **TN**), you instantly defeat a standard enemy, deal **1 Wound** to a Boss/Elite (see [Enemies](../04_Enemies/20_Enemies.md)), or reduce a Mob's **Size** by the number of successes scored.
+*   **Stagger:** If you roll at least **one (1) success** but fewer than the target's current **Defence** TN, the attack does not deal damage, but it throws them off balance. The target gains the **Staggered** condition until the end of the round.
 *   **Bounce:** If you roll **zero (0) successes**, the attack bounces harmlessly off their armor. Nothing happens.
 #### Plunder (Mob or PC)
 The [[Plunder]] action is to pick up any [[Loot]] at where the Player or the Mob stands.  
 #### Dodge / Parry (Reaction)
-The Dodge or Parry action can only be used as a **Reaction** to an incoming Attack or Environmental effect. Typically this is in the Enemy Active turn. You **must** have saved a Standard Action from your turn to use this.cor If you are out of actions, you simply take the damage!
-*   **Dodge:** Test [[Slink]].
-*   **Parry:** Test [[Tough]] (requires a shield).
-*   **Armor** Armor adds Passive defence dice that do NOT need an action. See more under equipment.
+The Dodge or Parry action can only be used as a **Reaction** to an incoming Attack or Environmental effect. Typically this is in the Enemy Active turn. You **must** have saved a Standard Action from your turn to use this. If you are out of actions, you simply take the damage!
+*   **Dodge:** Test [[Slink]] (typically **5+/1**). Every success you roll reduces incoming damage by 1.
+*   **Parry:** Test [[Tough]] (requires a shield, typically **5+/1**). Every success you roll reduces incoming damage by 1.
+*   **Armor:** Armor adds Passive defence dice that do NOT need an action. See more under equipment.
 *   **The Math:** Every success you roll reduces the incoming Damage by 1. If any damage remains, your Gobbo or Mob takes it.
 
 **Mob Defense:**
@@ -36,7 +36,7 @@ Mobs do not naturally dodge. They are a chaotic swarm and simply absorb damage. 
     *   *Loitering Mobs (1 Saved Action):* Rolls **1d6** Defence.
     *   *Ordered or Out of Control Mobs (0 Saved Actions):* Rolls **0d6** Defence (relying only on passive Armor).
     *   *Bane:* A **Staggered** Mob suffers a **Bane (-1d)** to their Defence rolls, reducing a loitering Mob's active defense roll to **0d6**.
-3.  **Ordered Scatter (Reaction):** If a Mob with 0 saved actions is targeted by an attack, the Boss can spend a saved action (or an unused Free Order Reaction) to yell at them to "Scatter!". The Mob rolls defence dice equal to the Boss's **Mouth** stat. If they survive the attack, they may immediately Move 1 Zone to take cover.
+3.  **Ordered Scatter (Reaction):** If a Mob with 0 saved actions is targeted by an attack, the Boss can spend a saved action (or an unused Free Order Reaction) to yell at them to "Scatter!". The Mob rolls active defense dice equal to the Boss's **Mouth** stat (e.g., if Mouth is 3, the Mob rolls **3d**). If they survive the attack, they may immediately Move 1 Zone to take cover.
 
 ### GM Tactics: Group Attacks (Enemy Swarms)
 If multiple enemies surround and attack a Gobbo, the GM should NOT make separate attacks. Instead, they combine into a **Group Attack**. While a PC can only be attacked by a maximum of 3 enemies, there is no limit on attacker on a Mob
@@ -45,7 +45,7 @@ If multiple enemies surround and attack a Gobbo, the GM should NOT make separate
 > *GM Advice:* Avoid splitting enemies into many small attacks against a single PC. This will instantly drain their saved actions and create a frustrating "death by a thousand cuts." Swarm them into Group Attacks instead!
 
 #### Manipulate
-The Mainpulate action is a catch all for whenever a Mob or PC tries to interact with an item or the environment in any way. The base dice pool is based on whatever attribute is most relevant to the action, modified by any equipment, Quirks or other circumstances. The [[Difficulty]] and [[TN]] set by the GM. 
+The Manipulate action is a catch-all for whenever a Mob or PC tries to interact with an item or the environment in any way. The base dice pool is based on whatever attribute is most relevant to the action, modified by any equipment, Quirks, or other circumstances. The GM sets the [[Difficulty]] and [[TN]] (typically **5+/1**). 
 
 #### Order 
 The Order action is used to give commands to your goblins, directing a Mob to use both of their actions for the round. Standard Orders to controlled Mobs do not require a dice roll.
@@ -112,7 +112,7 @@ If there are no one fighting on one side, or one side gives up or flees, the Com
 #### Fleeing (Tactical Retreat)
 Goblins are cowards at heart, and running away is a highly viable survival strategy.
 *   **Escape Zones:** To flee an encounter, a PC or Mob must move into a designated escape zone or exit.
-*   **Disengaging & Opportunity Attacks:** If a PC or Mob attempts to leave a Zone containing alert enemies, they trigger a reactionary Opportunity Attack from each enemy in the zone. To prevent this, they must spend a Standard Action to Disengage (testing **Slink** against the highest enemy **Defence TN**). On a success, they may move out of the Zone safely.
+*   **Disengaging & Opportunity Attacks:** If a PC or Mob attempts to leave a Zone containing alert enemies, they trigger a reactionary Opportunity Attack from each enemy in the zone. To prevent this, they must spend a Standard Action to Disengage, testing **Slink** against a difficulty of **5+** and successes required equal to the highest enemy **Defence** TN (denoted as **5+/Defence**). On a success, they may move out of the Zone safely.
 *   **Carrying Bulk:** Goblins fleeing with heavy treasure are slowed. Standard movement and dragging penalties for **Bulk** apply while fleeing. A PC or Mob can choose to drop their loot as a Free Action to restore full movement speed.
 *   **Mob Fleeing:** Mobs flee when given a "Scatter" or "Retreat" Order, or automatically when a failed **Morale Check** triggers group panic.
 

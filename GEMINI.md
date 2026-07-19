@@ -250,3 +250,12 @@ To prevent rules confusion and ensure a completely watertight system, **synonyms
 
 #### The Core Vocabulary Checklist
 Always check your writing against the master **Keywords Index** from **STAGE Drafts — Gobbos.pdf**. If a word isn't listed there verbatim, it cannot be used as a rules descriptor.
+
+---
+
+### Gothic-Fantasy Lore Writing Guidelines
+To ensure that the setting feels immersive, lived-in, and highly atmospheric (drawing inspiration from the tone of Warhammer Fantasy Roleplay), all world-building text must follow these rules:
+
+1.  **No Negative Definitions**: Never define setting elements, cultures, or objects by stating what they are *not* (e.g., avoid "Goblins are not...", "Mire-Wells are not merely...", "They do not have..."). Instead, write active, positive, and declarative statements that establish what things *are* as absolute, objective fact.
+2.  **In-World Thematic Terminology**: Keep the running text grounded strictly in the fantasy setting. Do not intermingle modern, scientific, or clinical jargon (such as *somatic*, *database*, *software*, *hardware*, *clones*, *upload*, *containment registry*) into the in-universe lore. Place any real-world scientific comparisons or game-design rationales in separate, out-of-character "Behind the Scenes" notes, keeping the primary setting text fully immersive.
+3.  **Evocative Gothic-Victorian Prose**: Avoid dry, static bullet-point lists when describing lore. Write rich, descriptive narrative paragraphs focusing on sensory details (textures, smells of sulfur and boiling tallow, the visual weight of stone). Surface machinery and buildings must feel heavy, ornate, alchemical, and gothic (gargoyles venting steam, wrought-iron chains, brass-plated vaults) rather than clean, industrial, or modern.
