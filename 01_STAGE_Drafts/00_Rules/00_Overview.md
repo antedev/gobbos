@@ -1,6 +1,6 @@
 # What is Gobbos?
 
-This game is a [[Rougelite Tactical Skirmish RPG]] for Goblins that wants to be the big boss. 
+This game is a **Rougelite Tactical Skirmish RPG** for Goblins that wants to be the big boss. 
 
 The players will each control a goblin boss, that has a mob of smaller goblins and runts. They will compete and cooperatate to loot, trash, kill to climb the hierarchy of the Goblin tribe. But goblins are a fickle bunch. The mob of the goblins will easily disperse, flee, disobey or even attack each other or the player! Death is common, and usually met with a laugh from fellow Goblins. 
 

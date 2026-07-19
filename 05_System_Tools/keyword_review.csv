@@ -1,0 +1,145 @@
+Keyword,Keep (YES/NO/REMOVE),In_Index,Count,Files
+Grunt,YES,YES,76,"01_STAGE_Drafts/00_Rules/04_Giving orders.md, 01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md, 01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 01_STAGE_Drafts/01_Characters & Mobs/11_Character Creation.md, 01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md, 01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md, 01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md, 01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 01_STAGE_Drafts/05_Base/00_Lair_Rules.md, 01_STAGE_Drafts/07_Travel/00_Journey_Rules.md, 02_PROD_Core_Rules/00_Rules/01_Dice.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Tough,YES,YES,55,"01_STAGE_Drafts/00_Rules/02 Combat.md, 01_STAGE_Drafts/00_Rules/03_Movement & Zones.md, 01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md, 01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md, 01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 01_STAGE_Drafts/01_Characters & Mobs/11_Character Creation.md, 01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md, 01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md, 01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md, 01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 01_STAGE_Drafts/04_Enemies/20_Enemies.md, 01_STAGE_Drafts/07_Travel/00_Journey_Rules.md, 02_PROD_Core_Rules/00_Rules/01_Dice.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Size,YES,YES,55,"01_STAGE_Drafts/00_Rules/02 Combat.md, 01_STAGE_Drafts/00_Rules/03_Movement & Zones.md, 01_STAGE_Drafts/00_Rules/04_Giving orders.md, 01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md, 01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md, 01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md, 01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 01_STAGE_Drafts/04_Enemies/20_Enemies.md, 01_STAGE_Drafts/05_Base/00_Lair_Rules.md, 01_STAGE_Drafts/07_Travel/00_Journey_Rules.md, 02_PROD_Core_Rules/00_Rules/01_Dice.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Slink,YES,YES,54,"01_STAGE_Drafts/00_Rules/02 Combat.md, 01_STAGE_Drafts/00_Rules/03_Movement & Zones.md, 01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md, 01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md, 01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 01_STAGE_Drafts/01_Characters & Mobs/11_Character Creation.md, 01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md, 01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md, 01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 01_STAGE_Drafts/04_Enemies/20_Enemies.md, 01_STAGE_Drafts/07_Travel/00_Journey_Rules.md, 01_STAGE_Drafts/08_Magic/00_Magic_Rules.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Mob,YES,YES,50,"01_STAGE_Drafts/00_Rules/04_Giving orders.md, 01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 01_STAGE_Drafts/04_Enemies/20_Enemies.md, 02_PROD_Core_Rules/00_Rules/01_Dice.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Brains,YES,YES,39,"01_STAGE_Drafts/00_Rules/03_Movement & Zones.md, 01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md, 01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md, 01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 01_STAGE_Drafts/01_Characters & Mobs/11_Character Creation.md, 01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md, 01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md, 01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 01_STAGE_Drafts/03_Loot/34_Crafting.md, 01_STAGE_Drafts/05_Base/00_Lair_Rules.md, 01_STAGE_Drafts/07_Travel/00_Journey_Rules.md, 01_STAGE_Drafts/08_Magic/00_Magic_Rules.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Quirk,YES,YES,38,"01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md, 01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md, 01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 01_STAGE_Drafts/03_Loot/34_Crafting.md, 01_STAGE_Drafts/05_Base/00_Lair_Rules.md, 01_STAGE_Drafts/08_Magic/00_Magic_Rules.md, 02_PROD_Core_Rules/00_Rules/01_Dice.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Mouth,YES,YES,35,"01_STAGE_Drafts/00_Rules/02 Combat.md, 01_STAGE_Drafts/00_Rules/04_Giving orders.md, 01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md, 01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 01_STAGE_Drafts/01_Characters & Mobs/11_Character Creation.md, 01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md, 01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md, 01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 01_STAGE_Drafts/05_Base/00_Lair_Rules.md, 01_STAGE_Drafts/07_Travel/00_Journey_Rules.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Grit,YES,YES,35,"01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md, 01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md, 01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 01_STAGE_Drafts/01_Characters & Mobs/11_Character Creation.md, 01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 01_STAGE_Drafts/08_Magic/00_Magic_Rules.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Bane,YES,YES,27,"01_STAGE_Drafts/00_Rules/02 Combat.md, 01_STAGE_Drafts/00_Rules/03_Movement & Zones.md, 01_STAGE_Drafts/00_Rules/05_Raid points.md, 01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md, 01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 01_STAGE_Drafts/05_Base/00_Lair_Rules.md, 01_STAGE_Drafts/07_Travel/00_Journey_Rules.md, 01_STAGE_Drafts/08_Magic/00_Magic_Rules.md"
+Defence,YES,YES,22,"01_STAGE_Drafts/00_Rules/02 Combat.md, 01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md, 01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md, 01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 01_STAGE_Drafts/04_Enemies/20_Enemies.md"
+Zone,YES,YES,21,"01_STAGE_Drafts/00_Rules/03_Movement & Zones.md, 01_STAGE_Drafts/00_Rules/04_Giving orders.md, 01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md, 01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md"
+Zone Profile,YES,YES,15,01_STAGE_Drafts/00_Rules/03_Movement & Zones.md
+Boon,YES,YES,14,"01_STAGE_Drafts/00_Rules/02 Combat.md, 01_STAGE_Drafts/00_Rules/03_Movement & Zones.md, 01_STAGE_Drafts/00_Rules/05_Raid points.md, 01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md, 01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 01_STAGE_Drafts/07_Travel/00_Journey_Rules.md"
+Bulk,YES,YES,14,"01_STAGE_Drafts/00_Rules/02 Combat.md, 01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 01_STAGE_Drafts/01_Characters & Mobs/11_Character Creation.md, 01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md, 01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md, 01_STAGE_Drafts/03_Loot/33_Equipment.md, 01_STAGE_Drafts/07_Travel/00_Journey_Rules.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Twist,YES,YES,13,"01_STAGE_Drafts/01_Characters & Mobs/11_Character Creation.md, 01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md, 01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md, 01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md"
+Success,YES,YES,13,02_PROD_Core_Rules/00_Rules/01_Dice.md
+Raid,YES,YES,12,"01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 02_PROD_Core_Rules/00_Rules/01_Dice.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Dice Pool,YES,YES,11,"01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 02_PROD_Core_Rules/00_Rules/01_Dice.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Infamy,YES,YES,11,"01_STAGE_Drafts/01_Characters & Mobs/11_Character Creation.md, 01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md, 01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md, 01_STAGE_Drafts/05_Base/00_Lair_Rules.md"
+Test,YES,YES,11,02_PROD_Core_Rules/00_Rules/01_Dice.md
+TN,YES,YES,10,"01_STAGE_Drafts/00_Rules/02 Combat.md, 01_STAGE_Drafts/00_Rules/04_Giving orders.md, 01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md, 02_PROD_Core_Rules/00_Rules/01_Dice.md"
+Weakened,YES,YES,10,"01_STAGE_Drafts/00_Rules/03_Movement & Zones.md, 01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md, 01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 01_STAGE_Drafts/07_Travel/00_Journey_Rules.md"
+Bangaranga Pool,YES,YES,10,"01_STAGE_Drafts/00_Rules/03_Movement & Zones.md, 01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 01_STAGE_Drafts/07_Travel/00_Journey_Rules.md, 02_PROD_Core_Rules/00_Rules/01_Dice.md"
+Movement,YES,YES,9,"01_STAGE_Drafts/00_Rules/02 Combat.md, 01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md, 01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md, 01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 01_STAGE_Drafts/01_Characters & Mobs/11_Character Creation.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Wound,YES,YES,9,"01_STAGE_Drafts/00_Rules/02 Combat.md, 01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md, 01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md, 01_STAGE_Drafts/04_Enemies/20_Enemies.md"
+Loot,YES,YES,9,"01_STAGE_Drafts/00_Rules/02 Combat.md, 01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md, 01_STAGE_Drafts/05_Base/00_Lair_Rules.md, 01_STAGE_Drafts/07_Travel/00_Journey_Rules.md"
+Target Number (TN),YES,YES,9,"01_STAGE_Drafts/00_Rules/03_Movement & Zones.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 01_STAGE_Drafts/04_Enemies/20_Enemies.md, 02_PROD_Core_Rules/00_Rules/01_Dice.md"
+Restrained,YES,YES,9,"01_STAGE_Drafts/00_Rules/03_Movement & Zones.md, 01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md, 01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md"
+Prone,YES,YES,9,"01_STAGE_Drafts/00_Rules/03_Movement & Zones.md, 01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md, 01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md"
+Bangaranga Dice,YES,YES,9,"01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 02_PROD_Core_Rules/00_Rules/01_Dice.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+XP,YES,YES,9,01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md
+Move,YES,YES,8,"01_STAGE_Drafts/00_Rules/03_Movement & Zones.md, 01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md, 01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 01_STAGE_Drafts/04_Enemies/20_Enemies.md, 02_PROD_Core_Rules/00_Rules/01_Dice.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Carry,YES,YES,8,"01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Over-Laden,YES,YES,8,"01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 01_STAGE_Drafts/07_Travel/00_Journey_Rules.md"
+Difficulty,YES,YES,7,"01_STAGE_Drafts/00_Rules/02 Combat.md, 01_STAGE_Drafts/00_Rules/03_Movement & Zones.md, 01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md, 02_PROD_Core_Rules/00_Rules/01_Dice.md"
+Staggered,YES,YES,7,"01_STAGE_Drafts/00_Rules/02 Combat.md, 01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md, 01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md"
+Zones,YES,YES,7,"01_STAGE_Drafts/00_Rules/03_Movement & Zones.md, 01_STAGE_Drafts/00_Rules/04_Giving orders.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 01_STAGE_Drafts/04_Enemies/20_Enemies.md"
+Infamy Mark,YES,YES,7,01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md
+Order,YES,YES,6,"01_STAGE_Drafts/00_Rules/02 Combat.md, 01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md, 01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md, 01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md"
+Dodge,YES,YES,6,"01_STAGE_Drafts/00_Rules/02 Combat.md, 01_STAGE_Drafts/00_Rules/03_Movement & Zones.md, 01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md, 01_STAGE_Drafts/04_Enemies/20_Enemies.md"
+Normal,YES,YES,6,"01_STAGE_Drafts/00_Rules/03_Movement & Zones.md, 01_STAGE_Drafts/00_Rules/04_Giving orders.md, 02_PROD_Core_Rules/00_Rules/01_Dice.md"
+Manipulate,YES,YES,6,"01_STAGE_Drafts/00_Rules/03_Movement & Zones.md, 01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md, 01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md, 02_PROD_Core_Rules/00_Rules/01_Dice.md"
+Action,YES,YES,6,"01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md"
+Main Stats,YES,YES,6,"01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Power Words,YES,YES,6,"01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 01_STAGE_Drafts/08_Magic/00_Magic_Rules.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Free Orders,YES,YES,5,"01_STAGE_Drafts/00_Rules/02 Combat.md, 01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Morale Check,YES,YES,5,"01_STAGE_Drafts/00_Rules/02 Combat.md, 01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md, 01_STAGE_Drafts/04_Enemies/20_Enemies.md"
+Terrified,YES,YES,5,"01_STAGE_Drafts/00_Rules/03_Movement & Zones.md, 01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md, 01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 01_STAGE_Drafts/04_Enemies/20_Enemies.md"
+Scrap,YES,YES,5,"01_STAGE_Drafts/00_Rules/03_Movement & Zones.md, 01_STAGE_Drafts/05_Base/00_Lair_Rules.md"
+Oddity,YES,YES,5,"01_STAGE_Drafts/00_Rules/03_Movement & Zones.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 01_STAGE_Drafts/08_Magic/00_Magic_Rules.md"
+Stunned,YES,YES,5,"01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md, 01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md"
+Passive Defence,YES,YES,5,"01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Crafting Capacity,YES,YES,5,"01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 01_STAGE_Drafts/03_Loot/34_Crafting.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Elder,YES,YES,5,"01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md, 01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md, 01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md"
+Gang Quirks,YES,YES,5,"01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md, 01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md"
+Boss,YES,YES,5,"01_STAGE_Drafts/04_Enemies/20_Enemies.md, 02_PROD_Core_Rules/00_Rules/01_Dice.md"
+Route Test,YES,YES,5,01_STAGE_Drafts/07_Travel/00_Journey_Rules.md
+Attack,YES,YES,4,"01_STAGE_Drafts/00_Rules/03_Movement & Zones.md, 01_STAGE_Drafts/04_Enemies/20_Enemies.md"
+Uncontrolled,YES,YES,4,"01_STAGE_Drafts/00_Rules/03_Movement & Zones.md, 01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 01_STAGE_Drafts/07_Travel/00_Journey_Rules.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Hard,YES,YES,4,"01_STAGE_Drafts/00_Rules/04_Giving orders.md, 02_PROD_Core_Rules/00_Rules/01_Dice.md"
+Blinded,YES,YES,4,"01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md, 01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md"
+Max Mobs,YES,YES,4,"01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Gang,YES,YES,4,"01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md, 01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md"
+Marks,YES,YES,4,01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md
+Bone Pile,YES,YES,4,"01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md, 01_STAGE_Drafts/05_Base/00_Lair_Rules.md"
+Gang Mark,YES,YES,4,"01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md, 01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md"
+Travel Event,YES,YES,4,01_STAGE_Drafts/07_Travel/00_Journey_Rules.md
+Loitering,YES,YES,3,"01_STAGE_Drafts/00_Rules/02 Combat.md, 01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md"
+Out of Control,YES,YES,3,"01_STAGE_Drafts/00_Rules/02 Combat.md, 01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md"
+Base Danger Rating,YES,YES,3,01_STAGE_Drafts/00_Rules/05_Raid points.md
+Easy,YES,YES,3,"01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md, 02_PROD_Core_Rules/00_Rules/01_Dice.md"
+Dumb,YES,YES,3,"01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md, 01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md, 01_STAGE_Drafts/04_Enemies/20_Enemies.md"
+Parry,YES,YES,3,"01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md, 01_STAGE_Drafts/04_Enemies/20_Enemies.md"
+Defence TN,YES,YES,3,"01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md, 01_STAGE_Drafts/04_Enemies/20_Enemies.md"
+Fumbled,YES,YES,3,"01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 02_PROD_Core_Rules/00_Rules/01_Dice.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Shenanigan,YES,YES,3,"01_STAGE_Drafts/01_Characters & Mobs/11_Character Creation.md, 01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md, 01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md"
+Junk,YES,YES,3,"01_STAGE_Drafts/01_Characters & Mobs/11_Character Creation.md, 01_STAGE_Drafts/03_Loot/34_Crafting.md"
+Personal Quirks,YES,YES,3,"01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md, 01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md, 01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md"
+Tier,YES,YES,3,"01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md, 01_STAGE_Drafts/08_Magic/00_Magic_Rules.md"
+Fumbles,YES,YES,3,"01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md, 02_PROD_Core_Rules/00_Rules/01_Dice.md"
+Overclock,YES,YES,3,"01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md, 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 01_STAGE_Drafts/03_Loot/34_Crafting.md"
+Standard,YES,YES,3,"01_STAGE_Drafts/03_Loot/34_Crafting.md, 01_STAGE_Drafts/04_Enemies/20_Enemies.md"
+Critical Success,YES,YES,3,02_PROD_Core_Rules/00_Rules/01_Dice.md
+Plunder,YES,YES,2,"01_STAGE_Drafts/00_Rules/02 Combat.md, 02_PROD_Core_Rules/00_Rules/01_Dice.md"
+Stat,YES,YES,2,"01_STAGE_Drafts/00_Rules/02 Combat.md, 01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md"
+Standard Action,YES,YES,2,01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md
+Secondary Stats,YES,YES,2,"01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Critical,YES,YES,2,"01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md, 02_PROD_Core_Rules/01_Characters & Mobs/10_Stats.md"
+Gang Agenda,YES,YES,2,01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md
+Relic,YES,YES,2,01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md
+Lair Phase,YES,YES,2,"01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md, 01_STAGE_Drafts/03_Loot/34_Crafting.md"
+Pile of Bones,YES,YES,2,"01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md, 01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md"
+Glory,YES,YES,2,01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md
+Retire,YES,YES,2,"01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md, 01_STAGE_Drafts/05_Base/00_Lair_Rules.md"
+Area of Effect (AoE),YES,YES,2,"01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md, 01_STAGE_Drafts/04_Enemies/20_Enemies.md"
+Scrappy,YES,YES,2,01_STAGE_Drafts/03_Loot/34_Crafting.md
+Superior,YES,YES,2,01_STAGE_Drafts/03_Loot/34_Crafting.md
+Legendary,YES,YES,2,01_STAGE_Drafts/03_Loot/34_Crafting.md
+Dominance,YES,YES,2,01_STAGE_Drafts/05_Base/00_Lair_Rules.md
+Loot Capacity,YES,YES,2,01_STAGE_Drafts/07_Travel/00_Journey_Rules.md
+Uncontrolled Mobs,YES,YES,1,01_STAGE_Drafts/00_Rules/02 Combat.md
+Melee attack,YES,YES,1,01_STAGE_Drafts/00_Rules/02 Combat.md
+Ranged attack,YES,YES,1,01_STAGE_Drafts/00_Rules/02 Combat.md
+Reaction,YES,YES,1,01_STAGE_Drafts/00_Rules/02 Combat.md
+Group Attack,YES,YES,1,01_STAGE_Drafts/00_Rules/02 Combat.md
+Raid-Points,YES,YES,1,01_STAGE_Drafts/00_Rules/02 Combat.md
+Zone Trait,YES,YES,1,01_STAGE_Drafts/00_Rules/03_Movement & Zones.md
+Condition,YES,YES,1,01_STAGE_Drafts/00_Rules/03_Movement & Zones.md
+Full Cover,YES,YES,1,01_STAGE_Drafts/00_Rules/03_Movement & Zones.md
+Partial Cover,YES,YES,1,01_STAGE_Drafts/00_Rules/03_Movement & Zones.md
+Raid Points,YES,YES,1,01_STAGE_Drafts/00_Rules/05_Raid points.md
+Scouting,YES,YES,1,01_STAGE_Drafts/00_Rules/05_Raid points.md
+Order Action,YES,YES,1,01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md
+Tag,YES,YES,1,01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md
+Ancestry,YES,YES,1,01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md
+Trait,YES,YES,1,01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md
+Fumbling,YES,YES,1,01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md
+Carry Capacity,YES,YES,1,01_STAGE_Drafts/01_Characters & Mobs/11_Character Creation.md
+Gang Sheet,YES,YES,1,01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md
+Loot Value,YES,YES,1,01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md
+Named Item,YES,YES,1,01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md
+Patron Saint,YES,YES,1,01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md
+Assert Dominance,YES,YES,1,01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md
+Overreaching,YES,YES,1,01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md
+Oddities,YES,YES,1,01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md
+Morale,YES,YES,1,01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md
+Delivery,YES,YES,1,01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md
+Duration,YES,YES,1,01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md
+Melee,YES,YES,1,01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md
+Persistent,YES,YES,1,01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md
+Encounter,YES,YES,1,01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md
+Passive,YES,YES,1,01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md
+Cleave,YES,YES,1,01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md
+Quality,YES,YES,1,01_STAGE_Drafts/03_Loot/34_Crafting.md
+Tier (T),YES,YES,1,01_STAGE_Drafts/03_Loot/34_Crafting.md
+Bite (B),YES,YES,1,01_STAGE_Drafts/03_Loot/34_Crafting.md
+Fumble,YES,YES,1,01_STAGE_Drafts/03_Loot/34_Crafting.md
+Scrap Cascade,YES,YES,1,01_STAGE_Drafts/03_Loot/34_Crafting.md
+Blueprint,YES,YES,1,01_STAGE_Drafts/03_Loot/34_Crafting.md
+Bone Oddity,YES,YES,1,01_STAGE_Drafts/03_Loot/34_Crafting.md
+Elite,YES,YES,1,01_STAGE_Drafts/04_Enemies/20_Enemies.md
+Player,YES,YES,1,01_STAGE_Drafts/04_Enemies/20_Enemies.md
+Bangaranga,YES,YES,1,02_PROD_Core_Rules/00_Rules/01_Dice.md

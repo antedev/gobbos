@@ -66,29 +66,29 @@
 <h2 id="1-core-enemy-framework" tabindex="-1">1. Core Enemy Framework</h2>
 <p>All combat encounters in Gobbos are governed by three overarching rules that define how enemies operate:</p>
 <h3 id="deterministic-threats" tabindex="-1">Deterministic Threats</h3>
-<p>The GM never rolls dice. Enemies do not test for success or roll to hit. Their actions are guaranteed threats. If an enemy attacks a <a href="#boss" class="wikilink" title="Boss">Boss</a> or <a href="stage--rules--keywords-index.html#mob" class="wikilink" title="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a>, it deals its listed damage automatically unless the player spends a saved action to <a href="#dodge" class="wikilink" title="Dodge">Dodge</a> (testing <a href="#slink" class="wikilink" title="Slink">Slink</a>) or <a href="#parry" class="wikilink" title="Parry">Parry</a> (testing <a href="#tough" class="wikilink" title="Tough">Tough</a>).</p>
+<p>The GM never rolls dice. Enemies do not test for success or roll to hit. Their actions are guaranteed threats. If an enemy attacks a <a href="stage--rules--keywords-index.html#boss" class="wikilink" title="A player character or elite NPC possessing Grit, specialized Quirks, and command over Mobs.">Boss</a> or <a href="stage--rules--keywords-index.html#mob" class="wikilink" title="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a>, it deals its listed damage automatically unless the player spends a saved action to <a href="stage--rules--keywords-index.html#dodge" class="wikilink" title="An active Reaction to avoid incoming ranged or area damage by testing Slink, with successes reducing damage.">Dodge</a> (testing <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a>) or <a href="stage--rules--keywords-index.html#parry" class="wikilink" title="An active Reaction to block incoming melee attacks by testing Tough while holding a shield, reducing damage.">Parry</a> (testing <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a>).</p>
 <h3 id="the-three-enemy-scales" tabindex="-1">The Three Enemy Scales</h3>
 <p>Enemies are structured into three distinct mechanical types to determine how they take damage and die:</p>
 <ol>
-<li><strong>Standard Enemies:</strong> The default foe. They are <a href="#one-hit-kill" class="wikilink" title="One-Hit Kill">One-Hit Kill</a>. Rolling successes equal to or greater than their <a href="#defence" class="wikilink" title="Defence">Defence</a> <a href="stage--rules--keywords-index.html#target-number-tn" class="wikilink" title="The total number of successes required to pass a test (e.g., in shorthand **5+/1**, you need one die to land on 5 or 6). This is typically a fixed number.">Target Number (TN)</a> instantly defeats them.</li>
-<li><strong>Bosses &amp; Elites:</strong> Powerhouses that cannot be killed in a single strike. They track damage using a <a href="#wounds" class="wikilink" title="Wounds">Wounds</a> track.</li>
-<li><strong>Enemy Mobs:</strong> Groups of standard enemies acting as a single unit, using a shared <a href="#dice-hp" class="wikilink" title="Dice-HP">Dice-HP</a> pool.</li>
+<li><strong>Standard Enemies:</strong> The default foe. They are <strong>One-Hit Kill</strong>. Rolling successes equal to or greater than their <a href="stage--rules--keywords-index.html#defence" class="wikilink" title="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a> <a href="stage--rules--keywords-index.html#target-number-tn" class="wikilink" title="The total number of successes required to pass a test (e.g., in shorthand **5+/1**, you need one die to land on 5 or 6). This is typically a fixed number.">Target Number (TN)</a> instantly defeats them.</li>
+<li><strong>Bosses &amp; Elites:</strong> Powerhouses that cannot be killed in a single strike. They track damage using a <a href="stage--rules--keywords-index.html#wound-wounds" class="wikilink" title="A mark of serious physical trauma. PCs and Elite enemies are defeated or knocked down after taking their maximum Wounds.">Wound|Wounds</a> track.</li>
+<li><strong>Enemy Mobs:</strong> Groups of standard enemies acting as a single unit, using a shared <strong>Dice-HP</strong> pool.</li>
 </ol>
 <hr>
 <h2 id="2-the-stat-block" tabindex="-1">2. The Stat Block</h2>
 <p>Every enemy is defined by a standardized, table-based stat block. The top section contains the creature’s core metadata, followed by their defense, movement, and morale attributes. Below that are any unique passive or triggered behaviors, followed by their specific combat actions.</p>
 <h3 id="stat-block-fields" tabindex="-1">Stat Block Fields</h3>
 <ul>
-<li><strong>Name &amp; Type:</strong> The name of the enemy and their mechanical scale (<a href="#standard" class="wikilink" title="Standard">Standard</a>, <a href="#elite" class="wikilink" title="Elite">Elite</a>, <a href="#boss" class="wikilink" title="Boss">Boss</a>, or <a href="stage--rules--keywords-index.html#mob" class="wikilink" title="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a>).</li>
+<li><strong>Name &amp; Type:</strong> The name of the enemy and their mechanical scale (<a href="stage--rules--keywords-index.html#standard" class="wikilink" title="The baseline quality tier (T3) for equipment, equivalent to standard human military gear.">Standard</a>, <a href="stage--rules--keywords-index.html#elite" class="wikilink" title="A powerful enemy tier possessing Wounds and Grit, behaving like mini-bosses.">Elite</a>, <a href="stage--rules--keywords-index.html#boss" class="wikilink" title="A player character or elite NPC possessing Grit, specialized Quirks, and command over Mobs.">Boss</a>, or <a href="stage--rules--keywords-index.html#mob" class="wikilink" title="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a>).</li>
 <li><strong>Size:</strong> The physical <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> classification of the enemy.</li>
-<li><strong>Defence:</strong> The number of successes a <a href="#player" class="wikilink" title="Player">Player</a> must roll on an <a href="#attack" class="wikilink" title="Attack">Attack</a> test to deal a <a href="#wound" class="wikilink" title="Wound">Wound</a> or instantly kill the enemy.</li>
-<li><strong>Movement:</strong> How many environmental <a href="#zones" class="wikilink" title="Zones">Zones</a> the enemy can cross with a single <a href="#move" class="wikilink" title="Move">Move</a> action.</li>
-<li><strong>Morale:</strong> The <a href="#morale-tn" class="wikilink" title="Morale TN">Morale TN</a> the players roll against when forcing a morale check.</li>
+<li><strong>Defence:</strong> The number of successes a <a href="stage--rules--keywords-index.html#player" class="wikilink" title="The real-world participant controlling a goblin Boss and their associated Gang.">Player</a> must roll on an <a href="stage--rules--keywords-index.html#attack" class="wikilink" title="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attack</a> test to deal a <a href="stage--rules--keywords-index.html#wound" class="wikilink" title="A mark of serious physical trauma. PCs and Elite enemies are defeated or knocked down after taking their maximum Wounds.">Wound</a> or instantly kill the enemy.</li>
+<li><strong>Movement:</strong> How many environmental <a href="stage--rules--keywords-index.html#zones" class="wikilink" title="Abstract spatial segments of the battlefield used to track distance, line of sight, and hazard boundaries.">Zones</a> the enemy can cross with a single <a href="stage--rules--keywords-index.html#move" class="wikilink" title="A Standard Action allowing a character or Mob to cross a number of Zones up to their Movement rating.">Move</a> action.</li>
+<li><strong>Morale:</strong> The <strong>Morale TN</strong> the players roll against when forcing a morale check.</li>
 <li><strong>Tags:</strong> Standardized keywords representing physiological or behavioral modifiers.</li>
 <li><strong>Special:</strong> Any unique, custom rules or passive abilities.</li>
 <li><strong>Attacks:</strong> The combat options the enemy can execute.
 <ul>
-<li><strong>Attack (TN):</strong> The difficulty and <a href="stage--rules--keywords-index.html#target-number-tn" class="wikilink" title="The total number of successes required to pass a test (e.g., in shorthand **5+/1**, you need one die to land on 5 or 6). This is typically a fixed number.">Target Number (TN)</a> a player must roll on their <a href="#dodge" class="wikilink" title="Dodge">Dodge</a> or <a href="#parry" class="wikilink" title="Parry">Parry</a> test to avoid the attack.</li>
+<li><strong>Attack (TN):</strong> The difficulty and <a href="stage--rules--keywords-index.html#target-number-tn" class="wikilink" title="The total number of successes required to pass a test (e.g., in shorthand **5+/1**, you need one die to land on 5 or 6). This is typically a fixed number.">Target Number (TN)</a> a player must roll on their <a href="stage--rules--keywords-index.html#dodge" class="wikilink" title="An active Reaction to avoid incoming ranged or area damage by testing Slink, with successes reducing damage.">Dodge</a> or <a href="stage--rules--keywords-index.html#parry" class="wikilink" title="An active Reaction to block incoming melee attacks by testing Tough while holding a shield, reducing damage.">Parry</a> test to avoid the attack.</li>
 <li><strong>Damage:</strong> The flat amount of damage dealt if the player fails to defend.</li>
 <li><strong>Range:</strong> The distance the attack can reach (Melee or Ranged).</li>
 <li><strong>AoE:</strong> The area of effect, if it hits multiple targets.</li>
@@ -97,7 +97,7 @@
 </li>
 </ul>
 <blockquote>
-<p><a href="#example-angry-farmer" class="wikilink" title="Example: Angry Farmer">Example: Angry Farmer</a>
+<p><strong>Example: Angry Farmer</strong>
 <em>Standard Humanoid (Size 1)</em></p>
 <table>
 <thead>
@@ -118,7 +118,7 @@
 </tbody>
 </table>
 <p><strong>Special:</strong> None</p>
-<h4 id="attacks" tabindex="-1"><a href="#attacks" class="wikilink" title="Attacks">Attacks</a></h4>
+<h4 id="attack-attacks" tabindex="-1"><a href="#attack-attacks" class="wikilink" title="Attack|Attacks">Attack|Attacks</a></h4>
 <table>
 <thead>
 <tr>
@@ -131,7 +131,7 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left"><a href="#rusty-pitchfork" class="wikilink" title="Rusty Pitchfork">Rusty Pitchfork</a></td>
+<td style="text-align:left"><strong>Rusty Pitchfork</strong></td>
 <td style="text-align:center">5+/1</td>
 <td style="text-align:center">1</td>
 <td style="text-align:center">Melee</td>
@@ -146,7 +146,7 @@
 <h3 id="layer-1-ancestries" tabindex="-1">Layer 1: Ancestries</h3>
 <p>Every creature belongs to exactly <strong>one</strong> Ancestry, which establishes its core behavioral and psychological foundation.</p>
 <ul>
-<li><strong>The Behavioral Foundation:</strong> The Ancestry dictates how the creature reacts to <a href="#morale-checks" class="wikilink" title="Morale Checks">Morale Checks</a>, psychological conditions (such as <a href="#terrified" class="wikilink" title="Terrified">Terrified</a> or <a href="#dumb" class="wikilink" title="Dumb">Dumb</a>), and natural healing.</li>
+<li><strong>The Behavioral Foundation:</strong> The Ancestry dictates how the creature reacts to <a href="#morale-check-morale-checks" class="wikilink" title="Morale Check|Morale Checks">Morale Check|Morale Checks</a>, psychological conditions (such as <a href="stage--rules--keywords-index.html#terrified" class="wikilink" title="A condition forcing a character or Mob to flee from a source of fear and preventing them from closing distance.">Terrified</a> or <a href="stage--rules--keywords-index.html#dumb" class="wikilink" title="A condition preventing the wielder from casting spells or using Brains-based active Quirks.">Dumb</a>), and natural healing.</li>
 <li><strong>GM Resolution:</strong> Ancestry rules are universal. The GM resolves ancestry behaviors using the main rules reference, meaning individual stat blocks do not need to print these rules.</li>
 </ul>
 <h3 id="layer-2-standardized-tags" tabindex="-1">Layer 2: Standardized Tags</h3>
@@ -166,12 +166,12 @@
 <h2 id="4-enemy-mobs-swarms" tabindex="-1">4. Enemy Mobs (Swarms)</h2>
 <p>Enemy Mobs represent swarms of standard, weak units acting as a single tactical squad.</p>
 <h3 id="symmetrical-health-dice-hp" tabindex="-1">Symmetrical Health (Dice-HP)</h3>
-<p>An Enemy <a href="stage--rules--keywords-index.html#mob" class="wikilink" title="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> of <a href="#size-x" class="wikilink" title="Size X">Size X</a> (Size 1–5) is tracked using <a href="#x-physical-d6s" class="wikilink" title="X physical D6s">X physical D6s</a> on the table, starting at the “6” face.</p>
+<p>An Enemy <a href="stage--rules--keywords-index.html#mob" class="wikilink" title="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> of <strong>Size X</strong> (Size 1–5) is tracked using <strong>X physical D6s</strong> on the table, starting at the “6” face.</p>
 <ul>
 <li><strong>Standard Damage:</strong> Damage reduces the face of a single die. Spillover damage applies.</li>
-<li><strong>AoE / Cleave:</strong> <a href="#area-of-effect-aoe" class="wikilink" title="Area of Effect (AoE)">Area of Effect (AoE)</a> and Cleave attacks apply their damage to <strong>every single die</strong> in the Mob’s pool simultaneously.
+<li><strong>AoE / Cleave:</strong> <a href="stage--rules--keywords-index.html#area-of-effect-aoe" class="wikilink" title="An attack or spell property that targets all characters or Mobs within a designated Zone.">Area of Effect (AoE)</a> and Cleave attacks apply their damage to <strong>every single die</strong> in the Mob’s pool simultaneously.
 <ul>
-<li><em>Cleave Attacks:</em> A player using a weapon/ability with the <code>Cleave</code> trait can distribute their excess <strong>successes</strong> to kill multiple units in the Mob (each multiple of the unit’s <a href="#defence-tn" class="wikilink" title="Defence TN">Defence TN</a> removes 1 point of Mob Size).</li>
+<li><em>Cleave Attacks:</em> A player using a weapon/ability with the <code>Cleave</code> trait can distribute their excess <strong>successes</strong> to kill multiple units in the Mob (each multiple of the unit’s <a href="stage--rules--keywords-index.html#defence-tn" class="wikilink" title="The target number of successes required to successfully hit or damage a creature.">Defence TN</a> removes 1 point of Mob Size).</li>
 <li><em>AoE Attacks:</em> An <code>AoE</code> attack (like a fire bomb) deals its flat damage directly to every die in the Mob’s pool.</li>
 </ul>
 </li>
@@ -181,36 +181,36 @@
 $\text{Mob Damage} = \text{Base Unit Damage} + (\text{Current Size} - 1)$</p>
 <h3 id="mob-constraints" tabindex="-1">Mob Constraints</h3>
 <ul>
-<li><strong>No Elite Mobs:</strong> <a href="#mobs" class="wikilink" title="Mobs">Mobs</a> can only consist of standard, one-hit-kill enemies. Elite and Boss enemies must always be fought as individual units.</li>
-<li><strong>Mob Morale Units:</strong> Each point of current <a href="stage--rules--keywords-index.html#mob" class="wikilink" title="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> counts as one “unit” when calculating the 50% catastrophic loss threshold for group <a href="#morale-checks" class="wikilink" title="Morale Checks">Morale Checks</a>.</li>
+<li><strong>No Elite Mobs:</strong> <a href="stage--rules--keywords-index.html#mob-mobs" class="wikilink" title="A squad of lesser goblins under a PC Boss's command, whose combat capability and health are determined by their Size.">Mob|Mobs</a> can only consist of standard, one-hit-kill enemies. Elite and Boss enemies must always be fought as individual units.</li>
+<li><strong>Mob Morale Units:</strong> Each point of current <a href="stage--rules--keywords-index.html#mob" class="wikilink" title="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> counts as one “unit” when calculating the 50% catastrophic loss threshold for group <a href="#morale-check-morale-checks" class="wikilink" title="Morale Check|Morale Checks">Morale Check|Morale Checks</a>.</li>
 </ul>
 <hr>
 <h2 id="5-bosses-elites-and-wounds" tabindex="-1">5. Bosses, Elites, and Wounds</h2>
-<p>Elite units and Bosses utilize a <a href="#wounds" class="wikilink" title="Wounds">Wounds</a> track.</p>
+<p>Elite units and Bosses utilize a <a href="stage--rules--keywords-index.html#wound-wounds" class="wikilink" title="A mark of serious physical trauma. PCs and Elite enemies are defeated or knocked down after taking their maximum Wounds.">Wound|Wounds</a> track.</p>
 <ul>
-<li>To deal 1 <a href="#wound" class="wikilink" title="Wound">Wound</a> to a Boss, a player must roll <strong>successes</strong> equal to or greater than its <a href="#defence" class="wikilink" title="Defence">Defence</a> <a href="stage--rules--keywords-index.html#target-number-tn" class="wikilink" title="The total number of successes required to pass a test (e.g., in shorthand **5+/1**, you need one die to land on 5 or 6). This is typically a fixed number.">Target Number (TN)</a> in a single attack.</li>
+<li>To deal 1 <a href="stage--rules--keywords-index.html#wound" class="wikilink" title="A mark of serious physical trauma. PCs and Elite enemies are defeated or knocked down after taking their maximum Wounds.">Wound</a> to a Boss, a player must roll <strong>successes</strong> equal to or greater than its <a href="stage--rules--keywords-index.html#defence" class="wikilink" title="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a> <a href="stage--rules--keywords-index.html#target-number-tn" class="wikilink" title="The total number of successes required to pass a test (e.g., in shorthand **5+/1**, you need one die to land on 5 or 6). This is typically a fixed number.">Target Number (TN)</a> in a single attack.</li>
 </ul>
 <blockquote>
 <blockquote>
 <p><strong>GOLDEN RULE: The Overkill Rule</strong>
-For every multiple of the <a href="#defence" class="wikilink" title="Defence">Defence</a> <a href="stage--rules--keywords-index.html#target-number-tn" class="wikilink" title="The total number of successes required to pass a test (e.g., in shorthand **5+/1**, you need one die to land on 5 or 6). This is typically a fixed number.">Target Number (TN)</a> achieved on a single roll, the Boss takes an additional <a href="#wound" class="wikilink" title="Wound">Wound</a>.</p>
+For every multiple of the <a href="stage--rules--keywords-index.html#defence" class="wikilink" title="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a> <a href="stage--rules--keywords-index.html#target-number-tn" class="wikilink" title="The total number of successes required to pass a test (e.g., in shorthand **5+/1**, you need one die to land on 5 or 6). This is typically a fixed number.">Target Number (TN)</a> achieved on a single roll, the Boss takes an additional <a href="stage--rules--keywords-index.html#wound" class="wikilink" title="A mark of serious physical trauma. PCs and Elite enemies are defeated or knocked down after taking their maximum Wounds.">Wound</a>.</p>
 </blockquote>
 </blockquote>
 <hr>
 <h2 id="6-morale-and-group-flight" tabindex="-1">6. Morale &amp; Group Flight</h2>
-<p>Every enemy group has a static <a href="#morale-tn" class="wikilink" title="Morale TN">Morale TN</a> (e.g. Peasant = <strong>5+/1</strong>, Guard = <strong>5+/3</strong>).</p>
+<p>Every enemy group has a static <strong>Morale TN</strong> (e.g. Peasant = <strong>5+/1</strong>, Guard = <strong>5+/3</strong>).</p>
 <h3 id="the-morale-check" tabindex="-1">The Morale Check</h3>
-<p>A group <a href="#morale-check" class="wikilink" title="Morale Check">Morale Check</a> is triggered at the end of the round if the enemies suffered a catastrophic loss (e.g. losing 50% of their total units/<a href="stage--rules--keywords-index.html#mob" class="wikilink" title="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a>, their Commander dying, or suffering massive explosive damage).</p>
+<p>A group <a href="stage--rules--keywords-index.html#morale-check" class="wikilink" title="A Mouth or Grunt test made by a Mob when they take heavy losses to prevent them from fleeing or going Out of Control.">Morale Check</a> is triggered at the end of the round if the enemies suffered a catastrophic loss (e.g. losing 50% of their total units/<a href="stage--rules--keywords-index.html#mob" class="wikilink" title="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a>, their Commander dying, or suffering massive explosive damage).</p>
 <ul>
-<li><strong>The Roll:</strong> The players roll a combined <code>Swarm Terror</code> pool of <strong>d6s</strong> against a target of <strong>5+</strong> (successes on 5 or 6). The number of dice in the pool equals the <strong>total Size of all surviving Mobs + surviving PCs</strong> in the current and adjacent <a href="#zones" class="wikilink" title="Zones">Zones</a>.</li>
-<li><strong>The Result:</strong> If the players roll <strong>successes</strong> equal to or greater than the enemy group’s <a href="#morale-tn" class="wikilink" title="Morale TN">Morale TN</a>, the enemies break!</li>
+<li><strong>The Roll:</strong> The players roll a combined <code>Swarm Terror</code> pool of <strong>d6s</strong> against a target of <strong>5+</strong> (successes on 5 or 6). The number of dice in the pool equals the <strong>total Size of all surviving Mobs + surviving PCs</strong> in the current and adjacent <a href="stage--rules--keywords-index.html#zones" class="wikilink" title="Abstract spatial segments of the battlefield used to track distance, line of sight, and hazard boundaries.">Zones</a>.</li>
+<li><strong>The Result:</strong> If the players roll <strong>successes</strong> equal to or greater than the enemy group’s <strong>Morale TN</strong>, the enemies break!</li>
 </ul>
 <h3 id="fleeing" tabindex="-1">Fleeing</h3>
 <p>When enemies break, they drop all heavy loot and must use their 2 Actions on their turns to move toward the nearest exit or safety. If their escape path is physically blocked, fleeing enemies will use their actions to shove, smash, or attack whatever stands in their way.</p>
 <h3 id="regrouping-the-rally" tabindex="-1">Regrouping (The Rally)</h3>
-<p>If there is a surviving <a href="#enemy-commander" class="wikilink" title="Enemy Commander">Enemy Commander</a> who did not break, they can use an action to rally the fleeing troops. This triggers an opposed Morale Check:</p>
+<p>If there is a surviving <strong>Enemy Commander</strong> who did not break, they can use an action to rally the fleeing troops. This triggers an opposed Morale Check:</p>
 <ul>
-<li>The players roll their Swarm Terror pool against the Commander’s <a href="#morale-tn" class="wikilink" title="Morale TN">Morale TN</a>.
+<li>The players roll their Swarm Terror pool against the Commander’s <strong>Morale TN</strong>.
 <ul>
 <li><em>Fiction:</em> The players roll to represent the Goblins banging their shields, screaming, and actively drowning out the Commander’s orders to keep the enemies panicked.</li>
 </ul>

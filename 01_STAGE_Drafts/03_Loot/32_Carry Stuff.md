@@ -5,7 +5,7 @@ The stronger you are, the more you can carry. A Goblin can carry 4 Bulk and then
 If you want to be able to carry more loot than you handle, you can drag it. Consider your Tough+1 if you drag stuff. This effectively halves your M, and also make any Slink or Tough checks hard as long as you hold on to the stuff.
 
 ## Mob rules
-A Mob can carry loot without penalty up to a maximum of [[Size x 4 Bulk]], or drag stuff up to [[Size x 5 Bulk]]. The same penalties apply to a Mob dragging stuff as a PC. 
+A Mob can carry loot without penalty up to a maximum of **Size x 4 Bulk**, or drag stuff up to **Size x 5 Bulk**. The same penalties apply to a Mob dragging stuff as a PC. 
 
 Any single object of Bulk 3+ effectively reduces the combat power of the Mob by -1d (because too many goblins are focused on holding it instead of stabbing). A Mob can carry a maximum number of Bulk 3+ items equal to their Size, still respecting the total bulk limit.
 

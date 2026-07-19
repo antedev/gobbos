@@ -3,8 +3,8 @@
 ## The "Next Gobbo Up" (Death & Respawning)
 When your PC dies, the Lair doesn't mourn. They simply look at the next biggest Gobbo in your Gang to take over. 
 
-Rolling a new PC from an existing Gang means you don't start from scratch. The successor Boss B starts with Level 1 in all stats, gets [[1 starting advance]] (just like standard character creation), and receives a starting pool of [[Successor XP]] equal to [[Gang Infamy × 4]] to spend on buying stats (using the standard XP stat costs).
-*   **Successor Stat Cap:** To maintain progression space and avoid starting as an Elder, no Main Stat can be raised above [[Level 4]] at successor creation.
+Rolling a new PC from an existing Gang means you don't start from scratch. The successor Boss B starts with Level 1 in all stats, gets **1 starting advance** (just like standard character creation), and receives a starting pool of **Successor XP** equal to **Gang Infamy × 4** to spend on buying stats (using the standard XP stat costs).
+*   **Successor Stat Cap:** To maintain progression space and avoid starting as an Elder, no Main Stat can be raised above **Level 4** at successor creation.
 
 ### Gang Marks (Tattoos of the Dead)
 A successor Boss does not just inherit their predecessor's gear—they honor their memory by getting a permanent [[Gang Mark]] (a tattoo inked with soot and mud). The successor immediately starts with one [[Quirk]] or [[Twist]] that the deceased Boss possessed:
@@ -17,7 +17,7 @@ To help your new Boss quickly step back into their rightful place of power, a fr
 
 ## Named Items & The Revenge Quest
 When a Boss dies, the gobbos don't care about the body, but they *do* care about the gear. 
-If a PC dies, their most favored piece of equipment absorbs their fighting spirit and becomes a [[Named Item]] (e.g., *Grurr's Rusty Chopper*). This imbues the item with a [[T1 Boon]] (see [Boons & Banes](13_Boons_and_Banes.md)) related to the deceased Boss's highest stat or their manner of death.
+If a PC dies, their most favored piece of equipment absorbs their fighting spirit and becomes a [[Named Item]] (e.g., *Grurr's Rusty Chopper*). This imbues the item with a **T1 Boon** (see [Boons & Banes](13_Boons_and_Banes.md)) related to the deceased Boss's highest stat or their manner of death.
 *   *Example:* If the dead Boss had [[Slink]] 4, the weapon gains `[Fast]`. If they died from an explosion, the weapon gains `[Searing]` (deals +1 fire damage on hit).
 
 *   **Recovery:** If the surviving mob can manage the Bulk to drag the Named Item back to the Lair, the new PC inherits it.
@@ -57,7 +57,7 @@ When you return to the Lair from a raid, you tally up your rewards on two comple
 
 ### 1. Glory (Boss XP)
 
-Glory represents the stories of destruction, survival, and sheer goblin stupidity you bring back. Glory translates directly into [[Boss XP]], which is used to increase your Boss's stats. 
+Glory represents the stories of destruction, survival, and sheer goblin stupidity you bring back. Glory translates directly into **Boss XP**, which is used to increase your Boss's stats. 
 
 Glory is awarded at the end of the raid based on Raid Points and personal antics:
 
@@ -65,9 +65,9 @@ Glory is awarded at the end of the raid based on Raid Points and personal antics
     
     | Pooled Raid Points | Shared XP Awarded | Lair Reputation |
     | :--- | :--- | :--- |
-    | [[1–4 Points]] | 0 [[XP]] | Pathetic failure. The gobbos in the Lair throw mud at you. |
-    | [[5–9 Points]] | 1 [[XP]] | A decent raid. The gobbos nod in approval. |
-    | [[10+ Points]] | 2 [[XP]] | A legendary raid! A feast is held in your honor. |
+    | **1–4 Points** | 0 [[XP]] | Pathetic failure. The gobbos in the Lair throw mud at you. |
+    | **5–9 Points** | 1 [[XP]] | A decent raid. The gobbos nod in approval. |
+    | **10+ Points** | 2 [[XP]] | A legendary raid! A feast is held in your honor. |
     
 *   **Personal Glory (+1 XP):** A player earns **+1 Personal Glory** (max 1 per raid, which converts directly to **+1 XP** during Homecoming) if their Boss performs *at least one* of the following specific mechanical actions during a raid:
     *   **The Compulsion:** Voluntarily trigger their Gang's [[Shenanigan]] compulsion in an disadvantageous situation, generating a complication *and* adding a die to the shared [[Bangaranga Pool]].
@@ -78,7 +78,7 @@ Glory is awarded at the end of the raid based on Raid Points and personal antics
 
 ### 2. Loot (Lair Progression)
 
-Loot is heavy, slows you down, and requires your mobs to carry it. [[Loot does not grant personal Boss XP.]] Instead, it is the only way to upgrade the Lair's base capabilities. 
+Loot is heavy, slows you down, and requires your mobs to carry it. **Loot does not grant personal Boss XP.** Instead, it is the only way to upgrade the Lair's base capabilities. 
 
 All basic Loot Value is pooled together at the end of the raid into the Communal Hoard. Gobbos use this collective pool to purchase Lair Upgrades (expanding caverns, building workshops, or brewing stills).
 
@@ -88,7 +88,7 @@ All basic Loot Value is pooled together at the end of the raid into the Communal
 
 While abstract Loot Value goes to the Lair pool, [[Oddities]] (the rare, specific monster parts and weird items used for Crafting) are highly coveted physical items. 
 
-At the end of the raid, all Oddities brought back are dumped onto the table. The players must distribute them via [[Player Consensus]]. You argue, bargain, or trade them amongst yourselves to decide which Boss gets to keep which Oddity for their Gang.
+At the end of the raid, all Oddities brought back are dumped onto the table. The players must distribute them via **Player Consensus**. You argue, bargain, or trade them amongst yourselves to decide which Boss gets to keep which Oddity for their Gang.
 
 ---
 

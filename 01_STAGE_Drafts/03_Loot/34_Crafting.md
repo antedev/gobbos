@@ -2,11 +2,11 @@
 
 > **Design Principle:** Crafting is how Gobbo Bosses turn scrap, monster guts, and stolen relics into something that can *actually* win a fight. It encourages creativity and reckless experimentation. Typically, if a goblin has the workshop and the Brains to pull it off, the build always produces something functional. The dice don't determine *if* you succeed—they determine *how chaotic and unstable* the result is.
 
-Crafting takes place during the [[Lair Phase]] (see [[Lair & Downtime]]). Every piece of Custom Gear is defined by three fundamental questions:
+Crafting takes place during the [[Lair Phase]] (see **Lair & Downtime**). Every piece of Custom Gear is defined by three fundamental questions:
 
-1. [[What are you building?]] (The Base Item & Quality)
-2. [[What are you taping to it?]] (Oddities & Bite)
-3. [[How are you building it?]] (Your Workshop)
+1. **What are you building?** (The Base Item & Quality)
+2. **What are you taping to it?** (Oddities & Bite)
+3. **How are you building it?** (Your Workshop)
 
 ---
 
@@ -16,7 +16,7 @@ Crafting takes place during the [[Lair Phase]] (see [[Lair & Downtime]]). Every 
 
 When crafting, you don't track individual pieces of lumber, iron ingots, or nails. As long as your gang's Lair has access to basic scavenging territory, raw materials are assumed to be on hand.
 
-Instead, you choose a [[Base Item]] from the standard equipment categories (e.g., Light Weapon, Medium Armor, Heavy Weapon, Shield; see [[33_Equipment]]). The Base Item defines the fundamental stats: Bulk, Handedness, and base Damage or Defense dice.
+Instead, you choose a **Base Item** from the standard equipment categories (e.g., Light Weapon, Medium Armor, Heavy Weapon, Shield; see **33_Equipment**). The Base Item defines the fundamental stats: Bulk, Handedness, and base Damage or Defense dice.
 
 The item's [[Quality]] is determined by your Lair's Workshop level or the origin of looted gear. Quality sets how durable the item is in combat (see The Break Roll below) and sets the maximum Tier of Oddities it can safely contain.
 
@@ -45,10 +45,10 @@ A `(T3 / B0)` Suncrystal is a flawless, stable component with powerful effects a
 
 | Bite | Level | In-Game Meaning |
 |---|---|---|
-| [[B0]] | Pure | Completely stable. No negative tags or side effects. |
-| [[B1]] | Irritating | Minor cosmetic or annoying drawbacks (smells terrible, constantly smokes, loud humming). |
-| [[B2]] | Painful | Mechanical drawbacks—damages the wielder (costs Grit) on a 1 during combat, requires a resource/blood to activate, or imposes a minor condition while held. |
-| [[B3]] | Dangerous | Serious campaign consequences—attracts dangerous predators, mutates the wielder over time, or risks catastrophic explosion when destroyed. |
+| **B0** | Pure | Completely stable. No negative tags or side effects. |
+| **B1** | Irritating | Minor cosmetic or annoying drawbacks (smells terrible, constantly smokes, loud humming). |
+| **B2** | Painful | Mechanical drawbacks—damages the wielder (costs Grit) on a 1 during combat, requires a resource/blood to activate, or imposes a minor condition while held. |
+| **B3** | Dangerous | Serious campaign consequences—attracts dangerous predators, mutates the wielder over time, or risks catastrophic explosion when destroyed. |
 
 #### Oddity Roles & Synergy
 
@@ -65,7 +65,7 @@ Your character's [[Brains]] score determines your [[Crafting Capacity]]—the ma
 
 #### The Oddity Ceiling Rule
 
-Your Lair's Workshop sets the baseline Quality (T1 = Junk, T2 = Scrappy, T3 = Standard, T4 = Superior, T5 = Legendary). If you attach an Oddity whose Tier is *higher* than your Workshop's Quality level, the Oddity's [[Bite automatically increases by +1 for every Tier it exceeds the Workshop]]. 
+Your Lair's Workshop sets the baseline Quality (T1 = Junk, T2 = Scrappy, T3 = Standard, T4 = Superior, T5 = Legendary). If you attach an Oddity whose Tier is *higher* than your Workshop's Quality level, the Oddity's **Bite automatically increases by +1 for every Tier it exceeds the Workshop**. 
 
 > *Example: Taping a T4 Demon Eye onto a Scrappy (T2) sword adds +2 Bite to the Oddity because your crude workshop lacks the proper containment runes and brackets.*
 
@@ -75,27 +75,27 @@ Your Lair's Workshop determines what Quality of Base Item you can craft during d
 
 | Workshop Level | Base Quality | Territory / Lair Requirement |
 |---|---|---|
-| [[Open Fire]] | Junk (T1) | Always available in any damp cave. |
-| [[Scrap Forge]] | Scrappy (T2) | Basic Lair Upgrade (Scrap pile & crude bellows). |
-| [[Proper Smithy]] | Standard (T3) | Advanced Lair Upgrade or secured iron mine. |
-| [[Master Workshop]] | Superior (T4) | Captured dwarven forge or master smith thrall. |
-| [[Legendary Forge]] | Legendary (T5) | Mythic Lair Upgrade or ancient relic chamber. |
+| **Open Fire** | Junk (T1) | Always available in any damp cave. |
+| **Scrap Forge** | Scrappy (T2) | Basic Lair Upgrade (Scrap pile & crude bellows). |
+| **Proper Smithy** | Standard (T3) | Advanced Lair Upgrade or secured iron mine. |
+| **Master Workshop** | Superior (T4) | Captured dwarven forge or master smith thrall. |
+| **Legendary Forge** | Legendary (T5) | Mythic Lair Upgrade or ancient relic chamber. |
 
 ---
 
 ## The Crafting Roll
 
-Once you have selected your Base Item, chosen your attached Oddities, and stepped up to your Workshop during the Lair Phase, the crafting begins. [[The build always produces a working item.]] The Crafting Roll determines how well you tame the component's instability.
+Once you have selected your Base Item, chosen your attached Oddities, and stepped up to your Workshop during the Lair Phase, the crafting begins. **The build always produces a working item.** The Crafting Roll determines how well you tame the component's instability.
 
 ### Rolling
 
-The Crafting Roll uses a dice pool of [[Brains + 1]], plus any extra bonus dice granted by specialized Lair Workshop upgrades. Roll all dice simultaneously. Standard exploding dice rules apply (every 6 explodes into an additional die).
+The Crafting Roll uses a dice pool of **Brains + 1**, plus any extra bonus dice granted by specialized Lair Workshop upgrades. Roll all dice simultaneously. Standard exploding dice rules apply (every 6 explodes into an additional die).
 
 *Note: Standard Fumble rules (loosing Grunt in front of your gang) do not apply during downtime crafting in the Lair.*
 
 ### Taming
 
-Count all **6s** in your final result (including exploded dice). Each 6 is a [[Taming Success]], which can be spent immediately on the following upgrades:
+Count all **6s** in your final result (including exploded dice). Each 6 is a **Taming Success**, which can be spent immediately on the following upgrades:
 
 *   **Reduce Bite by 1:** The item's active Bite level drops by one step (minimum B0). You can spend multiple successes to reduce high Bite levels.
 *   **Boost Base Item Stats:** Increase the weapon's base damage or armor's defense by +1d, or decrease its Bulk by 1. (Costs 1 Taming Success per step).
@@ -105,7 +105,7 @@ Any unspent Taming Successes are lost when the crafting session ends.
 
 ### Chaos Results (The 1s)
 
-Count all **1s** rolled in the initial pool (do not count 1s on exploded extra dice). For each 1 rolled, a minor [[Chaos Result]] is permanently built into the item. The GM picks or rolls on a quirky flavor table. These are always aesthetic roleplaying quirks, never mechanical penalties.
+Count all **1s** rolled in the initial pool (do not count 1s on exploded extra dice). For each 1 rolled, a minor **Chaos Result** is permanently built into the item. The GM picks or rolls on a quirky flavor table. These are always aesthetic roleplaying quirks, never mechanical penalties.
 
 > *Examples: A hammer that whistles an off-key tune when swung. Boots that leave glowing footprints in the dark. A shield that smells strongly of roasted garlic.*
 
@@ -117,7 +117,7 @@ Count all **1s** rolled in the initial pool (do not count 1s on exploded extra d
 
 Custom Gear is put under extreme stress during combat. Gear breaks only when an Attack roll using the item results in a [[Fumble]] (see [Dice](../../02_PROD_Core_Rules/00_Rules/01_Dice.md#1s-and-fumbles)), or when a specific Oddity effect pushes its active Bite level above B3. Non-combat skill checks never break gear.
 
-When you Fumble an attack, roll 1d6 for [[The Break Roll]] and compare it to the item's Quality. Each Oddity attached to the item increases the break range by +1.
+When you Fumble an attack, roll 1d6 for **The Break Roll** and compare it to the item's Quality. Each Oddity attached to the item increases the break range by +1.
 
 | Base Quality | Base Break Threshold (0 Oddities) | Break Threshold with +2 Oddities |
 |---|---|---|
@@ -135,18 +135,18 @@ When you Fumble an attack, roll 1d6 for [[The Break Roll]] and compare it to the
 When Custom Gear shatters, the Base Item is destroyed, but the magical junk taped to it might survive. For **each Oddity attached to the broken item**, roll 1d6:
 
 *   **Equal to or below the Oddity's current Bite level:** The Oddity is obliterated in a shower of sparks and goo. It is permanently lost.
-*   **Higher than the Oddity's current Bite level:** The Oddity survives! You fish it out of the smoking wreckage. However, the trauma leaves it permanently scarred, increasing its innate Bite rating by **+1 Bite** (becoming a [[Scarred Oddity]]).
+*   **Higher than the Oddity's current Bite level:** The Oddity survives! You fish it out of the smoking wreckage. However, the trauma leaves it permanently scarred, increasing its innate Bite rating by **+1 Bite** (becoming a **Scarred Oddity**).
 
 A B0 Oddity always survives its first break. A B3 Oddity has a 50% chance of survival. Scarred Oddities can be reattached to new creations during the next downtime, but their mounting instability makes them increasingly dangerous to handle.
 
 | Current Bite | Survival Roll Required | New Bite If Survives |
 |---|---|---|
-| [[B0]] | 1+ (100% chance) | B1 |
-| [[B1]] | 2+ (83% chance) | B2 |
-| [[B2]] | 3+ (67% chance) | B3 |
-| [[B3]] | 4+ (50% chance) | B4 |
-| [[B4]] | 5+ (33% chance) | B5 |
-| [[B5]] | 6 (17% chance) | Obliterated on next break |
+| **B0** | 1+ (100% chance) | B1 |
+| **B1** | 2+ (83% chance) | B2 |
+| **B2** | 3+ (67% chance) | B3 |
+| **B3** | 4+ (50% chance) | B4 |
+| **B4** | 5+ (33% chance) | B5 |
+| **B5** | 6 (17% chance) | Obliterated on next break |
 
 ### The [Bonded] Tag
 
@@ -166,7 +166,7 @@ At any point before declaring an Attack action in combat, you may announce an [[
 
 ## Reverse Engineering & Blueprints
 
-When your gang loots unfamiliar enemy gear, ancient dwarven clockwork, or strange magical contraptions, you can choose to [[Reverse Engineer]] them during the Lair Phase.
+When your gang loots unfamiliar enemy gear, ancient dwarven clockwork, or strange magical contraptions, you can choose to **Reverse Engineer** them during the Lair Phase.
 
 Reverse Engineering is an automatic success with no roll required. However, the process **completely destroys the source item**. The components are dismantled and ruined in the process of uncovering their underlying mechanical secrets.
 
@@ -182,7 +182,7 @@ Blueprints are incredibly valuable gang assets that can be traded, stolen, or ho
 
 ## Mob-Scale Crafting
 
-Gobbo Bosses don't just fight alone—they lead screeching mobs into battle. During the Lair Phase, a Boss with access to a Workshop (Scrap Forge or better) can engage in [[Mob-Scale Crafting]] to equip their entire fighting gang with standardized tactical gear for the upcoming raid.
+Gobbo Bosses don't just fight alone—they lead screeching mobs into battle. During the Lair Phase, a Boss with access to a Workshop (Scrap Forge or better) can engage in **Mob-Scale Crafting** to equip their entire fighting gang with standardized tactical gear for the upcoming raid.
 
 To outfit a Mob, you must sacrifice one Oddity from your Lair's inventory (it is permanently consumed to create coatings, crude mechanisms, or enchanted banners for your troops). In return, your Mob gains a temporary Tag matching the Oddity's positive effect (e.g., *Flaming Spears, Choking Smoke Bombs, Spiked Barricades*) for the duration of the next raid. Regardless of whether the troops survive or wipe out, the makeshift gear falls apart at the end of the raid.
 
@@ -201,7 +201,7 @@ Bone Oddities are ancestral relics that carry the lingering spirit of the fallen
 
 ## Brains Quirks for Crafters
 
-The following specialized Quirks are available to Gobbo Bosses who invest in their Brains stat (see [[Quirks]]).
+The following specialized Quirks are available to Gobbo Bosses who invest in their Brains stat (see [[Quirk|Quirks]]).
 
 ### Jury-Rig
 *Prerequisite: Brains 2*

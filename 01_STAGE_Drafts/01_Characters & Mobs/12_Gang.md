@@ -18,17 +18,17 @@ Every Gang is unique, characterized by the following attributes tracked on your 
 
 ## Infamy
 
-[[Infamy]] represents how feared and respected your specific group of gobbos is within the larger Lair. It acts as the overall progression level of the Gang, moving from [[Infamy 1]] to [[Infamy 5]].
+[[Infamy]] represents how feared and respected your specific group of gobbos is within the larger Lair. It acts as the overall progression level of the Gang, moving from **Infamy 1** to **Infamy 5**.
 
 ### Gaining Infamy Marks
 
-To level up your Gang's [[Infamy]], players must accumulate [[Infamy Marks]]. These marks represent your Gang's rising prestige and are earned in two ways:
+To level up your Gang's [[Infamy]], players must accumulate [[Infamy Mark|Infamy Marks]]. These marks represent your Gang's rising prestige and are earned in two ways:
 1. **Contribute Loot:** Every 10 [[Loot Value]] brought back and contributed to the Lair's Communal Hoard by your Gang grants 1 [[Infamy Mark]].
 2. **Complete Agendas:** At the start of a raid, each player selects or draws one [[Gang Agenda]] (e.g., steal a specific relic, burn a local building, kidnap a notable figure). Completing the Agenda during the raid grants 1 [[Infamy Mark]] (max 1 per raid).
 
 ### Infamy Milestones
 
-Your Gang's [[Infamy]] increases when you reach the following cumulative totals of [[Infamy Marks]]:
+Your Gang's [[Infamy]] increases when you reach the following cumulative totals of [[Infamy Mark|Infamy Marks]]:
 *   **Infamy 1 to Infamy 2:** 3 [[Marks]]
 *   **Infamy 2 to Infamy 3:** 6 [[Marks]]
 *   **Infamy 3 to Infamy 4:** 10 [[Marks]]
@@ -37,11 +37,11 @@ Your Gang's [[Infamy]] increases when you reach the following cumulative totals 
 ### Mechanics
 
 [[Infamy]] determines the starting resources and structural benefits available to your Gang:
-*   **Successor XP Pool:** When a Boss dies, the successor Boss starts with **1** in all stats, gets [[1 starting advance]] (just like standard character creation), and receives a starting pool of [[Successor XP]] equal to [[Infamy Level × 4]] to buy stats at standard XP costs. 
-    *   *Successor Caps:* A successor Boss cannot raise any stat above [[Level 4]] at creation, and can never start as an [[Elder]] (Level 6).
+*   **Successor XP Pool:** When a Boss dies, the successor Boss starts with **1** in all stats, gets **1 starting advance** (just like standard character creation), and receives a starting pool of **Successor XP** equal to **Infamy Level × 4** to buy stats at standard XP costs. 
+    *   *Successor Caps:* A successor Boss cannot raise any stat above **Level 4** at creation, and can never start as an [[Elder]] (Level 6).
 *   **Gang Quirks:** Your [[Infamy]] determines the maximum number of [[Gang Quirks]] your Boss can equip and bring on a raid (equal to your [[Infamy]] score).
 
-> **Example:** Snikt's Gang has reached [[Infamy 3]] after contributing 20 Loot Value (2 Marks) and completing 4 Agendas (4 Marks). If Snikt dies on the next raid, his successor starts with **1** in all stats plus [[1 starting point]], receives 12 [[Successor XP]] (Infamy 3 × 4) to buy stats, and can equip up to 3 [[Gang Quirks]] from the Lair's active pool.
+> **Example:** Snikt's Gang has reached **Infamy 3** after contributing 20 Loot Value (2 Marks) and completing 4 Agendas (4 Marks). If Snikt dies on the next raid, his successor starts with **1** in all stats plus **1 starting point**, receives 12 **Successor XP** (Infamy 3 × 4) to buy stats, and can equip up to 3 [[Gang Quirks]] from the Lair's active pool.
 
 ---
 
@@ -52,16 +52,16 @@ Goblins are chaotic, and every Gang has a defining nature that is simultaneously
 **Mechanics (The Double-Edged Sword):**
 *   **The Boon:** Any Boss belonging to this Gang rolls **+1d** on tests directly related to their Shenanigan (e.g., Pyromaniacs are great at blowing things up).
 *   **The Madness ("For Fuck Sake"):** The Shenanigan is a mandatory compulsion. It is often inconvenient (e.g., Pyromaniacs cannot resist throwing bombs even when stealth is needed; Shiny-Snatchers prioritize worthless reflective glass over actual gold). 
-*   **The Reward (Feeding the Bangaranga):** Leaning into your Shenanigan compulsion (the "For Fuck Sake" moment) is highly entertaining to the horde. Whenever you act on your Shenanigan to the detriment of your current task, you immediately add [[1 die]] to the communal [Bangaranga Pool](01_Dice.md#the-bangaranga-pool).
+*   **The Reward (Feeding the Bangaranga):** Leaning into your Shenanigan compulsion (the "For Fuck Sake" moment) is highly entertaining to the horde. Whenever you act on your Shenanigan to the detriment of your current task, you immediately add **1 die** to the communal [Bangaranga Pool](01_Dice.md#the-bangaranga-pool).
 
 *Note: The Shenanigan you pick at creation is just the seed. As your Gang grows, your Bosses might acquire new Quirks or lean into different stats, organically "multiclassing" the Gang over generations.*
 
 ---
 
 ## The Hoard
-[[The Hoard]] is the Gang's central stash. It represents the abstract wealth, stolen junk, and raw materials you have accumulated that isn't directly spent on massive Lair Upgrades.
+**The Hoard** is the Gang's central stash. It represents the abstract wealth, stolen junk, and raw materials you have accumulated that isn't directly spent on massive Lair Upgrades.
 
-**Mechanic:** You use The Hoard to physically outfit your Mob before a raid. (See [[Mob Equipment & Loot Tradeoff]]). 
+**Mechanic:** You use The Hoard to physically outfit your Mob before a raid. (See **Mob Equipment & Loot Tradeoff**). 
 
 ---
 
@@ -71,7 +71,7 @@ The [[Bone Pile]] is a literal pile of remains belonging to your Gang's glorious
 **Mechanics:**
 The dead are not forgotten. A new Boss can draw upon the [[Bone Pile]] in two specific ways:
 1.  **Gang Marks:** The successor Boss honors their predecessor by receiving a permanent [[Gang Mark]]—a crude tattoo inked in mud and soot. The new Boss chooses one [[Quirk]] or [[Twist]] the deceased Boss possessed; this becomes their permanent [[Gang Mark]], ignoring normal stat requirements. (Note: This Quirk counts toward the Boss's limit of 3 [[Personal Quirks]]).
-2.  **Relics:** You may salvage a physical souvenir or remain (such as a bone) from a deceased Boss in the [[Bone Pile]] and attach it to a piece of gear to forge a [[Relic]]. The [[Relic]] grants a mechanical boon determined by the deceased Boss's highest [[Main Stat]] at their time of death (see the Crafting rules for details). [[A Boss may only equip one Relic at a time.]]
+2.  **Relics:** You may salvage a physical souvenir or remain (such as a bone) from a deceased Boss in the [[Bone Pile]] and attach it to a piece of gear to forge a [[Relic]]. The [[Relic]] grants a mechanical boon determined by the deceased Boss's highest **Main Stat** at their time of death (see the Crafting rules for details). **A Boss may only equip one Relic at a time.**
 
 ---
 
@@ -83,7 +83,7 @@ Elders provide passive benefits to the Gang (e.g., better prices at the Lair mer
 *   **Elder of Tough (Staffed at the Training Ring):** **"Iron Hide."** All Mobs under the Gang's command gain **+1 passive Defense Die** (Armor) for free, without consuming Bulk or reducing Carry Capacity.
 *   **Elder of Slink (Staffed at the Shadow Den):** **"Trap Sweepers."** All traps in a raid location have their Target Number ([[TN]]) reduced by **1** (minimum 1) for your Gang's tests.
 *   **Elder of Mouth (Staffed at the Council Room):** **"Riot Shouter."** The Gang's Boss has their starting and maximum [[Grunt]] command cap increased by **+1**. Additionally, once per raid, the Boss can rally all fleeing or uncontrolled Mobs in their Zone as a free action.
-*   **Elder of Brains (Staffed at the Tinker Yard):** **"Master Alchemist."** Your Boss can install [[1 extra Oddity]] on any piece of Custom Gear, exceeding the Boss's standard Crafting Capacity by **1**.
+*   **Elder of Brains (Staffed at the Tinker Yard):** **"Master Alchemist."** Your Boss can install **1 extra Oddity** on any piece of Custom Gear, exceeding the Boss's standard Crafting Capacity by **1**.
 
 ---
 
@@ -93,7 +93,7 @@ Goblins are petty. While Gangs ostensibly cooperate on raids to extract loot for
 
 ### Gang Agendas
 
-[[Gang Agendas]] are personal, semi-secret missions chosen by each player at the start of a raid. They represent your Gang's specific sub-goals and are the primary way to earn [[Infamy Marks]] to increase your Gang's overall [[Infamy]].
+[[Gang Agenda|Gang Agendas]] are personal, semi-secret missions chosen by each player at the start of a raid. They represent your Gang's specific sub-goals and are the primary way to earn [[Infamy Mark|Infamy Marks]] to increase your Gang's overall [[Infamy]].
 *   **Setup:** Before leaving the Lair for a raid, each player draws or chooses **one** Gang Agenda.
 *   **Resolution:** If you complete the Agenda's conditions during the raid and return home alive, your Gang immediately earns 1 [[Infamy Mark]].
 *   **The Limit:** A Gang can earn a maximum of 1 [[Infamy Mark]] from Agendas per raid.
@@ -102,12 +102,12 @@ Goblins are petty. While Gangs ostensibly cooperate on raids to extract loot for
 
 | Gang Shenanigan / Theme | Agenda Name | Objective |
 | :--- | :--- | :--- |
-| [[Pyromaniacs]] | *Burn Baby Burn* | Set fire to at least two distinct structures, barricades, or Zones during the raid. |
-| [[Sneak-Thieves]] | *Silent Grab* | Extract an item of at least 1 [[Bulk]] from a container in a Zone containing active enemies without triggering combat in that Zone. |
-| [[Shiny-Snatchers]] | *Heavy Carry* | Drag a single decorative or non-essential item (like a silver candelabra or statue) of at least 3 [[Bulk]] all the way back to the Lair. |
-| [[Any Gang (General)]] | *Vengeance Quest* | Personally land the killing blow on an enemy who wounded you or reduced your Mob's size. |
-| [[Any Gang (General)]] | *Scrap Collector* | Successfully dismantle or smash three pieces of dungeon infrastructure (e.g., doors, tables, mechanisms) using [[Tough]] tests. |
-| [[Any Gang (General)]] | *Bones of the Past* | Recover a bone or gear item from a deceased goblin on the battlefield and carry it back to the Lair's Hoard. |
+| **Pyromaniacs** | *Burn Baby Burn* | Set fire to at least two distinct structures, barricades, or Zones during the raid. |
+| **Sneak-Thieves** | *Silent Grab* | Extract an item of at least 1 [[Bulk]] from a container in a Zone containing active enemies without triggering combat in that Zone. |
+| **Shiny-Snatchers** | *Heavy Carry* | Drag a single decorative or non-essential item (like a silver candelabra or statue) of at least 3 [[Bulk]] all the way back to the Lair. |
+| **Any Gang (General)** | *Vengeance Quest* | Personally land the killing blow on an enemy who wounded you or reduced your Mob's size. |
+| **Any Gang (General)** | *Scrap Collector* | Successfully dismantle or smash three pieces of dungeon infrastructure (e.g., doors, tables, mechanisms) using [[Tough]] tests. |
+| **Any Gang (General)** | *Bones of the Past* | Recover a bone or gear item from a deceased goblin on the battlefield and carry it back to the Lair's Hoard. |
 
 ### Rivalries (PvP)
 

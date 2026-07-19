@@ -35,7 +35,7 @@ Mobs do not naturally dodge. They are a chaotic swarm and simply absorb damage. 
 2.  **Saved Actions (Active Defense):** If a Mob has saved actions (because they are [[Loitering]] and only used 1 action on their turn), they can use their saved action as a Reaction to defend. For each saved action spent, the Mob rolls **1d6** Defence.
     *   *Loitering Mobs (1 Saved Action):* Rolls **1d6** Defence.
     *   *Ordered or Out of Control Mobs (0 Saved Actions):* Rolls **0d6** Defence (relying only on passive Armor).
-    *   *Bane:* A [[Staggered]] Mob suffers a [[Bane (-1d)]] to their Defence rolls, reducing a loitering Mob's active defense roll to **0d6**.
+    *   *Bane:* A [[Staggered]] Mob suffers a **Bane (-1d)** to their Defence rolls, reducing a loitering Mob's active defense roll to **0d6**.
 3.  **Ordered Scatter (Reaction):** If a Mob with 0 saved actions is targeted by an attack, the Boss can spend a saved action (or an unused Free Order Reaction) to yell at them to "Scatter!". The Mob rolls active defense dice equal to the Boss's [[Mouth]] stat (e.g., if Mouth is 3, the Mob rolls **3d**). If they survive the attack, they may immediately Move 1 Zone to take cover.
 
 ### GM Tactics: Group Attacks (Enemy Swarms)
@@ -51,12 +51,12 @@ The Manipulate action is a catch-all for whenever a Mob or PC tries to interact 
 The Order action is used to give commands to your goblins, directing a Mob to use both of their actions for the round. Standard Orders to controlled Mobs do not require a dice roll.
 *   **The 3 Mob States:** A Mob is always in one of three states on their turn:
     *   **Ordered:** Direct instructions from the Boss. They spend both actions as ordered (0 saved actions for defense).
-    *   **Loitering:** Under control, but receives no orders. Goblins use [[1 action]] to loiter (roll/choose on the Loitering Table in [Goblin Mobs](../01_Characters%20&%20Mobs/13_Goblin_mob.md)) and save [[1 action]] for defense (1d6 [[Defence]]).
+    *   **Loitering:** Under control, but receives no orders. Goblins use **1 action** to loiter (roll/choose on the Loitering Table in [Goblin Mobs](../01_Characters%20&%20Mobs/13_Goblin_mob.md)) and save **1 action** for defense (1d6 [[Defence]]).
     *   **Out of Control:** Broken command (out of sight, size exceeds Grunt, or failed morale). They spend both actions running amok under GM control (roll/choose on the Out of Control Table in [Goblin Mobs](../01_Characters%20&%20Mobs/13_Goblin_mob.md)), leaving them with 0 saved actions for defense.
 *   **Regaining Control:** To regain control of an Out of Control Mob, the Boss must spend a Standard Action to [[Order]] them, resolving it using the standard command test rules in [Giving Orders](04_Giving%20orders.md). On a success, the Mob becomes controlled and receives their instructions; on a failure, they ignore the Boss and remain Out of Control.
 *   **Cross-Gang Super Mobs:** Issuing an Order to a Mob merged from multiple different player Gangs *always* requires a Grunt test (Test [[Tough]] if in the same Zone, or [[Mouth]] from afar).
 *   **The Boredom Rule:** Mobs have short attention spans. When acting (Ordered, Loitering, or Out of Control), a Mob cannot perform the exact same action twice (e.g., they cannot Attack twice, or Plunder twice). *Exception:* A Mob *can* take the Move action twice if they are fleeing or charging.
-*   **Free Orders & Maximum Mobs:** Your ability to command the swarm is dictated strictly by your [[Mouth]] stat progression (see [[Stats]]). As you level up Mouth, you can command more Mobs simultaneously, and you are granted additional [[Free Orders]] per round. You never have to spend your Standard Actions to issue these Free Orders!
+*   **Free Orders & Maximum Mobs:** Your ability to command the swarm is dictated strictly by your [[Mouth]] stat progression (see [[Stat|Stats]]). As you level up Mouth, you can command more Mobs simultaneously, and you are granted additional [[Free Orders]] per round. You never have to spend your Standard Actions to issue these Free Orders!
 
 
 ## Cover

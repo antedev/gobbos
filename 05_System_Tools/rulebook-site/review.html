@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gobbos — Keyword Review Tool</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0f1115;
+      --bg-card: #181a20;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --brand: #f43f5e;
+      --brand-hover: #e11d48;
+      --accent: #f59e0b;
+      --accent-hover: #d97706;
+      --border: #2d3139;
+      --input-bg: #1e222a;
+      
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      
+      --font-body: 'Inter', sans-serif;
+      --font-title: 'Outfit', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.5;
+      padding: 24px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto 100px auto; /* Margin bottom for floating bar */
+    }
+
+    /* ===== Header ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 32px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      font-size: 2.2rem;
+    }
+
+    h1 {
+      font-family: var(--font-title);
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .home-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      padding: 8px 16px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      transition: all 0.2s ease;
+    }
+
+    .home-link:hover {
+      background-color: var(--border);
+      color: var(--text-main);
+    }
+
+    /* ===== Stats Section ===== */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .stat-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background-color: var(--text-muted);
+    }
+
+    .stat-card.brand::after { background-color: var(--brand); }
+    .stat-card.accent::after { background-color: var(--accent); }
+    .stat-card.success::after { background-color: #10b981; }
+
+    .stat-num {
+      font-family: var(--font-title);
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ===== Controls (Filters & Search) ===== */
+    .controls-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    @media(min-width: 768px) {
+      .controls-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+      }
+    }
+
+    .search-box {
+      position: relative;
+      flex-grow: 1;
+      max-width: 450px;
+    }
+
+    .search-input {
+      width: 100%;
+      background-color: var(--input-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 10px 16px;
+      color: var(--text-main);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--brand);
+    }
+
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .filter-tab {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 8px 16px;
+      color: var(--text-muted);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-tab:hover {
+      border-color: var(--text-muted);
+      color: var(--text-main);
+    }
+
+    .filter-tab.active {
+      background-color: var(--brand);
+      border-color: var(--brand);
+      color: var(--text-main);
+    }
+
+    .bulk-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .bulk-btn {
+      background-color: var(--input-bg);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .bulk-btn:hover {
+      background-color: var(--border);
+    }
+
+    /* ===== Keywords Table ===== */
+    .table-container {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    th, td {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+
+    th {
+      background-color: #1c1f26;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background-color: rgba(255, 255, 255, 0.015);
+    }
+
+    .keyword-cell {
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .status-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .status-tag.yes {
+      background-color: rgba(16, 185, 129, 0.15);
+      color: #10b981;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .status-tag.no {
+      background-color: rgba(239, 68, 68, 0.15);
+      color: #ef4444;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    /* Toggle Switches for YES/REMOVE */
+    .toggle-group {
+      display: inline-flex;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background-color: var(--input-bg);
+    }
+
+    .toggle-option {
+      padding: 6px 14px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.15s ease;
+      color: var(--text-muted);
+    }
+
+    .toggle-option.active-keep {
+      background-color: #10b981;
+      color: #fff;
+    }
+
+    .toggle-option.active-remove {
+      background-color: var(--brand);
+      color: #fff;
+    }
+
+    .toggle-option.active-pending {
+      background-color: var(--accent);
+      color: #fff;
+    }
+
+    /* Occurrences */
+    .occur-count {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-family: var(--font-mono);
+      font-weight: 500;
+    }
+
+    .files-list {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      max-width: 320px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: help;
+    }
+
+    /* ===== Pagination ===== */
+    .pagination-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 20px;
+      background-color: rgba(0, 0, 0, 0.1);
+      border-top: 1px solid var(--border);
+    }
+
+    .page-info {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .page-btns {
+      display: flex;
+      gap: 6px;
+    }
+
+    .page-btn {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 6px 12px;
+      font-size: 0.85rem;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .page-btn:hover:not(:disabled) {
+      border-color: var(--text-muted);
+      background-color: var(--input-bg);
+    }
+
+    .page-btn:disabled {
+      color: var(--text-muted);
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    /* ===== Console Log Box ===== */
+    .console-box {
+      background-color: #0b0c10;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      height: 180px;
+      overflow-y: auto;
+      margin-top: 24px;
+      color: #38bdf8;
+    }
+
+    .console-title {
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* ===== Floating Footer Actions ===== */
+    .floating-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(24, 26, 32, 0.9);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border);
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .floating-info {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .floating-info strong {
+      color: var(--text-main);
+    }
+
+    .action-btns {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: none;
+    }
+
+    .btn-secondary {
+      background-color: var(--input-bg);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+    }
+
+    .btn-secondary:hover:not(:disabled) {
+      background-color: var(--border);
+    }
+
+    .btn-primary {
+      background-color: var(--brand);
+      color: #fff;
+    }
+
+    .btn-primary:hover:not(:disabled) {
+      background-color: var(--brand-hover);
+    }
+
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    /* Status indicator dot */
+    .indicator-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #ef4444;
+      margin-left: 6px;
+    }
+    .indicator-dot.clean {
+      background-color: #10b981;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- ===== Header ===== -->
+    <header>
+      <div class="logo-container">
+        <span class="logo-icon">👺</span>
+        <div>
+          <h1>Keyword Review Tool</h1>
+          <p class="subtitle">Filter and refine wiki-links for Gobbos rules</p>
+        </div>
+      </div>
+      <a href="/index.html" class="home-link">← Back to Rulebook</a>
+    </header>
+
+    <!-- ===== Stats ===== -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num" id="stat-total">0</div>
+        <div class="stat-label">Total Terms</div>
+      </div>
+      <div class="stat-card brand">
+        <div class="stat-num" id="stat-pending">0</div>
+        <div class="stat-label">Pending Review</div>
+      </div>
+      <div class="stat-card success">
+        <div class="stat-num" id="stat-keep">0</div>
+        <div class="stat-label">To Keep (YES)</div>
+      </div>
+      <div class="stat-card accent">
+        <div class="stat-num" id="stat-remove">0</div>
+        <div class="stat-label">To Remove</div>
+      </div>
+    </div>
+
+    <!-- ===== Controls ===== -->
+    <div class="controls-card">
+      <div class="controls-row">
+        <div class="search-box">
+          <input type="text" id="search-input" class="search-input" placeholder="Search keywords...">
+        </div>
+        <div class="filter-tabs" id="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="pending">Pending Review</button>
+          <button class="filter-tab" data-filter="in_index">In Index</button>
+          <button class="filter-tab" data-filter="keep">Marked Keep</button>
+          <button class="filter-tab" data-filter="remove">Marked Remove</button>
+        </div>
+      </div>
+      <div class="controls-row">
+        <div class="bulk-actions">
+          <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">Bulk Action for filtered:</span>
+          <button class="bulk-btn" id="bulk-keep">Set all KEEP</button>
+          <button class="bulk-btn" id="bulk-remove">Set all REMOVE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Keywords Table ===== -->
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 35%;">Keyword</th>
+            <th style="width: 15%;">In Index?</th>
+            <th style="width: 15%;">Occurrences</th>
+            <th style="width: 20%;">Review Choice</th>
+          </tr>
+        </thead>
+        <tbody id="keywords-tbody">
+          <tr>
+            <td colspan="4" style="text-align: center; color: var(--text-muted);">Loading keywords...</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Pagination -->
+      <div class="pagination-row">
+        <div class="page-info" id="page-info">Showing 0-0 of 0</div>
+        <div class="page-btns">
+          <button class="page-btn" id="btn-prev" disabled>Previous</button>
+          <button class="page-btn" id="btn-next" disabled>Next</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Console Log Output ===== -->
+    <div class="console-title">
+      <span>Execution Console Log</span>
+      <span id="console-status" style="font-size: 0.8rem; color: var(--text-muted);">Idle</span>
+    </div>
+    <div class="console-box" id="console-box">
+      > Click 'Apply Changes to Rules' to run the background clean up. Log outputs will stream here...
+    </div>
+  </div>
+
+  <!-- ===== Floating Footer Actions ===== -->
+  <div class="floating-bar">
+    <div class="floating-info">
+      Status: <span id="save-status">Unsaved Changes</span><span class="indicator-dot" id="indicator-dot"></span>
+      <span style="margin-left: 20px; color: var(--text-muted);" id="selections-count">(0 changed)</span>
+    </div>
+    <div class="action-btns">
+      <button class="btn btn-secondary" id="btn-save">Save Choices</button>
+      <button class="btn btn-primary" id="btn-apply">Apply Changes & Rebuild Site</button>
+    </div>
+  </div>
+
+  <script>
+    // ===== State Variables =====
+    let allKeywords = [];     // Master list loaded from API
+    let workingKeywords = []; // Current UI modifications copy
+    let filteredKeywords = []; // Filtered + Searched list
+    
+    let currentPage = 1;
+    const itemsPerPage = 25;
+    let currentFilter = 'all';
+    let searchQuery = '';
+    let isDirty = false;
+
+    // ===== DOM Elements =====
+    const tbody = document.getElementById('keywords-tbody');
+    const searchInput = document.getElementById('search-input');
+    const filterTabs = document.getElementById('filter-tabs');
+    const pageInfo = document.getElementById('page-info');
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    const btnSave = document.getElementById('btn-save');
+    const btnApply = document.getElementById('btn-apply');
+    const saveStatusText = document.getElementById('save-status');
+    const indicatorDot = document.getElementById('indicator-dot');
+    const selectionsCountText = document.getElementById('selections-count');
+    const consoleBox = document.getElementById('console-box');
+    const consoleStatus = document.getElementById('console-status');
+
+    // Stats Counters
+    const statTotal = document.getElementById('stat-total');
+    const statPending = document.getElementById('stat-pending');
+    const statKeep = document.getElementById('stat-keep');
+    const statRemove = document.getElementById('stat-remove');
+
+    // ===== Initialize =====
+    window.addEventListener('DOMContentLoaded', () => {
+      fetchKeywords();
+      
+      // Events
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value.toLowerCase();
+        currentPage = 1;
+        applyFiltersAndRender();
+      });
+
+      filterTabs.addEventListener('click', (e) => {
+        if (e.target.classList.contains('filter-tab')) {
+          document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+          e.target.classList.add('active');
+          currentFilter = e.target.getAttribute('data-filter');
+          currentPage = 1;
+          applyFiltersAndRender();
+        }
+      });
+
+      btnPrev.addEventListener('click', () => {
+        if (currentPage > 1) {
+          currentPage--;
+          renderTable();
+        }
+      });
+
+      btnNext.addEventListener('click', () => {
+        const totalPages = Math.ceil(filteredKeywords.length / itemsPerPage);
+        if (currentPage < totalPages) {
+          currentPage++;
+          renderTable();
+        }
+      });
+
+      btnSave.addEventListener('click', saveSelections);
+      btnApply.addEventListener('click', applySelectionsToCode);
+
+      document.getElementById('bulk-keep').addEventListener('click', () => bulkSet('YES'));
+      document.getElementById('bulk-remove').addEventListener('click', () => bulkSet('REMOVE'));
+    });
+
+    // ===== API Operations =====
+    function fetchKeywords() {
+      fetch('/api/keywords')
+        .then(res => res.json())
+        .then(data => {
+          // Initialize working copies
+          allKeywords = JSON.parse(JSON.stringify(data));
+          workingKeywords = JSON.parse(JSON.stringify(data));
+          
+          isDirty = false;
+          updateSaveIndicator();
+          calculateStats();
+          applyFiltersAndRender();
+        })
+        .catch(err => {
+          tbody.innerHTML = `<tr><td colspan="4" style="text-align: center; color: #ef4444;">Error fetching keywords: ${err.message}</td></tr>`;
+        });
+    }
+
+    function saveSelections() {
+      btnSave.disabled = true;
+      saveStatusText.textContent = "Saving...";
+      
+      fetch('/api/save-keywords', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(workingKeywords)
+      })
+      .then(res => res.json())
+      .then(result => {
+        btnSave.disabled = false;
+        if (result.status === 'success') {
+          // Commit working selections to master
+          allKeywords = JSON.parse(JSON.stringify(workingKeywords));
+          isDirty = false;
+          updateSaveIndicator();
+          calculateStats();
+          appendLog("> Selections saved successfully to keyword_review.csv.");
+        } else {
+          alert('Failed to save selections: ' + result.error);
+          saveStatusText.textContent = "Save Failed";
+        }
+      })
+      .catch(err => {
+        btnSave.disabled = false;
+        alert('Error saving choices: ' + err.message);
+        saveStatusText.textContent = "Save Error";
+      });
+    }
+
+    function applySelectionsToCode() {
+      if (isDirty) {
+        if (!confirm('You have unsaved choices. Save and apply them now?')) {
+          return;
+        }
+        // Save first then apply
+        saveSelections();
+      }
+
+      btnApply.disabled = true;
+      consoleStatus.textContent = "Running script...";
+      appendLog("\n> Initializing bracket cleanup and static site rebuild...");
+
+      fetch('/api/apply-changes', { method: 'POST' })
+        .then(res => res.json())
+        .then(result => {
+          btnApply.disabled = false;
+          if (result.status === 'success') {
+            consoleStatus.textContent = "Success";
+            appendLog(result.log);
+            appendLog("\n> FINISHED! All rules updated and rulebook rebuilt successfully.");
+            // Reload from disk to update index states
+            fetchKeywords();
+          } else {
+            consoleStatus.textContent = "Error";
+            appendLog(result.log || result.error);
+            alert('Failed to apply changes: ' + result.error);
+          }
+        })
+        .catch(err => {
+          btnApply.disabled = false;
+          consoleStatus.textContent = "Error";
+          appendLog("Error: " + err.message);
+          alert('Error during execution: ' + err.message);
+        });
+    }
+
+    // ===== Stats & Calculations =====
+    function calculateStats() {
+      let total = workingKeywords.length;
+      let pending = 0;
+      let keep = 0;
+      let remove = 0;
+
+      workingKeywords.forEach(k => {
+        if (k.keep === 'PENDING') pending++;
+        else if (k.keep === 'YES') keep++;
+        else if (k.keep === 'REMOVE' || k.keep === 'NO') remove++;
+      });
+
+      statTotal.textContent = total;
+      statPending.textContent = pending;
+      statKeep.textContent = keep;
+      statRemove.textContent = remove;
+    }
+
+    function updateSaveIndicator() {
+      let changedCount = 0;
+      for (let i = 0; i < workingKeywords.length; i++) {
+        if (workingKeywords[i].keep !== allKeywords[i].keep) {
+          changedCount++;
+        }
+      }
+      
+      isDirty = changedCount > 0;
+      selectionsCountText.textContent = `(${changedCount} changed)`;
+
+      if (isDirty) {
+        saveStatusText.textContent = "Unsaved Changes";
+        indicatorDot.className = "indicator-dot";
+        indicatorDot.style.display = "inline-block";
+        btnSave.disabled = false;
+      } else {
+        saveStatusText.textContent = "All Saved";
+        indicatorDot.className = "indicator-dot clean";
+        indicatorDot.style.display = "inline-block";
+        btnSave.disabled = true;
+      }
+    }
+
+    function bulkSet(status) {
+      if (filteredKeywords.length === 0) return;
+      
+      const confirmMsg = `Are you sure you want to set ALL ${filteredKeywords.length} filtered items to ${status}?`;
+      if (!confirm(confirmMsg)) return;
+
+      filteredKeywords.forEach(fk => {
+        const wk = workingKeywords.find(wk => wk.keyword.toLowerCase() === fk.keyword.toLowerCase());
+        if (wk) {
+          wk.keep = status;
+        }
+      });
+
+      calculateStats();
+      updateSaveIndicator();
+      renderTable();
+    }
+
+    // ===== Filtering & Table Rendering =====
+    function applyFiltersAndRender() {
+      filteredKeywords = workingKeywords.filter(k => {
+        // 1. Apply search query
+        const matchesSearch = k.keyword.toLowerCase().includes(searchQuery);
+        if (!matchesSearch) return false;
+
+        // 2. Apply status tab filter
+        if (currentFilter === 'all') return true;
+        if (currentFilter === 'pending') return k.keep === 'PENDING';
+        if (currentFilter === 'in_index') return k.inIndex === 'YES';
+        if (currentFilter === 'keep') return k.keep === 'YES';
+        if (currentFilter === 'remove') return k.keep === 'REMOVE' || k.keep === 'NO';
+        
+        return true;
+      });
+
+      renderTable();
+    }
+
+    function renderTable() {
+      tbody.innerHTML = '';
+
+      if (filteredKeywords.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="4" style="text-align: center; color: var(--text-muted);">No keywords match your search/filters.</td></tr>`;
+        pageInfo.textContent = "Showing 0-0 of 0";
+        btnPrev.disabled = true;
+        btnNext.disabled = true;
+        return;
+      }
+
+      const totalItems = filteredKeywords.length;
+      const totalPages = Math.ceil(totalItems / itemsPerPage);
+      
+      // Keep page within bounds
+      if (currentPage > totalPages) currentPage = totalPages;
+      if (currentPage < 1) currentPage = 1;
+
+      const startIndex = (currentPage - 1) * itemsPerPage;
+      const endIndex = Math.min(startIndex + itemsPerPage, totalItems);
+      const pageItems = filteredKeywords.slice(startIndex, endIndex);
+
+      pageItems.forEach((item, index) => {
+        const tr = document.createElement('tr');
+        
+        // Match with index position in workingKeywords
+        const workingIndex = workingKeywords.findIndex(w => w.keyword.toLowerCase() === item.keyword.toLowerCase());
+
+        // Column 1: Keyword Name
+        const tdName = document.createElement('td');
+        tdName.className = 'keyword-cell';
+        tdName.textContent = item.keyword;
+        tr.appendChild(tdName);
+
+        // Column 2: In Index Status Tag
+        const tdIndex = document.createElement('td');
+        const isIndex = item.inIndex === 'YES';
+        tdIndex.innerHTML = `<span class="status-tag ${isIndex ? 'yes' : 'no'}">${isIndex ? 'YES' : 'NO'}</span>`;
+        tr.appendChild(tdIndex);
+
+        // Column 3: Count and Tooltip files list
+        const tdCount = document.createElement('td');
+        tdCount.innerHTML = `
+          <span class="occur-count">${item.count}</span>
+          <div class="files-list" title="${item.files.split(', ').join('\n')}">${item.files}</div>
+        `;
+        tr.appendChild(tdCount);
+
+        // Column 4: Toggles
+        const tdAction = document.createElement('td');
+        const toggleGroup = document.createElement('div');
+        toggleGroup.className = 'toggle-group';
+
+        const optKeep = document.createElement('div');
+        optKeep.className = 'toggle-option';
+        optKeep.textContent = 'KEEP';
+        if (item.keep === 'YES') optKeep.classList.add('active-keep');
+        optKeep.addEventListener('click', () => setKeywordStatus(workingIndex, 'YES'));
+
+        const optRemove = document.createElement('div');
+        optRemove.className = 'toggle-option';
+        optRemove.textContent = 'REMOVE';
+        if (item.keep === 'REMOVE' || item.keep === 'NO') optRemove.classList.add('active-remove');
+        optRemove.addEventListener('click', () => setKeywordStatus(workingIndex, 'REMOVE'));
+
+        const optPending = document.createElement('div');
+        optPending.className = 'toggle-option';
+        optPending.textContent = 'PENDING';
+        if (item.keep === 'PENDING') optPending.classList.add('active-pending');
+        optPending.addEventListener('click', () => setKeywordStatus(workingIndex, 'PENDING'));
+
+        toggleGroup.appendChild(optKeep);
+        toggleGroup.appendChild(optRemove);
+        toggleGroup.appendChild(optPending);
+        tdAction.appendChild(toggleGroup);
+        tr.appendChild(tdAction);
+
+        tbody.appendChild(tr);
+      });
+
+      // Update Pagination UI
+      pageInfo.textContent = `Showing ${startIndex + 1}-${endIndex} of ${totalItems}`;
+      btnPrev.disabled = (currentPage === 1);
+      btnNext.disabled = (currentPage === totalPages);
+    }
+
+    function setKeywordStatus(workingIndex, status) {
+      if (workingIndex === -1) return;
+      workingKeywords[workingIndex].keep = status;
+      
+      calculateStats();
+      updateSaveIndicator();
+      renderTable();
+    }
+
+    // ===== Console Logs Helpers =====
+    function appendLog(text) {
+      consoleBox.innerHTML += '\n' + text.replace(/\n/g, '<br>');
+      consoleBox.scrollTop = consoleBox.scrollHeight;
+    }
+  </script>
+</body>
+</html>

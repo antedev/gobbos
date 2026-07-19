@@ -61,7 +61,7 @@
         ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
       </div>
       <h1 id="movement-zones-and-map-layout" tabindex="-1">Movement, Zones, &amp; Map Layout</h1>
-<p>The map architecture in <a href="#gobbos" class="wikilink" title="Gobbos">Gobbos</a> is designed to solve the “Panzer Brigade” dilemma: balancing a massive, chaotic horde of multiple players and 6 to 8 active squads without clogging the physical tabletop or turning a fast-paced rogue-lite delve into a slow traffic jam.</p>
+<p>The map architecture in <strong>Gobbos</strong> is designed to solve the “Panzer Brigade” dilemma: balancing a massive, chaotic horde of multiple players and 6 to 8 active squads without clogging the physical tabletop or turning a fast-paced rogue-lite delve into a slow traffic jam.</p>
 <p>The layout gives a clear, high-level sense of macro-exploration while dropping into highly dynamic, multi-level, gridless tactical theaters only when a fight breaks out.</p>
 <hr>
 <h2 id="the-tabletop-layout-visual-sketch" tabindex="-1">The Tabletop Layout (Visual Sketch)</h2>
@@ -118,44 +118,44 @@
 </ul>
 <hr>
 <h2 id="abstract-gridless-zones" tabindex="-1">Abstract, Gridless Zones</h2>
-<p>In Gobbos, <a href="#zones" class="wikilink" title="Zones">Zones</a> are used to create a framework for movement, especially in combat. A Zone can be of any shape, but is often clearly defined by the environment, such as a room, a corridor, or a field.</p>
+<p>In Gobbos, <a href="stage--rules--keywords-index.html#zones" class="wikilink" title="Abstract spatial segments of the battlefield used to track distance, line of sight, and hazard boundaries.">Zones</a> are used to create a framework for movement, especially in combat. A Zone can be of any shape, but is often clearly defined by the environment, such as a room, a corridor, or a field.</p>
 <p>A player’s movement is measured in number of Zones, and a normal movement speed is to move 2 Zones per round and action.</p>
 <hr>
 <h2 id="zone-profiles" tabindex="-1">Zone Profiles</h2>
-<p>Every Zone in an encounter is assigned a default <a href="#zone-profile" class="wikilink" title="Zone Profile">Zone Profile</a> consisting of a <a href="stage--rules--keywords-index.html#difficulty" class="wikilink" title="The die face needed to score a success (Easy 4+, Normal 5+, Hard 6). This is typically dependent on the circumstances of the test.">Difficulty</a> and a <a href="stage--rules--keywords-index.html#target-number-tn" class="wikilink" title="The total number of successes required to pass a test (e.g., in shorthand **5+/1**, you need one die to land on 5 or 6). This is typically a fixed number.">Target Number (TN)</a> (e.g., <strong>5+/1</strong>, <strong>5+/2</strong>, or <strong>6/1</strong>).</p>
+<p>Every Zone in an encounter is assigned a default <a href="stage--rules--keywords-index.html#zone-profile" class="wikilink" title="The default Difficulty and TN profile of a Zone (e.g. 5+/1) that traversal or manipulation tests in that Zone resolve against.">Zone Profile</a> consisting of a <a href="stage--rules--keywords-index.html#difficulty" class="wikilink" title="The die face needed to score a success (Easy 4+, Normal 5+, Hard 6). This is typically dependent on the circumstances of the test.">Difficulty</a> and a <a href="stage--rules--keywords-index.html#target-number-tn" class="wikilink" title="The total number of successes required to pass a test (e.g., in shorthand **5+/1**, you need one die to land on 5 or 6). This is typically a fixed number.">Target Number (TN)</a> (e.g., <strong>5+/1</strong>, <strong>5+/2</strong>, or <strong>6/1</strong>).</p>
 <blockquote>
 <blockquote>
 <p><strong>THE ZONE PROFILE RULE:</strong>
 Any general environmental interaction, traversal, or search test attempted within a Zone defaults to using that Zone’s Profile. GMs do not invent DCs for individual tasks; they simply use the Zone Profile.</p>
 <ul>
-<li><em>Example:</em> Climbing a wall, forcing a door, jumping a trench, or searching a junk pile in a Zone with a <strong>5+/2</strong> profile all require <a href="#2-successes" class="wikilink" title="2 successes">2 successes</a> on a <a href="#normal" class="wikilink" title="Normal">Normal</a> (5+) test.</li>
+<li><em>Example:</em> Climbing a wall, forcing a door, jumping a trench, or searching a junk pile in a Zone with a <strong>5+/2</strong> profile all require <strong>2 successes</strong> on a <a href="stage--rules--keywords-index.html#normal" class="wikilink" title="The default test Difficulty requiring a die face of 5+ to score a success.">Normal</a> (5+) test.</li>
 </ul>
 </blockquote>
 </blockquote>
-<p>GMs can adjust the Difficulty level of a specific task based on tools or circumstances using standard <a href="#boons" class="wikilink" title="Boons">Boons</a> and <a href="#banes" class="wikilink" title="Banes">Banes</a> (e.g., using professional climbing gear grants a <a href="#boon" class="wikilink" title="Boon">Boon</a> (+1d) to the traversal test, while a rusty lock imposes a <a href="#bane" class="wikilink" title="Bane">Bane</a> (-1d) on the test), but the base TN and Difficulty remain tied to the Zone itself.</p>
+<p>GMs can adjust the Difficulty level of a specific task based on tools or circumstances using standard <a href="stage--rules--keywords-index.html#boon-boons" class="wikilink" title="A positive modifier granting a +1d bonus on a test's dice pool. Multiple Boons do not stack.">Boon|Boons</a> and <a href="#bane-banes" class="wikilink" title="Bane|Banes">Bane|Banes</a> (e.g., using professional climbing gear grants a <a href="stage--rules--keywords-index.html#boon" class="wikilink" title="A positive modifier granting a +1d bonus on a test's dice pool. Multiple Boons do not stack.">Boon</a> (+1d) to the traversal test, while a rusty lock imposes a <a href="stage--rules--keywords-index.html#bane" class="wikilink" title="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> (-1d) on the test), but the base TN and Difficulty remain tied to the Zone itself.</p>
 <hr>
 <h2 id="zone-traits" tabindex="-1">Zone Traits</h2>
-<p>A <a href="#zone-trait" class="wikilink" title="Zone Trait">Zone Trait</a> is a mechanical modifier or effect associated with a specific Zone. Traits represent either obstacles players must overcome or advantages they can exploit. All traits fall under two general categories:</p>
+<p>A <a href="stage--rules--keywords-index.html#zone-trait" class="wikilink" title="A permanent physical attribute of a Zone (such as Slippery or Narrow) that applies passive modifiers.">Zone Trait</a> is a mechanical modifier or effect associated with a specific Zone. Traits represent either obstacles players must overcome or advantages they can exploit. All traits fall under two general categories:</p>
 <h3 id="problems-hazards-and-obstacles" tabindex="-1">Problems (Hazards &amp; Obstacles)</h3>
 <p>These are negative environmental features.</p>
 <ul>
 <li><strong>Triggering:</strong> Problems trigger passively (continuous effect while occupying the zone), on entry (as soon as a creature enters the zone), or at a specific phase in the round (e.g., End of Round).</li>
-<li><strong>Resolution:</strong> To avoid negative effects, a player must make a relevant test (typically <a href="#slink" class="wikilink" title="Slink">Slink</a> or <a href="#tough" class="wikilink" title="Tough">Tough</a>) against the <a href="#zone-profile" class="wikilink" title="Zone Profile">Zone Profile</a>. On a failure, they suffer Wounds (Grit Loss), or a negative <a href="#condition" class="wikilink" title="Condition">Condition</a>.</li>
+<li><strong>Resolution:</strong> To avoid negative effects, a player must make a relevant test (typically <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> or <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a>) against the <a href="stage--rules--keywords-index.html#zone-profile" class="wikilink" title="The default Difficulty and TN profile of a Zone (e.g. 5+/1) that traversal or manipulation tests in that Zone resolve against.">Zone Profile</a>. On a failure, they suffer Wounds (Grit Loss), or a negative <a href="stage--rules--keywords-index.html#condition" class="wikilink" title="A temporary state applied to a character or Mob, imposing penalties or mechanical limits.">Condition</a>.</li>
 <li><strong>GM Rolling:</strong> GMs never roll to see if a hazard succeeds; the GM simply announces the hazard’s trigger and the affected player rolls to resist.</li>
 <li><strong>Hazard Damage Scaling:</strong> Environmental hazard damage scales by severity:
 <ul>
-<li><strong>T1 Hazard (Minor):</strong> Deals <a href="#1-damage" class="wikilink" title="1 damage">1 damage</a> to a PC’s Grit or a Mob’s active health die on a failed test.</li>
-<li><strong>T2 Hazard (Dangerous):</strong> Deals <a href="#2-damage" class="wikilink" title="2 damage">2 damage</a>.</li>
-<li><strong>T3 Hazard (Lethal):</strong> Deals <a href="#3-damage" class="wikilink" title="3 damage">3 damage</a> or applies a severe condition.</li>
-<li><em>Note:</em> Extreme catastrophic events (like a collapsing cave-in) can deal direct <a href="#size-damage" class="wikilink" title="Size damage">Size damage</a> (removing the Mob’s lowest-value D6).</li>
+<li><strong>T1 Hazard (Minor):</strong> Deals 1 damage to a PC’s Grit or a Mob’s active health die on a failed test.</li>
+<li><strong>T2 Hazard (Dangerous):</strong> Deals <strong>2 damage</strong>.</li>
+<li><strong>T3 Hazard (Lethal):</strong> Deals <strong>3 damage</strong> or applies a severe condition.</li>
+<li><em>Note:</em> Extreme catastrophic events (like a collapsing cave-in) can deal direct <strong>Size damage</strong> (removing the Mob’s lowest-value D6).</li>
 </ul>
 </li>
 </ul>
 <h3 id="opportunities-tactical-features-and-treats" tabindex="-1">Opportunities (Tactical Features &amp; Treats)</h3>
 <p>These are interactive or beneficial environmental features.</p>
 <ul>
-<li><strong>Passive Benefits:</strong> Some opportunities provide constant benefits (e.g., providing cover or granting a <a href="#boon" class="wikilink" title="Boon">Boon</a> to attacks).</li>
-<li><strong>Interactive Benefits:</strong> Goblins can interact with an opportunity by spending a Standard Action (<a href="#manipulate" class="wikilink" title="Manipulate">Manipulate</a> or <a href="#attack" class="wikilink" title="Attack">Attack</a>) and testing a relevant stat against the <a href="#zone-profile" class="wikilink" title="Zone Profile">Zone Profile</a> to yield a benefit.</li>
+<li><strong>Passive Benefits:</strong> Some opportunities provide constant benefits (e.g., providing cover or granting a <a href="stage--rules--keywords-index.html#boon" class="wikilink" title="A positive modifier granting a +1d bonus on a test's dice pool. Multiple Boons do not stack.">Boon</a> to attacks).</li>
+<li><strong>Interactive Benefits:</strong> Goblins can interact with an opportunity by spending a Standard Action (<a href="stage--rules--keywords-index.html#manipulate" class="wikilink" title="A Standard Action catch-all used to interact with items, machinery, traps, or environmental components.">Manipulate</a> or <a href="stage--rules--keywords-index.html#attack" class="wikilink" title="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attack</a>) and testing a relevant stat against the <a href="stage--rules--keywords-index.html#zone-profile" class="wikilink" title="The default Difficulty and TN profile of a Zone (e.g. 5+/1) that traversal or manipulation tests in that Zone resolve against.">Zone Profile</a> to yield a benefit.</li>
 </ul>
 <hr>
 <h2 id="predefined-zone-traits" tabindex="-1">Predefined Zone Traits</h2>
@@ -165,25 +165,25 @@ Any general environmental interaction, traversal, or search test attempted withi
 <li><strong>Chasm / Pit (T3 Obstacle):</strong> A gaping hole, trench, or cliff edge.
 <ul>
 <li><em>Trigger:</em> Attempting to cross, or being pushed toward the edge.</li>
-<li><em>Rules:</em> Traversing requires a <a href="#slink" class="wikilink" title="Slink">Slink</a> test against the <a href="#zone-profile" class="wikilink" title="Zone Profile">Zone Profile</a>. On a failure, the creature falls in, taking <a href="#3-damage" class="wikilink" title="3 damage">3 damage</a> and gaining the <a href="#restrained" class="wikilink" title="Restrained">Restrained</a> condition. Clambering out requires spending a Standard Action to test <a href="#tough" class="wikilink" title="Tough">Tough</a> against the profile.</li>
+<li><em>Rules:</em> Traversing requires a <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> test against the <a href="stage--rules--keywords-index.html#zone-profile" class="wikilink" title="The default Difficulty and TN profile of a Zone (e.g. 5+/1) that traversal or manipulation tests in that Zone resolve against.">Zone Profile</a>. On a failure, the creature falls in, taking <strong>3 damage</strong> and gaining the <a href="stage--rules--keywords-index.html#restrained" class="wikilink" title="A condition preventing movement and imposing a -1d Bane to Dodge reactions.">Restrained</a> condition. Clambering out requires spending a Standard Action to test <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> against the profile.</li>
 </ul>
 </li>
 <li><strong>Deep Water (Obstacle):</strong> Flooded chambers, sewer channels, or rapid rivers.
 <ul>
 <li><em>Trigger:</em> Passive / Interactive (for swimming).</li>
-<li><em>Rules:</em> Traversing this Zone requires a <a href="#move" class="wikilink" title="Move">Move</a> action to travel only 1 <a href="stage--rules--keywords-index.html#zone" class="wikilink" title="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a> (ignoring standard movement speed). If forced to swim or stay afloat (directly in the water without a boat or bridge), a creature starting their turn in this Zone must test <a href="#tough" class="wikilink" title="Tough">Tough</a> against the <a href="#zone-profile" class="wikilink" title="Zone Profile">Zone Profile</a> or begin drowning (taking <a href="#1-damage" class="wikilink" title="1 damage">1 damage</a> per round).</li>
+<li><em>Rules:</em> Traversing this Zone requires a <a href="stage--rules--keywords-index.html#move" class="wikilink" title="A Standard Action allowing a character or Mob to cross a number of Zones up to their Movement rating.">Move</a> action to travel only 1 <a href="stage--rules--keywords-index.html#zone" class="wikilink" title="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a> (ignoring standard movement speed). If forced to swim or stay afloat (directly in the water without a boat or bridge), a creature starting their turn in this Zone must test <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> against the <a href="stage--rules--keywords-index.html#zone-profile" class="wikilink" title="The default Difficulty and TN profile of a Zone (e.g. 5+/1) that traversal or manipulation tests in that Zone resolve against.">Zone Profile</a> or begin drowning (taking 1 damage per round).</li>
 </ul>
 </li>
 <li><strong>Narrow (Obstacle):</strong> A tight crawlspace, pipe, or rocky crevice.
 <ul>
 <li><em>Trigger:</em> Passive.</li>
-<li><em>Rules:</em> The maximum Mob size that can occupy this Zone without penalty is <a href="#size-2" class="wikilink" title="Size 2">Size 2</a>. Mobs of <a href="#size-3" class="wikilink" title="Size 3+">Size 3+</a> suffer a <a href="#bane" class="wikilink" title="Bane">Bane</a> (-1d) to all attack rolls and physical tests while in this Zone, and their Movement is capped at 1 <a href="stage--rules--keywords-index.html#zone" class="wikilink" title="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a>. Giant enemies cannot enter.</li>
+<li><em>Rules:</em> The maximum Mob size that can occupy this Zone without penalty is <strong>Size 2</strong>. Mobs of <strong>Size 3+</strong> suffer a <a href="stage--rules--keywords-index.html#bane" class="wikilink" title="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> (-1d) to all attack rolls and physical tests while in this Zone, and their Movement is capped at 1 <a href="stage--rules--keywords-index.html#zone" class="wikilink" title="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a>. Giant enemies cannot enter.</li>
 </ul>
 </li>
 <li><strong>Pillars / Statues (Tactical Feature):</strong> Solid stone pillars or crumbling carvings.
 <ul>
 <li><em>Trigger:</em> Passive.</li>
-<li><em>Rules:</em> Anyone occupying this Zone can declare they are taking cover behind a pillar (as a Free Action), granting them <a href="#full-cover" class="wikilink" title="Full Cover">Full Cover</a> against attacks coming from one specific adjacent Zone.</li>
+<li><em>Rules:</em> Anyone occupying this Zone can declare they are taking cover behind a pillar (as a Free Action), granting them <a href="stage--rules--keywords-index.html#full-cover" class="wikilink" title="Positioning behind a solid obstacle that completely blocks direct targeting from ranged attacks.">Full Cover</a> against attacks coming from one specific adjacent Zone.</li>
 </ul>
 </li>
 <li><strong>Rubble (Obstacle):</strong> Loose stones, steep scree, or collapsed vaults.
@@ -195,7 +195,7 @@ Any general environmental interaction, traversal, or search test attempted withi
 <li><strong>Vertical Cliff (Obstacle):</strong> A sheer stone wall, scaffold, or ladder.
 <ul>
 <li><em>Trigger:</em> Traversing vertically.</li>
-<li><em>Rules:</em> Climbing requires a <a href="#move" class="wikilink" title="Move">Move</a> action and a <a href="#slink" class="wikilink" title="Slink">Slink</a> test against the <a href="#zone-profile" class="wikilink" title="Zone Profile">Zone Profile</a>. On a failure, the creature falls back to the bottom, taking <a href="#1-damage" class="wikilink" title="1 damage">1 damage</a> for every Zone’s worth of height fallen and landing <a href="#prone" class="wikilink" title="Prone">Prone</a>.</li>
+<li><em>Rules:</em> Climbing requires a <a href="stage--rules--keywords-index.html#move" class="wikilink" title="A Standard Action allowing a character or Mob to cross a number of Zones up to their Movement rating.">Move</a> action and a <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> test against the <a href="stage--rules--keywords-index.html#zone-profile" class="wikilink" title="The default Difficulty and TN profile of a Zone (e.g. 5+/1) that traversal or manipulation tests in that Zone resolve against.">Zone Profile</a>. On a failure, the creature falls back to the bottom, taking 1 damage for every Zone’s worth of height fallen and landing <a href="stage--rules--keywords-index.html#prone" class="wikilink" title="A condition representing being knocked down. Restricts movement and imposes a -1d Bane on melee attacks.">Prone</a>.</li>
 </ul>
 </li>
 </ul>
@@ -204,37 +204,37 @@ Any general environmental interaction, traversal, or search test attempted withi
 <li><strong>Burning (T2 Hazard):</strong> <em>Spreading fire, hot lava pools, or burning oil.</em> | <code>[Fire]</code>, <code>[Gaseous]</code>
 <ul>
 <li><em>Trigger:</em> Entering the Zone, or starting a turn inside it.</li>
-<li><em>Rules:</em> The Zone imposes the active states of <code>[Fire]</code> (attacks deal <strong>+1 Success</strong>; ignites Zone) and <code>[Gaseous]</code> (ranged attacks suffer a <a href="#bane" class="wikilink" title="Bane">Bane</a>). Anyone entering or starting their turn in this Zone must pass a <a href="#slink" class="wikilink" title="Slink">Slink</a> test against the <a href="#zone-profile" class="wikilink" title="Zone Profile">Zone Profile</a> or take <a href="#2-damage" class="wikilink" title="2 damage">2 damage</a> to Grit (PC) or active health die (Mob) and gain the <a href="#burning" class="wikilink" title="Burning">Burning</a> state. Fire spreads to adjacent wooden/flammable zones at the End of Round on a roll of 5–6 on <strong>1d6</strong> (rolled by the GM or a player).</li>
+<li><em>Rules:</em> The Zone imposes the active states of <code>[Fire]</code> (attacks deal <strong>+1 Success</strong>; ignites Zone) and <code>[Gaseous]</code> (ranged attacks suffer a <a href="stage--rules--keywords-index.html#bane" class="wikilink" title="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a>). Anyone entering or starting their turn in this Zone must pass a <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> test against the <a href="stage--rules--keywords-index.html#zone-profile" class="wikilink" title="The default Difficulty and TN profile of a Zone (e.g. 5+/1) that traversal or manipulation tests in that Zone resolve against.">Zone Profile</a> or take <strong>2 damage</strong> to Grit (PC) or active health die (Mob) and gain the [Burning] state. Fire spreads to adjacent wooden/flammable zones at the End of Round on a roll of 5–6 on <strong>1d6</strong> (rolled by the GM or a player).</li>
 </ul>
 </li>
 <li><strong>Crumbling Ceiling (T3 Hazard):</strong> <em>Loose rock vaults, rotting timber supports, or ice stalactites.</em> | <code>[Crushing]</code>
 <ul>
 <li><em>Trigger:</em> Announce at Round Start or when triggered by structural damage.</li>
-<li><em>Rules:</em> The Zone imposes the active state of <code>[Crushing]</code> (restricted movement, attacks are Easy). All creatures occupying the Zone must test <a href="#slink" class="wikilink" title="Slink">Slink</a> against the <a href="#zone-profile" class="wikilink" title="Zone Profile">Zone Profile</a>. On a failure, they take <a href="#3-damage" class="wikilink" title="3 damage">3 damage</a> and are knocked <a href="#prone" class="wikilink" title="Prone">Prone</a>. After collapsing, the Zone permanently gains the <a href="#rubble" class="wikilink" title="Rubble">Rubble</a> trait.</li>
+<li><em>Rules:</em> The Zone imposes the active state of <code>[Crushing]</code> (restricted movement, attacks are Easy). All creatures occupying the Zone must test <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> against the <a href="stage--rules--keywords-index.html#zone-profile" class="wikilink" title="The default Difficulty and TN profile of a Zone (e.g. 5+/1) that traversal or manipulation tests in that Zone resolve against.">Zone Profile</a>. On a failure, they take <strong>3 damage</strong> and are knocked <a href="stage--rules--keywords-index.html#prone" class="wikilink" title="A condition representing being knocked down. Restricts movement and imposes a -1d Bane on melee attacks.">Prone</a>. After collapsing, the Zone permanently gains the <strong>Rubble</strong> trait.</li>
 </ul>
 </li>
 <li><strong>Howling Wind (T1 Hazard):</strong> <em>Heavy drafts, storm winds, or venting steam.</em> | <code>[Gale]</code>
 <ul>
 <li><em>Trigger:</em> Passive.</li>
-<li><em>Rules:</em> The Zone imposes the active state of <code>[Gale]</code>. All ranged attacks passing through or targeting someone inside this Zone suffer a <a href="#bane" class="wikilink" title="Bane">Bane</a> (-1d). Moving against the direction of the wind requires a <a href="#tough" class="wikilink" title="Tough">Tough</a> test against the profile; on a failure, movement speed is halved.</li>
+<li><em>Rules:</em> The Zone imposes the active state of <code>[Gale]</code>. All ranged attacks passing through or targeting someone inside this Zone suffer a <a href="stage--rules--keywords-index.html#bane" class="wikilink" title="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> (-1d). Moving against the direction of the wind requires a <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> test against the profile; on a failure, movement speed is halved.</li>
 </ul>
 </li>
 <li><strong>Quicksand / Mud (T2 Hazard):</strong> <em>Sticky mud or waterlogged silt.</em> | <code>[Wet]</code>, <code>[Sinking]</code>
 <ul>
 <li><em>Trigger:</em> Entering the Zone.</li>
-<li><em>Rules:</em> The Zone imposes the active states of <code>[Wet]</code> (conducts electricity, extinguishes fire) and <code>[Sinking]</code> (downward drag). Any creature entering or moving in the Zone must test <a href="#slink" class="wikilink" title="Slink">Slink</a> against the <a href="#zone-profile" class="wikilink" title="Zone Profile">Zone Profile</a>. On a failure, they gain the <a href="#restrained" class="wikilink" title="Restrained">Restrained</a> condition. Breaking free requires spending a Standard Action to test <a href="#tough" class="wikilink" title="Tough">Tough</a> against the profile.</li>
+<li><em>Rules:</em> The Zone imposes the active states of <code>[Wet]</code> (conducts electricity, extinguishes fire) and <code>[Sinking]</code> (downward drag). Any creature entering or moving in the Zone must test <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> against the <a href="stage--rules--keywords-index.html#zone-profile" class="wikilink" title="The default Difficulty and TN profile of a Zone (e.g. 5+/1) that traversal or manipulation tests in that Zone resolve against.">Zone Profile</a>. On a failure, they gain the <a href="stage--rules--keywords-index.html#restrained" class="wikilink" title="A condition preventing movement and imposing a -1d Bane to Dodge reactions.">Restrained</a> condition. Breaking free requires spending a Standard Action to test <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> against the profile.</li>
 </ul>
 </li>
 <li><strong>Slippery (Obstacle):</strong> <em>Smooth ice, wet grease, or organic slime.</em> | <code>[Slick]</code>
 <ul>
 <li><em>Trigger:</em> Entering the Zone.</li>
-<li><em>Rules:</em> The Zone imposes the active state of <code>[Slick]</code>. Any creature attempting to move into or out of the Zone must test <a href="#slink" class="wikilink" title="Slink">Slink</a> against the <a href="#zone-profile" class="wikilink" title="Zone Profile">Zone Profile</a>. On a failure, they fall <a href="#prone" class="wikilink" title="Prone">Prone</a> and their movement ends immediately.</li>
+<li><em>Rules:</em> The Zone imposes the active state of <code>[Slick]</code>. Any creature attempting to move into or out of the Zone must test <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> against the <a href="stage--rules--keywords-index.html#zone-profile" class="wikilink" title="The default Difficulty and TN profile of a Zone (e.g. 5+/1) that traversal or manipulation tests in that Zone resolve against.">Zone Profile</a>. On a failure, they fall <a href="stage--rules--keywords-index.html#prone" class="wikilink" title="A condition representing being knocked down. Restricts movement and imposes a -1d Bane on melee attacks.">Prone</a> and their movement ends immediately.</li>
 </ul>
 </li>
 <li><strong>Toxic Spores / Gas (T2 Hazard):</strong> <em>Poisonous sewer gases, acid clouds, or mold spores.</em> | <code>[Toxic]</code>, <code>[Gaseous]</code>
 <ul>
 <li><em>Trigger:</em> Starting a turn inside the Zone.</li>
-<li><em>Rules:</em> The Zone imposes the active states of <code>[Toxic]</code> (inflicts <a href="#weakened" class="wikilink" title="Weakened">Weakened</a> condition) and <code>[Gaseous]</code> (creates dark screen). All creatures starting their turn inside this Zone must test <a href="#tough" class="wikilink" title="Tough">Tough</a> against the <a href="#zone-profile" class="wikilink" title="Zone Profile">Zone Profile</a>. On a failure, they suffer the <a href="#weakened" class="wikilink" title="Weakened">Weakened</a> condition until they spend a Standard Action to catch their breath in a clean zone.</li>
+<li><em>Rules:</em> The Zone imposes the active states of <code>[Toxic]</code> (inflicts <a href="stage--rules--keywords-index.html#weakened" class="wikilink" title="A condition imposing a -1d Bane on all action tests.">Weakened</a> condition) and <code>[Gaseous]</code> (creates dark screen). All creatures starting their turn inside this Zone must test <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> against the <a href="stage--rules--keywords-index.html#zone-profile" class="wikilink" title="The default Difficulty and TN profile of a Zone (e.g. 5+/1) that traversal or manipulation tests in that Zone resolve against.">Zone Profile</a>. On a failure, they suffer the <a href="stage--rules--keywords-index.html#weakened" class="wikilink" title="A condition imposing a -1d Bane on all action tests.">Weakened</a> condition until they spend a Standard Action to catch their breath in a clean zone.</li>
 </ul>
 </li>
 </ul>
@@ -243,12 +243,12 @@ Any general environmental interaction, traversal, or search test attempted withi
 <ul>
 <li><strong>Blizzard (T2 Hazard):</strong> <em>A freezing, howling storm of snow and wind that swallows all sight.</em> | <code>[Chilled]</code>, <code>[Blinding]</code>, <code>[Slick]</code>
 <ul>
-<li><em>Rules:</em> The Zone is treated as freezing, blind, and slippery. Movement is halved (<code>[Chilled]</code>), ranged attacks are Hard and Dodge reactions are impossible (<code>[Blinding]</code>), and moving requires a <a href="#slink" class="wikilink" title="Slink">Slink</a> test against the profile or the creature falls <a href="#prone" class="wikilink" title="Prone">Prone</a> (<code>[Slick]</code>).</li>
+<li><em>Rules:</em> The Zone is treated as freezing, blind, and slippery. Movement is halved (<code>[Chilled]</code>), ranged attacks are Hard and Dodge reactions are impossible (<code>[Blinding]</code>), and moving requires a <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> test against the profile or the creature falls <a href="stage--rules--keywords-index.html#prone" class="wikilink" title="A condition representing being knocked down. Restricts movement and imposes a -1d Bane on melee attacks.">Prone</a> (<code>[Slick]</code>).</li>
 </ul>
 </li>
 <li><strong>Tornado (T3 Hazard):</strong> <em>A roaring vortex of wind that sweeps debris and creatures into the air.</em> | <code>[Gale]</code>, <code>[Weightless]</code>, <code>[Loud]</code>
 <ul>
-<li><em>Rules:</em> The wind lifts creatures off the ground (<code>[Weightless]</code>), creating a deafening roar that fails stealth and verbal orders (<code>[Loud]</code>), while deflecting all ranged attacks (<code>[Gale]</code>). Creatures are swept up and tossed about; leaving the zone or stabilizing requires a <a href="#tough" class="wikilink" title="Tough">Tough</a> test against the <a href="#zone-profile" class="wikilink" title="Zone Profile">Zone Profile</a>.</li>
+<li><em>Rules:</em> The wind lifts creatures off the ground (<code>[Weightless]</code>), creating a deafening roar that fails stealth and verbal orders (<code>[Loud]</code>), while deflecting all ranged attacks (<code>[Gale]</code>). Creatures are swept up and tossed about; leaving the zone or stabilizing requires a <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> test against the <a href="stage--rules--keywords-index.html#zone-profile" class="wikilink" title="The default Difficulty and TN profile of a Zone (e.g. 5+/1) that traversal or manipulation tests in that Zone resolve against.">Zone Profile</a>.</li>
 </ul>
 </li>
 <li><strong>Hurricane (T3 Hazard):</strong> <em>Torrential rain combined with brutal, slamming winds.</em> | <code>[Wet]</code>, <code>[Gale]</code>, <code>[Loud]</code>
@@ -263,7 +263,7 @@ Any general environmental interaction, traversal, or search test attempted withi
 </li>
 <li><strong>Thunderstorm (T2 Hazard):</strong> <em>Soaking downpour paired with crackling static electricity.</em> | <code>[Wet]</code>, <code>[Shock]</code>
 <ul>
-<li><em>Rules:</em> Everything is completely soaked (<code>[Wet]</code>). Any static spark or electrical attack instantly triggers the <code>[Shock]</code> tag’s conduction effect, making all attacks against wet targets in the Zone <a href="#easy-4" class="wikilink" title="Easy (4+)">Easy (4+)</a> for 1 round.</li>
+<li><em>Rules:</em> Everything is completely soaked (<code>[Wet]</code>). Any static spark or electrical attack instantly triggers the <code>[Shock]</code> tag’s conduction effect, making all attacks against wet targets in the Zone <strong>Easy (4+)</strong> for 1 round.</li>
 </ul>
 </li>
 <li><strong>Wildfire (T2 Hazard):</strong> <em>Searing heat, open flames, and thick screens of smoke.</em> | <code>[Fire]</code>, <code>[Gaseous]</code>, <code>[Loud]</code>
@@ -273,7 +273,7 @@ Any general environmental interaction, traversal, or search test attempted withi
 </li>
 <li><strong>Flash Flood (T2 Hazard):</strong> <em>A sudden wall of high-velocity water.</em> | <code>[Wet]</code>, <code>[Fast]</code>
 <ul>
-<li><em>Rules:</em> Water washes away chemicals and coatings (<code>[Wet]</code>) while rushing down-zone, allowing creatures to move 1 Zone as a Free Action (<code>[Fast]</code>) but carrying unattended items and creatures away in the torrent at the End of Round unless they pass a <a href="#tough" class="wikilink" title="Tough">Tough</a> test.</li>
+<li><em>Rules:</em> Water washes away chemicals and coatings (<code>[Wet]</code>) while rushing down-zone, allowing creatures to move 1 Zone as a Free Action (<code>[Fast]</code>) but carrying unattended items and creatures away in the torrent at the End of Round unless they pass a <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> test.</li>
 </ul>
 </li>
 <li><strong>Earthquake / Cave-In (T3 Hazard):</strong> <em>Violent shaking and falling stone debris.</em> | <code>[Vibrating]</code>, <code>[Crushing]</code>
@@ -283,17 +283,17 @@ Any general environmental interaction, traversal, or search test attempted withi
 </li>
 <li><strong>Smog Marsh (T2 Hazard):</strong> <em>A swamp filled with thick sewer gas where light dies.</em> | <code>[Wet]</code>, <code>[Toxic]</code>, <code>[Dark]</code>
 <ul>
-<li><em>Rules:</em> Waterlogged sumps conduct electricity (<code>[Wet]</code>), sewer gas inflicts the <a href="#weakened" class="wikilink" title="Weakened">Weakened</a> condition (<code>[Toxic]</code>), and poor visibility imposes a <a href="#bane-1d" class="wikilink" title="Bane (-1d)">Bane (-1d)</a> on attacks and notice checks (<code>[Dark]</code>).</li>
+<li><em>Rules:</em> Waterlogged sumps conduct electricity (<code>[Wet]</code>), sewer gas inflicts the <a href="stage--rules--keywords-index.html#weakened" class="wikilink" title="A condition imposing a -1d Bane on all action tests.">Weakened</a> condition (<code>[Toxic]</code>), and poor visibility imposes a <strong>Bane (-1d)</strong> on attacks and notice checks (<code>[Dark]</code>).</li>
 </ul>
 </li>
 <li><strong>Haunted Woods (T2 Hazard):</strong> <em>A dark forest filled with uncanny dread and phantom hands.</em> | <code>[Terrifying]</code>, <code>[Haunted]</code>
 <ul>
-<li><em>Rules:</em> Eldritch whispers inflict the <a href="#terrified" class="wikilink" title="Terrified">Terrified</a> condition (<code>[Terrifying]</code>), while phantom hands impose a <a href="#bane-1d" class="wikilink" title="Bane (-1d)">Bane (-1d)</a> to Slink and Mouth tests (<code>[Haunted]</code>).</li>
+<li><em>Rules:</em> Eldritch whispers inflict the <a href="stage--rules--keywords-index.html#terrified" class="wikilink" title="A condition forcing a character or Mob to flee from a source of fear and preventing them from closing distance.">Terrified</a> condition (<code>[Terrifying]</code>), while phantom hands impose a <strong>Bane (-1d)</strong> to Slink and Mouth tests (<code>[Haunted]</code>).</li>
 </ul>
 </li>
 <li><strong>Acid Mire (T2 Hazard):</strong> <em>A factory waste dump that slips and melts boots off.</em> | <code>[Acidic]</code>, <code>[Slick]</code>
 <ul>
-<li><em>Rules:</em> Acidic runoff eats away at armor reduction on a hit (<code>[Acidic]</code>), while slippery mud causes creatures to fall <a href="#prone" class="wikilink" title="Prone">Prone</a> on a failed Slink test (<code>[Slick]</code>).</li>
+<li><em>Rules:</em> Acidic runoff eats away at armor reduction on a hit (<code>[Acidic]</code>), while slippery mud causes creatures to fall <a href="stage--rules--keywords-index.html#prone" class="wikilink" title="A condition representing being knocked down. Restricts movement and imposes a -1d Bane on melee attacks.">Prone</a> on a failed Slink test (<code>[Slick]</code>).</li>
 </ul>
 </li>
 </ul>
@@ -302,25 +302,25 @@ Any general environmental interaction, traversal, or search test attempted withi
 <li><strong>Hedges / Thickets (Tactical Feature):</strong> Heavy brambles, bushes, or hanging tapestries.
 <ul>
 <li><em>Trigger:</em> Passive.</li>
-<li><em>Rules:</em> Anyone inside this Zone gains <a href="#partial-cover" class="wikilink" title="Partial Cover">Partial Cover</a> (ranged attacks targeting them suffer a <a href="#bane" class="wikilink" title="Bane">Bane</a> (-1d), and they gain a <a href="#boon" class="wikilink" title="Boon">Boon</a> (+1d) to <a href="#dodge" class="wikilink" title="Dodge">Dodge</a> reactions).</li>
+<li><em>Rules:</em> Anyone inside this Zone gains <a href="stage--rules--keywords-index.html#partial-cover" class="wikilink" title="Positioning behind partial obstacles, granting a Boon to Dodge and imposing a Bane on incoming attacks.">Partial Cover</a> (ranged attacks targeting them suffer a <a href="stage--rules--keywords-index.html#bane" class="wikilink" title="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> (-1d), and they gain a <a href="stage--rules--keywords-index.html#boon" class="wikilink" title="A positive modifier granting a +1d bonus on a test's dice pool. Multiple Boons do not stack.">Boon</a> (+1d) to <a href="stage--rules--keywords-index.html#dodge" class="wikilink" title="An active Reaction to avoid incoming ranged or area damage by testing Slink, with successes reducing damage.">Dodge</a> reactions).</li>
 </ul>
 </li>
 <li><strong>Junk Pile (Treat):</strong> Stacks of dungeon scrap, refuse, or broken weapons.
 <ul>
-<li><em>Trigger:</em> Interactive (Standard Action: <a href="#manipulate" class="wikilink" title="Manipulate">Manipulate</a>).</li>
-<li><em>Rules:</em> Goblins can search the pile (test <a href="#brains" class="wikilink" title="Brains">Brains</a> against the <a href="#zone-profile" class="wikilink" title="Zone Profile">Zone Profile</a>). On a success, they find a throw-able object (deals <a href="#1-damage" class="wikilink" title="1 damage">1 damage</a> ranged) or a random piece of low-grade loot. Once successfully searched, the Junk Pile is exhausted and cannot be searched again during the raid.</li>
+<li><em>Trigger:</em> Interactive (Standard Action: <a href="stage--rules--keywords-index.html#manipulate" class="wikilink" title="A Standard Action catch-all used to interact with items, machinery, traps, or environmental components.">Manipulate</a>).</li>
+<li><em>Rules:</em> Goblins can search the pile (test <a href="stage--rules--keywords-index.html#brains" class="wikilink" title="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> against the <a href="stage--rules--keywords-index.html#zone-profile" class="wikilink" title="The default Difficulty and TN profile of a Zone (e.g. 5+/1) that traversal or manipulation tests in that Zone resolve against.">Zone Profile</a>). On a success, they find a throw-able object (deals 1 damage ranged) or a random piece of low-grade loot. Once successfully searched, the Junk Pile is exhausted and cannot be searched again during the raid.</li>
 </ul>
 </li>
 <li><strong>Shadowy (Tactical Feature):</strong> Deep alcoves, heavy curtains, or dim corners.
 <ul>
 <li><em>Trigger:</em> Passive.</li>
-<li><em>Rules:</em> Goblins attempting to Hide in this Zone gain a <a href="#boon" class="wikilink" title="Boon">Boon</a> (+1d) on their stealth-related <a href="#slink" class="wikilink" title="Slink">Slink</a> tests.</li>
+<li><em>Rules:</em> Goblins attempting to Hide in this Zone gain a <a href="stage--rules--keywords-index.html#boon" class="wikilink" title="A positive modifier granting a +1d bonus on a test's dice pool. Multiple Boons do not stack.">Boon</a> (+1d) on their stealth-related <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> tests.</li>
 </ul>
 </li>
 <li><strong>Shoring (Interactive Opportunity):</strong> Wooden structural beams supporting the ceiling.
 <ul>
-<li><em>Trigger:</em> Interactive (Standard Action: <a href="#manipulate" class="wikilink" title="Manipulate">Manipulate</a> or <a href="#attack" class="wikilink" title="Attack">Attack</a>).</li>
-<li><em>Rules:</em> Goblins can collapse the beams. Test <a href="#brains" class="wikilink" title="Brains">Brains</a> (to sabotage) or make a successful melee attack against the <a href="#zone-profile" class="wikilink" title="Zone Profile">Zone Profile</a>. On a success, the Zone immediately gains the <a href="#crumbling-ceiling" class="wikilink" title="Crumbling Ceiling">Crumbling Ceiling</a> hazard (everyone in the zone tests <a href="#slink" class="wikilink" title="Slink">Slink</a> or takes <a href="#3-damage" class="wikilink" title="3 damage">3 damage</a>), and all exits to adjacent Zones are blocked. Clearing a blocked exit requires spending a Standard Action to successfully test <a href="#tough" class="wikilink" title="Tough">Tough</a> against the <a href="#zone-profile" class="wikilink" title="Zone Profile">Zone Profile</a>.</li>
+<li><em>Trigger:</em> Interactive (Standard Action: <a href="stage--rules--keywords-index.html#manipulate" class="wikilink" title="A Standard Action catch-all used to interact with items, machinery, traps, or environmental components.">Manipulate</a> or <a href="stage--rules--keywords-index.html#attack" class="wikilink" title="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attack</a>).</li>
+<li><em>Rules:</em> Goblins can collapse the beams. Test <a href="stage--rules--keywords-index.html#brains" class="wikilink" title="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> (to sabotage) or make a successful melee attack against the <a href="stage--rules--keywords-index.html#zone-profile" class="wikilink" title="The default Difficulty and TN profile of a Zone (e.g. 5+/1) that traversal or manipulation tests in that Zone resolve against.">Zone Profile</a>. On a success, the Zone immediately gains the <strong>Crumbling Ceiling</strong> hazard (everyone in the zone tests <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> or takes <strong>3 damage</strong>), and all exits to adjacent Zones are blocked. Clearing a blocked exit requires spending a Standard Action to successfully test <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> against the <a href="stage--rules--keywords-index.html#zone-profile" class="wikilink" title="The default Difficulty and TN profile of a Zone (e.g. 5+/1) that traversal or manipulation tests in that Zone resolve against.">Zone Profile</a>.</li>
 </ul>
 </li>
 </ul>
@@ -329,30 +329,30 @@ Any general environmental interaction, traversal, or search test attempted withi
 <p>These scenarios illustrate how different hazards, opportunities, and Mob rules play out at the table.</p>
 <h3 id="example-1-slipping-on-the-ice-slink-tests" tabindex="-1">Example 1: Slipping on the Ice (Slink Tests)</h3>
 <blockquote>
-<p><strong>Example:</strong> Grub (PC) and his <a href="#size-3" class="wikilink" title="Size 3">Size 3</a> Mob run from town guards into a frozen courtyard designated as <a href="#zone-a" class="wikilink" title="Zone A">Zone A</a> (Profile: <strong>5+/2</strong>; Trait: <a href="#slippery" class="wikilink" title="Slippery">Slippery</a>).</p>
+<p><strong>Example:</strong> Grub (PC) and his <strong>Size 3</strong> Mob run from town guards into a frozen courtyard designated as <strong>Zone A</strong> (Profile: <strong>5+/2</strong>; Trait: <strong>Slippery</strong>).</p>
 <ul>
-<li><a href="#the-pc" class="wikilink" title="The PC">The PC</a>: Grub enters the zone and must make a Slink test. Grub has <a href="#slink-2" class="wikilink" title="Slink 2">Slink 2</a>, rolling <strong>2d6</strong> (Stat). He rolls <code>5, 5</code>—two successes! He keeps his footing.</li>
-<li><a href="#the-mob" class="wikilink" title="The Mob">The Mob</a>: The Mob enters the zone. Mobs roll exactly <strong>1d6</strong> for <a href="#slink" class="wikilink" title="Slink">Slink</a> tests. The player rolls <code>5</code>—only one success! The Mob fails the <strong>5+/2</strong> Slink test. The Mob falls <a href="#prone" class="wikilink" title="Prone">Prone</a> and their movement ends immediately in the middle of the ice sheet.</li>
+<li><strong>The PC</strong>: Grub enters the zone and must make a Slink test. Grub has <strong>Slink 2</strong>, rolling <strong>2d6</strong> (Stat). He rolls <code>5, 5</code>—two successes! He keeps his footing.</li>
+<li><strong>The Mob</strong>: The Mob enters the zone. Mobs roll exactly <strong>1d6</strong> for <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> tests. The player rolls <code>5</code>—only one success! The Mob fails the <strong>5+/2</strong> Slink test. The Mob falls <a href="stage--rules--keywords-index.html#prone" class="wikilink" title="A condition representing being knocked down. Restricts movement and imposes a -1d Bane on melee attacks.">Prone</a> and their movement ends immediately in the middle of the ice sheet.</li>
 </ul>
 </blockquote>
 <h3 id="example-2-braving-the-toxic-fumes-tough-tests-and-mob-scaling" tabindex="-1">Example 2: Braving the Toxic Fumes (Tough Tests &amp; Mob Scaling)</h3>
 <blockquote>
-<p><strong>Example:</strong> Snarl (PC) and her massive <a href="#size-5" class="wikilink" title="Size 5">Size 5</a> Mob are pursuing a dwarf through a sewer pipe designated as <a href="#zone-b" class="wikilink" title="Zone B">Zone B</a> (Profile: <strong>5+/2</strong>; Traits: <a href="#toxic" class="wikilink" title="Toxic">Toxic</a> and <a href="#narrow" class="wikilink" title="Narrow">Narrow</a>). They start their turn in the zone.</p>
+<p><strong>Example:</strong> Snarl (PC) and her massive <strong>Size 5</strong> Mob are pursuing a dwarf through a sewer pipe designated as <strong>Zone B</strong> (Profile: <strong>5+/2</strong>; Traits: [Toxic] and <strong>Narrow</strong>). They start their turn in the zone.</p>
 <ul>
-<li><a href="#the-pc" class="wikilink" title="The PC">The PC</a>: Snarl has <a href="#tough-2" class="wikilink" title="Tough 2">Tough 2</a>, rolling <strong>2d6</strong> (Stat). She rolls <code>6, 3</code>. The <code>6</code> explodes and she rolls another <code>3</code>. The total is one success—not enough for the <strong>5+/2</strong> profile! Snarl fails the test and gains the <a href="#weakened" class="wikilink" title="Weakened">Weakened</a> condition.</li>
-<li><a href="#the-mob" class="wikilink" title="The Mob">The Mob</a>: Because it is a Tough test, the Mob rolls <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> dice (<strong>5d6</strong>). However, the zone has the <a href="#narrow" class="wikilink" title="Narrow">Narrow</a> trait, imposing a permanent <a href="#bane" class="wikilink" title="Bane">Bane</a> (-1d) on all physical tests. The Mob’s dice pool is reduced to <strong>4d6</strong>. The player rolls <code>6, 5, 5, 2</code>. The <code>6</code> explodes and rolls a <code>4</code>. That is three successes! The Mob easily passes the test and is unaffected by the gas, their sheer numbers and mass helping them pull each other through.</li>
+<li><strong>The PC</strong>: Snarl has <strong>Tough 2</strong>, rolling <strong>2d6</strong> (Stat). She rolls <code>6, 3</code>. The <code>6</code> explodes and she rolls another <code>3</code>. The total is one success—not enough for the <strong>5+/2</strong> profile! Snarl fails the test and gains the <a href="stage--rules--keywords-index.html#weakened" class="wikilink" title="A condition imposing a -1d Bane on all action tests.">Weakened</a> condition.</li>
+<li><strong>The Mob</strong>: Because it is a Tough test, the Mob rolls <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> dice (<strong>5d6</strong>). However, the zone has the <strong>Narrow</strong> trait, imposing a permanent <a href="stage--rules--keywords-index.html#bane" class="wikilink" title="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> (-1d) on all physical tests. The Mob’s dice pool is reduced to <strong>4d6</strong>. The player rolls <code>6, 5, 5, 2</code>. The <code>6</code> explodes and rolls a <code>4</code>. That is three successes! The Mob easily passes the test and is unaffected by the gas, their sheer numbers and mass helping them pull each other through.</li>
 </ul>
 </blockquote>
 <h3 id="example-3-collapsing-the-support-shoring-opportunity" tabindex="-1">Example 3: Collapsing the Support (Shoring Opportunity)</h3>
 <blockquote>
-<p><strong>Example:</strong> Wizgog (PC) is cornered by a heavily armored knight in a crypt (<a href="#zone-c" class="wikilink" title="Zone C">Zone C</a>, Profile: <strong>5+/1</strong>; Trait: <a href="#shoring" class="wikilink" title="Shoring">Shoring</a>). Wizgog wants to collapse the ceiling on the knight.</p>
+<p><strong>Example:</strong> Wizgog (PC) is cornered by a heavily armored knight in a crypt (<strong>Zone C</strong>, Profile: <strong>5+/1</strong>; Trait: <strong>Shoring</strong>). Wizgog wants to collapse the ceiling on the knight.</p>
 <ul>
-<li><a href="#the-action" class="wikilink" title="The Action">The Action</a>: Wizgog spends a Standard Action to smash the rotten wooden support column. Since this is an interactive opportunity, he tests <a href="#brains" class="wikilink" title="Brains">Brains</a> (his stat is 3, so he rolls <strong>3d6</strong>) against the zone’s <strong>5+/1</strong> profile.</li>
-<li><a href="#the-result" class="wikilink" title="The Result">The Result</a>: He rolls <code>5, 2, 1</code>—one success! The column splinters. The Zone immediately triggers a cave-in (<a href="#crumbling-ceiling" class="wikilink" title="Crumbling Ceiling">Crumbling Ceiling</a>).</li>
-<li><a href="#the-resisting-tests" class="wikilink" title="The Resisting Tests">The Resisting Tests</a>:
+<li><strong>The Action</strong>: Wizgog spends a Standard Action to smash the rotten wooden support column. Since this is an interactive opportunity, he tests <a href="stage--rules--keywords-index.html#brains" class="wikilink" title="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> (his stat is 3, so he rolls <strong>3d6</strong>) against the zone’s <strong>5+/1</strong> profile.</li>
+<li><strong>The Result</strong>: He rolls <code>5, 2, 1</code>—one success! The column splinters. The Zone immediately triggers a cave-in (<strong>Crumbling Ceiling</strong>).</li>
+<li><strong>The Resisting Tests</strong>:
 <ul>
 <li>Wizgog tests Slink (<strong>2d6</strong>) and rolls <code>5, 1</code> (success), jumping clear of the debris.</li>
-<li>The Knight tests Slink. The GM rules the heavy armor imposes a <a href="#bane" class="wikilink" title="Bane">Bane</a> (-1d). The Knight rolls <code>3, 2</code> (failure). The Knight takes <a href="#3-damage" class="wikilink" title="3 damage">3 damage</a> and is knocked <a href="#prone" class="wikilink" title="Prone">Prone</a>, buried under rubble.</li>
+<li>The Knight tests Slink. The GM rules the heavy armor imposes a <a href="stage--rules--keywords-index.html#bane" class="wikilink" title="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> (-1d). The Knight rolls <code>3, 2</code> (failure). The Knight takes <strong>3 damage</strong> and is knocked <a href="stage--rules--keywords-index.html#prone" class="wikilink" title="A condition representing being knocked down. Restricts movement and imposes a -1d Bane on melee attacks.">Prone</a>, buried under rubble.</li>
 <li>The adjacent exit is blocked, cutting off the knight’s allies.</li>
 </ul>
 </li>
@@ -363,22 +363,22 @@ Any general environmental interaction, traversal, or search test attempted withi
 <p>If a player chooses to abandon a Mob in a previously cleared node on the macro minimap (for example, leaving them behind to forage for treasure or guard a chokepoint while the main party moves forward), that node is physically swept from the main table’s active tactical space.</p>
 <p>Because they lack a Boss to command them, the split-off Mob is tracked purely on the macro node map. They default entirely to their automated Priority AI list:</p>
 <ol>
-<li><a href="#survival" class="wikilink" title="Survival">Survival</a></li>
-<li><a href="#loot-eat" class="wikilink" title="Loot/Eat">Loot/Eat</a></li>
-<li><a href="#violence" class="wikilink" title="Violence">Violence</a></li>
-<li><a href="#trash-stuff" class="wikilink" title="Trash Stuff">Trash Stuff</a></li>
-<li><a href="#wander-off" class="wikilink" title="Wander Off">Wander Off</a></li>
+<li><strong>Survival</strong></li>
+<li><strong>Loot/Eat</strong></li>
+<li><strong>Violence</strong></li>
+<li><strong>Trash Stuff</strong></li>
+<li><strong>Wander Off</strong></li>
 </ol>
 <h3 id="resolving-the-chaos-tick" tabindex="-1">Resolving the Chaos Tick</h3>
-<p>At the end of each combat round, the player resolves the unsupervised Mob’s actions using the <a href="#chaos-tick" class="wikilink" title="Chaos Tick">Chaos Tick</a>.</p>
+<p>At the end of each combat round, the player resolves the unsupervised Mob’s actions using the <strong>Chaos Tick</strong>.</p>
 <blockquote>
 <blockquote>
 <p><strong>THE CHAOS TICK RULE:</strong>
 Roll a number of <strong>d6</strong> equal to the unsupervised Mob’s current <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a>. The Target Number and Difficulty default to the cleared zone’s Profile (typically <strong>5+/1</strong>).</p>
 <ul>
-<li><a href="#successes-5" class="wikilink" title="Successes (5+)">Successes (5+)</a>: Count successes to resolve the Priority AI’s progress.</li>
-<li><a href="#ones-1s" class="wikilink" title="Ones (1s)">Ones (1s)</a>: Each <strong>1</strong> rolled represents growing chaos and bickering. Tally the <strong>1s</strong> and consult the <a href="#gobbo-mischief-table" class="wikilink" title="Gobbo Mischief Table">Gobbo Mischief Table</a> below. Each <strong>1</strong> also adds <a href="#1-die" class="wikilink" title="1 die">1 die</a> to the communal <a href="#bangaranga-pool" class="wikilink" title="Bangaranga Pool">Bangaranga Pool</a> as the background racket hypes up the horde.</li>
-<li><a href="#the-farkle" class="wikilink" title="The Farkle">The Farkle</a>: If the roll yields <strong>zero successes</strong> and <strong>two or more 1s</strong>, the Mob fumbles catastrophically, triggering a disastrous event.</li>
+<li><strong>Successes (5+)</strong>: Count successes to resolve the Priority AI’s progress.</li>
+<li><strong>Ones (1s)</strong>: Each <strong>1</strong> rolled represents growing chaos and bickering. Tally the <strong>1s</strong> and consult the <strong>Gobbo Mischief Table</strong> below. Each <strong>1</strong> also adds <strong>1 die</strong> to the communal <a href="stage--rules--keywords-index.html#bangaranga-pool" class="wikilink" title="A communal pool of d6s built by fumbles and ones, spent by players to purchase temporary Boons or activate magic.">Bangaranga Pool</a> as the background racket hypes up the horde.</li>
+<li><strong>The Farkle</strong>: If the roll yields <strong>zero successes</strong> and <strong>two or more 1s</strong>, the Mob fumbles catastrophically, triggering a disastrous event.</li>
 </ul>
 </blockquote>
 </blockquote>
@@ -394,37 +394,37 @@ Roll a number of <strong>d6</strong> equal to the unsupervised Mob’s current <
 <tbody>
 <tr>
 <td style="text-align:left"><strong>0</strong></td>
-<td style="text-align:left"><a href="#smooth-operations" class="wikilink" title="Smooth Operations">Smooth Operations</a></td>
+<td style="text-align:left"><strong>Smooth Operations</strong></td>
 <td style="text-align:left">No chaos! Gobbos cooperate perfectly.</td>
 </tr>
 <tr>
 <td style="text-align:left"><strong>1</strong></td>
-<td style="text-align:left"><a href="#bickering" class="wikilink" title="Bickering">Bickering</a></td>
-<td style="text-align:left">Goblins fight over a shiny rock. The Mob takes <a href="#1-damage" class="wikilink" title="1 damage">1 damage</a> to its active health die.</td>
+<td style="text-align:left"><strong>Bickering</strong></td>
+<td style="text-align:left">Goblins fight over a shiny rock. The Mob takes 1 damage to its active health die.</td>
 </tr>
 <tr>
 <td style="text-align:left"><strong>2</strong></td>
-<td style="text-align:left"><a href="#tasting-time" class="wikilink" title="Tasting Time">Tasting Time</a></td>
-<td style="text-align:left">They eat glowing mushrooms or lick rusty gears. The Mob gains the <a href="#weakened" class="wikilink" title="Weakened">Weakened</a> condition.</td>
+<td style="text-align:left"><strong>Tasting Time</strong></td>
+<td style="text-align:left">They eat glowing mushrooms or lick rusty gears. The Mob gains the <a href="stage--rules--keywords-index.html#weakened" class="wikilink" title="A condition imposing a -1d Bane on all action tests.">Weakened</a> condition.</td>
 </tr>
 <tr>
 <td style="text-align:left"><strong>3</strong></td>
-<td style="text-align:left"><a href="#straying" class="wikilink" title="Straying">Straying</a></td>
+<td style="text-align:left"><strong>Straying</strong></td>
 <td style="text-align:left">A few runts wander off into the dark. The Mob’s <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> decreases by 1.</td>
 </tr>
 <tr>
 <td style="text-align:left"><strong>4+</strong></td>
-<td style="text-align:left"><a href="#mutiny-riot" class="wikilink" title="Mutiny / Riot">Mutiny / Riot</a></td>
-<td style="text-align:left">The Mob tears itself apart or rebels. The Mob becomes <a href="#uncontrolled" class="wikilink" title="Uncontrolled">Uncontrolled</a> and hostile to all Gangs, splitting into two smaller hostile mobs or wandering off the map entirely.</td>
+<td style="text-align:left"><strong>Mutiny / Riot</strong></td>
+<td style="text-align:left">The Mob tears itself apart or rebels. The Mob becomes <a href="stage--rules--keywords-index.html#uncontrolled" class="wikilink" title="A state where a Mob ignores commands and acts randomly according to GM-controlled mischief tables.">Uncontrolled</a> and hostile to all Gangs, splitting into two smaller hostile mobs or wandering off the map entirely.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="resolution-of-successes-5-on-normal" tabindex="-1">Resolution of Successes (5+ on Normal)</h3>
 <ul>
 <li><strong>0 Successes:</strong> The Mob gets distracted pick-nosing. No progress is made.</li>
-<li><strong>1 Success:</strong> The Mob accomplishes a basic task. If foraging, they add 1d6 <a href="stage--rules--keywords-index.html#scrap" class="wikilink" title="Base resources used to build a Chassis. Comes in Tiers 1–5.">Scrap</a> to the Hoard, or they heal <a href="#1d6-damage" class="wikilink" title="1d6 damage">1d6 damage</a> on their health dice by eating old rations found in the zone.</li>
+<li><strong>1 Success:</strong> The Mob accomplishes a basic task. If foraging, they add 1d6 <a href="stage--rules--keywords-index.html#scrap" class="wikilink" title="Base resources used to build a Chassis. Comes in Tiers 1–5.">Scrap</a> to the Hoard, or they heal <strong>1d6 damage</strong> on their health dice by eating old rations found in the zone.</li>
 <li><strong>2 Successes:</strong> They find a cache of useful garbage. Add 2d6 <a href="stage--rules--keywords-index.html#scrap" class="wikilink" title="Base resources used to build a Chassis. Comes in Tiers 1–5.">Scrap</a> to the Hoard, or find a low-grade <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a>.</li>
-<li><strong>3+ Successes:</strong> Outstanding teamwork! The Mob secures the node, making future travel through it <a href="#safe" class="wikilink" title="Safe">Safe</a> (no hazard checks required), and finds a piece of <a href="#standard-loot" class="wikilink" title="Standard Loot">Standard Loot</a>.</li>
+<li><strong>3+ Successes:</strong> Outstanding teamwork! The Mob secures the node, making future travel through it <strong>Safe</strong> (no hazard checks required), and finds a piece of <strong>Standard Loot</strong>.</li>
 </ul>
 
     </main>

@@ -4,7 +4,7 @@
 
 ## Death
 
-When a PC's [[Grit]] reaches 0, they are dead. However, they are allowed 1 [[Action]] + 1 [[Order Action]] that they can take immediately at the point of death as a final act. This allows the player to go out with a bang in an epic scene. Therefore, this final action is always [[Easy]], no matter the circumstances. The normal rules apply, but by the [[Rule of Cool]], the GM should be lenient on what is possible. In the same way, the [[Order]] action cannot fail if the Mob being ordered is within range. Then, the Boss dies, and their gear is dropped where they fell.
+When a PC's [[Grit]] reaches 0, they are dead. However, they are allowed 1 [[Action]] + 1 [[Order Action]] that they can take immediately at the point of death as a final act. This allows the player to go out with a bang in an epic scene. Therefore, this final action is always [[Easy]], no matter the circumstances. The normal rules apply, but by the **Rule of Cool**, the GM should be lenient on what is possible. In the same way, the [[Order]] action cannot fail if the Mob being ordered is within range. Then, the Boss dies, and their gear is dropped where they fell.
 
 ### Temporary PC
 
@@ -19,14 +19,14 @@ There are a number of conditions that can affect a gobbo. Most of these have a d
 | [[Weakened]] | **-1d** on [[Tough]] | **-1d** on Attack |
 | [[Restrained]] | **-1d** on [[Slink]], [[Movement]] becomes 0 | **-1d** on Dodge, [[Movement]] becomes 0 |
 | [[Dumb]] | **-1d** on [[Brains]] and [[Mouth]] | **-1d** on Morale (TBD: Might fail to obey orders) |
-| [[Silenced]] | **-1d** on [[Mouth]] | **-1d** on Morale |
+| **Silenced** | **-1d** on [[Mouth]] | **-1d** on Morale |
 | [[Blinded]] | **-1d** on Physical tests | **-1d** on Physical tests |
 | [[Terrified]] | **-1d** on [[Brains]] and [[Mouth]] tests, cannot move closer to the source of fear | **-2d** on Morale tests, Order tests are Hard |
 | [[Stunned]] | Cannot take any actions or reactions | Cannot take any actions or reactions |
 | [[Prone]] | **-1d** on [[Slink]], 1 [[Move]] action to stand up | **-1d** on Dodge, 1 [[Move]] action to stand up |
 | [[Staggered]] | **-1d** on [[Dodge]] and [[Parry]] tests | **-1d** on [[Dodge]] tests (or **-1 Passive Defense** die) |
 
-*Note: For [[Enemies]] (who use static target numbers instead of stat pools), the [[Staggered]] condition reduces their [[Defence]] stat by **1** (minimum 1). Additionally, the [[Staggered]] condition is temporary and automatically clears during the Round Closure phase.*
+*Note: For **Enemies** (who use static target numbers instead of stat pools), the [[Staggered]] condition reduces their [[Defence]] stat by **1** (minimum 1). Additionally, the [[Staggered]] condition is temporary and automatically clears during the Round Closure phase.*
 
 # Healing
 

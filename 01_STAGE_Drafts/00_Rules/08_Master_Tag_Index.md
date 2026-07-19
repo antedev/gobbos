@@ -17,12 +17,12 @@ Unlike a creature's [[Ancestry]] (what it *is*) or an item's [[Trait]] (how it i
 >> **GOLDEN RULE: No Post-Roll Math**
 >> To keep combat fast and chaotic, all tag interactions, vulnerabilities, and environmental modifiers must be resolved **before** the dice are thrown. Once the dice land, the result must be instantly clear.
 
-When a player makes a test involving tags (e.g., attacking a monster with an elemental weapon), they calculate the [[Roll Profile]] in three quick steps:
+When a player makes a test involving tags (e.g., attacking a monster with an elemental weapon), they calculate the **Roll Profile** in three quick steps:
 
 1.  **Check Base Stats:** Look up the attacker's pool ([[Tough]] or [[Slink]]) and the target's base [[Defence]] TN and [[Difficulty]] 
-2.  **Check Monster Hooks (Local Overrides):** Compare the attacker's weapon tags with the target's printed [[Flaw Hooks]] or [[Resistance Hooks]]:
-    *   *Flaws:* If a tag matches a Flaw, it typically reduces [[Defence TN]] or makes the test [[Easy (4+)]].
-    *   *Resistances:* If a tag matches a Resistance, it typically increases [[Defence TN]] or makes the test [[Hard (6)]].
+2.  **Check Monster Hooks (Local Overrides):** Compare the attacker's weapon tags with the target's printed **Flaw Hooks** or **Resistance Hooks**:
+    *   *Flaws:* If a tag matches a Flaw, it typically reduces [[Defence TN]] or makes the test **Easy (4+)**.
+    *   *Resistances:* If a tag matches a Resistance, it typically increases [[Defence TN]] or makes the test **Hard (6)**.
 3.  **Apply the Boon/Bane Cap:** Apply any environmental zone tags (e.g., a `[Slick]` floor or `[Strong Wind]` battlefield).
     *   *The Cap:* Multiple environmental Boons or Banes do not stack. You either have one Boon (**+1d**), one Bane (**-1d**), or they cancel to **0** bonus dice.
 
@@ -32,11 +32,11 @@ When a player makes a test involving tags (e.g., attacking a monster with an ele
 
 When two dynamic elements meet (either combined in custom gear crafting or overlapping in a zone), they synthesize into a new state. Element synthesis is resolved at creation or downtime to avoid combat speed-bumps.
 
-*   `[Fire]` + `[Sticky]` $\rightarrow$ [[Burning Glue]]: Inflicts the *Restrained* condition and deals **+1 success** on the attack.
-*   `[Toxic]` + `[Chilled]` $\rightarrow$ [[Numbing Venom]]: Inflicts the *Restrained* condition (movement becomes 0).
-*   `[Wet]` + `[Shock]` $\rightarrow$ [[Conduction]]: Shakes the target's defenses, making all attack tests against them [[Easy (4+)]] for 1 round.
-*   `[Wet]` + `[Fire]` $\rightarrow$ [[Steam Cloud]]: Immediately strips the `[Fire]` tag and creates a `[Dark]` zone hazard.
-*   `[Fire]` + `[Volatile]` $\rightarrow$ [[Detonation]]: Immediately triggers a `[Explosive]` payload, clearing the source items.
+*   `[Fire]` + `[Sticky]` $\rightarrow$ **Burning Glue**: Inflicts the *Restrained* condition and deals **+1 success** on the attack.
+*   `[Toxic]` + `[Chilled]` $\rightarrow$ **Numbing Venom**: Inflicts the *Restrained* condition (movement becomes 0).
+*   `[Wet]` + `[Shock]` $\rightarrow$ **Conduction**: Shakes the target's defenses, making all attack tests against them **Easy (4+)** for 1 round.
+*   `[Wet]` + `[Fire]` $\rightarrow$ **Steam Cloud**: Immediately strips the `[Fire]` tag and creates a `[Dark]` zone hazard.
+*   `[Fire]` + `[Volatile]` $\rightarrow$ **Detonation**: Immediately triggers a `[Explosive]` payload, clearing the source items.
 
 ---
 
@@ -68,8 +68,8 @@ When two dynamic elements meet (either combined in custom gear crafting or overl
 
 #### `[Shock]`
 *   *Flavor:* Blue static sparks, crackling lightning, or sudden nerve spasms.
-*   *Universal Baseline:* Arc damage. If the attack hits, it deals [[1 automatic success]] (against standard enemies) or [[1 automatic Grit/Size damage]] (against PCs/Bosses/Mobs) to one additional target in the same [[Zone]].
-*   *Fictional Interaction:* Conducts instantly through metal armor (`Corporeal:Metal`) or water (`[Wet]`), making tests against them [[Easy (4+)]].
+*   *Universal Baseline:* Arc damage. If the attack hits, it deals **1 automatic success** (against standard enemies) or **1 automatic Grit/Size damage** (against PCs/Bosses/Mobs) to one additional target in the same [[Zone]].
+*   *Fictional Interaction:* Conducts instantly through metal armor (`Corporeal:Metal`) or water (`[Wet]`), making tests against them **Easy (4+)**.
 
 #### `[Slick]`
 *   *Flavor:* Buttered grease, wet ice, or slimy oil.
@@ -107,32 +107,32 @@ When two dynamic elements meet (either combined in custom gear crafting or overl
 
 #### `[Crushing]`
 *   *Flavor:* High-gravity fields, massive atmospheric pressure, or giant weights.
-*   *Universal Baseline:* Compression. Target is slowed to a maximum of 1 Zone of movement. Attacks against the compressed target are [[Easy (4+)]] due to their restricted mobility.
+*   *Universal Baseline:* Compression. Target is slowed to a maximum of 1 Zone of movement. Attacks against the compressed target are **Easy (4+)** due to their restricted mobility.
 *   *Fictional Interaction:* Collapses wooden structures, triggers cave-ins, and snaps tree branches.
 
 #### `[Elastic]`
 *   *Flavor:* Rubbery limbs, stretchy skin, or weirdly double-jointed bones.
-*   *Universal Baseline:* Stretch. Increases melee range to Adjacent Zone (1 zone away) and grants a [[Boon (+1d)]] to escape physical restraints.
+*   *Universal Baseline:* Stretch. Increases melee range to Adjacent Zone (1 zone away) and grants a **Boon (+1d)** to escape physical restraints.
 *   *Fictional Interaction:* Allows reaching high ledges, squeezing through narrow pipes, and bouncing back blunt physical impacts.
 
 #### `[Fast]`
 *   *Flavor:* Twitchy legs, high-velocity reflexes, or caffeinated energy.
 *   *Universal Baseline:* High speed. Allows moving 1 [[Zone]] as a Free Action once per round.
-*   *Fictional Interaction:* Harder to pin down; grants a [[Boon (+1d)]] to Dodge reactions.
+*   *Fictional Interaction:* Harder to pin down; grants a **Boon (+1d)** to Dodge reactions.
 
 #### `[Gale]`
 *   *Flavor:* Whirling typhoons, blast valves, or wind spells.
-*   *Universal Baseline:* Air current. All ranged attacks passing through the Zone suffer a [[Bane (-1d)]]. The wielder can spend 1 action to push a target to an adjacent Zone.
+*   *Universal Baseline:* Air current. All ranged attacks passing through the Zone suffer a **Bane (-1d)**. The wielder can spend 1 action to push a target to an adjacent Zone.
 *   *Fictional Interaction:* Disperses gaseous clouds (`[Gaseous]`), blows away light bulk items, and deflects arrows.
 
 #### `[Heavy]`
 *   *Flavor:* Dense lead alloys, black-stone cores, or massive bulk.
-*   *Universal Baseline:* Exhausting weight. The wielder suffers a [[Bane (-1d)]] on all tests unless they spend a Standard Action to brace. Target's carrying capacity is halved.
+*   *Universal Baseline:* Exhausting weight. The wielder suffers a **Bane (-1d)** on all tests unless they spend a Standard Action to brace. Target's carrying capacity is halved.
 *   *Fictional Interaction:* Sinks instantly in water, collapses thin floors, and anchors items against wind.
 
 #### `[Magnetic]`
 *   *Flavor:* Lodestone shards, copper wire windings, or lightning-charged steel.
-*   *Universal Baseline:* Pull. Pulls all metal objects or metal-armored creatures (`Corporeal:Metal`) in the Zone to the center. Metal targets suffer a [[Bane (-1d)]] to Dodge.
+*   *Universal Baseline:* Pull. Pulls all metal objects or metal-armored creatures (`Corporeal:Metal`) in the Zone to the center. Metal targets suffer a **Bane (-1d)** to Dodge.
 *   *Fictional Interaction:* Disarms metal weapons, forces iron doors open, and yanks knights into melee range.
 
 #### `[Sinking]`
@@ -147,7 +147,7 @@ When two dynamic elements meet (either combined in custom gear crafting or overl
 
 #### `[Weightless]`
 *   *Flavor:* Buoyant gas, levitation runes, or gravity negation.
-*   *Universal Baseline:* Levitation. Target ignores vertical terrain, mud, and ground hazards. However, the lack of leverage causes a [[Bane (-1d)]] on Melee attacks.
+*   *Universal Baseline:* Levitation. Target ignores vertical terrain, mud, and ground hazards. However, the lack of leverage causes a **Bane (-1d)** on Melee attacks.
 *   *Fictional Interaction:* Allows crossing chasms, floating to ceilings, and drifting away in heavy wind.
 
 ---
@@ -166,12 +166,12 @@ When two dynamic elements meet (either combined in custom gear crafting or overl
 
 #### `[Dark]`
 *   *Flavor:* Thick shadows, magical gloom, or heavy black smoke.
-*   *Universal Baseline:* Poor visibility. All attacks and notice tests in the Zone suffer a [[Bane (-1d)]].
+*   *Universal Baseline:* Poor visibility. All attacks and notice tests in the Zone suffer a **Bane (-1d)**.
 *   *Fictional Interaction:* Can be dispelled by `[Light]`. Enables stealth tests without cover.
 
 #### `[Deafening]`
 *   *Flavor:* Thunderstones, shrieking metal, or explosions.
-*   *Universal Baseline:* Silence. Target is immune to verbal Mouth/Order actions and cannot hear incoming threats (attacks against them from behind gain a [[Boon]]). A deafened Mob cannot receive [[Orders]] from their Boss.
+*   *Universal Baseline:* Silence. Target is immune to verbal Mouth/Order actions and cannot hear incoming threats (attacks against them from behind gain a [[Boon]]). A deafened Mob cannot receive [[Order|Orders]] from their Boss.
 *   *Fictional Interaction:* Disrupts verbal spellcasting, ruins coordinated troop maneuvers.
 
 #### `[Echoing]`
@@ -191,22 +191,22 @@ When two dynamic elements meet (either combined in custom gear crafting or overl
 
 #### `[Phantasmal]`
 *   *Flavor:* Shimmering light, auditory illusions, or ghost lights.
-*   *Universal Baseline:* Illusion. Target suffers a [[Bane (-1d)]] to all attacks as they swing at illusory copies.
+*   *Universal Baseline:* Illusion. Target suffers a **Bane (-1d)** to all attacks as they swing at illusory copies.
 *   *Fictional Interaction:* Has zero physical mass. Can be disbelieved with a [[Brains]] test.
 
 #### `[Shiny]`
 *   *Flavor:* Gleaming gold coins, polished brass, or cut gems.
-*   *Universal Baseline:* Distraction. Greed-obsessed minds (including player Goblins, dragons, and kobolds) suffer a [[Bane (-1d)]] to attacks/dodge unless they spend their turn moving toward the shiny object.
+*   *Universal Baseline:* Distraction. Greed-obsessed minds (including player Goblins, dragons, and kobolds) suffer a **Bane (-1d)** to attacks/dodge unless they spend their turn moving toward the shiny object.
 *   *Fictional Interaction:* Lures guards, distracts monsters, and triggers infighting among mobs.
 
 #### `[Soporific]`
 *   *Flavor:* Sweet poppy vapors, rhythmic humming, or sleep dust.
-*   *Universal Baseline:* Drowsiness. Target suffers a [[Bane (-1d)]] to all tests. If they roll a Fumble, they fall asleep ([[Stunned]] until damaged).
+*   *Universal Baseline:* Drowsiness. Target suffers a **Bane (-1d)** to all tests. If they roll a Fumble, they fall asleep ([[Stunned]] until damaged).
 *   *Fictional Interaction:* Lulls guard beasts, quietens rowdy mobs.
 
 #### `[Tasty]`
 *   *Flavor:* Roasted meat aromas, alchemical beast-lure, or sweet blood.
-*   *Universal Baseline:* Bait. All beasts (`Beast`) gain a [[Boon (+1d)]] to attack rolls against the target and will prioritize them over all others.
+*   *Universal Baseline:* Bait. All beasts (`Beast`) gain a **Boon (+1d)** to attack rolls against the target and will prioritize them over all others.
 *   *Fictional Interaction:* Triggers ravenous feeding frenzies.
 
 #### `[Terrifying]`
@@ -220,12 +220,12 @@ When two dynamic elements meet (either combined in custom gear crafting or overl
 
 #### `[Bleeding]`
 *   *Flavor:* Deep gashes, severed veins, or jagged iron wounds.
-*   *Universal Baseline:* Lingering harm. The target takes [[1 automatic Grit/Size damage]] at the start of their round until treated.
+*   *Universal Baseline:* Lingering harm. The target takes **1 automatic Grit/Size damage** at the start of their round until treated.
 *   *Fictional Interaction:* Attracts beasts, leaves a clear trail, and is ignored by undead and constructs.
 
 #### `[Exposed]`
 *   *Flavor:* Broken guard, off-balance posture, or shattered shields.
-*   *Universal Baseline:* Open defense. All attacks against the target are [[Easy (4+)]] and ignore passive defense.
+*   *Universal Baseline:* Open defense. All attacks against the target are **Easy (4+)** and ignore passive defense.
 *   *Fictional Interaction:* Represents a perfect opening to strike.
 
 #### `[Feral]`
@@ -270,17 +270,17 @@ When two dynamic elements meet (either combined in custom gear crafting or overl
 
 #### `[Spiky]`
 *   *Flavor:* Covered in sharp barbs, glass shards, or rusted nails.
-*   *Universal Baseline:* Thorns. Any creature attacking the target in Melee takes [[1 automatic success]] (against standard enemies) or [[1 automatic Grit/Size damage]] (against PCs/Bosses/Mobs) on a hit.
+*   *Universal Baseline:* Thorns. Any creature attacking the target in Melee takes **1 automatic success** (against standard enemies) or **1 automatic Grit/Size damage** (against PCs/Bosses/Mobs) on a hit.
 *   *Fictional Interaction:* Ruin grappling attempts, damages ropes and nets.
 
 #### `[Swollen]`
 *   *Flavor:* Giant mass, muscle bloat, or alchemical growth.
-*   *Universal Baseline:* Gigantism. The target's [[Size]] increases by 1. Melee attacks gain a [[Boon (+1d)]], but Slink/Stealth tests suffer a [[Bane (-1d)]].
+*   *Universal Baseline:* Gigantism. The target's [[Size]] increases by 1. Melee attacks gain a **Boon (+1d)**, but Slink/Stealth tests suffer a **Bane (-1d)**.
 *   *Fictional Interaction:* Cannot fit through narrow bottlenecks.
 
 #### `[Teeny]`
 *   *Flavor:* Pixie dust, shrinking potions, or magic runes.
-*   *Universal Baseline:* Shrinking. The target's [[Size]] decreases to 0. Slink/Stealth tests and Dodge tests gain a [[Boon (+1d)]], but carrying capacity is 0.
+*   *Universal Baseline:* Shrinking. The target's [[Size]] decreases to 0. Slink/Stealth tests and Dodge tests gain a **Boon (+1d)**, but carrying capacity is 0.
 *   *Fictional Interaction:* Can slip through keyholes and under doors.
 
 ---
@@ -289,7 +289,7 @@ When two dynamic elements meet (either combined in custom gear crafting or overl
 
 #### `[Angelic]`
 *   *Flavor:* Blinding gold radiance, choral echoes, or pure law.
-*   *Universal Baseline:* Holy aura. Attacks against standard foes are [[Easy (4+)]].
+*   *Universal Baseline:* Holy aura. Attacks against standard foes are **Easy (4+)**.
 *   *Fictional Interaction:* Highly destructive to undead (`Undead`) and demons, reducing their Defence TN by 1.
 
 #### `[Blessed]`
@@ -304,7 +304,7 @@ When two dynamic elements meet (either combined in custom gear crafting or overl
 
 #### `[Haunted]`
 *   *Flavor:* Lingering ghosts, cold drafts, or phantom hands.
-*   *Universal Baseline:* Spectral curse. The target suffers a [[Bane (-1d)]] to Slink and Mouth tests. Any fumbled roll summons a minor ghost (`Undead:Spirit`) that attacks the target.
+*   *Universal Baseline:* Spectral curse. The target suffers a **Bane (-1d)** to Slink and Mouth tests. Any fumbled roll summons a minor ghost (`Undead:Spirit`) that attacks the target.
 *   *Fictional Interaction:* Can be cleansed with holy tags (`[Angelic]`) or exorcisms.
 
 #### `[Laggy]`
