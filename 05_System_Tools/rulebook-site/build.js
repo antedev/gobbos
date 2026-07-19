@@ -61,6 +61,14 @@ function resolveWikiLink(linkText, env) {
   const trimmed = linkText.trim();
   const slug = slugify(trimmed);
 
+  // If a keywordTooltipMap is present and contains the term, direct it to the Keywords Index page with the slug as anchor
+  if (env && env.keywordTooltipMap && env.keywordTooltipMap.has(slug)) {
+    const keywordsIndexSlug = 'keywords-index';
+    if (env.wikiMap && env.wikiMap.has(keywordsIndexSlug)) {
+      return `${env.wikiMap.get(keywordsIndexSlug)}#${slug}`;
+    }
+  }
+
   // If a wikiMap is provided in the markdown-it env object, look up the target URL
   if (env && env.wikiMap && env.wikiMap.has(slug)) {
     return env.wikiMap.get(slug);
@@ -86,8 +94,19 @@ function wikilinksPlugin(md) {
     }
     return content.replace(wikiRe, (_, linkText) => {
       const trimmed = linkText.trim();
+      const slug = slugify(trimmed);
       const targetUrl = resolveWikiLink(trimmed, env);
-      return `<a href="${targetUrl}" class="wikilink" title="${escapeHtml(trimmed)}">${escapeHtml(trimmed)}</a>`;
+      
+      // Look up definition for tooltip
+      let tooltipAttr = '';
+      if (env && env.keywordTooltipMap && env.keywordTooltipMap.has(slug)) {
+        const { definition } = env.keywordTooltipMap.get(slug);
+        tooltipAttr = ` title="${escapeHtml(definition)}"`;
+      } else {
+        tooltipAttr = ` title="${escapeHtml(trimmed)}"`;
+      }
+
+      return `<a href="${targetUrl}" class="wikilink"${tooltipAttr}>${escapeHtml(trimmed)}</a>`;
     });
   };
 }
@@ -220,6 +239,27 @@ function buildEnvNav(activeKey) {
 async function build() {
   console.log('🔨 Building Gobbos Rulebook & Lore Site (Multi-Page Agent-Friendly)...\n');
 
+  // Parse Keywords Index for tooltips
+  const keywordTooltipMap = new Map();
+  const keywordsIndexPath = path.join(REPO_ROOT, '01_STAGE_Drafts', '00_Rules', '06_Keywords Index.md');
+  if (await fs.pathExists(keywordsIndexPath)) {
+    const keywordIndexContent = await fs.readFile(keywordsIndexPath, 'utf-8');
+    const lines = keywordIndexContent.split('\n');
+    for (const line of lines) {
+      const cleanLine = line.replace(/\r$/, '');
+      const match = cleanLine.match(/^\s*\*\s+\[\[([^\]]+)\]\](?:\s*\([^)]*\))?:\s*(.*)$/);
+      if (match) {
+        const term = match[1].trim();
+        const definition = match[2].trim();
+        const termSlug = slugify(term);
+        keywordTooltipMap.set(termSlug, { term, definition });
+      }
+    }
+    console.log(`  ✅ Loaded ${keywordTooltipMap.size} keywords for tooltips`);
+  } else {
+    console.log('  ⚠️ Keywords Index file not found for tooltips');
+  }
+
   // Ensure dist exists and is clean
   await fs.emptyDir(DIST_DIR);
 
@@ -285,7 +325,7 @@ async function build() {
         const isFirst = page.slug === firstPageSlug;
         const pageFilename = getPageFilename(env.key, page.slug, isFirst);
         
-        const mainContent = md.render(page.content, { wikiMap });
+        const mainContent = md.render(page.content, { wikiMap, keywordTooltipMap });
         const sidebarNav = buildSidebarNav(sections, env.key, firstPageSlug, page.slug);
 
         const html = template

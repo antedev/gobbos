@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Major_Factions — STAGE Lore — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Synthesized lore drafts">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab env-tab--active">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">STAGE Lore</h2>
+        <p class="sidebar-subtitle">Synthesized lore drafts</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group nav-group--solo"><a href="stage-lore.html" class="nav-link nav-link--solo" data-target="geography-and-history">Geography_and_History</a></div><div class="nav-group nav-group--solo"><a href="stage-lore--solar-ichor-technology.html" class="nav-link nav-link--solo" data-target="solar-ichor-technology">Solar_Ichor_Technology</a></div><div class="nav-group nav-group--solo"><a href="stage-lore--high-aurelians.html" class="nav-link nav-link--solo" data-target="high-aurelians">High_Aurelians</a></div><div class="nav-group nav-group--solo"><a href="stage-lore--goblin-warren-culture.html" class="nav-link nav-link--solo" data-target="goblin-warren-culture">Goblin_Warren_Culture</a></div><div class="nav-group nav-group--solo"><a href="stage-lore--the-shadow-economy.html" class="nav-link nav-link--solo" data-target="the-shadow-economy">The_Shadow_Economy</a></div><div class="nav-group nav-group--solo"><a href="stage-lore--major-factions.html" class="nav-link nav-link--solo nav-link--active" data-target="major-factions">Major_Factions</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="factions-of-the-solar-hearth" tabindex="-1">Factions of the Solar Hearth</h1>
+<p><em>“The harbor is a forest of masts, and the air is thick with the smell of wet wood and black powder. On the east pier, a priest of the Synod screams about the holy light while his mercenaries load lead-shielded boxes onto a caravel. On the west pier, a clerk from House Vane counts iron rails, ignoring a squatter who tries to sell him a bag of teeth. And underneath the floorboards, we wait. When they start shooting at each other, we take the powder, the rails, and the gold.”</em>
+— <em>Rust-Ears, Cartel Spy at the Grey Ports</em></p>
+<hr>
+<h2 id="the-western-kingdoms-the-invaders" tabindex="-1">The Western Kingdoms (The Invaders)</h2>
+<p>Across the sea, the independent realms of the Western Kingdoms have spent a century growing in the shadow of the fallen Empire. While they share a romanticized memory of the old golden age, they are fierce competitors. They launch separate, rival expeditions back to the Heartland, eager to strip-mine the ruins for Sol-Quartz and alchemical secrets.</p>
+<h3 id="the-vane-chartered-syndicate" tabindex="-1">The Vane Chartered Syndicate</h3>
+<p>The Syndicate is a secular joint-stock merchant company originating from the Western Free Cities, run by a council of oligarchic shipmasters and lens-grinders. They view the Aurelian Heartland as a vast corporate ledger, waiting to be audited and stripped of its assets.</p>
+<ul>
+<li><strong>The Culture</strong>: They value ledgers, contracts, and precise weights. Their agents wear starch-collared coats and top hats, shielding their eyes from the soot with smoked glass goggles.</li>
+<li><strong>The Economics</strong>: The Syndicate maintains fortified trading depots along the rivers. They hire mercenary guilds to protect their caravans and specialize in the salvage of precision machine tools, printing presses, and intact Sol-Quartz crystals.</li>
+<li><strong>Goblin Relations</strong>: Transactional and cynical. The Syndicate officially condemns Goblins as “industrial pests,” but their agents secretly meet with Goblin <strong>Bosses</strong> in the Grey Ports, signing <strong>Sabotage Contracts</strong> to destroy the operations of rival merchant houses in exchange for black powder and steel.</li>
+</ul>
+<h3 id="the-radiant-crusaders-the-solar-cults" tabindex="-1">The Radiant Crusaders (The Solar Cults)</h3>
+<p>The Crusaders are the militant wing of the Radiant Synod, the dominant religious authority of the Western Kingdoms. They view the Grand Desynchronization as a divine purge, a punishment for humanity’s alchemical hubris, and seek to rebuild the world under a strict religious technocracy.</p>
+<ul>
+<li><strong>The Culture</strong>: Led by Inquisitors wearing heavy, lead-lined vestments and bronze death-masks. They preach the “Doctrine of the Refined Vessel,” claiming that only those with pure, disciplined spirits have the moral right to handle the sun’s energy.</li>
+<li><strong>The Economics</strong>: Funded by the tithes of the western peasants. They seek out the ancient Refractory Citadels and Sun-Glass Mirror Spires, attempting to rebuild the solar mirrors to “sanctify” the raw Black Ichor.</li>
+<li><strong>Goblin Relations</strong>: Hostile. The Synod views Goblins as alchemical abominations born of the raw dross. They launch armed sweeps into the sewers to purge the warrens. However, when a deep vault remains lost, the Inquisitors will offer amnesty and steel tools to a Goblin <strong>Gang</strong> to guide them through the dark.</li>
+</ul>
+<h3 id="the-high-king-s-vanguard" tabindex="-1">The High-King’s Vanguard</h3>
+<p>A coalition of feudal knights and pikemen launched by the monarchs of the Western Kingdoms. Driven by romantic ideals of the ancient Empire, the barons of the Vanguard seek to carve out new estates and establish dynastic domains in the ruins.</p>
+<ul>
+<li><strong>The Culture</strong>: A traditional military hierarchy. They paint imperial solar symbols on their iron armor and build heavy, stone-faced keeps inside the caved-in palaces of the old masters.</li>
+<li><strong>The Economics</strong>: The Vanguard focuses on agricultural colonization. They clear the overgrown river valleys, establishing fortified Citadel-Farms to grow wheat and graze cattle, protected by marksmen holding matchlock arquebuses.</li>
+<li><strong>Goblin Relations</strong>: Exploitative. The barons view Goblins as natural labor, attempting to capture and chain them to clear the soot-choked fields. Goblins resist these raids with explosive traps and guerrilla ambushes, making the borderlands a zone of constant skirmishing.</li>
+</ul>
+<hr>
+<h2 id="factions-of-the-heartland-the-left-behind" tabindex="-1">Factions of the Heartland (The Left-Behind)</h2>
+<h3 id="the-scrap-barons-the-surface-squatters" tabindex="-1">The Scrap-Barons (The Surface Squatters)</h3>
+<p>Descended from the Low Provincial human laborers left behind during the collapse, the squatters have spent three generations adapting to the ruins.</p>
+<ul>
+<li><strong>The Culture</strong>: A hard-bitten, highly superstitious society. They live in fortified “Fortress Villas”—ancient public baths, coliseums, and senate halls reinforced with crude wooden palisades. They fear the night, locking their iron gates at sundown and salting their doorways to ward off ghosts.</li>
+<li><strong>The Economics</strong>: They run a crude, defensive economy, melting down imperial steel rails to forge broadswords and quarrying marble statues to burn into lime for mortar.</li>
+<li><strong>Goblin Relations</strong>: An uneasy peace. The Scrap-Barons rely on Goblins to maintain the subterranean water lines and prevent the vaults beneath their fortified villas from filling with sewer gas. In exchange, they trade grain and livestock, paying a “Tithe of the Surface” to the manholes.</li>
+</ul>
+<h3 id="the-ichor-gorged-tyrants-the-remnants" tabindex="-1">The Ichor-Gorged Tyrants (The Remnants)</h3>
+<p>High Aurelian aristocrats who escaped the Chime-Death by infusing their veins with raw, unrefined Black Ichor. They have mutated into bloated, pale, alchemical vampires who rule the deepest, pitch-black vaults of the capital ruins.</p>
+<ul>
+<li><strong>The Culture</strong>: They retain their ancient, elegant robes, now stained with black grease and dross. They view both the surface humans and Goblins as lesser species, fit only to serve as alchemical fuel.</li>
+<li><strong>The Economics</strong>: They control the deep alchemical fissures, damming up the Black Ichor lines to brew their life-extending elixirs.</li>
+<li><strong>Goblin Relations</strong>: A bloody turf war. By damming the fissures, the Tyrants dry up the spawning fluid of the Goblins’ <strong>Mire-Wells</strong>. Goblin <strong>Gangs</strong> wage a relentless guerrilla war to puncture the Tyrants’ reservoirs, fighting for the survival of their species.</li>
+</ul>
+<h3 id="the-goblin-cartels" tabindex="-1">The Goblin Cartels</h3>
+<p>The Goblins are organized into competitive criminal syndicates ruling the deep tunnels and the overgrown Soot-Fringes of the surface.</p>
+<ul>
+<li><strong>The Boiler-Burners</strong>: Control the deep steam-lines and geothermal vents. They are master scrap-engineers, trading pressurized steam power and forged weapons for alchemical components.</li>
+<li><strong>The Sewer-Rats</strong>: Control the pipe chokepoints and the Grey Ports. They run the canister-laundering pipelines, smuggling salvaged fuel canisters to human privateers.</li>
+<li><strong>The Strategy</strong>: Goblins exploit the rivalries between the Western Kingdoms. They guide a Vane Syndicate convoy into the hunting grounds of a Feudal Vanguard baron, wait for the human forces to destroy each other, and plunder the bodies of both.</li>
+</ul>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>

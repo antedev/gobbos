@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stats — STAGE Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Playtesting & review materials">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab env-tab--active">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">STAGE Rules</h2>
+        <p class="sidebar-subtitle">Playtesting & review materials</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="stage.html" class="nav-link" data-target="rules--overview">Overview</a></li><li><a href="stage--rules--combat.html" class="nav-link" data-target="rules--combat">Combat</a></li><li><a href="stage--rules--movement-and-zones.html" class="nav-link" data-target="rules--movement-and-zones">Movement &amp; Zones</a></li><li><a href="stage--rules--giving-orders.html" class="nav-link" data-target="rules--giving-orders">Giving orders</a></li><li><a href="stage--rules--raid-points.html" class="nav-link" data-target="rules--raid-points">Raid points</a></li><li><a href="stage--rules--keywords-index.html" class="nav-link" data-target="rules--keywords-index">Keywords Index</a></li><li><a href="stage--rules--wounds-conditions.html" class="nav-link" data-target="rules--wounds-conditions">Wounds_Conditions</a></li><li><a href="stage--rules--master-tag-index.html" class="nav-link" data-target="rules--master-tag-index">Master_Tag_Index</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="true" data-target="characters-and-mobs"><span class="toggle-icon">▾</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" ><li><a href="stage--characters-and-mobs--stats.html" class="nav-link nav-link--active" data-target="characters-and-mobs--stats">Stats</a></li><li><a href="stage--characters-and-mobs--character-creation.html" class="nav-link" data-target="characters-and-mobs--character-creation">Character Creation</a></li><li><a href="stage--characters-and-mobs--gang.html" class="nav-link" data-target="characters-and-mobs--gang">Gang</a></li><li><a href="stage--characters-and-mobs--boons-and-banes.html" class="nav-link" data-target="characters-and-mobs--boons-and-banes">Boons_and_Banes</a></li><li><a href="stage--characters-and-mobs--goblin-mob.html" class="nav-link" data-target="characters-and-mobs--goblin-mob">Goblin_mob</a></li><li><a href="stage--characters-and-mobs--quirks.html" class="nav-link" data-target="characters-and-mobs--quirks">Quirks</a></li><li><a href="stage--characters-and-mobs--level-up-and-death.html" class="nav-link" data-target="characters-and-mobs--level-up-and-death">Level_Up and death</a></li><li><a href="stage--characters-and-mobs--unified-modular-powers-system.html" class="nav-link" data-target="characters-and-mobs--unified-modular-powers-system">Unified_Modular_Powers_System</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="loot"><span class="toggle-icon">▸</span>Loot</button><ul class="nav-pages" id="nav-loot" style="display: none;"><li><a href="stage--loot--loot.html" class="nav-link" data-target="loot--loot">loot</a></li><li><a href="stage--loot--carry-stuff.html" class="nav-link" data-target="loot--carry-stuff">Carry Stuff</a></li><li><a href="stage--loot--equipment.html" class="nav-link" data-target="loot--equipment">Equipment</a></li><li><a href="stage--loot--crafting.html" class="nav-link" data-target="loot--crafting">Crafting</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="enemies"><span class="toggle-icon">▸</span>Enemies</button><ul class="nav-pages" id="nav-enemies" style="display: none;"><li><a href="stage--enemies--enemies.html" class="nav-link" data-target="enemies--enemies">Enemies</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="base"><span class="toggle-icon">▸</span>Base</button><ul class="nav-pages" id="nav-base" style="display: none;"><li><a href="stage--base--lair-rules.html" class="nav-link" data-target="base--lair-rules">Lair_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="travel"><span class="toggle-icon">▸</span>Travel</button><ul class="nav-pages" id="nav-travel" style="display: none;"><li><a href="stage--travel--journey-rules.html" class="nav-link" data-target="travel--journey-rules">Journey_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="magic"><span class="toggle-icon">▸</span>Magic</button><ul class="nav-pages" id="nav-magic" style="display: none;"><li><a href="stage--magic--magic-rules.html" class="nav-link" data-target="magic--magic-rules">Magic_Rules</a></li></ul></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      </div>
+      <h1 id="stats" tabindex="-1">Stats</h1>
+<p>Your Boss has four <a href="#main-stats" class="wikilink" title="Main Stats">Main Stats</a>, a set of derived <a href="#secondary-stats" class="wikilink" title="Secondary Stats">Secondary Stats</a> tied to them, and <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>, which represents your authority and command energy. Your <a href="#main-stats" class="wikilink" title="Main Stats">Main Stats</a>, as well as your maximum <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>, range from <a href="#level-1" class="wikilink" title="Level 1">Level 1</a> to <a href="#level-5" class="wikilink" title="Level 5">Level 5</a>. Level 1 is the starting value. Increasing a stat not only adds more dice to your <a href="#dice-pool" class="wikilink" title="Dice Pool">Dice Pool</a> for related tests, but it also provides mechanical upgrades to your Boss’s capabilities.</p>
+<hr>
+<h2 id="tough-t" tabindex="-1">Tough (T)</h2>
+<p>Used for violence, resilience, intimidation, and lifting stuff. <a href="#tough" class="wikilink" title="Tough">Tough</a> is simply how strong in body the Boss is, and the most important stat for direct combat. Most attacks will use <a href="#tough" class="wikilink" title="Tough">Tough</a> as the basis for your <a href="#dice-pool" class="wikilink" title="Dice Pool">Dice Pool</a>.</p>
+<p><a href="#tough" class="wikilink" title="Tough">Tough</a> has two secondary stats: <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> (your health) and <a href="#carry" class="wikilink" title="Carry">Carry</a> (how much equipment and loot you can carry).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Level</th>
+<th style="text-align:center">Grit</th>
+<th style="text-align:center">Carry</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="#level-1" class="wikilink" title="Level 1">Level 1</a></td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">6</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#level-2" class="wikilink" title="Level 2">Level 2</a></td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">8</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#level-3" class="wikilink" title="Level 3">Level 3</a></td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">10</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#level-4" class="wikilink" title="Level 4">Level 4</a></td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">12</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#level-5" class="wikilink" title="Level 5">Level 5</a></td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">14</td>
+</tr>
+</tbody>
+</table>
+<h3 id="grit" tabindex="-1">Grit</h3>
+<p><a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> is your health, which defines how many hits the Boss can take before he dies. When your <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> is 0, you are dying and probably dead very soon. A higher <a href="#tough" class="wikilink" title="Tough">Tough</a> score is vital to survive the <a href="#raids" class="wikilink" title="Raids">Raids</a>, while a low <a href="#tough" class="wikilink" title="Tough">Tough</a> makes you rely on your Gobbos or stealth to survive.</p>
+<h3 id="carry" tabindex="-1">Carry</h3>
+<p><a href="#carry" class="wikilink" title="Carry">Carry</a> defines how many units of <a href="stage--rules--keywords-index.html#bulk" class="wikilink" title="A measure of how heavy/unwieldy an item is. High bulk reduces movement or requires multiple goblins.">Bulk</a> you can carry. Both equipment and loot have a <a href="stage--rules--keywords-index.html#bulk" class="wikilink" title="A measure of how heavy/unwieldy an item is. High bulk reduces movement or requires multiple goblins.">Bulk</a> rating, and with a higher <a href="#tough" class="wikilink" title="Tough">Tough</a>, you can both go well armed to the <a href="#raid" class="wikilink" title="Raid">Raid</a> as well as carry a lot of loot back. While a low <a href="#carry" class="wikilink" title="Carry">Carry</a> means hard priorities.</p>
+<hr>
+<h2 id="slink-s" tabindex="-1">Slink (S)</h2>
+<p>Used for sneaking, dodging, and all manners of dirty tricks. <a href="#slink" class="wikilink" title="Slink">Slink</a> is how agile, dexterous, and quick on your feet you are. A higher <a href="#slink" class="wikilink" title="Slink">Slink</a> allows for greater movement on the battle map, and a higher chance to dodge any incoming attack.</p>
+<p><a href="#slink" class="wikilink" title="Slink">Slink</a> has two secondary stats: <a href="#movement" class="wikilink" title="Movement">Movement</a> (how far you can move per action) and <a href="#passive-defence" class="wikilink" title="Passive Defence">Passive Defence</a> (which allows you to dodge attacks without spending actions, much like armor, but without the bulk).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Level</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Passive Defence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="#level-1" class="wikilink" title="Level 1">Level 1</a></td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#level-2" class="wikilink" title="Level 2">Level 2</a></td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#level-3" class="wikilink" title="Level 3">Level 3</a></td>
+<td style="text-align:center">3</td>
+<td style="text-align:center"><strong>1d</strong></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#level-4" class="wikilink" title="Level 4">Level 4</a></td>
+<td style="text-align:center">4</td>
+<td style="text-align:center"><strong>1d</strong></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#level-5" class="wikilink" title="Level 5">Level 5</a></td>
+<td style="text-align:center">5</td>
+<td style="text-align:center"><strong>2d</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="movement" tabindex="-1">Movement</h3>
+<p>Your movement stat determines how many zones you can move per <a href="#move" class="wikilink" title="Move">Move</a> action. Higher stats allow for greater mobility on the battle map. A higher <a href="#slink" class="wikilink" title="Slink">Slink</a> makes you move faster over the battlefield, while a low score means you have to plan ahead a bit more.</p>
+<h3 id="passive-defence" tabindex="-1">Passive Defence</h3>
+<p><a href="#passive-defence" class="wikilink" title="Passive Defence">Passive Defence</a> gives you passive protection against enemy attacks, which essentially means that you have that many extra dice to roll when you are making a save against an attack, even if you don’t even spend an action to dodge!</p>
+<hr>
+<h2 id="mouth-m" tabindex="-1">Mouth (M)</h2>
+<p>Used for shouting orders, bullying, lying, and just talking a lot and loud. It is how good you are at shouting orders, and a high <a href="#mouth" class="wikilink" title="Mouth">Mouth</a> score allows you both to control more <a href="#mobs" class="wikilink" title="Mobs">Mobs</a> as well as getting more out of your <a href="#mobs" class="wikilink" title="Mobs">Mobs</a> for free. A low <a href="#mouth" class="wikilink" title="Mouth">Mouth</a> score will make you rely more on your own skills, and less on your <a href="#mobs" class="wikilink" title="Mobs">Mobs</a>.</p>
+<p><a href="#mouth" class="wikilink" title="Mouth">Mouth</a> has two secondary stats: <a href="#max-mobs" class="wikilink" title="Max Mobs">Max Mobs</a> (how many different mobs you can have under your control) and <a href="#free-orders" class="wikilink" title="Free Orders">Free Orders</a> (which allows you to do things with your mobs without spending standard actions).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Level</th>
+<th style="text-align:center">Max Mobs</th>
+<th style="text-align:center">Free Orders per Round</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="#level-1" class="wikilink" title="Level 1">Level 1</a></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#level-2" class="wikilink" title="Level 2">Level 2</a></td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#level-3" class="wikilink" title="Level 3">Level 3</a></td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#level-4" class="wikilink" title="Level 4">Level 4</a></td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#level-5" class="wikilink" title="Level 5">Level 5</a></td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="max-mobs" tabindex="-1">Max Mobs</h3>
+<p>This is the maximum number of different <a href="#mobs" class="wikilink" title="Mobs">Mobs</a> you can have under your control. If your <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> is low, you might just kick around a few gobbs. But if you are seen as fanciest, meanest, smartest, sneakiest, bulkiest (Gobbos can admire many different aspects, as long as is much of it), you can soon command a legion of greenies.</p>
+<h3 id="free-orders-per-round" tabindex="-1">Free Orders per Round</h3>
+<p>A high <a href="#mouth" class="wikilink" title="Mouth">Mouth</a> score makes giving orders such a natural thing you can do it while you are doing other things. This means you can use a standard action for something else and still give an order to a mob, as long as you do not exceed your <a href="#free-orders-per-round" class="wikilink" title="Free Orders per Round">Free Orders per Round</a>.</p>
+<hr>
+<h2 id="brains-b" tabindex="-1">Brains (B)</h2>
+<p><a href="#brains" class="wikilink" title="Brains">Brains</a> is used for understanding and noticing things, crafting, and magic. <a href="#brains" class="wikilink" title="Brains">Brains</a> is simply how good you are at understanding the complexity of Gobbo magic and Gobbo crafting, but it is also used for awareness and understanding of the world. A high <a href="#brains" class="wikilink" title="Brains">Brains</a> score allows you to use magic in <a href="#raids" class="wikilink" title="Raids">Raids</a>, but also better arm yourselves or your gang between <a href="#raids" class="wikilink" title="Raids">Raids</a>. While a low score instead makes you trust your or your <a href="#mobs" class="wikilink" title="Mobs’">Mobs’</a> physical abilities instead.</p>
+<p><a href="#brains" class="wikilink" title="Brains">Brains</a> has two secondary stats: <a href="#power-words" class="wikilink" title="Power Words">Power Words</a> (your capacity to hold volatile magical formulas/spell tags in your head) and <a href="stage--rules--keywords-index.html#crafting-capacity" class="wikilink" title="The maximum number of Oddities that can be attached to a single item. Equal to the crafter's Brains score.">Crafting Capacity</a> (which controls how many oddities you can attach to any single item).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Level</th>
+<th style="text-align:center">Power Words</th>
+<th style="text-align:center">Crafting Capacity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="#level-1" class="wikilink" title="Level 1">Level 1</a></td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#level-2" class="wikilink" title="Level 2">Level 2</a></td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#level-3" class="wikilink" title="Level 3">Level 3</a></td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#level-4" class="wikilink" title="Level 4">Level 4</a></td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#level-5" class="wikilink" title="Level 5">Level 5</a></td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="power-words" tabindex="-1">Power Words</h3>
+<p>Gobbo magic is short, loud, and volatile. It is more words and complex spells, but a Gobbo brain is still not that big, and can only hold so much. With a higher score you can start using <a href="#power-words" class="wikilink" title="Power Words">Power Words</a> to your advantage, remembering even more as your <a href="#brains" class="wikilink" title="Brains">Brains</a> score increases. It is only when you reach the base level of 3 that you can even attempt to use them.</p>
+<h3 id="crafting-capacity" tabindex="-1">Crafting Capacity</h3>
+<p>Crafting is an excellent way to get more out of your loot, and to create weapons, contraptions, and potions. Equipment is one of the most important tools to add more dice to your <a href="#dice-pool" class="wikilink" title="Dice Pool">Dice Pool</a>. A low score means you can craft more simple things, while a high score allows you to craft more complex and powerful items.</p>
+<hr>
+<h2 id="grunt" tabindex="-1">Grunt</h2>
+<p>Your authority and energy. Gobbos respect a Boss that is strong, sneaky, loud, or seems smart. They can respect many qualities as long as it is a lot of it. <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> is equal to your second highest Main Stat. So if you have <a href="#tough" class="wikilink" title="Tough">Tough</a> 2, <a href="#slink" class="wikilink" title="Slink">Slink</a> 4, <a href="#mouth" class="wikilink" title="Mouth">Mouth</a> 2, <a href="#brains" class="wikilink" title="Brains">Brains</a> 2, your <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> is 2. If you have <a href="#tough" class="wikilink" title="Tough">Tough</a> 2, <a href="#slink" class="wikilink" title="Slink">Slink</a> 4, <a href="#mouth" class="wikilink" title="Mouth">Mouth</a> 5, <a href="#brains" class="wikilink" title="Brains">Brains</a> 2, your <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> is 4.</p>
+<p>Your <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> determines the maximum <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> of a <a href="stage--rules--keywords-index.html#mob" class="wikilink" title="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> you can command (e.g., <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> 3 means you can command a maximum <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> 3 <a href="stage--rules--keywords-index.html#mob" class="wikilink" title="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a>). <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> also limits how many <a href="#bangaranga-dice" class="wikilink" title="Bangaranga Dice">Bangaranga Dice</a> you can use.</p>
+<p>Unlike the other <a href="#main-stats" class="wikilink" title="Main Stats">Main Stats</a>, <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> has a maximum value as well as a current value, as you can both lose and gain <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> during a <a href="#raid" class="wikilink" title="Raid">Raid</a>.</p>
+<h3 id="losing-and-gaining-grunt" tabindex="-1">Losing and Gaining Grunt</h3>
+<p>If you <a href="#fumbled" class="wikilink" title="Fumbled">Fumbled</a> when performing a test, or simply fail when using <a href="#bangaranga-dice" class="wikilink" title="Bangaranga Dice">Bangaranga Dice</a>, you lose one <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>. However, if you score a <a href="stage--rules--keywords-index.html#critical" class="wikilink" title="Rolling a **6** that explodes, and rolling another **6** on the resulting die (a double-six chain). It grants **+1 Grunt** and an immediate bonus action. See [Dice](01_Dice.md#criticals).">Critical</a> result on the test, you gain one <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>.</p>
+<h3 id="rebellion" tabindex="-1">Rebellion</h3>
+<p>If you are trying to control a <a href="stage--rules--keywords-index.html#mob" class="wikilink" title="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> that is now bigger than your <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> allows, you must pass a <a href="#mouth" class="wikilink" title="Mouth">Mouth</a> or <a href="#tough" class="wikilink" title="Tough">Tough</a> test (your choice) against a target of <strong>5+</strong> with the required successes (TN) equal to the <a href="#mob-s" class="wikilink" title="Mob’s">Mob’s</a> <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> (denoted as <strong>5+/Size</strong>). If you fail the test, the <a href="stage--rules--keywords-index.html#mob" class="wikilink" title="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> realizes you are weak and will rebel, becoming <a href="#uncontrolled" class="wikilink" title="Uncontrolled">Uncontrolled</a>!</p>
+<h3 id="defeating-enemies" tabindex="-1">Defeating Enemies</h3>
+<p>You can gain <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>. The most common way is to defeat an enemy yourself. Each defeated enemy when in the same or adjacent zone automatically gains you one <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>, up to your maximum.</p>
+<h3 id="asserting-dominance" tabindex="-1">Asserting Dominance</h3>
+<p>But in a dire situation you can also simply kill some of your own goblins to reassert dominance. Make an undefended attack against a <a href="stage--rules--keywords-index.html#mob" class="wikilink" title="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> under your control that you can attack. If you do damage, increase your <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> by 1. If you however fail to deal out any damage, you are indeed weak and lose another <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>!</p>
+<h3 id="showing-off" tabindex="-1">Showing Off</h3>
+<p>If you roll a <a href="../00_Rules/01_Dice.md#criticals">Critical Success</a> on a test, your Gobbos are impressed and you gain 1 <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> (up to your maximum) and a bonus action as detailed in the dice rules.</p>
+<hr>
+<h2 id="abilities" tabindex="-1">Abilities</h2>
+<h3 id="quirks" tabindex="-1">Quirks</h3>
+<p><a href="stage--characters-and-mobs--quirks.html" class="wikilink" title="Quirks">Quirks</a> are what make your Gobbo unique from any other Gobbos, giving you an edge in specific circumstances. Typically you can gain <a href="stage--characters-and-mobs--quirks.html" class="wikilink" title="Quirks">Quirks</a> as you play, but you also get some <a href="stage--characters-and-mobs--quirks.html" class="wikilink" title="Quirks">Quirks</a> when you start, depending on the level you start at.</p>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'block';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+  </script>
+
+</body>
+</html>
