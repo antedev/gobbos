@@ -9,13 +9,13 @@
 All combat encounters in Gobbos are governed by three overarching rules that define how enemies operate:
 
 ### Deterministic Threats
-The GM never rolls dice. Enemies do not test for success or roll to hit. Their actions are guaranteed threats. If an enemy attacks a **Boss** or **Mob**, it deals its listed damage automatically unless the player spends a saved action to **Dodge** (testing **Slink**) or **Parry** (testing **Tough**).
+The GM never rolls dice. Enemies do not test for success or roll to hit. Their actions are guaranteed threats. If an enemy attacks a [[Boss]] or [[Mob]], it deals its listed damage automatically unless the player spends a saved action to [[Dodge]] (testing [[Slink]]) or [[Parry]] (testing [[Tough]]).
 
 ### The Three Enemy Scales
 Enemies are structured into three distinct mechanical types to determine how they take damage and die:
-1.  **Standard Enemies:** The default foe. They are **One-Hit Kill**. Rolling successes equal to or greater than their **Defence** **Target Number (TN)** instantly defeats them.
-2.  **Bosses & Elites:** Powerhouses that cannot be killed in a single strike. They track damage using a **Wounds** track.
-3.  **Enemy Mobs:** Groups of standard enemies acting as a single unit, using a shared **Dice-HP** pool.
+1.  **Standard Enemies:** The default foe. They are [[One-Hit Kill]]. Rolling successes equal to or greater than their [[Defence]] [[Target Number (TN)]] instantly defeats them.
+2.  **Bosses & Elites:** Powerhouses that cannot be killed in a single strike. They track damage using a [[Wounds]] track.
+3.  **Enemy Mobs:** Groups of standard enemies acting as a single unit, using a shared [[Dice-HP]] pool.
 
 ---
 
@@ -24,21 +24,21 @@ Enemies are structured into three distinct mechanical types to determine how the
 Every enemy is defined by a standardized, table-based stat block. The top section contains the creature's core metadata, followed by their defense, movement, and morale attributes. Below that are any unique passive or triggered behaviors, followed by their specific combat actions.
 
 ### Stat Block Fields
-*   **Name & Type:** The name of the enemy and their mechanical scale (**Standard**, **Elite**, **Boss**, or **Mob**).
-*   **Size:** The physical **Size** classification of the enemy. 
-*   **Defence:** The number of successes a **Player** must roll on an **Attack** test to deal a **Wound** or instantly kill the enemy.
-*   **Movement:** How many environmental **Zones** the enemy can cross with a single **Move** action. 
-*   **Morale:** The **Morale TN** the players roll against when forcing a morale check.
+*   **Name & Type:** The name of the enemy and their mechanical scale ([[Standard]], [[Elite]], [[Boss]], or [[Mob]]).
+*   **Size:** The physical [[Size]] classification of the enemy. 
+*   **Defence:** The number of successes a [[Player]] must roll on an [[Attack]] test to deal a [[Wound]] or instantly kill the enemy.
+*   **Movement:** How many environmental [[Zones]] the enemy can cross with a single [[Move]] action. 
+*   **Morale:** The [[Morale TN]] the players roll against when forcing a morale check.
 *   **Tags:** Standardized keywords representing physiological or behavioral modifiers.
 *   **Special:** Any unique, custom rules or passive abilities.
 *   **Attacks:** The combat options the enemy can execute.
-    *   **Attack (TN):** The difficulty and **Target Number (TN)** a player must roll on their **Dodge** or **Parry** test to avoid the attack.
+    *   **Attack (TN):** The difficulty and [[Target Number (TN)]] a player must roll on their [[Dodge]] or [[Parry]] test to avoid the attack.
     *   **Damage:** The flat amount of damage dealt if the player fails to defend.
     *   **Range:** The distance the attack can reach (Melee or Ranged).
     *   **AoE:** The area of effect, if it hits multiple targets.
     *   **Special:** Any special rules applied when using this attack.
 
-> **Example: Angry Farmer**
+> [[Example: Angry Farmer]]
 > *Standard Humanoid (Size 1)*
 > 
 > | Defence | Movement | Morale | Tags |
@@ -47,10 +47,10 @@ Every enemy is defined by a standardized, table-based stat block. The top sectio
 > 
 > **Special:** None
 > 
-> #### **Attacks**
+> #### [[Attacks]]
 > | Attack | Target (Attack) | Damage | Range | Special |
 > | :--- | :---: | :---: | :---: | :--- |
-> | **Rusty Pitchfork** | 5+/1 | 1 | Melee | None |
+> | [[Rusty Pitchfork]] | 5+/1 | 1 | Melee | None |
 
 ---
 
@@ -60,7 +60,7 @@ To minimize GM cognitive load and prevent rules bloat, all enemy behaviors and c
 
 ### Layer 1: Ancestries
 Every creature belongs to exactly **one** Ancestry, which establishes its core behavioral and psychological foundation.
-*   **The Behavioral Foundation:** The Ancestry dictates how the creature reacts to **Morale Checks**, psychological conditions (such as **Terrified** or **Dumb**), and natural healing.
+*   **The Behavioral Foundation:** The Ancestry dictates how the creature reacts to [[Morale Checks]], psychological conditions (such as [[Terrified]] or [[Dumb]]), and natural healing.
 *   **GM Resolution:** Ancestry rules are universal. The GM resolves ancestry behaviors using the main rules reference, meaning individual stat blocks do not need to print these rules.
 
 ### Layer 2: Standardized Tags
@@ -81,48 +81,48 @@ Unique Statblock Traits are specialized behaviors or combat tactics custom-writt
 Enemy Mobs represent swarms of standard, weak units acting as a single tactical squad.
 
 ### Symmetrical Health (Dice-HP)
-An Enemy **Mob** of **Size X** (Size 1–5) is tracked using **X physical D6s** on the table, starting at the "6" face. 
+An Enemy [[Mob]] of [[Size X]] (Size 1–5) is tracked using [[X physical D6s]] on the table, starting at the "6" face. 
 *   **Standard Damage:** Damage reduces the face of a single die. Spillover damage applies. 
-*   **AoE / Cleave:** **Area of Effect (AoE)** and Cleave attacks apply their damage to **every single die** in the Mob's pool simultaneously.
-    *   *Cleave Attacks:* A player using a weapon/ability with the `Cleave` trait can distribute their excess **successes** to kill multiple units in the Mob (each multiple of the unit's **Defence TN** removes 1 point of Mob Size).
+*   **AoE / Cleave:** [[Area of Effect (AoE)]] and Cleave attacks apply their damage to **every single die** in the Mob's pool simultaneously.
+    *   *Cleave Attacks:* A player using a weapon/ability with the `Cleave` trait can distribute their excess **successes** to kill multiple units in the Mob (each multiple of the unit's [[Defence TN]] removes 1 point of Mob Size).
     *   *AoE Attacks:* An `AoE` attack (like a fire bomb) deals its flat damage directly to every die in the Mob's pool.
 
 ### Deterministic Damage Scaling
-An Enemy **Mob**'s automatic damage scales with its size:
+An Enemy [[Mob]]'s automatic damage scales with its size:
 $$\text{Mob Damage} = \text{Base Unit Damage} + (\text{Current Size} - 1)$$
 
 ### Mob Constraints
-*   **No Elite Mobs:** **Mobs** can only consist of standard, one-hit-kill enemies. Elite and Boss enemies must always be fought as individual units.
-*   **Mob Morale Units:** Each point of current **Mob** **Size** counts as one "unit" when calculating the 50% catastrophic loss threshold for group **Morale Checks**.
+*   **No Elite Mobs:** [[Mobs]] can only consist of standard, one-hit-kill enemies. Elite and Boss enemies must always be fought as individual units.
+*   **Mob Morale Units:** Each point of current [[Mob]] [[Size]] counts as one "unit" when calculating the 50% catastrophic loss threshold for group [[Morale Checks]].
 
 ---
 
 ## 5. Bosses, Elites, and Wounds
 
-Elite units and Bosses utilize a **Wounds** track.
-*   To deal **1 Wound** to a Boss, a player must roll **successes** equal to or greater than its **Defence** **Target Number (TN)** in a single attack.
+Elite units and Bosses utilize a [[Wounds]] track.
+*   To deal 1 [[Wound]] to a Boss, a player must roll **successes** equal to or greater than its [[Defence]] [[Target Number (TN)]] in a single attack.
 
 >> **GOLDEN RULE: The Overkill Rule**
->> For every multiple of the **Defence** **Target Number (TN)** achieved on a single roll, the Boss takes an additional **Wound**. 
+>> For every multiple of the [[Defence]] [[Target Number (TN)]] achieved on a single roll, the Boss takes an additional [[Wound]]. 
 
 ---
 
 ## 6. Morale & Group Flight
 
-Every enemy group has a static **Morale TN** (e.g. Peasant = **5+/1**, Guard = **5+/3**).
+Every enemy group has a static [[Morale TN]] (e.g. Peasant = **5+/1**, Guard = **5+/3**).
 
 ### The Morale Check
-A group **Morale Check** is triggered at the end of the round if the enemies suffered a catastrophic loss (e.g. losing 50% of their total units/**Mob** **Size**, their Commander dying, or suffering massive explosive damage).
+A group [[Morale Check]] is triggered at the end of the round if the enemies suffered a catastrophic loss (e.g. losing 50% of their total units/[[Mob]] [[Size]], their Commander dying, or suffering massive explosive damage).
 
-*   **The Roll:** The players roll a combined `Swarm Terror` pool of **d6s** against a target of **5+** (successes on 5 or 6). The number of dice in the pool equals the **total Size of all surviving Mobs + surviving PCs** in the current and adjacent **Zones**.
-*   **The Result:** If the players roll **successes** equal to or greater than the enemy group's **Morale TN**, the enemies break!
+*   **The Roll:** The players roll a combined `Swarm Terror` pool of **d6s** against a target of **5+** (successes on 5 or 6). The number of dice in the pool equals the **total Size of all surviving Mobs + surviving PCs** in the current and adjacent [[Zones]].
+*   **The Result:** If the players roll **successes** equal to or greater than the enemy group's [[Morale TN]], the enemies break!
 
 ### Fleeing
 When enemies break, they drop all heavy loot and must use their 2 Actions on their turns to move toward the nearest exit or safety. If their escape path is physically blocked, fleeing enemies will use their actions to shove, smash, or attack whatever stands in their way.
 
 ### Regrouping (The Rally)
-If there is a surviving **Enemy Commander** who did not break, they can use an action to rally the fleeing troops. This triggers an opposed Morale Check:
-*   The players roll their Swarm Terror pool against the Commander's **Morale TN**. 
+If there is a surviving [[Enemy Commander]] who did not break, they can use an action to rally the fleeing troops. This triggers an opposed Morale Check:
+*   The players roll their Swarm Terror pool against the Commander's [[Morale TN]]. 
     *   *Fiction:* The players roll to represent the Goblins banging their shields, screaming, and actively drowning out the Commander's orders to keep the enemies panicked.
 *   If the players succeed, the troops keep running.
 *   If the players fail, the Commander successfully rallies the troops, and they stop fleeing.

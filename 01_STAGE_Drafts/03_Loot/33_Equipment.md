@@ -2,7 +2,7 @@
 
 *UPDATING NEEDED!* - As per the crafting rules the equipment should be an extension of the crafting rules, not the other way around. This means that the crafting rules should define the tiers of equipment, and the equipment section should reflect that. 
 
-A Goblin's power comes from the shiny junk they carry. Equipment is highly abstracted to keep the game fast and focus entirely on **Bulk** (inventory management) and tactical choice.
+A Goblin's power comes from the shiny junk they carry. Equipment is highly abstracted to keep the game fast and focus entirely on [[Bulk]] (inventory management) and tactical choice.
 
 ## Attributes and Traits
 

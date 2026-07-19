@@ -20,7 +20,7 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 
 ## Combat & Movement
 *   **Zone:** An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.
-*   **Cover:** Defensive positioning against ranged attacks. Partial cover grants a **Boon** (+1d) to Dodge, or imposes a **Bane** (-1d) on attacks. Full cover blocks targeting. See [[02 Combat]].
+*   **Cover:** Defensive positioning against ranged attacks. Partial cover grants a [[Boon]] (+1d) to Dodge, or imposes a [[Bane]] (-1d) on attacks. Full cover blocks targeting. See [[02 Combat]].
 *   **Dragging:** Pulling Loot that exceeds your carry capacity. Halves your Movement and imposes penalties.
 *   **Standard Action:** The primary actions spent on a turn (3 per round). Used for Move, Attack, Plunder, Order, or Manipulate. See [[02 Combat]].
 *   **Free Action:** Minor or immediate actions that cost no Standard Actions (e.g. dropping a weapon or speaking). See [[02 Combat]].
@@ -33,7 +33,7 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 *   **Bulk:** A measure of how heavy/unwieldy an item is. High bulk reduces movement or requires multiple goblins.
 *   **Tags:** Dynamic elements and physical forces (always bracketed, e.g., `[Fire]`, `[Sticky]`, `[Toxic]`) that can be dynamically slapped onto or stripped away from zones, weapons, and creatures. For a full glossary of baseline tag behaviors and element synthesis rules, see [Master Tag Index](08_Master_Tag_Index.md).
 *   **Traits (Weapon/Armor):** Static physical properties built into equipment (e.g., `Bashing`, `Cutting`, `Heavy`, `Loud`). They are permanent properties of the item's design, modify core rules math, and do not participate in element synthesis. See [Equipment](33_Equipment.md).
-*   **Status Effects (Conditions):** Volatile states applied to characters (e.g., **Prone**, **Stunned**, **Weakened**, **Restrained**, **Blinded**, **Terrified**, and **Staggered**). See [Grit and Death](07_Wounds_Conditions.md#conditions).
+*   **Status Effects (Conditions):** Volatile states applied to characters (e.g., [[Prone]], [[Stunned]], [[Weakened]], [[Restrained]], [[Blinded]], [[Terrified]], and [[Staggered]]). See [Grit and Death](07_Wounds_Conditions.md#conditions).
 *   **First Pick ("My Mob, My Loot"):** If a specific PC's Mob physically carries a usable item out of the dungeon, their Gang gets First Pick to claim it before the rest of the loot is pooled.
 *   **Raid Boss (MVP):** A title voted upon at the end of a raid. Grants the winner a Flair Item or Temporary Boon for the next raid.
 *   **Lair Upgrades:** Improvements to the base bought with pooled Loot, granting permanent boons to all raiding goblins.
