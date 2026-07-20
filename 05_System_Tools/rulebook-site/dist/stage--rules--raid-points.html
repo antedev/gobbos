@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -31,7 +31,11 @@
 <a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
 <a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
     </nav>
-    <div class="top-bar-right">
+    <div class="top-bar-right" style="display: flex; gap: 8px; align-items: center;">
+      <button class="sync-btn" id="headerSyncBtn" title="Sync & Rebuild Site" aria-label="Sync and rebuild site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sync-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Sync</span>
+      </button>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
         <span class="theme-icon theme-icon--light">☀️</span>
         <span class="theme-icon theme-icon--dark">🌙</span>
@@ -57,15 +61,16 @@
 
     <!-- Main Content -->
     <main class="main-content" id="mainContent">
-      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
-        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      <div id="statusBanner" style="display: none; align-items: center; justify-content: space-between; gap: 16px; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        <span>⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.</span>
+        <button class="sync-banner-btn" id="bannerSyncBtn">Rerun Sync</button>
       </div>
       <h1 id="raid-points-and-scouting" tabindex="-1">Raid Points &amp; Scouting</h1>
 <p><em>Before you hit the trail, you need to know what you are raiding. Is it a peasant’s pig sty or a heavily fortified dwarven outpost? Scouting reveals the targets, but chasing every last bit of glory will draw the guards’ attention.</em></p>
-<p><a href="stage--rules--keywords-index.html#raid-points" class="wikilink" title="Objective metrics earned during a raid that determine the final Glory and XP payouts.">Raid Points</a> (Glory) measure the success and chaos of a raid. They are earned by completing objectives and are converted into shared Boss XP during Homecoming (see <a href="15_Level_Up%20and%20death.md">Level Up &amp; Death</a>).</p>
+<p><a href="stage--rules--keywords-index.html#raid-points" class="wikilink" data-tooltip="Objective metrics earned during a raid that determine the final Glory and XP payouts.">Raid Points</a> (Glory) measure the success and chaos of a raid. They are earned by completing objectives and are converted into shared Boss XP during Homecoming (see <a href="15_Level_Up%20and%20death.md">Level Up &amp; Death</a>).</p>
 <hr>
 <h2 id="danger-ratings" tabindex="-1">Danger Ratings</h2>
-<p>Every Raid Location has a <a href="stage--rules--keywords-index.html#base-danger-rating" class="wikilink" title="The default difficulty profile of a raid, setting the default Difficulty and TN of all unlisted hazards.">Base Danger Rating</a> from <strong>1 to 5</strong> (T1 to T5). This rating determines the strength of the enemies, the severity of environmental hazards, and the rate at which threats escalate.</p>
+<p>Every Raid Location has a <a href="stage--rules--keywords-index.html#base-danger-rating" class="wikilink" data-tooltip="The default difficulty profile of a raid, setting the default Difficulty and TN of all unlisted hazards.">Base Danger Rating</a> from <strong>1 to 5</strong> (T1 to T5). This rating determines the strength of the enemies, the severity of environmental hazards, and the rate at which threats escalate.</p>
 <ul>
 <li><strong>T1 (Low Risk):</strong> Farmhouses, goblin outcasts, wild beast dens.</li>
 <li><strong>T2 (Normal Risk):</strong> Human villages, bandit hideouts, abandoned mines.</li>
@@ -75,17 +80,17 @@
 </ul>
 <hr>
 <h2 id="the-scouting-task" tabindex="-1">The Scouting Task</h2>
-<p>During the Labor step of the <a href="stage--rules--keywords-index.html#lair-phase" class="wikilink" title="The downtime period between raids where players spend Loot to upgrade the Lair, craft, and level up.">Lair Phase</a>, players can allocate <strong>Laborer Dice</strong> to <a href="stage--rules--keywords-index.html#scouting" class="wikilink" title="A travel role utilizing Slink or Brains to identify path hazards and choose route options.">Scouting</a> a chosen Raid Location. Roll the allocated <a href="stage--rules--keywords-index.html#dice-pool" class="wikilink" title="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">dice pool</a> (successes on <strong>4+</strong>).</p>
+<p>During the Labor step of the <a href="stage--rules--keywords-index.html#lair-phase" class="wikilink" data-tooltip="The downtime period between raids where players spend Loot to upgrade the Lair, craft, and level up.">Lair Phase</a>, players can allocate <strong>Laborer Dice</strong> to <a href="stage--rules--keywords-index.html#scouting" class="wikilink" data-tooltip="A travel role utilizing Slink or Brains to identify path hazards and choose route options.">Scouting</a> a chosen Raid Location. Roll the allocated <a href="stage--rules--keywords-index.html#dice-pool" class="wikilink" data-tooltip="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">Dice pool</a> (successes on <strong>4+</strong>).</p>
 <p>The number of successes determines what the party knows and what opportunities they can target:</p>
 <ul>
-<li><strong>0 Successes (Going in Blind):</strong> The party knows the location exists but nothing else. They do not know the Danger Rating or any Targets of Opportunity. The party suffers a <a href="stage--rules--keywords-index.html#bane" class="wikilink" title="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> (-1d) on their first Zone entry test during the raid.</li>
-<li><strong>1 Success:</strong> Reveals the <a href="stage--rules--keywords-index.html#base-danger-rating" class="wikilink" title="The default difficulty profile of a raid, setting the default Difficulty and TN of all unlisted hazards.">Base Danger Rating</a> and the <strong>Main Objective</strong> (worth <strong>3–5 <a href="stage--rules--keywords-index.html#raid-points" class="wikilink" title="Objective metrics earned during a raid that determine the final Glory and XP payouts.">Raid Points</a></strong> upon completion).</li>
-<li><strong>2 Successes:</strong> In addition to the above, reveals 1 <strong>Target of Opportunity</strong> (worth <strong>+2 <a href="stage--rules--keywords-index.html#raid-points" class="wikilink" title="Objective metrics earned during a raid that determine the final Glory and XP payouts.">Raid Points</a></strong>).</li>
-<li><strong>3+ Successes:</strong> In addition to the above, reveals 2 <strong>Targets of Opportunity</strong> (worth <strong>+4 <a href="stage--rules--keywords-index.html#raid-points" class="wikilink" title="Objective metrics earned during a raid that determine the final Glory and XP payouts.">Raid Points</a></strong> total) and a <strong>Secret Bypass</strong> (granting the party a <a href="stage--rules--keywords-index.html#boon" class="wikilink" title="A positive modifier granting a +1d bonus on a test's dice pool. Multiple Boons do not stack.">Boon</a> (+1d) on their first Zone entry test).</li>
+<li><strong>0 Successes (Going in Blind):</strong> The party knows the location exists but nothing else. They do not know the Danger Rating or any Targets of Opportunity. The party suffers a <a href="stage--rules--keywords-index.html#bane" class="wikilink" data-tooltip="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> (-1d) on their first Zone entry test during the raid.</li>
+<li><strong>1 Success:</strong> Reveals the <a href="stage--rules--keywords-index.html#base-danger-rating" class="wikilink" data-tooltip="The default difficulty profile of a raid, setting the default Difficulty and TN of all unlisted hazards.">Base Danger Rating</a> and the <strong>Main Objective</strong> (worth <strong>3–5 <a href="stage--rules--keywords-index.html#raid-points" class="wikilink" data-tooltip="Objective metrics earned during a raid that determine the final Glory and XP payouts.">Raid Points</a></strong> upon completion).</li>
+<li><strong>2 Successes:</strong> In addition to the above, reveals 1 <strong>Target of Opportunity</strong> (worth <strong>+2 <a href="stage--rules--keywords-index.html#raid-points" class="wikilink" data-tooltip="Objective metrics earned during a raid that determine the final Glory and XP payouts.">Raid Points</a></strong>).</li>
+<li><strong>3+ Successes:</strong> In addition to the above, reveals 2 <strong>Targets of Opportunity</strong> (worth <strong>+4 <a href="stage--rules--keywords-index.html#raid-points" class="wikilink" data-tooltip="Objective metrics earned during a raid that determine the final Glory and XP payouts.">Raid Points</a></strong> total) and a <strong>Secret Bypass</strong> (granting the party a <a href="stage--rules--keywords-index.html#boon" class="wikilink" data-tooltip="A positive modifier granting a +1d bonus on a test's dice pool. Multiple Boons do not stack.">Boon</a> (+1d) on their first Zone entry test).</li>
 </ul>
 <blockquote>
 <blockquote>
-<p><strong>Targets of Opportunity</strong>: These are secondary objectives revealed by scouting (e.g., <em>“Steal the Captain’s ledger,” “Burn the grain store,” or “Slay the guard dog”</em>). Completing them is optional but increases your total <a href="stage--rules--keywords-index.html#raid-points" class="wikilink" title="Objective metrics earned during a raid that determine the final Glory and XP payouts.">Raid Points</a>.</p>
+<p><strong>Targets of Opportunity</strong>: These are secondary objectives revealed by scouting (e.g., <em>“Steal the Captain’s ledger,” “Burn the grain store,” or “Slay the guard dog”</em>). Completing them is optional but increases your total <a href="stage--rules--keywords-index.html#raid-points" class="wikilink" data-tooltip="Objective metrics earned during a raid that determine the final Glory and XP payouts.">Raid Points</a>.</p>
 </blockquote>
 </blockquote>
 <hr>
@@ -94,7 +99,7 @@
 <h3 id="the-alert-track" tabindex="-1">The Alert Track</h3>
 <p>During a raid, the GM tracks the location’s current <strong>Alert level</strong>.</p>
 <ul>
-<li><strong>Starting Alert:</strong> The Alert level starts equal to the location’s <a href="stage--rules--keywords-index.html#base-danger-rating" class="wikilink" title="The default difficulty profile of a raid, setting the default Difficulty and TN of all unlisted hazards.">Base Danger Rating</a> (e.g., 2 for a T2 village).</li>
+<li><strong>Starting Alert:</strong> The Alert level starts equal to the location’s <a href="stage--rules--keywords-index.html#base-danger-rating" class="wikilink" data-tooltip="The default difficulty profile of a raid, setting the default Difficulty and TN of all unlisted hazards.">Base Danger Rating</a> (e.g., 2 for a T2 village).</li>
 <li><strong>Alert Checks:</strong> Each time the party moves to a new Zone, completes a Target of Opportunity, or spends an active round resting/healing, the GM rolls <strong>1d6</strong>:
 <ul>
 <li>If the roll is <strong>strictly greater</strong> than the current Alert level: The party remains undetected.</li>
@@ -207,13 +212,89 @@
         .then(data => {
           if (data && data.status === 'error') {
             const banner = document.getElementById('statusBanner');
-            if (banner) banner.style.display = 'block';
+            if (banner) banner.style.display = 'flex';
           }
         })
         .catch(err => {
           // If status.json does not exist or fails, do nothing
           console.log('Update status check skipped:', err);
         });
+    })();
+
+    // --- Anchor Scroll Fix ---
+    (function() {
+      function scrollToHash() {
+        if (window.location.hash) {
+          const id = decodeURIComponent(window.location.hash.substring(1));
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }, 100);
+          }
+        }
+      }
+      window.addEventListener('hashchange', scrollToHash);
+      window.addEventListener('DOMContentLoaded', scrollToHash);
+      window.addEventListener('load', scrollToHash);
+    })();
+
+    // --- Manual Sync Trigger ---
+    (function() {
+      const headerBtn = document.getElementById('headerSyncBtn');
+      const bannerBtn = document.getElementById('bannerSyncBtn');
+      
+      function handleSync(btn) {
+        if (!btn) return;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        
+        // Add spinning/loading animation class
+        if (btn.classList.contains('sync-btn')) {
+          btn.classList.add('sync-btn--spinning');
+          btn.querySelector('span').textContent = 'Syncing...';
+        } else {
+          btn.textContent = 'Syncing...';
+        }
+        
+        fetch('/api/run-sync', { method: 'POST' })
+          .then(res => {
+            if (!res.ok) throw new Error('Server returned error status: ' + res.status);
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.status === 'success') {
+              if (btn.classList.contains('sync-btn')) {
+                btn.querySelector('span').textContent = 'Success!';
+              } else {
+                btn.textContent = 'Success!';
+              }
+              // Reload page to reflect changes
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              throw new Error(data.error || 'Sync failed');
+            }
+          })
+          .catch(err => {
+            console.error('Sync failed:', err);
+            alert('Failed to rerun sync: ' + err.message);
+            // Restore button
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            if (btn.classList.contains('sync-btn')) {
+              btn.classList.remove('sync-btn--spinning');
+            }
+          });
+      }
+
+      if (headerBtn) {
+        headerBtn.addEventListener('click', () => handleSync(headerBtn));
+      }
+      if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
     })();
   </script>
 

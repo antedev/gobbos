@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -31,7 +31,11 @@
 <a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
 <a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
     </nav>
-    <div class="top-bar-right">
+    <div class="top-bar-right" style="display: flex; gap: 8px; align-items: center;">
+      <button class="sync-btn" id="headerSyncBtn" title="Sync & Rebuild Site" aria-label="Sync and rebuild site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sync-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Sync</span>
+      </button>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
         <span class="theme-icon theme-icon--light">☀️</span>
         <span class="theme-icon theme-icon--dark">🌙</span>
@@ -57,8 +61,9 @@
 
     <!-- Main Content -->
     <main class="main-content" id="mainContent">
-      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
-        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      <div id="statusBanner" style="display: none; align-items: center; justify-content: space-between; gap: 16px; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        <span>⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.</span>
+        <button class="sync-banner-btn" id="bannerSyncBtn">Rerun Sync</button>
       </div>
       <h1 id="magic" tabindex="-1">Magic</h1>
 <p><em>Goblins don’t read dusty, boring spellbooks. We shout words we found carved on cave walls, squeeze glowing mushrooms until they pop, and hold onto the raw power of the cosmos until our fingernails smoke. If you aren’t risking a complete detonation, are you even really casting?</em></p>
@@ -69,20 +74,20 @@
 <p>Not every goblin can channel the unstable threads of magic. To cast a spell, a goblin must meet the following criteria:</p>
 <ol>
 <li><strong>Brains 2+:</strong> You must have at least 1 <strong>Power Word slot</strong> (equal to <strong>Brains - 1</strong>) to hold a spell in your mind. Goblins with Brains 1 have 0 slots and cannot cast magic.</li>
-<li><strong>Magical Conduit:</strong> You must possess a magic-focused <a href="stage--rules--keywords-index.html#quirk" class="wikilink" title="A modular base ability (a &quot;Knack&quot; or action) that defines a character's fighting style or special talent. Measured in Tiers (T1-T5).">Quirk</a> (such as <em>Weirdo</em> or <em>Shaman</em>) or be wielding a magical <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> (such as a runic staff, crystal skull, or channeling wand).</li>
+<li><strong>Magical Conduit:</strong> You must possess a magic-focused <a href="stage--rules--keywords-index.html#quirk" class="wikilink" data-tooltip="A modular base ability (a &quot;Knack&quot; or action) that defines a character's fighting style or special talent. Measured in Tiers (T1-T5).">Quirk</a> (such as <em>Weirdo</em> or <em>Shaman</em>) or be wielding a magical <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> (such as a runic staff, crystal skull, or channeling wand).</li>
 </ol>
 <h3 id="power-words-and-slots" tabindex="-1">Power Words and Slots</h3>
-<p>Goblins do not learn “spells.” Instead, they memorize <a href="stage--rules--keywords-index.html#power-words" class="wikilink" title="Modular magical components representing alchemical elements or domains used to construct spells.">Power Words</a>, which are represented by the exact same <strong>Narrative Descriptors (Tags)</strong> used for Quirks, Gang Shenanigans, and <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> Crafting (e.g., <code>[Fire]</code>, <code>[Sticky]</code>, <code>[Shock]</code>, <code>[Spooky]</code>, <code>[Slip]</code>).</p>
+<p>Goblins do not learn “spells.” Instead, they memorize <a href="stage--rules--keywords-index.html#power-words" class="wikilink" data-tooltip="Modular magical components representing alchemical elements or domains used to construct spells.">Power Words</a>, which are represented by the exact same <strong>Narrative Descriptors (Tags)</strong> used for Quirks, Gang Shenanigans, and <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> Crafting (e.g., <code>[Fire]</code>, <code>[Sticky]</code>, <code>[Shock]</code>, <code>[Spooky]</code>, <code>[Slip]</code>).</p>
 <ul>
-<li><strong>Prepared Words:</strong> Your Power Word slots determine how many Words you can have memorized and ready to cast. Attuning to and swapping <a href="stage--rules--keywords-index.html#power-words" class="wikilink" title="Modular magical components representing alchemical elements or domains used to construct spells.">Power Words</a> in your slots takes place in the Lair during downtime.</li>
-<li><strong>Accessing Tags:</strong> If you have access to a Tag through your character’s Quirks, Gear, <a href="stage--rules--keywords-index.html#lair-upgrades" class="wikilink" title="Improvements to the base bought with pooled Loot, granting permanent boons to all raiding goblins.">Lair upgrades</a>, or Gang traits, you can attune to it as a Power Word to fill one of your slots.</li>
+<li><strong>Prepared Words:</strong> Your Power Word slots determine how many Words you can have memorized and ready to cast. Attuning to and swapping <a href="stage--rules--keywords-index.html#power-words" class="wikilink" data-tooltip="Modular magical components representing alchemical elements or domains used to construct spells.">Power Words</a> in your slots takes place in the Lair during downtime.</li>
+<li><strong>Accessing Tags:</strong> If you have access to a Tag through your character’s Quirks, Gear, <a href="stage--rules--keywords-index.html#lair-upgrades" class="wikilink" data-tooltip="Improvements to the base bought with pooled Loot, granting permanent boons to all raiding goblins.">Lair upgrades</a>, or Gang traits, you can attune to it as a Power Word to fill one of your slots.</li>
 </ul>
 <hr>
 <h2 id="the-casting-loop" tabindex="-1">The Casting Loop</h2>
-<p>Casting a spell is a <a href="stage--rules--keywords-index.html#standard-action" class="wikilink" title="The primary actions spent on a turn (3 per round). Used for Move, Attack, Plunder, Order, or Manipulate. See [[02 Combat]].">standard Action</a>. When you cast a spell, perform the following steps:</p>
+<p>Casting a spell is a <a href="stage--rules--keywords-index.html#standard-action" class="wikilink" data-tooltip="The primary actions spent on a turn (3 per round). Used for Move, Attack, Plunder, Order, or Manipulate. See [[02 Combat]].">Standard Action</a>. When you cast a spell, perform the following steps:</p>
 <ol>
 <li><strong>Declare the Power Word:</strong> Announce the primary Tag you are channeling (e.g., <code>[Fire]</code>).</li>
-<li><strong>Roll the Brains Pool:</strong> Roll a number of <strong>d</strong> equal to your <a href="stage--rules--keywords-index.html#brains" class="wikilink" title="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> stat. The GM determines the Difficulty (<strong>Easy 4+</strong>, <strong>Normal 5+</strong>, <strong>Hard 6</strong>) based on the environment or the target’s resistance.</li>
+<li><strong>Roll the Brains Pool:</strong> Roll a number of <strong>d</strong> equal to your <a href="stage--rules--keywords-index.html#brains" class="wikilink" data-tooltip="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> stat. The GM determines the Difficulty (<strong>Easy 4+</strong>, <strong>Normal 5+</strong>, <strong>Hard 6</strong>) based on the environment or the target’s resistance.</li>
 <li><strong>Lock and Push:</strong>
 <ul>
 <li>To succeed at all, you must roll and lock in at least <strong>1 success</strong>.</li>
@@ -94,13 +99,13 @@
 </ol>
 <blockquote>
 <blockquote>
-<p><strong>RULE: <a href="stage--rules--keywords-index.html#exploding-dice" class="wikilink" title="Rolling a 6 counts as a success and allows you to roll another die.">Exploding Dice</a> & Magic</strong>
+<p><strong>RULE: <a href="stage--rules--keywords-index.html#exploding-dice" class="wikilink" data-tooltip="Rolling a 6 counts as a success and allows you to roll another die.">Exploding Dice</a> & Magic</strong>
 Any time a <strong>6</strong> is rolled, it explodes. Roll an additional die and add it to your pool of non-locked dice. You can lock this new die if it counts as a success, or reroll it if you choose to Push.</p>
 </blockquote>
 </blockquote>
 <hr>
 <h2 id="resolving-spell-effects" tabindex="-1">Resolving Spell Effects</h2>
-<p>The mechanical outcome of a spell is determined by the size of the largest matching set of success dice (e.g., a pair of <code>5</code>s, or three <code>6</code>s). This matching set determines the <a href="stage--rules--keywords-index.html#tier" class="wikilink" title="The mechanical power level of a Quirk, Tag, Oddity, or item, ranging from 1 to 5.">Tier</a> of the spell’s mechanical effect, matching the toolkit in [GDR-003: Unified Modular Powers System](…/01_Characters & Mobs/GDR-003_Unified_Modular_Powers_System.md):</p>
+<p>The mechanical outcome of a spell is determined by the size of the largest matching set of success dice (e.g., a pair of <code>5</code>s, or three <code>6</code>s). This matching set determines the <a href="stage--rules--keywords-index.html#tier" class="wikilink" data-tooltip="The mechanical power level of a Quirk, Tag, Oddity, or item, ranging from 1 to 5.">Tier</a> of the spell’s mechanical effect, matching the toolkit in [GDR-003: Unified Modular Powers System](…/01_Characters & Mobs/GDR-003_Unified_Modular_Powers_System.md):</p>
 <ul>
 <li><strong>Single Success (No Pairs):</strong> <strong>T1 Effect</strong> (Minor/Niche).</li>
 <li><strong>Pair (2-of-a-kind):</strong> <strong>T2 Effect</strong> (Standard).</li>
@@ -115,7 +120,7 @@ Any time a <strong>6</strong> is rolled, it explodes. Roll an additional die and
 <li>Add <strong>+1 Grit damage</strong> or <strong>+1 success</strong> to the spell’s effect.</li>
 </ul>
 <blockquote>
-<p><strong>Example:</strong> Fizzle casts <code>[Fire]</code> against a profile of <strong>5+</strong> (1 success) with a <a href="stage--rules--keywords-index.html#brains" class="wikilink" title="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> pool of <strong>5d</strong>.</p>
+<p><strong>Example:</strong> Fizzle casts <code>[Fire]</code> against a profile of <strong>5+</strong> (1 success) with a <a href="stage--rules--keywords-index.html#brains" class="wikilink" data-tooltip="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> pool of <strong>5d</strong>.</p>
 <ul>
 <li><strong>First Roll</strong>: <code>[5, 5, 2, 1, 1]</code> $\rightarrow$ Fizzle has a pair of <code>5</code>s. This is currently a <strong>T2 Effect</strong>.</li>
 <li><strong>The Push</strong>: Fizzle wants a bigger explosion. He locks the two <code>5</code>s and rerolls the other 3 dice.</li>
@@ -125,7 +130,7 @@ Any time a <strong>6</strong> is rolled, it explodes. Roll an additional die and
 </blockquote>
 <hr>
 <h2 id="chaotic-leakage-side-effects" tabindex="-1">Chaotic Leakage (Side Effects)</h2>
-<p>Channeling magic is sloppy. Any sets formed by non-success dice (faces that fell below the success threshold) represent magical energy leaking <a href="stage--rules--keywords-index.html#out-of-control" class="wikilink" title="A Mob state triggered by failed command rolls or size limits. The Mob acts randomly under GM direction.">out of control</a>.</p>
+<p>Channeling magic is sloppy. Any sets formed by non-success dice (faces that fell below the success threshold) represent magical energy leaking <a href="stage--rules--keywords-index.html#out-of-control" class="wikilink" data-tooltip="A Mob state triggered by failed command rolls or size limits. The Mob acts randomly under GM direction.">Out of control</a>.</p>
 <ul>
 <li>A <strong>pair</strong> of non-success dice triggers a <strong>T2 Side Effect</strong>.</li>
 <li>A <strong>triple</strong> of non-success dice triggers a <strong>T3 Side Effect</strong>.</li>
@@ -149,25 +154,25 @@ Because Hard difficulty (success only on 6) produces more non-success dice, Hard
 <h3 id="category-1-elemental-physical" tabindex="-1">Category 1: Elemental / Physical</h3>
 <h4 id="elemental-side-effects-leakage" tabindex="-1">Elemental Side Effects (Leakage)</h4>
 <ul>
-<li><strong>T2 Leakage:</strong> The element coats the floor or air in your immediate vicinity. All movement in your Zone suffers a <a href="stage--rules--keywords-index.html#bane" class="wikilink" title="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> until cleared.</li>
+<li><strong>T2 Leakage:</strong> The element coats the floor or air in your immediate vicinity. All movement in your Zone suffers a <a href="stage--rules--keywords-index.html#bane" class="wikilink" data-tooltip="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> until cleared.</li>
 <li><strong>T3 Leakage:</strong> A sudden backfire scorches or covers you. You suffer a <strong>T2 Condition</strong> matching your tag (e.g., <em>Burnt</em> for <code>[Fire]</code>, <em>Weakened</em> for <code>[Toxic]</code>).</li>
-<li><strong>T4+ Leakage:</strong> A wild vortex of the element fills your Zone. Every creature (friend or foe) in your Zone immediately loses 2 <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a>.</li>
+<li><strong>T4+ Leakage:</strong> A wild vortex of the element fills your Zone. Every creature (friend or foe) in your Zone immediately loses 2 <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a>.</li>
 </ul>
 <h4 id="elemental-spell-mishaps-farkle" tabindex="-1">Elemental Spell Mishaps (Farkle)</h4>
 <ul>
-<li><strong>Farkle:</strong> The spell detonates in your hands. You fail to cast the spell, lose 2 <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a>, and the zone you occupy gains a permanent hazard matching the tag (e.g., a raging fire zone or a floor covered in sticky sludge).</li>
+<li><strong>Farkle:</strong> The spell detonates in your hands. You fail to cast the spell, lose 2 <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a>, and the zone you occupy gains a permanent hazard matching the tag (e.g., a raging fire zone or a floor covered in sticky sludge).</li>
 </ul>
 <hr>
 <h3 id="category-2-mental-social" tabindex="-1">Category 2: Mental / Social</h3>
 <h4 id="mental-side-effects-leakage" tabindex="-1">Mental Side Effects (Leakage)</h4>
 <ul>
 <li><strong>T2 Leakage:</strong> Your eyes glow and you speak in overlapping whispers. You cannot speak normally or coordinate with your gang until the end of your next turn.</li>
-<li><strong>T3 Leakage:</strong> The magical echo frightens nearby creatures. All allies in your Zone suffer a <a href="stage--rules--keywords-index.html#bane" class="wikilink" title="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> on their next action.</li>
+<li><strong>T3 Leakage:</strong> The magical echo frightens nearby creatures. All allies in your Zone suffer a <a href="stage--rules--keywords-index.html#bane" class="wikilink" data-tooltip="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> on their next action.</li>
 <li><strong>T4+ Leakage:</strong> The mental pressure causes temporary madness. You suffer the <em>Confused</em> or <em>Terrified</em> condition, and cannot give orders to your mob.</li>
 </ul>
 <h4 id="mental-spell-mishaps-farkle" tabindex="-1">Mental Spell Mishaps (Farkle)</h4>
 <ul>
-<li><strong>Farkle:</strong> Your mind fractures under the strain. You black out for a moment, fail to cast the spell, and suffer a permanent <a href="stage--rules--keywords-index.html#bane" class="wikilink" title="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> to all <a href="stage--rules--keywords-index.html#brains" class="wikilink" title="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> tests until you rest in the Lair.</li>
+<li><strong>Farkle:</strong> Your mind fractures under the strain. You black out for a moment, fail to cast the spell, and suffer a permanent <a href="stage--rules--keywords-index.html#bane" class="wikilink" data-tooltip="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> to all <a href="stage--rules--keywords-index.html#brains" class="wikilink" data-tooltip="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> tests until you rest in the Lair.</li>
 </ul>
 <hr>
 <h3 id="category-3-movement-space" tabindex="-1">Category 3: Movement / Space</h3>
@@ -175,7 +180,7 @@ Because Hard difficulty (success only on 6) produces more non-success dice, Hard
 <ul>
 <li><strong>T2 Leakage:</strong> Gravity wobbles. You are pulled 1 Zone in a random direction or knocked prone.</li>
 <li><strong>T3 Leakage:</strong> Space warps unpredictably. You and a random ally or enemy in your Zone swap places.</li>
-<li><strong>T4+ Leakage:</strong> You become partially out of sync with reality. You suffer a <a href="stage--rules--keywords-index.html#bane" class="wikilink" title="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> on all physical actions (<strong>Vigor</strong> and <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a>) until the end of the encounter.</li>
+<li><strong>T4+ Leakage:</strong> You become partially out of sync with reality. You suffer a <a href="stage--rules--keywords-index.html#bane" class="wikilink" data-tooltip="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> on all physical actions (<strong>Vigor</strong> and <a href="stage--rules--keywords-index.html#slink" class="wikilink" data-tooltip="Main stat representing agility, stealth, and ranged combat capability.">Slink</a>) until the end of the encounter.</li>
 </ul>
 <h4 id="movement-spell-mishaps-farkle" tabindex="-1">Movement Spell Mishaps (Farkle)</h4>
 <ul>
@@ -285,13 +290,89 @@ Because Hard difficulty (success only on 6) produces more non-success dice, Hard
         .then(data => {
           if (data && data.status === 'error') {
             const banner = document.getElementById('statusBanner');
-            if (banner) banner.style.display = 'block';
+            if (banner) banner.style.display = 'flex';
           }
         })
         .catch(err => {
           // If status.json does not exist or fails, do nothing
           console.log('Update status check skipped:', err);
         });
+    })();
+
+    // --- Anchor Scroll Fix ---
+    (function() {
+      function scrollToHash() {
+        if (window.location.hash) {
+          const id = decodeURIComponent(window.location.hash.substring(1));
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }, 100);
+          }
+        }
+      }
+      window.addEventListener('hashchange', scrollToHash);
+      window.addEventListener('DOMContentLoaded', scrollToHash);
+      window.addEventListener('load', scrollToHash);
+    })();
+
+    // --- Manual Sync Trigger ---
+    (function() {
+      const headerBtn = document.getElementById('headerSyncBtn');
+      const bannerBtn = document.getElementById('bannerSyncBtn');
+      
+      function handleSync(btn) {
+        if (!btn) return;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        
+        // Add spinning/loading animation class
+        if (btn.classList.contains('sync-btn')) {
+          btn.classList.add('sync-btn--spinning');
+          btn.querySelector('span').textContent = 'Syncing...';
+        } else {
+          btn.textContent = 'Syncing...';
+        }
+        
+        fetch('/api/run-sync', { method: 'POST' })
+          .then(res => {
+            if (!res.ok) throw new Error('Server returned error status: ' + res.status);
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.status === 'success') {
+              if (btn.classList.contains('sync-btn')) {
+                btn.querySelector('span').textContent = 'Success!';
+              } else {
+                btn.textContent = 'Success!';
+              }
+              // Reload page to reflect changes
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              throw new Error(data.error || 'Sync failed');
+            }
+          })
+          .catch(err => {
+            console.error('Sync failed:', err);
+            alert('Failed to rerun sync: ' + err.message);
+            // Restore button
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            if (btn.classList.contains('sync-btn')) {
+              btn.classList.remove('sync-btn--spinning');
+            }
+          });
+      }
+
+      if (headerBtn) {
+        headerBtn.addEventListener('click', () => handleSync(headerBtn));
+      }
+      if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
     })();
   </script>
 

@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -31,7 +31,11 @@
 <a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
 <a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
     </nav>
-    <div class="top-bar-right">
+    <div class="top-bar-right" style="display: flex; gap: 8px; align-items: center;">
+      <button class="sync-btn" id="headerSyncBtn" title="Sync & Rebuild Site" aria-label="Sync and rebuild site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sync-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Sync</span>
+      </button>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
         <span class="theme-icon theme-icon--light">☀️</span>
         <span class="theme-icon theme-icon--dark">🌙</span>
@@ -57,13 +61,14 @@
 
     <!-- Main Content -->
     <main class="main-content" id="mainContent">
-      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
-        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      <div id="statusBanner" style="display: none; align-items: center; justify-content: space-between; gap: 16px; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        <span>⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.</span>
+        <button class="sync-banner-btn" id="bannerSyncBtn">Rerun Sync</button>
       </div>
       <h1 id="grit-and-death" tabindex="-1">Grit and Death</h1>
-<p><a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> is the mechanical representation of a Boss’s health and resilience. As the game aims for quick and deadly combat, it is up to the GM and player to decide how losing <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> is represented in the fiction. Mechanically, each point of <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> damage is the same, no matter the cause. Gobbos can’t take many hits, but they heal quickly; lost <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> is typically fully recovered after a few hours of rest.</p>
+<p><a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> is the mechanical representation of a Boss’s health and resilience. As the game aims for quick and deadly combat, it is up to the GM and player to decide how losing <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> is represented in the fiction. Mechanically, each point of <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> damage is the same, no matter the cause. Gobbos can’t take many hits, but they heal quickly; lost <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> is typically fully recovered after a few hours of rest.</p>
 <h2 id="death" tabindex="-1">Death</h2>
-<p>When a PC’s <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> reaches 0, they are dead. However, they are allowed 1 <a href="stage--rules--keywords-index.html#action" class="wikilink" title="The resource spent on a turn to perform standard or free maneuvers. Goblins receive 3 Standard Actions and Mobs receive 2.">Action</a> + 1 <a href="stage--rules--keywords-index.html#order-action" class="wikilink" title="The action spent to direct a Mob, executing their priority combat behavior.">Order Action</a> that they can take immediately at the point of death as a final act. This allows the player to go out with a bang in an epic scene. Therefore, this final action is always <a href="stage--rules--keywords-index.html#easy" class="wikilink" title="A test Difficulty requiring a die face of 4+ to score a success.">Easy</a>, no matter the circumstances. The normal rules apply, but by the <strong>Rule of Cool</strong>, the GM should be lenient on what is possible. In the same way, the <a href="stage--rules--keywords-index.html#order" class="wikilink" title="A Standard Action used by a PC Boss to direct a Mob's actions, bypassing command rolls for controlled Mobs.">Order</a> action cannot fail if the Mob being ordered is within range. Then, the Boss dies, and their gear is dropped where they fell.</p>
+<p>When a PC’s <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> reaches 0, they are dead. However, they are allowed 1 <a href="stage--rules--keywords-index.html#action" class="wikilink" data-tooltip="The resource spent on a turn to perform standard or free maneuvers. Goblins receive 3 Standard Actions and Mobs receive 2.">Action</a> + 1 <a href="stage--rules--keywords-index.html#order-action" class="wikilink" data-tooltip="The action spent to direct a Mob, executing their priority combat behavior.">Order Action</a> that they can take immediately at the point of death as a final act. This allows the player to go out with a bang in an epic scene. Therefore, this final action is always <a href="stage--rules--keywords-index.html#easy" class="wikilink" data-tooltip="A test Difficulty requiring a die face of 4+ to score a success.">Easy</a>, no matter the circumstances. The normal rules apply, but by the <strong>Rule of Cool</strong>, the GM should be lenient on what is possible. In the same way, the <a href="stage--rules--keywords-index.html#order" class="wikilink" data-tooltip="A Standard Action used by a PC Boss to direct a Mob's actions, bypassing command rolls for controlled Mobs.">Order</a> action cannot fail if the Mob being ordered is within range. Then, the Boss dies, and their gear is dropped where they fell.</p>
 <h3 id="temporary-pc" tabindex="-1">Temporary PC</h3>
 <p>The player cannot create a new PC until they are back in the Lair. But in the meantime, if a Mob of the Gang is still available, one goblin will step forward to take over as the temporary boss. This goblin is not a PC, but is controlled by the player. It has no talent (other than what is given as native for the whole Gang), and every stat is 1 lower than the deceased PC, to a minimum of 1.</p>
 <h1 id="conditions" tabindex="-1">Conditions</h1>
@@ -78,63 +83,63 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="stage--rules--keywords-index.html#weakened" class="wikilink" title="A condition imposing a -1d Bane on all action tests.">Weakened</a></td>
-<td><strong>-1d</strong> on <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a></td>
+<td><a href="stage--rules--keywords-index.html#weakened" class="wikilink" data-tooltip="A condition imposing a -1d Bane on all action tests.">Weakened</a></td>
+<td><strong>-1d</strong> on <a href="stage--rules--keywords-index.html#tough" class="wikilink" data-tooltip="Main stat representing physical power, raw force, and melee combat capability.">Tough</a></td>
 <td><strong>-1d</strong> on Attack</td>
 </tr>
 <tr>
-<td><a href="stage--rules--keywords-index.html#restrained" class="wikilink" title="A condition preventing movement and imposing a -1d Bane to Dodge reactions.">Restrained</a></td>
-<td><strong>-1d</strong> on <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a>, <a href="stage--rules--keywords-index.html#movement" class="wikilink" title="A stat or action indicating how many Zones a character or Mob can cross on their turn.">Movement</a> becomes 0</td>
-<td><strong>-1d</strong> on Dodge, <a href="stage--rules--keywords-index.html#movement" class="wikilink" title="A stat or action indicating how many Zones a character or Mob can cross on their turn.">Movement</a> becomes 0</td>
+<td><a href="stage--rules--keywords-index.html#restrained" class="wikilink" data-tooltip="A condition preventing movement and imposing a -1d Bane to Dodge reactions.">Restrained</a></td>
+<td><strong>-1d</strong> on <a href="stage--rules--keywords-index.html#slink" class="wikilink" data-tooltip="Main stat representing agility, stealth, and ranged combat capability.">Slink</a>, <a href="stage--rules--keywords-index.html#movement" class="wikilink" data-tooltip="A stat or action indicating how many Zones a character or Mob can cross on their turn.">Movement</a> becomes 0</td>
+<td><strong>-1d</strong> on Dodge, <a href="stage--rules--keywords-index.html#movement" class="wikilink" data-tooltip="A stat or action indicating how many Zones a character or Mob can cross on their turn.">Movement</a> becomes 0</td>
 </tr>
 <tr>
-<td><a href="stage--rules--keywords-index.html#dumb" class="wikilink" title="A condition preventing the wielder from casting spells or using Brains-based active Quirks.">Dumb</a></td>
-<td><strong>-1d</strong> on <a href="stage--rules--keywords-index.html#brains" class="wikilink" title="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> and <a href="stage--rules--keywords-index.html#mouth" class="wikilink" title="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a></td>
+<td><a href="stage--rules--keywords-index.html#dumb" class="wikilink" data-tooltip="A condition preventing the wielder from casting spells or using Brains-based active Quirks.">Dumb</a></td>
+<td><strong>-1d</strong> on <a href="stage--rules--keywords-index.html#brains" class="wikilink" data-tooltip="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> and <a href="stage--rules--keywords-index.html#mouth" class="wikilink" data-tooltip="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a></td>
 <td><strong>-1d</strong> on Morale (TBD: Might fail to obey orders)</td>
 </tr>
 <tr>
 <td><strong>Silenced</strong></td>
-<td><strong>-1d</strong> on <a href="stage--rules--keywords-index.html#mouth" class="wikilink" title="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a></td>
+<td><strong>-1d</strong> on <a href="stage--rules--keywords-index.html#mouth" class="wikilink" data-tooltip="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a></td>
 <td><strong>-1d</strong> on Morale</td>
 </tr>
 <tr>
-<td><a href="stage--rules--keywords-index.html#blinded" class="wikilink" title="A condition blocking sight, making ranged attacks Hard and preventing Dodge reactions.">Blinded</a></td>
+<td><a href="stage--rules--keywords-index.html#blinded" class="wikilink" data-tooltip="A condition blocking sight, making ranged attacks Hard and preventing Dodge reactions.">Blinded</a></td>
 <td><strong>-1d</strong> on Physical tests</td>
 <td><strong>-1d</strong> on Physical tests</td>
 </tr>
 <tr>
-<td><a href="stage--rules--keywords-index.html#terrified" class="wikilink" title="A condition forcing a character or Mob to flee from a source of fear and preventing them from closing distance.">Terrified</a></td>
-<td><strong>-1d</strong> on <a href="stage--rules--keywords-index.html#brains" class="wikilink" title="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> and <a href="stage--rules--keywords-index.html#mouth" class="wikilink" title="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a> tests, cannot move closer to the source of fear</td>
+<td><a href="stage--rules--keywords-index.html#terrified" class="wikilink" data-tooltip="A condition forcing a character or Mob to flee from a source of fear and preventing them from closing distance.">Terrified</a></td>
+<td><strong>-1d</strong> on <a href="stage--rules--keywords-index.html#brains" class="wikilink" data-tooltip="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> and <a href="stage--rules--keywords-index.html#mouth" class="wikilink" data-tooltip="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a> tests, cannot move closer to the source of fear</td>
 <td><strong>-2d</strong> on Morale tests, Order tests are Hard</td>
 </tr>
 <tr>
-<td><a href="stage--rules--keywords-index.html#stunned" class="wikilink" title="A condition causing a character or Mob to lose all actions on their turn and exposing them to easy attacks.">Stunned</a></td>
+<td><a href="stage--rules--keywords-index.html#stunned" class="wikilink" data-tooltip="A condition causing a character or Mob to lose all actions on their turn and exposing them to easy attacks.">Stunned</a></td>
 <td>Cannot take any actions or reactions</td>
 <td>Cannot take any actions or reactions</td>
 </tr>
 <tr>
-<td><a href="stage--rules--keywords-index.html#prone" class="wikilink" title="A condition representing being knocked down. Restricts movement and imposes a -1d Bane on melee attacks.">Prone</a></td>
-<td><strong>-1d</strong> on <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a>, 1 <a href="stage--rules--keywords-index.html#move" class="wikilink" title="A Standard Action allowing a character or Mob to cross a number of Zones up to their Movement rating.">Move</a> action to stand up</td>
-<td><strong>-1d</strong> on Dodge, 1 <a href="stage--rules--keywords-index.html#move" class="wikilink" title="A Standard Action allowing a character or Mob to cross a number of Zones up to their Movement rating.">Move</a> action to stand up</td>
+<td><a href="stage--rules--keywords-index.html#prone" class="wikilink" data-tooltip="A condition representing being knocked down. Restricts movement and imposes a -1d Bane on melee attacks.">Prone</a></td>
+<td><strong>-1d</strong> on <a href="stage--rules--keywords-index.html#slink" class="wikilink" data-tooltip="Main stat representing agility, stealth, and ranged combat capability.">Slink</a>, 1 <a href="stage--rules--keywords-index.html#move" class="wikilink" data-tooltip="A Standard Action allowing a character or Mob to cross a number of Zones up to their Movement rating.">Move</a> action to stand up</td>
+<td><strong>-1d</strong> on Dodge, 1 <a href="stage--rules--keywords-index.html#move" class="wikilink" data-tooltip="A Standard Action allowing a character or Mob to cross a number of Zones up to their Movement rating.">Move</a> action to stand up</td>
 </tr>
 <tr>
-<td><a href="stage--rules--keywords-index.html#staggered" class="wikilink" title="A condition inflicted by partial combat successes, lasting until the end of the round and imposing a -1d active defense penalty.">Staggered</a></td>
-<td><strong>-1d</strong> on <a href="stage--rules--keywords-index.html#dodge" class="wikilink" title="An active Reaction to avoid incoming ranged or area damage by testing Slink, with successes reducing damage.">Dodge</a> and <a href="stage--rules--keywords-index.html#parry" class="wikilink" title="An active Reaction to block incoming melee attacks by testing Tough while holding a shield, reducing damage.">Parry</a> tests</td>
-<td><strong>-1d</strong> on <a href="stage--rules--keywords-index.html#dodge" class="wikilink" title="An active Reaction to avoid incoming ranged or area damage by testing Slink, with successes reducing damage.">Dodge</a> tests (or <strong>-1 Passive Defense</strong> die)</td>
+<td><a href="stage--rules--keywords-index.html#staggered" class="wikilink" data-tooltip="A condition inflicted by partial combat successes, lasting until the end of the round and imposing a -1d active defense penalty.">Staggered</a></td>
+<td><strong>-1d</strong> on <a href="stage--rules--keywords-index.html#dodge" class="wikilink" data-tooltip="An active Reaction to avoid incoming ranged or area damage by testing Slink, with successes reducing damage.">Dodge</a> and <a href="stage--rules--keywords-index.html#parry" class="wikilink" data-tooltip="An active Reaction to block incoming melee attacks by testing Tough while holding a shield, reducing damage.">Parry</a> tests</td>
+<td><strong>-1d</strong> on <a href="stage--rules--keywords-index.html#dodge" class="wikilink" data-tooltip="An active Reaction to avoid incoming ranged or area damage by testing Slink, with successes reducing damage.">Dodge</a> tests (or <strong>-1 Passive Defense</strong> die)</td>
 </tr>
 </tbody>
 </table>
-<p><em>Note: For <strong>Enemies</strong> (who use static target numbers instead of stat pools), the <a href="stage--rules--keywords-index.html#staggered" class="wikilink" title="A condition inflicted by partial combat successes, lasting until the end of the round and imposing a -1d active defense penalty.">Staggered</a> condition reduces their <a href="stage--rules--keywords-index.html#defence" class="wikilink" title="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a> stat by <strong>1</strong> (minimum 1). Additionally, the <a href="stage--rules--keywords-index.html#staggered" class="wikilink" title="A condition inflicted by partial combat successes, lasting until the end of the round and imposing a -1d active defense penalty.">Staggered</a> condition is temporary and automatically clears during the Round Closure phase.</em></p>
+<p><em>Note: For <strong>Enemies</strong> (who use static target numbers instead of stat pools), the <a href="stage--rules--keywords-index.html#staggered" class="wikilink" data-tooltip="A condition inflicted by partial combat successes, lasting until the end of the round and imposing a -1d active defense penalty.">Staggered</a> condition reduces their <a href="stage--rules--keywords-index.html#defence" class="wikilink" data-tooltip="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a> stat by <strong>1</strong> (minimum 1). Additionally, the <a href="stage--rules--keywords-index.html#staggered" class="wikilink" data-tooltip="A condition inflicted by partial combat successes, lasting until the end of the round and imposing a -1d active defense penalty.">Staggered</a> condition is temporary and automatically clears during the Round Closure phase.</em></p>
 <h1 id="healing" tabindex="-1">Healing</h1>
-<p>Gobbos are not very durable, but if they survive a fight they typically heal fully given some time. Your PC heals 1 <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> per hour. A Mob, however, does not heal. The losses they take are permanent as those are Gobbos that died. The only way to recover the <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> of a Mob is to recruit new Gobbos, which can be done in the Lair.</p>
+<p>Gobbos are not very durable, but if they survive a fight they typically heal fully given some time. Your PC heals 1 <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> per hour. A Mob, however, does not heal. The losses they take are permanent as those are Gobbos that died. The only way to recover the <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> of a Mob is to recruit new Gobbos, which can be done in the Lair.</p>
 <p>However, once a battle is concluded, the Boss can organize their Mobs again and freely redistribute the damage dice.</p>
 <blockquote>
-<p><strong>Example:</strong> A <strong>3d6</strong> Mob has taken a beating, and their damage dice after the battle read <strong>3</strong>, <strong>4</strong>, and <strong>2</strong>. The Boss can now rearrange the damage dice to <strong>6</strong>, <strong>2</strong>, and <strong>1</strong> (retaining <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> 3 but with one goblin close to death), or perhaps to <strong>5</strong> and <strong>4</strong> (reducing the <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> of the Mob to 2 in order to make it more stable).</p>
+<p><strong>Example:</strong> A <strong>3d6</strong> Mob has taken a beating, and their damage dice after the battle read <strong>3</strong>, <strong>4</strong>, and <strong>2</strong>. The Boss can now rearrange the damage dice to <strong>6</strong>, <strong>2</strong>, and <strong>1</strong> (retaining <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> 3 but with one goblin close to death), or perhaps to <strong>5</strong> and <strong>4</strong> (reducing the <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> of the Mob to 2 in order to make it more stable).</p>
 </blockquote>
 <h2 id="healing-from-conditions" tabindex="-1">Healing from Conditions</h2>
-<p>Typically a condition is removed once the cause of it is removed. Usually this is obvious (e.g., leaving a smoke-filled room clears the <a href="stage--rules--keywords-index.html#blinded" class="wikilink" title="A condition blocking sight, making ranged attacks Hard and preventing Dodge reactions.">Blinded</a> or Smoky effect).</p>
+<p>Typically a condition is removed once the cause of it is removed. Usually this is obvious (e.g., leaving a smoke-filled room clears the <a href="stage--rules--keywords-index.html#blinded" class="wikilink" data-tooltip="A condition blocking sight, making ranged attacks Hard and preventing Dodge reactions.">Blinded</a> or Smoky effect).</p>
 <ul>
-<li><strong>Hazard Conditions:</strong> Conditions inflicted by environmental hazards (such as <a href="stage--rules--keywords-index.html#weakened" class="wikilink" title="A condition imposing a -1d Bane on all action tests.">Weakened</a> from poison gas or <a href="stage--rules--keywords-index.html#restrained" class="wikilink" title="A condition preventing movement and imposing a -1d Bane to Dodge reactions.">Restrained</a> from sticky mud) are removed once a PC or Mob spends a <a href="stage--rules--keywords-index.html#standard-action" class="wikilink" title="The primary actions spent on a turn (3 per round). Used for Move, Attack, Plunder, Order, or Manipulate. See [[02 Combat]].">Standard Action</a> (<a href="stage--rules--keywords-index.html#manipulate" class="wikilink" title="A Standard Action catch-all used to interact with items, machinery, traps, or environmental components.">Manipulate</a> or catching their breath) in a clean zone, or automatically at the end of combat.</li>
+<li><strong>Hazard Conditions:</strong> Conditions inflicted by environmental hazards (such as <a href="stage--rules--keywords-index.html#weakened" class="wikilink" data-tooltip="A condition imposing a -1d Bane on all action tests.">Weakened</a> from poison gas or <a href="stage--rules--keywords-index.html#restrained" class="wikilink" data-tooltip="A condition preventing movement and imposing a -1d Bane to Dodge reactions.">Restrained</a> from sticky mud) are removed once a PC or Mob spends a <a href="stage--rules--keywords-index.html#standard-action" class="wikilink" data-tooltip="The primary actions spent on a turn (3 per round). Used for Move, Attack, Plunder, Order, or Manipulate. See [[02 Combat]].">Standard Action</a> (<a href="stage--rules--keywords-index.html#manipulate" class="wikilink" data-tooltip="A Standard Action catch-all used to interact with items, machinery, traps, or environmental components.">Manipulate</a> or catching their breath) in a clean zone, or automatically at the end of combat.</li>
 </ul>
 
     </main>
@@ -240,13 +245,89 @@
         .then(data => {
           if (data && data.status === 'error') {
             const banner = document.getElementById('statusBanner');
-            if (banner) banner.style.display = 'block';
+            if (banner) banner.style.display = 'flex';
           }
         })
         .catch(err => {
           // If status.json does not exist or fails, do nothing
           console.log('Update status check skipped:', err);
         });
+    })();
+
+    // --- Anchor Scroll Fix ---
+    (function() {
+      function scrollToHash() {
+        if (window.location.hash) {
+          const id = decodeURIComponent(window.location.hash.substring(1));
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }, 100);
+          }
+        }
+      }
+      window.addEventListener('hashchange', scrollToHash);
+      window.addEventListener('DOMContentLoaded', scrollToHash);
+      window.addEventListener('load', scrollToHash);
+    })();
+
+    // --- Manual Sync Trigger ---
+    (function() {
+      const headerBtn = document.getElementById('headerSyncBtn');
+      const bannerBtn = document.getElementById('bannerSyncBtn');
+      
+      function handleSync(btn) {
+        if (!btn) return;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        
+        // Add spinning/loading animation class
+        if (btn.classList.contains('sync-btn')) {
+          btn.classList.add('sync-btn--spinning');
+          btn.querySelector('span').textContent = 'Syncing...';
+        } else {
+          btn.textContent = 'Syncing...';
+        }
+        
+        fetch('/api/run-sync', { method: 'POST' })
+          .then(res => {
+            if (!res.ok) throw new Error('Server returned error status: ' + res.status);
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.status === 'success') {
+              if (btn.classList.contains('sync-btn')) {
+                btn.querySelector('span').textContent = 'Success!';
+              } else {
+                btn.textContent = 'Success!';
+              }
+              // Reload page to reflect changes
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              throw new Error(data.error || 'Sync failed');
+            }
+          })
+          .catch(err => {
+            console.error('Sync failed:', err);
+            alert('Failed to rerun sync: ' + err.message);
+            // Restore button
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            if (btn.classList.contains('sync-btn')) {
+              btn.classList.remove('sync-btn--spinning');
+            }
+          });
+      }
+
+      if (headerBtn) {
+        headerBtn.addEventListener('click', () => handleSync(headerBtn));
+      }
+      if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
     })();
   </script>
 

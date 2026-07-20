@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -31,7 +31,11 @@
 <a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
 <a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
     </nav>
-    <div class="top-bar-right">
+    <div class="top-bar-right" style="display: flex; gap: 8px; align-items: center;">
+      <button class="sync-btn" id="headerSyncBtn" title="Sync & Rebuild Site" aria-label="Sync and rebuild site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sync-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Sync</span>
+      </button>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
         <span class="theme-icon theme-icon--light">☀️</span>
         <span class="theme-icon theme-icon--dark">🌙</span>
@@ -57,17 +61,19 @@
 
     <!-- Main Content -->
     <main class="main-content" id="mainContent">
-      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
-        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      <div id="statusBanner" style="display: none; align-items: center; justify-content: space-between; gap: 16px; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        <span>⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.</span>
+        <button class="sync-banner-btn" id="bannerSyncBtn">Rerun Sync</button>
       </div>
       <h1 id="dice" tabindex="-1">Dice</h1>
-<p>Rolling <strong>dice</strong> is fun, and in Gobbos you roll a lot of dice* if you are a player. The GM, on the other hand, never rolls <strong>dice</strong>—unless to possibly determine the outcome of a random event.</p>
+<p>Rolling dice is fun, and in Gobbos you roll a lot of dice if you are a player. The GM on the other hand never rolls dice, unless to possibly determine the outcome of a random event.</p>
+<p>The only dice used in Gobbos are normal 6-sided dice, or d6. It is recommended that each player have bunch of them, preferably 8-10 dice in the same color.</p>
 <h2 id="tests" tabindex="-1">Tests</h2>
-<p>A <a href="#test" class="wikilink" title="A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).">Test</a> in Gobbos is carried out by the player rolling a number of <strong>d6s</strong> (their <a href="#dice-pool" class="wikilink" title="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">Dice Pool</a>). They then try to score as many <a href="#success-successes" class="wikilink" title="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Success|Successes</a> as the GM has decided is the target for the <a href="#test" class="wikilink" title="A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).">Test</a>.</p>
+<p>A <a href="#test" class="wikilink" data-tooltip="A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).">Test</a> in Gobbos is carried out by the player rolling a number of <strong>d6s</strong> (their <a href="#dice-pool" class="wikilink" data-tooltip="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">Dice Pool</a>). They then try to score as many <a href="#success" class="wikilink" data-tooltip="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Successes</a> as the GM has decided is the target for the <a href="#test" class="wikilink" data-tooltip="A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).">Test</a>.</p>
 <h3 id="difficulty-and-target-number" tabindex="-1">Difficulty and Target Number</h3>
-<p>For any <a href="#test" class="wikilink" title="A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).">Test</a>, the GM sets a <a href="#difficulty" class="wikilink" title="The die face needed to score a success (Easy 4+, Normal 5+, Hard 6). This is typically dependent on the circumstances of the test.">Difficulty</a> and a <a href="#target-number-tn" class="wikilink" title="The total number of successes required to pass a test (e.g., in shorthand **5+/1**, you need one die to land on 5 or 6). This is typically a fixed number.">Target Number (TN)</a>. <a href="#difficulty" class="wikilink" title="The die face needed to score a success (Easy 4+, Normal 5+, Hard 6). This is typically dependent on the circumstances of the test.">Difficulty</a> depends on the circumstances, such as having the high ground when attacking or using quality lockpicks to pick a lock. <a href="#difficulty" class="wikilink" title="The die face needed to score a success (Easy 4+, Normal 5+, Hard 6). This is typically dependent on the circumstances of the test.">Difficulty</a> determines what counts as a <a href="#success" class="wikilink" title="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Success</a>. For an <a href="#easy" class="wikilink" title="A test Difficulty requiring a die face of 4+ to score a success.">Easy</a> roll, a <strong>4, 5, or 6</strong> is a <a href="#success" class="wikilink" title="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Success</a>. For a <a href="#normal" class="wikilink" title="The default test Difficulty requiring a die face of 5+ to score a success.">Normal</a> roll, a <strong>5 or 6</strong> is a <a href="#success" class="wikilink" title="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Success</a>. For a <a href="#hard" class="wikilink" title="A test Difficulty requiring a die face of 6 to score a success.">Hard</a> roll, only <strong>6s</strong> are a <a href="#success" class="wikilink" title="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Success</a>.</p>
-<p><a href="#target-number-tn" class="wikilink" title="The total number of successes required to pass a test (e.g., in shorthand **5+/1**, you need one die to land on 5 or 6). This is typically a fixed number.">Target Number (TN)</a> is typically fixed, such as how good armor an enemy has or the quality of the lock that is about to be picked. <a href="#tn" class="wikilink" title="Target Number. The total number of success rolls (usually meeting the Difficulty face) required to pass a test.">TN</a> then denotes how many <a href="#success-successes" class="wikilink" title="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Success|Successes</a> you need to make whatever you are trying to do.</p>
-<p>Most of the time, you will roll a <a href="#normal" class="wikilink" title="The default test Difficulty requiring a die face of 5+ to score a success.">Normal</a> test with a <a href="#tn" class="wikilink" title="Target Number. The total number of success rolls (usually meeting the Difficulty face) required to pass a test.">TN</a> of 1, denoted as <strong>5+/1</strong>. This means that whatever number of dice you have in your <a href="#dice-pool" class="wikilink" title="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">Dice Pool</a>, you succeed if there is at least one <strong>5</strong> or <strong>6</strong>.</p>
+<p>For any <a href="#test" class="wikilink" data-tooltip="A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).">Test</a>, the GM sets a <a href="#difficulty" class="wikilink" data-tooltip="The die face needed to score a success (Easy 4+, Normal 5+, Hard 6). This is typically dependent on the circumstances of the test.">Difficulty</a> and a <a href="#target-number-tn" class="wikilink" data-tooltip="The total number of successes required to pass a test (e.g., in shorthand **5+/1**, you need one die to land on 5 or 6). This is typically a fixed number.">Target Number (TN)</a>. <a href="#difficulty" class="wikilink" data-tooltip="The die face needed to score a success (Easy 4+, Normal 5+, Hard 6). This is typically dependent on the circumstances of the test.">Difficulty</a> depends on the circumstances, such as having the high ground when attacking or using quality lockpicks to pick a lock. <a href="#difficulty" class="wikilink" data-tooltip="The die face needed to score a success (Easy 4+, Normal 5+, Hard 6). This is typically dependent on the circumstances of the test.">Difficulty</a> determines what counts as a <a href="#success" class="wikilink" data-tooltip="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Success</a>. For an <a href="#easy" class="wikilink" data-tooltip="A test Difficulty requiring a die face of 4+ to score a success.">Easy</a> roll, a <strong>4, 5, or 6</strong> is a <a href="#success" class="wikilink" data-tooltip="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Success</a>. For a <a href="#normal" class="wikilink" data-tooltip="The default test Difficulty requiring a die face of 5+ to score a success.">Normal</a> roll, a <strong>5 or 6</strong> is a <a href="#success" class="wikilink" data-tooltip="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Success</a>. For a <a href="#hard" class="wikilink" data-tooltip="A test Difficulty requiring a die face of 6 to score a success.">Hard</a> roll, only <strong>6s</strong> are a <a href="#success" class="wikilink" data-tooltip="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Success</a>.</p>
+<p><a href="#target-number-tn" class="wikilink" data-tooltip="The total number of successes required to pass a test (e.g., in shorthand **5+/1**, you need one die to land on 5 or 6). This is typically a fixed number.">Target Number (TN)</a> is typically fixed, such as how good armor an enemy has or the quality of the lock that is about to be picked. <a href="#tn" class="wikilink" data-tooltip="Target Number. The total number of success rolls (usually meeting the Difficulty face) required to pass a test.">TN</a> then denotes how many <a href="#success" class="wikilink" data-tooltip="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Successes</a> you need to make whatever you are trying to do.</p>
+<p>Most of the time, you will roll a <a href="#normal" class="wikilink" data-tooltip="The default test Difficulty requiring a die face of 5+ to score a success.">Normal</a> test with a <a href="#tn" class="wikilink" data-tooltip="Target Number. The total number of success rolls (usually meeting the Difficulty face) required to pass a test.">TN</a> of 1, denoted as <strong>5+/1</strong>. This means that whatever number of dice you have in your <a href="#dice-pool" class="wikilink" data-tooltip="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">Dice Pool</a>, you succeed if there is at least one <strong>5</strong> or <strong>6</strong>.</p>
 <table>
 <thead>
 <tr>
@@ -77,15 +83,15 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left"><a href="#easy" class="wikilink" title="A test Difficulty requiring a die face of 4+ to score a success.">Easy</a></td>
+<td style="text-align:left"><a href="#easy" class="wikilink" data-tooltip="A test Difficulty requiring a die face of 4+ to score a success.">Easy</a></td>
 <td style="text-align:left">4, 5, 6</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="#normal" class="wikilink" title="The default test Difficulty requiring a die face of 5+ to score a success.">Normal</a></td>
+<td style="text-align:left"><a href="#normal" class="wikilink" data-tooltip="The default test Difficulty requiring a die face of 5+ to score a success.">Normal</a></td>
 <td style="text-align:left">5, 6</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="#hard" class="wikilink" title="A test Difficulty requiring a die face of 6 to score a success.">Hard</a></td>
+<td style="text-align:left"><a href="#hard" class="wikilink" data-tooltip="A test Difficulty requiring a die face of 6 to score a success.">Hard</a></td>
 <td style="text-align:left">6</td>
 </tr>
 </tbody>
@@ -94,24 +100,24 @@
 <p><strong>Example:</strong> Picking a lock is typically a [Slink](…/01_Characters &amp; Mobs/10_Stats.md#slink) <strong>5+/1</strong> test. But if the lock is of extra good quality, it could be a <strong>5+/2</strong> test. And if the lockpicker has brought quality lockpicks, it could turn into an <strong>4+/2</strong> test.</p>
 </blockquote>
 <h3 id="dice-pool" tabindex="-1">Dice Pool</h3>
-<p>The player is responsible for assembling their <a href="#dice-pool" class="wikilink" title="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">Dice Pool</a>. If they carry out the task with their <a href="#boss" class="wikilink" title="A player character or elite NPC possessing Grit, specialized Quirks, and command over Mobs.">Boss</a>, it is almost always equal to their main stat, modified by equipment, <a href="#quirk-quirks" class="wikilink" title="A modular ability or special talent measured in Tiers (T1–T5) that defines a character's action or passive benefits.">Quirk|Quirks</a>, or other circumstances. So, if you have a <a href="#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> stat of 2, you roll 2 dice, or <strong>2d6</strong>.</p>
-<p>If rolling for a <a href="#mob" class="wikilink" title="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> instead, the base number of dice in your <a href="#dice-pool" class="wikilink" title="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">Dice Pool</a> is equal to the <a href="#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> of the <a href="#mob" class="wikilink" title="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a>. A <a href="#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> 2 <a href="#mob" class="wikilink" title="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> rolls <strong>2d6</strong>, a <a href="#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> 5 <a href="#mob" class="wikilink" title="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> rolls <strong>5d6</strong>, etc.</p>
+<p>The player is responsible for assembling their <a href="#dice-pool" class="wikilink" data-tooltip="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">Dice Pool</a>. If they carry out the task with their <a href="#boss" class="wikilink" data-tooltip="A player character or elite NPC possessing Grit, specialized Quirks, and command over Mobs.">Boss</a>, it is almost always equal to their main stat, modified by equipment, <a href="#quirk" class="wikilink" data-tooltip="A modular base ability (a &quot;Knack&quot; or action) that defines a character's fighting style or special talent. Measured in Tiers (T1-T5).">Quirks</a>, or other circumstances. So, if you have a <a href="#tough" class="wikilink" data-tooltip="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> stat of 2, you roll 2 dice, or <strong>2d6</strong>.</p>
+<p>If rolling for a <a href="#mob" class="wikilink" data-tooltip="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> instead, the base number of dice in your <a href="#dice-pool" class="wikilink" data-tooltip="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">Dice Pool</a> is equal to the <a href="#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> of the <a href="#mob" class="wikilink" data-tooltip="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a>. A <a href="#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> 2 <a href="#mob" class="wikilink" data-tooltip="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> rolls <strong>2d6</strong>, a <a href="#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> 5 <a href="#mob" class="wikilink" data-tooltip="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> rolls <strong>5d6</strong>, etc.</p>
 <h3 id="exploding-dice" tabindex="-1">Exploding Dice</h3>
-<p>Every time you roll a <strong>6</strong>, it is not only a <a href="#success" class="wikilink" title="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Success</a> but it allows you to roll an additional die. If that roll is a <strong>6</strong> again, you keep rolling until you no longer roll <strong>6s</strong>. This makes it possible, but still perhaps unlikely, to get a lot of <a href="#success-successes" class="wikilink" title="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Success|Successes</a> on a single roll. If you have enough dice, it is recommended to grab a new dice instead of rerolling the 6 to make it easier to see the total number of successes.</p>
+<p>Every time you roll a <strong>6</strong>, it is not only a <a href="#success" class="wikilink" data-tooltip="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Success</a> but it allows you to roll an additional die. If that roll is a <strong>6</strong> again, you keep rolling until you no longer roll <strong>6s</strong>. This makes it possible, but still perhaps unlikely, to get a lot of <a href="#success" class="wikilink" data-tooltip="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Successes</a> on a single roll. If you have enough dice, it is recommended to grab a new dice instead of rerolling the 6 to make it easier to see the total number of successes.</p>
 <h3 id="criticals" tabindex="-1">Criticals</h3>
-<p>Whenever you roll a <strong>6</strong> that explodes, and the new die you roll also turns into a <strong>6</strong>, you have achieved a <a href="#critical-success" class="wikilink" title="An exceptional roll resulting from double-six chains, granting bonus actions or Grunt recovery.">Critical Success</a>! This impressive feat allows you to regain 1 <a href="#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> (up to your maximum) and also grants you a surge of adrenaline, allowing you to immediately perform an additional non-offensive action (a <a href="#move" class="wikilink" title="A Standard Action allowing a character or Mob to cross a number of Zones up to their Movement rating.">Move</a>, <a href="#plunder" class="wikilink" title="A Standard Action spent to pick up and secure loose Loot, Scrap, or items in the current Zone.">Plunder</a>, or <a href="#manipulate" class="wikilink" title="A Standard Action catch-all used to interact with items, machinery, traps, or environmental components.">Manipulate</a> action).</p>
+<p>Whenever you roll a <strong>6</strong> that explodes, and the new die you roll also turns into a <strong>6</strong>, you have achieved a <a href="#critical-success" class="wikilink" data-tooltip="An exceptional roll resulting from double-six chains, granting bonus actions or Grunt recovery.">Critical Success</a>! This impressive feat allows you to regain 1 <a href="#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> (up to your maximum) and also grants you a surge of adrenaline, allowing you to immediately perform an additional non-offensive action (a <a href="#move" class="wikilink" data-tooltip="A Standard Action allowing a character or Mob to cross a number of Zones up to their Movement rating.">Move</a>, <a href="#plunder" class="wikilink" data-tooltip="A Standard Action spent to pick up and secure loose Loot, Scrap, or items in the current Zone.">Plunder</a>, or <a href="#manipulate" class="wikilink" data-tooltip="A Standard Action catch-all used to interact with items, machinery, traps, or environmental components.">Manipulate</a> action).</p>
 <p><em>(Note: Grunt is fully explained in the [Character Stats rules](…/01_Characters &amp; Mobs/10_Stats.md#grunt)).</em></p>
 <h3 id="1s-and-fumbles" tabindex="-1">1s and Fumbles</h3>
-<p>Sometimes, luck is just a bad joke waiting for a punchline. When you roll a <a href="#test" class="wikilink" title="A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).">Test</a> and fail to accumulate enough <a href="#success-successes" class="wikilink" title="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Success|Successes</a> (your <a href="#success-successes" class="wikilink" title="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Success|Successes</a> are less than the <a href="#target-number-tn" class="wikilink" title="The total number of successes required to pass a test (e.g., in shorthand **5+/1**, you need one die to land on 5 or 6). This is typically a fixed number.">Target Number (TN)</a>), but you have one or more dice showing <strong>1s</strong>, you can choose to push your luck and re-roll all of those <strong>1s</strong>.</p>
+<p>Sometimes, luck is just a bad joke waiting for a punchline. When you roll a <a href="#test" class="wikilink" data-tooltip="A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).">Test</a> and fail to accumulate enough <a href="#success" class="wikilink" data-tooltip="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Successes</a> (your <a href="#success" class="wikilink" data-tooltip="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Successes</a> are less than the <a href="#target-number-tn" class="wikilink" data-tooltip="The total number of successes required to pass a test (e.g., in shorthand **5+/1**, you need one die to land on 5 or 6). This is typically a fixed number.">Target Number (TN)</a>), but you have one or more dice showing <strong>1s</strong>, you can choose to push your luck and re-roll all of those <strong>1s</strong>.</p>
 <ul>
-<li><strong>The Blessing:</strong> If the re-rolled dice generate enough <a href="#success-successes" class="wikilink" title="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Success|Successes</a> to meet or exceed the <a href="#test-test-s" class="wikilink" title="Test|Test’s">Test|Test’s</a> <a href="#tn" class="wikilink" title="Target Number. The total number of success rolls (usually meeting the Difficulty face) required to pass a test.">TN</a>, the <a href="#test" class="wikilink" title="A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).">Test</a> succeeds normally.</li>
-<li><strong>The Fumble:</strong> If the <a href="#test" class="wikilink" title="A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).">Test</a> still fails after re-rolling the <strong>1s</strong>, you have <a href="#fumbled" class="wikilink" title="A failed test result triggered by rolling two or more 1s and zero successes, causing mishaps or losing authority.">Fumbled</a>! The effort backfires catastrophically, and you lose 1 <a href="#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>.</li>
-<li><strong>Accepting Failure:</strong> If you choose not to re-roll the <strong>1s</strong> (or if you failed the <a href="#test" class="wikilink" title="A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).">Test</a> but rolled no <strong>1s</strong> at all), the action simply fails normally. You do not lose 1 <a href="#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> or trigger any Fumble effects.</li>
+<li><strong>The Blessing:</strong> If the re-rolled dice generate enough <a href="#success" class="wikilink" data-tooltip="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Successes</a> to meet or exceed the <a href="#test" class="wikilink" data-tooltip="A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).">Test’s</a> <a href="#tn" class="wikilink" data-tooltip="Target Number. The total number of success rolls (usually meeting the Difficulty face) required to pass a test.">TN</a>, the <a href="#test" class="wikilink" data-tooltip="A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).">Test</a> succeeds normally.</li>
+<li><strong>The Fumble:</strong> If the <a href="#test" class="wikilink" data-tooltip="A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).">Test</a> still fails after re-rolling the <strong>1s</strong>, you have <a href="#fumbled" class="wikilink" data-tooltip="A failed test result triggered by rolling two or more 1s and zero successes, causing mishaps or losing authority.">Fumbled</a>! The effort backfires catastrophically, and you lose 1 <a href="#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>.</li>
+<li><strong>Accepting Failure:</strong> If you choose not to re-roll the <strong>1s</strong> (or if you failed the <a href="#test" class="wikilink" data-tooltip="A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).">Test</a> but rolled no <strong>1s</strong> at all), the action simply fails normally. You do not lose 1 <a href="#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> or trigger any Fumble effects.</li>
 </ul>
 <h2 id="the-bangaranga-pool" tabindex="-1">The Bangaranga Pool</h2>
-<p>Goblins are easily carried away by their own rowdy excitement. When the crowd gets hyped by awesome stunts, hilarious disasters, or massive payouts, their collective noise and rowdiness builds up. This is represented by a shared pool of dice called the <a href="#bangaranga-pool" class="wikilink" title="A communal pool of d6s built by fumbles and ones, spent by players to purchase temporary Boons or activate magic.">Bangaranga Pool</a>. These should be of a distinct color from the other dice, e.g. bright red.</p>
+<p>Goblins are easily carried away by their own rowdy excitement. When the crowd gets hyped by awesome stunts, hilarious disasters, or massive payouts, their collective noise and rowdiness builds up. This is represented by a shared pool of dice called the <a href="#bangaranga-pool" class="wikilink" data-tooltip="A communal pool of d6s built by fumbles and ones, spent by players to purchase temporary Boons or activate magic.">Bangaranga Pool</a>. These should be of a distinct color from the other dice, e.g. bright red.</p>
 <h3 id="seeding-the-pool-start-of-raid" tabindex="-1">Seeding the Pool (Start of Raid)</h3>
-<p>At the start of a <a href="#raid" class="wikilink" title="An expedition into dangerous territory to secure Loot, Scrap, and Glory for the Gang.">Raid</a>, the <a href="#bangaranga-pool" class="wikilink" title="A communal pool of d6s built by fumbles and ones, spent by players to purchase temporary Boons or activate magic.">Bangaranga Pool</a> is seeded with a baseline level of chaotic energy based on the size and composition of the raiding party:</p>
+<p>At the start of a <a href="#raid" class="wikilink" data-tooltip="An expedition into dangerous territory to secure Loot, Scrap, and Glory for the Gang.">Raid</a>, the <a href="#bangaranga-pool" class="wikilink" data-tooltip="A communal pool of d6s built by fumbles and ones, spent by players to purchase temporary Boons or activate magic.">Bangaranga Pool</a> is seeded with a baseline level of chaotic energy based on the size and composition of the raiding party:</p>
 <table>
 <thead>
 <tr>
@@ -126,19 +132,19 @@
 </tr>
 <tr>
 <td style="text-align:left">Number of [[Mob</td>
-<td style="text-align:left">Mobs]] (<a href="#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> 3 or 4)</td>
+<td style="text-align:left">Mobs]] (<a href="#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> 3 or 4)</td>
 </tr>
 <tr>
 <td style="text-align:left">Number of [[Mob</td>
-<td style="text-align:left">Mobs]] (<a href="#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> 5)</td>
+<td style="text-align:left">Mobs]] (<a href="#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> 5)</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p><strong>Example:</strong> A 3-player raid party has one <a href="#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> 3 <a href="#mob" class="wikilink" title="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a>, one <a href="#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> 4 <a href="#mob" class="wikilink" title="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a>, and one <a href="#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> 2 <a href="#mob" class="wikilink" title="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a>. The starting <a href="#bangaranga-pool" class="wikilink" title="A communal pool of d6s built by fumbles and ones, spent by players to purchase temporary Boons or activate magic.">Bangaranga Pool</a> is <strong>5d</strong> (3 baseline + 1 + 1 + 0).</p>
+<p><strong>Example:</strong> A 3-player raid party has one <a href="#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> 3 <a href="#mob" class="wikilink" data-tooltip="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a>, one <a href="#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> 4 <a href="#mob" class="wikilink" data-tooltip="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a>, and one <a href="#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> 2 <a href="#mob" class="wikilink" data-tooltip="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a>. The starting <a href="#bangaranga-pool" class="wikilink" data-tooltip="A communal pool of d6s built by fumbles and ones, spent by players to purchase temporary Boons or activate magic.">Bangaranga Pool</a> is <strong>5d</strong> (3 baseline + 1 + 1 + 0).</p>
 </blockquote>
 <h3 id="loading-the-pool-hype-triggers" tabindex="-1">Loading the Pool (Hype Triggers)</h3>
-<p>Dice are added to the physical <a href="#bangaranga-pool" class="wikilink" title="A communal pool of d6s built by fumbles and ones, spent by players to purchase temporary Boons or activate magic.">Bangaranga Pool</a> during a <a href="#raid" class="wikilink" title="An expedition into dangerous territory to secure Loot, Scrap, and Glory for the Gang.">Raid</a> when notable events hype up the horde:</p>
+<p>Dice are added to the physical <a href="#bangaranga-pool" class="wikilink" data-tooltip="A communal pool of d6s built by fumbles and ones, spent by players to purchase temporary Boons or activate magic.">Bangaranga Pool</a> during a <a href="#raid" class="wikilink" data-tooltip="An expedition into dangerous territory to secure Loot, Scrap, and Glory for the Gang.">Raid</a> when notable events hype up the horde:</p>
 <table>
 <thead>
 <tr>
@@ -151,11 +157,11 @@
 <tr>
 <td style="text-align:left">[[Critical Success</td>
 <td style="text-align:left">Critical Successes]]</td>
-<td style="text-align:left">Any player rolls a <a href="#critical-success" class="wikilink" title="An exceptional roll resulting from double-six chains, granting bonus actions or Grunt recovery.">Critical Success</a></td>
+<td style="text-align:left">Any player rolls a <a href="#critical-success" class="wikilink" data-tooltip="An exceptional roll resulting from double-six chains, granting bonus actions or Grunt recovery.">Critical Success</a></td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="#fumbles" class="wikilink" title="Mishaps triggered during tests by rolling multiple 1s without success.">Fumbles</a></td>
-<td style="text-align:left">Any player <a href="#fumbles" class="wikilink" title="Mishaps triggered during tests by rolling multiple 1s without success.">Fumbles</a> a test</td>
+<td style="text-align:left"><a href="#fumbles" class="wikilink" data-tooltip="Mishaps triggered during tests by rolling multiple 1s without success.">Fumbles</a></td>
+<td style="text-align:left">Any player <a href="#fumbles" class="wikilink" data-tooltip="Mishaps triggered during tests by rolling multiple 1s without success.">Fumbles</a> a test</td>
 <td style="text-align:left"><strong>+1d6</strong></td>
 </tr>
 <tr>
@@ -171,7 +177,7 @@
 </tbody>
 </table>
 <h3 id="tapping-the-pool-and-the-bangaranga-tax" tabindex="-1">Tapping the Pool &amp; The Bangaranga Tax</h3>
-<p>Before rolling any test, a player can choose to take a number of dice from the <a href="#bangaranga-pool" class="wikilink" title="A communal pool of d6s built by fumbles and ones, spent by players to purchase temporary Boons or activate magic.">Bangaranga Pool</a> (up to a maximum equal to their Boss’s <a href="#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> stat) and add them to their current test’s <a href="#dice-pool" class="wikilink" title="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">Dice Pool</a>.</p>
+<p>Before rolling any test, a player can choose to take a number of dice from the <a href="#bangaranga-pool" class="wikilink" data-tooltip="A communal pool of d6s built by fumbles and ones, spent by players to purchase temporary Boons or activate magic.">Bangaranga Pool</a> (up to a maximum equal to their Boss’s <a href="#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> stat) and add them to their current test’s <a href="#dice-pool" class="wikilink" data-tooltip="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">Dice Pool</a>.</p>
 <p>However, using the crowd’s energy for mundane tasks is considered “cheating” and costs a premium:</p>
 <table>
 <thead>
@@ -198,15 +204,15 @@
 <blockquote>
 <p><strong>Example (5+/2 Test):</strong></p>
 <ul>
-<li>If you take <strong>1 or 2 <a href="#bangaranga-dice" class="wikilink" title="Extra dice added to a roll by spending points from the communal Bangaranga Pool.">Bangaranga dice</a></strong>, it costs no tax. You simply take them from the pool and roll them.</li>
-<li>If you want to take 3 <a href="#bangaranga-dice" class="wikilink" title="Extra dice added to a roll by spending points from the communal Bangaranga Pool.">Bangaranga dice</a>, 3 is greater than the TN of 2. You must pay a <strong>1 die tax</strong>. This requires a total of <strong>4 dice</strong> to be present in the pool. 3 dice are rolled, 1 die is discarded.</li>
+<li>If you take <strong>1 or 2 Bangaranga dice</strong>, it costs no tax. You simply take them from the pool and roll them.</li>
+<li>If you want to take 3 <a href="#bangaranga-dice" class="wikilink" data-tooltip="Extra dice added to a roll by spending points from the communal Bangaranga Pool.">Bangaranga dice</a>, 3 is greater than the TN of 2. You must pay a <strong>1 die tax</strong>. This requires a total of <strong>4 dice</strong> to be present in the pool. 3 dice are rolled, 1 die is discarded.</li>
 </ul>
 </blockquote>
 <h3 id="rolling-bangaranga-dice-double-explosion" tabindex="-1">Rolling Bangaranga Dice - Double Explosion!</h3>
-<p>Every <strong>6</strong> rolled on a <a href="#bangaranga" class="wikilink" title="The chaotic energy generated by goblin failures, fuel for catastrophic fumbles and high magic.">Bangaranga</a> Die counts as 1 <a href="#success" class="wikilink" title="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Success</a>, but it <strong>explodes twice</strong>, meaning you immediately roll <em>two</em> additional regular dice instead of one, which can themselves succeed or explode normally!</p>
+<p>Every <strong>6</strong> rolled on a Bangaranga Die counts as 1 <a href="#success" class="wikilink" data-tooltip="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Success</a>, but it <strong>explodes twice</strong>, meaning you immediately roll <em>two</em> additional regular dice instead of one, which can themselves succeed or explode normally!</p>
 <h3 id="overreaching" tabindex="-1">Overreaching</h3>
-<p>If your <a href="#test" class="wikilink" title="A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).">Test</a> fails when you use <a href="#bangaranga-dice" class="wikilink" title="Extra dice added to a roll by spending points from the communal Bangaranga Pool.">Bangaranga Dice</a>, you lose 1 <a href="#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>. Because a failed <a href="#bangaranga" class="wikilink" title="The chaotic energy generated by goblin failures, fuel for catastrophic fumbles and high magic.">Bangaranga</a> roll already carries this penalty, you have nothing to lose by re-rolling any <strong>1s</strong> in a desperate bid for <a href="#success" class="wikilink" title="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Success</a>!</p>
-<p>However, using the horde’s noise carries a high risk of exhausting their hype. If you fail the <a href="#test" class="wikilink" title="A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).">Test</a> when using <a href="#bangaranga-dice" class="wikilink" title="Extra dice added to a roll by spending points from the communal Bangaranga Pool.">Bangaranga Dice</a> (either by choosing not to re-roll <strong>1s</strong>, or by re-rolling them and still failing), and your final roll contains any <strong>1s</strong> (including those rolled on the re-roll), you immediately drain the <a href="#bangaranga-pool" class="wikilink" title="A communal pool of d6s built by fumbles and ones, spent by players to purchase temporary Boons or activate magic.">Bangaranga Pool</a>, removing a number of <a href="#bangaranga-dice" class="wikilink" title="Extra dice added to a roll by spending points from the communal Bangaranga Pool.">Bangaranga Dice</a> from the pool equal to the number of <a href="#bangaranga-dice" class="wikilink" title="Extra dice added to a roll by spending points from the communal Bangaranga Pool.">Bangaranga Dice</a> you took for the <a href="#test" class="wikilink" title="A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).">Test</a>.</p>
+<p>If your <a href="#test" class="wikilink" data-tooltip="A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).">Test</a> fails when you use <a href="#bangaranga-dice" class="wikilink" data-tooltip="Extra dice added to a roll by spending points from the communal Bangaranga Pool.">Bangaranga Dice</a>, you lose 1 <a href="#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>. Because a failed <a href="#bangaranga" class="wikilink" data-tooltip="The chaotic energy generated by goblin failures, fuel for catastrophic fumbles and high magic.">Bangaranga</a> roll already carries this penalty, you have nothing to lose by re-rolling any <strong>1s</strong> in a desperate bid for <a href="#success" class="wikilink" data-tooltip="A die roll that meets or exceeds the test's Difficulty face (usually 5+). Exploding 6s generate additional rolls.">Success</a>!</p>
+<p>However, using the horde’s noise carries a high risk of exhausting their hype. If you fail the <a href="#test" class="wikilink" data-tooltip="A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).">Test</a> when using <a href="#bangaranga-dice" class="wikilink" data-tooltip="Extra dice added to a roll by spending points from the communal Bangaranga Pool.">Bangaranga Dice</a> (either by choosing not to re-roll <strong>1s</strong>, or by re-rolling them and still failing), and your final roll contains any <strong>1s</strong> (including those rolled on the re-roll), you immediately drain the <a href="#bangaranga-pool" class="wikilink" data-tooltip="A communal pool of d6s built by fumbles and ones, spent by players to purchase temporary Boons or activate magic.">Bangaranga Pool</a>, removing a number of <a href="#bangaranga-dice" class="wikilink" data-tooltip="Extra dice added to a roll by spending points from the communal Bangaranga Pool.">Bangaranga Dice</a> from the pool equal to the number of <a href="#bangaranga-dice" class="wikilink" data-tooltip="Extra dice added to a roll by spending points from the communal Bangaranga Pool.">Bangaranga Dice</a> you took for the <a href="#test" class="wikilink" data-tooltip="A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).">Test</a>.</p>
 
     </main>
   </div>
@@ -311,13 +317,89 @@
         .then(data => {
           if (data && data.status === 'error') {
             const banner = document.getElementById('statusBanner');
-            if (banner) banner.style.display = 'block';
+            if (banner) banner.style.display = 'flex';
           }
         })
         .catch(err => {
           // If status.json does not exist or fails, do nothing
           console.log('Update status check skipped:', err);
         });
+    })();
+
+    // --- Anchor Scroll Fix ---
+    (function() {
+      function scrollToHash() {
+        if (window.location.hash) {
+          const id = decodeURIComponent(window.location.hash.substring(1));
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }, 100);
+          }
+        }
+      }
+      window.addEventListener('hashchange', scrollToHash);
+      window.addEventListener('DOMContentLoaded', scrollToHash);
+      window.addEventListener('load', scrollToHash);
+    })();
+
+    // --- Manual Sync Trigger ---
+    (function() {
+      const headerBtn = document.getElementById('headerSyncBtn');
+      const bannerBtn = document.getElementById('bannerSyncBtn');
+      
+      function handleSync(btn) {
+        if (!btn) return;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        
+        // Add spinning/loading animation class
+        if (btn.classList.contains('sync-btn')) {
+          btn.classList.add('sync-btn--spinning');
+          btn.querySelector('span').textContent = 'Syncing...';
+        } else {
+          btn.textContent = 'Syncing...';
+        }
+        
+        fetch('/api/run-sync', { method: 'POST' })
+          .then(res => {
+            if (!res.ok) throw new Error('Server returned error status: ' + res.status);
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.status === 'success') {
+              if (btn.classList.contains('sync-btn')) {
+                btn.querySelector('span').textContent = 'Success!';
+              } else {
+                btn.textContent = 'Success!';
+              }
+              // Reload page to reflect changes
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              throw new Error(data.error || 'Sync failed');
+            }
+          })
+          .catch(err => {
+            console.error('Sync failed:', err);
+            alert('Failed to rerun sync: ' + err.message);
+            // Restore button
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            if (btn.classList.contains('sync-btn')) {
+              btn.classList.remove('sync-btn--spinning');
+            }
+          });
+      }
+
+      if (headerBtn) {
+        headerBtn.addEventListener('click', () => handleSync(headerBtn));
+      }
+      if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
     })();
   </script>
 

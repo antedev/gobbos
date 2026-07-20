@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -31,7 +31,11 @@
 <a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
 <a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
     </nav>
-    <div class="top-bar-right">
+    <div class="top-bar-right" style="display: flex; gap: 8px; align-items: center;">
+      <button class="sync-btn" id="headerSyncBtn" title="Sync & Rebuild Site" aria-label="Sync and rebuild site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sync-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Sync</span>
+      </button>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
         <span class="theme-icon theme-icon--light">☀️</span>
         <span class="theme-icon theme-icon--dark">🌙</span>
@@ -57,16 +61,17 @@
 
     <!-- Main Content -->
     <main class="main-content" id="mainContent">
-      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
-        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      <div id="statusBanner" style="display: none; align-items: center; justify-content: space-between; gap: 16px; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        <span>⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.</span>
+        <button class="sync-banner-btn" id="bannerSyncBtn">Rerun Sync</button>
       </div>
       <h1 id="16-unified-modular-powers-system" tabindex="-1">16. Unified Modular Powers System</h1>
 <p><em>Goblins don’t follow formulas, unless it is a formula for making things go boom. A bit of glowing scrap, a twitching monster eyeball, a sudden chemical itch in the skin—mix them all together, tape it to a sword, and you have got a plan.</em></p>
 <p>The <strong>Unified Modular Powers System</strong> is the core framework for all custom abilities, mutations, and specialized gear in Gobbos. It unifies three separate paths of progression under a single rules architecture:</p>
 <ol>
 <li><strong>Quirks &amp; Twists:</strong> Personal abilities customized by the Boss, detailed in [14_Quirks.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters &amp; Mobs/14_Quirks.md).</li>
-<li><strong>Shenanigans:</strong> The core culture and compulsive traits of a <a href="stage--rules--keywords-index.html#gang" class="wikilink" title="A PC's overarching group (e.g., *The Gnashers*). Death of a PC results in another gobbo from the same Gang taking over.">Gang</a>, detailed in [12_Gangs.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md).</li>
-<li><strong><a href="stage--rules--keywords-index.html#oddities" class="wikilink" title="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> & Relics:</strong> Strange materials and magical scrap crafted into custom equipment, detailed in [34_Crafting.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/03_Loot/34_Crafting.md).</li>
+<li><strong>Shenanigans:</strong> The core culture and compulsive traits of a <a href="stage--rules--keywords-index.html#gang" class="wikilink" data-tooltip="A PC's overarching group (e.g., *The Gnashers*). Death of a PC results in another gobbo from the same Gang taking over.">Gang</a>, detailed in [12_Gangs.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md).</li>
+<li><strong><a href="stage--rules--keywords-index.html#oddities" class="wikilink" data-tooltip="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> & Relics:</strong> Strange materials and magical scrap crafted into custom equipment, detailed in [34_Crafting.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/03_Loot/34_Crafting.md).</li>
 </ol>
 <hr>
 <h2 id="1-the-core-architecture-the-6-building-blocks" tabindex="-1">1. The Core Architecture (The 6 Building Blocks)</h2>
@@ -74,24 +79,24 @@
 <h3 id="category-1-the-modification-what-it-does" tabindex="-1">Category 1: The Modification (What it does)</h3>
 <p>The actual mechanical change or rule-breaking effect introduced to the game engine.</p>
 <ul>
-<li><strong><a href="stage--rules--keywords-index.html#dice-pool" class="wikilink" title="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">Dice Pool</a> Adjustments:</strong>
+<li><strong><a href="stage--rules--keywords-index.html#dice-pool" class="wikilink" data-tooltip="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">Dice Pool</a> Adjustments:</strong>
 <ul>
-<li><em>Extra Dice:</em> Adds a number of <a href="stage--rules--keywords-index.html#boon" class="wikilink" title="A positive modifier granting a +1d bonus on a test's dice pool. Multiple Boons do not stack.">Boon</a> dice (<strong>+Xd</strong>) to the test pool.</li>
-<li><em>Penalty Dice:</em> Deducts a number of <a href="stage--rules--keywords-index.html#bane" class="wikilink" title="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> dice (<strong>-Xd</strong>) from the test pool.</li>
-<li><em><a href="stage--rules--keywords-index.html#bangaranga" class="wikilink" title="The chaotic energy generated by goblin failures, fuel for catastrophic fumbles and high magic.">Bangaranga</a> Extraction Override:</em> Allows the wielder to draw dice from the shared <a href="stage--rules--keywords-index.html#bangaranga-pool" class="wikilink" title="A communal pool of d6s built by fumbles and ones, spent by players to purchase temporary Boons or activate magic.">Bangaranga Pool</a> up to their <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> stat, regardless of standard test limits.</li>
+<li><em>Extra Dice:</em> Adds a number of <a href="stage--rules--keywords-index.html#boon" class="wikilink" data-tooltip="A positive modifier granting a +1d bonus on a test's dice pool. Multiple Boons do not stack.">Boon</a> dice (<strong>+Xd</strong>) to the test pool.</li>
+<li><em>Penalty Dice:</em> Deducts a number of <a href="stage--rules--keywords-index.html#bane" class="wikilink" data-tooltip="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> dice (<strong>-Xd</strong>) from the test pool.</li>
+<li><em><a href="stage--rules--keywords-index.html#bangaranga" class="wikilink" data-tooltip="The chaotic energy generated by goblin failures, fuel for catastrophic fumbles and high magic.">Bangaranga</a> Extraction Override:</em> Allows the wielder to draw dice from the shared <a href="stage--rules--keywords-index.html#bangaranga-pool" class="wikilink" data-tooltip="A communal pool of d6s built by fumbles and ones, spent by players to purchase temporary Boons or activate magic.">Bangaranga Pool</a> up to their <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> stat, regardless of standard test limits.</li>
 </ul>
 </li>
 <li><strong>Probability Engineering:</strong>
 <ul>
 <li><em>Reroll Permission:</em> Grants permission to reroll a specified subset of failed dice.</li>
 <li><em>Specific Face Reroll:</em> Forces or allows rerolling specific die faces (e.g., rerolling all 1s).</li>
-<li><em>Spiteful Reroll:</em> Allows a full reroll of failed dice, but you suffer 1 <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> damage if the second attempt fails.</li>
+<li><em>Spiteful Reroll:</em> Allows a full reroll of failed dice, but you suffer 1 <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> damage if the second attempt fails.</li>
 </ul>
 </li>
 <li><strong>Explosion Engineering:</strong>
 <ul>
 <li><em>Exploding 5s:</em> Standard tests now explode on both 5s and 6s.</li>
-<li><em>Double Explosion:</em> Landing a 6 generates two additional dice instead of one (native to <a href="stage--rules--keywords-index.html#bangaranga-dice" class="wikilink" title="Extra dice added to a roll by spending points from the communal Bangaranga Pool.">Bangaranga dice</a>).</li>
+<li><em>Double Explosion:</em> Landing a 6 generates two additional dice instead of one (native to <a href="stage--rules--keywords-index.html#bangaranga-dice" class="wikilink" data-tooltip="Extra dice added to a roll by spending points from the communal Bangaranga Pool.">Bangaranga dice</a>).</li>
 <li><em>Explosion Removal:</em> Suppresses explosion mechanics entirely (6s count as successes but do not explode).</li>
 </ul>
 </li>
@@ -105,18 +110,18 @@
 </li>
 <li><strong>Stat &amp; Derived Metric Adjustments:</strong>
 <ul>
-<li><em>Main Stat Optimization:</em> Evaluates a main stat (<a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a>, <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a>, <a href="stage--rules--keywords-index.html#brains" class="wikilink" title="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a>, <a href="stage--rules--keywords-index.html#mouth" class="wikilink" title="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a>) as a flat value for specific triggers.</li>
-<li><em>Secondary Stat Override:</em> Applies flat changes to <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> limits, <a href="stage--rules--keywords-index.html#carry" class="wikilink" title="An attribute indicating the maximum Bulk of items a character or Mob can carry without penalty.">Carry</a>, <a href="stage--rules--keywords-index.html#movement" class="wikilink" title="A stat or action indicating how many Zones a character or Mob can cross on their turn.">Movement</a>, <a href="stage--rules--keywords-index.html#max-mobs" class="wikilink" title="The maximum number of Mobs a Boss can command simultaneously, determined by their Mouth stat.">Max Mobs</a>, <a href="stage--rules--keywords-index.html#free-orders" class="wikilink" title="Extra command activations granted by Mouth progression that do not cost Standard Actions.">Free Orders</a>, <a href="stage--rules--keywords-index.html#power-words" class="wikilink" title="Modular magical components representing alchemical elements or domains used to construct spells.">Power Words</a>, or <a href="stage--rules--keywords-index.html#crafting-capacity" class="wikilink" title="The maximum number of Oddities that can be attached to a single item. Equal to the crafter's Brains score.">Crafting Capacity</a>.</li>
+<li><em>Main Stat Optimization:</em> Evaluates a main stat (<a href="stage--rules--keywords-index.html#tough" class="wikilink" data-tooltip="Main stat representing physical power, raw force, and melee combat capability.">Tough</a>, <a href="stage--rules--keywords-index.html#slink" class="wikilink" data-tooltip="Main stat representing agility, stealth, and ranged combat capability.">Slink</a>, <a href="stage--rules--keywords-index.html#brains" class="wikilink" data-tooltip="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a>, <a href="stage--rules--keywords-index.html#mouth" class="wikilink" data-tooltip="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a>) as a flat value for specific triggers.</li>
+<li><em>Secondary Stat Override:</em> Applies flat changes to <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> limits, <a href="stage--rules--keywords-index.html#carry" class="wikilink" data-tooltip="An attribute indicating the maximum Bulk of items a character or Mob can carry without penalty.">Carry</a>, <a href="stage--rules--keywords-index.html#movement" class="wikilink" data-tooltip="A stat or action indicating how many Zones a character or Mob can cross on their turn.">Movement</a>, <a href="stage--rules--keywords-index.html#max-mobs" class="wikilink" data-tooltip="The maximum number of Mobs a Boss can command simultaneously, determined by their Mouth stat.">Max Mobs</a>, <a href="stage--rules--keywords-index.html#free-orders" class="wikilink" data-tooltip="Extra command activations granted by Mouth progression that do not cost Standard Actions.">Free Orders</a>, <a href="stage--rules--keywords-index.html#power-words" class="wikilink" data-tooltip="Modular magical components representing alchemical elements or domains used to construct spells.">Power Words</a>, or <a href="stage--rules--keywords-index.html#crafting-capacity" class="wikilink" data-tooltip="The maximum number of Oddities that can be attached to a single item. Equal to the crafter's Brains score.">Crafting Capacity</a>.</li>
 </ul>
 </li>
 <li><strong>Combat Payloads (Damage &amp; Defense):</strong>
 <ul>
-<li><em>Flat Damage/Success Increment:</em> Adds automatic successes to attacks (against standard foes) or automatic <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> or Mob <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> damage (against PCs and Mobs).</li>
+<li><em>Flat Damage/Success Increment:</em> Adds automatic successes to attacks (against standard foes) or automatic <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> or Mob <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> damage (against PCs and Mobs).</li>
 <li><em>Cleave Damage Vector:</em> Excess successes beyond defense spill over to damage extra units in a Mob.</li>
 <li><em>Area of Effect (AoE) Duplication:</em> Duplicates damage to apply to every single die in a Mob’s pool.</li>
-<li><em>Overkill Multiplier:</em> Deals an extra Wound for every exact multiple of the target’s <a href="stage--rules--keywords-index.html#defence-tn" class="wikilink" title="The target number of successes required to successfully hit or damage a creature.">Defence TN</a>.</li>
-<li><em><a href="stage--rules--keywords-index.html#passive-defence" class="wikilink" title="Defence dice granted automatically by armor or positioning without requiring a Standard Action or Reaction.">Passive Defence</a> Dice Grant:</em> Grants bonus <a href="stage--rules--keywords-index.html#passive-defence" class="wikilink" title="Defence dice granted automatically by armor or positioning without requiring a Standard Action or Reaction.">passive defence</a> dice (<strong>+Xd</strong>).</li>
-<li><em><a href="stage--rules--keywords-index.html#passive-defence" class="wikilink" title="Defence dice granted automatically by armor or positioning without requiring a Standard Action or Reaction.">Passive Defence</a> Bypass:</em> Bypasses the target’s <a href="stage--rules--keywords-index.html#passive-defence" class="wikilink" title="Defence dice granted automatically by armor or positioning without requiring a Standard Action or Reaction.">passive defence</a> dice and armor completely.</li>
+<li><em>Overkill Multiplier:</em> Deals an extra Wound for every exact multiple of the target’s <a href="stage--rules--keywords-index.html#defence-tn" class="wikilink" data-tooltip="The target number of successes required to successfully hit or damage a creature.">Defence TN</a>.</li>
+<li><em><a href="stage--rules--keywords-index.html#passive-defence" class="wikilink" data-tooltip="Defence dice granted automatically by armor or positioning without requiring a Standard Action or Reaction.">Passive Defence</a> Dice Grant:</em> Grants bonus <a href="stage--rules--keywords-index.html#passive-defence" class="wikilink" data-tooltip="Defence dice granted automatically by armor or positioning without requiring a Standard Action or Reaction.">Passive defence</a> dice (<strong>+Xd</strong>).</li>
+<li><em><a href="stage--rules--keywords-index.html#passive-defence" class="wikilink" data-tooltip="Defence dice granted automatically by armor or positioning without requiring a Standard Action or Reaction.">Passive Defence</a> Bypass:</em> Bypasses the target’s <a href="stage--rules--keywords-index.html#passive-defence" class="wikilink" data-tooltip="Defence dice granted automatically by armor or positioning without requiring a Standard Action or Reaction.">Passive defence</a> dice and armor completely.</li>
 </ul>
 </li>
 <li><strong>Status State Toggles:</strong>
@@ -138,11 +143,11 @@
 <p>The specific rules, stats, actions, or trackers that the modification acts upon. Target mechanics are grouped into five <strong>Target Hubs</strong>:</p>
 <ul>
 <li><strong>Stats:</strong> Tough Test, Slink Test, Brains Test, Mouth Test.</li>
-<li><strong>Actions &amp; Reactions:</strong> Attack Action (Melee/Ranged), Move Action, Plunder Action, Manipulate Action, <a href="stage--rules--keywords-index.html#order-action" class="wikilink" title="The action spent to direct a Mob, executing their priority combat behavior.">Order Action</a>, Dodge Reaction, Parry Reaction, Scatter Order, Opportunity Attack, Disengage, <a href="stage--rules--keywords-index.html#group-attack" class="wikilink" title="A consolidated GM attack where multiple surrounding enemies combine their strength into a single roll.">Group Attack</a>.</li>
-<li><strong>Horde &amp; Command:</strong> Mob <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a>, Mob <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> Normalization, Mob Cognitive Normalization, Boredom Rule, Cross-Gang Command Struggle, In-Fighting Damage.</li>
-<li><strong>Campaign &amp; Lair:</strong> <a href="stage--rules--keywords-index.html#zone-profile" class="wikilink" title="The default Difficulty and TN profile of a Zone (e.g. 5+/1) that traversal or manipulation tests in that Zone resolve against.">Zone Profile</a> (Base TN), Movement Cost Multiplier, Size Capacity Threshold, Cover State, Hazard Resolution Test, <a href="stage--rules--keywords-index.html#route-test" class="wikilink" title="A travel test made during journeys using Brains or Slink to navigate path hazards and find safe passages.">Route Test</a>, <a href="stage--rules--keywords-index.html#travel-event" class="wikilink" title="A random event resolved during journeys, indicating hazards, encounters, or opportunities.">Travel Event</a>, <strong>Laden</strong> or <a href="stage--rules--keywords-index.html#over-laden" class="wikilink" title="A state of carrying Bulk exceeding capacity, reducing movement speed and imposing Banes on physical tests.">Over-Laden</a> Penalties, Lair labor allocation, Recruitment loops, Slot clearance, Dominance contribution, Supply routes.</li>
+<li><strong>Actions &amp; Reactions:</strong> Attack Action (Melee/Ranged), Move Action, Plunder Action, Manipulate Action, <a href="stage--rules--keywords-index.html#order-action" class="wikilink" data-tooltip="The action spent to direct a Mob, executing their priority combat behavior.">Order Action</a>, Dodge Reaction, Parry Reaction, Scatter Order, Opportunity Attack, Disengage, <a href="stage--rules--keywords-index.html#group-attack" class="wikilink" data-tooltip="A consolidated GM attack where multiple surrounding enemies combine their strength into a single roll.">Group Attack</a>.</li>
+<li><strong>Horde &amp; Command:</strong> Mob <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a>, Mob <a href="stage--rules--keywords-index.html#slink" class="wikilink" data-tooltip="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> Normalization, Mob Cognitive Normalization, Boredom Rule, Cross-Gang Command Struggle, In-Fighting Damage.</li>
+<li><strong>Campaign &amp; Lair:</strong> <a href="stage--rules--keywords-index.html#zone-profile" class="wikilink" data-tooltip="The default Difficulty and TN profile of a Zone (e.g. 5+/1) that traversal or manipulation tests in that Zone resolve against.">Zone Profile</a> (Base TN), Movement Cost Multiplier, Size Capacity Threshold, Cover State, Hazard Resolution Test, <a href="stage--rules--keywords-index.html#route-test" class="wikilink" data-tooltip="A travel test made during journeys using Brains or Slink to navigate path hazards and find safe passages.">Route Test</a>, <a href="stage--rules--keywords-index.html#travel-event" class="wikilink" data-tooltip="A random event resolved during journeys, indicating hazards, encounters, or opportunities.">Travel Event</a>, <strong>Laden</strong> or <a href="stage--rules--keywords-index.html#over-laden" class="wikilink" data-tooltip="A state of carrying Bulk exceeding capacity, reducing movement speed and imposing Banes on physical tests.">Over-Laden</a> Penalties, Lair labor allocation, Recruitment loops, Slot clearance, Dominance contribution, Supply routes.</li>
 <li><strong>Arcane:</strong> Spell Activation Brains Pool, Push-Your-Luck Reroll, Chaotic Leakage (Side Effects), Spell Mishap (Farkle).</li>
-<li><strong>Equipment:</strong> Durability Break Roll, <a href="stage--rules--keywords-index.html#scrap-cascade" class="wikilink" title="When Custom Gear breaks, each Oddity rolls a d6 for survival. An Oddity that survives becomes Scarred (+1 Bite).">Scrap Cascade</a>, <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> Ceiling.</li>
+<li><strong>Equipment:</strong> Durability Break Roll, <a href="stage--rules--keywords-index.html#scrap-cascade" class="wikilink" data-tooltip="When Custom Gear breaks, each Oddity rolls a d6 for survival. An Oddity that survives becomes Scarred (+1 Bite).">Scrap Cascade</a>, <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> Ceiling.</li>
 </ul>
 <h3 id="category-3-the-trigger-or-constraint-when-it-applies" tabindex="-1">Category 3: The Trigger or Constraint (When it applies)</h3>
 <p>The specific conditions, circumstances, or events required for the ability to activate:</p>
@@ -151,7 +156,7 @@
 <ul>
 <li><em>Active Hazard:</em> Target/occupied zone has a damaging trait (e.g. Burning, Toxic Spores).</li>
 <li><em>Physical Obstacle:</em> Interacting with terrain impairments (e.g. Rubble, Chasm, vertical cliffs).</li>
-<li><em>Spatial Bottleneck:</em> Volume limits (e.g. Narrow space penalizing <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> 3+ mobs).</li>
+<li><em>Spatial Bottleneck:</em> Volume limits (e.g. Narrow space penalizing <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> 3+ mobs).</li>
 <li><em>Tactical Feature:</em> Positive cover/terrain features (e.g. pillars, shadow zones).</li>
 <li><em>Ambient Atmospheric States:</em> Weather/lighting conditions (e.g. total darkness, heavy rain).</li>
 </ul>
@@ -168,7 +173,7 @@
 <li><strong>Target &amp; Adversary:</strong>
 <ul>
 <li><em>Defensive Tier Match:</em> Target armor type (e.g. Unarmored, Heavily Armored).</li>
-<li><em>Volumetric Scale Check:</em> Target <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> is strictly larger or strictly smaller.</li>
+<li><em>Volumetric Scale Check:</em> Target <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> is strictly larger or strictly smaller.</li>
 <li><em>Ancestry / Faction Specificity:</em> Target belongs to a specific biological/structural group.</li>
 </ul>
 </li>
@@ -178,15 +183,15 @@
 <li><em>Probability Failure State (Fumble):</em> Triggers if a roll has zero successes and two or more 1s.</li>
 <li><em>Probability Failure State (Expanded Fumble):</em> Triggers if a roll contains any 1s.</li>
 <li><em>Probability Success State (Critical):</em> Triggers if a roll generates consecutive exploding 6s.</li>
-<li><em><a href="stage--rules--keywords-index.html#dice-pool" class="wikilink" title="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">Dice Pool</a> Verification:</em> Evaluates the exact count of 1s in a roll.</li>
+<li><em><a href="stage--rules--keywords-index.html#dice-pool" class="wikilink" data-tooltip="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">Dice Pool</a> Verification:</em> Evaluates the exact count of 1s in a roll.</li>
 </ul>
 </li>
 <li><strong>Operational &amp; Health States:</strong>
 <ul>
-<li><em>Direct Damage Gate (Wounding):</em> Triggers when a sheet registers <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> or Mob <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> loss.</li>
+<li><em>Direct Damage Gate (Wounding):</em> Triggers when a sheet registers <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> or Mob <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> loss.</li>
 <li><em>Biological Deprivation State:</em> Deprived of resource inputs (e.g., gross food).</li>
-<li><em>Uncontrolled Minion Status:</em> Mob scales past <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>, breaks line of sight, or fails morale.</li>
-<li><em>Encumbrance Travel State:</em> Mob is <strong>Laden</strong> or <a href="stage--rules--keywords-index.html#over-laden" class="wikilink" title="A state of carrying Bulk exceeding capacity, reducing movement speed and imposing Banes on physical tests.">Over-Laden</a>.</li>
+<li><em>Uncontrolled Minion Status:</em> Mob scales past <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>, breaks line of sight, or fails morale.</li>
+<li><em>Encumbrance Travel State:</em> Mob is <strong>Laden</strong> or <a href="stage--rules--keywords-index.html#over-laden" class="wikilink" data-tooltip="A state of carrying Bulk exceeding capacity, reducing movement speed and imposing Banes on physical tests.">Over-Laden</a>.</li>
 </ul>
 </li>
 <li><strong>Identity &amp; Structural:</strong>
@@ -194,7 +199,7 @@
 <li><em>Gang Faction Alignment:</em> Character sheet matches parent faction tag.</li>
 <li><em>Faction Defiance (Cursed):</em> Item gang tag doesn’t match wielder’s rival gang.</li>
 <li><em>Attribute Tier Gating:</em> Primary stat score is at or above a designated value.</li>
-<li><em>Component Mismatch (Ceiling Rule):</em> <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> tier exceeds workshop level.</li>
+<li><em>Component Mismatch (Ceiling Rule):</em> <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> tier exceeds workshop level.</li>
 <li><em>Arcane Difficulty Constraint:</em> Successes are locked strictly to face value 6 (Hard casting).</li>
 </ul>
 </li>
@@ -232,26 +237,26 @@
 </li>
 </ul>
 <h3 id="category-5-the-cost-what-it-takes-to-use" tabindex="-1">Category 5: The Cost (What it takes to use)</h3>
-<p>The action, resource (<a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>, <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a>, or <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a>), or item spent to activate the power:</p>
+<p>The action, resource (<a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>, <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a>, or <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a>), or item spent to activate the power:</p>
 <ul>
 <li><strong>Action Economy:</strong>
 <ul>
 <li><em>Passive:</em> Triggers automatically or constantly active (0 Cost).</li>
-<li><em><a href="stage--rules--keywords-index.html#free-action" class="wikilink" title="Minor or immediate actions that cost no Standard Actions (e.g. dropping a weapon or speaking). See [[02 Combat]].">Free Action</a>:</em> Instant during active turn for minor triggers.</li>
-<li><em><a href="stage--rules--keywords-index.html#standard-action" class="wikilink" title="The primary actions spent on a turn (3 per round). Used for Move, Attack, Plunder, Order, or Manipulate. See [[02 Combat]].">Standard Action</a>:</em> Consumes 1 of 3 standard combat actions.</li>
-<li><em>Reaction (Saved Action):</em> Consumes a saved <a href="stage--rules--keywords-index.html#standard-action" class="wikilink" title="The primary actions spent on a turn (3 per round). Used for Move, Attack, Plunder, Order, or Manipulate. See [[02 Combat]].">Standard Action</a> out of turn.</li>
-<li><em>Free <a href="stage--rules--keywords-index.html#order-action" class="wikilink" title="The action spent to direct a Mob, executing their priority combat behavior.">Order Action</a>:</em> Consumes 1 Free Order Mouth allocation.</li>
+<li><em><a href="stage--rules--keywords-index.html#free-action" class="wikilink" data-tooltip="Minor or immediate actions that cost no Standard Actions (e.g. dropping a weapon or speaking). See [[02 Combat]].">Free Action</a>:</em> Instant during active turn for minor triggers.</li>
+<li><em><a href="stage--rules--keywords-index.html#standard-action" class="wikilink" data-tooltip="The primary actions spent on a turn (3 per round). Used for Move, Attack, Plunder, Order, or Manipulate. See [[02 Combat]].">Standard Action</a>:</em> Consumes 1 of 3 standard combat actions.</li>
+<li><em>Reaction (Saved Action):</em> Consumes a saved <a href="stage--rules--keywords-index.html#standard-action" class="wikilink" data-tooltip="The primary actions spent on a turn (3 per round). Used for Move, Attack, Plunder, Order, or Manipulate. See [[02 Combat]].">Standard Action</a> out of turn.</li>
+<li><em>Free <a href="stage--rules--keywords-index.html#order-action" class="wikilink" data-tooltip="The action spent to direct a Mob, executing their priority combat behavior.">Order Action</a>:</em> Consumes 1 Free Order Mouth allocation.</li>
 </ul>
 </li>
 <li><strong>Personal Resource Pools:</strong>
 <ul>
-<li><em>Current Grunt Spend:</em> Deducts 1 to 3 points from current <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> pool.</li>
-<li><em>Grit Loss:</em> Inflicts flat <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> damage directly, bypassing defense rolls.</li>
+<li><em>Current Grunt Spend:</em> Deducts 1 to 3 points from current <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> pool.</li>
+<li><em>Grit Loss:</em> Inflicts flat <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> damage directly, bypassing defense rolls.</li>
 </ul>
 </li>
 <li><strong>Minion / Mob Resources:</strong>
 <ul>
-<li><em>Mob Size Sacrifice:</em> Permanently reduces a Mob’s <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> (e.g., by 1 or 1d3).</li>
+<li><em>Mob Size Sacrifice:</em> Permanently reduces a Mob’s <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> (e.g., by 1 or 1d3).</li>
 <li><em>Mob Action Consumption:</em> Mob must spend 1 or both of its actions.</li>
 <li><em>Garrison Cost:</em> Leaving a Mob behind, removing them from the Gobbo Pool.</li>
 </ul>
@@ -259,13 +264,13 @@
 <li><strong>Inventory &amp; Wealth:</strong>
 <ul>
 <li><em>Scrap / Component Consumption:</em> Consumes a piece of Scrap or item held in inventory.</li>
-<li><em><a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> Sacrifice:</em> Permanently erases a component from Lair inventory.</li>
-<li><em>Bribe / <a href="stage--rules--keywords-index.html#loot-value" class="wikilink" title="The raw value of items secured during raids, pooled to increase Infamy and Lair Scrap.">Loot Value</a> Expenditure:</em> Deducts raw wealth (e.g. 5 Loot) from hoard.</li>
+<li><em><a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> Sacrifice:</em> Permanently erases a component from Lair inventory.</li>
+<li><em>Bribe / <a href="stage--rules--keywords-index.html#loot-value" class="wikilink" data-tooltip="The raw value of items secured during raids, pooled to increase Infamy and Lair Scrap.">Loot Value</a> Expenditure:</em> Deducts raw wealth (e.g. 5 Loot) from hoard.</li>
 </ul>
 </li>
 <li><strong>Equipment Lifecycle:</strong>
 <ul>
-<li><em><a href="stage--rules--keywords-index.html#overclock" class="wikilink" title="A declaration made before an Attack Action that amplifies Custom Gear's effect to its maximum, destroys the item, and ignores the target's Passive Defence dice.">Overclock</a> Disintegration:</em> Instantly vaporizes the item chassis.</li>
+<li><em><a href="stage--rules--keywords-index.html#overclock" class="wikilink" data-tooltip="A declaration made before an Attack Action that amplifies Custom Gear's effect to its maximum, destroys the item, and ignores the target's Passive Defence dice.">Overclock</a> Disintegration:</em> Instantly vaporizes the item chassis.</li>
 <li><em>Active Bite Level Escalation:</em> Increases item’s instability by +1 Bite.</li>
 </ul>
 </li>
@@ -280,13 +285,13 @@
 <ul>
 <li><em>Loot / Bulk Jettison:</em> Immediately dropping Bulk/treasure to validate action.</li>
 <li><em>Mandatory Friendly Targeting:</em> Targeting a friendly Mob to trigger a loop (e.g., Asserting Dominance).</li>
-<li><em>Action Restriction (Disengage):</em> Requires spending a <a href="stage--rules--keywords-index.html#standard-action" class="wikilink" title="The primary actions spent on a turn (3 per round). Used for Move, Attack, Plunder, Order, or Manipulate. See [[02 Combat]].">standard action</a> to safely exit zone.</li>
+<li><em>Action Restriction (Disengage):</em> Requires spending a <a href="stage--rules--keywords-index.html#standard-action" class="wikilink" data-tooltip="The primary actions spent on a turn (3 per round). Used for Move, Attack, Plunder, Order, or Manipulate. See [[02 Combat]].">Standard action</a> to safely exit zone.</li>
 </ul>
 </li>
 <li><strong>Risk &amp; Pool Penalties:</strong>
 <ul>
 <li><em>Push-Your-Luck Reroll Lock:</em> Locks successes, forces reroll of non-successes.</li>
-<li><em><a href="stage--rules--keywords-index.html#bangaranga-pool" class="wikilink" title="A communal pool of d6s built by fumbles and ones, spent by players to purchase temporary Boons or activate magic.">Bangaranga Pool</a> Drainage Tax:</em> Drainage of <a href="stage--rules--keywords-index.html#bangaranga-dice" class="wikilink" title="Extra dice added to a roll by spending points from the communal Bangaranga Pool.">Bangaranga dice</a> on fail.</li>
+<li><em><a href="stage--rules--keywords-index.html#bangaranga-pool" class="wikilink" data-tooltip="A communal pool of d6s built by fumbles and ones, spent by players to purchase temporary Boons or activate magic.">Bangaranga Pool</a> Drainage Tax:</em> Drainage of <a href="stage--rules--keywords-index.html#bangaranga-dice" class="wikilink" data-tooltip="Extra dice added to a roll by spending points from the communal Bangaranga Pool.">Bangaranga dice</a> on fail.</li>
 <li><em>Forced Hazard Roll Trigger:</em> Triggers unrolled GM check on a complication table.</li>
 </ul>
 </li>
@@ -325,15 +330,15 @@
 <h2 id="2-core-target-hubs" tabindex="-1">2. Core Target Hubs</h2>
 <p>To prevent rules bloat and keep scripting simple, all target mechanics are grouped into five <strong>Target Hubs</strong>:</p>
 <ol>
-<li><strong>Stats:</strong> Modifies tests using <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a>, <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a>, <a href="stage--rules--keywords-index.html#brains" class="wikilink" title="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a>, or <a href="stage--rules--keywords-index.html#mouth" class="wikilink" title="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a>.</li>
-<li><strong>Actions &amp; Reactions:</strong> Modifies Attack Actions, Dodge Reactions, Parry Reactions, or <a href="stage--rules--keywords-index.html#passive-defence" class="wikilink" title="Defence dice granted automatically by armor or positioning without requiring a Standard Action or Reaction.">Passive Defence</a>.</li>
-<li><strong>Horde &amp; Command:</strong> Modifies Mob <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a>, <a href="stage--rules--keywords-index.html#max-mobs" class="wikilink" title="The maximum number of Mobs a Boss can command simultaneously, determined by their Mouth stat.">Max Mobs</a>, <a href="stage--rules--keywords-index.html#free-orders" class="wikilink" title="Extra command activations granted by Mouth progression that do not cost Standard Actions.">Free Orders</a>, or Mob <a href="stage--rules--keywords-index.html#morale" class="wikilink" title="A Mob's willpower tracker. Mobs check Morale when taking heavy losses to avoid mutiny or routing.">Morale</a>.</li>
-<li><strong>Campaign &amp; Lair:</strong> Modifies Lair labor rolls, travel route tests, or <a href="stage--rules--keywords-index.html#carry" class="wikilink" title="An attribute indicating the maximum Bulk of items a character or Mob can carry without penalty.">Carry</a> capacity.</li>
+<li><strong>Stats:</strong> Modifies tests using <a href="stage--rules--keywords-index.html#tough" class="wikilink" data-tooltip="Main stat representing physical power, raw force, and melee combat capability.">Tough</a>, <a href="stage--rules--keywords-index.html#slink" class="wikilink" data-tooltip="Main stat representing agility, stealth, and ranged combat capability.">Slink</a>, <a href="stage--rules--keywords-index.html#brains" class="wikilink" data-tooltip="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a>, or <a href="stage--rules--keywords-index.html#mouth" class="wikilink" data-tooltip="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a>.</li>
+<li><strong>Actions &amp; Reactions:</strong> Modifies Attack Actions, Dodge Reactions, Parry Reactions, or <a href="stage--rules--keywords-index.html#passive-defence" class="wikilink" data-tooltip="Defence dice granted automatically by armor or positioning without requiring a Standard Action or Reaction.">Passive Defence</a>.</li>
+<li><strong>Horde &amp; Command:</strong> Modifies Mob <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a>, <a href="stage--rules--keywords-index.html#max-mobs" class="wikilink" data-tooltip="The maximum number of Mobs a Boss can command simultaneously, determined by their Mouth stat.">Max Mobs</a>, <a href="stage--rules--keywords-index.html#free-orders" class="wikilink" data-tooltip="Extra command activations granted by Mouth progression that do not cost Standard Actions.">Free Orders</a>, or Mob <a href="stage--rules--keywords-index.html#morale" class="wikilink" data-tooltip="A Mob's willpower tracker. Mobs check Morale when taking heavy losses to avoid mutiny or routing.">Morale</a>.</li>
+<li><strong>Campaign &amp; Lair:</strong> Modifies Lair labor rolls, travel route tests, or <a href="stage--rules--keywords-index.html#carry" class="wikilink" data-tooltip="An attribute indicating the maximum Bulk of items a character or Mob can carry without penalty.">Carry</a> capacity.</li>
 <li><strong>Arcane:</strong> Modifies magic words casting, push rerolls, or spell mishap resolution.</li>
 </ol>
 <hr>
 <h2 id="3-the-t1-t5-mechanical-toolkit-pre-bundled-blocks" tabindex="-1">3. The T1–T5 Mechanical Toolkit (Pre-Bundled Blocks)</h2>
-<p>To simplify play, the rules pre-bundle the positive building blocks (<strong>Modification</strong>, <a href="stage--rules--keywords-index.html#delivery" class="wikilink" title="The method by which a magical spell is projected, such as Touch, Ray, or Zone.">Delivery</a>, and <a href="stage--rules--keywords-index.html#duration" class="wikilink" title="The timeframe that an effect, spell, or condition remains active on a target or Zone.">Duration</a>) into five standard <strong>Tiers (T1–T5)</strong>. This universal scale aligns with Boss stats, gear quality, and Lair workshop tiers:</p>
+<p>To simplify play, the rules pre-bundle the positive building blocks (<strong>Modification</strong>, <a href="stage--rules--keywords-index.html#delivery" class="wikilink" data-tooltip="The method by which a magical spell is projected, such as Touch, Ray, or Zone.">Delivery</a>, and <a href="stage--rules--keywords-index.html#duration" class="wikilink" data-tooltip="The timeframe that an effect, spell, or condition remains active on a target or Zone.">Duration</a>) into five standard <strong>Tiers (T1–T5)</strong>. This universal scale aligns with Boss stats, gear quality, and Lair workshop tiers:</p>
 <table>
 <thead>
 <tr>
@@ -347,30 +352,30 @@
 <tbody>
 <tr>
 <td><strong>T1 (Niche/Minor)</strong></td>
-<td><strong>+1 Success</strong> (on attack) OR <strong>1</strong> <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a>/<a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> damage (on hit).</td>
-<td><a href="stage--rules--keywords-index.html#melee" class="wikilink" title="Close-range combat conducted within the same Zone.">Melee</a> (Same <a href="stage--rules--keywords-index.html#zone" class="wikilink" title="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a>).</td>
+<td><strong>+1 Success</strong> (on attack) OR <strong>1</strong> <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a>/<a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> damage (on hit).</td>
+<td><a href="stage--rules--keywords-index.html#melee" class="wikilink" data-tooltip="Close-range combat conducted within the same Zone.">Melee</a> (Same <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a>).</td>
 <td><strong>Instant</strong> (Effect resolves immediately).</td>
-<td>Move 1 <a href="stage--rules--keywords-index.html#zone" class="wikilink" title="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a> as part of the action, or bypass a minor physical obstacle (e.g., climb a fence).</td>
+<td>Move 1 <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a> as part of the action, or bypass a minor physical obstacle (e.g., climb a fence).</td>
 </tr>
 <tr>
 <td><strong>T2 (Standard)</strong></td>
-<td><strong>+2 Successes</strong> (on attack) OR <strong>2</strong> <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a>/<a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> damage (on hit).</td>
+<td><strong>+2 Successes</strong> (on attack) OR <strong>2</strong> <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a>/<a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> damage (on hit).</td>
 <td><strong>Ranged: 1 Zone</strong> (Adjacent).</td>
-<td><strong>Sustained</strong> (Basic condition like <em>Weakened</em> or <em>Restrained</em> until target spends 1 <a href="stage--rules--keywords-index.html#action" class="wikilink" title="The resource spent on a turn to perform standard or free maneuvers. Goblins receive 3 Standard Actions and Mobs receive 2.">Action</a> to shake it off).</td>
+<td><strong>Sustained</strong> (Basic condition like <em>Weakened</em> or <em>Restrained</em> until target spends 1 <a href="stage--rules--keywords-index.html#action" class="wikilink" data-tooltip="The resource spent on a turn to perform standard or free maneuvers. Goblins receive 3 Standard Actions and Mobs receive 2.">Action</a> to shake it off).</td>
 <td>Medium utility (e.g., stick to walls, breathe underwater, make loud noise that ruins stealth).</td>
 </tr>
 <tr>
 <td><strong>T3 (Heroic/Area)</strong></td>
-<td><strong>+3 Successes</strong> (on attack) OR <strong>3</strong> <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a>/<a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> damage (on hit); OR heal <strong>2</strong> <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a>.</td>
-<td><a href="stage--rules--keywords-index.html#zone" class="wikilink" title="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a> (Affects all targets in a single <a href="stage--rules--keywords-index.html#zone" class="wikilink" title="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a>).</td>
-<td><a href="stage--rules--keywords-index.html#persistent" class="wikilink" title="An effect or spell duration that remains active across multiple rounds or encounters.">Persistent</a> (Severe condition like <em>Blinded</em> or <em>Terrified</em> until target spends 1 <a href="stage--rules--keywords-index.html#action" class="wikilink" title="The resource spent on a turn to perform standard or free maneuvers. Goblins receive 3 Standard Actions and Mobs receive 2.">Action</a> to shake it off).</td>
+<td><strong>+3 Successes</strong> (on attack) OR <strong>3</strong> <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a>/<a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> damage (on hit); OR heal <strong>2</strong> <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a>.</td>
+<td><a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a> (Affects all targets in a single <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a>).</td>
+<td><a href="stage--rules--keywords-index.html#persistent" class="wikilink" data-tooltip="An effect or spell duration that remains active across multiple rounds or encounters.">Persistent</a> (Severe condition like <em>Blinded</em> or <em>Terrified</em> until target spends 1 <a href="stage--rules--keywords-index.html#action" class="wikilink" data-tooltip="The resource spent on a turn to perform standard or free maneuvers. Goblins receive 3 Standard Actions and Mobs receive 2.">Action</a> to shake it off).</td>
 <td>Zone-wide utility (e.g., ignite a zone, fill it with thick smoke, block exits).</td>
 </tr>
 <tr>
 <td><strong>T4 (Destructive)</strong></td>
-<td><strong>+4 Successes</strong> (on attack) OR <strong>4</strong> <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a>/<a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> damage (on hit); OR double <strong>successes</strong>.</td>
-<td><strong>Blast</strong> (Affects own + all adjacent <a href="stage--rules--keywords-index.html#zones" class="wikilink" title="Abstract spatial segments of the battlefield used to track distance, line of sight, and hazard boundaries.">Zones</a>).</td>
-<td><a href="stage--rules--keywords-index.html#encounter" class="wikilink" title="A distinct scene or battle segment during a raid.">Encounter</a> (Condition lasts for the duration of the fight).</td>
+<td><strong>+4 Successes</strong> (on attack) OR <strong>4</strong> <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a>/<a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> damage (on hit); OR double <strong>successes</strong>.</td>
+<td><strong>Blast</strong> (Affects own + all adjacent <a href="stage--rules--keywords-index.html#zones" class="wikilink" data-tooltip="Abstract spatial segments of the battlefield used to track distance, line of sight, and hazard boundaries.">Zones</a>).</td>
+<td><a href="stage--rules--keywords-index.html#encounter" class="wikilink" data-tooltip="A distinct scene or battle segment during a raid.">Encounter</a> (Condition lasts for the duration of the fight).</td>
 <td>Destroys permanent structures, creates new paths, or permanently alters zone boundaries.</td>
 </tr>
 <tr>
@@ -387,19 +392,19 @@
 <p><strong>GOLDEN RULE: Applying Successes vs. Damage</strong>
 To keep combat fast and respect the deterministic nature of standard enemies, modular math adjusts based on the target:</p>
 <ul>
-<li><strong>Against standard enemies</strong>: The value is added as <strong>automatic successes</strong> directly to the player’s attack pool toward meeting the target’s <a href="stage--rules--keywords-index.html#defence" class="wikilink" title="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a> <a href="stage--rules--keywords-index.html#target-number-tn" class="wikilink" title="The total number of successes required to pass a test (e.g., in shorthand **5+/1**, you need one die to land on 5 or 6). This is typically a fixed number.">Target Number (TN)</a>.</li>
-<li><strong>Against Bosses, PCs, and Mobs</strong>: The value is subtracted directly as <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> loss (for Bosses and PCs) or Mob <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> damage (for Mobs) on a successful hit.</li>
+<li><strong>Against standard enemies</strong>: The value is added as <strong>automatic successes</strong> directly to the player’s attack pool toward meeting the target’s <a href="stage--rules--keywords-index.html#defence" class="wikilink" data-tooltip="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a> <a href="stage--rules--keywords-index.html#target-number-tn" class="wikilink" data-tooltip="The total number of successes required to pass a test (e.g., in shorthand **5+/1**, you need one die to land on 5 or 6). This is typically a fixed number.">Target Number (TN)</a>.</li>
+<li><strong>Against Bosses, PCs, and Mobs</strong>: The value is subtracted directly as <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> loss (for Bosses and PCs) or Mob <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> damage (for Mobs) on a successful hit.</li>
 </ul>
 </blockquote>
 </blockquote>
 <hr>
 <h2 id="4-non-combat-and-campaign-tiering" tabindex="-1">4. Non-Combat &amp; Campaign Tiering</h2>
-<p>While the combat-focused matrix is the default player-facing interface, custom Quirks and <a href="stage--rules--keywords-index.html#oddities" class="wikilink" title="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> that modify non-combat loops (such as travel routes, downtime labor, or item durability) are tiered using these guidelines:</p>
+<p>While the combat-focused matrix is the default player-facing interface, custom Quirks and <a href="stage--rules--keywords-index.html#oddities" class="wikilink" data-tooltip="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> that modify non-combat loops (such as travel routes, downtime labor, or item durability) are tiered using these guidelines:</p>
 <ul>
-<li><strong>Tier 1 (Niche/Minor):</strong> Modifies a single-target, minor non-combat utility (e.g., granting a <a href="stage--rules--keywords-index.html#boon" class="wikilink" title="A positive modifier granting a +1d bonus on a test's dice pool. Multiple Boons do not stack.">Boon</a> to a specific travel role, or reducing an item’s Bulk by 1).</li>
+<li><strong>Tier 1 (Niche/Minor):</strong> Modifies a single-target, minor non-combat utility (e.g., granting a <a href="stage--rules--keywords-index.html#boon" class="wikilink" data-tooltip="A positive modifier granting a +1d bonus on a test's dice pool. Multiple Boons do not stack.">Boon</a> to a specific travel role, or reducing an item’s Bulk by 1).</li>
 <li><strong>Tier 2 (Standard):</strong> Modifies a standard non-combat mechanic (e.g., shifting a travel test difficulty step, or reducing an item’s active Bite level by 1).</li>
 <li><strong>Tier 3 (Heroic/Area):</strong> Modifies a group-wide or zone-wide campaign metric (e.g., granting <strong>+1 success</strong> to Lair labor rolls, or allowing a Mob to ignore the <strong>Laden</strong> travel penalty).</li>
-<li><strong>Tier 4 (Destructive):</strong> Modifies macro-campaign structures (e.g., preventing any gear breakage on a <a href="stage--rules--keywords-index.html#fumbled" class="wikilink" title="A failed test result triggered by rolling two or more 1s and zero successes, causing mishaps or losing authority.">fumbled</a> attack, or allowing a Mob to ignore <a href="stage--rules--keywords-index.html#over-laden" class="wikilink" title="A state of carrying Bulk exceeding capacity, reducing movement speed and imposing Banes on physical tests.">Over-Laden</a> travel penalties).</li>
+<li><strong>Tier 4 (Destructive):</strong> Modifies macro-campaign structures (e.g., preventing any gear breakage on a <a href="stage--rules--keywords-index.html#fumbled" class="wikilink" data-tooltip="A failed test result triggered by rolling two or more 1s and zero successes, causing mishaps or losing authority.">Fumbled</a> attack, or allowing a Mob to ignore <a href="stage--rules--keywords-index.html#over-laden" class="wikilink" data-tooltip="A state of carrying Bulk exceeding capacity, reducing movement speed and imposing Banes on physical tests.">Over-Laden</a> travel penalties).</li>
 <li><strong>Tier 5 (Legendary):</strong> Permanently alters campaign systems globally (e.g., granting a permanent Lair labor bonus, or generating permanent Lair resources).</li>
 </ul>
 <hr>
@@ -421,7 +426,7 @@ To keep combat fast and respect the deterministic nature of standard enemies, mo
 <li>How different elements combine during <strong>Element Synthesis</strong>.</li>
 </ul>
 <h3 id="the-power-blueprint-template" tabindex="-1">The Power Blueprint Template</h3>
-<p>GMs and developers write abilities using this standardized <a href="stage--rules--keywords-index.html#blueprint" class="wikilink" title="A physical item (Bulk 0) that records the structure of a specific Oddity effect. Produced by Reverse Engineering. Tradeable.">blueprint</a> card:</p>
+<p>GMs and developers write abilities using this standardized <a href="stage--rules--keywords-index.html#blueprint" class="wikilink" data-tooltip="A physical item (Bulk 0) that records the structure of a specific Oddity effect. Produced by Reverse Engineering. Tradeable.">Blueprint</a> card:</p>
 <pre><code class="language-markdown">### [Power/Item Name]
 *   **Targets:** [Which core rules, stats, or trackers does this modify?]
 *   **Modification:** [What baseline rule is altered, bypassed, or injected?]
@@ -431,27 +436,27 @@ To keep combat fast and respect the deterministic nature of standard enemies, mo
 *   **Duration:** [How long does this altered rule-state persist before clearing?]
 </code></pre>
 <blockquote>
-<p><strong>Example (Quirk):</strong> Grub has a <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> of 2. They select a <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> <strong>T2</strong> <a href="stage--rules--keywords-index.html#quirk" class="wikilink" title="A modular base ability (a &quot;Knack&quot; or action) that defines a character's fighting style or special talent. Measured in Tiers (T1-T5).">Quirk</a>. They combine the <strong>T2</strong> Mechanical Effect (<em>imposes a Sustained condition</em>) with the Descriptor <code>[Sticky]</code> to create the <strong>Sticky Spit</strong> <a href="stage--rules--keywords-index.html#quirk" class="wikilink" title="A modular base ability (a &quot;Knack&quot; or action) that defines a character's fighting style or special talent. Measured in Tiers (T1-T5).">Quirk</a>. When activated, the target is covered in glue and gains the <em>Restrained</em> condition.</p>
-<p><strong>Example (<a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a>):</strong> A crafter builds a <strong>T3</strong> weapon using a fire crystal. They choose the <strong>T3</strong> Mechanical Effect (<em>Zone Area</em>) and the Descriptor <code>[Fire]</code>. The weapon is a <strong>Flameslasher</strong>. When swung, it sweeps fire across the entire <a href="stage--rules--keywords-index.html#zone" class="wikilink" title="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a>.</p>
+<p><strong>Example (Quirk):</strong> Grub has a <a href="stage--rules--keywords-index.html#slink" class="wikilink" data-tooltip="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> of 2. They select a <a href="stage--rules--keywords-index.html#slink" class="wikilink" data-tooltip="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> <strong>T2</strong> <a href="stage--rules--keywords-index.html#quirk" class="wikilink" data-tooltip="A modular base ability (a &quot;Knack&quot; or action) that defines a character's fighting style or special talent. Measured in Tiers (T1-T5).">Quirk</a>. They combine the <strong>T2</strong> Mechanical Effect (<em>imposes a Sustained condition</em>) with the Descriptor <code>[Sticky]</code> to create the <strong>Sticky Spit</strong> <a href="stage--rules--keywords-index.html#quirk" class="wikilink" data-tooltip="A modular base ability (a &quot;Knack&quot; or action) that defines a character's fighting style or special talent. Measured in Tiers (T1-T5).">Quirk</a>. When activated, the target is covered in glue and gains the <em>Restrained</em> condition.</p>
+<p><strong>Example (<a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a>):</strong> A crafter builds a <strong>T3</strong> weapon using a fire crystal. They choose the <strong>T3</strong> Mechanical Effect (<em>Zone Area</em>) and the Descriptor <code>[Fire]</code>. The weapon is a <strong>Flameslasher</strong>. When swung, it sweeps fire across the entire <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a>.</p>
 </blockquote>
 <h3 id="the-activation-cost-economy" tabindex="-1">The Activation Cost Economy</h3>
-<p>To use an active modular power or <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a>, a Boss must pay its associated activation cost. Because <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> is a limited pool that determines maximum commanded Mob <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a>, spending <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> is a significant tactical sacrifice:</p>
+<p>To use an active modular power or <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a>, a Boss must pay its associated activation cost. Because <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> is a limited pool that determines maximum commanded Mob <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a>, spending <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> is a significant tactical sacrifice:</p>
 <ul>
-<li><strong>T1–T2 Powers:</strong> May be <a href="stage--rules--keywords-index.html#passive" class="wikilink" title="A Quirk or rule that is either always active or triggered automatically without costing a Standard Action, Grunt, or Free Order.">Passive</a>, cost 1 <a href="stage--rules--keywords-index.html#action" class="wikilink" title="The resource spent on a turn to perform standard or free maneuvers. Goblins receive 3 Standard Actions and Mobs receive 2.">Action</a>, or cost 1 <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>.</li>
-<li><strong>T3 Powers:</strong> Cost 1 <a href="stage--rules--keywords-index.html#action" class="wikilink" title="The resource spent on a turn to perform standard or free maneuvers. Goblins receive 3 Standard Actions and Mobs receive 2.">Action</a> OR 1 <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>.</li>
-<li><strong>T4 Powers:</strong> Cost 1 <a href="stage--rules--keywords-index.html#action" class="wikilink" title="The resource spent on a turn to perform standard or free maneuvers. Goblins receive 3 Standard Actions and Mobs receive 2.">Action</a> + 1 <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> OR 2 <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>.</li>
-<li><strong>T5 Powers:</strong> Cost 3 <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> OR trigger an immediate <a href="stage--rules--keywords-index.html#overclock" class="wikilink" title="A declaration made before an Attack Action that amplifies Custom Gear's effect to its maximum, destroys the item, and ignores the target's Passive Defence dice.">Overclock</a> (completely destroying the gear chassis upon resolution).</li>
+<li><strong>T1–T2 Powers:</strong> May be <a href="stage--rules--keywords-index.html#passive" class="wikilink" data-tooltip="A Quirk or rule that is either always active or triggered automatically without costing a Standard Action, Grunt, or Free Order.">Passive</a>, cost 1 <a href="stage--rules--keywords-index.html#action" class="wikilink" data-tooltip="The resource spent on a turn to perform standard or free maneuvers. Goblins receive 3 Standard Actions and Mobs receive 2.">Action</a>, or cost 1 <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>.</li>
+<li><strong>T3 Powers:</strong> Cost 1 <a href="stage--rules--keywords-index.html#action" class="wikilink" data-tooltip="The resource spent on a turn to perform standard or free maneuvers. Goblins receive 3 Standard Actions and Mobs receive 2.">Action</a> OR 1 <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>.</li>
+<li><strong>T4 Powers:</strong> Cost 1 <a href="stage--rules--keywords-index.html#action" class="wikilink" data-tooltip="The resource spent on a turn to perform standard or free maneuvers. Goblins receive 3 Standard Actions and Mobs receive 2.">Action</a> + 1 <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> OR 2 <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>.</li>
+<li><strong>T5 Powers:</strong> Cost 3 <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> OR trigger an immediate <a href="stage--rules--keywords-index.html#overclock" class="wikilink" data-tooltip="A declaration made before an Attack Action that amplifies Custom Gear's effect to its maximum, destroys the item, and ignores the target's Passive Defence dice.">Overclock</a> (completely destroying the gear chassis upon resolution).</li>
 </ul>
 <h3 id="balancing-area-of-effect-aoe-powers" tabindex="-1">Balancing Area of Effect (AoE) Powers</h3>
-<p>Area attacks are highly lethal in Gobbos because <a href="stage--rules--keywords-index.html#area-of-effect-aoe" class="wikilink" title="An attack or spell property that targets all characters or Mobs within a designated Zone.">Area of Effect (AoE)</a> or <a href="stage--rules--keywords-index.html#cleave" class="wikilink" title="An attack property allowing excess successes to overflow and damage adjacent targets.">Cleave</a> damage applies to <strong>every single die</strong> in a <a href="stage--rules--keywords-index.html#mob" class="wikilink" title="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a>'s pool (see [13_Goblin_mob.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md)).</p>
+<p>Area attacks are highly lethal in Gobbos because <a href="stage--rules--keywords-index.html#area-of-effect-aoe" class="wikilink" data-tooltip="An attack or spell property that targets all characters or Mobs within a designated Zone.">Area of Effect (AoE)</a> or <a href="stage--rules--keywords-index.html#cleave" class="wikilink" data-tooltip="An attack property allowing excess successes to overflow and damage adjacent targets.">Cleave</a> damage applies to <strong>every single die</strong> in a <a href="stage--rules--keywords-index.html#mob" class="wikilink" data-tooltip="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a>'s pool (see [13_Goblin_mob.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md)).</p>
 <ul>
-<li><strong>The Multi-<a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> Rule:</strong> An item or power cannot possess both a high-tier damage effect and a wide Area/Blast delivery without paying the modular cost.</li>
-<li>To build an Area-damage weapon, a player must install both a <strong>Core</strong> <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> (representing the successes/damage) and a <strong>Modifier</strong> <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> (representing the Area/Blast delivery).</li>
-<li>Because a goblin’s <a href="stage--rules--keywords-index.html#brains" class="wikilink" title="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> stat caps their <a href="stage--rules--keywords-index.html#crafting-capacity" class="wikilink" title="The maximum number of Oddities that can be attached to a single item. Equal to the crafter's Brains score.">Crafting Capacity</a> (max <a href="stage--rules--keywords-index.html#oddities" class="wikilink" title="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> per item), low-<a href="stage--rules--keywords-index.html#brains" class="wikilink" title="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> goblins cannot build wide-area high-tier weapons. A <a href="stage--rules--keywords-index.html#brains" class="wikilink" title="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> 1 goblin can only build a single-target <strong>T3</strong> weapon. A <a href="stage--rules--keywords-index.html#brains" class="wikilink" title="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> 3+ goblin is required to combine a <strong>T3</strong> <strong>Core</strong> and a <strong>T3</strong> Area <strong>Modifier</strong>.</li>
+<li><strong>The Multi-<a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> Rule:</strong> An item or power cannot possess both a high-tier damage effect and a wide Area/Blast delivery without paying the modular cost.</li>
+<li>To build an Area-damage weapon, a player must install both a <strong>Core</strong> <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> (representing the successes/damage) and a <strong>Modifier</strong> <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> (representing the Area/Blast delivery).</li>
+<li>Because a goblin’s <a href="stage--rules--keywords-index.html#brains" class="wikilink" data-tooltip="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> stat caps their <a href="stage--rules--keywords-index.html#crafting-capacity" class="wikilink" data-tooltip="The maximum number of Oddities that can be attached to a single item. Equal to the crafter's Brains score.">Crafting Capacity</a> (max <a href="stage--rules--keywords-index.html#oddities" class="wikilink" data-tooltip="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> per item), low-<a href="stage--rules--keywords-index.html#brains" class="wikilink" data-tooltip="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> goblins cannot build wide-area high-tier weapons. A <a href="stage--rules--keywords-index.html#brains" class="wikilink" data-tooltip="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> 1 goblin can only build a single-target <strong>T3</strong> weapon. A <a href="stage--rules--keywords-index.html#brains" class="wikilink" data-tooltip="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> 3+ goblin is required to combine a <strong>T3</strong> <strong>Core</strong> and a <strong>T3</strong> Area <strong>Modifier</strong>.</li>
 </ul>
 <hr>
 <h2 id="6-element-synthesis" tabindex="-1">6. Element Synthesis</h2>
-<p>When players combine multiple descriptors (e.g., <a href="stage--rules--keywords-index.html#custom-gear" class="wikilink" title="Equipment built by a Gobbo Boss using a Chassis and one or more Oddities. Defined by Tier and Bite rather than a simple quality rating.">custom gear</a> with multiple <a href="stage--rules--keywords-index.html#oddities" class="wikilink" title="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> or environmental combos), the outcome is resolved using the following guidelines:</p>
+<p>When players combine multiple descriptors (e.g., <a href="stage--rules--keywords-index.html#custom-gear" class="wikilink" data-tooltip="Equipment built by a Gobbo Boss using a Chassis and one or more Oddities. Defined by Tier and Bite rather than a simple quality rating.">Custom gear</a> with multiple <a href="stage--rules--keywords-index.html#oddities" class="wikilink" data-tooltip="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> or environmental combos), the outcome is resolved using the following guidelines:</p>
 <h3 id="resolution-at-creation" tabindex="-1">Resolution at Creation</h3>
 <p>To prevent combat speed-bumps, <strong>Element Synthesis must be resolved at the point of weapon creation/customization</strong>, rather than negotiated during combat rounds. The player designs the combination during downtime, the GM approves the emergent synergy, and a static final statblock is written onto the item sheet.</p>
 <h3 id="single-condition-constraint" tabindex="-1">Single Condition Constraint</h3>
@@ -459,8 +464,8 @@ To keep combat fast and respect the deterministic nature of standard enemies, mo
 <h3 id="synthesis-upgrade" tabindex="-1">Synthesis Upgrade</h3>
 <p>If two elements with conditions combine, they upgrade into a single, higher-tier condition from the standard conditions list:</p>
 <ul>
-<li>A <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> <a href="stage--rules--keywords-index.html#bane" class="wikilink" title="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> + <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> <a href="stage--rules--keywords-index.html#bane" class="wikilink" title="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> upgrade to <a href="stage--rules--keywords-index.html#restrained" class="wikilink" title="A condition preventing movement and imposing a -1d Bane to Dodge reactions.">Restrained</a> (<a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> 0, <a href="stage--rules--keywords-index.html#movement" class="wikilink" title="A stat or action indicating how many Zones a character or Mob can cross on their turn.">Movement</a> 0) or <a href="stage--rules--keywords-index.html#stunned" class="wikilink" title="A condition causing a character or Mob to lose all actions on their turn and exposing them to easy attacks.">Stunned</a> (Cannot act).</li>
-<li>A <code>[Toxic]</code> element + <code>[Chilled]</code> element combines into <strong>Numbing Venom</strong> (imposes <a href="stage--rules--keywords-index.html#restrained" class="wikilink" title="A condition preventing movement and imposing a -1d Bane to Dodge reactions.">Restrained</a>).</li>
+<li>A <a href="stage--rules--keywords-index.html#slink" class="wikilink" data-tooltip="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> <a href="stage--rules--keywords-index.html#bane" class="wikilink" data-tooltip="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> + <a href="stage--rules--keywords-index.html#tough" class="wikilink" data-tooltip="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> <a href="stage--rules--keywords-index.html#bane" class="wikilink" data-tooltip="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> upgrade to <a href="stage--rules--keywords-index.html#restrained" class="wikilink" data-tooltip="A condition preventing movement and imposing a -1d Bane to Dodge reactions.">Restrained</a> (<a href="stage--rules--keywords-index.html#slink" class="wikilink" data-tooltip="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> 0, <a href="stage--rules--keywords-index.html#movement" class="wikilink" data-tooltip="A stat or action indicating how many Zones a character or Mob can cross on their turn.">Movement</a> 0) or <a href="stage--rules--keywords-index.html#stunned" class="wikilink" data-tooltip="A condition causing a character or Mob to lose all actions on their turn and exposing them to easy attacks.">Stunned</a> (Cannot act).</li>
+<li>A <code>[Toxic]</code> element + <code>[Chilled]</code> element combines into <strong>Numbing Venom</strong> (imposes <a href="stage--rules--keywords-index.html#restrained" class="wikilink" data-tooltip="A condition preventing movement and imposing a -1d Bane to Dodge reactions.">Restrained</a>).</li>
 </ul>
 <h3 id="narrative-only-secondary-effects" tabindex="-1">Narrative-Only Secondary Effects</h3>
 <p>The second tag provides narrative utility and environmental interaction, not extra combat math.</p>
@@ -468,7 +473,7 @@ To keep combat fast and respect the deterministic nature of standard enemies, mo
 <li><code>[Fire]</code> + <code>[Sticky]</code> creates a burning glue that ignites wooden shields, but mechanically it just deals the base fire <strong>successes</strong> and imposes <em>Restrained</em>.</li>
 </ul>
 <h3 id="standard-condition-mapping" tabindex="-1">Standard Condition Mapping</h3>
-<p>Narrative tags map directly to the condition baseline rules established in the [Master Tag Index](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md). Refer to the Tag Index to find specific condition effects (such as <a href="stage--rules--keywords-index.html#stunned" class="wikilink" title="A condition causing a character or Mob to lose all actions on their turn and exposing them to easy attacks.">Stunned</a>, <a href="stage--rules--keywords-index.html#weakened" class="wikilink" title="A condition imposing a -1d Bane on all action tests.">Weakened</a>, <a href="stage--rules--keywords-index.html#restrained" class="wikilink" title="A condition preventing movement and imposing a -1d Bane to Dodge reactions.">Restrained</a>, <a href="stage--rules--keywords-index.html#terrified" class="wikilink" title="A condition forcing a character or Mob to flee from a source of fear and preventing them from closing distance.">Terrified</a>, or <a href="stage--rules--keywords-index.html#blinded" class="wikilink" title="A condition blocking sight, making ranged attacks Hard and preventing Dodge reactions.">Blinded</a>). Any tag not listed in the index defaults to a simple situational <a href="stage--rules--keywords-index.html#bane" class="wikilink" title="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> on tests involving a relevant stat.</p>
+<p>Narrative tags map directly to the condition baseline rules established in the [Master Tag Index](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md). Refer to the Tag Index to find specific condition effects (such as <a href="stage--rules--keywords-index.html#stunned" class="wikilink" data-tooltip="A condition causing a character or Mob to lose all actions on their turn and exposing them to easy attacks.">Stunned</a>, <a href="stage--rules--keywords-index.html#weakened" class="wikilink" data-tooltip="A condition imposing a -1d Bane on all action tests.">Weakened</a>, <a href="stage--rules--keywords-index.html#restrained" class="wikilink" data-tooltip="A condition preventing movement and imposing a -1d Bane to Dodge reactions.">Restrained</a>, <a href="stage--rules--keywords-index.html#terrified" class="wikilink" data-tooltip="A condition forcing a character or Mob to flee from a source of fear and preventing them from closing distance.">Terrified</a>, or <a href="stage--rules--keywords-index.html#blinded" class="wikilink" data-tooltip="A condition blocking sight, making ranged attacks Hard and preventing Dodge reactions.">Blinded</a>). Any tag not listed in the index defaults to a simple situational <a href="stage--rules--keywords-index.html#bane" class="wikilink" data-tooltip="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> on tests involving a relevant stat.</p>
 
     </main>
   </div>
@@ -573,13 +578,89 @@ To keep combat fast and respect the deterministic nature of standard enemies, mo
         .then(data => {
           if (data && data.status === 'error') {
             const banner = document.getElementById('statusBanner');
-            if (banner) banner.style.display = 'block';
+            if (banner) banner.style.display = 'flex';
           }
         })
         .catch(err => {
           // If status.json does not exist or fails, do nothing
           console.log('Update status check skipped:', err);
         });
+    })();
+
+    // --- Anchor Scroll Fix ---
+    (function() {
+      function scrollToHash() {
+        if (window.location.hash) {
+          const id = decodeURIComponent(window.location.hash.substring(1));
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }, 100);
+          }
+        }
+      }
+      window.addEventListener('hashchange', scrollToHash);
+      window.addEventListener('DOMContentLoaded', scrollToHash);
+      window.addEventListener('load', scrollToHash);
+    })();
+
+    // --- Manual Sync Trigger ---
+    (function() {
+      const headerBtn = document.getElementById('headerSyncBtn');
+      const bannerBtn = document.getElementById('bannerSyncBtn');
+      
+      function handleSync(btn) {
+        if (!btn) return;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        
+        // Add spinning/loading animation class
+        if (btn.classList.contains('sync-btn')) {
+          btn.classList.add('sync-btn--spinning');
+          btn.querySelector('span').textContent = 'Syncing...';
+        } else {
+          btn.textContent = 'Syncing...';
+        }
+        
+        fetch('/api/run-sync', { method: 'POST' })
+          .then(res => {
+            if (!res.ok) throw new Error('Server returned error status: ' + res.status);
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.status === 'success') {
+              if (btn.classList.contains('sync-btn')) {
+                btn.querySelector('span').textContent = 'Success!';
+              } else {
+                btn.textContent = 'Success!';
+              }
+              // Reload page to reflect changes
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              throw new Error(data.error || 'Sync failed');
+            }
+          })
+          .catch(err => {
+            console.error('Sync failed:', err);
+            alert('Failed to rerun sync: ' + err.message);
+            // Restore button
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            if (btn.classList.contains('sync-btn')) {
+              btn.classList.remove('sync-btn--spinning');
+            }
+          });
+      }
+
+      if (headerBtn) {
+        headerBtn.addEventListener('click', () => handleSync(headerBtn));
+      }
+      if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
     })();
   </script>
 

@@ -51,3 +51,81 @@ From https://github.com/antedev/gobbos
    b435ce7..22a5389  main       -> origin/main
 Local is behind. Stashing local changes and pulling remote...
 Local changes detected. Stashing...
+=============================================
+Update check triggered on Mon 20 Jul 07:46:35 CEST 2026
+=============================================
+No remote changes detected.
+Rebuilding site to ensure local sync...
+
+> gobbos-rulebook-site@1.0.0 build
+> node build.js
+
+🔨 Building Gobbos Rulebook & Lore Site (Multi-Page Agent-Friendly)...
+
+  ✅ Loaded 168 keywords for tooltips
+  ✅ Copied style.css
+  ✅ Built environment dev (31 sections, 37 pages)
+  ✅ Built environment stage (7 sections, 24 pages)
+  ✅ Built environment prod (2 sections, 2 pages)
+  ✅ Built environment dev-lore (1 sections, 1 pages)
+  ✅ Built environment stage-lore (6 sections, 6 pages)
+  ✅ Built environment prod-lore (1 sections, 1 pages)
+  ✅ Built index.html
+
+  ✅ Written status.json (success)
+
+🎉 Build complete! Files in: /home/ante/projects/gobbos/05_System_Tools/rulebook-site/dist
+Finished check at Mon 20 Jul 07:46:36 CEST 2026
+---------------------------------------------
+=============================================
+Update check triggered on Mon 20 Jul 07:47:22 CEST 2026
+=============================================
+No remote changes detected.
+Rebuilding site to ensure local sync...
+
+> gobbos-rulebook-site@1.0.0 build
+> node build.js
+
+🔨 Building Gobbos Rulebook & Lore Site (Multi-Page Agent-Friendly)...
+
+  ✅ Loaded 168 keywords for tooltips
+  ✅ Copied style.css
+  ✅ Built environment dev (31 sections, 37 pages)
+  ✅ Built environment stage (7 sections, 24 pages)
+  ✅ Built environment prod (2 sections, 2 pages)
+  ✅ Built environment dev-lore (1 sections, 1 pages)
+  ✅ Built environment stage-lore (6 sections, 6 pages)
+  ✅ Built environment prod-lore (1 sections, 1 pages)
+  ✅ Built index.html
+
+  ✅ Written status.json (success)
+
+🎉 Build complete! Files in: /home/ante/projects/gobbos/05_System_Tools/rulebook-site/dist
+Finished check at Mon 20 Jul 07:47:23 CEST 2026
+---------------------------------------------
+=============================================
+Update check triggered on Mon 20 Jul 07:47:57 CEST 2026
+=============================================
+No remote changes detected.
+Rebuilding site to ensure local sync...
+
+> gobbos-rulebook-site@1.0.0 build
+> node build.js
+
+🔨 Building Gobbos Rulebook & Lore Site (Multi-Page Agent-Friendly)...
+
+  ✅ Loaded 168 keywords for tooltips
+  ✅ Copied style.css
+  ✅ Built environment dev (31 sections, 37 pages)
+  ✅ Built environment stage (7 sections, 24 pages)
+  ✅ Built environment prod (2 sections, 2 pages)
+  ✅ Built environment dev-lore (1 sections, 1 pages)
+  ✅ Built environment stage-lore (6 sections, 6 pages)
+  ✅ Built environment prod-lore (1 sections, 1 pages)
+  ✅ Built index.html
+
+  ✅ Written status.json (success)
+
+🎉 Build complete! Files in: /home/ante/projects/gobbos/05_System_Tools/rulebook-site/dist
+Finished check at Mon 20 Jul 07:47:58 CEST 2026
+---------------------------------------------

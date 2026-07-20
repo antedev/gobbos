@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -31,7 +31,11 @@
 <a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
 <a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
     </nav>
-    <div class="top-bar-right">
+    <div class="top-bar-right" style="display: flex; gap: 8px; align-items: center;">
+      <button class="sync-btn" id="headerSyncBtn" title="Sync & Rebuild Site" aria-label="Sync and rebuild site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sync-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Sync</span>
+      </button>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
         <span class="theme-icon theme-icon--light">☀️</span>
         <span class="theme-icon theme-icon--dark">🌙</span>
@@ -57,24 +61,25 @@
 
     <!-- Main Content -->
     <main class="main-content" id="mainContent">
-      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
-        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      <div id="statusBanner" style="display: none; align-items: center; justify-content: space-between; gap: 16px; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        <span>⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.</span>
+        <button class="sync-banner-btn" id="bannerSyncBtn">Rerun Sync</button>
       </div>
       <h1 id="character-creation" tabindex="-1">Character Creation</h1>
 <p><em>Goblins are not born heroes. They are spawned in the mud, raised on stolen mushrooms, and rise to power by being slightly bigger, louder, or faster than the rest of the mob. To create your Boss, you must follow the steps below in order to assemble your starting character and define their Gang.</em></p>
-<p>This chapter details the sequential steps to create a starting Goblin Boss. If you are rolling a new Boss to replace one that has died or retired, see <a href="15_Level_Up%20and%20death.md">Death &amp; Legacy</a> for how your Gang’s <a href="stage--rules--keywords-index.html#infamy" class="wikilink" title="A progress track representing the reputation and plunder of a Gang, determining starting stat advances for new PCs.">Infamy</a> grants additional starting advantages.</p>
+<p>This chapter details the sequential steps to create a starting Goblin Boss. If you are rolling a new Boss to replace one that has died or retired, see <a href="15_Level_Up%20and%20death.md">Death &amp; Legacy</a> for how your Gang’s <a href="stage--rules--keywords-index.html#infamy" class="wikilink" data-tooltip="A progress track representing the reputation and plunder of a Gang, determining starting stat advances for new PCs.">Infamy</a> grants additional starting advantages.</p>
 <hr>
 <h2 id="1-choose-or-create-your-gang" tabindex="-1">1. Choose or Create your Gang</h2>
 <p>Before creating your individual Boss, you must define the Gang they lead. Your Gang is the persistent, leveling entity that you carry from session to session, surviving even when individual Bosses die.</p>
 <ol>
 <li><strong>Name Your Gang:</strong> Give your Gang a fearsome, ridiculous, or dirty name (e.g., <em>The Bone-Snappers, The Wet-Ear Raiders, The Shiny-Stealers</em>).</li>
-<li><strong>Set <a href="stage--rules--keywords-index.html#infamy" class="wikilink" title="A progress track representing the reputation and plunder of a Gang, determining starting stat advances for new PCs.">Infamy</a>:</strong> A starting Gang begins at <strong><a href="stage--rules--keywords-index.html#infamy" class="wikilink" title="A progress track representing the reputation and plunder of a Gang, determining starting stat advances for new PCs.">Infamy</a> 1</strong>.</li>
-<li><strong>Choose a <a href="stage--rules--keywords-index.html#shenanigan" class="wikilink" title="A high-chaos, situational action performed by a goblin character or Mob using their traits.">Shenanigan</a>:</strong> Select one starting <a href="stage--rules--keywords-index.html#shenanigan" class="wikilink" title="A high-chaos, situational action performed by a goblin character or Mob using their traits.">Shenanigan</a> tag for your Gang (e.g., <em>Pyromaniacs, Sneak-Thieves, Shiny-Snatchers</em>). This defines your Gang’s culture and provides both a boon and a compulsion during raids. For details on how these work, see <a href="12_Gang.md">Gangs</a>.</li>
+<li><strong>Set <a href="stage--rules--keywords-index.html#infamy" class="wikilink" data-tooltip="A progress track representing the reputation and plunder of a Gang, determining starting stat advances for new PCs.">Infamy</a>:</strong> A starting Gang begins at <strong><a href="stage--rules--keywords-index.html#infamy" class="wikilink" data-tooltip="A progress track representing the reputation and plunder of a Gang, determining starting stat advances for new PCs.">Infamy</a> 1</strong>.</li>
+<li><strong>Choose a <a href="stage--rules--keywords-index.html#shenanigan" class="wikilink" data-tooltip="A high-chaos, situational action performed by a goblin character or Mob using their traits.">Shenanigan</a>:</strong> Select one starting <a href="stage--rules--keywords-index.html#shenanigan" class="wikilink" data-tooltip="A high-chaos, situational action performed by a goblin character or Mob using their traits.">Shenanigan</a> tag for your Gang (e.g., <em>Pyromaniacs, Sneak-Thieves, Shiny-Snatchers</em>). This defines your Gang’s culture and provides both a boon and a compulsion during raids. For details on how these work, see <a href="12_Gang.md">Gangs</a>.</li>
 </ol>
 <hr>
 <h2 id="2-set-base-stats" tabindex="-1">2. Set Base Stats</h2>
 <p>Every Goblin Boss starts with a baseline level of competence before their specific training or natural talent is taken into account.</p>
-<p>Set all four of your <a href="stage--rules--keywords-index.html#main-stats" class="wikilink" title="The four primary attributes defining a goblin: Tough, Slink, Brains, and Mouth.">main stats</a> to <strong>1</strong>:</p>
+<p>Set all four of your <a href="stage--rules--keywords-index.html#main-stats" class="wikilink" data-tooltip="The four primary attributes defining a goblin: Tough, Slink, Brains, and Mouth.">Main stats</a> to <strong>1</strong>:</p>
 <ul>
 <li><strong>Tough:</strong> 1</li>
 <li><strong>Slink:</strong> 1</li>
@@ -84,57 +89,57 @@
 <hr>
 <h2 id="3-distribute-starting-points" tabindex="-1">3. Distribute Starting Points</h2>
 <p>Your Boss has stood out from the crowd and grown slightly stronger than a common grunt.</p>
-<p>You have <strong>1 point</strong> to distribute among your four <a href="stage--rules--keywords-index.html#main-stats" class="wikilink" title="The four primary attributes defining a goblin: Tough, Slink, Brains, and Mouth.">main stats</a>.</p>
+<p>You have <strong>1 point</strong> to distribute among your four <a href="stage--rules--keywords-index.html#main-stats" class="wikilink" data-tooltip="The four primary attributes defining a goblin: Tough, Slink, Brains, and Mouth.">Main stats</a>.</p>
 <ul>
 <li><strong>The Limit:</strong> You cannot increase any single stat above <strong>2</strong> at character creation.</li>
 <li><strong>Distribution Options:</strong> Add the <strong>+1</strong> to any of your stats (giving you one stat at 2, and three stats at 1).</li>
 </ul>
 <hr>
 <h2 id="4-derive-secondary-stats" tabindex="-1">4. Derive Secondary Stats</h2>
-<p>Your <a href="stage--rules--keywords-index.html#main-stats" class="wikilink" title="The four primary attributes defining a goblin: Tough, Slink, Brains, and Mouth.">main stats</a> determine your derived <a href="stage--rules--keywords-index.html#secondary-stats" class="wikilink" title="Stats derived from main stats or leveling up, such as Grit, Grunt, and Carry.">secondary stats</a>, which dictate your survivability, speed, carrying capacity, and command limits. Refer to <a href="10_Stats.md">Stats</a> for the full stat tracks.</p>
+<p>Your <a href="stage--rules--keywords-index.html#main-stats" class="wikilink" data-tooltip="The four primary attributes defining a goblin: Tough, Slink, Brains, and Mouth.">Main stats</a> determine your derived <a href="stage--rules--keywords-index.html#secondary-stats" class="wikilink" data-tooltip="Stats derived from main stats or leveling up, such as Grit, Grunt, and Carry.">Secondary stats</a>, which dictate your survivability, speed, carrying capacity, and command limits. Refer to <a href="10_Stats.md">Stats</a> for the full stat tracks.</p>
 <h3 id="grit-health" tabindex="-1">Grit (Health)</h3>
-<p><a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> is your health. You die when it reaches 0. Your starting <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> is determined by your <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> stat:</p>
+<p><a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> is your health. You die when it reaches 0. Your starting <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> is determined by your <a href="stage--rules--keywords-index.html#tough" class="wikilink" data-tooltip="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> stat:</p>
 <ul>
-<li><strong>Tough 1:</strong> 3 <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a></li>
-<li><strong>Tough 2:</strong> 4 <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a></li>
-<li><strong>Tough 3:</strong> 4 <a href="stage--rules--keywords-index.html#grit" class="wikilink" title="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a></li>
+<li><strong>Tough 1:</strong> 3 <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a></li>
+<li><strong>Tough 2:</strong> 4 <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a></li>
+<li><strong>Tough 3:</strong> 4 <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a></li>
 </ul>
 <h3 id="carry-capacity-bulk-limit" tabindex="-1">Carry Capacity (Bulk Limit)</h3>
-<p><a href="stage--rules--keywords-index.html#carry-capacity" class="wikilink" title="The maximum weight or Bulk a character can carry without speed or action penalties.">Carry Capacity</a> determines the maximum total <a href="stage--rules--keywords-index.html#bulk" class="wikilink" title="A measure of how heavy/unwieldy an item is. High bulk reduces movement or requires multiple goblins.">Bulk</a> of items you can carry. It is determined by your <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> stat:</p>
+<p><a href="stage--rules--keywords-index.html#carry-capacity" class="wikilink" data-tooltip="The maximum weight or Bulk a character can carry without speed or action penalties.">Carry Capacity</a> determines the maximum total <a href="stage--rules--keywords-index.html#bulk" class="wikilink" data-tooltip="A measure of how heavy/unwieldy an item is. High bulk reduces movement or requires multiple goblins.">Bulk</a> of items you can carry. It is determined by your <a href="stage--rules--keywords-index.html#tough" class="wikilink" data-tooltip="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> stat:</p>
 <ul>
-<li><strong>Tough 1:</strong> 6 <a href="stage--rules--keywords-index.html#carry-capacity" class="wikilink" title="The maximum weight or Bulk a character can carry without speed or action penalties.">Carry Capacity</a></li>
-<li><strong>Tough 2:</strong> 8 <a href="stage--rules--keywords-index.html#carry-capacity" class="wikilink" title="The maximum weight or Bulk a character can carry without speed or action penalties.">Carry Capacity</a></li>
-<li><strong>Tough 3:</strong> 10 <a href="stage--rules--keywords-index.html#carry-capacity" class="wikilink" title="The maximum weight or Bulk a character can carry without speed or action penalties.">Carry Capacity</a></li>
+<li><strong>Tough 1:</strong> 6 <a href="stage--rules--keywords-index.html#carry-capacity" class="wikilink" data-tooltip="The maximum weight or Bulk a character can carry without speed or action penalties.">Carry Capacity</a></li>
+<li><strong>Tough 2:</strong> 8 <a href="stage--rules--keywords-index.html#carry-capacity" class="wikilink" data-tooltip="The maximum weight or Bulk a character can carry without speed or action penalties.">Carry Capacity</a></li>
+<li><strong>Tough 3:</strong> 10 <a href="stage--rules--keywords-index.html#carry-capacity" class="wikilink" data-tooltip="The maximum weight or Bulk a character can carry without speed or action penalties.">Carry Capacity</a></li>
 </ul>
 <h3 id="movement" tabindex="-1">Movement</h3>
-<p><a href="stage--rules--keywords-index.html#movement" class="wikilink" title="A stat or action indicating how many Zones a character or Mob can cross on their turn.">Movement</a> determines how many Zones you can cross with a single Move action. It is determined by your <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> stat:</p>
+<p><a href="stage--rules--keywords-index.html#movement" class="wikilink" data-tooltip="A stat or action indicating how many Zones a character or Mob can cross on their turn.">Movement</a> determines how many Zones you can cross with a single Move action. It is determined by your <a href="stage--rules--keywords-index.html#slink" class="wikilink" data-tooltip="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> stat:</p>
 <ul>
 <li><strong>Slink 1:</strong> Movement 4</li>
 <li><strong>Slink 2:</strong> Movement 5</li>
 <li><strong>Slink 3:</strong> Movement 5</li>
 </ul>
 <h3 id="grunt" tabindex="-1">Grunt</h3>
-<p><a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> represents your personal authority and raw command energy, which dictates the maximum size of a Mob you can control. Your starting <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> is equal to your <strong>second-highest stat</strong>.</p>
+<p><a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> represents your personal authority and raw command energy, which dictates the maximum size of a Mob you can control. Your starting <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> is equal to your <strong>second-highest stat</strong>.</p>
 <blockquote>
 <blockquote>
-<p><strong>IMPORTANT:</strong> Because you only have 1 point to distribute at creation, your starting stats will always feature one stat at 2 and three stats at 1. This means your second-highest stat will always be <strong>1</strong>, giving starting Bosses a starting <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> of <strong>1</strong>.</p>
-<p>This starting <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> limits your command to a single <strong>Size 1 Runt Mob</strong> at campaign start. As your Gang grows in <a href="stage--rules--keywords-index.html#infamy" class="wikilink" title="A progress track representing the reputation and plunder of a Gang, determining starting stat advances for new PCs.">Infamy</a>, subsequent Bosses will inherit a starting <strong>Successor XP Pool</strong> (see <a href="15_Level_Up%20and%20death.md">Death &amp; Legacy</a>), allowing them to buy higher starting stats and command larger Mobs.</p>
+<p><strong>IMPORTANT:</strong> Because you only have 1 point to distribute at creation, your starting stats will always feature one stat at 2 and three stats at 1. This means your second-highest stat will always be <strong>1</strong>, giving starting Bosses a starting <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> of <strong>1</strong>.</p>
+<p>This starting <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> limits your command to a single <strong>Size 1 Runt Mob</strong> at campaign start. As your Gang grows in <a href="stage--rules--keywords-index.html#infamy" class="wikilink" data-tooltip="A progress track representing the reputation and plunder of a Gang, determining starting stat advances for new PCs.">Infamy</a>, subsequent Bosses will inherit a starting <strong>Successor XP Pool</strong> (see <a href="15_Level_Up%20and%20death.md">Death &amp; Legacy</a>), allowing them to buy higher starting stats and command larger Mobs.</p>
 </blockquote>
 </blockquote>
 <blockquote>
-<p><strong>Example:</strong> Grub creates a Boss and puts his 1 starting point into <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a>. His stats are <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> 2, <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> 1, <a href="stage--rules--keywords-index.html#brains" class="wikilink" title="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> 1, and <a href="stage--rules--keywords-index.html#mouth" class="wikilink" title="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a> 1. His second-highest stat is 1. His starting <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> is <strong>1</strong>.</p>
+<p><strong>Example:</strong> Grub creates a Boss and puts his 1 starting point into <a href="stage--rules--keywords-index.html#tough" class="wikilink" data-tooltip="Main stat representing physical power, raw force, and melee combat capability.">Tough</a>. His stats are <a href="stage--rules--keywords-index.html#tough" class="wikilink" data-tooltip="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> 2, <a href="stage--rules--keywords-index.html#slink" class="wikilink" data-tooltip="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> 1, <a href="stage--rules--keywords-index.html#brains" class="wikilink" data-tooltip="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> 1, and <a href="stage--rules--keywords-index.html#mouth" class="wikilink" data-tooltip="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a> 1. His second-highest stat is 1. His starting <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> is <strong>1</strong>.</p>
 </blockquote>
 <hr>
 <h2 id="5-choose-a-starting-quirk" tabindex="-1">5. Choose a Starting Quirk</h2>
 <p>Your Boss starts with 1 <strong>Basic Quirk</strong> of your choice.</p>
 <ul>
 <li><strong>Stat Gating:</strong> The Quirk must match a stat in which your Boss has a level equal to or greater than the Quirk’s Tier. Since your highest stat at creation will be 2, you can choose a Tier 1 or Tier 2 Quirk corresponding to your high stat, or a Tier 1 Quirk for any stat.</li>
-<li><strong>No Twists:</strong> You start with 0 <a href="#twist-twists" class="wikilink" title="Twist|Twists">Twist|Twists</a> attached to your Quirk.</li>
+<li><strong>No Twists:</strong> You start with 0 <a href="stage--rules--keywords-index.html#twist" class="wikilink" data-tooltip="A modifier attached to a Quirk that alters how it works or adds an extra effect. Multiple Twists can be attached to the same Quirk to create a &quot;Molecule.&quot;">Twists</a> attached to your Quirk.</li>
 <li>For the list of available starting Quirks, see <a href="14_Quirks.md">Quirks &amp; Twists</a>.</li>
 </ul>
 <hr>
 <h2 id="6-select-starting-loadout" tabindex="-1">6. Select Starting Loadout</h2>
-<p>A starting Boss receives standard equipment scavenged from the Lair’s scrap pile. All starting weapons and armor are of <a href="stage--rules--keywords-index.html#junk" class="wikilink" title="The lowest quality tier (T1) of equipment, constructed from flimsy scrap and prone to breaking.">Junk</a> quality (see <a href="34_Crafting.md">Crafting &amp; Custom Gear</a>).</p>
+<p>A starting Boss receives standard equipment scavenged from the Lair’s scrap pile. All starting weapons and armor are of <a href="stage--rules--keywords-index.html#junk" class="wikilink" data-tooltip="The lowest quality tier (T1) of equipment, constructed from flimsy scrap and prone to breaking.">Junk</a> quality (see <a href="34_Crafting.md">Crafting &amp; Custom Gear</a>).</p>
 <p>Choose one option from each of the following categories:</p>
 <h3 id="melee-weapon-choose-one" tabindex="-1">Melee Weapon (Choose One)</h3>
 <ul>
@@ -157,7 +162,7 @@
 </ul>
 <blockquote>
 <blockquote>
-<p><strong>IMPORTANT:</strong> Standard starting gear does not possess any magical tags or <a href="stage--rules--keywords-index.html#oddities" class="wikilink" title="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a>. It is simple, rusty, and prone to breaking on a Fumble. If you roll a Fumble with Junk gear, it is highly likely to shatter (see <a href="33_Equipment.md">Standard Equipment &amp; Loadouts</a> and <a href="34_Crafting.md">Crafting &amp; Custom Gear</a> for breaking rules).</p>
+<p><strong>IMPORTANT:</strong> Standard starting gear does not possess any magical tags or <a href="stage--rules--keywords-index.html#oddities" class="wikilink" data-tooltip="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a>. It is simple, rusty, and prone to breaking on a Fumble. If you roll a Fumble with Junk gear, it is highly likely to shatter (see <a href="33_Equipment.md">Standard Equipment &amp; Loadouts</a> and <a href="34_Crafting.md">Crafting &amp; Custom Gear</a> for breaking rules).</p>
 </blockquote>
 </blockquote>
 
@@ -264,13 +269,89 @@
         .then(data => {
           if (data && data.status === 'error') {
             const banner = document.getElementById('statusBanner');
-            if (banner) banner.style.display = 'block';
+            if (banner) banner.style.display = 'flex';
           }
         })
         .catch(err => {
           // If status.json does not exist or fails, do nothing
           console.log('Update status check skipped:', err);
         });
+    })();
+
+    // --- Anchor Scroll Fix ---
+    (function() {
+      function scrollToHash() {
+        if (window.location.hash) {
+          const id = decodeURIComponent(window.location.hash.substring(1));
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }, 100);
+          }
+        }
+      }
+      window.addEventListener('hashchange', scrollToHash);
+      window.addEventListener('DOMContentLoaded', scrollToHash);
+      window.addEventListener('load', scrollToHash);
+    })();
+
+    // --- Manual Sync Trigger ---
+    (function() {
+      const headerBtn = document.getElementById('headerSyncBtn');
+      const bannerBtn = document.getElementById('bannerSyncBtn');
+      
+      function handleSync(btn) {
+        if (!btn) return;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        
+        // Add spinning/loading animation class
+        if (btn.classList.contains('sync-btn')) {
+          btn.classList.add('sync-btn--spinning');
+          btn.querySelector('span').textContent = 'Syncing...';
+        } else {
+          btn.textContent = 'Syncing...';
+        }
+        
+        fetch('/api/run-sync', { method: 'POST' })
+          .then(res => {
+            if (!res.ok) throw new Error('Server returned error status: ' + res.status);
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.status === 'success') {
+              if (btn.classList.contains('sync-btn')) {
+                btn.querySelector('span').textContent = 'Success!';
+              } else {
+                btn.textContent = 'Success!';
+              }
+              // Reload page to reflect changes
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              throw new Error(data.error || 'Sync failed');
+            }
+          })
+          .catch(err => {
+            console.error('Sync failed:', err);
+            alert('Failed to rerun sync: ' + err.message);
+            // Restore button
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            if (btn.classList.contains('sync-btn')) {
+              btn.classList.remove('sync-btn--spinning');
+            }
+          });
+      }
+
+      if (headerBtn) {
+        headerBtn.addEventListener('click', () => handleSync(headerBtn));
+      }
+      if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
     })();
   </script>
 

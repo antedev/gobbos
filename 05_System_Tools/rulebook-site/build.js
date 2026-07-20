@@ -93,20 +93,32 @@ function wikilinksPlugin(md) {
       return defaultTextRender(tokens, idx, options, env, self);
     }
     return content.replace(wikiRe, (_, linkText) => {
-      const trimmed = linkText.trim();
-      const slug = slugify(trimmed);
-      const targetUrl = resolveWikiLink(trimmed, env);
+      const parts = linkText.split('|');
+      const target = parts[0].trim();
+      const display = (parts[1] || parts[0]).trim();
+      
+      const slug = slugify(target);
+      const targetUrl = resolveWikiLink(target, env);
       
       // Look up definition for tooltip
       let tooltipAttr = '';
       if (env && env.keywordTooltipMap && env.keywordTooltipMap.has(slug)) {
         const { definition } = env.keywordTooltipMap.get(slug);
-        tooltipAttr = ` title="${escapeHtml(definition)}"`;
+        tooltipAttr = ` data-tooltip="${escapeHtml(definition)}"`;
       } else {
-        tooltipAttr = ` title="${escapeHtml(trimmed)}"`;
+        tooltipAttr = ` data-tooltip="${escapeHtml(display)}"`;
       }
 
-      return `<a href="${targetUrl}" class="wikilink"${tooltipAttr}>${escapeHtml(trimmed)}</a>`;
+      // Force uppercase for the first letter of the display text
+      const capitalizedDisplay = display.charAt(0).toUpperCase() + display.slice(1);
+
+      let idAttr = '';
+      if (env && env.pageSlug && env.pageSlug.endsWith('keywords-index')) {
+        console.log('Generating target anchor ID for:', slug, 'on page:', env.pageSlug);
+        idAttr = ` id="${slug}"`;
+      }
+
+      return `<a${idAttr} href="${targetUrl}" class="wikilink"${tooltipAttr}>${escapeHtml(capitalizedDisplay)}</a>`;
     });
   };
 }
@@ -325,7 +337,7 @@ async function build() {
         const isFirst = page.slug === firstPageSlug;
         const pageFilename = getPageFilename(env.key, page.slug, isFirst);
         
-        const mainContent = md.render(page.content, { wikiMap, keywordTooltipMap });
+        const mainContent = md.render(page.content, { wikiMap, keywordTooltipMap, pageSlug: page.slug });
         const sidebarNav = buildSidebarNav(sections, env.key, firstPageSlug, page.slug);
 
         const html = template

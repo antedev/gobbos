@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -31,7 +31,11 @@
 <a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
 <a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
     </nav>
-    <div class="top-bar-right">
+    <div class="top-bar-right" style="display: flex; gap: 8px; align-items: center;">
+      <button class="sync-btn" id="headerSyncBtn" title="Sync & Rebuild Site" aria-label="Sync and rebuild site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sync-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Sync</span>
+      </button>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
         <span class="theme-icon theme-icon--light">☀️</span>
         <span class="theme-icon theme-icon--dark">🌙</span>
@@ -57,17 +61,18 @@
 
     <!-- Main Content -->
     <main class="main-content" id="mainContent">
-      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
-        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      <div id="statusBanner" style="display: none; align-items: center; justify-content: space-between; gap: 16px; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        <span>⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.</span>
+        <button class="sync-banner-btn" id="bannerSyncBtn">Rerun Sync</button>
       </div>
       <h1 id="crafting-and-custom-gear" tabindex="-1">Crafting &amp; Custom Gear</h1>
 <blockquote>
 <p><strong>Design Principle:</strong> Crafting is how Gobbo Bosses turn scrap, monster guts, and stolen relics into something that can <em>actually</em> win a fight. It encourages creativity and reckless experimentation. Typically, if a goblin has the workshop and the Brains to pull it off, the build always produces something functional. The dice don’t determine <em>if</em> you succeed—they determine <em>how chaotic and unstable</em> the result is.</p>
 </blockquote>
-<p>Crafting takes place during the <a href="stage--rules--keywords-index.html#lair-phase" class="wikilink" title="The downtime period between raids where players spend Loot to upgrade the Lair, craft, and level up.">Lair Phase</a> (see <strong>Lair &amp; Downtime</strong>). Every piece of <a href="stage--rules--keywords-index.html#custom-gear" class="wikilink" title="Equipment built by a Gobbo Boss using a Chassis and one or more Oddities. Defined by Tier and Bite rather than a simple quality rating.">Custom Gear</a> is defined by three fundamental questions:</p>
+<p>Crafting takes place during the <a href="stage--rules--keywords-index.html#lair-phase" class="wikilink" data-tooltip="The downtime period between raids where players spend Loot to upgrade the Lair, craft, and level up.">Lair Phase</a> (see <strong>Lair &amp; Downtime</strong>). Every piece of <a href="stage--rules--keywords-index.html#custom-gear" class="wikilink" data-tooltip="Equipment built by a Gobbo Boss using a Chassis and one or more Oddities. Defined by Tier and Bite rather than a simple quality rating.">Custom Gear</a> is defined by three fundamental questions:</p>
 <ol>
 <li><strong>What are you building?</strong> (The Base Item &amp; Quality)</li>
-<li><strong>What are you taping to it?</strong> (<a href="stage--rules--keywords-index.html#oddities" class="wikilink" title="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> & Bite)</li>
+<li><strong>What are you taping to it?</strong> (<a href="stage--rules--keywords-index.html#oddities" class="wikilink" data-tooltip="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> & Bite)</li>
 <li><strong>How are you building it?</strong> (Your Workshop)</li>
 </ol>
 <hr>
@@ -75,7 +80,7 @@
 <h3 id="layer-1-the-base-item-and-quality" tabindex="-1">Layer 1 — The Base Item &amp; Quality</h3>
 <p>When crafting, you don’t track individual pieces of lumber, iron ingots, or nails. As long as your gang’s Lair has access to basic scavenging territory, raw materials are assumed to be on hand.</p>
 <p>Instead, you choose a <strong>Base Item</strong> from the standard equipment categories (e.g., Light Weapon, Medium Armor, Heavy Weapon, Shield; see <strong>33_Equipment</strong>). The Base Item defines the fundamental stats: Bulk, Handedness, and base Damage or Defense dice.</p>
-<p>The item’s <a href="stage--rules--keywords-index.html#quality" class="wikilink" title="The standard tier of construction for items, determining durability and crafting ceilings.">Quality</a> is determined by your Lair’s Workshop level or the origin of looted gear. Quality sets how durable the item is in combat (see The Break Roll below) and sets the maximum Tier of <a href="stage--rules--keywords-index.html#oddities" class="wikilink" title="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> it can safely contain.</p>
+<p>The item’s <a href="stage--rules--keywords-index.html#quality" class="wikilink" data-tooltip="The standard tier of construction for items, determining durability and crafting ceilings.">Quality</a> is determined by your Lair’s Workshop level or the origin of looted gear. Quality sets how durable the item is in combat (see The Break Roll below) and sets the maximum Tier of <a href="stage--rules--keywords-index.html#oddities" class="wikilink" data-tooltip="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> it can safely contain.</p>
 <table>
 <thead>
 <tr>
@@ -86,27 +91,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="stage--rules--keywords-index.html#junk" class="wikilink" title="The lowest quality tier (T1) of equipment, constructed from flimsy scrap and prone to breaking.">Junk</a></td>
+<td><a href="stage--rules--keywords-index.html#junk" class="wikilink" data-tooltip="The lowest quality tier (T1) of equipment, constructed from flimsy scrap and prone to breaking.">Junk</a></td>
 <td>T1</td>
 <td>Sticks, bones, rusty wire, and wishful thinking.</td>
 </tr>
 <tr>
-<td><a href="stage--rules--keywords-index.html#scrappy" class="wikilink" title="The second quality tier (T2) of equipment, representing crude but functional goblin forge-work.">Scrappy</a></td>
+<td><a href="stage--rules--keywords-index.html#scrappy" class="wikilink" data-tooltip="The second quality tier (T2) of equipment, representing crude but functional goblin forge-work.">Scrappy</a></td>
 <td>T2</td>
 <td>Rough forged iron, splintered planks, standard goblin make.</td>
 </tr>
 <tr>
-<td><a href="stage--rules--keywords-index.html#standard" class="wikilink" title="The baseline quality tier (T3) for equipment, equivalent to standard human military gear.">Standard</a></td>
+<td><a href="stage--rules--keywords-index.html#standard" class="wikilink" data-tooltip="The baseline quality tier (T3) for equipment, equivalent to standard human military gear.">Standard</a></td>
 <td>T3</td>
 <td>Proper steel, cured leather, stolen human/knight gear.</td>
 </tr>
 <tr>
-<td><a href="stage--rules--keywords-index.html#superior" class="wikilink" title="The fourth quality tier (T4) of equipment, representing high-quality dwarven smithing or rare alloys.">Superior</a></td>
+<td><a href="stage--rules--keywords-index.html#superior" class="wikilink" data-tooltip="The fourth quality tier (T4) of equipment, representing high-quality dwarven smithing or rare alloys.">Superior</a></td>
 <td>T4</td>
 <td>Dwarven steel, reinforced dragon-hide, masterwork alloy.</td>
 </tr>
 <tr>
-<td><a href="stage--rules--keywords-index.html#legendary" class="wikilink" title="The highest quality tier (T5) of equipment, crafted from mythic materials like godstone.">Legendary</a></td>
+<td><a href="stage--rules--keywords-index.html#legendary" class="wikilink" data-tooltip="The highest quality tier (T5) of equipment, crafted from mythic materials like godstone.">Legendary</a></td>
 <td>T5</td>
 <td>Godstone, void-touched crystal, ancient relic metal.</td>
 </tr>
@@ -114,8 +119,8 @@
 </table>
 <p><em>Found &amp; Looted Gear:</em> Items discovered during raids or stolen from enemies have an innate Quality based on their origin. A peasant’s pitchfork is Scrappy; a royal guard’s halberd is Standard; a dwarven waraxe is Superior.</p>
 <h3 id="layer-2-oddities-unique-components" tabindex="-1">Layer 2 — Oddities (Unique Components)</h3>
-<p><a href="stage--rules--keywords-index.html#oddities" class="wikilink" title="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> are the special parts that give <a href="stage--rules--keywords-index.html#custom-gear" class="wikilink" title="Equipment built by a Gobbo Boss using a Chassis and one or more Oddities. Defined by Tier and Bite rather than a simple quality rating.">Custom Gear</a> its magical, bizarre, or terrifying character—glowing crystals, twitchy monster organs, alchemical valves, or clockwork gyros.</p>
-<p>Every <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> has two numbers: its <a href="stage--rules--keywords-index.html#tier-t" class="wikilink" title="The power level of an Oddity's positive effect. Ranges from 1 to 5.">Tier (T)</a> and its <a href="stage--rules--keywords-index.html#bite-b" class="wikilink" title="The instability of an Oddity. Ranges from 0 (pure, stable) to 3 (dangerous). Represents the negative consequences of using the Oddity.">Bite (B)</a>, written as <code>(T / B)</code>.</p>
+<p><a href="stage--rules--keywords-index.html#oddities" class="wikilink" data-tooltip="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> are the special parts that give <a href="stage--rules--keywords-index.html#custom-gear" class="wikilink" data-tooltip="Equipment built by a Gobbo Boss using a Chassis and one or more Oddities. Defined by Tier and Bite rather than a simple quality rating.">Custom Gear</a> its magical, bizarre, or terrifying character—glowing crystals, twitchy monster organs, alchemical valves, or clockwork gyros.</p>
+<p>Every <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> has two numbers: its <a href="stage--rules--keywords-index.html#tier-t" class="wikilink" data-tooltip="The power level of an Oddity's positive effect. Ranges from 1 to 5.">Tier (T)</a> and its <a href="stage--rules--keywords-index.html#bite-b" class="wikilink" data-tooltip="The instability of an Oddity. Ranges from 0 (pure, stable) to 3 (dangerous). Represents the negative consequences of using the Oddity.">Bite (B)</a>, written as <code>(T / B)</code>.</p>
 <ul>
 <li><strong>Tier (T1–T5):</strong> The maximum power level and scope of the positive Tag or active effect.</li>
 <li><strong>Bite (B0–B3):</strong> The innate instability and drawbacks of the component.</li>
@@ -154,22 +159,22 @@
 </tbody>
 </table>
 <h4 id="oddity-roles-and-synergy" tabindex="-1">Oddity Roles &amp; Synergy</h4>
-<p><a href="stage--rules--keywords-index.html#oddities" class="wikilink" title="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> come in three functional categories. A single <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> can fill any role; the GM decides based on the component’s nature:</p>
+<p><a href="stage--rules--keywords-index.html#oddities" class="wikilink" data-tooltip="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> come in three functional categories. A single <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> can fill any role; the GM decides based on the component’s nature:</p>
 <ul>
 <li><strong>Cores:</strong> Provide the primary active power (e.g., a fire crystal <em>is</em> the fire blast).</li>
-<li><strong>Modifiers:</strong> Transform how another <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> works (e.g., a focusing lens turns a fire blast into a cutting beam; fungal spores turn a single strike into an area cloud).</li>
+<li><strong>Modifiers:</strong> Transform how another <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> works (e.g., a focusing lens turns a fire blast into a cutting beam; fungal spores turn a single strike into an area cloud).</li>
 <li><strong>Stabilisers:</strong> Enhance the item’s physical properties (e.g., lightweight alloy reduces Bulk by -1; monster plating reinforces durability).</li>
 </ul>
-<p><strong>Tag Synergy:</strong> When two <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> Tags interact, they can create an emergent third effect (e.g., “Fire” + “Pressure” = “Explosion”; “Thorn” + “Reach” = “Entangle”). The GM adjudicates these combinations, leaning toward whatever produces the most spectacular chaos.</p>
+<p><strong>Tag Synergy:</strong> When two <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> Tags interact, they can create an emergent third effect (e.g., “Fire” + “Pressure” = “Explosion”; “Thorn” + “Reach” = “Entangle”). The GM adjudicates these combinations, leaning toward whatever produces the most spectacular chaos.</p>
 <h4 id="oddity-limits-and-capacity" tabindex="-1">Oddity Limits &amp; Capacity</h4>
-<p>Your character’s <a href="stage--rules--keywords-index.html#brains" class="wikilink" title="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> score determines your <a href="stage--rules--keywords-index.html#crafting-capacity" class="wikilink" title="The maximum number of Oddities that can be attached to a single item. Equal to the crafter's Brains score.">Crafting Capacity</a>—the maximum number of <a href="stage--rules--keywords-index.html#oddities" class="wikilink" title="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> you can attach to a single item. (Note: This is completely independent of your Brains Power Word slots). A Brains 1 goblin can attach 1 <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a>. A Brains 3 goblin can attach 3 <a href="stage--rules--keywords-index.html#oddities" class="wikilink" title="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a>. You cannot exceed this limit; the contraption simply becomes too complicated for your goblin brain to operate.</p>
+<p>Your character’s <a href="stage--rules--keywords-index.html#brains" class="wikilink" data-tooltip="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> score determines your <a href="stage--rules--keywords-index.html#crafting-capacity" class="wikilink" data-tooltip="The maximum number of Oddities that can be attached to a single item. Equal to the crafter's Brains score.">Crafting Capacity</a>—the maximum number of <a href="stage--rules--keywords-index.html#oddities" class="wikilink" data-tooltip="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> you can attach to a single item. (Note: This is completely independent of your Brains Power Word slots). A Brains 1 goblin can attach 1 <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a>. A Brains 3 goblin can attach 3 <a href="stage--rules--keywords-index.html#oddities" class="wikilink" data-tooltip="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a>. You cannot exceed this limit; the contraption simply becomes too complicated for your goblin brain to operate.</p>
 <h4 id="the-oddity-ceiling-rule" tabindex="-1">The Oddity Ceiling Rule</h4>
-<p>Your Lair’s Workshop sets the baseline Quality (T1 = Junk, T2 = Scrappy, T3 = Standard, T4 = Superior, T5 = Legendary). If you attach an <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> whose Tier is <em>higher</em> than your Workshop’s Quality level, the <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a>'s <strong>Bite automatically increases by +1 for every Tier it exceeds the Workshop</strong>.</p>
+<p>Your Lair’s Workshop sets the baseline Quality (T1 = Junk, T2 = Scrappy, T3 = Standard, T4 = Superior, T5 = Legendary). If you attach an <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> whose Tier is <em>higher</em> than your Workshop’s Quality level, the <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a>'s <strong>Bite automatically increases by +1 for every Tier it exceeds the Workshop</strong>.</p>
 <blockquote>
-<p><em>Example: Taping a T4 Demon Eye onto a Scrappy (T2) sword adds +2 Bite to the <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> because your crude workshop lacks the proper containment runes and brackets.</em></p>
+<p><em>Example: Taping a T4 Demon Eye onto a Scrappy (T2) sword adds +2 Bite to the <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> because your crude workshop lacks the proper containment runes and brackets.</em></p>
 </blockquote>
 <h3 id="layer-3-your-workshop" tabindex="-1">Layer 3 — Your Workshop</h3>
-<p>Your Lair’s Workshop determines what Quality of Base Item you can craft during downtime. While basic scrap is unlimited, upgrading your Workshop requires specific <a href="stage--rules--keywords-index.html#lair-upgrades" class="wikilink" title="Improvements to the base bought with pooled Loot, granting permanent boons to all raiding goblins.">Lair Upgrades</a> or secured territory (like conquering a dwarven mine or securing a trade pact for refined steel).</p>
+<p>Your Lair’s Workshop determines what Quality of Base Item you can craft during downtime. While basic scrap is unlimited, upgrading your Workshop requires specific <a href="stage--rules--keywords-index.html#lair-upgrades" class="wikilink" data-tooltip="Improvements to the base bought with pooled Loot, granting permanent boons to all raiding goblins.">Lair Upgrades</a> or secured territory (like conquering a dwarven mine or securing a trade pact for refined steel).</p>
 <table>
 <thead>
 <tr>
@@ -208,18 +213,18 @@
 </table>
 <hr>
 <h2 id="the-crafting-roll" tabindex="-1">The Crafting Roll</h2>
-<p>Once you have selected your Base Item, chosen your attached <a href="stage--rules--keywords-index.html#oddities" class="wikilink" title="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a>, and stepped up to your Workshop during the <a href="stage--rules--keywords-index.html#lair-phase" class="wikilink" title="The downtime period between raids where players spend Loot to upgrade the Lair, craft, and level up.">Lair Phase</a>, the crafting begins. <strong>The build always produces a working item.</strong> The Crafting Roll determines how well you tame the component’s instability.</p>
+<p>Once you have selected your Base Item, chosen your attached <a href="stage--rules--keywords-index.html#oddities" class="wikilink" data-tooltip="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a>, and stepped up to your Workshop during the <a href="stage--rules--keywords-index.html#lair-phase" class="wikilink" data-tooltip="The downtime period between raids where players spend Loot to upgrade the Lair, craft, and level up.">Lair Phase</a>, the crafting begins. <strong>The build always produces a working item.</strong> The Crafting Roll determines how well you tame the component’s instability.</p>
 <h3 id="rolling" tabindex="-1">Rolling</h3>
-<p>The Crafting Roll uses a <a href="stage--rules--keywords-index.html#dice-pool" class="wikilink" title="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">dice pool</a> of <strong>Brains + 1</strong>, plus any extra bonus dice granted by specialized Lair Workshop upgrades. Roll all dice simultaneously. Standard <a href="stage--rules--keywords-index.html#exploding-dice" class="wikilink" title="Rolling a 6 counts as a success and allows you to roll another die.">exploding dice</a> rules apply (every 6 explodes into an additional die).</p>
+<p>The Crafting Roll uses a <a href="stage--rules--keywords-index.html#dice-pool" class="wikilink" data-tooltip="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">Dice pool</a> of <strong>Brains + 1</strong>, plus any extra bonus dice granted by specialized Lair Workshop upgrades. Roll all dice simultaneously. Standard <a href="stage--rules--keywords-index.html#exploding-dice" class="wikilink" data-tooltip="Rolling a 6 counts as a success and allows you to roll another die.">Exploding dice</a> rules apply (every 6 explodes into an additional die).</p>
 <p><em>Note: Standard Fumble rules (loosing Grunt in front of your gang) do not apply during downtime crafting in the Lair.</em></p>
 <h3 id="taming" tabindex="-1">Taming</h3>
-<p>Count all <strong>6s</strong> in your final result (including exploded dice). Each 6 is a <strong><a href="stage--rules--keywords-index.html#taming" class="wikilink" title="Spending 6s from the Crafting Roll to reduce an Oddity's active Bite level, boost base item stats, or add flavour tags.">Taming</a> Success</strong>, which can be spent immediately on the following upgrades:</p>
+<p>Count all <strong>6s</strong> in your final result (including exploded dice). Each 6 is a <strong><a href="stage--rules--keywords-index.html#taming" class="wikilink" data-tooltip="Spending 6s from the Crafting Roll to reduce an Oddity's active Bite level, boost base item stats, or add flavour tags.">Taming</a> Success</strong>, which can be spent immediately on the following upgrades:</p>
 <ul>
 <li><strong>Reduce Bite by 1:</strong> The item’s active Bite level drops by one step (minimum B0). You can spend multiple successes to reduce high Bite levels.</li>
-<li><strong>Boost Base Item Stats:</strong> Increase the weapon’s base damage or armor’s defense by +1d, or decrease its Bulk by 1. (Costs 1 <a href="stage--rules--keywords-index.html#taming" class="wikilink" title="Spending 6s from the Crafting Roll to reduce an Oddity's active Bite level, boost base item stats, or add flavour tags.">Taming</a> Success per step).</li>
-<li><strong>Add a Flavour Tag:</strong> Add a delightful aesthetic quirk (e.g., <em>Perfectly Balanced, Gleaming, Intimidating Spikes</em>). (Costs 1 <a href="stage--rules--keywords-index.html#taming" class="wikilink" title="Spending 6s from the Crafting Roll to reduce an Oddity's active Bite level, boost base item stats, or add flavour tags.">Taming</a> Success).</li>
+<li><strong>Boost Base Item Stats:</strong> Increase the weapon’s base damage or armor’s defense by +1d, or decrease its Bulk by 1. (Costs 1 <a href="stage--rules--keywords-index.html#taming" class="wikilink" data-tooltip="Spending 6s from the Crafting Roll to reduce an Oddity's active Bite level, boost base item stats, or add flavour tags.">Taming</a> Success per step).</li>
+<li><strong>Add a Flavour Tag:</strong> Add a delightful aesthetic quirk (e.g., <em>Perfectly Balanced, Gleaming, Intimidating Spikes</em>). (Costs 1 <a href="stage--rules--keywords-index.html#taming" class="wikilink" data-tooltip="Spending 6s from the Crafting Roll to reduce an Oddity's active Bite level, boost base item stats, or add flavour tags.">Taming</a> Success).</li>
 </ul>
-<p>Any unspent <a href="stage--rules--keywords-index.html#taming" class="wikilink" title="Spending 6s from the Crafting Roll to reduce an Oddity's active Bite level, boost base item stats, or add flavour tags.">Taming</a> Successes are lost when the crafting session ends.</p>
+<p>Any unspent <a href="stage--rules--keywords-index.html#taming" class="wikilink" data-tooltip="Spending 6s from the Crafting Roll to reduce an Oddity's active Bite level, boost base item stats, or add flavour tags.">Taming</a> Successes are lost when the crafting session ends.</p>
 <h3 id="chaos-results-the-1s" tabindex="-1">Chaos Results (The 1s)</h3>
 <p>Count all <strong>1s</strong> rolled in the initial pool (do not count 1s on exploded extra dice). For each 1 rolled, a minor <strong>Chaos Result</strong> is permanently built into the item. The GM picks or rolls on a quirky flavor table. These are always aesthetic roleplaying quirks, never mechanical penalties.</p>
 <blockquote>
@@ -228,8 +233,8 @@
 <hr>
 <h2 id="custom-gear-in-play" tabindex="-1">Custom Gear in Play</h2>
 <h3 id="breaking-and-durability" tabindex="-1">Breaking &amp; Durability</h3>
-<p><a href="stage--rules--keywords-index.html#custom-gear" class="wikilink" title="Equipment built by a Gobbo Boss using a Chassis and one or more Oddities. Defined by Tier and Bite rather than a simple quality rating.">Custom Gear</a> is put under extreme stress during combat. Gear breaks only when an Attack roll using the item results in a <a href="stage--rules--keywords-index.html#fumble" class="wikilink" title="Rolling two or more 1s and zero successes. If you fumble near your Gobbos, you lose 1 Grunt.">Fumble</a> (see <a href="../../02_PROD_Core_Rules/00_Rules/01_Dice.md#1s-and-fumbles">Dice</a>), or when a specific <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> effect pushes its active Bite level above B3. Non-combat skill checks never break gear.</p>
-<p>When you Fumble an attack, roll 1d6 for <strong>The Break Roll</strong> and compare it to the item’s Quality. Each <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> attached to the item increases the break range by +1.</p>
+<p><a href="stage--rules--keywords-index.html#custom-gear" class="wikilink" data-tooltip="Equipment built by a Gobbo Boss using a Chassis and one or more Oddities. Defined by Tier and Bite rather than a simple quality rating.">Custom Gear</a> is put under extreme stress during combat. Gear breaks only when an Attack roll using the item results in a <a href="stage--rules--keywords-index.html#fumble" class="wikilink" data-tooltip="Rolling two or more 1s and zero successes. If you fumble near your Gobbos, you lose 1 Grunt.">Fumble</a> (see <a href="../../02_PROD_Core_Rules/00_Rules/01_Dice.md#1s-and-fumbles">Dice</a>), or when a specific <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> effect pushes its active Bite level above B3. Non-combat skill checks never break gear.</p>
+<p>When you Fumble an attack, roll 1d6 for <strong>The Break Roll</strong> and compare it to the item’s Quality. Each <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> attached to the item increases the break range by +1.</p>
 <table>
 <thead>
 <tr>
@@ -240,27 +245,27 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="stage--rules--keywords-index.html#junk" class="wikilink" title="The lowest quality tier (T1) of equipment, constructed from flimsy scrap and prone to breaking.">Junk</a></td>
+<td><a href="stage--rules--keywords-index.html#junk" class="wikilink" data-tooltip="The lowest quality tier (T1) of equipment, constructed from flimsy scrap and prone to breaking.">Junk</a></td>
 <td>Breaks on 1–4</td>
 <td>Breaks on 1–6 (Guaranteed break!)</td>
 </tr>
 <tr>
-<td><a href="stage--rules--keywords-index.html#scrappy" class="wikilink" title="The second quality tier (T2) of equipment, representing crude but functional goblin forge-work.">Scrappy</a></td>
+<td><a href="stage--rules--keywords-index.html#scrappy" class="wikilink" data-tooltip="The second quality tier (T2) of equipment, representing crude but functional goblin forge-work.">Scrappy</a></td>
 <td>Breaks on 1–3</td>
 <td>Breaks on 1–5</td>
 </tr>
 <tr>
-<td><a href="stage--rules--keywords-index.html#standard" class="wikilink" title="The baseline quality tier (T3) for equipment, equivalent to standard human military gear.">Standard</a></td>
+<td><a href="stage--rules--keywords-index.html#standard" class="wikilink" data-tooltip="The baseline quality tier (T3) for equipment, equivalent to standard human military gear.">Standard</a></td>
 <td>Breaks on 1–2</td>
 <td>Breaks on 1–4</td>
 </tr>
 <tr>
-<td><a href="stage--rules--keywords-index.html#superior" class="wikilink" title="The fourth quality tier (T4) of equipment, representing high-quality dwarven smithing or rare alloys.">Superior</a></td>
+<td><a href="stage--rules--keywords-index.html#superior" class="wikilink" data-tooltip="The fourth quality tier (T4) of equipment, representing high-quality dwarven smithing or rare alloys.">Superior</a></td>
 <td>Breaks on 1</td>
 <td>Breaks on 1–3</td>
 </tr>
 <tr>
-<td><a href="stage--rules--keywords-index.html#legendary" class="wikilink" title="The highest quality tier (T5) of equipment, crafted from mythic materials like godstone.">Legendary</a></td>
+<td><a href="stage--rules--keywords-index.html#legendary" class="wikilink" data-tooltip="The highest quality tier (T5) of equipment, crafted from mythic materials like godstone.">Legendary</a></td>
 <td>Never breaks on Fumble</td>
 <td>Breaks on 1–2</td>
 </tr>
@@ -268,15 +273,15 @@
 </table>
 <ul>
 <li><strong>If the Break Roll succeeds (higher than threshold):</strong> The item holds together, but temporarily emits a strange noise, sparks, or smoke.</li>
-<li><strong>If the Break Roll fails (equal to or below threshold):</strong> The Base Item shatters into jagged pieces. Trigger the <a href="stage--rules--keywords-index.html#scrap-cascade" class="wikilink" title="When Custom Gear breaks, each Oddity rolls a d6 for survival. An Oddity that survives becomes Scarred (+1 Bite).">Scrap Cascade</a> immediately.</li>
+<li><strong>If the Break Roll fails (equal to or below threshold):</strong> The Base Item shatters into jagged pieces. Trigger the <a href="stage--rules--keywords-index.html#scrap-cascade" class="wikilink" data-tooltip="When Custom Gear breaks, each Oddity rolls a d6 for survival. An Oddity that survives becomes Scarred (+1 Bite).">Scrap Cascade</a> immediately.</li>
 </ul>
 <h3 id="the-scrap-cascade" tabindex="-1">The Scrap Cascade</h3>
-<p>When <a href="stage--rules--keywords-index.html#custom-gear" class="wikilink" title="Equipment built by a Gobbo Boss using a Chassis and one or more Oddities. Defined by Tier and Bite rather than a simple quality rating.">Custom Gear</a> shatters, the Base Item is destroyed, but the magical junk taped to it might survive. For <strong>each <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> attached to the broken item</strong>, roll 1d6:</p>
+<p>When <a href="stage--rules--keywords-index.html#custom-gear" class="wikilink" data-tooltip="Equipment built by a Gobbo Boss using a Chassis and one or more Oddities. Defined by Tier and Bite rather than a simple quality rating.">Custom Gear</a> shatters, the Base Item is destroyed, but the magical junk taped to it might survive. For <strong>each <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> attached to the broken item</strong>, roll 1d6:</p>
 <ul>
-<li><strong>Equal to or below the <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a>'s current Bite level:</strong> The <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> is obliterated in a shower of sparks and goo. It is permanently lost.</li>
-<li><strong>Higher than the <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a>'s current Bite level:</strong> The <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> survives! You fish it out of the smoking wreckage. However, the trauma leaves it permanently scarred, increasing its innate Bite rating by <strong>+1 Bite</strong> (becoming a <strong>Scarred <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a></strong>).</li>
+<li><strong>Equal to or below the <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a>'s current Bite level:</strong> The <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> is obliterated in a shower of sparks and goo. It is permanently lost.</li>
+<li><strong>Higher than the <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a>'s current Bite level:</strong> The <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> survives! You fish it out of the smoking wreckage. However, the trauma leaves it permanently scarred, increasing its innate Bite rating by <strong>+1 Bite</strong> (becoming a <strong>Scarred <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a></strong>).</li>
 </ul>
-<p>A B0 <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> always survives its first break. A B3 <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> has a 50% chance of survival. Scarred <a href="stage--rules--keywords-index.html#oddities" class="wikilink" title="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> can be reattached to new creations during the next downtime, but their mounting instability makes them increasingly dangerous to handle.</p>
+<p>A B0 <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> always survives its first break. A B3 <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> has a 50% chance of survival. Scarred <a href="stage--rules--keywords-index.html#oddities" class="wikilink" data-tooltip="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> can be reattached to new creations during the next downtime, but their mounting instability makes them increasingly dangerous to handle.</p>
 <table>
 <thead>
 <tr>
@@ -319,31 +324,31 @@
 </tbody>
 </table>
 <h3 id="the-bonded-tag" tabindex="-1">The [Bonded] Tag</h3>
-<p>Certain rare <a href="stage--rules--keywords-index.html#oddities" class="wikilink" title="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> (often cursed relics or parasitic demonic organs at T3 / B3) possess the <code>[Bonded]</code> tag. Once installed and gripped, they fuse directly to the wielder’s flesh or soul and cannot be voluntarily unequipped. Removing a Bonded item requires a gruesome amputation, a specialized GM quest, or ritual cleansing in the Lair. Until severed, all Bite drawbacks remain active at all times.</p>
+<p>Certain rare <a href="stage--rules--keywords-index.html#oddities" class="wikilink" data-tooltip="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> (often cursed relics or parasitic demonic organs at T3 / B3) possess the <code>[Bonded]</code> tag. Once installed and gripped, they fuse directly to the wielder’s flesh or soul and cannot be voluntarily unequipped. Removing a Bonded item requires a gruesome amputation, a specialized GM quest, or ritual cleansing in the Lair. Until severed, all Bite drawbacks remain active at all times.</p>
 <hr>
 <h2 id="overclocking" tabindex="-1">Overclocking</h2>
-<p>At any point before declaring an Attack action in combat, you may announce an <a href="stage--rules--keywords-index.html#overclock" class="wikilink" title="A declaration made before an Attack Action that amplifies Custom Gear's effect to its maximum, destroys the item, and ignores the target's Passive Defence dice.">Overclock</a>. This is a dramatic declaration that pushes your unstable gear past its absolute limits:</p>
+<p>At any point before declaring an Attack action in combat, you may announce an <a href="stage--rules--keywords-index.html#overclock" class="wikilink" data-tooltip="A declaration made before an Attack Action that amplifies Custom Gear's effect to its maximum, destroys the item, and ignores the target's Passive Defence dice.">Overclock</a>. This is a dramatic declaration that pushes your unstable gear past its absolute limits:</p>
 <ul>
-<li><strong>Maximum Overload:</strong> All positive <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> effects and Tags are magnified to their ultimate extreme (e.g., massive area blast, double damage dice, ignoring all armor). The GM adjudicates this with extreme generosity under the Rule of Cool.</li>
+<li><strong>Maximum Overload:</strong> All positive <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> effects and Tags are magnified to their ultimate extreme (e.g., massive area blast, double damage dice, ignoring all armor). The GM adjudicates this with extreme generosity under the Rule of Cool.</li>
 <li><strong>Unstoppable Force:</strong> The Overclocked attack ignores the target’s Passive Defense dice entirely.</li>
-<li><strong>Total Annihilation:</strong> The moment the attack resolves, the <a href="stage--rules--keywords-index.html#custom-gear" class="wikilink" title="Equipment built by a Gobbo Boss using a Chassis and one or more Oddities. Defined by Tier and Bite rather than a simple quality rating.">Custom Gear</a> is instantly and permanently vaporized. There is no Break Roll, no <a href="stage--rules--keywords-index.html#scrap-cascade" class="wikilink" title="When Custom Gear breaks, each Oddity rolls a d6 for survival. An Oddity that survives becomes Scarred (+1 Bite).">Scrap Cascade</a>, and no <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> survival check. Everything is reduced to fine grey ash.</li>
+<li><strong>Total Annihilation:</strong> The moment the attack resolves, the <a href="stage--rules--keywords-index.html#custom-gear" class="wikilink" data-tooltip="Equipment built by a Gobbo Boss using a Chassis and one or more Oddities. Defined by Tier and Bite rather than a simple quality rating.">Custom Gear</a> is instantly and permanently vaporized. There is no Break Roll, no <a href="stage--rules--keywords-index.html#scrap-cascade" class="wikilink" data-tooltip="When Custom Gear breaks, each Oddity rolls a d6 for survival. An Oddity that survives becomes Scarred (+1 Bite).">Scrap Cascade</a>, and no <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> survival check. Everything is reduced to fine grey ash.</li>
 </ul>
 <hr>
 <h2 id="reverse-engineering-and-blueprints" tabindex="-1">Reverse Engineering &amp; Blueprints</h2>
-<p>When your gang loots unfamiliar enemy gear, ancient dwarven clockwork, or strange magical contraptions, you can choose to <strong>Reverse Engineer</strong> them during the <a href="stage--rules--keywords-index.html#lair-phase" class="wikilink" title="The downtime period between raids where players spend Loot to upgrade the Lair, craft, and level up.">Lair Phase</a>.</p>
+<p>When your gang loots unfamiliar enemy gear, ancient dwarven clockwork, or strange magical contraptions, you can choose to <strong>Reverse Engineer</strong> them during the <a href="stage--rules--keywords-index.html#lair-phase" class="wikilink" data-tooltip="The downtime period between raids where players spend Loot to upgrade the Lair, craft, and level up.">Lair Phase</a>.</p>
 <p>Reverse Engineering is an automatic success with no roll required. However, the process <strong>completely destroys the source item</strong>. The components are dismantled and ruined in the process of uncovering their underlying mechanical secrets.</p>
 <h3 id="blueprints" tabindex="-1">Blueprints</h3>
-<p>The tangible result of Reverse Engineering is a <a href="stage--rules--keywords-index.html#blueprint" class="wikilink" title="A physical item (Bulk 0) that records the structure of a specific Oddity effect. Produced by Reverse Engineering. Tradeable.">Blueprint</a> (Bulk 0). Blueprints record the precise schematic for a specific <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> Tag or specialized Base Item structure.</p>
+<p>The tangible result of Reverse Engineering is a <a href="stage--rules--keywords-index.html#blueprint" class="wikilink" data-tooltip="A physical item (Bulk 0) that records the structure of a specific Oddity effect. Produced by Reverse Engineering. Tradeable.">Blueprint</a> (Bulk 0). Blueprints record the precise schematic for a specific <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> Tag or specialized Base Item structure.</p>
 <p>Blueprints are incredibly valuable gang assets that can be traded, stolen, or hoarded in your Lair’s vault. A gang known for hoarding Blueprints wields significant strategic influence.</p>
-<p><strong>Using a <a href="stage--rules--keywords-index.html#blueprint" class="wikilink" title="A physical item (Bulk 0) that records the structure of a specific Oddity effect. Produced by Reverse Engineering. Tradeable.">Blueprint</a>:</strong> To construct an item from a <a href="stage--rules--keywords-index.html#blueprint" class="wikilink" title="A physical item (Bulk 0) that records the structure of a specific Oddity effect. Produced by Reverse Engineering. Tradeable.">Blueprint</a> during downtime, your character must have a Brains score equal to or higher than the <a href="stage--rules--keywords-index.html#blueprint" class="wikilink" title="A physical item (Bulk 0) that records the structure of a specific Oddity effect. Produced by Reverse Engineering. Tradeable.">Blueprint</a>'s Tier. You can own a T4 <a href="stage--rules--keywords-index.html#blueprint" class="wikilink" title="A physical item (Bulk 0) that records the structure of a specific Oddity effect. Produced by Reverse Engineering. Tradeable.">Blueprint</a>, but until your Brains reaches 4, the diagrams look like incomprehensible scribbles.</p>
+<p><strong>Using a <a href="stage--rules--keywords-index.html#blueprint" class="wikilink" data-tooltip="A physical item (Bulk 0) that records the structure of a specific Oddity effect. Produced by Reverse Engineering. Tradeable.">Blueprint</a>:</strong> To construct an item from a <a href="stage--rules--keywords-index.html#blueprint" class="wikilink" data-tooltip="A physical item (Bulk 0) that records the structure of a specific Oddity effect. Produced by Reverse Engineering. Tradeable.">Blueprint</a> during downtime, your character must have a Brains score equal to or higher than the <a href="stage--rules--keywords-index.html#blueprint" class="wikilink" data-tooltip="A physical item (Bulk 0) that records the structure of a specific Oddity effect. Produced by Reverse Engineering. Tradeable.">Blueprint</a>'s Tier. You can own a T4 <a href="stage--rules--keywords-index.html#blueprint" class="wikilink" data-tooltip="A physical item (Bulk 0) that records the structure of a specific Oddity effect. Produced by Reverse Engineering. Tradeable.">Blueprint</a>, but until your Brains reaches 4, the diagrams look like incomprehensible scribbles.</p>
 <hr>
 <h2 id="mob-scale-crafting" tabindex="-1">Mob-Scale Crafting</h2>
-<p>Gobbo Bosses don’t just fight alone—they lead screeching mobs into battle. During the <a href="stage--rules--keywords-index.html#lair-phase" class="wikilink" title="The downtime period between raids where players spend Loot to upgrade the Lair, craft, and level up.">Lair Phase</a>, a Boss with access to a Workshop (Scrap Forge or better) can engage in <strong>Mob-Scale Crafting</strong> to equip their entire fighting gang with standardized tactical gear for the upcoming raid.</p>
-<p>To outfit a Mob, you must sacrifice one <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> from your Lair’s inventory (it is permanently consumed to create coatings, crude mechanisms, or enchanted banners for your troops). In return, your Mob gains a temporary Tag matching the <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a>'s positive effect (e.g., <em>Flaming Spears, Choking Smoke Bombs, Spiked Barricades</em>) for the duration of the next raid. Regardless of whether the troops survive or wipe out, the makeshift gear falls apart at the end of the raid.</p>
+<p>Gobbo Bosses don’t just fight alone—they lead screeching mobs into battle. During the <a href="stage--rules--keywords-index.html#lair-phase" class="wikilink" data-tooltip="The downtime period between raids where players spend Loot to upgrade the Lair, craft, and level up.">Lair Phase</a>, a Boss with access to a Workshop (Scrap Forge or better) can engage in <strong>Mob-Scale Crafting</strong> to equip their entire fighting gang with standardized tactical gear for the upcoming raid.</p>
+<p>To outfit a Mob, you must sacrifice one <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> from your Lair’s inventory (it is permanently consumed to create coatings, crude mechanisms, or enchanted banners for your troops). In return, your Mob gains a temporary Tag matching the <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a>'s positive effect (e.g., <em>Flaming Spears, Choking Smoke Bombs, Spiked Barricades</em>) for the duration of the next raid. Regardless of whether the troops survive or wipe out, the makeshift gear falls apart at the end of the raid.</p>
 <hr>
 <h2 id="bone-oddities" tabindex="-1">Bone Oddities</h2>
-<p>When a Gobbo Boss meets their glorious, inevitable demise, their skeletal remains are tossed onto the Lair’s <a href="stage--rules--keywords-index.html#pile-of-bones" class="wikilink" title="The resting place for glorious dead PCs.">Pile of Bones</a>. During downtime, a surviving Boss or ambitious underling can harvest their deceased predecessor’s skull or thighbone to craft a <a href="stage--rules--keywords-index.html#bone-oddity" class="wikilink" title="An Oddity crafted from the remains of a dead Gobbo Boss. Always T1–T2, always B0–B1. Tags reflect how the Boss died.">Bone Oddity</a>.</p>
-<p>Bone <a href="stage--rules--keywords-index.html#oddities" class="wikilink" title="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> are ancestral relics that carry the lingering spirit of the fallen Boss:</p>
+<p>When a Gobbo Boss meets their glorious, inevitable demise, their skeletal remains are tossed onto the Lair’s <a href="stage--rules--keywords-index.html#pile-of-bones" class="wikilink" data-tooltip="The resting place for glorious dead PCs.">Pile of Bones</a>. During downtime, a surviving Boss or ambitious underling can harvest their deceased predecessor’s skull or thighbone to craft a <a href="stage--rules--keywords-index.html#bone-oddity" class="wikilink" data-tooltip="An Oddity crafted from the remains of a dead Gobbo Boss. Always T1–T2, always B0–B1. Tags reflect how the Boss died.">Bone Oddity</a>.</p>
+<p>Bone <a href="stage--rules--keywords-index.html#oddities" class="wikilink" data-tooltip="Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.">Oddities</a> are ancestral relics that carry the lingering spirit of the fallen Boss:</p>
 <ul>
 <li><strong>Tier:</strong> T1 or T2 (bones are sentimental keepsakes, not divine artefacts).</li>
 <li><strong>Bite:</strong> B0 or B1 (ancestral loyalty makes them remarkably stable).</li>
@@ -351,19 +356,19 @@
 </ul>
 <hr>
 <h2 id="brains-quirks-for-crafters" tabindex="-1">Brains Quirks for Crafters</h2>
-<p>The following specialized Quirks are available to Gobbo Bosses who invest in their Brains stat (see <a href="stage--rules--keywords-index.html#quirk-quirks" class="wikilink" title="A modular ability or special talent measured in Tiers (T1–T5) that defines a character's action or passive benefits.">Quirk|Quirks</a>).</p>
+<p>The following specialized Quirks are available to Gobbo Bosses who invest in their Brains stat (see <a href="stage--rules--keywords-index.html#quirk" class="wikilink" data-tooltip="A modular base ability (a &quot;Knack&quot; or action) that defines a character's fighting style or special talent. Measured in Tiers (T1-T5).">Quirks</a>).</p>
 <h3 id="jury-rig" tabindex="-1">Jury-Rig</h3>
 <p><em>Prerequisite: Brains 2</em>
-You can attempt to craft a Scrappy or Junk Base Item out in the field during a raid without a Workshop, cobbling together debris and duct tape. The Crafting Roll is Hard (only rolled 6s count as <a href="stage--rules--keywords-index.html#taming" class="wikilink" title="Spending 6s from the Crafting Roll to reduce an Oddity's active Bite level, boost base item stats, or add flavour tags.">Taming</a> successes; exploded dice do not generate additional successes). The makeshift contraption lasts for exactly one encounter before falling apart.</p>
+You can attempt to craft a Scrappy or Junk Base Item out in the field during a raid without a Workshop, cobbling together debris and duct tape. The Crafting Roll is Hard (only rolled 6s count as <a href="stage--rules--keywords-index.html#taming" class="wikilink" data-tooltip="Spending 6s from the Crafting Roll to reduce an Oddity's active Bite level, boost base item stats, or add flavour tags.">Taming</a> successes; exploded dice do not generate additional successes). The makeshift contraption lasts for exactly one encounter before falling apart.</p>
 <h3 id="mob-tinker-master" tabindex="-1">Mob Tinker Master</h3>
 <p><em>Prerequisite: Brains 3</em>
-When performing Mob-Scale Crafting during downtime, your efficient design techniques allow you to outfit two separate Mobs using only a single sacrificed <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a>, or grant one Mob two distinct temporary Tags for the upcoming raid.</p>
+When performing Mob-Scale Crafting during downtime, your efficient design techniques allow you to outfit two separate Mobs using only a single sacrificed <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a>, or grant one Mob two distinct temporary Tags for the upcoming raid.</p>
 <h3 id="salvage-expert" tabindex="-1">Salvage Expert</h3>
 <p><em>Prerequisite: Brains 3</em>
-When your <a href="stage--rules--keywords-index.html#custom-gear" class="wikilink" title="Equipment built by a Gobbo Boss using a Chassis and one or more Oddities. Defined by Tier and Bite rather than a simple quality rating.">Custom Gear</a> shatters and triggers the <a href="stage--rules--keywords-index.html#scrap-cascade" class="wikilink" title="When Custom Gear breaks, each Oddity rolls a d6 for survival. An Oddity that survives becomes Scarred (+1 Bite).">Scrap Cascade</a> during combat, you may reroll any one <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a>'s survival check. You must accept the second result.</p>
+When your <a href="stage--rules--keywords-index.html#custom-gear" class="wikilink" data-tooltip="Equipment built by a Gobbo Boss using a Chassis and one or more Oddities. Defined by Tier and Bite rather than a simple quality rating.">Custom Gear</a> shatters and triggers the <a href="stage--rules--keywords-index.html#scrap-cascade" class="wikilink" data-tooltip="When Custom Gear breaks, each Oddity rolls a d6 for survival. An Oddity that survives becomes Scarred (+1 Bite).">Scrap Cascade</a> during combat, you may reroll any one <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a>'s survival check. You must accept the second result.</p>
 <h3 id="overclock-master" tabindex="-1">Overclock Master</h3>
 <p><em>Prerequisite: Brains 4</em>
-When you declare an <a href="stage--rules--keywords-index.html#overclock" class="wikilink" title="A declaration made before an Attack Action that amplifies Custom Gear's effect to its maximum, destroys the item, and ignores the target's Passive Defence dice.">Overclock</a> during combat, your brilliant understanding of structural stress allows you to save one attached <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a>. Before the weapon disintegrates into ash, you snatch that specific <a href="stage--rules--keywords-index.html#oddity" class="wikilink" title="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> out of the chassis. It survives the blast but gains +1 Bite from the severe heat.</p>
+When you declare an <a href="stage--rules--keywords-index.html#overclock" class="wikilink" data-tooltip="A declaration made before an Attack Action that amplifies Custom Gear's effect to its maximum, destroys the item, and ignores the target's Passive Defence dice.">Overclock</a> during combat, your brilliant understanding of structural stress allows you to save one attached <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a>. Before the weapon disintegrates into ash, you snatch that specific <a href="stage--rules--keywords-index.html#oddity" class="wikilink" data-tooltip="A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.">Oddity</a> out of the chassis. It survives the blast but gains +1 Bite from the severe heat.</p>
 
     </main>
   </div>
@@ -468,13 +473,89 @@ When you declare an <a href="stage--rules--keywords-index.html#overclock" class=
         .then(data => {
           if (data && data.status === 'error') {
             const banner = document.getElementById('statusBanner');
-            if (banner) banner.style.display = 'block';
+            if (banner) banner.style.display = 'flex';
           }
         })
         .catch(err => {
           // If status.json does not exist or fails, do nothing
           console.log('Update status check skipped:', err);
         });
+    })();
+
+    // --- Anchor Scroll Fix ---
+    (function() {
+      function scrollToHash() {
+        if (window.location.hash) {
+          const id = decodeURIComponent(window.location.hash.substring(1));
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }, 100);
+          }
+        }
+      }
+      window.addEventListener('hashchange', scrollToHash);
+      window.addEventListener('DOMContentLoaded', scrollToHash);
+      window.addEventListener('load', scrollToHash);
+    })();
+
+    // --- Manual Sync Trigger ---
+    (function() {
+      const headerBtn = document.getElementById('headerSyncBtn');
+      const bannerBtn = document.getElementById('bannerSyncBtn');
+      
+      function handleSync(btn) {
+        if (!btn) return;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        
+        // Add spinning/loading animation class
+        if (btn.classList.contains('sync-btn')) {
+          btn.classList.add('sync-btn--spinning');
+          btn.querySelector('span').textContent = 'Syncing...';
+        } else {
+          btn.textContent = 'Syncing...';
+        }
+        
+        fetch('/api/run-sync', { method: 'POST' })
+          .then(res => {
+            if (!res.ok) throw new Error('Server returned error status: ' + res.status);
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.status === 'success') {
+              if (btn.classList.contains('sync-btn')) {
+                btn.querySelector('span').textContent = 'Success!';
+              } else {
+                btn.textContent = 'Success!';
+              }
+              // Reload page to reflect changes
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              throw new Error(data.error || 'Sync failed');
+            }
+          })
+          .catch(err => {
+            console.error('Sync failed:', err);
+            alert('Failed to rerun sync: ' + err.message);
+            // Restore button
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            if (btn.classList.contains('sync-btn')) {
+              btn.classList.remove('sync-btn--spinning');
+            }
+          });
+      }
+
+      if (headerBtn) {
+        headerBtn.addEventListener('click', () => handleSync(headerBtn));
+      }
+      if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
     })();
   </script>
 

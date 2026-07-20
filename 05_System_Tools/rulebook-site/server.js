@@ -208,6 +208,34 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  // 5. API Endpoint: POST rerun git sync and rebuild site
+  if (pathname === '/api/run-sync' && req.method === 'POST') {
+    const syncScriptPath = path.join(__dirname, 'update-site.sh');
+    exec(`bash "${syncScriptPath}"`, (err, stdout, stderr) => {
+      // update-site.sh outputs to update.log, so we read status.json to get the latest status
+      const statusJsonPath = path.join(DIST_DIR, 'status.json');
+      fs.readFile(statusJsonPath, 'utf-8', (readErr, content) => {
+        if (readErr) {
+          res.statusCode = 500;
+          res.setHeader('Content-Type', 'application/json; charset=utf-8');
+          res.end(JSON.stringify({ status: 'error', error: 'Could not read status.json after sync.' }));
+          return;
+        }
+        try {
+          const statusData = JSON.parse(content);
+          res.statusCode = 200;
+          res.setHeader('Content-Type', 'application/json; charset=utf-8');
+          res.end(JSON.stringify(statusData));
+        } catch (parseErr) {
+          res.statusCode = 500;
+          res.setHeader('Content-Type', 'application/json; charset=utf-8');
+          res.end(JSON.stringify({ status: 'error', error: 'Invalid status.json content.' }));
+        }
+      });
+    });
+    return;
+  }
+
   // Fallback: Static File Server
   if (pathname === '/') {
     pathname = '/index.html';

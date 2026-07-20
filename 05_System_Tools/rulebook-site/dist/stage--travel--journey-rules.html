@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -31,7 +31,11 @@
 <a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
 <a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
     </nav>
-    <div class="top-bar-right">
+    <div class="top-bar-right" style="display: flex; gap: 8px; align-items: center;">
+      <button class="sync-btn" id="headerSyncBtn" title="Sync & Rebuild Site" aria-label="Sync and rebuild site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sync-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Sync</span>
+      </button>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
         <span class="theme-icon theme-icon--light">☀️</span>
         <span class="theme-icon theme-icon--dark">🌙</span>
@@ -57,8 +61,9 @@
 
     <!-- Main Content -->
     <main class="main-content" id="mainContent">
-      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
-        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      <div id="statusBanner" style="display: none; align-items: center; justify-content: space-between; gap: 16px; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        <span>⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.</span>
+        <button class="sync-banner-btn" id="bannerSyncBtn">Rerun Sync</button>
       </div>
       <h1 id="journey-and-travel" tabindex="-1">Journey &amp; Travel</h1>
 <p><em>Getting to the raid is half the fun—and usually half the casualties. The world outside the Warren is filled with giant-folk patrols, rushing rivers, poisonous mold, and worst of all, other goblins. A smart Boss knows how to herd their green horde through the wilds, but some gobbos are bound to get lost, eaten, or stabbed along the way.</em></p>
@@ -69,23 +74,23 @@
 <ol>
 <li><strong>Establish the Route</strong>: The GM determines the destination and sets the number of <strong>Stages</strong> for the journey (typically 1 to 3 stages).</li>
 <li><strong>Assign Travel Roles</strong>: The players assign their Bosses (or Mobs) to the four <strong>Travel Roles</strong>. Every role must be filled.</li>
-<li><strong>Traverse the Stages</strong>: For each Stage of the journey, resolve the <a href="stage--rules--keywords-index.html#route-test" class="wikilink" title="A travel test made during journeys using Brains or Slink to navigate path hazards and find safe passages.">Route Test</a>, followed by a <a href="stage--rules--keywords-index.html#travel-event" class="wikilink" title="A random event resolved during journeys, indicating hazards, encounters, or opportunities.">Travel Event</a>.</li>
+<li><strong>Traverse the Stages</strong>: For each Stage of the journey, resolve the <a href="stage--rules--keywords-index.html#route-test" class="wikilink" data-tooltip="A travel test made during journeys using Brains or Slink to navigate path hazards and find safe passages.">Route Test</a>, followed by a <a href="stage--rules--keywords-index.html#travel-event" class="wikilink" data-tooltip="A random event resolved during journeys, indicating hazards, encounters, or opportunities.">Travel Event</a>.</li>
 <li><strong>Arrive at the Raid</strong>: The party arrives at the destination node, applying any conditions, Boons, or Banes earned on the road.</li>
 </ol>
 <hr>
 <h2 id="travel-roles" tabindex="-1">Travel Roles</h2>
 <p>A successful journey requires division of labor—or at least having someone to blame when things go wrong. Gobbos assign themselves to four distinct roles:</p>
 <ul>
-<li><strong>Map-Scrawler</strong> (Tests <a href="stage--rules--keywords-index.html#brains" class="wikilink" title="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a>): Responsible for navigation, reading crude maps, and making up directions.</li>
-<li><strong>Sniffer</strong> (Tests <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a>): Responsible for scouting ahead, smelling out ambushes, and spotting traps.</li>
-<li><strong>Scavver</strong> (Tests <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a>): Responsible for clearing physical obstacles, finding edible mushrooms, and carrying heavy supplies.</li>
-<li><strong>Loud-Mouth</strong> (Tests <a href="stage--rules--keywords-index.html#mouth" class="wikilink" title="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a>): Responsible for keeping the horde moving, stopping arguments, and yelling loud enough to drown out panic.</li>
+<li><strong>Map-Scrawler</strong> (Tests <a href="stage--rules--keywords-index.html#brains" class="wikilink" data-tooltip="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a>): Responsible for navigation, reading crude maps, and making up directions.</li>
+<li><strong>Sniffer</strong> (Tests <a href="stage--rules--keywords-index.html#slink" class="wikilink" data-tooltip="Main stat representing agility, stealth, and ranged combat capability.">Slink</a>): Responsible for scouting ahead, smelling out ambushes, and spotting traps.</li>
+<li><strong>Scavver</strong> (Tests <a href="stage--rules--keywords-index.html#tough" class="wikilink" data-tooltip="Main stat representing physical power, raw force, and melee combat capability.">Tough</a>): Responsible for clearing physical obstacles, finding edible mushrooms, and carrying heavy supplies.</li>
+<li><strong>Loud-Mouth</strong> (Tests <a href="stage--rules--keywords-index.html#mouth" class="wikilink" data-tooltip="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a>): Responsible for keeping the horde moving, stopping arguments, and yelling loud enough to drown out panic.</li>
 </ul>
 <h3 id="mobs-in-roles" tabindex="-1">Mobs in Roles</h3>
 <p>If playing with fewer than 4 players, players can assign multiple roles to a single Boss, or assign a <strong>Goblin Mob</strong> under their command to fill a vacant role.</p>
 <ul>
-<li>Mobs testing <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> (Scavver) roll their current <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> in dice.</li>
-<li>Mobs testing <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a>, <a href="stage--rules--keywords-index.html#brains" class="wikilink" title="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a>, or <a href="stage--rules--keywords-index.html#mouth" class="wikilink" title="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a> (Sniffer, Map-Scrawler, Loud-Mouth) are uncoordinated and always roll exactly <strong>1d6</strong> (representing their base stat of 1).</li>
+<li>Mobs testing <a href="stage--rules--keywords-index.html#tough" class="wikilink" data-tooltip="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> (Scavver) roll their current <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> in dice.</li>
+<li>Mobs testing <a href="stage--rules--keywords-index.html#slink" class="wikilink" data-tooltip="Main stat representing agility, stealth, and ranged combat capability.">Slink</a>, <a href="stage--rules--keywords-index.html#brains" class="wikilink" data-tooltip="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a>, or <a href="stage--rules--keywords-index.html#mouth" class="wikilink" data-tooltip="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a> (Sniffer, Map-Scrawler, Loud-Mouth) are uncoordinated and always roll exactly <strong>1d6</strong> (representing their base stat of 1).</li>
 </ul>
 <blockquote>
 <blockquote>
@@ -97,13 +102,13 @@ The GM never rolls dice during a journey. All tests are rolled by the players fi
 <h2 id="resolving-a-stage" tabindex="-1">Resolving a Stage</h2>
 <p>For each Stage of the journey, the players must resolve the following two steps in order:</p>
 <h3 id="1-the-route-test" tabindex="-1">1. The Route Test</h3>
-<p>The <strong>Map-Scrawler</strong> rolls a <a href="stage--rules--keywords-index.html#brains" class="wikilink" title="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> test against the terrain’s difficulty (typically <strong>5+/1</strong>).</p>
+<p>The <strong>Map-Scrawler</strong> rolls a <a href="stage--rules--keywords-index.html#brains" class="wikilink" data-tooltip="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> test against the terrain’s difficulty (typically <strong>5+/1</strong>).</p>
 <ul>
 <li><strong>Success:</strong> The route is clear. The party progresses to the next Stage (or arrives if this was the final stage).</li>
-<li><strong>Failure:</strong> The party gets lost or takes a grueling detour. The entire party suffers 1 <strong>Attrition</strong> (every Mob in the travel party immediately takes 1 damage to its active health die), and the party suffers a <a href="stage--rules--keywords-index.html#bane" class="wikilink" title="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> (-1d) on the upcoming <a href="stage--rules--keywords-index.html#travel-event" class="wikilink" title="A random event resolved during journeys, indicating hazards, encounters, or opportunities.">Travel Event</a> test.</li>
+<li><strong>Failure:</strong> The party gets lost or takes a grueling detour. The entire party suffers 1 <strong>Attrition</strong> (every Mob in the travel party immediately takes 1 damage to its active health die), and the party suffers a <a href="stage--rules--keywords-index.html#bane" class="wikilink" data-tooltip="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> (-1d) on the upcoming <a href="stage--rules--keywords-index.html#travel-event" class="wikilink" data-tooltip="A random event resolved during journeys, indicating hazards, encounters, or opportunities.">Travel Event</a> test.</li>
 </ul>
 <h3 id="2-the-travel-event" tabindex="-1">2. The Travel Event</h3>
-<p>The GM rolls <strong>1d6</strong> on the <strong>Gobbo <a href="stage--rules--keywords-index.html#travel-event" class="wikilink" title="A random event resolved during journeys, indicating hazards, encounters, or opportunities.">Travel Event</a> Table</strong> below. The resulting event targets one of the other three roles, who must make a test to resolve it.</p>
+<p>The GM rolls <strong>1d6</strong> on the <strong>Gobbo <a href="stage--rules--keywords-index.html#travel-event" class="wikilink" data-tooltip="A random event resolved during journeys, indicating hazards, encounters, or opportunities.">Travel Event</a> Table</strong> below. The resulting event targets one of the other three roles, who must make a test to resolve it.</p>
 <table>
 <thead>
 <tr>
@@ -120,49 +125,49 @@ The GM never rolls dice during a journey. All tests are rolled by the players fi
 <td style="text-align:left"><strong>1</strong></td>
 <td style="text-align:left"><strong>Narrow Pass</strong></td>
 <td style="text-align:left">Sniffer</td>
-<td style="text-align:left"><a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a></td>
+<td style="text-align:left"><a href="stage--rules--keywords-index.html#slink" class="wikilink" data-tooltip="Main stat representing agility, stealth, and ranged combat capability.">Slink</a></td>
 <td style="text-align:left">You slip through the crevices.</td>
-<td style="text-align:left">Gobbos get stuck or crushed. A Mob takes <strong>2 damage</strong> (or rolls passive defense). Mobs of <strong>Size 3+</strong> suffer a <a href="stage--rules--keywords-index.html#bane" class="wikilink" title="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> on their next test.</td>
+<td style="text-align:left">Gobbos get stuck or crushed. A Mob takes <strong>2 damage</strong> (or rolls passive defense). Mobs of <strong>Size 3+</strong> suffer a <a href="stage--rules--keywords-index.html#bane" class="wikilink" data-tooltip="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> on their next test.</td>
 </tr>
 <tr>
 <td style="text-align:left"><strong>2</strong></td>
 <td style="text-align:left"><strong>Deep Sewer / Torrent</strong></td>
 <td style="text-align:left">Scavver</td>
-<td style="text-align:left"><a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a></td>
+<td style="text-align:left"><a href="stage--rules--keywords-index.html#tough" class="wikilink" data-tooltip="Main stat representing physical power, raw force, and melee combat capability.">Tough</a></td>
 <td style="text-align:left">The Scavver builds a crude bridge.</td>
-<td style="text-align:left">Gobbos are swept away. A Mob takes <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> damage (losing 1 lowest-value D6, reducing Mob <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> by 1), or you must discard 1 <a href="stage--rules--keywords-index.html#bulk" class="wikilink" title="A measure of how heavy/unwieldy an item is. High bulk reduces movement or requires multiple goblins.">Bulk</a> of equipped gear to save them.</td>
+<td style="text-align:left">Gobbos are swept away. A Mob takes <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> damage (losing 1 lowest-value D6, reducing Mob <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> by 1), or you must discard 1 <a href="stage--rules--keywords-index.html#bulk" class="wikilink" data-tooltip="A measure of how heavy/unwieldy an item is. High bulk reduces movement or requires multiple goblins.">Bulk</a> of equipped gear to save them.</td>
 </tr>
 <tr>
 <td style="text-align:left"><strong>3</strong></td>
 <td style="text-align:left"><strong>Glowing Mushroom Patch</strong></td>
 <td style="text-align:left">Scavver</td>
-<td style="text-align:left"><a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a></td>
+<td style="text-align:left"><a href="stage--rules--keywords-index.html#tough" class="wikilink" data-tooltip="Main stat representing physical power, raw force, and melee combat capability.">Tough</a></td>
 <td style="text-align:left">You harvest the good ones. Heal 1 damage on a Mob’s health die.</td>
-<td style="text-align:left">Poisonous bellyaches. Every Mob takes 1 damage. One random Gobbo eats a weird one: test <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a>; on a failure, they gain the <a href="stage--rules--keywords-index.html#weakened" class="wikilink" title="A condition imposing a -1d Bane on all action tests.">Weakened</a> condition.</td>
+<td style="text-align:left">Poisonous bellyaches. Every Mob takes 1 damage. One random Gobbo eats a weird one: test <a href="stage--rules--keywords-index.html#tough" class="wikilink" data-tooltip="Main stat representing physical power, raw force, and melee combat capability.">Tough</a>; on a failure, they gain the <a href="stage--rules--keywords-index.html#weakened" class="wikilink" data-tooltip="A condition imposing a -1d Bane on all action tests.">Weakened</a> condition.</td>
 </tr>
 <tr>
 <td style="text-align:left"><strong>4</strong></td>
 <td style="text-align:left"><strong>Bickering Over Shinies</strong></td>
 <td style="text-align:left">Loud-Mouth</td>
-<td style="text-align:left"><a href="stage--rules--keywords-index.html#mouth" class="wikilink" title="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a></td>
-<td style="text-align:left">Loud-Mouth restores order. Gain 1 <a href="stage--rules--keywords-index.html#loot" class="wikilink" title="Valuable scrap, gear, or treasures scavenged during a raid, pooled to upgrade the Lair and gain XP.">Loot</a> from the scrap.</td>
-<td style="text-align:left">Violent infighting! A Mob takes <strong>1d6/2 damage</strong> (rounded up) and the Loud-Mouth Boss loses 1 <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>.</td>
+<td style="text-align:left"><a href="stage--rules--keywords-index.html#mouth" class="wikilink" data-tooltip="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a></td>
+<td style="text-align:left">Loud-Mouth restores order. Gain 1 <a href="stage--rules--keywords-index.html#loot" class="wikilink" data-tooltip="Valuable scrap, gear, or treasures scavenged during a raid, pooled to upgrade the Lair and gain XP.">Loot</a> from the scrap.</td>
+<td style="text-align:left">Violent infighting! A Mob takes <strong>1d6/2 damage</strong> (rounded up) and the Loud-Mouth Boss loses 1 <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>.</td>
 </tr>
 <tr>
 <td style="text-align:left"><strong>5</strong></td>
 <td style="text-align:left"><strong>Shadow Ambush</strong></td>
 <td style="text-align:left">Sniffer</td>
-<td style="text-align:left"><a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a></td>
-<td style="text-align:left">You spot the trap. Gain a <a href="stage--rules--keywords-index.html#boon" class="wikilink" title="A positive modifier granting a +1d bonus on a test's dice pool. Multiple Boons do not stack.">Boon</a> (+1d) on the first attack of the raid.</td>
-<td style="text-align:left">Caught off-guard! A random Mob takes <strong>2 damage</strong>, and the GM adds <strong>2 dice</strong> to the shared <a href="stage--rules--keywords-index.html#bangaranga-pool" class="wikilink" title="A communal pool of d6s built by fumbles and ones, spent by players to purchase temporary Boons or activate magic.">Bangaranga Pool</a> from the noise.</td>
+<td style="text-align:left"><a href="stage--rules--keywords-index.html#slink" class="wikilink" data-tooltip="Main stat representing agility, stealth, and ranged combat capability.">Slink</a></td>
+<td style="text-align:left">You spot the trap. Gain a <a href="stage--rules--keywords-index.html#boon" class="wikilink" data-tooltip="A positive modifier granting a +1d bonus on a test's dice pool. Multiple Boons do not stack.">Boon</a> (+1d) on the first attack of the raid.</td>
+<td style="text-align:left">Caught off-guard! A random Mob takes <strong>2 damage</strong>, and the GM adds <strong>2 dice</strong> to the shared <a href="stage--rules--keywords-index.html#bangaranga-pool" class="wikilink" data-tooltip="A communal pool of d6s built by fumbles and ones, spent by players to purchase temporary Boons or activate magic.">Bangaranga Pool</a> from the noise.</td>
 </tr>
 <tr>
 <td style="text-align:left"><strong>6</strong></td>
 <td style="text-align:left"><strong>“Are We There Yet?”</strong></td>
 <td style="text-align:left">Loud-Mouth</td>
-<td style="text-align:left"><a href="stage--rules--keywords-index.html#mouth" class="wikilink" title="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a></td>
+<td style="text-align:left"><a href="stage--rules--keywords-index.html#mouth" class="wikilink" data-tooltip="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a></td>
 <td style="text-align:left">The Loud-Mouth leads a rowdy march.</td>
-<td style="text-align:left">Desertion! The Loud-Mouth Boss loses 1 <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>, and one Mob shrinks by 1 <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> as runts sneak away.</td>
+<td style="text-align:left">Desertion! The Loud-Mouth Boss loses 1 <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>, and one Mob shrinks by 1 <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> as runts sneak away.</td>
 </tr>
 </tbody>
 </table>
@@ -171,18 +176,18 @@ The GM never rolls dice during a journey. All tests are rolled by the players fi
 <p>Raiding is only half the problem; dragging the treasure back to the Lair is where the real greed kills. Goblins carrying heavy loot are loud, slow, and bicker constantly.</p>
 <p>During the journey back to the Lair, Mobs carrying treasure suffer under the weight:</p>
 <h3 id="laden-mobs" tabindex="-1">Laden Mobs</h3>
-<p>A Mob carrying more <a href="stage--rules--keywords-index.html#loot" class="wikilink" title="Valuable scrap, gear, or treasures scavenged during a raid, pooled to upgrade the Lair and gain XP.">Loot</a> than half its maximum <a href="stage--rules--keywords-index.html#loot-capacity" class="wikilink" title="The maximum Bulk of items a goblin or Mob can carry during a raid.">Loot Capacity</a> is considered <strong>Laden</strong>.</p>
+<p>A Mob carrying more <a href="stage--rules--keywords-index.html#loot" class="wikilink" data-tooltip="Valuable scrap, gear, or treasures scavenged during a raid, pooled to upgrade the Lair and gain XP.">Loot</a> than half its maximum <a href="stage--rules--keywords-index.html#loot-capacity" class="wikilink" data-tooltip="The maximum Bulk of items a goblin or Mob can carry during a raid.">Loot Capacity</a> is considered <strong>Laden</strong>.</p>
 <ul>
-<li><strong>Laden</strong> Mobs suffer a <a href="stage--rules--keywords-index.html#bane" class="wikilink" title="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> (-1d) on all <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> and <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> tests during the return journey.</li>
-<li>The Map-Scrawler’s <a href="stage--rules--keywords-index.html#route-test" class="wikilink" title="A travel test made during journeys using Brains or Slink to navigate path hazards and find safe passages.">Route Test</a> required successes increase by 1 (e.g., from <strong>5+/1</strong> to <strong>5+/2</strong>), as the laden horde slows down and struggles to stay on the path.</li>
+<li><strong>Laden</strong> Mobs suffer a <a href="stage--rules--keywords-index.html#bane" class="wikilink" data-tooltip="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> (-1d) on all <a href="stage--rules--keywords-index.html#slink" class="wikilink" data-tooltip="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> and <a href="stage--rules--keywords-index.html#tough" class="wikilink" data-tooltip="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> tests during the return journey.</li>
+<li>The Map-Scrawler’s <a href="stage--rules--keywords-index.html#route-test" class="wikilink" data-tooltip="A travel test made during journeys using Brains or Slink to navigate path hazards and find safe passages.">Route Test</a> required successes increase by 1 (e.g., from <strong>5+/1</strong> to <strong>5+/2</strong>), as the laden horde slows down and struggles to stay on the path.</li>
 </ul>
 <h3 id="over-laden-mobs" tabindex="-1">Over-Laden Mobs</h3>
-<p>A Mob carrying its maximum <a href="stage--rules--keywords-index.html#loot-capacity" class="wikilink" title="The maximum Bulk of items a goblin or Mob can carry during a raid.">Loot Capacity</a> is considered <a href="stage--rules--keywords-index.html#over-laden" class="wikilink" title="A state of carrying Bulk exceeding capacity, reducing movement speed and imposing Banes on physical tests.">Over-Laden</a>.</p>
+<p>A Mob carrying its maximum <a href="stage--rules--keywords-index.html#loot-capacity" class="wikilink" data-tooltip="The maximum Bulk of items a goblin or Mob can carry during a raid.">Loot Capacity</a> is considered <a href="stage--rules--keywords-index.html#over-laden" class="wikilink" data-tooltip="A state of carrying Bulk exceeding capacity, reducing movement speed and imposing Banes on physical tests.">Over-Laden</a>.</p>
 <ul>
-<li><a href="stage--rules--keywords-index.html#over-laden" class="wikilink" title="A state of carrying Bulk exceeding capacity, reducing movement speed and imposing Banes on physical tests.">Over-Laden</a> Mobs suffer all the penalties of being Laden.</li>
-<li><a href="stage--rules--keywords-index.html#over-laden" class="wikilink" title="A state of carrying Bulk exceeding capacity, reducing movement speed and imposing Banes on physical tests.">Over-Laden</a> Mobs cannot roll passive defense dice (such as armor) to reduce damage from travel hazards.</li>
-<li><a href="stage--rules--keywords-index.html#over-laden" class="wikilink" title="A state of carrying Bulk exceeding capacity, reducing movement speed and imposing Banes on physical tests.">Over-Laden</a> Mobs automatically take 1 damage on a failed <a href="stage--rules--keywords-index.html#route-test" class="wikilink" title="A travel test made during journeys using Brains or Slink to navigate path hazards and find safe passages.">Route Test</a> (representing exhaustion from dragging heavy junk), in addition to the standard party Attrition.</li>
-<li>If the party is forced to flee or dodge a hazard, they must immediately discard 2 <a href="stage--rules--keywords-index.html#bulk" class="wikilink" title="A measure of how heavy/unwieldy an item is. High bulk reduces movement or requires multiple goblins.">Bulk</a> of Loot per <a href="stage--rules--keywords-index.html#over-laden" class="wikilink" title="A state of carrying Bulk exceeding capacity, reducing movement speed and imposing Banes on physical tests.">Over-Laden</a> Mob, or the Mob becomes <a href="stage--rules--keywords-index.html#uncontrolled" class="wikilink" title="A state where a Mob ignores commands and acts randomly according to GM-controlled mischief tables.">Uncontrolled</a> as they refuse to leave the treasure behind.</li>
+<li><a href="stage--rules--keywords-index.html#over-laden" class="wikilink" data-tooltip="A state of carrying Bulk exceeding capacity, reducing movement speed and imposing Banes on physical tests.">Over-Laden</a> Mobs suffer all the penalties of being Laden.</li>
+<li><a href="stage--rules--keywords-index.html#over-laden" class="wikilink" data-tooltip="A state of carrying Bulk exceeding capacity, reducing movement speed and imposing Banes on physical tests.">Over-Laden</a> Mobs cannot roll passive defense dice (such as armor) to reduce damage from travel hazards.</li>
+<li><a href="stage--rules--keywords-index.html#over-laden" class="wikilink" data-tooltip="A state of carrying Bulk exceeding capacity, reducing movement speed and imposing Banes on physical tests.">Over-Laden</a> Mobs automatically take 1 damage on a failed <a href="stage--rules--keywords-index.html#route-test" class="wikilink" data-tooltip="A travel test made during journeys using Brains or Slink to navigate path hazards and find safe passages.">Route Test</a> (representing exhaustion from dragging heavy junk), in addition to the standard party Attrition.</li>
+<li>If the party is forced to flee or dodge a hazard, they must immediately discard 2 <a href="stage--rules--keywords-index.html#bulk" class="wikilink" data-tooltip="A measure of how heavy/unwieldy an item is. High bulk reduces movement or requires multiple goblins.">Bulk</a> of Loot per <a href="stage--rules--keywords-index.html#over-laden" class="wikilink" data-tooltip="A state of carrying Bulk exceeding capacity, reducing movement speed and imposing Banes on physical tests.">Over-Laden</a> Mob, or the Mob becomes <a href="stage--rules--keywords-index.html#uncontrolled" class="wikilink" data-tooltip="A state where a Mob ignores commands and acts randomly according to GM-controlled mischief tables.">Uncontrolled</a> as they refuse to leave the treasure behind.</li>
 </ul>
 <hr>
 <h2 id="examples-of-play" tabindex="-1">Examples of Play</h2>
@@ -199,24 +204,24 @@ The GM never rolls dice during a journey. All tests are rolled by the players fi
 </ul>
 <p><strong>Stage 1:</strong></p>
 <ol>
-<li><a href="stage--rules--keywords-index.html#route-test" class="wikilink" title="A travel test made during journeys using Brains or Slink to navigate path hazards and find safe passages.">Route Test</a>: Grub (Map-Scrawler) rolls his Brains (<strong>3d6</strong>). He rolls <code>5, 3, 2</code>—one success! The route is clear.</li>
-<li><a href="stage--rules--keywords-index.html#travel-event" class="wikilink" title="A random event resolved during journeys, indicating hazards, encounters, or opportunities.">Travel Event</a>: The GM rolls a <code>3</code> on the event table: <strong>Glowing Mushroom Patch</strong>. This requires a <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> test from the Scavver. Snarl rolls her Tough (<strong>3d6</strong>) and rolls <code>6, 5, 2</code>. The <code>6</code> explodes, rolling a <code>4</code>. That is two successes! Snarl identifies the safe mushrooms. The Mob gorges themselves and heals 1 damage on their health die.</li>
+<li><a href="stage--rules--keywords-index.html#route-test" class="wikilink" data-tooltip="A travel test made during journeys using Brains or Slink to navigate path hazards and find safe passages.">Route Test</a>: Grub (Map-Scrawler) rolls his Brains (<strong>3d6</strong>). He rolls <code>5, 3, 2</code>—one success! The route is clear.</li>
+<li><a href="stage--rules--keywords-index.html#travel-event" class="wikilink" data-tooltip="A random event resolved during journeys, indicating hazards, encounters, or opportunities.">Travel Event</a>: The GM rolls a <code>3</code> on the event table: <strong>Glowing Mushroom Patch</strong>. This requires a <a href="stage--rules--keywords-index.html#tough" class="wikilink" data-tooltip="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> test from the Scavver. Snarl rolls her Tough (<strong>3d6</strong>) and rolls <code>6, 5, 2</code>. The <code>6</code> explodes, rolling a <code>4</code>. That is two successes! Snarl identifies the safe mushrooms. The Mob gorges themselves and heals 1 damage on their health die.</li>
 </ol>
 <p><strong>Stage 2:</strong></p>
 <ol>
-<li><a href="stage--rules--keywords-index.html#route-test" class="wikilink" title="A travel test made during journeys using Brains or Slink to navigate path hazards and find safe passages.">Route Test</a>: Grub rolls his Brains (<strong>3d6</strong>). He rolls <code>4, 2, 1</code>—zero successes! The party gets lost in a swamp. Every Mob takes 1 <strong>Attrition damage</strong> (the Mob’s health die drops by 1). Also, the party takes a <a href="stage--rules--keywords-index.html#bane" class="wikilink" title="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> (-1d) on the next event.</li>
-<li><a href="stage--rules--keywords-index.html#travel-event" class="wikilink" title="A random event resolved during journeys, indicating hazards, encounters, or opportunities.">Travel Event</a>: The GM rolls a <code>5</code>: <strong>Shadow Ambush</strong>. This requires a <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> test from the Sniffer. Snarl’s Mob is the Sniffer, rolling <strong>1d6</strong>, but they have a <a href="stage--rules--keywords-index.html#bane" class="wikilink" title="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> from getting lost, leaving them with <strong>0d6</strong> to roll!</li>
+<li><a href="stage--rules--keywords-index.html#route-test" class="wikilink" data-tooltip="A travel test made during journeys using Brains or Slink to navigate path hazards and find safe passages.">Route Test</a>: Grub rolls his Brains (<strong>3d6</strong>). He rolls <code>4, 2, 1</code>—zero successes! The party gets lost in a swamp. Every Mob takes 1 <strong>Attrition damage</strong> (the Mob’s health die drops by 1). Also, the party takes a <a href="stage--rules--keywords-index.html#bane" class="wikilink" data-tooltip="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> (-1d) on the next event.</li>
+<li><a href="stage--rules--keywords-index.html#travel-event" class="wikilink" data-tooltip="A random event resolved during journeys, indicating hazards, encounters, or opportunities.">Travel Event</a>: The GM rolls a <code>5</code>: <strong>Shadow Ambush</strong>. This requires a <a href="stage--rules--keywords-index.html#slink" class="wikilink" data-tooltip="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> test from the Sniffer. Snarl’s Mob is the Sniffer, rolling <strong>1d6</strong>, but they have a <a href="stage--rules--keywords-index.html#bane" class="wikilink" data-tooltip="A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.">Bane</a> from getting lost, leaving them with <strong>0d6</strong> to roll!</li>
 </ol>
-<p><em>Note: In Gobbos, if a <a href="stage--rules--keywords-index.html#dice-pool" class="wikilink" title="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">dice pool</a> is reduced to 0d6 or less, the test automatically fails, but you still roll 1d6 and need a 6 to salvage it, while a 1 is a fumble. Snarl’s player rolls <code>2</code>—a standard failure.</em></p>
+<p><em>Note: In Gobbos, if a <a href="stage--rules--keywords-index.html#dice-pool" class="wikilink" data-tooltip="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">Dice pool</a> is reduced to 0d6 or less, the test automatically fails, but you still roll 1d6 and need a 6 to salvage it, while a 1 is a fumble. Snarl’s player rolls <code>2</code>—a standard failure.</em></p>
 <p>The ambush is sprung. The Mob takes <strong>2 damage</strong>. Since they have armor, they roll their passive defense die, rolling a <code>5</code> (one success), reducing the damage to 1. The party arrives at the raid battered but alive!</p>
 </blockquote>
 <h3 id="example-2-the-laden-return-greed-is-good" tabindex="-1">Example 2: The Laden Return (Greed is Good)</h3>
 <blockquote>
-<p><strong>Example:</strong> Having looted a human merchant’s cellar, Snarl’s <strong>Size 3 Mob</strong> is now carrying 10 <a href="stage--rules--keywords-index.html#bulk" class="wikilink" title="A measure of how heavy/unwieldy an item is. High bulk reduces movement or requires multiple goblins.">Bulk</a> of treasure back to the Lair. Since their maximum <a href="stage--rules--keywords-index.html#loot-capacity" class="wikilink" title="The maximum Bulk of items a goblin or Mob can carry during a raid.">Loot Capacity</a> is 12 <a href="stage--rules--keywords-index.html#bulk" class="wikilink" title="A measure of how heavy/unwieldy an item is. High bulk reduces movement or requires multiple goblins.">Bulk</a>, and 10 is greater than half (6 Bulk), the Mob is <strong>Laden</strong>.</p>
+<p><strong>Example:</strong> Having looted a human merchant’s cellar, Snarl’s <strong>Size 3 Mob</strong> is now carrying 10 <a href="stage--rules--keywords-index.html#bulk" class="wikilink" data-tooltip="A measure of how heavy/unwieldy an item is. High bulk reduces movement or requires multiple goblins.">Bulk</a> of treasure back to the Lair. Since their maximum <a href="stage--rules--keywords-index.html#loot-capacity" class="wikilink" data-tooltip="The maximum Bulk of items a goblin or Mob can carry during a raid.">Loot Capacity</a> is 12 <a href="stage--rules--keywords-index.html#bulk" class="wikilink" data-tooltip="A measure of how heavy/unwieldy an item is. High bulk reduces movement or requires multiple goblins.">Bulk</a>, and 10 is greater than half (6 Bulk), the Mob is <strong>Laden</strong>.</p>
 <p>On the return journey (1 Stage):</p>
 <ol>
-<li><a href="stage--rules--keywords-index.html#route-test" class="wikilink" title="A travel test made during journeys using Brains or Slink to navigate path hazards and find safe passages.">Route Test</a>: Grub rolls Brains (<strong>3d6</strong>). Because the Mob is Laden, the TN is increased by +1, meaning Grub needs <strong>2 successes</strong> instead of 1. Grub rolls <code>6, 4, 3</code>. The <code>6</code> explodes into a <code>5</code>. That is two successes! The party stays on track despite the heavy loads.</li>
-<li><a href="stage--rules--keywords-index.html#travel-event" class="wikilink" title="A random event resolved during journeys, indicating hazards, encounters, or opportunities.">Travel Event</a>: The GM rolls a <code>4</code>: <strong>Bickering Over Shinies</strong>. Snarl must test Mouth (<strong>2d6</strong>). She rolls <code>5, 1</code>—one success! Snarl screams at the gobbos, hits a few runts with her club, and keeps them moving. The party returns to the Lair safely with their treasure.</li>
+<li><a href="stage--rules--keywords-index.html#route-test" class="wikilink" data-tooltip="A travel test made during journeys using Brains or Slink to navigate path hazards and find safe passages.">Route Test</a>: Grub rolls Brains (<strong>3d6</strong>). Because the Mob is Laden, the TN is increased by +1, meaning Grub needs <strong>2 successes</strong> instead of 1. Grub rolls <code>6, 4, 3</code>. The <code>6</code> explodes into a <code>5</code>. That is two successes! The party stays on track despite the heavy loads.</li>
+<li><a href="stage--rules--keywords-index.html#travel-event" class="wikilink" data-tooltip="A random event resolved during journeys, indicating hazards, encounters, or opportunities.">Travel Event</a>: The GM rolls a <code>4</code>: <strong>Bickering Over Shinies</strong>. Snarl must test Mouth (<strong>2d6</strong>). She rolls <code>5, 1</code>—one success! Snarl screams at the gobbos, hits a few runts with her club, and keeps them moving. The party returns to the Lair safely with their treasure.</li>
 </ol>
 </blockquote>
 
@@ -323,13 +328,89 @@ The GM never rolls dice during a journey. All tests are rolled by the players fi
         .then(data => {
           if (data && data.status === 'error') {
             const banner = document.getElementById('statusBanner');
-            if (banner) banner.style.display = 'block';
+            if (banner) banner.style.display = 'flex';
           }
         })
         .catch(err => {
           // If status.json does not exist or fails, do nothing
           console.log('Update status check skipped:', err);
         });
+    })();
+
+    // --- Anchor Scroll Fix ---
+    (function() {
+      function scrollToHash() {
+        if (window.location.hash) {
+          const id = decodeURIComponent(window.location.hash.substring(1));
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }, 100);
+          }
+        }
+      }
+      window.addEventListener('hashchange', scrollToHash);
+      window.addEventListener('DOMContentLoaded', scrollToHash);
+      window.addEventListener('load', scrollToHash);
+    })();
+
+    // --- Manual Sync Trigger ---
+    (function() {
+      const headerBtn = document.getElementById('headerSyncBtn');
+      const bannerBtn = document.getElementById('bannerSyncBtn');
+      
+      function handleSync(btn) {
+        if (!btn) return;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        
+        // Add spinning/loading animation class
+        if (btn.classList.contains('sync-btn')) {
+          btn.classList.add('sync-btn--spinning');
+          btn.querySelector('span').textContent = 'Syncing...';
+        } else {
+          btn.textContent = 'Syncing...';
+        }
+        
+        fetch('/api/run-sync', { method: 'POST' })
+          .then(res => {
+            if (!res.ok) throw new Error('Server returned error status: ' + res.status);
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.status === 'success') {
+              if (btn.classList.contains('sync-btn')) {
+                btn.querySelector('span').textContent = 'Success!';
+              } else {
+                btn.textContent = 'Success!';
+              }
+              // Reload page to reflect changes
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              throw new Error(data.error || 'Sync failed');
+            }
+          })
+          .catch(err => {
+            console.error('Sync failed:', err);
+            alert('Failed to rerun sync: ' + err.message);
+            // Restore button
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            if (btn.classList.contains('sync-btn')) {
+              btn.classList.remove('sync-btn--spinning');
+            }
+          });
+      }
+
+      if (headerBtn) {
+        headerBtn.addEventListener('click', () => handleSync(headerBtn));
+      }
+      if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
     })();
   </script>
 

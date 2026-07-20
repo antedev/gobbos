@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -31,7 +31,11 @@
 <a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
 <a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
     </nav>
-    <div class="top-bar-right">
+    <div class="top-bar-right" style="display: flex; gap: 8px; align-items: center;">
+      <button class="sync-btn" id="headerSyncBtn" title="Sync & Rebuild Site" aria-label="Sync and rebuild site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sync-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Sync</span>
+      </button>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
         <span class="theme-icon theme-icon--light">☀️</span>
         <span class="theme-icon theme-icon--dark">🌙</span>
@@ -57,13 +61,14 @@
 
     <!-- Main Content -->
     <main class="main-content" id="mainContent">
-      <div id="statusBanner" style="display: none; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
-        ⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.
+      <div id="statusBanner" style="display: none; align-items: center; justify-content: space-between; gap: 16px; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        <span>⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.</span>
+        <button class="sync-banner-btn" id="bannerSyncBtn">Rerun Sync</button>
       </div>
       <h1 id="goblin-mobs" tabindex="-1">Goblin Mobs</h1>
-<p>A Boss is nothing without their Gobbos. A Mob is your weapon, your shield, and your pack mule. But keeping a mob together requires a Boss with enough <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>. Otherwise, they simply will not listen, and an ambitious goblin in the ranks might try to take your spot.</p>
+<p>A Boss is nothing without their Gobbos. A Mob is your weapon, your shield, and your pack mule. But keeping a mob together requires a Boss with enough <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>. Otherwise, they simply will not listen, and an ambitious goblin in the ranks might try to take your spot.</p>
 <h2 id="size-power" tabindex="-1">Size = Power</h2>
-<p>The absolute most important stat for a Mob is its <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a>. Size determines everything: how many dice they roll in combat, how much Grunt you need to control them, and how much Loot they carry.</p>
+<p>The absolute most important stat for a Mob is its <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a>. Size determines everything: how many dice they roll in combat, how much Grunt you need to control them, and how much Loot they carry.</p>
 <table>
 <thead>
 <tr>
@@ -117,7 +122,7 @@
 <p>Mobs can be equipped with scavenged weapons and armor, but this comes at a steep cost to their greed.</p>
 <ul>
 <li><strong>Mob Armor:</strong> Equipping a Mob with Armor grants them passive Defense Dice (e.g., +1d6 or +2d6). Whenever the Mob is attacked, you roll these bonus dice, and every success reduces the incoming damage.</li>
-<li><strong>The Tradeoff:</strong> Every piece of Gear a Mob is equipped with reduces their <strong>Carry / <a href="stage--rules--keywords-index.html#loot-capacity" class="wikilink" title="The maximum Bulk of items a goblin or Mob can carry during a raid.">Loot Capacity</a></strong> by an equal amount of Bulk. A heavily armored Mob will survive longer, but they will not be able to carry the raiding loot back to the lair! A naked, feral Mob will die quickly but can carry a horde of treasure.</li>
+<li><strong>The Tradeoff:</strong> Every piece of Gear a Mob is equipped with reduces their <strong>Carry / <a href="stage--rules--keywords-index.html#loot-capacity" class="wikilink" data-tooltip="The maximum Bulk of items a goblin or Mob can carry during a raid.">Loot Capacity</a></strong> by an equal amount of Bulk. A heavily armored Mob will survive longer, but they will not be able to carry the raiding loot back to the lair! A naked, feral Mob will die quickly but can carry a horde of treasure.</li>
 </ul>
 <h3 id="health-and-taking-damage" tabindex="-1">Health &amp; Taking Damage</h3>
 <p>A Mob’s health is tracked physically on the table using a number of D6s equal to its Size (e.g., A Size 3 mob starts with three physical dice turned to the “6” face).</p>
@@ -134,73 +139,73 @@ If an attack explicitly has the AoE or Cleave trait, the incoming damage is appl
 <blockquote>
 <p><em>Example: A Fireball deals 3 Damage to a Size 5 Mob. Instead of just reducing one die by 3, you reduce ALL 5 dice by 3. That single fireball just dealt 15 total damage!</em></p>
 </blockquote>
-<p><strong>Dropping Loot:</strong> If a Mob shrinks in Size, their <a href="stage--rules--keywords-index.html#loot-capacity" class="wikilink" title="The maximum Bulk of items a goblin or Mob can carry during a raid.">Loot Capacity</a> also drops! If they are suddenly carrying more Bulk than their new Size allows, the controlling PC must immediately choose which Loot is dropped on the floor.</p>
+<p><strong>Dropping Loot:</strong> If a Mob shrinks in Size, their <a href="stage--rules--keywords-index.html#loot-capacity" class="wikilink" data-tooltip="The maximum Bulk of items a goblin or Mob can carry during a raid.">Loot Capacity</a> also drops! If they are suddenly carrying more Bulk than their new Size allows, the controlling PC must immediately choose which Loot is dropped on the floor.</p>
 <h2 id="splitting-and-merging-mobs" tabindex="-1">Splitting and Merging Mobs</h2>
 <p>A Boss can dynamically manage their swarm by splitting Mobs apart or merging them together.</p>
 <h3 id="splitting-a-mob" tabindex="-1">Splitting a Mob</h3>
-<p>A Boss can use an <a href="stage--rules--keywords-index.html#order" class="wikilink" title="A Standard Action used by a PC Boss to direct a Mob's actions, bypassing command rolls for controlled Mobs.">Order</a> to tell a Mob to split instead of taking their normal 2 actions.</p>
+<p>A Boss can use an <a href="stage--rules--keywords-index.html#order" class="wikilink" data-tooltip="A Standard Action used by a PC Boss to direct a Mob's actions, bypassing command rolls for controlled Mobs.">Order</a> to tell a Mob to split instead of taking their normal 2 actions.</p>
 <ul>
 <li><strong>The Math:</strong> A Size 5 mob splits into two smaller mobs (e.g., Size 3 and Size 2). The Boss decides how to distribute the current physical dice.</li>
 <li><strong>The Benefit:</strong> Splitting is an excellent way to mitigate AoE/Cleave damage, or to fit Mobs into narrow terrain.</li>
 </ul>
 <h3 id="merging-mobs" tabindex="-1">Merging Mobs</h3>
-<p>If two Mobs belonging to the same player end their turn in the same Zone, the Boss can use an <a href="stage--rules--keywords-index.html#order" class="wikilink" title="A Standard Action used by a PC Boss to direct a Mob's actions, bypassing command rolls for controlled Mobs.">Order</a> or <a href="stage--rules--keywords-index.html#manipulate" class="wikilink" title="A Standard Action catch-all used to interact with items, machinery, traps, or environmental components.">Manipulate</a> action to merge them.</p>
+<p>If two Mobs belonging to the same player end their turn in the same Zone, the Boss can use an <a href="stage--rules--keywords-index.html#order" class="wikilink" data-tooltip="A Standard Action used by a PC Boss to direct a Mob's actions, bypassing command rolls for controlled Mobs.">Order</a> or <a href="stage--rules--keywords-index.html#manipulate" class="wikilink" data-tooltip="A Standard Action catch-all used to interact with items, machinery, traps, or environmental components.">Manipulate</a> action to merge them.</p>
 <ul>
 <li><strong>The Math:</strong> You add the D6s together (e.g., a Size 2 and Size 3 Mob become a new Size 5 Mob).</li>
-<li><strong>The Grunt Cap:</strong> The total Size of the new Mob <em>cannot exceed</em> the Boss’s <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>. If a Boss merges a Mob until it exceeds their Grunt, it immediately becomes Uncontrolled (see below).</li>
+<li><strong>The Grunt Cap:</strong> The total Size of the new Mob <em>cannot exceed</em> the Boss’s <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>. If a Boss merges a Mob until it exceeds their Grunt, it immediately becomes Uncontrolled (see below).</li>
 </ul>
 <h3 id="the-super-mob-cross-gang-merging" tabindex="-1">The Super-Mob (Cross-Gang Merging)</h3>
-<p>Mobs from different player Gangs <em>can</em> merge if both Bosses agree. This creates a terrifying, chaotic massive <a href="stage--rules--keywords-index.html#dice-pool" class="wikilink" title="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">dice pool</a>.</p>
+<p>Mobs from different player Gangs <em>can</em> merge if both Bosses agree. This creates a terrifying, chaotic massive <a href="stage--rules--keywords-index.html#dice-pool" class="wikilink" data-tooltip="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">Dice pool</a>.</p>
 <ul>
-<li><strong>The Command Struggle:</strong> The new Super-Mob is extremely volatile. Every time <em>either</em> Boss wants to issue an Order to the Super-Mob, it requires a <strong>Grunt test</strong> (Testing <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> if in the same Zone, or <a href="stage--rules--keywords-index.html#mouth" class="wikilink" title="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a> from afar).</li>
-<li><strong>In-Fighting:</strong> Whenever a Cross-Gang Mob rolls a <a href="stage--rules--keywords-index.html#dice-pool" class="wikilink" title="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">dice pool</a> for <em>any reason</em> (like an Attack roll, or a Manipulate check), <strong>every 1 rolled results in 1 damage to the Mob itself.</strong> They cannot help themselves; they just start stabbing the other gang! This happens regardless of whether the action is successful or not.</li>
+<li><strong>The Command Struggle:</strong> The new Super-Mob is extremely volatile. Every time <em>either</em> Boss wants to issue an Order to the Super-Mob, it requires a <strong>Grunt test</strong> (Testing <a href="stage--rules--keywords-index.html#tough" class="wikilink" data-tooltip="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> if in the same Zone, or <a href="stage--rules--keywords-index.html#mouth" class="wikilink" data-tooltip="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a> from afar).</li>
+<li><strong>In-Fighting:</strong> Whenever a Cross-Gang Mob rolls a <a href="stage--rules--keywords-index.html#dice-pool" class="wikilink" data-tooltip="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">Dice pool</a> for <em>any reason</em> (like an Attack roll, or a Manipulate check), <strong>every 1 rolled results in 1 damage to the Mob itself.</strong> They cannot help themselves; they just start stabbing the other gang! This happens regardless of whether the action is successful or not.</li>
 </ul>
 <h3 id="action-economy-and-combat-states" tabindex="-1">Action Economy &amp; Combat States</h3>
 <p>A Mob gets <strong>two (2) actions</strong> per round, reset at the start of each round. A Mob’s behavior, actions spent, and defensive capabilities are determined strictly by their combat state:</p>
 <ol>
-<li><strong>Ordered:</strong> The Mob receives direct instructions from the Boss (using a <a href="stage--rules--keywords-index.html#standard-action" class="wikilink" title="The primary actions spent on a turn (3 per round). Used for Move, Attack, Plunder, Order, or Manipulate. See [[02 Combat]].">Standard Action</a> or Free Order). They use <strong>both actions</strong> as per the player’s instructions (e.g., moving and attacking). They have <strong>0 saved actions</strong> left for defense (0d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" title="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>).</li>
-<li><strong><a href="stage--rules--keywords-index.html#loitering" class="wikilink" title="A Mob state where no order is given. The Mob performs a minor loitering action and saves 1 action for defense.">Loitering</a>:</strong> The Mob is under control but receives no orders on their turn. Goblins are naturally distracted and lazy; they use <strong>1 action</strong> to loiter (roll/choose on the <strong><a href="stage--rules--keywords-index.html#loitering" class="wikilink" title="A Mob state where no order is given. The Mob performs a minor loitering action and saves 1 action for defense.">Loitering</a> Table</strong> below) and save <strong>1 action</strong> for defense. When attacked, they spend their saved action to roll 1d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" title="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>.</li>
-<li><strong><a href="stage--rules--keywords-index.html#out-of-control" class="wikilink" title="A Mob state triggered by failed command rolls or size limits. The Mob acts randomly under GM direction.">Out of Control</a>:</strong> The Mob is uncontrolled (see below). They spend <strong>both actions</strong> running amok under GM control (roll/choose on the <strong><a href="stage--rules--keywords-index.html#out-of-control" class="wikilink" title="A Mob state triggered by failed command rolls or size limits. The Mob acts randomly under GM direction.">Out of Control</a> Table</strong> below), leaving them with <strong>0 saved actions</strong> left for defense (0d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" title="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>).</li>
+<li><strong>Ordered:</strong> The Mob receives direct instructions from the Boss (using a <a href="stage--rules--keywords-index.html#standard-action" class="wikilink" data-tooltip="The primary actions spent on a turn (3 per round). Used for Move, Attack, Plunder, Order, or Manipulate. See [[02 Combat]].">Standard Action</a> or Free Order). They use <strong>both actions</strong> as per the player’s instructions (e.g., moving and attacking). They have <strong>0 saved actions</strong> left for defense (0d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" data-tooltip="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>).</li>
+<li><strong><a href="stage--rules--keywords-index.html#loitering" class="wikilink" data-tooltip="A Mob state where no order is given. The Mob performs a minor loitering action and saves 1 action for defense.">Loitering</a>:</strong> The Mob is under control but receives no orders on their turn. Goblins are naturally distracted and lazy; they use <strong>1 action</strong> to loiter (roll/choose on the <strong><a href="stage--rules--keywords-index.html#loitering" class="wikilink" data-tooltip="A Mob state where no order is given. The Mob performs a minor loitering action and saves 1 action for defense.">Loitering</a> Table</strong> below) and save <strong>1 action</strong> for defense. When attacked, they spend their saved action to roll 1d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" data-tooltip="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>.</li>
+<li><strong><a href="stage--rules--keywords-index.html#out-of-control" class="wikilink" data-tooltip="A Mob state triggered by failed command rolls or size limits. The Mob acts randomly under GM direction.">Out of Control</a>:</strong> The Mob is uncontrolled (see below). They spend <strong>both actions</strong> running amok under GM control (roll/choose on the <strong><a href="stage--rules--keywords-index.html#out-of-control" class="wikilink" data-tooltip="A Mob state triggered by failed command rolls or size limits. The Mob acts randomly under GM direction.">Out of Control</a> Table</strong> below), leaving them with <strong>0 saved actions</strong> left for defense (0d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" data-tooltip="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>).</li>
 </ol>
 <h3 id="command-limits-control-vs-out-of-control" tabindex="-1">Command Limits (Control vs. Out of Control)</h3>
-<p>A Mob is under command as long as they are within line of sight of their Boss and the Mob’s current <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> does not exceed the Boss’s maximum <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> stat. A Mob immediately becomes <a href="stage--rules--keywords-index.html#out-of-control" class="wikilink" title="A Mob state triggered by failed command rolls or size limits. The Mob acts randomly under GM direction.">Out of Control</a> if:</p>
+<p>A Mob is under command as long as they are within line of sight of their Boss and the Mob’s current <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> does not exceed the Boss’s maximum <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> stat. A Mob immediately becomes <a href="stage--rules--keywords-index.html#out-of-control" class="wikilink" data-tooltip="A Mob state triggered by failed command rolls or size limits. The Mob acts randomly under GM direction.">Out of Control</a> if:</p>
 <ol>
 <li><strong>Broken Command:</strong> They break line of sight with their Boss (e.g., they move behind a solid wall or enter a separate room).</li>
-<li><strong>Command Limit Exceeded:</strong> The Mob’s <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> increases beyond the Boss’s current <a href="stage--rules--keywords-index.html#grunt" class="wikilink" title="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> (often due to merging or the Boss losing Grunt from a Fumble).</li>
-<li><strong>Morale Failure:</strong> The Mob fails a group <a href="stage--rules--keywords-index.html#morale-check" class="wikilink" title="A Mouth or Grunt test made by a Mob when they take heavy losses to prevent them from fleeing or going Out of Control.">Morale Check</a> and panics.</li>
+<li><strong>Command Limit Exceeded:</strong> The Mob’s <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> increases beyond the Boss’s current <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> (often due to merging or the Boss losing Grunt from a Fumble).</li>
+<li><strong>Morale Failure:</strong> The Mob fails a group <a href="stage--rules--keywords-index.html#morale-check" class="wikilink" data-tooltip="A Mouth or Grunt test made by a Mob when they take heavy losses to prevent them from fleeing or going Out of Control.">Morale Check</a> and panics.</li>
 </ol>
 <h4 id="regaining-control" tabindex="-1">Regaining Control</h4>
-<p>To bring an <a href="stage--rules--keywords-index.html#out-of-control" class="wikilink" title="A Mob state triggered by failed command rolls or size limits. The Mob acts randomly under GM direction.">Out of Control</a> Mob back under command, the Boss must spend a <a href="stage--rules--keywords-index.html#standard-action" class="wikilink" title="The primary actions spent on a turn (3 per round). Used for Move, Attack, Plunder, Order, or Manipulate. See [[02 Combat]].">Standard Action</a> to <a href="stage--rules--keywords-index.html#order" class="wikilink" title="A Standard Action used by a PC Boss to direct a Mob's actions, bypassing command rolls for controlled Mobs.">Order</a> them, resolving it using the standard command test rules in <a href="../00_Rules/04_Giving%20orders.md">Giving Orders</a>. On a success, the Mob becomes controlled and receives their instructions; on a failure, they ignore the Boss and remain <a href="stage--rules--keywords-index.html#out-of-control" class="wikilink" title="A Mob state triggered by failed command rolls or size limits. The Mob acts randomly under GM direction.">Out of Control</a>.</p>
+<p>To bring an <a href="stage--rules--keywords-index.html#out-of-control" class="wikilink" data-tooltip="A Mob state triggered by failed command rolls or size limits. The Mob acts randomly under GM direction.">Out of Control</a> Mob back under command, the Boss must spend a <a href="stage--rules--keywords-index.html#standard-action" class="wikilink" data-tooltip="The primary actions spent on a turn (3 per round). Used for Move, Attack, Plunder, Order, or Manipulate. See [[02 Combat]].">Standard Action</a> to <a href="stage--rules--keywords-index.html#order" class="wikilink" data-tooltip="A Standard Action used by a PC Boss to direct a Mob's actions, bypassing command rolls for controlled Mobs.">Order</a> them, resolving it using the standard command test rules in <a href="../00_Rules/04_Giving%20orders.md">Giving Orders</a>. On a success, the Mob becomes controlled and receives their instructions; on a failure, they ignore the Boss and remain <a href="stage--rules--keywords-index.html#out-of-control" class="wikilink" data-tooltip="A Mob state triggered by failed command rolls or size limits. The Mob acts randomly under GM direction.">Out of Control</a>.</p>
 <hr>
 <h2 id="behavior-tables" tabindex="-1">Behavior Tables</h2>
-<p>When a Mob is <a href="stage--rules--keywords-index.html#loitering" class="wikilink" title="A Mob state where no order is given. The Mob performs a minor loitering action and saves 1 action for defense.">Loitering</a> or <a href="stage--rules--keywords-index.html#out-of-control" class="wikilink" title="A Mob state triggered by failed command rolls or size limits. The Mob acts randomly under GM direction.">Out of Control</a>, roll <strong>1d6</strong> on the appropriate table during their turn to determine how they act:</p>
+<p>When a Mob is <a href="stage--rules--keywords-index.html#loitering" class="wikilink" data-tooltip="A Mob state where no order is given. The Mob performs a minor loitering action and saves 1 action for defense.">Loitering</a> or <a href="stage--rules--keywords-index.html#out-of-control" class="wikilink" data-tooltip="A Mob state triggered by failed command rolls or size limits. The Mob acts randomly under GM direction.">Out of Control</a>, roll <strong>1d6</strong> on the appropriate table during their turn to determine how they act:</p>
 <h3 id="loitering-table-d6" tabindex="-1">Loitering Table (d6)</h3>
 <ul>
-<li><strong>1 (Bicker):</strong> They argue, push, and complain. (Uses 1 action. Saves 1 action for 1d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" title="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>).</li>
-<li><strong>2 (Inspect):</strong> They pick their noses, stare at walls, or draw crude graffiti. (Uses 1 action. Saves 1 action for 1d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" title="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>).</li>
-<li><strong>3 (Snatch):</strong> They pick up a nearby shiny object or eat a mushroom (resolves as a Plunder action if loot is present; otherwise narrative). (Uses 1 action. Saves 1 action for 1d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" title="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>).</li>
-<li><strong>4 (Wander):</strong> They move <strong>one (1) Zone</strong> in a random direction (but they will not willingly leave line of sight of their Boss). (Uses 1 action. Saves 1 action for 1d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" title="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>).</li>
-<li><strong>5 (Snoop):</strong> They peer around curiously, granting a <a href="stage--rules--keywords-index.html#boon" class="wikilink" title="A positive modifier granting a +1d bonus on a test's dice pool. Multiple Boons do not stack.">Boon</a> to the next PC who tests to spot hidden traps or doors in the Zone. (Uses 1 action. Saves 1 action for 1d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" title="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>).</li>
-<li><strong>6 (Taunt):</strong> They make rude gestures, moon, or scream insults at the nearest enemy. (Uses 1 action. Saves 1 action for 1d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" title="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>).</li>
+<li><strong>1 (Bicker):</strong> They argue, push, and complain. (Uses 1 action. Saves 1 action for 1d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" data-tooltip="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>).</li>
+<li><strong>2 (Inspect):</strong> They pick their noses, stare at walls, or draw crude graffiti. (Uses 1 action. Saves 1 action for 1d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" data-tooltip="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>).</li>
+<li><strong>3 (Snatch):</strong> They pick up a nearby shiny object or eat a mushroom (resolves as a Plunder action if loot is present; otherwise narrative). (Uses 1 action. Saves 1 action for 1d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" data-tooltip="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>).</li>
+<li><strong>4 (Wander):</strong> They move <strong>one (1) Zone</strong> in a random direction (but they will not willingly leave line of sight of their Boss). (Uses 1 action. Saves 1 action for 1d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" data-tooltip="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>).</li>
+<li><strong>5 (Snoop):</strong> They peer around curiously, granting a <a href="stage--rules--keywords-index.html#boon" class="wikilink" data-tooltip="A positive modifier granting a +1d bonus on a test's dice pool. Multiple Boons do not stack.">Boon</a> to the next PC who tests to spot hidden traps or doors in the Zone. (Uses 1 action. Saves 1 action for 1d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" data-tooltip="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>).</li>
+<li><strong>6 (Taunt):</strong> They make rude gestures, moon, or scream insults at the nearest enemy. (Uses 1 action. Saves 1 action for 1d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" data-tooltip="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>).</li>
 </ul>
 <h3 id="out-of-control-table-d6" tabindex="-1">Out of Control Table (d6)</h3>
 <ul>
-<li><strong>1–2 (Panic / Flee):</strong> If there is a <strong>Terrifying Enemy</strong> (any Elite or Boss, any creature with the <code>[Frightening]</code> or <code>[Huge]</code> tag, or any hazard/enemy that dealt damage to them this round) in their Zone, they spend both actions fleeing toward the nearest exit or cover. Otherwise, they squabble: the Mob takes 1 damage and gains the <a href="stage--rules--keywords-index.html#staggered" class="wikilink" title="A condition inflicted by partial combat successes, lasting until the end of the round and imposing a -1d active defense penalty.">Staggered</a> condition. (Uses 2 actions. 0d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" title="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>).</li>
-<li><strong>3–4 (Loot / Trash):</strong> If unattended loot or food is present, they plunder it (eating food heals <strong>1d6</strong> damage on their Mob health dice). Otherwise, they spend both actions trashing doors, crates, and furniture in their Zone. (Uses 2 actions. 0d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" title="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>).</li>
-<li><strong>5–6 (Frenzy):</strong> They swarm and attack the nearest living creature in their Zone (enemy or ally!). If no creatures are present, they wander <strong>one (1) Zone</strong> toward the nearest noise. (Uses 2 actions. 0d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" title="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>).</li>
+<li><strong>1–2 (Panic / Flee):</strong> If there is a <strong>Terrifying Enemy</strong> (any Elite or Boss, any creature with the <code>[Frightening]</code> or <code>[Huge]</code> tag, or any hazard/enemy that dealt damage to them this round) in their Zone, they spend both actions fleeing toward the nearest exit or cover. Otherwise, they squabble: the Mob takes 1 damage and gains the <a href="stage--rules--keywords-index.html#staggered" class="wikilink" data-tooltip="A condition inflicted by partial combat successes, lasting until the end of the round and imposing a -1d active defense penalty.">Staggered</a> condition. (Uses 2 actions. 0d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" data-tooltip="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>).</li>
+<li><strong>3–4 (Loot / Trash):</strong> If unattended loot or food is present, they plunder it (eating food heals <strong>1d6</strong> damage on their Mob health dice). Otherwise, they spend both actions trashing doors, crates, and furniture in their Zone. (Uses 2 actions. 0d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" data-tooltip="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>).</li>
+<li><strong>5–6 (Frenzy):</strong> They swarm and attack the nearest living creature in their Zone (enemy or ally!). If no creatures are present, they wander <strong>one (1) Zone</strong> toward the nearest noise. (Uses 2 actions. 0d6 <a href="stage--rules--keywords-index.html#defence" class="wikilink" data-tooltip="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a>).</li>
 </ul>
 <hr>
 <h2 id="mob-tests-and-attributes" tabindex="-1">Mob Tests &amp; Attributes</h2>
-<p>Goblins in a Mob do not have individual stats (like <a href="stage--rules--keywords-index.html#tough" class="wikilink" title="Main stat representing physical power, raw force, and melee combat capability.">Tough</a>, <a href="stage--rules--keywords-index.html#slink" class="wikilink" title="Main stat representing agility, stealth, and ranged combat capability.">Slink</a>, <a href="stage--rules--keywords-index.html#brains" class="wikilink" title="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a>, or <a href="stage--rules--keywords-index.html#mouth" class="wikilink" title="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a>). Instead, their <a href="stage--rules--keywords-index.html#dice-pool" class="wikilink" title="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">dice pool</a> for any non-combat test is resolved using the core <a href="stage--rules--keywords-index.html#stat" class="wikilink" title="One of the numerical attributes defining a character's capabilities (Tough, Slink, Brains, Mouth).">Stat</a> dice rule based on the nature of the test:</p>
+<p>Goblins in a Mob do not have individual stats (like <a href="stage--rules--keywords-index.html#tough" class="wikilink" data-tooltip="Main stat representing physical power, raw force, and melee combat capability.">Tough</a>, <a href="stage--rules--keywords-index.html#slink" class="wikilink" data-tooltip="Main stat representing agility, stealth, and ranged combat capability.">Slink</a>, <a href="stage--rules--keywords-index.html#brains" class="wikilink" data-tooltip="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a>, or <a href="stage--rules--keywords-index.html#mouth" class="wikilink" data-tooltip="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a>). Instead, their <a href="stage--rules--keywords-index.html#dice-pool" class="wikilink" data-tooltip="The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.">Dice pool</a> for any non-combat test is resolved using the core <a href="stage--rules--keywords-index.html#stat" class="wikilink" data-tooltip="One of the numerical attributes defining a character's capabilities (Tough, Slink, Brains, Mouth).">Stat</a> dice rule based on the nature of the test:</p>
 <ul>
-<li><strong>Tough Tests (Strength, Endurance, Mass):</strong> Roll <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> dice. A Mob’s collective strength and body mass are directly tied to their <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a>. Larger Mobs are much better at lifting gates, swimming against currents, or resisting toxic gas.</li>
-<li><strong>Slink Tests (Stealth, Dodging, Balance):</strong> Always roll exactly <strong>1d6</strong> (representing a default stat value of 1). A crowd is inherently loud and clumsy. Regardless of the Mob’s <a href="stage--rules--keywords-index.html#size" class="wikilink" title="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a>, one goblin tripping cascades to others, making stealth, balance, and quick dodging difficult.</li>
+<li><strong>Tough Tests (Strength, Endurance, Mass):</strong> Roll <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> dice. A Mob’s collective strength and body mass are directly tied to their <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a>. Larger Mobs are much better at lifting gates, swimming against currents, or resisting toxic gas.</li>
+<li><strong>Slink Tests (Stealth, Dodging, Balance):</strong> Always roll exactly <strong>1d6</strong> (representing a default stat value of 1). A crowd is inherently loud and clumsy. Regardless of the Mob’s <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a>, one goblin tripping cascades to others, making stealth, balance, and quick dodging difficult.</li>
 <li><strong>Brains &amp; Mouth Tests (Thinking, Social):</strong> Always roll exactly <strong>1d6</strong> (representing a default stat value of 1). Without their Boss’s direct instructions, a Mob is a disorganized mess and cannot coordinate complex tasks or trade.</li>
 </ul>
 <h3 id="mob-gear-upgrades" tabindex="-1">Mob Gear Upgrades</h3>
-<p>Any gear equipped to a Mob that assists with specific tests (like <em>silent shoes</em> for Slink tests or <em>protective masks</em> for Tough tests against gas) applies its benefits as standard <a href="stage--rules--keywords-index.html#boon-boons" class="wikilink" title="A positive modifier granting a +1d bonus on a test's dice pool. Multiple Boons do not stack.">Boon|Boons</a> (+1d per Boon) to these base rolls.</p>
+<p>Any gear equipped to a Mob that assists with specific tests (like <em>silent shoes</em> for Slink tests or <em>protective masks</em> for Tough tests against gas) applies its benefits as standard <a href="stage--rules--keywords-index.html#boon" class="wikilink" data-tooltip="A positive modifier granting a +1d bonus on a test's dice pool. Multiple Boons do not stack.">Boons</a> (+1d per Boon) to these base rolls.</p>
 <blockquote>
-<p><strong>Example:</strong> A Mob equipped with <em>silent shoes</em> gains a <a href="stage--rules--keywords-index.html#boon" class="wikilink" title="A positive modifier granting a +1d bonus on a test's dice pool. Multiple Boons do not stack.">Boon</a> (+1d) to Slink tests, rolling <strong>2d6</strong> instead of the base <strong>1d6</strong>.</p>
+<p><strong>Example:</strong> A Mob equipped with <em>silent shoes</em> gains a <a href="stage--rules--keywords-index.html#boon" class="wikilink" data-tooltip="A positive modifier granting a +1d bonus on a test's dice pool. Multiple Boons do not stack.">Boon</a> (+1d) to Slink tests, rolling <strong>2d6</strong> instead of the base <strong>1d6</strong>.</p>
 </blockquote>
 
     </main>
@@ -306,13 +311,89 @@ If an attack explicitly has the AoE or Cleave trait, the incoming damage is appl
         .then(data => {
           if (data && data.status === 'error') {
             const banner = document.getElementById('statusBanner');
-            if (banner) banner.style.display = 'block';
+            if (banner) banner.style.display = 'flex';
           }
         })
         .catch(err => {
           // If status.json does not exist or fails, do nothing
           console.log('Update status check skipped:', err);
         });
+    })();
+
+    // --- Anchor Scroll Fix ---
+    (function() {
+      function scrollToHash() {
+        if (window.location.hash) {
+          const id = decodeURIComponent(window.location.hash.substring(1));
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }, 100);
+          }
+        }
+      }
+      window.addEventListener('hashchange', scrollToHash);
+      window.addEventListener('DOMContentLoaded', scrollToHash);
+      window.addEventListener('load', scrollToHash);
+    })();
+
+    // --- Manual Sync Trigger ---
+    (function() {
+      const headerBtn = document.getElementById('headerSyncBtn');
+      const bannerBtn = document.getElementById('bannerSyncBtn');
+      
+      function handleSync(btn) {
+        if (!btn) return;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        
+        // Add spinning/loading animation class
+        if (btn.classList.contains('sync-btn')) {
+          btn.classList.add('sync-btn--spinning');
+          btn.querySelector('span').textContent = 'Syncing...';
+        } else {
+          btn.textContent = 'Syncing...';
+        }
+        
+        fetch('/api/run-sync', { method: 'POST' })
+          .then(res => {
+            if (!res.ok) throw new Error('Server returned error status: ' + res.status);
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.status === 'success') {
+              if (btn.classList.contains('sync-btn')) {
+                btn.querySelector('span').textContent = 'Success!';
+              } else {
+                btn.textContent = 'Success!';
+              }
+              // Reload page to reflect changes
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              throw new Error(data.error || 'Sync failed');
+            }
+          })
+          .catch(err => {
+            console.error('Sync failed:', err);
+            alert('Failed to rerun sync: ' + err.message);
+            // Restore button
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            if (btn.classList.contains('sync-btn')) {
+              btn.classList.remove('sync-btn--spinning');
+            }
+          });
+      }
+
+      if (headerBtn) {
+        headerBtn.addEventListener('click', () => handleSync(headerBtn));
+      }
+      if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
     })();
   </script>
 
