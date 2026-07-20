@@ -44,3 +44,10 @@ Rebuilding site to ensure local sync...
 🎉 Build complete! Files in: /home/ante/projects/gobbos/05_System_Tools/rulebook-site/dist
 Finished check at Thu  2 Jul 11:19:34 CEST 2026
 ---------------------------------------------
+=============================================
+Update check triggered on Mon 20 Jul 02:00:01 CEST 2026
+=============================================
+From https://github.com/antedev/gobbos
+   b435ce7..22a5389  main       -> origin/main
+Local is behind. Stashing local changes and pulling remote...
+Local changes detected. Stashing...
