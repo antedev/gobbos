@@ -283,6 +283,13 @@ async function build() {
   await fs.copy(STYLE_PATH, path.join(DIST_DIR, 'style.css'));
   console.log('  ✅ Copied style.css');
 
+  // Copy Admin (Decap CMS)
+  const ADMIN_PATH = path.join(__dirname, 'admin');
+  if (await fs.pathExists(ADMIN_PATH)) {
+    await fs.copy(ADMIN_PATH, path.join(DIST_DIR, 'admin'));
+    console.log('  ✅ Copied admin/ (Decap CMS)');
+  }
+
   // Create markdown parser
   const md = createMarkdownParser();
 

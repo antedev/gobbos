@@ -1,9 +1,31 @@
 const http = require('http');
+const https = require('https');
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
 
+// Load .env file if present in server directory
+const envPath = path.join(__dirname, '.env');
+if (fs.existsSync(envPath)) {
+  const envContent = fs.readFileSync(envPath, 'utf-8');
+  envContent.split('\n').forEach(line => {
+    const trimmed = line.trim();
+    if (trimmed && !trimmed.startsWith('#')) {
+      const eqIdx = trimmed.indexOf('=');
+      if (eqIdx > 0) {
+        const key = trimmed.slice(0, eqIdx).trim();
+        const val = trimmed.slice(eqIdx + 1).trim().replace(/^["']|["']$/g, '');
+        if (key && !process.env[key]) {
+          process.env[key] = val;
+        }
+      }
+    }
+  });
+}
+
 const PORT = process.env.PORT || 8666;
+const GITHUB_CLIENT_ID = process.env.GITHUB_CLIENT_ID || '';
+const GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET || '';
 const DIST_DIR = path.join(__dirname, 'dist');
 const CSV_FILE_PATH = path.join(__dirname, '..', 'keyword_review.csv');
 const APPLY_SCRIPT_PATH = path.join(__dirname, '..', 'apply_keyword_choices.py');
@@ -94,6 +116,115 @@ const server = http.createServer((req, res) => {
   const parsedUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
   let pathname = parsedUrl.pathname;
   
+  // Decap CMS OAuth: /auth
+  if (pathname === '/auth') {
+    const clientId = GITHUB_CLIENT_ID;
+    if (!clientId) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'text/plain');
+      res.end('GITHUB_CLIENT_ID environment variable is not set on the server.');
+      return;
+    }
+    const redirectUrl = `https://github.com/login/oauth/authorize?client_id=${encodeURIComponent(clientId)}&scope=repo`;
+    res.statusCode = 302;
+    res.setHeader('Location', redirectUrl);
+    res.end();
+    return;
+  }
+
+  // Decap CMS OAuth: /callback
+  if (pathname === '/callback') {
+    const code = parsedUrl.searchParams.get('code');
+    if (!code) {
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'text/plain');
+      res.end('Missing code parameter in OAuth callback.');
+      return;
+    }
+
+    const postData = JSON.stringify({
+      client_id: GITHUB_CLIENT_ID,
+      client_secret: GITHUB_CLIENT_SECRET,
+      code: code,
+    });
+
+    const options = {
+      hostname: 'github.com',
+      port: 443,
+      path: '/login/oauth/access_token',
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Content-Length': Buffer.byteLength(postData),
+        'User-Agent': 'Gobbos-Rulebook-CMS',
+      },
+    };
+
+    const reqAuth = https.request(options, (authRes) => {
+      let body = '';
+      authRes.on('data', (chunk) => { body += chunk; });
+      authRes.on('end', () => {
+        try {
+          const data = JSON.parse(body);
+          let content = '';
+          if (data.access_token) {
+            const tokenData = JSON.stringify({ token: data.access_token, provider: 'github' });
+            content = `<!DOCTYPE html>
+<html>
+<body>
+<script>
+(function() {
+  function receiveMessage(e) {
+    console.log("receiveMessage", e);
+    window.opener.postMessage('authorization:github:success:${tokenData}', e.origin);
+  }
+  window.addEventListener("message", receiveMessage, false);
+  window.opener.postMessage("authorizing:github", "*");
+})();
+</script>
+</body>
+</html>`;
+          } else {
+            const errData = JSON.stringify({ error: data.error_description || data.error || 'Failed to authenticate with GitHub' });
+            content = `<!DOCTYPE html>
+<html>
+<body>
+<script>
+(function() {
+  function receiveMessage(e) {
+    console.log("receiveMessage", e);
+    window.opener.postMessage('authorization:github:error:${errData}', e.origin);
+  }
+  window.addEventListener("message", receiveMessage, false);
+  window.opener.postMessage("authorizing:github", "*");
+})();
+</script>
+</body>
+</html>`;
+          }
+          res.statusCode = 200;
+          res.setHeader('Content-Type', 'text/html; charset=utf-8');
+          res.end(content);
+        } catch (e) {
+          res.statusCode = 500;
+          res.setHeader('Content-Type', 'text/plain');
+          res.end('Failed to parse GitHub response: ' + e.message);
+        }
+      });
+    });
+
+    reqAuth.on('error', (err) => {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'text/plain');
+      res.end('OAuth request error: ' + err.message);
+    });
+
+    reqAuth.write(postData);
+    reqAuth.end();
+    return;
+  }
+
   // 1. Route to serve review tool page
   if (pathname === '/review' || pathname === '/review.html') {
     const reviewPagePath = path.join(__dirname, 'review.html');
@@ -239,6 +370,8 @@ const server = http.createServer((req, res) => {
   // Fallback: Static File Server
   if (pathname === '/') {
     pathname = '/index.html';
+  } else if (pathname === '/admin' || pathname === '/admin/') {
+    pathname = '/admin/index.html';
   }
 
   let filePath = path.join(DIST_DIR, pathname);
@@ -253,11 +386,15 @@ const server = http.createServer((req, res) => {
   }
 
   fs.stat(filePath, (err, stats) => {
-    if (err || !stats.isFile()) {
+    if (err) {
       res.statusCode = 404;
       res.setHeader('Content-Type', 'text/plain');
       res.end('404 Not Found');
       return;
+    }
+
+    if (stats.isDirectory()) {
+      filePath = path.join(filePath, 'index.html');
     }
 
     const ext = path.extname(filePath).toLowerCase();

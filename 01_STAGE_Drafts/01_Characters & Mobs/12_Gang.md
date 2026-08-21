@@ -37,11 +37,11 @@ Your Gang's [[Infamy]] increases when you reach the following cumulative totals 
 ### Mechanics
 
 [[Infamy]] determines the starting resources and structural benefits available to your Gang:
-*   **Successor XP Pool:** When a Boss dies, the successor Boss starts with **1** in all stats, gets **1 starting advance** (just like standard character creation), and receives a starting pool of **Successor XP** equal to **[[Infamy Level]] × 4** to buy stats at standard XP costs. 
+*   **Successor XP Pool:** When a Boss dies, the successor Boss starts with **1** in all stats, gets **2 starting advances** (just like standard character creation), and receives a starting pool of **Successor XP** equal to **[[Infamy Level]] × 4** to buy stats at standard XP costs. 
     *   *Successor Caps:* A successor Boss cannot raise any stat above **Level 4** at creation, and can never start as an [[Elder]] (Level 6).
 *   **[[Gang Quirks]]:** Your [[Infamy]] determines the maximum number of [[Gang Quirks]] your Boss can equip and bring on a raid (equal to your [[Infamy]] score).
 
-> **Example:** Snikt's Gang has reached **[[Infamy]] 3** after contributing 20 [[Loot Value]] (2 Marks) and completing 4 Agendas (4 Marks). If Snikt dies on the next raid, his successor starts with **1** in all stats plus **1 starting point**, receives 12 **Successor XP** ([[Infamy]] 3 × 4) to buy stats, and can equip up to 3 [[Gang Quirks]] from the Lair's active pool.
+> **Example:** Snikt's Gang has reached **[[Infamy]] 3** after contributing 20 [[Loot Value]] (2 Marks) and completing 4 Agendas (4 Marks). If Snikt dies on the next raid, his successor starts with **1** in all stats plus **2 starting points**, receives 12 **Successor XP** ([[Infamy]] 3 × 4) to buy stats, and can equip up to 3 [[Gang Quirks]] from the Lair's active pool.
 
 ---
 

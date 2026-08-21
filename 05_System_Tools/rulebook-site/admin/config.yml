@@ -1,0 +1,63 @@
+backend:
+  name: github
+  repo: antedev/gobbos
+  branch: main
+  base_url: https://gobbos.ante.pub
+  auth_endpoint: /auth
+
+display_url: https://gobbos.ante.pub
+
+media_folder: "05_System_Tools/rulebook-site/dist/assets"
+public_folder: "/assets"
+
+collections:
+  - name: "dev_brainstorms"
+    label: "00 DEV Brainstorms"
+    folder: "00_DEV_Brainstorms"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title / Filename", name: "title", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "stage_drafts"
+    label: "01 STAGE Drafts"
+    folder: "01_STAGE_Drafts"
+    nested: { depth: 3 }
+    create: true
+    fields:
+      - { label: "Title / Filename", name: "title", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "prod_rules"
+    label: "02 PROD Core Rules"
+    folder: "02_PROD_Core_Rules"
+    nested: { depth: 3 }
+    create: true
+    fields:
+      - { label: "Title / Filename", name: "title", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "dev_lore"
+    label: "LORE 00 DEV"
+    folder: "LORE/00_DEV_Lore"
+    create: true
+    fields:
+      - { label: "Title / Filename", name: "title", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "stage_lore"
+    label: "LORE 01 STAGE"
+    folder: "LORE/01_STAGE_Lore"
+    create: true
+    fields:
+      - { label: "Title / Filename", name: "title", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "prod_lore"
+    label: "LORE 03 PROD"
+    folder: "LORE/03_PROD_Lore"
+    create: true
+    fields:
+      - { label: "Title / Filename", name: "title", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }

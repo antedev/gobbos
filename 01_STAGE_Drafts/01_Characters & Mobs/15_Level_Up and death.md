@@ -3,7 +3,7 @@
 ## The "Next Gobbo Up" (Death & Respawning)
 When your PC dies, the Lair doesn't mourn. They simply look at the next biggest Gobbo in your Gang to take over. 
 
-Rolling a new PC from an existing Gang means you don't start from scratch. The successor Boss B starts with Level 1 in all stats, gets **1 starting advance** (just like standard character creation), and receives a starting pool of **Successor XP** equal to **Gang [[Infamy]] × 4** to spend on buying stats (using the standard XP stat costs).
+Rolling a new PC from an existing Gang means you don't start from scratch. The successor Boss B starts with Level 1 in all stats, gets **2 starting advances** (just like standard character creation), and receives a starting pool of **Successor XP** equal to **Gang [[Infamy]] × 4** to spend on buying stats (using the standard XP stat costs).
 *   **Successor Stat Cap:** To maintain progression space and avoid starting as an Elder, no Main Stat can be raised above **Level 4** at successor creation.
 
 ### Gang Marks (Tattoos of the Dead)

@@ -1,3 +1,5 @@
 04_Inspiration/
 Inspiration/
 *.pdf
+.env
+*.env

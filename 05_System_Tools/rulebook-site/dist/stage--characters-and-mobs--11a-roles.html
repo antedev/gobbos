@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11a_Roles — STAGE Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Playtesting & review materials">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab env-tab--active">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right" style="display: flex; gap: 8px; align-items: center;">
+      <button class="sync-btn" id="headerSyncBtn" title="Sync & Rebuild Site" aria-label="Sync and rebuild site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sync-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Sync</span>
+      </button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">STAGE Rules</h2>
+        <p class="sidebar-subtitle">Playtesting & review materials</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="stage.html" class="nav-link" data-target="rules--overview">Overview</a></li><li><a href="stage--rules--combat.html" class="nav-link" data-target="rules--combat">Combat</a></li><li><a href="stage--rules--movement-and-zones.html" class="nav-link" data-target="rules--movement-and-zones">Movement &amp; Zones</a></li><li><a href="stage--rules--giving-orders.html" class="nav-link" data-target="rules--giving-orders">Giving orders</a></li><li><a href="stage--rules--raid-points.html" class="nav-link" data-target="rules--raid-points">Raid points</a></li><li><a href="stage--rules--keywords-index.html" class="nav-link" data-target="rules--keywords-index">Keywords Index</a></li><li><a href="stage--rules--wounds-conditions.html" class="nav-link" data-target="rules--wounds-conditions">Wounds_Conditions</a></li><li><a href="stage--rules--master-tag-index.html" class="nav-link" data-target="rules--master-tag-index">Master_Tag_Index</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="true" data-target="characters-and-mobs"><span class="toggle-icon">▾</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" ><li><a href="stage--characters-and-mobs--stats.html" class="nav-link" data-target="characters-and-mobs--stats">Stats</a></li><li><a href="stage--characters-and-mobs--character-creation.html" class="nav-link" data-target="characters-and-mobs--character-creation">Character Creation</a></li><li><a href="stage--characters-and-mobs--11a-roles.html" class="nav-link nav-link--active" data-target="characters-and-mobs--11a-roles">11a_Roles</a></li><li><a href="stage--characters-and-mobs--gang.html" class="nav-link" data-target="characters-and-mobs--gang">Gang</a></li><li><a href="stage--characters-and-mobs--boons-and-banes.html" class="nav-link" data-target="characters-and-mobs--boons-and-banes">Boons_and_Banes</a></li><li><a href="stage--characters-and-mobs--goblin-mob.html" class="nav-link" data-target="characters-and-mobs--goblin-mob">Goblin_mob</a></li><li><a href="stage--characters-and-mobs--quirks.html" class="nav-link" data-target="characters-and-mobs--quirks">Quirks</a></li><li><a href="stage--characters-and-mobs--level-up-and-death.html" class="nav-link" data-target="characters-and-mobs--level-up-and-death">Level_Up and death</a></li><li><a href="stage--characters-and-mobs--unified-modular-powers-system.html" class="nav-link" data-target="characters-and-mobs--unified-modular-powers-system">Unified_Modular_Powers_System</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="loot"><span class="toggle-icon">▸</span>Loot</button><ul class="nav-pages" id="nav-loot" style="display: none;"><li><a href="stage--loot--loot.html" class="nav-link" data-target="loot--loot">loot</a></li><li><a href="stage--loot--carry-stuff.html" class="nav-link" data-target="loot--carry-stuff">Carry Stuff</a></li><li><a href="stage--loot--equipment.html" class="nav-link" data-target="loot--equipment">Equipment</a></li><li><a href="stage--loot--crafting.html" class="nav-link" data-target="loot--crafting">Crafting</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="enemies"><span class="toggle-icon">▸</span>Enemies</button><ul class="nav-pages" id="nav-enemies" style="display: none;"><li><a href="stage--enemies--enemies.html" class="nav-link" data-target="enemies--enemies">Enemies</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="base"><span class="toggle-icon">▸</span>Base</button><ul class="nav-pages" id="nav-base" style="display: none;"><li><a href="stage--base--lair-rules.html" class="nav-link" data-target="base--lair-rules">Lair_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="travel"><span class="toggle-icon">▸</span>Travel</button><ul class="nav-pages" id="nav-travel" style="display: none;"><li><a href="stage--travel--journey-rules.html" class="nav-link" data-target="travel--journey-rules">Journey_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="magic"><span class="toggle-icon">▸</span>Magic</button><ul class="nav-pages" id="nav-magic" style="display: none;"><li><a href="stage--magic--magic-rules.html" class="nav-link" data-target="magic--magic-rules">Magic_Rules</a></li></ul></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; align-items: center; justify-content: space-between; gap: 16px; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        <span>⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.</span>
+        <button class="sync-banner-btn" id="bannerSyncBtn">Rerun Sync</button>
+      </div>
+      <h1 id="roles" tabindex="-1">Roles</h1>
+<p><em>Goblins do not have careers. They have jobs they took by force and roles they fill to avoid being eaten. A Boss is only as strong as their gang’s fear of them, and that fear changes depending on what the Boss can do.</em></p>
+<p>A <a href="#role" class="wikilink" data-tooltip="Role">Role</a> represents the tactical expectation of your <strong>Goblin Boss</strong> based on their current <a href="stage--rules--keywords-index.html#main-stats" class="wikilink" data-tooltip="The four primary attributes defining a goblin: Tough, Slink, Brains, and Mouth.">Main Stats</a> configuration. Your <a href="#role" class="wikilink" data-tooltip="Role">Role</a> dictates how you command your <a href="stage--rules--keywords-index.html#mob" class="wikilink" data-tooltip="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> and what special abilities you can use.</p>
+<p>Because you increase your <a href="stage--rules--keywords-index.html#main-stats" class="wikilink" data-tooltip="The four primary attributes defining a goblin: Tough, Slink, Brains, and Mouth.">Main Stats</a> by spending <a href="stage--rules--keywords-index.html#xp" class="wikilink" data-tooltip="Experience points earned by securing Loot and Glory, spent during Lair Phases to advance stats or purchase Quirks.">XP</a> during downtime, your <a href="#role" class="wikilink" data-tooltip="Role">Role</a> is dynamic. As your stats change, your <a href="#role" class="wikilink" data-tooltip="Role">Role</a> can shift, allowing you to adapt your playstyle between raids.</p>
+<hr>
+<h2 id="1-determining-your-role" tabindex="-1">1. Determining Your Role</h2>
+<p>Your <a href="#role" class="wikilink" data-tooltip="Role">Role</a> is determined by your <strong>Primary Stat</strong> (your highest <a href="#main-stat" class="wikilink" data-tooltip="Main Stat">Main Stat</a>) and your <strong>Secondary Stat</strong> (your second-highest <a href="#main-stat" class="wikilink" data-tooltip="Main Stat">Main Stat</a>, which also determines your maximum <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a>):</p>
+<ul>
+<li><strong>Specialist Roles (Gap of 2 or more):</strong> If your highest stat is <strong>2 or more levels higher</strong> than your second-highest stat, you are a <strong>Specialist</strong> (e.g. Tough Specialist, Slink Specialist).</li>
+<li><strong>Hybrid Roles (Gap of 1 or 0):</strong> If the gap between your highest and second-highest stat is <strong>1 or 0</strong>, you are a <strong>Hybrid</strong> combining both stats.</li>
+</ul>
+<blockquote>
+<blockquote>
+<p><strong>IMPORTANT:</strong> If you have multiple stats tied for highest or second-highest, you choose which of those stats acts as your Primary and Secondary for the purpose of your <a href="#role" class="wikilink" data-tooltip="Role">Role</a>.</p>
+</blockquote>
+</blockquote>
+<hr>
+<h2 id="2-role-levels-and-grunt-gating" tabindex="-1">2. Role Levels and Grunt-Gating</h2>
+<p>Your <strong>Role Level</strong> is always equal to your current maximum <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> (ranging from <strong>Level 1 to Level 5</strong>). Your level determines which <a href="stage--rules--keywords-index.html#quirk" class="wikilink" data-tooltip="A modular base ability (a &quot;Knack&quot; or action) that defines a character's fighting style or special talent. Measured in Tiers (T1-T5).">Quirks</a> from your <a href="#role" class="wikilink" data-tooltip="Role">Role</a> you can access:</p>
+<ul>
+<li><strong>Level 1 (Grunt 1+):</strong> Unlocks your <strong>Role Vibe</strong> (a passive utility trait).</li>
+<li><strong>Level 3 (Grunt 3+):</strong> Unlocks your <strong>Signature Quirk</strong> (a powerful active ability).</li>
+<li><strong>Level 5 (Grunt 5):</strong> Unlocks your <strong>Master Quirk</strong> (a legendary capstone).</li>
+</ul>
+<h3 id="grunt-gating-morale-lock" tabindex="-1">Grunt-Gating (Morale Lock)</h3>
+<p>Because goblins only follow leaders who look strong, your active <a href="#role" class="wikilink" data-tooltip="Role">Role</a> abilities are <strong>Grunt-Gated</strong> in combat.</p>
+<ul>
+<li>To activate or benefit from a Level 3 or Level 5 <a href="#role" class="wikilink" data-tooltip="Role">Role</a> <a href="stage--rules--keywords-index.html#quirk" class="wikilink" data-tooltip="A modular base ability (a &quot;Knack&quot; or action) that defines a character's fighting style or special talent. Measured in Tiers (T1-T5).">Quirk</a>, your <strong>current Grunt</strong> must be equal to or higher than the quirk’s level.</li>
+<li>If your <strong>current Grunt</strong> drops below the quirk’s level (due to fumbles, failed tests, or mob rebellions), that ability is instantly <strong>locked</strong> and cannot be used until you regain <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> (e.g., by defeating enemies or asserting dominance).</li>
+</ul>
+<h3 id="the-specialist-ceiling-maximum-level-3" tabindex="-1">The Specialist Ceiling (Maximum Level 3)</h3>
+<p>Because <a href="stage--rules--keywords-index.html#main-stats" class="wikilink" data-tooltip="The four primary attributes defining a goblin: Tough, Slink, Brains, and Mouth.">Main Stats</a> cap at Level 5 (reaching Level 6 triggers retirement), a Specialist can never have a second-highest stat of 4 (since the highest would need to be 6).</p>
+<ul>
+<li>Therefore, <strong>it is mathematically impossible to be a Specialist at Grunt 4 or Grunt 5.</strong></li>
+<li>At Grunt 4, the gap must shrink to 1 (Tough 5 / Grunt 4), naturally forcing you to transition into a Hybrid <a href="#role" class="wikilink" data-tooltip="Role">Role</a>.</li>
+<li><strong>The Balancing Rule:</strong> To compensate for this ceiling and the loss of Level 5 capstones, <strong>Specialist Roles receive significantly more explosive, high-impact Level 1 and Level 3 abilities</strong> than Hybrid Roles.</li>
+</ul>
+<hr>
+<h2 id="3-downtime-transition-protocol" tabindex="-1">3. Downtime Transition Protocol</h2>
+<p>If your stats change during the <a href="stage--rules--keywords-index.html#lair-phase" class="wikilink" data-tooltip="The downtime period between raids where players spend Loot to upgrade the Lair, craft, and level up.">Lair Phase</a> (downtime) due to spending <a href="stage--rules--keywords-index.html#xp" class="wikilink" data-tooltip="Experience points earned by securing Loot and Glory, spent during Lair Phases to advance stats or purchase Quirks.">XP</a> or acquiring mutations, your <a href="#role" class="wikilink" data-tooltip="Role">Role</a> may shift:</p>
+<ol>
+<li><strong>Vibe Swap:</strong> Your old Level 1 Vibe is removed, and your new Role Vibe is added immediately for free.</li>
+<li><strong>Quirk Retention:</strong> Any equipped active quirks from your old <a href="#role" class="wikilink" data-tooltip="Role">Role</a> are unequipped and placed in your reserves. They cannot be used while in your new <a href="#role" class="wikilink" data-tooltip="Role">Role</a>.</li>
+<li><strong>Equipping New Quirks:</strong> You may fill your standard slots of 3 <a href="stage--rules--keywords-index.html#personal-quirks" class="wikilink" data-tooltip="Unique abilities specific to a single PC Boss rather than shared across their Gang.">Personal Quirks</a> (see <a href="14_Quirks.md">Quirks &amp; Twists</a>) with your new Role’s quirks, spending <a href="stage--rules--keywords-index.html#xp" class="wikilink" data-tooltip="Experience points earned by securing Loot and Glory, spent during Lair Phases to advance stats or purchase Quirks.">XP</a> to purchase them during downtime if you do not already know them.</li>
+</ol>
+<hr>
+<h2 id="4-the-16-roles" tabindex="-1">4. The 16 Roles</h2>
+<h3 id="tough-roles-primary-tough" tabindex="-1">Tough Roles (Primary: Tough)</h3>
+<ul>
+<li><strong>The Meat-Wall (Tough Specialist):</strong> A massive, iron-skinned brute who relies entirely on physical mass, ignoring commands to absorb punishment.</li>
+<li><strong>The Raider (Tough + Slink):</strong> A swift shock trooper who charges into the fray, strikes hard, and scuttles away.</li>
+<li><strong>The Enforcer (Tough + Mouth):</strong> A brutal squad leader who beats enemies with weapons and beats allies with whips to keep them fighting.</li>
+<li><strong>The Iron-Tinker (Tough + Brains):</strong> A heavy crafter who builds heavy scrap-shields and swings volatile, customized bludgeons.</li>
+</ul>
+<h3 id="slink-roles-primary-slink" tabindex="-1">Slink Roles (Primary: Slink)</h3>
+<ul>
+<li><strong>The Scuttler (Slink Specialist):</strong> A silent stalker who moves through the shadows like a ghost, completely uncatchable but commands no respect.</li>
+<li><strong>The Gut-Cutter (Slink + Tough):</strong> A vicious backstabber who relies on speed to flank enemies and stab them in vulnerable joints.</li>
+<li><strong>The Ring-Leader (Slink + Mouth):</strong> A slippery agitator who distracts guards and directs mobs from safety.</li>
+<li><strong>The Saboteur (Slink + Brains):</strong> An infiltration expert who bypasses locks, triggers traps, and throws toxic flasks.</li>
+</ul>
+<h3 id="mouth-roles-primary-mouth" tabindex="-1">Mouth Roles (Primary: Mouth)</h3>
+<ul>
+<li><strong>The Over-Lord (Mouth Specialist):</strong> A loud, self-important tyrant who wears flashy hats and orders squads from a distance but avoids personal danger.</li>
+<li><strong>The Taskmaster (Mouth + Tough):</strong> A cruel commander who pushes runts past their breaking points, treating mobs as renewable resources.</li>
+<li><strong>The Swindler (Mouth + Slink):</strong> A fast-talking coward who uses lies and panic-shouts to redirect attacks onto other goblins.</li>
+<li><strong>The Chant-Monger (Mouth + Brains):</strong> A loud speaker who channels magic tags through rhythmic chants, keeping mobs focused.</li>
+</ul>
+<h3 id="brains-roles-primary-brains" tabindex="-1">Brains Roles (Primary: Brains)</h3>
+<ul>
+<li><strong>The Sage-Tinker (Brains Specialist):</strong> A wild scientist who locks themselves in the workshop to brew acids and build unstable mechanical contraptions.</li>
+<li><strong>The Runecaster (Brains + Tough):</strong> A magically active brute who carves spell tags onto their weapons and armor to boost physical combat.</li>
+<li><strong>The Hex-Weaver (Brains + Slink):</strong> A sneaky spell-slinger who casts volatile magic from the shadows and hides behind full cover.</li>
+<li><strong>The Shaman (Brains + Mouth):</strong> A tribal mystic who talks to spirits, commands elemental tags, and coordinates magical raids.</li>
+</ul>
+<hr>
+<h2 id="5-example-role-progression-tracks" tabindex="-1">5. Example Role Progression Tracks</h2>
+<h3 id="the-sage-tinker-brains-specialist-brains-grunt-2" tabindex="-1">The Sage-Tinker (Brains Specialist — Brains - Grunt &gt;= 2)</h3>
+<ul>
+<li><strong>Level 1 (Vibe):</strong> <em>Unstable Genius.</em> When crafting custom gear, your Crafting Capacity is treated as <strong>1 higher</strong> than your <a href="stage--rules--keywords-index.html#brains" class="wikilink" data-tooltip="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> level. You also get +1d on all tests to identify oddities or spell runes.</li>
+<li><strong>Level 3 (Signature Quirk):</strong> <em>Farkle-Snatcher [Cost: 1 Grunt].</em> When you roll a <a href="stage--rules--keywords-index.html#brains" class="wikilink" data-tooltip="Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.">Brains</a> check and roll one or more 1s (potential fumbles), you can choose to ignore the failure. Instead, you lock those 1s to instantly channel them into a random magic burst dealing 2 <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> damage to all targets in your zone.</li>
+</ul>
+<h3 id="the-raider-tough-slink-hybrid-tough-slink-1" tabindex="-1">The Raider (Tough + Slink Hybrid — Tough - Slink &lt;= 1)</h3>
+<ul>
+<li><strong>Level 1 (Vibe):</strong> <em>Parkour-Slash.</em> Crossing zone barriers or low cover during a Move action does not reduce your movement speed.</li>
+<li><strong>Level 3 (Signature Quirk):</strong> <em>Vaulting Strike [Cost: 1 Action, 1 Grunt].</em> Make a Move action directly into an enemy’s zone, passing through any minor cover, and immediately resolve a melee attack with <strong>+2d Attack Pool</strong>.</li>
+<li><strong>Level 5 (Master Quirk):</strong> <em>Unstoppable Momentum.</em> If you score a success on a melee attack after moving at least 2 zones in the same round, you can immediately make a free Move action or knock the target <strong>Prone</strong>.</li>
+</ul>
+<h3 id="the-enforcer-tough-mouth-hybrid-tough-mouth-1" tabindex="-1">The Enforcer (Tough + Mouth Hybrid — Tough - Mouth &lt;= 1)</h3>
+<ul>
+<li><strong>Level 1 (Vibe):</strong> <em>Meat Shield Mastery.</em> When you use a <a href="stage--rules--keywords-index.html#mob" class="wikilink" data-tooltip="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> as a meat shield, the <a href="stage--rules--keywords-index.html#mob" class="wikilink" data-tooltip="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> ignores the first 1 damage dealt to it.</li>
+<li><strong>Level 3 (Signature Quirk):</strong> <em>Bully Command [Cost: 1 Grunt].</em> Give an order to a <a href="stage--rules--keywords-index.html#mob" class="wikilink" data-tooltip="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> in your zone. The <a href="stage--rules--keywords-index.html#mob" class="wikilink" data-tooltip="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> immediately gains <strong>+1d Attack Pool</strong> on their next action, but takes 1 damage from your whip/kick.</li>
+<li><strong>Level 5 (Master Quirk):</strong> <em>Reign of Terror.</em> Any enemy <a href="stage--rules--keywords-index.html#mob" class="wikilink" data-tooltip="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> in your zone must pass a Morale test (5+) at the start of combat or instantly scurry into an adjacent zone (Flee).</li>
+</ul>
+<h3 id="the-swindler-mouth-slink-hybrid-mouth-slink-1" tabindex="-1">The Swindler (Mouth + Slink Hybrid — Mouth - Slink &lt;= 1)</h3>
+<ul>
+<li><strong>Level 1 (Vibe):</strong> <em>Slippery Words.</em> You get +1d on Mouth tests to talk your way out of trouble or distract guards.</li>
+<li><strong>Level 3 (Signature Quirk):</strong> <em>Look Over There! [Cost: 1 Grunt].</em> Force an enemy in your zone to turn their back. Your allies get <strong>+2d Attack Pool</strong> against that enemy until the end of the round.</li>
+<li><strong>Level 5 (Master Quirk):</strong> <em>Scapegoat [Cost: 1 Grunt].</em> When you are targeted by an attack, you can redirect the attack to an adjacent player’s Boss.</li>
+</ul>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'flex';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+
+    // --- Anchor Scroll Fix ---
+    (function() {
+      function scrollToHash() {
+        if (window.location.hash) {
+          const id = decodeURIComponent(window.location.hash.substring(1));
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }, 100);
+          }
+        }
+      }
+      window.addEventListener('hashchange', scrollToHash);
+      window.addEventListener('DOMContentLoaded', scrollToHash);
+      window.addEventListener('load', scrollToHash);
+    })();
+
+    // --- Manual Sync Trigger ---
+    (function() {
+      const headerBtn = document.getElementById('headerSyncBtn');
+      const bannerBtn = document.getElementById('bannerSyncBtn');
+      
+      function handleSync(btn) {
+        if (!btn) return;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        
+        // Add spinning/loading animation class
+        if (btn.classList.contains('sync-btn')) {
+          btn.classList.add('sync-btn--spinning');
+          btn.querySelector('span').textContent = 'Syncing...';
+        } else {
+          btn.textContent = 'Syncing...';
+        }
+        
+        fetch('/api/run-sync', { method: 'POST' })
+          .then(res => {
+            if (!res.ok) throw new Error('Server returned error status: ' + res.status);
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.status === 'success') {
+              if (btn.classList.contains('sync-btn')) {
+                btn.querySelector('span').textContent = 'Success!';
+              } else {
+                btn.textContent = 'Success!';
+              }
+              // Reload page to reflect changes
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              throw new Error(data.error || 'Sync failed');
+            }
+          })
+          .catch(err => {
+            console.error('Sync failed:', err);
+            alert('Failed to rerun sync: ' + err.message);
+            // Restore button
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            if (btn.classList.contains('sync-btn')) {
+              btn.classList.remove('sync-btn--spinning');
+            }
+          });
+      }
+
+      if (headerBtn) {
+        headerBtn.addEventListener('click', () => handleSync(headerBtn));
+      }
+      if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
+    })();
+  </script>
+
+</body>
+</html>

@@ -20,11 +20,11 @@ Before creating your individual Boss, you must define the Gang they lead. Your G
 
 Every Goblin Boss starts with a baseline level of competence before their specific training or natural talent is taken into account. 
 
-Set all four of your [[main stats]] to **1**:
-*   **Tough:** 1
-*   **Slink:** 1
-*   **Mouth:** 1
-*   **Brains:** 1
+Set all four of your [[Main Stats]] to **1**:
+*   **[[Tough]]**: 1
+*   **[[Slink]]**: 1
+*   **[[Mouth]]**: 1
+*   **[[Brains]]**: 1
 
 ---
 
@@ -32,55 +32,54 @@ Set all four of your [[main stats]] to **1**:
 
 Your Boss has stood out from the crowd and grown slightly stronger than a common grunt. 
 
-You have **1 point** to distribute among your four [[main stats]]. 
-*   **The Limit:** You cannot increase any single stat above **2** at character creation.
-*   **Distribution Options:** Add the **+1** to any of your stats (giving you one stat at 2, and three stats at 1).
+You have **2 points** to distribute among your four [[Main Stats]]. 
+*   **The Limit:** You cannot increase any single stat above **3** at character creation (since you start at 1, this means you can spend at most 2 points on a single stat).
+*   **Distribution Options:**
+    *   **Specialist:** Put both starting points into a single stat, resulting in one stat at **3** and three stats at **1** (e.g. 3, 1, 1, 1).
+    *   **Generalist:** Put one starting point into two different stats, resulting in two stats at **2** and two stats at **1** (e.g. 2, 2, 1, 1).
 
+### The Insta-Gobbo Origin Table
+If you want to skip manual allocation and roll up a character instantly, roll **1d6** on the table below to determine your starting stats, starting [[Role]], starting [[Quirk]], and starting equipment:
+
+| d6 | Origin (Role) | Starting Stats | Starting Quirk | Starting Loadout |
+| :---: | :--- | :--- | :--- | :--- |
+| **1** | **The Meat-Wall** (Tough Specialist) | **[[Tough]]** 3, **[[Slink]]** 1, **[[Mouth]]** 1, **[[Brains]]** 1 | **Meat Shield** | Heavy Melee Weapon, Light Armor |
+| **2** | **The Raider** (Tough + Slink Hybrid) | **[[Tough]]** 2, **[[Slink]]** 2, **[[Mouth]]** 1, **[[Brains]]** 1 | **Ankle-Biter** | Two Light Melee Weapons, Light Armor |
+| **3** | **The Saboteur** (Slink + Brains Hybrid) | **[[Tough]]** 1, **[[Slink]]** 2, **[[Mouth]]** 1, **[[Brains]]** 2 | **Opportunity Strike** | Shortbow, Light Melee Weapon |
+| **4** | **The Ring-Leader** (Slink + Mouth Hybrid) | **[[Tough]]** 1, **[[Slink]]** 2, **[[Mouth]]** 2, **[[Brains]]** 1 | **Loud Shouter** | Light Melee Weapon, Sling, Shield |
+| **5** | **The Chant-Monger** (Mouth + Brains Hybrid) | **[[Tough]]** 1, **[[Slink]]** 1, **[[Mouth]]** 2, **[[Brains]]** 2 | **Pocket Sand** | Light Melee Weapon, Sling |
+| **6** | **The Sage-Tinker** (Brains Specialist) | **[[Tough]]** 1, **[[Slink]]** 1, **[[Mouth]]** 1, **[[Brains]]** 3 | **Swallow Loot** | Light Melee Weapon, Throwing Daggers |
 
 ---
 
-## 4. Derive Secondary Stats
+## 4. Derive Secondary Stats & Role
 
-Your [[main stats]] determine your derived [[secondary stats]], which dictate your survivability, speed, carrying capacity, and command limits. Refer to [Stats](10_Stats.md) for the full stat tracks.
+Your [[Main Stats]] determine your derived [[Secondary Stats]] (such as [[Grit]], [[Carry]], [[Movement]], [[Max Mobs]], and [[Free Orders]]). Refer directly to the stat tracks in [Stats](10_Stats.md) to look up these values and write them on your character sheet.
 
-### Grit (Health)
-[[Grit]] is your health. You die when it reaches 0. Your starting [[Grit]] is determined by your [[Tough]] stat:
-*   **Tough 1:** 3 [[Grit]]
-*   **Tough 2:** 4 [[Grit]]
-*   **Tough 3:** 4 [[Grit]]
+### Grunt & Your Boss's Role
+[[Grunt]] represents your personal authority and raw command energy, which dictates the maximum size of a [[Mob]] you can control. Your starting maximum [[Grunt]] is equal to your **second-highest Main Stat**.
 
-### Carry Capacity (Bulk Limit)
-[[Carry Capacity]] determines the maximum total [[Bulk]] of items you can carry. It is determined by your [[Tough]] stat:
-*   **Tough 1:** 6 [[Carry Capacity]]
-*   **Tough 2:** 8 [[Carry Capacity]]
-*   **Tough 3:** 10 [[Carry Capacity]]
+The combination of your highest stat (Primary) and your second-highest stat (Secondary / Grunt) determines your Boss's [[Role]] (such as [[The Raider]], [[The Enforcer]], or [[The Sage-Tinker]]). Your [[Role]] defines your tactical playstyle, your vibe, and your starting abilities.
 
-### Movement
-[[Movement]] determines how many Zones you can cross with a single Move action. It is determined by your [[Slink]] stat:
-*   **Slink 1:** Movement 4
-*   **Slink 2:** Movement 5
-*   **Slink 3:** Movement 5
+>> **IMPORTANT (The Tactical Choice):** 
+>> * If you build a **Generalist** Boss (two stats at 2), your second-highest stat is **2**, giving you a starting maximum [[Grunt]] of **2** and a **Hybrid [[Role]]** (allowing you to command a **Size** 2 **Mob** at campaign start).
+>> * If you build a **Specialist** Boss (one stat at 3), your second-highest stat is **1**, giving you a starting maximum [[Grunt]] of **1** and a **Specialist [[Role]]** (limiting your command to a single **Size** 1 **Mob** at campaign start).
+>>
+>> For the full list of the 16 available roles, how they level up with Grunt, and their exclusive quirks, see [Roles](11a_Roles.md).
 
-### Grunt
-[[Grunt]] represents your personal authority and raw command energy, which dictates the maximum size of a Mob you can control. Your starting [[Grunt]] is equal to your **second-highest stat**.
-
->> **IMPORTANT:** Because you only have 1 point to distribute at creation, your starting stats will always feature one stat at 2 and three stats at 1. This means your second-highest stat will always be **1**, giving starting Bosses a starting [[Grunt]] of **1**.
->> 
->> This starting [[Grunt]] limits your command to a single **Size 1 Runt Mob** at campaign start. As your Gang grows in [[Infamy]], subsequent Bosses will inherit a starting **Successor XP Pool** (see [Death & Legacy](15_Level_Up%20and%20death.md)), allowing them to buy higher starting stats and command larger Mobs.
-
-> **Example:** Grub creates a Boss and puts his 1 starting point into [[Tough]]. His stats are [[Tough]] 2, [[Slink]] 1, [[Brains]] 1, and [[Mouth]] 1. His second-highest stat is 1. His starting [[Grunt]] is **1**.  
-
+> **Example:** Grub creates a Boss and puts both starting points into [[Tough]] to specialize. His stats are [[Tough]] 3, [[Slink]] 1, [[Brains]] 1, and [[Mouth]] 1. His second-highest stat is 1. His starting maximum [[Grunt]] is **1**. Since his highest stat (Tough 3) is 2 levels higher than his Grunt (1), his [[Role]] is **The Meat-Wall** (Tough Specialist) at **Role Level 1**.
+> 
+> If Grub instead wanted to command a larger mob from the start, he could have put one point in [[Tough]] and one point in [[Mouth]] (Tough 2, Mouth 2, Slink 1, Brains 1) to make his second-highest stat 2, yielding a starting maximum [[Grunt]] of **2**. Since the gap between his highest stats is 0, his [[Role]] would be **The Enforcer** (Tough/Mouth Hybrid) at **Role Level 2**.
 
 ---
 
 ## 5. Choose a Starting Quirk
 
-Your Boss starts with 1 **Basic Quirk** of your choice. 
+If you built your Boss manually, choose **1 Basic Quirk** of your choice. 
 
-*   **Stat Gating:** The Quirk must match a stat in which your Boss has a level equal to or greater than the Quirk's Tier. Since your highest stat at creation will be 2, you can choose a Tier 1 or Tier 2 Quirk corresponding to your high stat, or a Tier 1 Quirk for any stat.
+*   **Stat Gating:** The Quirk must match a stat in which your Boss has a level equal to or greater than the Quirk's Tier. Since your highest stat at creation can be up to 3, you can choose up to a Tier 3 Quirk corresponding to that high stat, or a Tier 1 Quirk for any other stat.
 *   **No Twists:** You start with 0 [[Twist|Twists]] attached to your Quirk.
 *   For the list of available starting Quirks, see [Quirks & Twists](14_Quirks.md).
-
 
 ---
 

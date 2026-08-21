@@ -1,12 +1,9 @@
 import os
 import re
+import sys
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INDEX_PATH = os.path.join(REPO_ROOT, "01_STAGE_Drafts", "00_Rules", "06_Keywords Index.md")
-DIRS_TO_SCAN = [
-    os.path.join(REPO_ROOT, "01_STAGE_Drafts"),
-    os.path.join(REPO_ROOT, "02_PROD_Core_Rules")
-]
 
 # Highly specific, non-generic single-word terms that are safe to auto-tag
 SAFE_SINGLE_WORDS = {
@@ -108,27 +105,34 @@ def process_file(file_path, keywords):
         return True
     return False
 
-def auto_tag_keywords():
-    keywords = load_keywords()
-    print(f"Loaded {len(keywords)} safe keywords for auto-tagging.")
-    if not keywords:
-        return
-        
-    updated_files = 0
-    for directory in DIRS_TO_SCAN:
-        if not os.path.exists(directory):
-            continue
-        for root, _, files in os.walk(directory):
-            for file in files:
-                if file.lower().endswith('.md'):
-                    file_path = os.path.join(root, file)
-                    if os.path.abspath(file_path) == os.path.abspath(INDEX_PATH):
-                        continue
-                    if process_file(file_path, keywords):
-                        print(f"Auto-tagged keywords in: {os.path.relpath(file_path, REPO_ROOT)}")
-                        updated_files += 1
-                        
-    print(f"Finished auto-tagging. Updated {updated_files} files.")
-
 if __name__ == "__main__":
-    auto_tag_keywords()
+    if len(sys.argv) < 2:
+        print("Usage: python auto_tag_keywords.py <path_to_markdown_file.md>")
+        print("Example: python auto_tag_keywords.py \"01_STAGE_Drafts/00_Rules/02 Combat.md\"")
+        sys.exit(1)
+        
+    target_path = sys.argv[1]
+    abs_target = os.path.abspath(target_path)
+    
+    if not os.path.exists(abs_target):
+        # Try relative to repo root if path not found
+        abs_target = os.path.join(REPO_ROOT, target_path)
+        if not os.path.exists(abs_target):
+            print(f"Error: File does not exist at '{target_path}'")
+            sys.exit(1)
+        
+    if not abs_target.lower().endswith('.md'):
+        print("Error: Target file must be a markdown (.md) file.")
+        sys.exit(1)
+        
+    if abs_target == os.path.abspath(INDEX_PATH):
+        print("Error: Cannot run auto-tagging on the Keywords Index file itself.")
+        sys.exit(1)
+        
+    keywords = load_keywords()
+    print(f"Loaded {len(keywords)} safe keywords.")
+    
+    if process_file(abs_target, keywords):
+        print(f"Successfully auto-tagged keywords in: {target_path}")
+    else:
+        print(f"No changes needed or no new keywords found in: {target_path}")
