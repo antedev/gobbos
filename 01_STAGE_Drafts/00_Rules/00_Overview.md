@@ -10,7 +10,7 @@ Meanwhile the GM will ensure that just getting that loot will be no easy challen
 
 # Inspirations
 
-The game takes quite a lot of inspiration from OSR games, such as old D&D, Shadowdark, Mausritter, Dungeon Crawl Classics, etc.. 
+The game takes quite a lot of inspiration from OSR games, such as old D&D, Shadowdark, Mausritter, Dungeon Crawl Classics, and more. 
 
 It also takes inspiration from video games, such as Darkest Dungeon, XCOM series, etc. 
 
@@ -20,4 +20,4 @@ The game is played in sessions, where each session represents a delve into a dun
 
 # The World
 
-The game is set in a fantasy world, where goblins are a race of small, green-skinned humanoids that live in tribes. They are not very strong, nor very smart, but they are many, and they are sneaky. They are also very good at looting, and they have a knack for finding trouble. They are typically considered a pest and nucieance by most other races. But more morally flexible races, such as humans, orcs and dwarves, will interact with them for trade, or for dirty work. 
+The game is set in a fantasy world, where goblins are a race of small, green-skinned humanoids that live in tribes. They are not very strong, nor very smart, but they are many, and they are sneaky. They are also very good at looting, and they have a knack for finding trouble. They are typically considered a pest and nucieance by most other races. But more morally flexible races, such as humans, orcs and dwarves, will interact with them for trade, or for dirty work.
