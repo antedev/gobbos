@@ -62,14 +62,14 @@ Your [[Main Stats]] determine your derived [[Secondary Stats]] (such as [[Grit]]
 The combination of your highest stat (Primary) and your second-highest stat (Secondary / Grunt) determines your Boss's [[Role]] (such as [[The Raider]], [[The Enforcer]], or [[The Sage-Tinker]]). Your [[Role]] defines your tactical playstyle, your vibe, and your starting abilities.
 
 >> **IMPORTANT (The Tactical Choice):** 
->> * If you build a **Generalist** Boss (two stats at 2), your second-highest stat is **2**, giving you a starting maximum [[Grunt]] of **2** and a **Hybrid [[Role]]** (allowing you to command a **Size** 2 **Mob** at campaign start).
->> * If you build a **Specialist** Boss (one stat at 3), your second-highest stat is **1**, giving you a starting maximum [[Grunt]] of **1** and a **Specialist [[Role]]** (limiting your command to a single **Size** 1 **Mob** at campaign start).
+>> * If you build a **Generalist** Boss (two stats at 2), your second-highest stat is **2**, giving you a starting maximum [[Grunt]] of **2** and a **Hybrid [[Role]]** at **Role Level 2** (allowing you to command a **Size** 2 **Mob** at campaign start with Level 2 of your Hybrid Role Skill).
+>> * If you build a **Specialist** Boss (one stat at 3), your second-highest stat is **1**, giving you a starting maximum [[Grunt]] of **1** and a **Specialist [[Role]]** at **Role Level 3** (limiting your command to a single **Size** 1 **Mob** at campaign start, but starting with Level 3 of your Specialist Role Skill).
 >>
->> For the full list of the 16 available roles, how they level up with Grunt, and their exclusive quirks, see [Roles](11a_Roles.md).
+>> For the full list of the 16 available roles and their scaling skills, see [Roles](11a_Roles.md).
 
-> **Example:** Grub creates a Boss and puts both starting points into [[Tough]] to specialize. His stats are [[Tough]] 3, [[Slink]] 1, [[Brains]] 1, and [[Mouth]] 1. His second-highest stat is 1. His starting maximum [[Grunt]] is **1**. Since his highest stat (Tough 3) is 2 levels higher than his Grunt (1), his [[Role]] is **The Meat-Wall** (Tough Specialist) at **Role Level 1**.
+> **Example:** Grub creates a Boss and puts both starting points into [[Tough]] to specialize. His stats are [[Tough]] 3, [[Slink]] 1, [[Brains]] 1, and [[Mouth]] 1. His second-highest stat is 1, so his starting maximum [[Grunt]] is **1** (can command a Size 1 Mob). Since his highest stat (Tough 3) is 2 levels higher than his Grunt (1), his [[Role]] is **The Meat-Wall** (Tough Specialist) at **Role Level 3**, granting him Level 3 of the *Iron Hide* skill right from character creation.
 > 
-> If Grub instead wanted to command a larger mob from the start, he could have put one point in [[Tough]] and one point in [[Mouth]] (Tough 2, Mouth 2, Slink 1, Brains 1) to make his second-highest stat 2, yielding a starting maximum [[Grunt]] of **2**. Since the gap between his highest stats is 0, his [[Role]] would be **The Enforcer** (Tough/Mouth Hybrid) at **Role Level 2**.
+> If Grub instead wanted to command a larger mob from the start, he could have put one point in [[Tough]] and one point in [[Mouth]] (Tough 2, Mouth 2, Slink 1, Brains 1) to make his second-highest stat 2, yielding a starting maximum [[Grunt]] of **2** (can command a Size 2 Mob). Since the gap between his highest stats is 0, his [[Role]] would be **The Enforcer** (Tough/Mouth Hybrid) at **Role Level 2**, granting him Level 2 of the *Skull-Cracker Command* skill.
 
 ---
 
