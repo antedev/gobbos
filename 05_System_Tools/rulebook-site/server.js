@@ -374,6 +374,8 @@ const server = http.createServer((req, res) => {
     pathname = '/index.html';
   } else if (pathname === '/admin' || pathname === '/admin/') {
     pathname = '/admin/index.html';
+  } else if (pathname === '/config.yml') {
+    pathname = '/admin/config.yml';
   }
 
   let filePath = path.join(DIST_DIR, pathname);
