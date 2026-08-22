@@ -1,21 +1,26 @@
 # Gobbos TTRPG — LLM Documentation Index
 
 > Gobbos is a fast, fun, and chaotic goblin-themed tabletop skirmish RPG.
-> This file indexes consolidated, continuous Markdown files optimized for Large Language Models (LLMs) and agents.
-> All files exclude noisy brainstorms and contain strictly structured STAGE and PROD material.
+> This file indexes consolidated, continuous files optimized for Large Language Models (LLMs) and agents.
+> Available in both clean semantic HTML (recommended for web chat/Gemini) and raw Markdown (.md).
 
-## Master Bundles
-- [All Rules & Lore (Master)](/all_llm.md): Complete single continuous file containing all PROD and STAGE rules and lore.
-- [All Rules (PROD + STAGE)](/rules_all_llm.md): Combined rules bundle covering official and stage mechanics.
-- [All Lore (PROD + STAGE)](/lore_all_llm.md): Combined lore bundle covering canon and stage lore.
+## HTML Master Bundles (Recommended for Gemini / Browsers)
+- [All Rules & Lore (Master)](/all_llm.html): Complete single HTML document containing all PROD and STAGE rules and lore.
+- [All Rules (PROD + STAGE)](/rules_all_llm.html): Combined rules document covering official and stage mechanics.
+- [All Lore (PROD + STAGE)](/lore_all_llm.html): Combined lore document covering canon and stage lore.
+- [STAGE Rules](/rules_stage_llm.html): Working rules, character creation, combat, mobs, base building, and magic.
+- [PROD Rules](/rules_prod_llm.html): Locked, official core rulebook.
+- [STAGE Lore](/lore_stage_llm.html): Setting lore, factions, economy, and technology.
+- [PROD Lore](/lore_prod_llm.html): Locked canon world lore.
 
-## Specific Rule Bundles
-- [STAGE Rules](/rules_stage_llm.md): Working rules, character creation, combat, mobs, base building, and magic.
-- [PROD Rules](/rules_prod_llm.md): Locked, official core rulebook files.
-
-## Specific Lore Bundles
-- [STAGE Lore](/lore_stage_llm.md): Setting lore, factions, economy, and solar ichor technology.
-- [PROD Lore](/lore_prod_llm.md): Locked canon world lore.
+## Raw Markdown Bundles (.md)
+- [All Rules & Lore (Master)](/all_llm.md)
+- [All Rules (PROD + STAGE)](/rules_all_llm.md)
+- [All Lore (PROD + STAGE)](/lore_all_llm.md)
+- [STAGE Rules](/rules_stage_llm.md)
+- [PROD Rules](/rules_prod_llm.md)
+- [STAGE Lore](/lore_stage_llm.md)
+- [PROD Lore](/lore_prod_llm.md)
 
 ## System Reference
 - Target Face Check standard: `[Stat] [Target Face]+/[Required Successes]`

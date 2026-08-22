@@ -2,7 +2,7 @@
 
 > **Gobbos TTRPG Consolidated Knowledge Document**
 > Comprehensive compilation of all locked PROD rules followed by active STAGE drafts.
-> Generated on: 2026-08-22T07:56:34.733Z
+> Generated on: 2026-08-22T12:00:08.525Z
 > Total Chapters/Documents included: 27
 
 ---

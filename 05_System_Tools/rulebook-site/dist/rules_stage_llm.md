@@ -2,7 +2,7 @@
 
 > **Gobbos TTRPG Consolidated Knowledge Document**
 > Contains all working rules, character creation, combat, and systems from STAGE_Drafts. Brainstorms and dev notes are excluded.
-> Generated on: 2026-08-22T07:56:34.714Z
+> Generated on: 2026-08-22T12:00:08.491Z
 > Total Chapters/Documents included: 25
 
 ---

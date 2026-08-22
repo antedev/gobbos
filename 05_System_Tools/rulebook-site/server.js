@@ -373,6 +373,20 @@ const server = http.createServer((req, res) => {
   }
 
   // 6. Dynamic LLM Bundles (instant reflection of filesystem changes)
+  // --- Stage Rules ---
+  if (pathname === '/rules_stage_llm.html' || pathname === '/rules_stage_llm') {
+    try {
+      const content = llmBundler.generateStageRulesHtml();
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      res.end(content);
+    } catch (err) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'text/plain');
+      res.end('Error generating stage rules LLM HTML: ' + err.message);
+    }
+    return;
+  }
   if (pathname === '/rules_stage_llm.md') {
     try {
       const content = llmBundler.generateStageRules();
@@ -387,6 +401,20 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  // --- Prod Rules ---
+  if (pathname === '/rules_prod_llm.html' || pathname === '/rules_prod_llm') {
+    try {
+      const content = llmBundler.generateProdRulesHtml();
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      res.end(content);
+    } catch (err) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'text/plain');
+      res.end('Error generating prod rules LLM HTML: ' + err.message);
+    }
+    return;
+  }
   if (pathname === '/rules_prod_llm.md') {
     try {
       const content = llmBundler.generateProdRules();
@@ -401,6 +429,20 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  // --- All Rules ---
+  if (pathname === '/rules_all_llm.html' || pathname === '/rules_all_llm' || pathname === '/rules_llm.html' || pathname === '/rules_llm') {
+    try {
+      const content = llmBundler.generateAllRulesHtml();
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      res.end(content);
+    } catch (err) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'text/plain');
+      res.end('Error generating all rules LLM HTML: ' + err.message);
+    }
+    return;
+  }
   if (pathname === '/rules_all_llm.md' || pathname === '/rules_llm.md') {
     try {
       const content = llmBundler.generateAllRules();
@@ -415,6 +457,20 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  // --- Stage Lore ---
+  if (pathname === '/lore_stage_llm.html' || pathname === '/lore_stage_llm') {
+    try {
+      const content = llmBundler.generateStageLoreHtml();
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      res.end(content);
+    } catch (err) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'text/plain');
+      res.end('Error generating stage lore LLM HTML: ' + err.message);
+    }
+    return;
+  }
   if (pathname === '/lore_stage_llm.md') {
     try {
       const content = llmBundler.generateStageLore();
@@ -429,6 +485,20 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  // --- Prod Lore ---
+  if (pathname === '/lore_prod_llm.html' || pathname === '/lore_prod_llm') {
+    try {
+      const content = llmBundler.generateProdLoreHtml();
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      res.end(content);
+    } catch (err) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'text/plain');
+      res.end('Error generating prod lore LLM HTML: ' + err.message);
+    }
+    return;
+  }
   if (pathname === '/lore_prod_llm.md') {
     try {
       const content = llmBundler.generateProdLore();
@@ -443,6 +513,20 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  // --- All Lore ---
+  if (pathname === '/lore_all_llm.html' || pathname === '/lore_all_llm' || pathname === '/lore_llm.html' || pathname === '/lore_llm') {
+    try {
+      const content = llmBundler.generateAllLoreHtml();
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      res.end(content);
+    } catch (err) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'text/plain');
+      res.end('Error generating all lore LLM HTML: ' + err.message);
+    }
+    return;
+  }
   if (pathname === '/lore_all_llm.md' || pathname === '/lore_llm.md') {
     try {
       const content = llmBundler.generateAllLore();
@@ -457,6 +541,20 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  // --- Master All ---
+  if (pathname === '/all_llm.html' || pathname === '/all_llm' || pathname === '/gobbos_llm.html' || pathname === '/gobbos_llm') {
+    try {
+      const content = llmBundler.generateMasterAllHtml();
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      res.end(content);
+    } catch (err) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'text/plain');
+      res.end('Error generating master all LLM HTML: ' + err.message);
+    }
+    return;
+  }
   if (pathname === '/all_llm.md' || pathname === '/gobbos_llm.md') {
     try {
       const content = llmBundler.generateMasterAll();

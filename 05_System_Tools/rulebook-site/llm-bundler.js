@@ -187,25 +187,149 @@ function generateMasterAll() {
   );
 }
 
+const markdownIt = require('markdown-it');
+const md = markdownIt({ html: true, linkify: true, typographer: true });
+
+function wrapInHtml(title, markdownContent) {
+  const rendered = md.render(markdownContent);
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${title.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: #ffffff;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      color: #111;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+      line-height: 1.25;
+    }
+    h1 { border-bottom: 2px solid #eaeaea; padding-bottom: 0.3em; font-size: 2em; }
+    h2 { border-bottom: 1px solid #eaeaea; padding-bottom: 0.3em; font-size: 1.5em; }
+    p, ul, ol { margin: 1em 0; }
+    li { margin: 0.3em 0; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1.5em 0;
+    }
+    th, td {
+      border: 1px solid #d0d7de;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #f6f8fa;
+      font-weight: 600;
+    }
+    tr:nth-child(2n) {
+      background-color: #fbfcfd;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.9em;
+      background: #f6f8fa;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+    }
+    pre {
+      background: #f6f8fa;
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+      line-height: 1.45;
+    }
+    pre code {
+      background: transparent;
+      padding: 0;
+    }
+    blockquote {
+      margin: 1em 0;
+      padding: 0 1em;
+      color: #57606a;
+      border-left: 4px solid #d0d7de;
+    }
+    hr {
+      height: 2px;
+      padding: 0;
+      margin: 24px 0;
+      background-color: #d0d7de;
+      border: 0;
+    }
+    a { color: #0969da; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <main>
+    ${rendered}
+  </main>
+</body>
+</html>`;
+}
+
+function generateStageRulesHtml() {
+  return wrapInHtml('Gobbos — STAGE Rules (Drafts & Playtest Mechanics)', generateStageRules());
+}
+
+function generateProdRulesHtml() {
+  return wrapInHtml('Gobbos — PROD Core Rules (Official Locked Rules)', generateProdRules());
+}
+
+function generateAllRulesHtml() {
+  return wrapInHtml('Gobbos — Rules Master (PROD Core + STAGE Drafts)', generateAllRules());
+}
+
+function generateStageLoreHtml() {
+  return wrapInHtml('Gobbos — STAGE Lore (Synthesized Setting & Factions)', generateStageLore());
+}
+
+function generateProdLoreHtml() {
+  return wrapInHtml('Gobbos — PROD Lore (Official Canon)', generateProdLore());
+}
+
+function generateAllLoreHtml() {
+  return wrapInHtml('Gobbos — Lore Master (PROD Canon + STAGE Lore)', generateAllLore());
+}
+
+function generateMasterAllHtml() {
+  return wrapInHtml('Gobbos — Complete Master Compilation (Rules & Lore)', generateMasterAll());
+}
+
 function generateLlmsTxt() {
   return `# Gobbos TTRPG — LLM Documentation Index
 
 > Gobbos is a fast, fun, and chaotic goblin-themed tabletop skirmish RPG.
-> This file indexes consolidated, continuous Markdown files optimized for Large Language Models (LLMs) and agents.
-> All files exclude noisy brainstorms and contain strictly structured STAGE and PROD material.
+> This file indexes consolidated, continuous files optimized for Large Language Models (LLMs) and agents.
+> Available in both clean semantic HTML (recommended for web chat/Gemini) and raw Markdown (.md).
 
-## Master Bundles
-- [All Rules & Lore (Master)](/all_llm.md): Complete single continuous file containing all PROD and STAGE rules and lore.
-- [All Rules (PROD + STAGE)](/rules_all_llm.md): Combined rules bundle covering official and stage mechanics.
-- [All Lore (PROD + STAGE)](/lore_all_llm.md): Combined lore bundle covering canon and stage lore.
+## HTML Master Bundles (Recommended for Gemini / Browsers)
+- [All Rules & Lore (Master)](/all_llm.html): Complete single HTML document containing all PROD and STAGE rules and lore.
+- [All Rules (PROD + STAGE)](/rules_all_llm.html): Combined rules document covering official and stage mechanics.
+- [All Lore (PROD + STAGE)](/lore_all_llm.html): Combined lore document covering canon and stage lore.
+- [STAGE Rules](/rules_stage_llm.html): Working rules, character creation, combat, mobs, base building, and magic.
+- [PROD Rules](/rules_prod_llm.html): Locked, official core rulebook.
+- [STAGE Lore](/lore_stage_llm.html): Setting lore, factions, economy, and technology.
+- [PROD Lore](/lore_prod_llm.html): Locked canon world lore.
 
-## Specific Rule Bundles
-- [STAGE Rules](/rules_stage_llm.md): Working rules, character creation, combat, mobs, base building, and magic.
-- [PROD Rules](/rules_prod_llm.md): Locked, official core rulebook files.
-
-## Specific Lore Bundles
-- [STAGE Lore](/lore_stage_llm.md): Setting lore, factions, economy, and solar ichor technology.
-- [PROD Lore](/lore_prod_llm.md): Locked canon world lore.
+## Raw Markdown Bundles (.md)
+- [All Rules & Lore (Master)](/all_llm.md)
+- [All Rules (PROD + STAGE)](/rules_all_llm.md)
+- [All Lore (PROD + STAGE)](/lore_all_llm.md)
+- [STAGE Rules](/rules_stage_llm.md)
+- [PROD Rules](/rules_prod_llm.md)
+- [STAGE Lore](/lore_stage_llm.md)
+- [PROD Lore](/lore_prod_llm.md)
 
 ## System Reference
 - Target Face Check standard: \`[Stat] [Target Face]+/[Required Successes]\`
@@ -216,6 +340,7 @@ function generateLlmsTxt() {
 module.exports = {
   scanDirectory,
   bundleDocs,
+  wrapInHtml,
   generateStageRules,
   generateProdRules,
   generateAllRules,
@@ -223,5 +348,12 @@ module.exports = {
   generateProdLore,
   generateAllLore,
   generateMasterAll,
+  generateStageRulesHtml,
+  generateProdRulesHtml,
+  generateAllRulesHtml,
+  generateStageLoreHtml,
+  generateProdLoreHtml,
+  generateAllLoreHtml,
+  generateMasterAllHtml,
   generateLlmsTxt
 };

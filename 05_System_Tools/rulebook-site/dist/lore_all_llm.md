@@ -2,7 +2,7 @@
 
 > **Gobbos TTRPG Consolidated Knowledge Document**
 > Comprehensive compilation of all locked PROD canon followed by active STAGE lore drafts.
-> Generated on: 2026-08-22T07:56:34.739Z
+> Generated on: 2026-08-22T12:00:08.541Z
 > Total Chapters/Documents included: 7
 
 ---

@@ -2,7 +2,7 @@
 
 > **Gobbos TTRPG Consolidated Knowledge Document**
 > Full consolidated single-file bundle containing all PROD and STAGE rules and lore. Excludes DEV brainstorms.
-> Generated on: 2026-08-22T07:56:34.750Z
+> Generated on: 2026-08-22T12:00:08.579Z
 > Total Chapters/Documents included: 34
 
 ---

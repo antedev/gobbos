@@ -381,8 +381,8 @@ async function build() {
   await fs.writeFile(path.join(DIST_DIR, 'index.html'), indexHtml, 'utf-8');
   console.log('  ✅ Built index.html\n');
 
-  // Build LLM Continuous Markdown Bundles
-  console.log('🤖 Generating LLM Single-File Continuous Bundles...');
+  // Build LLM Continuous Markdown & HTML Bundles
+  console.log('🤖 Generating LLM Single-File Continuous Bundles (Markdown & HTML)...');
   const stageRulesMd = llmBundler.generateStageRules();
   const prodRulesMd = llmBundler.generateProdRules();
   const allRulesMd = llmBundler.generateAllRules();
@@ -392,6 +392,7 @@ async function build() {
   const masterAllMd = llmBundler.generateMasterAll();
   const llmsTxt = llmBundler.generateLlmsTxt();
 
+  // Write .md files
   await fs.writeFile(path.join(DIST_DIR, 'rules_stage_llm.md'), stageRulesMd, 'utf-8');
   await fs.writeFile(path.join(DIST_DIR, 'rules_prod_llm.md'), prodRulesMd, 'utf-8');
   await fs.writeFile(path.join(DIST_DIR, 'rules_all_llm.md'), allRulesMd, 'utf-8');
@@ -400,9 +401,17 @@ async function build() {
   await fs.writeFile(path.join(DIST_DIR, 'lore_all_llm.md'), allLoreMd, 'utf-8');
   await fs.writeFile(path.join(DIST_DIR, 'all_llm.md'), masterAllMd, 'utf-8');
   await fs.writeFile(path.join(DIST_DIR, 'llms.txt'), llmsTxt, 'utf-8');
-  console.log('  ✅ Generated rules_stage_llm.md, rules_prod_llm.md, rules_all_llm.md');
-  console.log('  ✅ Generated lore_stage_llm.md, lore_prod_llm.md, lore_all_llm.md');
-  console.log('  ✅ Generated all_llm.md and llms.txt\n');
+
+  // Write .html files (easy for Gemini / web crawlers)
+  await fs.writeFile(path.join(DIST_DIR, 'rules_stage_llm.html'), llmBundler.wrapInHtml('Gobbos — STAGE Rules', stageRulesMd), 'utf-8');
+  await fs.writeFile(path.join(DIST_DIR, 'rules_prod_llm.html'), llmBundler.wrapInHtml('Gobbos — PROD Rules', prodRulesMd), 'utf-8');
+  await fs.writeFile(path.join(DIST_DIR, 'rules_all_llm.html'), llmBundler.wrapInHtml('Gobbos — Rules Master', allRulesMd), 'utf-8');
+  await fs.writeFile(path.join(DIST_DIR, 'lore_stage_llm.html'), llmBundler.wrapInHtml('Gobbos — STAGE Lore', stageLoreMd), 'utf-8');
+  await fs.writeFile(path.join(DIST_DIR, 'lore_prod_llm.html'), llmBundler.wrapInHtml('Gobbos — PROD Lore', prodLoreMd), 'utf-8');
+  await fs.writeFile(path.join(DIST_DIR, 'lore_all_llm.html'), llmBundler.wrapInHtml('Gobbos — Lore Master', allLoreMd), 'utf-8');
+  await fs.writeFile(path.join(DIST_DIR, 'all_llm.html'), llmBundler.wrapInHtml('Gobbos — Complete Master (Rules + Lore)', masterAllMd), 'utf-8');
+
+  console.log('  ✅ Generated Markdown & HTML LLM bundles (.md, .html, .txt)\n');
 
   // Write success status.json
   const statusData = {

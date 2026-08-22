@@ -2,7 +2,7 @@
 
 > **Gobbos TTRPG Consolidated Knowledge Document**
 > Contains the locked, official core rules from PROD_Core_Rules.
-> Generated on: 2026-08-22T07:56:34.718Z
+> Generated on: 2026-08-22T12:00:08.496Z
 > Total Chapters/Documents included: 2
 
 ---

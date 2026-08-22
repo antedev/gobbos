@@ -2,7 +2,7 @@
 
 > **Gobbos TTRPG Consolidated Knowledge Document**
 > Contains all synthesized setting lore, world-building, and factions from LORE/01_STAGE_Lore. Dev brainstorms are excluded.
-> Generated on: 2026-08-22T07:56:34.735Z
+> Generated on: 2026-08-22T12:00:08.531Z
 > Total Chapters/Documents included: 6
 
 ---
