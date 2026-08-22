@@ -32,12 +32,15 @@ const APPLY_SCRIPT_PATH = path.join(__dirname, '..', 'apply_keyword_choices.py')
 const CONSOLIDATE_SCRIPT_PATH = path.join(__dirname, '..', 'consolidate_plurals.py');
 const GENERATE_SCRIPT_PATH = path.join(__dirname, '..', 'generate_keyword_csv.py');
 const BUILD_SCRIPT_PATH = path.join(__dirname, 'build.js');
+const llmBundler = require('./llm-bundler');
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
   '.js': 'application/javascript; charset=utf-8',
   '.json': 'application/json; charset=utf-8',
+  '.md': 'text/markdown; charset=utf-8',
+  '.txt': 'text/plain; charset=utf-8',
   '.yml': 'text/yaml; charset=utf-8',
   '.yaml': 'text/yaml; charset=utf-8',
   '.png': 'image/png',
@@ -366,6 +369,119 @@ const server = http.createServer((req, res) => {
         }
       });
     });
+    return;
+  }
+
+  // 6. Dynamic LLM Bundles (instant reflection of filesystem changes)
+  if (pathname === '/rules_stage_llm.md') {
+    try {
+      const content = llmBundler.generateStageRules();
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+      res.end(content);
+    } catch (err) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'text/plain');
+      res.end('Error generating stage rules LLM bundle: ' + err.message);
+    }
+    return;
+  }
+
+  if (pathname === '/rules_prod_llm.md') {
+    try {
+      const content = llmBundler.generateProdRules();
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+      res.end(content);
+    } catch (err) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'text/plain');
+      res.end('Error generating prod rules LLM bundle: ' + err.message);
+    }
+    return;
+  }
+
+  if (pathname === '/rules_all_llm.md' || pathname === '/rules_llm.md') {
+    try {
+      const content = llmBundler.generateAllRules();
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+      res.end(content);
+    } catch (err) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'text/plain');
+      res.end('Error generating all rules LLM bundle: ' + err.message);
+    }
+    return;
+  }
+
+  if (pathname === '/lore_stage_llm.md') {
+    try {
+      const content = llmBundler.generateStageLore();
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+      res.end(content);
+    } catch (err) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'text/plain');
+      res.end('Error generating stage lore LLM bundle: ' + err.message);
+    }
+    return;
+  }
+
+  if (pathname === '/lore_prod_llm.md') {
+    try {
+      const content = llmBundler.generateProdLore();
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+      res.end(content);
+    } catch (err) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'text/plain');
+      res.end('Error generating prod lore LLM bundle: ' + err.message);
+    }
+    return;
+  }
+
+  if (pathname === '/lore_all_llm.md' || pathname === '/lore_llm.md') {
+    try {
+      const content = llmBundler.generateAllLore();
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+      res.end(content);
+    } catch (err) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'text/plain');
+      res.end('Error generating all lore LLM bundle: ' + err.message);
+    }
+    return;
+  }
+
+  if (pathname === '/all_llm.md' || pathname === '/gobbos_llm.md') {
+    try {
+      const content = llmBundler.generateMasterAll();
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+      res.end(content);
+    } catch (err) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'text/plain');
+      res.end('Error generating master all LLM bundle: ' + err.message);
+    }
+    return;
+  }
+
+  if (pathname === '/llms.txt') {
+    try {
+      const content = llmBundler.generateLlmsTxt();
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+      res.end(content);
+    } catch (err) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'text/plain');
+      res.end('Error generating llms.txt: ' + err.message);
+    }
     return;
   }
 

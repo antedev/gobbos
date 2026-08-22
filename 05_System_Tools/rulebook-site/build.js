@@ -5,6 +5,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const markdownIt = require('markdown-it');
 const anchor = require('markdown-it-anchor');
+const llmBundler = require('./llm-bundler');
 
 // ============================================================
 // Configuration
@@ -379,6 +380,29 @@ async function build() {
   const indexHtml = indexTemplate.replace('{{ENV_CARDS}}', envCards);
   await fs.writeFile(path.join(DIST_DIR, 'index.html'), indexHtml, 'utf-8');
   console.log('  ✅ Built index.html\n');
+
+  // Build LLM Continuous Markdown Bundles
+  console.log('🤖 Generating LLM Single-File Continuous Bundles...');
+  const stageRulesMd = llmBundler.generateStageRules();
+  const prodRulesMd = llmBundler.generateProdRules();
+  const allRulesMd = llmBundler.generateAllRules();
+  const stageLoreMd = llmBundler.generateStageLore();
+  const prodLoreMd = llmBundler.generateProdLore();
+  const allLoreMd = llmBundler.generateAllLore();
+  const masterAllMd = llmBundler.generateMasterAll();
+  const llmsTxt = llmBundler.generateLlmsTxt();
+
+  await fs.writeFile(path.join(DIST_DIR, 'rules_stage_llm.md'), stageRulesMd, 'utf-8');
+  await fs.writeFile(path.join(DIST_DIR, 'rules_prod_llm.md'), prodRulesMd, 'utf-8');
+  await fs.writeFile(path.join(DIST_DIR, 'rules_all_llm.md'), allRulesMd, 'utf-8');
+  await fs.writeFile(path.join(DIST_DIR, 'lore_stage_llm.md'), stageLoreMd, 'utf-8');
+  await fs.writeFile(path.join(DIST_DIR, 'lore_prod_llm.md'), prodLoreMd, 'utf-8');
+  await fs.writeFile(path.join(DIST_DIR, 'lore_all_llm.md'), allLoreMd, 'utf-8');
+  await fs.writeFile(path.join(DIST_DIR, 'all_llm.md'), masterAllMd, 'utf-8');
+  await fs.writeFile(path.join(DIST_DIR, 'llms.txt'), llmsTxt, 'utf-8');
+  console.log('  ✅ Generated rules_stage_llm.md, rules_prod_llm.md, rules_all_llm.md');
+  console.log('  ✅ Generated lore_stage_llm.md, lore_prod_llm.md, lore_all_llm.md');
+  console.log('  ✅ Generated all_llm.md and llms.txt\n');
 
   // Write success status.json
   const statusData = {

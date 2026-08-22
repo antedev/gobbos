@@ -254,6 +254,91 @@ body {
   animation: spin 1s linear infinite;
 }
 
+/* --- LLM Dropdown Button & Menu --- */
+.llm-dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.llm-btn {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--text-topbar);
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  transition: background 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.llm-btn:hover, .llm-btn[aria-expanded="true"] {
+  background: rgba(255,255,255,0.15);
+}
+
+.dropdown-arrow {
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+}
+
+.llm-btn[aria-expanded="true"] .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.llm-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: 6px 0;
+  min-width: 240px;
+  display: none;
+  z-index: 200;
+}
+
+.llm-dropdown-menu.show {
+  display: block;
+}
+
+.llm-dropdown-header {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  padding: 6px 14px 4px 14px;
+}
+
+.llm-dropdown-item {
+  display: block;
+  padding: 8px 14px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.llm-dropdown-item:hover {
+  background: var(--accent-glow);
+  color: var(--accent-light);
+}
+
+.llm-dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 4px 0;
+}
+
 /* --- Sync Banner Button --- */
 .sync-banner-btn {
   background-color: #d9534f;

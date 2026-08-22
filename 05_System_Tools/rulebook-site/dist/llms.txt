@@ -1,0 +1,22 @@
+# Gobbos TTRPG — LLM Documentation Index
+
+> Gobbos is a fast, fun, and chaotic goblin-themed tabletop skirmish RPG.
+> This file indexes consolidated, continuous Markdown files optimized for Large Language Models (LLMs) and agents.
+> All files exclude noisy brainstorms and contain strictly structured STAGE and PROD material.
+
+## Master Bundles
+- [All Rules & Lore (Master)](/all_llm.md): Complete single continuous file containing all PROD and STAGE rules and lore.
+- [All Rules (PROD + STAGE)](/rules_all_llm.md): Combined rules bundle covering official and stage mechanics.
+- [All Lore (PROD + STAGE)](/lore_all_llm.md): Combined lore bundle covering canon and stage lore.
+
+## Specific Rule Bundles
+- [STAGE Rules](/rules_stage_llm.md): Working rules, character creation, combat, mobs, base building, and magic.
+- [PROD Rules](/rules_prod_llm.md): Locked, official core rulebook files.
+
+## Specific Lore Bundles
+- [STAGE Lore](/lore_stage_llm.md): Setting lore, factions, economy, and solar ichor technology.
+- [PROD Lore](/lore_prod_llm.md): Locked canon world lore.
+
+## System Reference
+- Target Face Check standard: `[Stat] [Target Face]+/[Required Successes]`
+- Core Attributes: Tough, Slink, Mouth, Brains. Hit points: Grit (Player) / Health Dice (Mob).
