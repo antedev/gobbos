@@ -17,7 +17,7 @@ The absolute most important stat for a Mob is its [[Size]]. Size determines ever
 
 ## Mob Equipment & Loot Tradeoff
 Mobs can be equipped with scavenged weapons and armor, but this comes at a steep cost to their greed. 
-*   **Mob Armor:** Equipping a Mob with Armor grants them passive Defense Dice (e.g., +1d6 or +2d6). Whenever the Mob is attacked, you roll these bonus dice, and every success reduces the incoming damage. 
+*   **Mob Armor:** Equipping a Mob with Armor grants them passive **Armor Dice** (e.g., **+1d6** or **+2d6**). Whenever the Mob is attacked, you roll these dice simultaneously against incoming damage. Every success (**5+**) reduces the incoming damage by 1.
 *   **The Tradeoff:** Every piece of Gear a Mob is equipped with reduces their **Carry / [[Loot Capacity]]** by an equal amount of Bulk. A heavily armored Mob will survive longer, but they will not be able to carry the raiding loot back to the lair! A naked, feral Mob will die quickly but can carry a horde of treasure.
 
 ### Health & Taking Damage
@@ -54,19 +54,29 @@ Mobs from different player Gangs *can* merge if both Bosses agree. This creates 
 *   **The Command Struggle:** The new Super-Mob is extremely volatile. Every time *either* Boss wants to issue an Order to the Super-Mob, it requires a **Grunt test** (Testing [[Tough]] if in the same Zone, or [[Mouth]] from afar).
 *   **In-Fighting:** Whenever a Cross-Gang Mob rolls a [[dice pool]] for *any reason* (like an Attack roll, or a Manipulate check), **every 1 rolled results in 1 damage to the Mob itself.** They cannot help themselves; they just start stabbing the other gang! This happens regardless of whether the action is successful or not.
 
-### Action Economy & Combat States
+### Action Economy & Mob Defense
 
 A Mob gets **two (2) actions** per round, reset at the start of each round. A Mob's behavior, actions spent, and defensive capabilities are determined strictly by their combat state:
 
-1.  **Ordered:** The Mob receives direct instructions from the Boss (using a [[Standard Action]] or Free Order). They use **both actions** as per the player's instructions (e.g., moving and attacking). They have **0 saved actions** left for defense (0d6 [[Defence]]).
-2.  **[[Loitering]]:** The Mob is under control but receives no orders on their turn. Goblins are naturally distracted and lazy; they use **1 action** to loiter (roll/choose on the **[[Loitering]] Table** below) and save **1 action** for defense. When attacked, they spend their saved action to roll 1d6 [[Defence]].
-3.  **[[Out of Control]]:** The Mob is uncontrolled (see below). They spend **both actions** running amok under GM control (roll/choose on the **[[Out of Control]] Table** below), leaving them with **0 saved actions** left for defense (0d6 [[Defence]]).
+1.  **Ordered:** The Mob receives direct instructions from the Boss (using a [[Standard Action]] or Free Order). They use **both actions** as per the player's instructions (e.g., moving and attacking).
+2.  **[[Loitering]]:** The Mob is under control but receives no orders on their turn. Goblins are naturally distracted and lazy; they use **1 action** to loiter (roll/choose on the **[[Loitering]] Table** below) and save **1 action**.
+3.  **[[Out of Control]]:** The Mob is uncontrolled (see below). They spend **both actions** running amok under GM control (roll/choose on the **[[Out of Control]] Table** below).
+
+#### Mob Defense & The "Scatter!" Order
+Mobs cannot naturally dodge. When targeted by an incoming attack:
+*   **Passive Armor:** If equipped with Armor, the Mob rolls its passive Armor Dice (5s/6s reduce incoming damage).
+*   **The "Scatter!" Reaction:** The Boss can spend a saved Reaction to yell "Scatter!", rolling Stat dice equal to the Boss's [[Mouth]] stat against the attack's **Threat TN**.
+    *   **Size Target Penalty:** Large swarms are clumsy to disperse. Every point of Mob [[Size]] above 1 increases the attack's Threat TN by **+1** (e.g., a Size 3 Mob suffers +2 TN).
+    *   **Success:** The Mob evades completely (0 damage) and immediately scurries **1 Zone** into cover.
+    *   **Failure:** The Mob takes incoming damage, mitigated only by passive Armor Dice.
+    *   **Mob Gambling:** The Boss can use the [[Gobbo Gamble]] to reroll **1s** on the Mouth dice. If the Gamble still fails, panic breaks out: the Mob takes the attack damage, suffers **1 Trample Damage** to *every single die* in its health pool (like an AoE crush), drops **1 Bulk** of Loot, and becomes [[Out of Control]]. If the Boss is in the same [[Zone]], the Boss is caught in the mob stampede and becomes [[Staggered]].
 
 ### Command Limits (Control vs. Out of Control)
 A Mob is under command as long as they are within line of sight of their Boss and the Mob's current [[Size]] does not exceed the Boss's maximum [[Grunt]] stat. A Mob immediately becomes [[Out of Control]] if:
 1.  **Broken Command:** They break line of sight with their Boss (e.g., they move behind a solid wall or enter a separate room).
 2.  **Command Limit Exceeded:** The Mob's [[Size]] increases beyond the Boss's current [[Grunt]] (often due to merging or the Boss losing Grunt from a Fumble).
 3.  **Morale Failure:** The Mob fails a group [[Morale Check]] and panics.
+4.  **Scatter Gamble Failure:** The Boss fails a [[Gobbo Gamble]] while ordering the Mob to Scatter.
 
 #### Regaining Control
 To bring an [[Out of Control]] Mob back under command, the Boss must spend a [[Standard Action]] to [[Order]] them, resolving it using the standard command test rules in [Giving Orders](../00_Rules/04_Giving%20orders.md). On a success, the Mob becomes controlled and receives their instructions; on a failure, they ignore the Boss and remain [[Out of Control]].

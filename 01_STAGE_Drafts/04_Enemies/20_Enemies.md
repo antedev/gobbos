@@ -9,7 +9,7 @@
 All combat encounters in Gobbos are governed by three overarching rules that define how enemies operate:
 
 ### Deterministic Threats
-The GM never rolls dice. Enemies do not test for success or roll to hit. Their actions are guaranteed threats. If an enemy attacks a [[Boss]] or [[Mob]], it deals its listed damage automatically unless the player spends a saved action to [[Dodge]] (testing [[Slink]]) or [[Parry]] (testing [[Tough]]).
+The GM never rolls dice. Enemies do not test for success or roll to hit. Their actions are guaranteed threats. Every attack has an incoming **Threat** profile and flat **Damage**. When an enemy attacks, it deals its listed damage automatically unless the player resolves a **Clatter Roll** by spending a saved action to [[Dodge]] (testing [[Slink]]) or [[Parry]] (testing [[Tough]]), or absorbs damage with passive **Armor Dice**.
 
 ### The Three Enemy Scales
 Enemies are structured into three distinct mechanical types to determine how they take damage and die:
@@ -32,8 +32,8 @@ Every enemy is defined by a standardized, table-based stat block. The top sectio
 *   **Tags:** Standardized keywords representing physiological or behavioral modifiers.
 *   **Special:** Any unique, custom rules or passive abilities.
 *   **Attacks:** The combat options the enemy can execute.
-    *   **Attack (TN):** The difficulty and [[Target Number (TN)]] a player must roll on their [[Dodge]] or [[Parry]] test to avoid the attack.
-    *   **Damage:** The flat amount of damage dealt if the player fails to defend.
+    *   **Threat:** The difficulty and [[Target Number (TN)]] a player must roll on their [[Dodge]] or [[Parry]] test (or Mob "Scatter!" roll) to completely avoid the blow (e.g. `5+/1`, `4+/2`, `6/1`).
+    *   **Damage:** The flat amount of damage dealt if evasion fails (mitigated by passive Armor Dice).
     *   **Range:** The distance the attack can reach (Melee or Ranged).
     *   **AoE:** The area of effect, if it hits multiple targets.
     *   **Special:** Any special rules applied when using this attack.
@@ -48,7 +48,7 @@ Every enemy is defined by a standardized, table-based stat block. The top sectio
 > **Special:** None
 > 
 > #### [[Attack|Attacks]]
-> | Attack | Target (Attack) | Damage | Range | Special |
+> | Attack | Threat | Damage | Range | Special |
 > | :--- | :---: | :---: | :---: | :--- |
 > | **Rusty Pitchfork** | 5+/1 | 1 | Melee | None |
 

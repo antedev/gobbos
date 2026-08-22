@@ -48,7 +48,7 @@ Your movement stat determines how many zones you can move per [[Move]] action. H
 
 ### Passive Defence
 
-[[Passive Defence]] gives you passive protection against enemy attacks, which essentially means that you have that many extra dice to roll when you are making a save against an attack, even if you don't even spend an action to dodge!
+[[Passive Defence]] gives you passive protection against enemy attacks. These dice roll alongside your armor dice in the colored mitigation pool of the [[Clatter Roll]], reducing incoming damage even if you have no saved actions to dodge!
 
 ---
 

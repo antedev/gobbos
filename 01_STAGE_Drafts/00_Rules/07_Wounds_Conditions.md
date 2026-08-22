@@ -17,14 +17,14 @@ There are a number of conditions that can affect a gobbo. Most of these have a d
 | Condition | PC | Mob |
 |---|---|---|   
 | [[Weakened]] | **-1d** on [[Tough]] | **-1d** on Attack |
-| [[Restrained]] | **-1d** on [[Slink]], [[Movement]] becomes 0 | **-1d** on Dodge, [[Movement]] becomes 0 |
+| [[Restrained]] | **-1d** on [[Slink]], [[Movement]] becomes 0 | Cannot Scatter, [[Movement]] becomes 0 |
 | [[Dumb]] | **-1d** on [[Brains]] and [[Mouth]] | **-1d** on Morale (TBD: Might fail to obey orders) |
 | **Silenced** | **-1d** on [[Mouth]] | **-1d** on Morale |
 | [[Blinded]] | **-1d** on Physical tests | **-1d** on Physical tests |
 | [[Terrified]] | **-1d** on [[Brains]] and [[Mouth]] tests, cannot move closer to the source of fear | **-2d** on Morale tests, Order tests are Hard |
 | [[Stunned]] | Cannot take any actions or reactions | Cannot take any actions or reactions |
-| [[Prone]] | **-1d** on [[Slink]], 1 [[Move]] action to stand up | **-1d** on Dodge, 1 [[Move]] action to stand up |
-| [[Staggered]] | **-1d** on [[Dodge]] and [[Parry]] tests | **-1d** on [[Dodge]] tests (or **-1 Passive Defense** die) |
+| [[Prone]] | **-1d** on [[Slink]], 1 [[Move]] action to stand up | **-1d** on Scatter tests, 1 [[Move]] action to stand up |
+| [[Staggered]] | **-1d** on [[Dodge]] and [[Parry]] tests | **-1 Armor Die** (or **-1d** on Scatter tests) |
 
 *Note: For **Enemies** (who use static target numbers instead of stat pools), the [[Staggered]] condition reduces their [[Defence]] stat by **1** (minimum 1). Additionally, the [[Staggered]] condition is temporary and automatically clears during the Round Closure phase.*
 

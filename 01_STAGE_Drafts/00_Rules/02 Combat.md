@@ -22,21 +22,29 @@ To Attack, the player's base [[dice pool]] is based on the player's [[Tough]] fo
 *   **Bounce:** If you roll **zero (0) successes**, the attack bounces harmlessly off their armor. Nothing happens.
 #### Plunder (Mob or PC)
 The [[Plunder]] action is to pick up any [[Loot]] at where the Player or the Mob stands.  
-#### Dodge / Parry (Reaction)
-The Dodge or Parry action can only be used as a [[Reaction]] to an incoming Attack or Environmental effect. Typically this is in the Enemy Active turn. You **must** have saved a [[Standard Action]] from your turn to use this. If you are out of actions, you simply take the damage!
-*   **Dodge:** Test [[Slink]] (typically **5+/1**). Every success you roll reduces incoming damage by 1.
-*   **Parry:** Test [[Tough]] (requires a shield, typically **5+/1**). Every success you roll reduces incoming damage by 1.
-*   **Armor:** Armor adds [[Passive defence]] dice that do NOT need an action. See more under equipment.
-*   **The Math:** Every success you roll reduces the incoming Damage by 1. If any damage remains, your Gobbo or Mob takes it.
+#### Dodge / Parry (Reaction) & The Clatter Roll
+The Dodge or Parry action can only be used as a [[Reaction]] to an incoming Attack or Environmental effect (typically during the Enemy Active turn). You **must** have saved a [[Standard Action]] from your turn to use this. If you have no saved actions, you cannot attempt to evade and must rely entirely on passive armor to absorb the blow!
 
-**Mob Defense:**
-Mobs do not naturally dodge. They are a chaotic swarm and simply absorb damage. However, a Mob's defensive capabilities depend on their equipment and their current combat state (saved actions):
-1.  **Armored (Passive):** If a Mob is equipped with Armor, they gain passive defense dice (e.g., **+1d6** or **+2d6**) which are rolled against every incoming attack.
-2.  **Saved Actions (Active Defense):** If a Mob has saved actions (because they are [[Loitering]] and only used 1 action on their turn), they can use their saved action as a Reaction to defend. For each saved action spent, the Mob rolls **1d6** Defence.
-    *   *[[Loitering]] Mobs (1 Saved Action):* Rolls **1d6** Defence.
-    *   *Ordered or [[Out of Control]] Mobs (0 Saved Actions):* Rolls **0d6** Defence (relying only on passive Armor).
-    *   *Bane:* A [[Staggered]] Mob suffers a **Bane (-1d)** to their Defence rolls, reducing a [[loitering]] Mob's active defense roll to **0d6**.
-3.  **Ordered Scatter (Reaction):** If a Mob with 0 saved actions is targeted by an attack, the Boss can spend a saved action (or an unused Free Order Reaction) to yell at them to "Scatter!". The Mob rolls active defense dice equal to the Boss's [[Mouth]] stat (e.g., if Mouth is 3, the Mob rolls **3d**). If they survive the attack, they may immediately Move 1 Zone to take cover.
+When targeted by an attack with a listed **Threat** (e.g., `5+/1`) and **Damage** (e.g., `3`), resolve the defense in a single simultaneous throw—the **Clatter Roll**:
+*   **Stat Dice:** Roll your active defense dice: [[Slink]] (for Dodge) or [[Tough]] (for Parry with an equipped shield or heavy weapon).
+*   **Armor Dice:** Roll any passive bonus dice granted by your equipped [[Armor]] (use distinct colored dice, such as gray or black).
+
+**Resolving the Clatter Roll:**
+1.  **Check Stat Dice vs. Threat:** Count successes rolled on your **Stat Dice**. If your successes meet or exceed the attack's **Threat TN**, you achieve a clean Dodge or Parry: **you take 0 Damage**.
+2.  **Mitigation on Failed Evasion:** If your Stat Dice fall short of the Threat TN (or if you had 0 saved actions), the evasion fails. You now look at your **Armor Dice**:
+    *   Every success (**5+**) rolled on your Armor Dice reduces the incoming Damage by 1.
+    *   Any remaining Damage is deducted directly from your [[Grit]].
+
+**Mob Defense & The "Scatter!" Order:**
+Mobs do not have individual attributes and cannot naturally dodge. When targeted by an attack, a Mob resolves defense based on its state and orders:
+1.  **Passive Armor:** If equipped with Armor, the Mob rolls its passive Armor Dice against incoming damage, with each success reducing damage by 1.
+2.  **Active Scatter ("Scatter!" Reaction):** If a Mob is targeted by an attack, the Boss can spend a saved [[Standard Action]] (or an unused Free Order Reaction) to scream "Scatter!". The Mob rolls active defense dice equal to the Boss's [[Mouth]] stat.
+    *   **The Size Target Penalty:** Large mobs occupy more space and are sluggish to disperse. Every point of Mob [[Size]] above 1 increases the enemy attack's Threat TN by **+1** for the Scatter test (e.g., a Size 3 Mob faces a +2 TN penalty).
+    *   **Clean Scatter:** If the Mouth dice meet the modified Threat TN, the Mob evades completely (0 damage) and immediately moves **1 Zone** into cover.
+    *   **Failed Scatter:** If the Mouth dice fail, the Mob takes damage normally, reduced only by any passive Armor Dice successes.
+    *   **Mob Gambling (High-Stakes Mouth Gamble):** If the initial Scatter roll falls short, the Boss may use the [[Gobbo Gamble]] to reroll all **1s** on the Mouth dice. 
+        *   *If the Gamble succeeds:* The Mob pulls off a miracle dive and takes 0 damage.
+        *   *If the Gamble fails:* Panic ensues! The Mob takes the full attack damage, suffers **1 Trample Damage** applied to every single die in the Mob's health pool (like an AoE crush), drops **1 Bulk** of carried [[Loot]], and immediately breaks into the [[Out of Control]] state. If the Boss is present in the same [[Zone]], the Boss is caught in the stampede and gains the [[Staggered]] condition until the end of the round.
 
 ### GM Tactics: Group Attacks (Enemy Swarms)
 If multiple enemies surround and attack a Gobbo, the GM should NOT make separate attacks. Instead, they combine into a [[Group Attack]]. While a PC can only be attacked by a maximum of 3 enemies, there is no limit on attacker on a Mob

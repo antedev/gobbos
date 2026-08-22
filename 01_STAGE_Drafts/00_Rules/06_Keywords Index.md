@@ -26,6 +26,7 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 *   [[Carry]]: An attribute indicating the maximum Bulk of items a character or Mob can carry without penalty.
 *   [[Carry Capacity]]: The maximum weight or Bulk a character can carry without speed or action penalties.
 *   [[Chassis]]: The base item that forms the body of a piece of Custom Gear. Built from Scrap. Determines the item type, Bulk, and base dice.
+*   [[Clatter Roll]]: A simultaneous roll of active Stat Dice (Slink for Dodge or Tough for Parry) alongside colored passive Armor Dice. Meeting the Threat TN results in 0 damage; failing triggers Armor Dice to mitigate remaining damage.
 *   [[Cleave]]: An attack property allowing excess successes to overflow and damage adjacent targets.
 *   [[Condition]]: A temporary state applied to a character or Mob, imposing penalties or mechanical limits.
 *   [[Cover]]: Defensive positioning against ranged attacks. Partial cover grants a [[Boon]] (+1d) to Dodge, or imposes a [[Bane]] (-1d) on attacks. Full cover blocks targeting. See [[02 Combat]].
@@ -38,7 +39,7 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 *   [[Delivery]]: The method by which a magical spell is projected, such as Touch, Ray, or Zone.
 *   [[Dice Pool]]: The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.
 *   [[Difficulty]]: The die face needed to score a success (Easy 4+, Normal 5+, Hard 6). This is typically dependent on the circumstances of the test.
-*   [[Dodge]]: An active Reaction to avoid incoming ranged or area damage by testing Slink, with successes reducing damage.
+*   [[Dodge]]: An active Reaction to completely avoid an incoming attack by rolling Slink against the attack's Threat TN in a Clatter Roll.
 *   [[Dominance]]: A Lair test made to command internal Lair factions or establish authority, reducing unrest.
 *   [[Dragging]]: Pulling Loot that exceeds your carry capacity. Halves your Movement and imposes penalties.
 *   [[Dumb]]: A condition preventing the wielder from casting spells or using Brains-based active Quirks.
@@ -154,6 +155,7 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 *   [[Target Number (TN)]]: The total number of successes required to pass a test (e.g., in shorthand **5+/1**, you need one die to land on 5 or 6). This is typically a fixed number. 
 *   [[Terrified]]: A condition forcing a character or Mob to flee from a source of fear and preventing them from closing distance.
 *   [[Test]]: A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).
+*   [[Threat]]: The incoming evasion profile of an enemy attack (e.g. `5+/1`), defining the Difficulty and TN a defender must meet to avoid damage.
 *   [[Tier]]: The mechanical power level of a Quirk, Tag, Oddity, or item, ranging from 1 to 5.
 *   [[Tier (T)]]: The power level of an Oddity's positive effect. Ranges from 1 to 5.
 *   [[TN]]: Target Number. The total number of success rolls (usually meeting the Difficulty face) required to pass a test.
