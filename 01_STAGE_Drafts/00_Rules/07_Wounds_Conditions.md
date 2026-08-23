@@ -26,7 +26,7 @@ There are a number of conditions that can affect a gobbo. Most of these have a d
 | [[Prone]] | **-1d** on [[Slink]], 1 [[Move]] action to stand up | **-1d** on Scatter tests, 1 [[Move]] action to stand up |
 | [[Staggered]] | **-1d** on [[Dodge]] and [[Parry]] tests | **-1 Armor Die** (or **-1d** on Scatter tests) |
 
-*Note: For **Enemies** (who use static target numbers instead of stat pools), the [[Staggered]] condition reduces their [[Defence]] stat by **1** (minimum 1). Additionally, the [[Staggered]] condition is temporary and automatically clears during the Round Closure phase.*
+*Note: For **Enemies** (who use static target numbers instead of stat pools), the [[Staggered]] condition reduces their [[Defence]] stat by **1** (minimum 1). The [[Staggered]] condition is temporary and automatically clears during the Round Closure phase. An attack can only inflict [[Staggered]] if its **Impact Size** meets or exceeds the target's physical **[[Size]]** (Impact Size >= Target Size). Attacks with lower Impact Size deal normal damage on a full hit, but cannot Stagger on a partial hit.*
 
 # Healing
 

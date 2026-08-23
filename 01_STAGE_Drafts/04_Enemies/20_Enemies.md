@@ -103,7 +103,15 @@ Elite units and Bosses utilize a [[Wound|Wounds]] track.
 *   To deal 1 [[Wound]] to a Boss, a player must roll **successes** equal to or greater than its [[Defence]] [[Target Number (TN)]] in a single attack.
 
 >> **GOLDEN RULE: The Overkill Rule**
->> For every multiple of the [[Defence]] [[Target Number (TN)]] achieved on a single roll, the Boss takes an additional [[Wound]]. 
+>> Against Elites and Bosses, you deal **1 Wound for every full multiple of the target's Defence TN** scored on a single attack roll (e.g., against Defence 2, scoring 2 successes deals 1 Wound, 4 successes deals 2 Wounds, and 6 successes deals 3 Wounds).
+
+### Mass & Stagger Resistance (The Impact Size Standard)
+Enemies whose physical [[Size]] exceeds an attack's **Impact Size** possess natural mass resistance. A foe is **immune to the [[Staggered]] condition** from partial hits unless the attack's **Impact Size** meets or exceeds the target's physical **[[Size]]** ($\text{Impact Size} \ge \text{Target Size}$):
+*   **Standard Single Attacks:** $\text{Impact Size} = \text{Attacker Physical Size}$ (Size 1 for Goblins and standard humanoids).
+*   **Mob Swarms:** $\text{Impact Size} = \text{Current Mob Size}$ (Size 1 to 5).
+*   **Heavy Weapons:** Adds **+1** to Impact Size (a Size 1 Goblin wielding a two-handed hammer attacks with **Impact Size 2**).
+*   **Crushing Weapons:** Adds **+2** to Impact Size (attacks with **Impact Size 3**).
+*   **Explosives & Spells:** $\text{Impact Size} = \text{Tier}$ (T1 = Size 1, T2 Grenade = Size 2, T3 Powder Keg = Size 3, T4 Mortar = Size 4, T5 Reactor = Size 5).
 
 ---
 
@@ -126,3 +134,9 @@ If there is a surviving **Enemy Commander** who did not break, they can use an a
     *   *Fiction:* The players roll to represent the Goblins banging their shields, screaming, and actively drowning out the Commander's orders to keep the enemies panicked.
 *   If the players succeed, the troops keep running.
 *   If the players fail, the Commander successfully rallies the troops, and they stop fleeing.
+
+---
+
+## 7. The Bestiary
+
+For a comprehensive roster of standard, elite, boss, and mob creature stat blocks, see [Bestiary: Classic & Tough Threats](21_Bestiary.md).

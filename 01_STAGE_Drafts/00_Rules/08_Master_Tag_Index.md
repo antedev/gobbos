@@ -56,6 +56,11 @@ When two dynamic elements meet (either combined in [[custom gear]] crafting or o
 *   *Universal Baseline:* Reduces the target's [[Movement]] by 1 Zone (minimum 0) for 1 round.
 *   *Fictional Interaction:* Freezes standing water, cracks brittle stone, and extinguishes fires.
 
+#### `[Explosive]`
+*   *Flavor:* Black powder, pressurized boilers bursting, or volatile alchemical detonations.
+*   *Universal Baseline:* Detonation. Produces an Area Threat Profile affecting all targets in the [[Zone]]. An explosion has an **Impact Size equal to its Tier (T1–T5)**, allowing it to **Stagger**, shove, or knock [[Prone]] any creature whose physical [[Size]] is equal to or smaller than the explosion's Impact Size (Impact Size >= Target Size).
+*   *Fictional Interaction:* Shatters wooden barricades, collapses stone tunnels, destroys cover, and ignites `[Slick]` grease.
+
 #### `[Fire]`
 *   *Flavor:* Crackling embers, liquid pitch, or sudden alchemical heat.
 *   *Universal Baseline:* Deals **+1 Success** on attack tests and places the `[Burning]` tag on the target's Zone.

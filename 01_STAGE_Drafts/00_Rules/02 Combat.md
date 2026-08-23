@@ -18,7 +18,13 @@ With a Move action, you can move up to your [[Movement]] number of zones. The di
 The Attack action can only be used in the Players Active turn. 
 To Attack, the player's base [[dice pool]] is based on the player's [[Tough]] for [[Melee attack]] and [[Slink]] for [[Ranged attack]], modified by any equipment, Quirks, or other circumstances. 
 *   **Kill / Wound:** If you roll successes equal to or greater than the target's current [[Defence]] (acting as the test's [[TN]]), you instantly defeat a standard enemy, deal 1 [[Wound]] to a Boss/Elite (see [Enemies](../04_Enemies/20_Enemies.md)), or reduce a Mob's [[Size]] by the number of successes scored.
-*   **Stagger:** If you roll at least **one (1) success** but fewer than the target's current [[Defence]] TN, the attack does not deal damage, but it throws them off balance. The target gains the [[Staggered]] condition until the end of the round.
+*   **Stagger (Impact Size vs. Target Size):** If you roll at least **one (1) success** but fewer than the target's current [[Defence]] TN, the attack does not deal damage, but it can throw the target off balance. To inflict the [[Staggered]] condition, the attack's **Impact Size** must be equal to or greater than the target's **Physical [[Size]]** (Impact Size >= Target Size):
+    *   **Calculating Impact Size:**
+        *   *Standard Attacks:* Equal to the attacker's physical [[Size]] (a lone Goblin Boss is **Size 1**; a [[Mob]] uses its current **Mob [[Size]]**).
+        *   *`Heavy` Weapon Trait:* Adds **+1** to Impact Size (a Size 1 Goblin swinging a heavy hammer attacks with **Impact Size 2**).
+        *   *`Crushing` Weapon Trait:* Adds **+2** to Impact Size (attacks with **Impact Size 3**).
+        *   *Explosives & Spells:* An explosion's Impact Size equals its **Tier** (T1 = Size 1, T2 Grenade = Size 2, T3 Powder Keg = Size 3, T4 Mortar/Cannon = Size 4, T5 Reactor = Size 5).
+    *   *Result:* If Impact Size >= Target Size, the target gains the [[Staggered]] condition until the end of the round. If Impact Size < Target Size, the target has natural mass resistance and ignores the Stagger effect entirely.
 *   **Bounce:** If you roll **zero (0) successes**, the attack bounces harmlessly off their armor. Nothing happens.
 #### Plunder (Mob or PC)
 The [[Plunder]] action is to pick up any [[Loot]] at where the Player or the Mob stands.  
