@@ -40,7 +40,8 @@ Whenever you pick up new [[Loot]] or gear, add together the total [[Bulk]] of al
 Most standard weapons and tools are Bulk 1 or 2, fitting neatly into packs, belt holsters, or single-hand grips. Heavy objects of **Bulk 3 or higher** (such as massive iron chests, great anvils, stone gargoyles, or siege kegs) are clumsy and require special handling:
 
 *   **Two Hands Required:** Hauling a loose Bulk 3+ item requires **two hands**. While holding it, you cannot wield a weapon, hold a shield, or perform somatic spellcasting.
-*   **Dropping as a Free Action:** You may drop a carried Bulk 3+ item at any time as a [[Free Action]] (even during an enemy's turn before rolling a [[Dodge]] reaction).
+*   **Dropping vs. Stowing:** Dropping a carried item onto the floor is a [[Free Action]] (which you can do at any time, even during an enemy's turn before rolling a [[Dodge]] reaction). Safely stowing an item into a pack, sack, or belt harness requires a [[Standard Action]].
+*   **No Disengage with Bulk 3+:** Because hauling a Bulk 3+ item requires two hands and impairs agile movement, you **cannot perform a Disengage action** while clutching it. If threatened in Melee, you must either drop the item as a Free Action to attempt Disengaging, defeat the threatening foes first, take the Opportunity Attacks, or order a Mob to haul the plunder.
 *   **Boss Item Limit:** A [[Goblin Boss]] cannot haul more than half their Tough (Tough / 2, rounded down; minimum 1) in loose Bulk 3+ items at one time. For example, a Boss with Tough 1–3 can haul at most one loose Bulk 3+ item, while a Boss with Tough 4–5 can haul two.
 
 ---

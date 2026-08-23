@@ -209,7 +209,7 @@ These scenarios illustrate how different hazards, opportunities, and Mob rules p
 ### Example 1: Slipping on the Ice (Slink Tests)
 > **Example:** Grub (PC) and his **Size 3** Mob run from town guards into a frozen courtyard designated as **Zone A** (Profile: **5+/2**; Trait: **Slippery**). 
 > * **The PC**: Grub enters the zone and must make a Slink test. Grub has **Slink 2**, rolling **2d6** (Stat). He rolls `5, 5`—two successes! He keeps his footing.
-> * **The Mob**: The Mob enters the zone. Mobs roll exactly **1d6** for [[Slink]] tests. The player rolls `5`—only one success! The Mob fails the **5+/2** Slink test. The Mob falls [[Prone]] and their movement ends immediately in the middle of the ice sheet.
+> * **The Mob**: The Mob enters the zone. Mobs roll a base of **2d6** for [[Slink]] tests. The player rolls `5, 3`—only one success! The Mob fails the **5+/2** Slink test. The Mob falls [[Prone]] in a dog-pile, and their movement ends immediately in the middle of the ice sheet. Grub could choose to push the roll and reroll the `3`, risking a Fumble if it still fails!
 
 ### Example 2: Braving the Toxic Fumes (Tough Tests & Mob Scaling)
 > **Example:** Snarl (PC) and her massive **Size 5** Mob are pursuing a dwarf through a sewer pipe designated as **Zone B** (Profile: **5+/2**; Traits: [Toxic] and **Narrow**). They start their turn in the zone.

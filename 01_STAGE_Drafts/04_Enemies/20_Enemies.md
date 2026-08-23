@@ -17,6 +17,9 @@ Enemies are structured into three distinct mechanical types to determine how the
 2.  **Bosses & Elites:** Powerhouses that cannot be killed in a single strike. They track damage using a [[Wound|Wounds]] track.
 3.  **Enemy Mobs:** Groups of standard enemies acting as a single unit, using a shared **Dice-HP** pool.
 
+### Enemy Actions
+On the Enemy Active Turn, each enemy unit (Standard, Mob, or Elite) receives **two (2) actions** per round by default to spend on moving, attacking, or interacting with the environment. Colossal Apex Bosses or specialized threats may possess unique traits granting **three (3) actions** or automated action clocks. Any action spent on a reaction earlier in the round reduces their available actions during their turn.
+
 ---
 
 ## 2. The Stat Block

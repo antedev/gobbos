@@ -218,7 +218,7 @@ Every creature belongs to an **Ancestry** that establishes its universal behavio
 | :---: | :---: | :---: | :--- |
 | **2** | **1** | **5+/2** | `[Hardened]` |
 
-**Special — Parrying Buckler:** The first melee attack made against the highwayman each round is **Hard (6)**. Subsequent melee attacks from other attackers in the same round (or any attack from a [[Mob]]) are resolved at Normal difficulty (**5+**).  
+**Special — Parrying Buckler:** The first melee attack committed against the highwayman each round (regardless of whether it hits or misses, and whether made by a Boss or a Mob) must be rolled at **Hard (6)**. Once that first attack resolves, the buckler is committed and all subsequent melee attacks in the same round are resolved at Normal difficulty (**5+**).  
 **Special — Heavy Cleave:** Hits from the highwayman's broadsword inflict the [[Staggered]] condition on the target until the end of the round.
 
 #### [[Attack|Attacks]]

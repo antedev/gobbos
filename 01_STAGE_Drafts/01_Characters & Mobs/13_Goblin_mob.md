@@ -16,9 +16,12 @@ The absolute most important stat for a Mob is its [[Size]]. Size determines ever
 *Note: The number of goblins in a Mob is abstract. A Size 1 Mob might be 3-5 goblins, while a Size 5 Mob is a swarming horde of 30+.*
 
 ## Mob Equipment & Loot Tradeoff
-Mobs can be equipped with scavenged weapons and armor, but this comes at a steep cost to their greed. 
-*   **Mob Armor:** Equipping a Mob with Armor grants them passive **Armor Dice** (e.g., **+1d6** or **+2d6**). Whenever the Mob is attacked, you roll these dice simultaneously against incoming damage. Every success (**5+**) reduces the incoming damage by 1.
-*   **The Tradeoff:** Every piece of Gear a Mob is equipped with reduces their **Carry / [[Loot Capacity]]** by an equal amount of Bulk. A heavily armored Mob will survive longer, but they will not be able to carry the raiding loot back to the lair! A naked, feral Mob will die quickly but can carry a horde of treasure.
+Mobs can be equipped with scavenged weapons, armor, and utility tools, but this comes at a steep cost to their greed. 
+
+*   **Mob Armor:** Equipping a Mob with Armor grants them passive **Armor Dice** (e.g., **+1d6** or **+2d6**). Whenever the Mob is attacked, you roll these dice simultaneously against incoming damage. Every success (**5+**) reduces the incoming damage by 1. Outfitting a Mob with armor requires sufficient gear for the swarm: Mob Armor costs **Bulk equal to the Armor's Bulk rating multiplied by Mob Size** (e.g., Light Armor costs **Size x 1 Bulk**; Medium Armor costs **Size x 2 Bulk**).
+*   **Expedition Tools & Utility Gear:** Tools (such as Ropes, Crowbars, Lanterns, or Shovels) are shared by the squad. Each tool costs its standard flat **Bulk** rating (e.g., 1 Bulk for 1 Rope & Grappling Hook). 1 tool carried in the squad's pack serves the entire Mob.
+*   **The Tradeoff:** Every piece of gear a Mob is equipped with reduces their **Carry / [[Loot Capacity]]** by an equal amount of Bulk. A heavily armored Mob will survive longer, but they will not be able to carry the raiding loot back to the lair! A naked, feral Mob will die quickly but can carry a horde of treasure.
+*   **Casualties & Equipped Gear:** Equipped **Mob Armor** and **Mob Weapons** scale dynamically with the Mob's current **Size**. When a Mob loses Size from casualties, the armor and weapons of the fallen goblins remain on their corpses on the battlefield. Equipped gear never causes an encumbrance overload when Size drops. Only loose **Loot** and **Expedition Tools** count against the Mob's reduced capacity.
 
 ### Health & Taking Damage
 A Mob's health is tracked physically on the table using a number of D6s equal to its Size (e.g., A Size 3 mob starts with three physical dice turned to the "6" face). 
@@ -34,7 +37,7 @@ If an attack explicitly has the AoE or Cleave trait, the incoming damage is appl
 
 > *Example: A Fireball deals 3 Damage to a Size 5 Mob. Instead of just reducing one die by 3, you reduce ALL 5 dice by 3. That single fireball just dealt 15 total damage!*
 
-**Dropping Loot:** If a Mob shrinks in Size, their [[Loot Capacity]] also drops! If they are suddenly carrying more Bulk than their new Size allows, the controlling PC must immediately choose which Loot is dropped on the floor. 
+**Dropping Loot:** If a Mob shrinks in Size, their [[Loot Capacity]] also drops! If they are suddenly carrying more loose [[Loot]] and tools than their new Size allows, the controlling Boss must immediately choose which Loot is dropped on the floor. 
 
 ## Splitting and Merging Mobs
 A Boss can dynamically manage their swarm by splitting Mobs apart or merging them together. 
@@ -43,11 +46,15 @@ A Boss can dynamically manage their swarm by splitting Mobs apart or merging the
 A Boss can use an [[Order]] to tell a Mob to split instead of taking their normal 2 actions. 
 *   **The Math:** A Size 5 mob splits into two smaller mobs (e.g., Size 3 and Size 2). The Boss decides how to distribute the current physical dice.
 *   **The Benefit:** Splitting is an excellent way to mitigate AoE/Cleave damage, or to fit Mobs into narrow terrain.
+*   **Gear Distribution on Split:** 
+    *   *Expedition Tools:* The Boss assigns each carried tool (Ropes, Crowbars) to one specific resulting Mob. Tools cannot be duplicated.
+    *   *Mob Armor:* Armor travels with the goblins wearing it. Both split squads retain the same Armor Tier (+1d or +2d), and their carried Bulk reflects their new individual Size (e.g., a Size 2 Mob carrying 4 Bulk of Medium Armor).
 
 ### Merging Mobs
 If two Mobs belonging to the same player end their turn in the same Zone, the Boss can use an [[Order]] or [[Manipulate]] action to merge them.
 *   **The Math:** You add the D6s together (e.g., a Size 2 and Size 3 Mob become a new Size 5 Mob). 
 *   **The Grunt Cap:** The total Size of the new Mob *cannot exceed* the Boss's [[Grunt]]. If a Boss merges a Mob until it exceeds their Grunt, it immediately becomes Uncontrolled (see below).
+*   **Gear Merging & Armor Dilution:** All carried tools and loot combine into the new Mob's pool. If an armored Mob merges with an unarmored Mob, the new combined Mob only gains the Armor bonus if the total equipped armor covers the new combined Size. Otherwise, the armor is diluted and drops by 1 Tier (e.g., Medium Armor drops to Light Armor).
 
 ### The Super-Mob (Cross-Gang Merging)
 Mobs from different player Gangs *can* merge if both Bosses agree. This creates a terrifying, chaotic massive [[dice pool]].
@@ -102,13 +109,41 @@ When a Mob is [[Loitering]] or [[Out of Control]], roll **1d6** on the appropria
 
 ---
 
-## Mob Tests & Attributes
-Goblins in a Mob do not have individual stats (like [[Tough]], [[Slink]], [[Brains]], or [[Mouth]]). Instead, their [[dice pool]] for any non-combat test is resolved using the core [[Stat]] dice rule based on the nature of the test:
+## Mob Tests & Hazard Resolution
+Goblins in a Mob do not have individual stats (like [[Tough]], [[Slink]], [[Brains]], or [[Mouth]]). When an ordered Mob makes a non-combat test against a [[Zone Profile]] or obstacle, assemble their [[dice pool]] using the following core framework:
 
-*   **Tough Tests (Strength, Endurance, Mass):** Roll [[Size]] dice. A Mob's collective strength and body mass are directly tied to their [[Size]]. Larger Mobs are much better at lifting gates, swimming against currents, or resisting toxic gas.
-*   **Slink Tests (Stealth, Dodging, Balance):** Always roll exactly **1d6** (representing a default stat value of 1). A crowd is inherently loud and clumsy. Regardless of the Mob's [[Size]], one goblin tripping cascades to others, making stealth, balance, and quick dodging difficult.
-*   **Brains & Mouth Tests (Thinking, Social):** Always roll exactly **1d6** (representing a default stat value of 1). Without their Boss's direct instructions, a Mob is a disorganized mess and cannot coordinate complex tasks or trade.
+*   **Tough Tests (Strength, Endurance, Mass, Resisting Toxins):** Roll dice equal to the Mob's current **[[Size]]** (**1d6 to 5d6**). A large Mob has tremendous mass, collective leverage, and muscle.
+*   **Slink Tests (Stealth, Dodging, Balance on Ice, Climbing):** Always roll a base of **2d6**. A crowd of goblins has enough natural agility to manage basic traversal, but remains prone to clumsiness.
+*   **Brains & Mouth Tests (Searching Junk, Deciphering, Social):** Always roll a base of **2d6**. Without the Boss's direct intellect, a Mob has a baseline cunning but lacks specialized expertise.
 
-### Mob Gear Upgrades
-Any gear equipped to a Mob that assists with specific tests (like *silent shoes* for Slink tests or *protective masks* for Tough tests against gas) applies its benefits as standard [[Boon|Boons]] (+1d per Boon) to these base rolls.
-> **Example:** A Mob equipped with *silent shoes* gains a [[Boon]] (+1d) to Slink tests, rolling **2d6** instead of the base **1d6**.
+### Fumbles & Pushing 1s on Mob Tests
+If a Mob fails a test and one or more dice show **1s**, the controlling **Goblin Boss** can choose to push their luck and reroll all **1s**. If the rerolled test still fails, the effort suffers a [[Fumble]], and the **Goblin Boss loses 1 [[Grunt]]** as their authority takes the blame for the blunder.
+
+### Mob Hazard Consequences
+When a Mob fails a test against an environmental obstacle or hazard:
+*   **Slippery / Slick Surfaces:** The Mob slips and crashes into a dog-pile, gaining the **[[Prone]]** condition. Their movement ends immediately inside the zone, and they must spend 1 Action on their next turn to stand back up.
+*   **Chasms & Heights:** The lead runts plummet over the edge. The Mob suffers standard Hazard Damage (1–3 damage applied to its active Mob health dice) and lands **[[Prone]]** at the bottom.
+*   **Toxic Spores / Gas Clouds:** The Mob gags and chokes, gaining the **[[Weakened]]** condition (**Bane 1 (-1d)** on all physical tests).
+*   **Deep Mud / Quicksand:** The Mob gets bogged down, gaining the **[[Restrained]]** condition. Escaping requires 1 Action and a successful [[Tough]] test (rolling **Size dice**).
+
+### Mob Gear Upgrades & Tools
+Equipping a Mob with relevant tools modifies their base test pools:
+*   **Permission Tools (Ropes, Torches):** Bypasses the need for a roll entirely once set up (e.g., swarming up an anchored climbing rope requires no test).
+*   **Boon Tools (Crowbars, Crampons, Camo-Tarps):** Grants **+1d** to the test pool (e.g., a Mob with *crampons* rolls **3d6** on Slippery tests).
+*   **Difficulty Tools (Lockpicks):** Shifts the test Difficulty (e.g., from Hard to Normal).
+
+---
+
+## Mob Sacrifice Maneuvers
+
+When a Gang lacks the proper tools (or wants to save precious [[Bulk]] capacity for heavy [[Loot]]), a **Goblin Boss** can order their **Mob** to perform disposable goblin maneuvers. 
+
+Sacrifice maneuvers utilize the expendable bodies of lesser goblins to bypass dungeon hazards, assist the Boss, or clear obstacles:
+
+| Maneuver Name | Minimum Mob Size | Action & Damage Cost | Mechanical Benefit |
+| :--- | :---: | :--- | :--- |
+| **Gobbo Pyramid** *(Living Ladder)* | **Size 2** | **1 Mob Action** | Goblins stack onto shoulders. The Boss or an allied character climbs **1 vertical Zone** without needing a rope or making a climbing test. |
+| **Living Bridge** *(Chasm Crosser)* | **Size 3** | **1 Mob Action** + **1 Mob Health Damage** | Goblins link arms and bite belts across a pit or gap. Allied Bosses walk across safely without making any test. The Mob takes 1 damage to its active health die from trample strain. |
+| **Canary Runt** *(Trap Tripper)* | **Size 1** | **1 Mob Health Damage** | A single runt is sent sprinting ahead into a discrete triggered trap (pressure plates, tripwires, falling dart blocks) or across untested ice. The trap triggers, clearing the path safely for the rest of the gang. *(Note: Cannot clear persistent ambient Zone traits like gas clouds or burning zones).* |
+| **Meat Cushion** *(Soft Landing)* | **Size 1** | **Mob Reaction** (Cost: Mob takes Fall Damage) | If a Boss falls into a Zone occupied by an allied Mob, the Mob cushions the fall. The Boss takes **0 damage**. The Mob absorbs the impact, taking the full falling damage across its health dice. |
+| **Gnaw the Hinges** *(Crowbar Substitute)* | **Size 2** | **1 Mob Action** | The Mob tears at locked iron doors or chest hinges with teeth and crude shivs. Roll a standard [[Tough]] test (**Size dice**). If the test fails after pushing 1s, the Mob takes **1 damage** from chipped teeth, crushed fingers, and falling debris. |

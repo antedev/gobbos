@@ -17,7 +17,7 @@ With a Move action, you can move up to your [[Movement]] number of zones. The di
 #### Attack (Mob or PC)
 The Attack action can only be used in the Players Active turn. 
 To Attack, the player's base [[dice pool]] is based on the player's [[Tough]] for [[Melee attack]] and [[Slink]] for [[Ranged attack]], modified by any equipment, Quirks, or other circumstances. 
-*   **Kill / Wound:** If you roll successes equal to or greater than the target's current [[Defence]] (acting as the test's [[TN]]), you instantly defeat a standard enemy, deal 1 [[Wound]] to a Boss/Elite (see [Enemies](../04_Enemies/20_Enemies.md)), or reduce a Mob's [[Size]] by the number of successes scored.
+*   **Kill / Wound / Mob Damage:** If you roll successes equal to or greater than the target's current [[Defence]] (acting as the test's [[TN]]), you instantly defeat a standard enemy, deal 1 [[Wound]] to a Boss/Elite (plus additional Wounds for every full multiple of Defence TN scored; see [Enemies](../04_Enemies/20_Enemies.md)), or deal damage to an Enemy [[Mob]] reducing the face value of its active Health Die (losing a die when reduced below 1, which reduces the Mob's [[Size]] by 1; see [Goblin Mobs](../01_Characters%20&%20Mobs/13_Goblin_mob.md)).
 *   **Stagger (Impact Size vs. Target Size):** If you roll at least **one (1) success** but fewer than the target's current [[Defence]] TN, the attack does not deal damage, but it can throw the target off balance. To inflict the [[Staggered]] condition, the attack's **Impact Size** must be equal to or greater than the target's **Physical [[Size]]** (Impact Size >= Target Size):
     *   **Calculating Impact Size:**
         *   *Standard Attacks:* Equal to the attacker's physical [[Size]] (a lone Goblin Boss is **Size 1**; a [[Mob]] uses its current **Mob [[Size]]**).
@@ -42,9 +42,9 @@ When targeted by an attack with a listed **Threat** (e.g., `5+/1`) and **Damage*
     *   Any remaining Damage is deducted directly from your [[Grit]].
 
 **Mob Defense & The "Scatter!" Order:**
-Mobs do not have individual attributes and cannot naturally dodge. When targeted by an attack, a Mob resolves defense based on its state and orders:
+Mobs do not have individual attributes and cannot naturally dodge. A Mob has a strict maximum of **two (2) actions per round**. If an Order directed them to spend both actions on the Player Active turn, they have 0 actions left and cannot react. When targeted by an attack, a Mob resolves defense based on its state and available actions:
 1.  **Passive Armor:** If equipped with Armor, the Mob rolls its passive Armor Dice against incoming damage, with each success reducing damage by 1.
-2.  **Active Scatter ("Scatter!" Reaction):** If a Mob is targeted by an attack, the Boss can spend a saved [[Standard Action]] (or an unused Free Order Reaction) to scream "Scatter!". The Mob rolls active defense dice equal to the Boss's [[Mouth]] stat.
+2.  **Active Scatter ("Scatter!" Reaction):** If a Mob has at least **1 unused action remaining**, the Boss can spend a saved [[Standard Action]] (or an unused Free Order) as a reaction to scream "Scatter!". The Mob uses its remaining action to roll active defense dice equal to the Boss's [[Mouth]] stat.
     *   **The Size Target Penalty:** Large mobs occupy more space and are sluggish to disperse. Every point of Mob [[Size]] above 1 increases the enemy attack's Threat TN by **+1** for the Scatter test (e.g., a Size 3 Mob faces a +2 TN penalty).
     *   **Clean Scatter:** If the Mouth dice meet the modified Threat TN, the Mob evades completely (0 damage) and immediately moves **1 Zone** into cover.
     *   **Failed Scatter:** If the Mouth dice fail, the Mob takes damage normally, reduced only by any passive Armor Dice successes.
@@ -60,11 +60,12 @@ If multiple enemies surround and attack a Gobbo, the GM should NOT make separate
 
 #### Manipulate
 The Manipulate action is a catch-all for whenever a Mob or PC tries to interact with an item or the environment in any way. The base [[dice pool]] is based on whatever attribute is most relevant to the action, modified by any equipment, Quirks, or other circumstances. The GM sets the [[Difficulty]] and [[TN]] (typically **5+/1**). 
+*   **Player-Triggered Traps & Hazards:** When a player spends an action to trigger an environmental hazard or trap against enemies (such as dropping a chandelier or cutting a rope), the player first tests the relevant stat to activate it. To determine the effect without GM rolls, the player rolls the trap's listed **Damage Dice Pool** (e.g. 3d6, where each success on **5+** deals 1 Damage or 1 Wound).
 
 #### Order 
-The [[Order action]] is used to give commands to your goblins, directing a Mob to use both of their actions for the round. Standard Orders to controlled Mobs do not require a dice roll.
+The [[Order action]] is used to give commands to your goblins, directing a Mob to use up to their **two (2) actions** for the round. Standard Orders to controlled Mobs do not require a dice roll.
 *   **The 3 Mob States:** A Mob is always in one of three states on their turn:
-    *   **Ordered:** Direct instructions from the Boss. They spend both actions as ordered (0 saved actions for defense).
+    *   **Ordered:** Direct instructions from the Boss. They spend 1 or both actions as ordered. If they spend both actions, they have 0 saved actions left for defense. If ordered to spend only 1 action (e.g. Move), their remaining 1 action is saved.
     *   **[[Loitering]]:** Under control, but receives no orders. Goblins use **1 action** to loiter (roll/choose on the [[Loitering]] Table in [Goblin Mobs](../01_Characters%20&%20Mobs/13_Goblin_mob.md)) and save **1 action** for defense (1d6 [[Defence]]).
     *   **[[Out of Control]]:** Broken command (out of sight, size exceeds Grunt, or failed morale). They spend both actions running amok under GM control (roll/choose on the [[Out of Control]] Table in [Goblin Mobs](../01_Characters%20&%20Mobs/13_Goblin_mob.md)), leaving them with 0 saved actions for defense.
 *   **Regaining Control:** To regain control of an [[Out of Control]] Mob, the Boss must spend a [[Standard Action]] to [[Order]] them, resolving it using the standard command test rules in [Giving Orders](04_Giving%20orders.md). On a success, the Mob becomes controlled and receives their instructions; on a failure, they ignore the Boss and remain [[Out of Control]].
@@ -108,8 +109,8 @@ On the Players *active* turn, they can use any actions they want to move, plunde
 2.  **Unordered Mobs:** Once all players have finished taking their actions, any Mobs that were **not ordered** this turn (both [[Loitering]] and [[Out of Control]] Mobs) resolve their behaviors. Roll on the appropriate behavior table for each.
 During this phase, the GM may use enemy reactions to respond to players or mobs (e.g., taking opportunity shots or counter-attacking). 
 ### Enemy active turn
-On the Enemies active turn, they can use whatever action they have left, which might have been spent on reactions. 
-In this phase the Players might react to anything a enemy is doing, if they saved up any actions from their active phase. 
+On the Enemy Active turn, all enemies take their actions. Standard enemies, Enemy Mobs, and Elites receive **two (2) actions** per round by default (used to Move, Attack, etc.). Truly colossal Apex Bosses or specialized monsters may possess traits granting **three (3) actions** or unique action clocks. If an enemy spent an action on a reaction earlier in the round, that action is deducted from their pool now.
+In this phase, players might react to enemy attacks using saved Standard Actions (e.g., Dodge or Parry Clatter Rolls, or shouting "Scatter!" to a Mob with a saved action).
 ### Round closure
 #### Points
 [[Raid points]] are calculated, including currently held as well as confirmed, based on objectives and the basic Raid rules. 
@@ -127,6 +128,7 @@ If there are no one fighting on one side, or one side gives up or flees, the Com
 Goblins are cowards at heart, and running away is a highly viable survival strategy.
 *   **Escape Zones:** To flee an encounter, a PC or Mob must move into a designated escape zone or exit.
 *   **Disengaging & Opportunity Attacks:** If a PC or Mob attempts to leave a Zone containing alert enemies, they trigger a reactionary Opportunity Attack from each enemy in the zone. To prevent this, they must spend a [[Standard Action]] to Disengage, testing [[Slink]] against a difficulty of **5+** and successes required equal to the highest enemy [[Defence]] TN (denoted as **5+/Defence**). On a success, they may move out of the Zone safely.
+    *   *Bulk 3+ Restriction:* Hauling a loose Bulk 3+ item requires two hands. You **cannot perform a Disengage action** while clutching a Bulk 3+ item. To escape safely, you must either drop the item as a [[Free Action]], defeat the threatening enemies, or have a Mob carry the loot.
 *   **Carrying Bulk:** Goblins fleeing with heavy treasure are slowed. Standard movement and dragging penalties for [[Bulk]] apply while fleeing. A PC or Mob can choose to drop their loot as a [[Free Action]] to restore full movement speed.
 *   **Mob Fleeing:** Mobs flee when given a "Scatter" or "Retreat" Order, or automatically when a failed [[Morale Check]] triggers group panic.
 

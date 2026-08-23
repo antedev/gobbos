@@ -123,6 +123,11 @@ When an incoming strike would deal enough unmitigated damage to reduce your [[Gr
 *   **The Salvation:** The destroyed piece of gear absorbs the blow completely, reducing the incoming attack's damage for that strike to **0**.
 *   *(Note: This desperate tactic applies strictly to PC Bosses. Mobs do not track individual ablative equipment).*
 
+### Equipping Mobs with Armor & Tools
+Outfitting a [[Mob]] with gear follows two distinct rules:
+*   **Mob Armor (Scaled Bulk):** Outfitting an entire swarm with protective scrap requires sufficient metal for every goblin. Mob Armor costs **Bulk equal to the Armor's Bulk rating multiplied by Mob Size** (e.g., Light Armor costs **Size x 1 Bulk**; Medium Armor costs **Size x 2 Bulk**). When a Mob suffers casualties and shrinks in Size, the armor of the fallen remains with their corpses on the battlefield—it does not cause an encumbrance overload.
+*   **Expedition Tools (Flat Bulk):** Tools (Ropes, Crowbars, Lanterns, Shovels) are shared by the squad. Each tool costs its standard flat **Bulk** rating (e.g., 1 Bulk for 1 Climbing Rope). 1 tool carried in the squad's pack serves the entire Mob.
+
 ---
 
 ## Tools & Mundane Utility
