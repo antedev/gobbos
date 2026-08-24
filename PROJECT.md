@@ -1,156 +1,93 @@
-# Project: Gobbos Combat Simulation & Balance Toolkit
+# Project: Gobbos TTRPG Modular Core Rules Synthesis
 
 ## Architecture
-The system is a pure Python tactical combat simulation and balance toolkit located in `05_System_Tools/combat_sim`. It provides:
-1. **Core & Types (`combat_sim.core`)**: Dice pool roller with exploding 6s, salvage rolls, Gobbo Gamble 1s reroll, Bangaranga pool, events model, and system enums.
-2. **Tactical Domain (`combat_sim.domain`)**: Goblin Bosses, Mobs, Standard/Elite/Mob Enemies, Equipment (Weapons, Armor, Shields, Consumables/Explosives), Quirks, Ancestries, Traits, and Graph-based Zone Topologies.
-3. **Combat Engine (`combat_sim.engine`)**: Full 5-phase combat loop (Setup, Round Start, Player Active, Enemy Active, Round Closure), Clatter Roll resolver (active evasion vs passive armor mitigation), Mob health dice array decrement/spillover/AoE duplication, deterministic enemy threats, and tactical AI heuristics.
-4. **Scenarios Library (`combat_sim.scenarios`)**: Scenario definitions and pre-built reference encounters (Street Skirmish, The Mauler's Den, Tomb of the Highwayman).
-5. **Interactive CLI Runner (`combat_sim.cli`)**: Step-by-step turn-by-turn interactive or automated runner with human-readable, rich event logs.
-6. **Monte Carlo Analytics (`combat_sim.analytics`)**: High-performance batch simulation engine (1,000+ runs in <10s) with statistical aggregation, win/loss/TPK rates, Grit and Mob survival distributions, and balance A/B analytics.
-7. **Comprehensive Test Suite (`tests/`)**: 4-Tier requirement-driven E2E tests + unit test suite verifying every rule and trait.
+The system is a streamlined, modular, zero-math TTRPG core rulebook located in `02_PROD_Core_Rules/`.
+It isolates pure game mechanics and systemic loops from living content catalogs (weapons, equipment catalogs, spell lists, monster bestiaries, quirk compendiums), establishes single-source rule definitions with strict cross-references, embeds standardized structural schemas with `[CONTENT EXTENSION POINT]` tags, and explicitly flags all mechanical gaps with `[MISSING RULE / GAP]` tags.
+
+### Modular Chapter Structure (`02_PROD_Core_Rules/`)
+1. `01_Core_Resolution.md` — Core Resolution & Dice Pool Engine (Pool tests, Exploding 6s, Salvage rolls, Gobbo Gamble, Boons & Banes, Bangaranga pool).
+2. `02_Boss_Profile_and_Gang.md` — Attributes, Boss Profile & Gang Fundamentals (Main Stats 1–5, Grunt, Grit, Boss creation, Gang archetype, Quirk Schema & `[CONTENT EXTENSION POINT: Boss Quirks & Talents]`).
+3. `03_Action_Economy_and_Turn_Flow.md` — Action Economy & Turn Flow (3 Standard Actions + 1 Free Order, Reactions, Free Actions, 5-Phase Round Flow).
+4. `04_Zones_and_Movement.md` — Zones, Movement & Environment (Zone Profiles `Difficulty+/TN`, Movement costs, Cover, Modular Zone Traits/Hazards, Chaos Tick).
+5. `05_Combat_Engine.md` — Combat Engine (Melee, Ranged, Impact Size & Stagger, Weapon Traits, Clatter Defense, Shield Parry, Group Attacks, Weapon Schema & `[CONTENT EXTENSION POINT: Weapons]`, Armor/Shield Schema & `[CONTENT EXTENSION POINT: Armor & Shields]`, Gear Schema & `[CONTENT EXTENSION POINT: Gear, Tools & Consumables]`).
+6. `06_Mob_Mechanics.md` — Mob Mechanics (Mob anatomy, Size, Health Dice pool, single-target decrement & spillover, Frontline Rule, Cleave/AoE damage, Boss Orders, Loitering, Out of Control, Morale & Swarm Terror, Dispersal & Rallying).
+7. `07_Damage_Grit_and_Wounds.md` — Damage, Grit, Conditions & Wounds (Damage resolution, Grit decrement, Wounds track for Bosses/Elites, Overkill rule, Death & Final Act, Conditions Matrix, Condition & Hazard Schema & `[CONTENT EXTENSION POINT: Environmental Hazards & Conditions]`).
+8. `08_Magic_and_Bangaranga.md` — Magic & Bangaranga Framework (Brains push-your-luck pool, Spell Tiers by matching sets, Chaotic Leakage, Bangaranga spending, Rituals, Tag Effect & Spell Schema & `[CONTENT EXTENSION POINT: Magic Spells & Tag Effects]`).
+9. `09_The_Raid_Loop.md` — The Raid Loop (4-Phase Raid flow, 5-to-1 Loot Value ladder, Scrap, Infamy Marks, Glory, XP, Post-Raid reckoning, Loot Item Schema & `[CONTENT EXTENSION POINT: Loot & Salvage Items]`).
+10. `10_The_Lair_Loop_and_Progression.md` — The Lair Loop & Roguelite Progression (Lair Dashboard, Warren Tier, Gobbo Pool, 4-Step sequence, Labor Safe/Risky, Boss downtime, Generational Boss death & Successor mechanics, Lair Room Schema & `[CONTENT EXTENSION POINT: Lair Rooms & Facilities]`).
+11. `11_Journeys_and_Hazards.md` — Journeys & Hazard Resolution (Travel turns, 4 Travel Roles, Route tests, Environmental Attrition, Travel Hazard Schema & `[CONTENT EXTENSION POINT: Journey Hazards & Events]`).
+12. `12_Adversaries_and_Threats.md` — Adversaries & Threat Framework (Deterministic threat engine, GM never rolls, Threat TN profiles, Standard vs Elite vs Boss enemies, 3-Layer Trait Hierarchy, Enemy Statblock Schema & `[CONTENT EXTENSION POINT: Bestiary & Adversary Statblocks]`).
 
 ---
 
 ## Feature Inventory
-| # | Feature | Description | Milestone | Source |
-|---|---------|-------------|-----------|--------|
-| 1 | Dice Pool Resolution | D6 dice pool tests vs Easy 4+, Normal 5+, Hard 6 with TN successes | M2 | PROD/STAGE 01_Dice.md |
-| 2 | Exploding 6s | Each natural 6 is 1 success and rolls an additional d6 recursively | M2 | PROD/STAGE 01_Dice.md |
-| 3 | Critical Double Explosions | Consecutive 6 on bonus die gives +1 Grunt and free non-offensive action | M2 | PROD/STAGE 01_Dice.md |
-| 4 | Salvage Roll | Pools <= 0d6 roll 1d6: 6=1 success, 1=Fumble, 2-5=fail | M2 | PROD/STAGE 01_Dice.md |
-| 5 | Gobbo Gamble | On failed test with 1s, reroll all 1s; failure causes Fumble (-1 Grunt) | M2 | PROD/STAGE 01_Dice.md |
-| 6 | Bangaranga Pool | Communal pool seeding, draw limits, tax if > TN, double exploding 6s, fail drain | M2 | PROD/STAGE 01_Dice.md |
-| 7 | Boons and Banes | Situational +/- 1d modifiers with environmental net cap | M2 | STAGE 08_Master_Tag_Index.md |
-| 8 | Boss Entity Model | Stats (Tough, Slink, Mouth, Brains, Grunt), Grit tracking, Action budget (3 Standard + 1 Free Order) | M1 | PROD 10_Stats.md |
-| 9 | Mob Entity Model | Symmetrical Dice-HP ($X$ d6s at 6), Size tracking, 2-action budget, Boredom rule | M1 | STAGE 13_Goblin_mob.md |
-| 10 | Standard Enemy Model | One-hit kill on hits meeting Defence TN, 2 actions, deterministic threats | M1 | STAGE 20_Enemies.md |
-| 11 | Elite / Boss Enemy Model | Multi-Wound track, Overkill rule ($\lfloor \text{Successes}/\text{Defence TN} \rfloor$) | M1 | STAGE 20_Enemies.md |
-| 12 | Enemy Mob Model | Shared Dice-HP, deterministic attack damage scaling ($\text{Base} + \text{Size} - 1$) | M1 | STAGE 20_Enemies.md |
-| 13 | Melee Weapons & Traits | Light (1H), Medium (1H), Heavy (2H, +1 Impact Size), Crushing (+2 Impact Size), Bashing, Cleave | M1 | STAGE 33/35_Equipment.md |
-| 14 | Stagger Mechanics | Partial hit inflicts Staggered if $\text{Impact Size} \ge \text{Target Size}$; mass resistance ignores | M2 | STAGE 02 Combat.md |
-| 15 | Ranged Weapons | Slings (1 Zone), Shortbow/Crossbow (2 Zones), Arbalest (3 Zones, Heavy), range & cover penalties | M1 | STAGE 33/35_Equipment.md |
-| 16 | Armor & Shields | Light (+1d), Medium (+2d, Slink Bane 1), Heavy (+3d, Slink Bane 2), Shields (+1d, Tough Parry enabled) | M1 | STAGE 33/35_Equipment.md |
-| 17 | Clatter Roll Defense | Simultaneous Active Stat Dice (Slink Dodge / Tough Parry) + Passive Armor Dice vs Threat TN | M2 | STAGE 02 Combat.md |
-| 18 | Ablative Gear Sacrifice | Boss at lethal damage can destroy Shield or Armor to reduce damage to 0 | M2 | STAGE 33_Equipment.md |
-| 19 | Mob Gear & Scaling | Mob Armor Bulk = $\text{Size} \times \text{Bulk Rating}$, shared tools, encumbrance capacity | M1 | STAGE 13_Goblin_mob.md |
-| 20 | Consumables & Explosives | Spark Bombs (T1), Molotovs (T2), Smoke Pots (T2), Powder Kegs (T3), Mortar Shells (T4), Sol-Quartz (T5) Area Profiles | M1 | STAGE 33/35_Equipment.md |
-| 21 | Boss Quirk: Meat Shield | Spend 1 Grunt/Reaction to redirect hit to allied Mob in Zone | M1 | STAGE 14_Quirks.md |
-| 22 | Boss Quirk: Ankle Bite | Free melee counter-attack at +1 Success on clean Dodge reaction | M1 | STAGE 14_Quirks.md |
-| 23 | Boss Quirk: Push Luck | Spend 1 Grunt to reroll non-1 dice on any test | M1 | STAGE 14_Quirks.md |
-| 24 | Ancestry Traits | Beast (Fire/Loud morale triggers), Undead (Morale immune, Holy weakness, Dry Bones resistance), Monstrosity (Mass resistance, Sweeping Cleave) | M1 | STAGE 21_Bestiary.md |
-| 25 | Enemy Trait: Parrying Buckler | 1st melee attack received each round is Hard 6; subsequent are Normal 5+ | M1 | STAGE 21_Bestiary.md |
-| 26 | Enemy Trait: Thick Blubber | -1d Bane on incoming attacks unless attack has [Fire] tag | M1 | STAGE 21_Bestiary.md |
-| 27 | Enemy Trait: Voracious Regrowth | Heals 1 Wound at Round Start unless damaged by [Fire] or [Acidic] in prior round | M1 | STAGE 21_Bestiary.md |
-| 28 | Enemy Trait: Steam Vent | Taking a Wound triggers Slink 5+/2 hazard test for 2 Fire damage in Zone | M1 | STAGE 21_Bestiary.md |
-| 29 | Zones & Graph Topologies | Interconnected node graph, Zone Profiles (Difficulty+/TN), distance BFS | M1 | STAGE 03_Movement.md |
-| 30 | Cover & Zone Traits | Partial Cover, Full Cover, Slippery, Burning, Toxic Spores, Narrow, Pillars, Rubble, Shoring | M1 | STAGE 03_Movement.md |
-| 31 | Combat Loop & Phase Flow | 5-phase round structure, action resetting, reaction holding | M2 | STAGE 02 Combat.md |
-| 32 | Player Actions Resolution | Move, Melee Attack, Ranged Attack, Plunder, Manipulate, Order | M2 | STAGE 02 Combat.md |
-| 33 | Unordered Mob Resolution | Loitering table (1 action spent, 1 saved) and Out of Control table (2 actions spent, 0 saved) | M2 | STAGE 13_Goblin_mob.md |
-| 34 | Mob Scatter Reaction | Boss Mouth vs Threat TN + Size penalty; clean move vs Gamble trample disaster | M2 | STAGE 02 Combat.md |
-| 35 | Mob Health Decrement & Spillover | Single-target active die reduction, spillover to next die, die removal when < 1 | M2 | STAGE 13_Goblin_mob.md |
-| 36 | AoE Multi-Die Damage | AoE/Cleave damage applied simultaneously to ALL dice in Mob pool | M2 | STAGE 13_Goblin_mob.md |
-| 37 | Round Closure & Morale | Stagger auto-clear, hazard ticks, fire spread, 50% casualty Swarm Terror checks | M2 | STAGE 20_Enemies.md |
-| 38 | Tactical Combat AI | Automated heuristic decision making for Bosses, Mobs, and deterministic Enemies | M2 | R4 specification |
-| 39 | Interactive CLI Runner | Turn-by-turn interactive or automated runner with colored, formatted event logs | M3 | R3 specification |
-| 40 | Event Logging System | Rich structured events for dice, actions, clatter, wounds, and summaries | M3 | R3 specification |
-| 41 | Monte Carlo Batch Engine | High-speed batch execution (1,000+ runs in <10s) with progress reporting | M4 | R4 specification |
-| 42 | Statistical Analytics Suite | Win/Loss/TPK rates, Boss Grit distributions, Mob survival metrics, A/B gear analytics | M4 | R4 specification |
-| 43 | Scenario: Street Skirmish | Armored Boss (Shield + Sword + Ankle Bite) + Mob vs Robbers & Footpads in 3-zone street | M5 | Acceptance Criteria |
-| 44 | Scenario: The Mauler's Den | 2 Bosses (Heavy 2H + Meat Shield) + 2 Mobs vs Forest Mauler in 2-zone cave | M5 | Acceptance Criteria |
-| 45 | Scenario: Tomb of the Highwayman | Boss + Mob vs Armored Highwayman (Parrying Buckler) + Skeletons in 2-zone crypt | M5 | Acceptance Criteria |
-| 46 | Scenario Registry & CLI Integration | Named scenario loader, custom config builder, CLI scenario arguments | M5 | R1/R3/R4 |
-| 47 | 4-Tier E2E Test Suite | Comprehensive opaque-box and trait tests covering all 46 features and scenarios | M6 | Acceptance Criteria |
-| 48 | Adversarial Coverage Hardening | Tier 5 white-box adversarial stress tests & extreme edge cases verification | M6 | Acceptance Criteria |
+| # | Feature / Domain | Description | Chapter | Milestone |
+|---|------------------|-------------|---------|-----------|
+| 1 | Dice Pool Tests | D6 pool vs Easy 4+, Normal 5+, Hard 6 with required successes | `01_Core_Resolution.md` | M1 |
+| 2 | Exploding 6s & Crits | Recursive exploding 6s; double explosions grant +1 Grunt / free action | `01_Core_Resolution.md` | M1 |
+| 3 | Salvage & Gamble | Salvage roll (1d6 on $\le 0$ pool); Gobbo Gamble on 1s with Fumble risk | `01_Core_Resolution.md` | M1 |
+| 4 | Bangaranga Pool | Communal pool seeding, draw limits, 1-die tax if draw $>$ TN, fail drain | `01_Core_Resolution.md` | M1 |
+| 5 | Boons & Banes | Situational +/- 1d modifiers with net cap equal to lower profile | `01_Core_Resolution.md` | M1 |
+| 6 | Boss Attributes & Stats | Tough, Slink, Brains, Mouth (1-5), Grunt derived, Grit pool | `02_Boss_Profile_and_Gang.md` | M1 |
+| 7 | Boss Creation & Gang | Specialist vs Generalist starting stats, Gang as Class archetype | `02_Boss_Profile_and_Gang.md` | M1 |
+| 8 | Quirk Schema & Hooks | Quirk template, trigger/cost/effect structure, content hook | `02_Boss_Profile_and_Gang.md` | M1 |
+| 9 | Action Economy | 3 Standard Actions + 1 Free Order for Boss; 2 Actions for Mobs | `03_Action_Economy_and_Turn_Flow.md` | M1 |
+| 10 | Round Structure | 5-phase turn flow: Setup, Round start, Player Turn, Enemy Turn, Closure | `03_Action_Economy_and_Turn_Flow.md` | M1 |
+| 11 | Reactions & Free Actions | Dodge, Parry, Scatter, Free actions, and Reaction holding | `03_Action_Economy_and_Turn_Flow.md` | M1 |
+| 12 | Zone Topologies | Interconnected zones, Zone Profiles `Difficulty+/TN`, Movement costs | `04_Zones_and_Movement.md` | M2 |
+| 13 | Cover & Zone Traits | Partial/Full cover, Slippery, Burning, Toxic, Narrow, Rubble, Chaos Tick | `04_Zones_and_Movement.md` | M2 |
+| 14 | Melee & Ranged Combat | Attack tests, Range in zones, Impact Size vs Target Size for Stagger | `05_Combat_Engine.md` | M2 |
+| 15 | Clatter Defense Roll | Simultaneous active evasion (Slink/Tough) + passive Armor Dice | `05_Combat_Engine.md` | M2 |
+| 16 | Weapons & Armor Schemas | Formal schemas for Weapons, Armor/Shields, Gear/Tools/Consumables | `05_Combat_Engine.md` | M2 |
+| 17 | Mob Anatomy & Health Dice | Dice pool = Size starting at face 6, decrement & spillover | `06_Mob_Mechanics.md` | M2 |
+| 18 | Mob Tactical Actions | Orders, Loitering table, Out of Control table, Boredom rule | `06_Mob_Mechanics.md` | M2 |
+| 19 | Mob Morale & Dispersal | 50% casualty Swarm Terror pool test, Dispersal, Rallying | `06_Mob_Mechanics.md` | M2 |
+| 20 | Damage & Grit Decrement | Flat damage resolution against Grit, 0 Grit Final Act & Death | `07_Damage_Grit_and_Wounds.md` | M3 |
+| 21 | Wounds & Overkill | Elite/Boss Wounds track, Overkill rule ($\lfloor \text{Successes}/\text{TN} \rfloor$) | `07_Damage_Grit_and_Wounds.md` | M3 |
+| 22 | Conditions Matrix | 9 official states, application, durations, clear conditions | `07_Damage_Grit_and_Wounds.md` | M3 |
+| 23 | Condition/Hazard Schema | Formal schema for Conditions, environmental hazards & traps | `07_Damage_Grit_and_Wounds.md` | M3 |
+| 24 | Magic Push-Your-Luck | Brains pool rolling, matching sets for Tiers 1-5, Farkle Mishaps | `08_Magic_and_Bangaranga.md` | M3 |
+| 25 | Chaotic Leakage & Rituals | Non-success sets cause leakage; extended ritual casting rules | `08_Magic_and_Bangaranga.md` | M3 |
+| 26 | Tag Effect / Spell Schema | Element + Delivery + Magnitude/Tier schema, extension point | `08_Magic_and_Bangaranga.md` | M3 |
+| 27 | Deterministic Threat Engine | Zero GM rolls, Threat Profiles + flat damage, enemy reactions | `12_Adversaries_and_Threats.md` | M3 |
+| 28 | 3-Layer Trait Hierarchy | Ancestry -> Tag -> Unique Statblock traits, Enemy Statblock Schema | `12_Adversaries_and_Threats.md` | M3 |
+| 29 | The Raid Loop | 4-Phase Raid structure (Plan, Infiltrate, Plunder, Extract) | `09_The_Raid_Loop.md` | M4 |
+| 30 | 5-to-1 Loot Economy | Exponential 5-to-1 Loot Value ladder, Scrap, Infamy Marks, Glory, XP | `09_The_Raid_Loop.md` | M4 |
+| 31 | Loot & Salvage Schema | Item schema with Bulk, LV, Scrap, Divisibility, Utility tags | `09_The_Raid_Loop.md` | M4 |
+| 32 | Lair Dashboard & Warren | Warren Tier, Asset capacity, communal Gobbo Pool (Raiders/Laborers) | `10_The_Lair_Loop_and_Progression.md` | M4 |
+| 33 | 4-Step Lair Sequence | Homecoming/Tally, Pulse/Complications, Labor Safe/Risky, Downtime | `10_The_Lair_Loop_and_Progression.md` | M4 |
+| 34 | Roguelite Generation Death | Successor XP ($\text{Infamy} \times 4$), Gang Marks, Bone Pile, Elders | `10_The_Lair_Loop_and_Progression.md` | M4 |
+| 35 | Lair Room Schema | Asset schema with Cost, Upkeep, Boon, Volatility, Upgrade Tiers | `10_The_Lair_Loop_and_Progression.md` | M4 |
+| 36 | Journeys & Travel Roles | Map-Scrawler, Sniffer, Scavver, Loud-Mouth, Route tests | `11_Journeys_and_Hazards.md` | M4 |
+| 37 | Journey Hazard Schema | Hazard schema with terrain tags, role targets, checks, consequences | `11_Journeys_and_Hazards.md` | M4 |
 
 ---
 
-## Milestones
+## Milestones & Execution Plan
 
-| # | Name | Scope | Dependencies | Status |
-|---|------|-------|-------------|--------|
-| M1 | Tactical Domain & Models | `combat_sim/core/types.py`, `combat_sim/domain/*` (Entities, Equipment, Quirks, Traits, Topologies, Consumables) | None | DONE |
-| M2 | Dice & Core Combat Engine | `combat_sim/core/dice.py`, `combat_sim/engine/*` (CombatLoop, ClatterResolver, MobHealth, AI, Morale, Hazards) | M1 | DONE |
-| M3 | Interactive CLI Runner & Event Logger | `combat_sim/core/events.py`, `combat_sim/cli/runner.py`, `combat_sim/cli/main.py` | M2 | IN_PROGRESS |
-| M4 | Monte Carlo Simulator & Analytics | `combat_sim/analytics/monte_carlo.py`, `combat_sim/analytics/metrics.py` | M2 | PLANNED |
-| M5 | Reference Encounters & Scenario Registry | `combat_sim/scenarios/*` (Street Skirmish, The Mauler's Den, Tomb of the Highwayman, Registry) | M1, M2, M3, M4 | PLANNED |
-| M6 | Final Milestone: 100% E2E Pass & Tier 5 Hardening | Full test suite execution across Tiers 1-5, performance benchmark (<10s for 1k runs), Forensics Audit | M1, M2, M3, M4, M5, E2E Track | PLANNED |
-
----
-
-## Interface Contracts
-
-### `combat_sim.core.dice` ↔ `combat_sim.engine`
-- `roll_dice(pool_size: int, difficulty: Difficulty, allow_gamble: bool = False, is_salvage: bool = False) -> DiceResult`
-  - `DiceResult`: `successes: int`, `faces: List[int]`, `bonus_faces: List[int]`, `is_critical: bool`, `fumble: bool`, `salvage: bool`, `gambled: bool`
-- `resolve_clatter(threat_tn: int, stat_dice: int, difficulty: Difficulty, armor_dice: int) -> ClatterResult`
-  - `ClatterResult`: `evaded: bool`, `stat_successes: int`, `armor_successes: int`, `mitigated_damage: int`, `stat_faces: List[int]`, `armor_faces: List[int]`
-
-### `combat_sim.domain` ↔ `combat_sim.engine`
-- `BaseEntity`: `id: str`, `name: str`, `zone_id: str`, `is_alive: bool`, `conditions: Set[Condition]`
-- `GoblinBoss(BaseEntity)`: `tough: int`, `slink: int`, `mouth: int`, `brains: int`, `grunt: int`, `max_grunt: int`, `grit: int`, `max_grit: int`, `actions_left: int`, `free_orders_left: int`, `saved_reactions: int`, `main_hand: Optional[Weapon]`, `off_hand: Optional[Equipment]`, `armor: Optional[Armor]`, `quirks: List[Quirk]`
-- `PlayerMob(BaseEntity)`: `size: int`, `health_dice: List[int]`, `actions_left: int`, `is_ordered: bool`, `out_of_control: bool`, `armor_rating: int`
-- `Enemy(BaseEntity)`: `enemy_scale: EnemyScale`, `wounds: int`, `max_wounds: int`, `defence_tn: int`, `movement: int`, `morale_tn: int`, `traits: List[EnemyTrait]`, `attacks: List[ThreatAttack]`
-- `TopologyGraph`: `zones: Dict[str, Zone]`, `get_distance(z1: str, z2: str) -> int`, `get_adjacent(z: str) -> List[str]`
-
-### `combat_sim.engine` ↔ `combat_sim.cli` & `combat_sim.analytics`
-- `CombatEngine`: `setup_encounter(scenario: Scenario) -> CombatState`, `run_round() -> RoundSummary`, `run_to_completion(max_rounds: int = 50) -> CombatSummary`
-- `EventDispatcher`: register listener callbacks for `on_action`, `on_roll`, `on_damage`, `on_condition`, `on_round_end`, `on_combat_end`
-
-### `combat_sim.scenarios` ↔ `combat_sim.cli` & `combat_sim.engine`
-- `Scenario`: `name: str`, `description: str`, `topology: TopologyGraph`, `allies: List[Union[GoblinBoss, PlayerMob]]`, `enemies: List[Enemy]`, `victory_condition: Callable[[CombatState], bool]`
-- `get_scenario(name: str) -> Scenario`
+| # | Milestone | Scope | Deliverables | Dependencies | Status |
+|---|-----------|-------|--------------|--------------|--------|
+| 0 | Phase 0: Survey & Schema Mining | STAGE/PROD repository survey | Extraction reports & schemas | none | DONE |
+| 1 | Milestone 1: Core Engine, Profile & Actions | Chapters 01, 02, 03 | `01_Core_Resolution.md`, `02_Boss_Profile_and_Gang.md`, `03_Action_Economy_and_Turn_Flow.md` | M0 | PLANNED |
+| 2 | Milestone 2: Spatial, Combat & Mobs | Chapters 04, 05, 06 | `04_Zones_and_Movement.md`, `05_Combat_Engine.md`, `06_Mob_Mechanics.md` | M1 | PLANNED |
+| 3 | Milestone 3: Health, Magic & Threats | Chapters 07, 08, 12 | `07_Damage_Grit_and_Wounds.md`, `08_Magic_and_Bangaranga.md`, `12_Adversaries_and_Threats.md` | M1, M2 | PLANNED |
+| 4 | Milestone 4: Macro Loops & Progression | Chapters 09, 10, 11 | `09_The_Raid_Loop.md`, `10_The_Lair_Loop_and_Progression.md`, `11_Journeys_and_Hazards.md` | M1 | PLANNED |
+| 5 | Milestone 5: Verification & Gap Audit | Full rulebook audit | Integrity check, cross-reference validation, style audit | M1, M2, M3, M4 | PLANNED |
 
 ---
 
-## Code Layout
+## Code Layout & File Placement
+All core rules chapters MUST be written to `02_PROD_Core_Rules/`:
+- `02_PROD_Core_Rules/01_Core_Resolution.md`
+- `02_PROD_Core_Rules/02_Boss_Profile_and_Gang.md`
+- `02_PROD_Core_Rules/03_Action_Economy_and_Turn_Flow.md`
+- `02_PROD_Core_Rules/04_Zones_and_Movement.md`
+- `02_PROD_Core_Rules/05_Combat_Engine.md`
+- `02_PROD_Core_Rules/06_Mob_Mechanics.md`
+- `02_PROD_Core_Rules/07_Damage_Grit_and_Wounds.md`
+- `02_PROD_Core_Rules/08_Magic_and_Bangaranga.md`
+- `02_PROD_Core_Rules/09_The_Raid_Loop.md`
+- `02_PROD_Core_Rules/10_The_Lair_Loop_and_Progression.md`
+- `02_PROD_Core_Rules/11_Journeys_and_Hazards.md`
+- `02_PROD_Core_Rules/12_Adversaries_and_Threats.md`
 
-```
-05_System_Tools/combat_sim/
-├── pyproject.toml
-├── README.md
-├── combat_sim/
-│   ├── __init__.py
-│   ├── core/
-│   │   ├── __init__.py
-│   │   ├── types.py
-│   │   ├── dice.py
-│   │   └── events.py
-│   ├── domain/
-│   │   ├── __init__.py
-│   │   ├── entities.py
-│   │   ├── equipment.py
-│   │   ├── quirks.py
-│   │   ├── traits.py
-│   │   └── topology.py
-│   ├── engine/
-│   │   ├── __init__.py
-│   │   ├── combat.py
-│   │   ├── resolver.py
-│   │   └── ai.py
-│   ├── scenarios/
-│   │   ├── __init__.py
-│   │   ├── registry.py
-│   │   ├── street_skirmish.py
-│   │   ├── maulers_den.py
-│   │   └── tomb_highwayman.py
-│   ├── cli/
-│   │   ├── __init__.py
-│   │   ├── runner.py
-│   │   └── main.py
-│   └── analytics/
-│       ├── __init__.py
-│       ├── monte_carlo.py
-│       └── metrics.py
-└── tests/
-    ├── __init__.py
-    ├── test_dice.py
-    ├── test_equipment_armor.py
-    ├── test_quirks.py
-    ├── test_enemy_traits.py
-    ├── test_mob_health.py
-    ├── test_scenarios.py
-    ├── test_performance.py
-    └── test_e2e.py
-```

@@ -65,3 +65,66 @@ Provide a batch execution mode capable of running $N$ iterations (e.g., 100 to 1
   3. *Tomb of the Highwayman*: Boss & Mob vs. Armored Highwayman (Parrying Buckler) & Rattlebone Skeletons in a crypt with Slippery and Shoring traits.
 - [ ] CLI command can run any reference scenario in step-by-step mode and output complete, human-readable turn-by-turn combat logs.
 - [ ] CLI command can run batch Monte Carlo simulation (minimum 1,000 iterations) for any scenario, completing in under 10 seconds and displaying clear statistical metrics.
+
+## 2026-08-24T17:36:53Z
+
+Synthesize a complete, streamlined, modular core rules book for the Gobbos TTRPG in `02_PROD_Core_Rules/`. The document must isolate pure game mechanics and systemic loops from living content (weapons, equipment catalogs, spell lists, monster bestiaries, quirk compendiums), establish a clean logical reading order with single-source rule definitions and cross-references, embed explicit `[CONTENT EXTENSION POINT]` tags along with standard structural schemas/templates (defining the attributes, parameters, and format required when creating content instances), and mark mechanical gaps with `[MISSING RULE / GAP]` tags.
+
+Working directory: `c:\Users\ante\Documents\github\gobbos`
+Integrity mode: development
+
+## Requirements
+
+### R1. Engine vs. Content Delimitation & Content Schemas
+Extract pure systemic game mechanics from all current materials (`01_STAGE_Drafts/` and existing `02_PROD_Core_Rules/`) while completely stripping out living content catalogs (equipment stat tables, weapon compendiums, exhaustive quirks, spell lists, monster statblocks). For every content category (Weapons, Armor, Gear, Quirks, Tag Effects, Spells/Rituals, NPC/Enemy Statblocks, Lair Rooms), provide:
+1. A clear mechanical explanation of how that category functions in the game engine.
+2. A formal outline/template (schema/class definition) showing all required attributes, tags, and formatting rules for instantiating new content items.
+3. An explicit `[CONTENT EXTENSION POINT: <Category>]` marker indicating where compendium expansions plug in.
+
+### R2. Modular Multi-File Chapter Structure in PROD
+Organize the core rules in `02_PROD_Core_Rules/` into clean, logically sequenced chapters covering all necessary systemic domains:
+- Core Resolution & Dice Pool Engine
+- Attributes, Boss Profile & Gang Fundamentals
+- The Action Economy & Turn Flow
+- Zones, Movement, and Environment
+- Combat Engine (Melee, Ranged, Defense, Reactions, Group Attacks)
+- Mob Mechanics (Commanding, Mob Health/Dice, Morale, Dispersal)
+- Damage, Grit, Conditions & Wounds
+- Magic & Bangaranga Framework (the mechanical rules for spellcasting/wild magic without the spell lists)
+- The Raid Loop (Loot Value, Scrap, Infamy, Raid Points)
+- The Lair Loop (Investment, Upgrades, Character Death & Roguelite Progression)
+- Journeys & Hazard Resolution
+
+### R3. Single-Source Rule Definitions & Consistent Cross-Referencing
+Every game mechanic must be authoritatively defined in exactly one primary chapter/section. All other sections that interact with that mechanic must cross-reference it rather than redefining or summarizing it with conflicting language. Where situational rules alter a standard rule, explicitly label them as exceptions.
+
+### R4. Mechanical Gap Analysis & Missing Rule Markers
+Audit the entire system for missing, incomplete, or ambiguous rules required for complete gameplay. Explicitly flag each gap with a standardized callout:
+`[MISSING RULE / GAP: <Description of missing mechanic, why it is needed, and suggested resolution>]`.
+
+### R5. Strict Style Guide & Keyword Compliance
+All written rules must strictly follow the Tier A mechanical guidelines in `GEMINI.md`:
+- Purely objective, direct, active present-tense instructional language (no melodramatic prose mixed into rules).
+- Total de-gendering (second person "You" / explicit imperative nouns like "The Goblin Boss", "The Mob", "The GM").
+- Standard slash notation for checks (`[Stat] [Target Face]+/[Successes]`).
+- Zero tolerance for synonym drift (e.g. Grit vs. Health, Mob vs. Squad, Loot vs. generic treasure).
+
+## Acceptance Criteria
+
+### Content Separation & Structural Schemas
+- [ ] No living content tables (full weapon lists, bestiaries, quirk catalogs, specific spell listings) exist within the core rule chapters.
+- [ ] Every content type includes a structured template/schema defining its attributes, data fields, and tags before referencing the extension point.
+- [ ] Every modular hook where content attaches contains an explicit `[CONTENT EXTENSION POINT]` block.
+
+### Rule Integrity & Single-Source Architecture
+- [ ] Every mechanical rule is fully explained in one place and referenced elsewhere via standard Markdown links.
+- [ ] No contradictory rules or ambiguous duplicates exist across the chapters in `02_PROD_Core_Rules/`.
+- [ ] Any situational rule variance is clearly marked as an exception to the baseline mechanic.
+
+### Gap Visibility & Actionability
+- [ ] All missing rules, broken loops, or undefined states are explicitly highlighted with `[MISSING RULE / GAP]` markers.
+
+### Style & Format Adherence
+- [ ] 100% of dice checks follow the `[Stat] [Target Face]+/[Successes]` slash notation (with no `+` on target 6).
+- [ ] Header hierarchy strictly follows H1 -> H2 -> H3 with zero skips.
+- [ ] Formatting matches `GEMINI.md` Golden Rules (`>>`) and Example blocks (`> **Example:**`).

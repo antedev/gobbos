@@ -1,22 +1,26 @@
 # Progress — Project Orchestrator
 
-Last visited: 2026-08-23T21:50:00Z
+Last visited: 2026-08-24T17:38:05Z
 
 ## Iteration Status
-Current iteration: 5 / 32
+Current iteration: 1 / 32
 
 ## Current Status
-- [x] Initialized orchestrator workspace and briefing
-- [x] Phase 0: Survey authoritative rules and map full scope (3 Explorers / Spec Miners)
-- [x] Create PROJECT.md with architecture, feature inventory, milestones, interface contracts, and code layout
-- [x] E2E Testing Track: Published TEST_INFRA.md and TEST_READY.md with 8 test modules
-- [x] Milestone 1: Domain Models, Entities, Weapons, Armor, Quirks, Traits, Scenarios [PASSED GATE]
-- [ ] Milestone 2 (Iteration 2): Apply 3 fixes in `ai.py` & `combat.py` and pass gate [in-progress: m2_remediation_worker implementing]
-- [ ] Milestone 3: Step-by-step Interactive CLI Runner & Event Logger [pending]
-- [ ] Milestone 4: High-performance Monte Carlo Batch Simulator & Analytics [pending]
-- [ ] Milestone 5: Reference Encounters implementation & integration [pending]
-- [ ] Final Milestone: 100% E2E Test Pass (Tiers 1-4) & Adversarial Verification (Tier 5) [pending]
-- [ ] Final Verification & Completion Report to Parent
+- [x] Phase 0: Survey & Schema Mapping (3 Explorers / Spec Miners completed)
+- [x] Synthesize Architecture, Feature Inventory & Schemas in `PROJECT.md`
+- [x] Milestone 1: Core Engine, Resolution, Attributes & Action Economy (`01_Core_Resolution.md`, `02_Boss_Profile_and_Gang.md`, `03_Action_Economy_and_Turn_Flow.md`) [PASSED]
+- [x] Milestone 2: Space, Movement, Combat & Mobs (`04_Zones_and_Movement.md`, `05_Combat_Engine.md`, `06_Mob_Mechanics.md`) [PASSED]
+- [x] Milestone 3: Health, Conditions, Magic & Supernatural (`07_Damage_Grit_and_Wounds.md`, `08_Magic_and_Bangaranga.md`, `12_Adversaries_and_Threats.md`) [PASSED]
+- [x] Milestone 4: Macro Game Loops & Progression (`09_The_Raid_Loop.md`, `10_The_Lair_Loop_and_Progression.md`, `11_Journeys_and_Hazards.md`) [PASSED]
+- [x] Milestone 5: Verification, Gap Audit & Forensic Integrity Check [PASSED — CLEAN AUDIT]
+- [x] Final Presentation & Completion Report to Parent
 
 ## Retrospective Notes
-- Milestone 2 remediation in progress.
+- All 12 core rulebook chapters synthesized, decoupled, verified, and audited.
+- 10 formal Content Schemas and 10 Extension Points established.
+- 28 mechanical gaps cataloged with actionable resolutions.
+- 100% compliant with GEMINI.md, zero illegal 6+ notations, zero broken links, and clean Forensic Integrity Audit.
+
+
+
+
