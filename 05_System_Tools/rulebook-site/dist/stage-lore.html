@@ -7,8 +7,8 @@
   <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Synthesized lore drafts">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=4">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,500;0,700;0,800;1,700&family=Alegreya:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 
@@ -320,6 +320,110 @@
       }
       if (bannerBtn) {
         bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
+    })();
+  </script>
+
+  <!-- ===== Mermaid.js Integration ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    (function() {
+      function initMermaid() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        
+        const lightThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#f0e6d6',
+          primaryTextColor: '#231c16',
+          primaryBorderColor: '#8c2d19',
+          lineColor: '#c68a35',
+          secondaryColor: '#fdfbf7',
+          tertiaryColor: '#e5dcce',
+          edgeLabelBackground: '#faf5ec',
+          nodeBorder: '#8c2d19',
+          clusterBkg: '#eee5d5',
+          clusterBorder: '#c68a35',
+          titleColor: '#8c2d19'
+        };
+
+        const darkThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#241e1a',
+          primaryTextColor: '#e6dfd5',
+          primaryBorderColor: '#d44d32',
+          lineColor: '#d4a359',
+          secondaryColor: '#1a1613',
+          tertiaryColor: '#2a221c',
+          edgeLabelBackground: '#171412',
+          nodeBorder: '#d44d32',
+          clusterBkg: '#1c1815',
+          clusterBorder: '#8c6a38',
+          titleColor: '#d44d32'
+        };
+
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: 'base',
+          themeVariables: isDark ? darkThemeVariables : lightThemeVariables,
+          flowchart: {
+            curve: 'basis',
+            padding: 16,
+            nodeSpacing: 50,
+            rankSpacing: 40,
+            htmlLabels: true
+          },
+          securityLevel: 'loose'
+        });
+
+        // Convert code blocks with language-mermaid to <pre class="mermaid">
+        const mermaidCodeBlocks = document.querySelectorAll('pre > code.language-mermaid');
+        mermaidCodeBlocks.forEach((codeEl) => {
+          const preEl = codeEl.parentElement;
+          if (preEl && preEl.tagName === 'PRE') {
+            // Save raw mermaid source text if not already saved
+            if (!preEl.getAttribute('data-mermaid-src')) {
+              preEl.setAttribute('data-mermaid-src', codeEl.textContent);
+            }
+            const src = preEl.getAttribute('data-mermaid-src');
+            preEl.className = 'mermaid';
+            preEl.textContent = src;
+            preEl.removeAttribute('data-processed');
+          }
+        });
+
+        // Also handle any pre.mermaid that might need re-render on theme change
+        const directMermaidBlocks = document.querySelectorAll('pre.mermaid');
+        directMermaidBlocks.forEach((preEl) => {
+          if (!preEl.getAttribute('data-mermaid-src')) {
+            preEl.setAttribute('data-mermaid-src', preEl.textContent);
+          }
+          const src = preEl.getAttribute('data-mermaid-src');
+          preEl.textContent = src;
+          preEl.removeAttribute('data-processed');
+        });
+
+        if (document.querySelectorAll('.mermaid').length > 0) {
+          mermaid.run({
+            nodes: document.querySelectorAll('.mermaid')
+          }).catch(err => console.error('Mermaid render error:', err));
+        }
+      }
+
+      // Initial render on DOM load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMermaid);
+      } else {
+        initMermaid();
+      }
+
+      // Re-initialize mermaid when theme changes
+      const themeToggleBtn = document.getElementById('themeToggle');
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          setTimeout(initMermaid, 50);
+        });
       }
     })();
   </script>

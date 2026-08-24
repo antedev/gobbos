@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Core_Resolution — PROD Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. The official rulebook">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,500;0,700;0,800;1,700&family=Alegreya:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab env-tab--active">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right" style="display: flex; gap: 8px; align-items: center;">
+      <div class="llm-dropdown-container">
+        <button class="llm-btn" id="llmDropdownBtn" title="LLM Continuous Markdown Bundles" aria-label="LLM Bundles" aria-expanded="false">
+          <span>🤖 LLM Files</span>
+          <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="llm-dropdown-menu" id="llmDropdownMenu">
+          <div class="llm-dropdown-header">LLM HTML (Gemini / Web)</div>
+          <a href="all_llm.html" target="_blank" class="llm-dropdown-item">👑 Master All (Rules + Lore)</a>
+          <a href="rules_all_llm.html" target="_blank" class="llm-dropdown-item">📜 Combined Rules (PROD + STAGE)</a>
+          <a href="rules_stage_llm.html" target="_blank" class="llm-dropdown-item">🧪 STAGE Rules</a>
+          <a href="rules_prod_llm.html" target="_blank" class="llm-dropdown-item">📖 PROD Rules</a>
+          <a href="lore_all_llm.html" target="_blank" class="llm-dropdown-item">🔮 Combined Lore</a>
+          <a href="lore_stage_llm.html" target="_blank" class="llm-dropdown-item">📜 STAGE Lore</a>
+          <div class="llm-dropdown-divider"></div>
+          <div class="llm-dropdown-header">Raw Markdown & Index</div>
+          <a href="all_llm.md" target="_blank" class="llm-dropdown-item">📝 all_llm.md</a>
+          <a href="llms.txt" target="_blank" class="llm-dropdown-item">📋 /llms.txt Index</a>
+        </div>
+      </div>
+      <button class="sync-btn" id="headerSyncBtn" title="Sync & Rebuild Site" aria-label="Sync and rebuild site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sync-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Sync</span>
+      </button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">PROD Rules</h2>
+        <p class="sidebar-subtitle">The official rulebook</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="prod.html" class="nav-link" data-target="rules--dice">Dice</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="characters-and-mobs"><span class="toggle-icon">▸</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" style="display: none;"><li><a href="prod--characters-and-mobs--stats.html" class="nav-link" data-target="characters-and-mobs--stats">Stats</a></li></ul></div><div class="nav-group nav-group--solo"><a href="prod--core-resolution.html" class="nav-link nav-link--solo nav-link--active" data-target="core-resolution">Core_Resolution</a></div><div class="nav-group nav-group--solo"><a href="prod--boss-profile-and-gang.html" class="nav-link nav-link--solo" data-target="boss-profile-and-gang">Boss_Profile_and_Gang</a></div><div class="nav-group nav-group--solo"><a href="prod--action-economy-and-turn-flow.html" class="nav-link nav-link--solo" data-target="action-economy-and-turn-flow">Action_Economy_and_Turn_Flow</a></div><div class="nav-group nav-group--solo"><a href="prod--zones-and-movement.html" class="nav-link nav-link--solo" data-target="zones-and-movement">Zones_and_Movement</a></div><div class="nav-group nav-group--solo"><a href="prod--combat-engine.html" class="nav-link nav-link--solo" data-target="combat-engine">Combat_Engine</a></div><div class="nav-group nav-group--solo"><a href="prod--mob-mechanics.html" class="nav-link nav-link--solo" data-target="mob-mechanics">Mob_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="prod--damage-grit-and-wounds.html" class="nav-link nav-link--solo" data-target="damage-grit-and-wounds">Damage_Grit_and_Wounds</a></div><div class="nav-group nav-group--solo"><a href="prod--magic-and-bangaranga.html" class="nav-link nav-link--solo" data-target="magic-and-bangaranga">Magic_and_Bangaranga</a></div><div class="nav-group nav-group--solo"><a href="prod--the-raid-loop.html" class="nav-link nav-link--solo" data-target="the-raid-loop">The_Raid_Loop</a></div><div class="nav-group nav-group--solo"><a href="prod--the-lair-loop-and-progression.html" class="nav-link nav-link--solo" data-target="the-lair-loop-and-progression">The_Lair_Loop_and_Progression</a></div><div class="nav-group nav-group--solo"><a href="prod--journeys-and-hazards.html" class="nav-link nav-link--solo" data-target="journeys-and-hazards">Journeys_and_Hazards</a></div><div class="nav-group nav-group--solo"><a href="prod--adversaries-and-threats.html" class="nav-link nav-link--solo" data-target="adversaries-and-threats">Adversaries_and_Threats</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; align-items: center; justify-content: space-between; gap: 16px; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        <span>⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.</span>
+        <button class="sync-banner-btn" id="bannerSyncBtn">Rerun Sync</button>
+      </div>
+      <h1 id="core-resolution-and-dice-pool-engine" tabindex="-1">Core Resolution &amp; Dice Pool Engine</h1>
+<p><em>Goblins do not rely on disciplined training, ancient martial manuals, or measured arithmetic. When a goblin Boss leaps into the fray, success is a messy collision of muscle, blind panic, screeching mobs, and sheer explosive momentum.</em></p>
+<p>This chapter defines the core resolution engine for <strong>Gobbos</strong>. All dice tests, difficulty structures, pool modifications, and chaotic risk mechanics operate under the rules codified below.</p>
+<hr>
+<h2 id="the-d6-pool-framework" tabindex="-1">The D6 Pool Framework</h2>
+<p>The resolution system in <strong>Gobbos</strong> uses standard six-sided dice (<strong>d6</strong>) exclusively.</p>
+<h3 id="the-gm-never-rolls" tabindex="-1">The GM Never Rolls</h3>
+<p>All mechanical resolution is player-facing. <strong>The Game Master (GM)</strong> never rolls dice for standard tests, attacks, evasion, or environmental hazard checks. Enemies, traps, and the environment present static target thresholds that <strong>Players</strong> roll against using their active pools or passive defense ratings.</p>
+<h3 id="assembling-the-dice-pool" tabindex="-1">Assembling the Dice Pool</h3>
+<p>When you attempt an action that carries a risk of failure or meaningful consequence, you assemble a <strong>Dice Pool</strong> of standard <strong>d6s</strong>:</p>
+<p><strong>Dice Pool</strong> = <strong>Base Stat / Mob Size</strong> + <strong>Boons (+1d)</strong> - <strong>Banes (-1d)</strong> + <strong>Bangaranga Dice</strong></p>
+<ul>
+<li><strong>Goblin Boss Tests</strong>: Your base pool equals your current rating in the relevant <strong>Main Stat</strong> (<strong>Tough</strong>, <strong>Slink</strong>, <strong>Brains</strong>, or <strong>Mouth</strong>), which ranges from 1 to 5 dice.</li>
+<li><strong>Mob Tests</strong>: When rolling for a <strong>Mob</strong>, the base pool equals the Mob’s current <strong>Size</strong> (1 to 5) for <strong>Tough</strong> tests, or a flat <strong>2d6</strong> for <strong>Slink</strong>, <strong>Brains</strong>, and <strong>Mouth</strong> tests (see <a href="06_Mob_Mechanics.md">Mob Mechanics</a>).</li>
+<li><strong>Pool Minimum</strong>: A dice pool cannot be reduced below 0 dice. If penalties reduce a pool to 0 or fewer dice, you must make a desperate <strong>Salvage Roll</strong> (see below).</li>
+</ul>
+<hr>
+<h2 id="difficulty-and-target-numbers" tabindex="-1">Difficulty &amp; Target Numbers</h2>
+<p>Every test is defined by two values: a <strong>Difficulty Face</strong> (which die faces count as a success) and a <strong>Target Number (TN)</strong> (how many total successes you must accumulate to succeed).</p>
+<h3 id="difficulty-thresholds-target-faces" tabindex="-1">Difficulty Thresholds (Target Faces)</h3>
+<p>The circumstances of an action dictate which die faces generate a <strong>Success</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Difficulty</th>
+<th style="text-align:center">Successful Die Faces</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Easy (4+)</strong></td>
+<td style="text-align:center"><strong>4, 5, 6</strong></td>
+<td style="text-align:left">Favorable conditions, superior tools, high ground, or vulnerable targets.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Normal (5+)</strong></td>
+<td style="text-align:center"><strong>5, 6</strong></td>
+<td style="text-align:left">Standard baseline for all routine challenges, attacks, and environmental checks.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Hard (6)</strong></td>
+<td style="text-align:center"><strong>6</strong></td>
+<td style="text-align:left">Extremely hostile conditions, heavy armor, narrow margins, or severe handicaps.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<blockquote>
+<p><strong>IMPORTANT:</strong> The numeral <strong>6</strong> represents the absolute ceiling on a standard d6. In accordance with official system notation, <strong>Hard</strong> difficulty is written strictly as <strong>6</strong> (never write <code>6+</code>).</p>
+</blockquote>
+</blockquote>
+<h3 id="target-number-tn" tabindex="-1">Target Number (TN)</h3>
+<p>The <strong>Target Number (TN)</strong> is the total count of successes required to pass the test. Standard actions require a <strong>TN of 1</strong>. Complex tasks, fortified adversaries, thick locks, or hazardous obstacles demand a <strong>TN of 2</strong> or higher.</p>
+<h3 id="standard-slash-notation" tabindex="-1">Standard Slash Notation</h3>
+<p>To eliminate math bloat during play, all checks use the standard slash notation:</p>
+<p><code>[Stat] [Target Face]+/[Required Successes]</code></p>
+<ul>
+<li><strong>In Narrative Text</strong>: <em>“You must pass a Slink test, needing at least 2 successes on a 5 or higher.”</em></li>
+<li><strong>In System Paragraphs</strong>: <em>“Climbing the slick wall requires a Slink test against the zone profile of 5+ (2 successes).”</em></li>
+<li><strong>In Statblocks &amp; Profiles</strong>: <code>Slink 5+/2</code>, <code>Tough 4+/1</code>, <code>Brains 6/2</code>.</li>
+</ul>
+<blockquote>
+<p><strong>Example:</strong> Picking a sturdy lock requires <code>Brains 5+/2</code>. A <strong>Goblin Boss</strong> with <strong>Brains 3</strong> rolls 3d6. The dice land on <strong>1</strong>, <strong>5</strong>, and <strong>6</strong>. Because the test is <strong>Normal (5+)</strong>, both the <strong>5</strong> and the <strong>6</strong> count as successes. With 2 successes scored against a <strong>TN of 2</strong>, the lock clicks open.</p>
+</blockquote>
+<hr>
+<h2 id="exploding-6s-and-critical-successes" tabindex="-1">Exploding 6s &amp; Critical Successes</h2>
+<p>Goblins thrive on escalating chaos. Every die that rolls a natural <strong>6</strong> generates an extra burst of effort.</p>
+<h3 id="exploding-6s" tabindex="-1">Exploding 6s</h3>
+<p>Every natural <strong>6</strong> rolled on any die in your pool counts as <strong>1 Success</strong> and immediately grants <strong>+1 bonus d6</strong> rolled into the active pool.</p>
+<ul>
+<li>If the newly rolled bonus die also lands on a <strong>6</strong>, it counts as another success and explodes again.</li>
+<li>This explosion chains indefinitely as long as additional natural <strong>6s</strong> are rolled.</li>
+<li>To keep pool tallies clear, set aside the original 6s and roll fresh dice for the explosions rather than rerolling the original physical dice.</li>
+</ul>
+<h3 id="critical-success-double-explosions" tabindex="-1">Critical Success (Double Explosions)</h3>
+<p>A <strong>Critical Success</strong> occurs whenever an exploding natural <strong>6</strong> generates a bonus die that also lands on a natural <strong>6</strong> (a consecutive double-six chain).</p>
+<p>When you achieve a <strong>Critical Success</strong>, you immediately receive two mechanical rewards:</p>
+<ol>
+<li><strong>Grunt Surge</strong>: Your <strong>Goblin Boss</strong> immediately regains <strong>+1 Grunt</strong> (up to your maximum <strong>Grunt</strong> rating).</li>
+<li><strong>Adrenaline Burst</strong>: You immediately gain <strong>1 Free Action</strong> (which must be a non-offensive <strong>Move</strong>, <strong>Plunder</strong>, or <strong>Manipulate</strong> action; see <a href="03_Action_Economy_and_Turn_Flow.md">Action Economy &amp; Turn Flow</a>).</li>
+</ol>
+<pre><code class="language-mermaid">flowchart LR
+    A[&quot;Natural 6 Rolled&quot;] --&gt;|Counts as 1 Success| B[&quot;Roll +1 Bonus Die&quot;]
+    B --&gt;|Rolls 6| C[&quot;CRITICAL SUCCESS!&quot;]
+    C --&gt; D[&quot;- Counts as 1 Success&lt;br&gt;- Regain +1 Grunt&lt;br&gt;- Gain 1 Free Non-Offensive Action&lt;br&gt;- Roll another Bonus Die (Chains!)&quot;]
+</code></pre>
+<p>[MISSING RULE / GAP: Bangaranga Multi-Explosion Critical Cascade Definition — When rolling Bangaranga Dice, a natural 6 explodes into two regular dice simultaneously. The rules must define whether a 6 rolled on either bonus die triggers a Critical Success. Suggested Resolution: Any bonus die generated from an exploding die that rolls a 6 is treated as a Critical Success, granting +1 Grunt and a free non-offensive action. However, a single test action can grant a maximum of +1 Grunt and 1 bonus Free Action regardless of how many individual double-six chains occur in that single pool throw.]</p>
+<hr>
+<h2 id="zero-dice-pools-and-the-salvage-roll" tabindex="-1">Zero Dice Pools &amp; The Salvage Roll</h2>
+<p>When extreme Banes, encumbrance penalties, or debilitating conditions reduce your active dice pool to <strong>0d6 or fewer dice</strong>, the action automatically fails by default. However, a goblin always makes one last desperate attempt.</p>
+<h3 id="the-salvage-roll" tabindex="-1">The Salvage Roll</h3>
+<p>When forced to test with a pool of <strong>0d6 or fewer</strong>, you roll exactly <strong>1d6</strong> as a <strong>Salvage Roll</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Die Face</th>
+<th style="text-align:left">Result</th>
+<th style="text-align:left">Mechanical Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>6</strong></td>
+<td style="text-align:left"><strong>Miraculous Salvage</strong></td>
+<td style="text-align:left">Generates exactly <strong>1 Success</strong>. The die <strong>does not explode</strong>, and cannot trigger a Critical Success.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>1</strong></td>
+<td style="text-align:left"><strong>Catastrophic Fumble</strong></td>
+<td style="text-align:left">The action fails catastrophically and triggers an immediate <strong>Fumble</strong>. If an allied <strong>Mob</strong> is present in your zone or an adjacent zone, you lose <strong>1 Grunt</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>2, 3, 4, 5</strong></td>
+<td style="text-align:left"><strong>Clean Failure</strong></td>
+<td style="text-align:left">The action fails normally with no additional penalties or Grunt loss.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="the-gobbo-gamble" tabindex="-1">The Gobbo Gamble</h2>
+<p>When an initial roll fails, a goblin can push luck by doubling down on their worst dice.</p>
+<h3 id="declaring-the-gamble" tabindex="-1">Declaring the Gamble</h3>
+<p>If your initial test fails to accumulate enough successes to meet the <strong>Target Number (TN)</strong>, but your roll contains one or more dice showing <strong>1s</strong>, you may declare a <strong>Gobbo Gamble</strong>:</p>
+<ol>
+<li><strong>Reroll All 1s</strong>: Pick up all dice showing natural <strong>1s</strong> from the failed pool and reroll them together. You cannot choose to reroll only some of the 1s; all 1s must be rerolled.</li>
+<li><strong>The Blessing</strong>: If the rerolled dice produce enough new successes to bring your total pool successes up to or above the <strong>TN</strong>, the test succeeds normally.</li>
+<li><strong>The Fumble</strong>: If the total successes are still fewer than the <strong>TN</strong> after rerolling the 1s, you have <strong>Fumbled</strong>. The action fails catastrophically, and your <strong>Goblin Boss</strong> immediately loses <strong>1 Grunt</strong>.</li>
+<li><strong>Accepting Failure</strong>: If you choose not to reroll your 1s (or if your failed roll contained zero 1s), the action fails normally. You suffer no <strong>Fumble</strong> penalty and lose <strong>0 Grunt</strong>.</li>
+</ol>
+<blockquote>
+<p><strong>Example:</strong> You make a <code>Tough 5+/2</code> test with a pool of 3d6. The dice show <strong>1</strong>, <strong>1</strong>, and <strong>3</strong> (0 successes). Because you have two 1s, you declare a <strong>Gobbo Gamble</strong> and reroll both 1s.</p>
+<ul>
+<li><em>Outcome A:</em> The rerolled dice land on <strong>5</strong> and <strong>6</strong>. You now have 2 successes. The test succeeds!</li>
+<li><em>Outcome B:</em> The rerolled dice land on <strong>2</strong> and <strong>5</strong>. You now have 1 success (short of the TN of 2). The test fails, you trigger a <strong>Fumble</strong>, and you lose <strong>1 Grunt</strong>.</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="boons-and-banes" tabindex="-1">Boons &amp; Banes</h2>
+<p>Circumstances, tactical positioning, environmental traits, and specialized gear modify dice pools by adding or removing physical dice.</p>
+<h3 id="boons-1d" tabindex="-1">Boons (+1d)</h3>
+<p>A <strong>Boon</strong> represents a tactical advantage (such as attacking an unalert target, using masterwork lockpicks, or having high ground). Each Boon adds <strong>+1d6</strong> to your active dice pool before the roll is made.</p>
+<h3 id="banes-1d" tabindex="-1">Banes (-1d)</h3>
+<p>A <strong>Bane</strong> represents an active hindrance (such as attacking through thick smoke, firing into partial cover, or moving while over-encumbered). Each Bane removes <strong>1d6</strong> from your active dice pool before the roll is made.</p>
+<h3 id="the-net-cap-rule" tabindex="-1">The Net Cap Rule</h3>
+<p>Multiple environmental, tactical, or situational modifiers do not stack indefinitely:</p>
+<ul>
+<li><strong>1-to-1 Cancellation</strong>: Boons and Banes cancel each other out on a 1-to-1 basis.</li>
+<li><strong>Net Modifier Cap</strong>: After cancellation, situational and environmental modifiers are capped at a net maximum of <strong>+1d (Boon 1)</strong> or <strong>-1d (Bane 1)</strong> on any single test.</li>
+<li><em>Exception</em>: Distinct gear properties (such as Heavy Armor imposing Bane 2 on Slink) or specific high-tier Quirks explicitly state when they bypass the situational net cap.</li>
+</ul>
+<hr>
+<h2 id="the-bangaranga-pool-engine" tabindex="-1">The Bangaranga Pool Engine</h2>
+<p>The <strong>Bangaranga Pool</strong> is a shared, communal pool of distinctly colored standard d6s (such as bright red or neon green) placed in the center of the table. It represents the collective hype, screaming, bloodlust, and erratic momentum of the entire goblin horde.</p>
+<blockquote>
+<blockquote>
+<p><strong>The Bangaranga Pool:</strong> Shared Horde Momentum • Double-Exploding 6s • High Risk</p>
+</blockquote>
+</blockquote>
+<h3 id="1-seeding-the-pool-raid-start" tabindex="-1">1. Seeding the Pool (Raid Start)</h3>
+<p>At the start of every raid, the <strong>Bangaranga Pool</strong> is seeded with initial dice based on party composition:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Party Element</th>
+<th style="text-align:center">Dice Seeded into Pool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Each <strong>Goblin Boss</strong> present</td>
+<td style="text-align:center"><strong>+1d</strong> per Boss</td>
+</tr>
+<tr>
+<td style="text-align:left">Each controlled <strong>Mob</strong> of <strong>Size 3</strong> or <strong>Size 4</strong></td>
+<td style="text-align:center"><strong>+1d</strong> per Mob</td>
+</tr>
+<tr>
+<td style="text-align:left">Each controlled <strong>Mob</strong> of <strong>Size 5</strong></td>
+<td style="text-align:center"><strong>+2d</strong> per Mob</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Example:</strong> A raiding party consists of 3 <strong>Goblin Bosses</strong>, one <strong>Size 4 Mob</strong>, and one <strong>Size 2 Mob</strong>. At the start of the raid, the table seeds the <strong>Bangaranga Pool</strong> with <strong>4d6</strong> (3d from Bosses + 1d from the Size 4 Mob + 0d from the Size 2 Mob).</p>
+</blockquote>
+<h3 id="2-loading-the-pool-hype-triggers" tabindex="-1">2. Loading the Pool (Hype Triggers)</h3>
+<p>During play, notable chaotic feats add physical dice to the active <strong>Bangaranga Pool</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Trigger Event</th>
+<th style="text-align:left">Condition</th>
+<th style="text-align:center">Dice Added</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Critical Success</strong></td>
+<td style="text-align:left">Any player rolls a double-six Critical Success on any test</td>
+<td style="text-align:center"><strong>+1d6</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Fumble</strong></td>
+<td style="text-align:left">Any player fumbles a test (via failed Gamble or 0d6 Salvage)</td>
+<td style="text-align:center"><strong>+1d6</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Notable Kill</strong></td>
+<td style="text-align:left">Defeating an enemy with the <code>[Notable]</code> or <code>[Big Threat]</code> tag</td>
+<td style="text-align:center"><strong>+1d6</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Major Loot Cache</strong></td>
+<td style="text-align:left">Claiming a chest or zone with the <code>[Big Loot]</code> or <code>[Hoard]</code> tag</td>
+<td style="text-align:center"><strong>+1d6</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Shenanigan Indulged</strong></td>
+<td style="text-align:left">Indulging a Gang <strong>Shenanigan</strong> compulsion to the party’s detriment</td>
+<td style="text-align:center"><strong>+1d6</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Mob Mischief</strong></td>
+<td style="text-align:left">Rolling natural 1s during background node <strong>Chaos Ticks</strong></td>
+<td style="text-align:center"><strong>+1d6 per 1</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-tapping-the-pool-and-the-bangaranga-tax" tabindex="-1">3. Tapping the Pool &amp; The Bangaranga Tax</h3>
+<p>Before rolling any test, a <strong>Goblin Boss</strong> may draw dice from the <strong>Bangaranga Pool</strong> to add to their active dice pool:</p>
+<ul>
+<li><strong>Grunt Draw Limit</strong>: You can draw a maximum number of Bangaranga dice equal to your Boss’s current <strong>Grunt</strong> rating.</li>
+<li><strong>The Bangaranga Tax</strong>: If the number of Bangaranga dice drawn is <strong>strictly greater than the test’s Target Number (TN)</strong>, you must pay a <strong>1-die Tax</strong>. One additional die is removed from the Bangaranga Pool and discarded unrolled back to the box.</li>
+<li><strong>Pool Coverage Requirement</strong>: If the Bangaranga Pool contains insufficient dice to cover both the drawn dice and the required tax die, you cannot draw that number of dice.</li>
+</ul>
+<blockquote>
+<p><strong>Example (Tax Calculation on a 5+/2 Test):</strong></p>
+<ul>
+<li>Drawing 1 or 2 Bangaranga dice: No tax (2 dice drawn &lt;= TN 2). Exactly 2 dice are drawn and rolled.</li>
+<li>Drawing 3 Bangaranga dice: Tax applies (3 dice drawn &gt; TN 2). Requires 4 total dice in the pool. 3 dice are rolled, and 1 die is discarded unrolled.</li>
+</ul>
+</blockquote>
+<h3 id="4-rolling-bangaranga-dice-double-explosions" tabindex="-1">4. Rolling Bangaranga Dice (Double Explosions)</h3>
+<p>Bangaranga dice are rolled alongside your standard pool dice:</p>
+<ul>
+<li>Every natural <strong>6</strong> rolled on a Bangaranga die counts as <strong>1 Success</strong> and <strong>explodes twice</strong>.</li>
+<li>You immediately roll <strong>two regular d6s</strong> into your pool for each exploding Bangaranga 6. These bonus regular dice can themselves succeed or explode normally.</li>
+</ul>
+<h3 id="5-overreaching-and-drain" tabindex="-1">5. Overreaching &amp; Drain</h3>
+<p>Relying on the crowd’s chaotic energy carries severe penalties when things go wrong:</p>
+<ul>
+<li><strong>Grunt Loss</strong>: If a test fails after including Bangaranga dice, your Boss immediately loses <strong>1 Grunt</strong>. (Because failure already costs 1 Grunt, you should always declare a <strong>Gobbo Gamble</strong> on any 1s rolled).</li>
+<li><strong>Pool Drain</strong>: If a test using Bangaranga dice ends in failure (either by accepting failure with 1s or failing the Gobbo Gamble) and the final pool contains <strong>any natural 1s</strong>, the hype collapses. You must immediately remove and discard a number of dice from the communal <strong>Bangaranga Pool</strong> equal to the number of Bangaranga dice drawn for that test.</li>
+</ul>
+<hr>
+<h2 id="opposed-and-resistance-resolution" tabindex="-1">Opposed &amp; Resistance Resolution</h2>
+<p>Because the <strong>Game Master (GM)</strong> never rolls dice, all adversarial resistance, environmental opposition, and physical contests are resolved using static target profiles.</p>
+<h3 id="static-threat-and-resistance-profiles" tabindex="-1">Static Threat &amp; Resistance Profiles</h3>
+<p>When an NPC, enemy guard, or trap resists a player’s action:</p>
+<ol>
+<li><strong>Static Threshold</strong>: The GM references the adversary’s or obstacle’s static rating, formatted as <code>Difficulty Face+/Resistance TN</code> (e.g. an alert guard possesses a passive detection profile of <code>5+/2</code>).</li>
+<li><strong>Active Player Test</strong>: The player makes an active test using the appropriate stat (<strong>Slink</strong> for stealth, <strong>Mouth</strong> for intimidation, <strong>Tough</strong> for wrestling) against that static profile.</li>
+<li><strong>Outcome</strong>: If player successes meet or exceed the static Resistance TN, the player overcomes the opposition. If successes fall short, the action fails and triggers enemy awareness or retaliation.</li>
+</ol>
+<p>[MISSING RULE / GAP: Unified Opposed &amp; Resistance Test Mechanics — While the core engine specifies that the GM never rolls dice, complex opposed contests between multiple NPCs or asymmetric player-versus-player disputes lack an explicit tie-breaking formula. Suggested Resolution: In any direct contest between two active player characters, both roll their active stat pools against a default Normal (5+) difficulty; the character with the higher net successes wins. If tied, the character with the higher base Main Stat wins; if still tied, both suffer a chaotic collision and gain the Staggered condition.]</p>
+<hr>
+<h2 id="summary-of-core-resolution-rules" tabindex="-1">Summary of Core Resolution Rules</h2>
+<ol>
+<li><strong>ROLL:</strong> Assemble pool = <strong>Base Stat / Mob Size</strong> + <strong>Boons</strong> - <strong>Banes</strong> + <strong>Bangaranga</strong>. The GM never rolls.</li>
+<li><strong>COUNT:</strong> Match faces against Difficulty (<strong>Easy 4+</strong>, <strong>Normal 5+</strong>, <strong>Hard 6</strong>).</li>
+<li><strong>EXPLODE:</strong> Every natural <strong>6</strong> is +1 success and rolls +1 bonus d6.
+<ul>
+<li>Double explosion (6 -&gt; 6) is a <strong>Critical Success</strong>: +1 Grunt &amp; +1 Free Non-Offensive Action.</li>
+<li>Bangaranga <strong>6</strong> explodes into <strong>two regular dice</strong>.</li>
+</ul>
+</li>
+<li><strong>EVALUATE:</strong> Compare total successes to <strong>Target Number (TN)</strong>.
+<ul>
+<li><strong>Successes &gt;= TN:</strong> Action succeeds.</li>
+<li><strong>Successes &lt; TN with 1s:</strong> Optional <strong>Gobbo Gamble</strong> (reroll all 1s; fail = lose 1 Grunt).</li>
+<li><strong>Pool &lt;= 0d6:</strong> <strong>Salvage Roll</strong> (1d6: 6 = Success, 1 = Fumble &amp; lose 1 Grunt, 2–5 = Failure).</li>
+</ul>
+</li>
+</ol>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- LLM Dropdown Toggle ---
+    (function() {
+      const btn = document.getElementById('llmDropdownBtn');
+      const menu = document.getElementById('llmDropdownMenu');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = menu.classList.toggle('show');
+        btn.setAttribute('aria-expanded', isOpen);
+      });
+
+      document.addEventListener('click', () => {
+        menu.classList.remove('show');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    })();
+
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'flex';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+
+    // --- Anchor Scroll Fix ---
+    (function() {
+      function scrollToHash() {
+        if (window.location.hash) {
+          const id = decodeURIComponent(window.location.hash.substring(1));
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }, 100);
+          }
+        }
+      }
+      window.addEventListener('hashchange', scrollToHash);
+      window.addEventListener('DOMContentLoaded', scrollToHash);
+      window.addEventListener('load', scrollToHash);
+    })();
+
+    // --- Manual Sync Trigger ---
+    (function() {
+      const headerBtn = document.getElementById('headerSyncBtn');
+      const bannerBtn = document.getElementById('bannerSyncBtn');
+      
+      function handleSync(btn) {
+        if (!btn) return;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        
+        // Add spinning/loading animation class
+        if (btn.classList.contains('sync-btn')) {
+          btn.classList.add('sync-btn--spinning');
+          btn.querySelector('span').textContent = 'Syncing...';
+        } else {
+          btn.textContent = 'Syncing...';
+        }
+        
+        fetch('/api/run-sync', { method: 'POST' })
+          .then(res => {
+            if (!res.ok) throw new Error('Server returned error status: ' + res.status);
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.status === 'success') {
+              if (btn.classList.contains('sync-btn')) {
+                btn.querySelector('span').textContent = 'Success!';
+              } else {
+                btn.textContent = 'Success!';
+              }
+              // Reload page to reflect changes
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              throw new Error(data.error || 'Sync failed');
+            }
+          })
+          .catch(err => {
+            console.error('Sync failed:', err);
+            alert('Failed to rerun sync: ' + err.message);
+            // Restore button
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            if (btn.classList.contains('sync-btn')) {
+              btn.classList.remove('sync-btn--spinning');
+            }
+          });
+      }
+
+      if (headerBtn) {
+        headerBtn.addEventListener('click', () => handleSync(headerBtn));
+      }
+      if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
+    })();
+  </script>
+
+  <!-- ===== Mermaid.js Integration ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    (function() {
+      function initMermaid() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        
+        const lightThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#f0e6d6',
+          primaryTextColor: '#231c16',
+          primaryBorderColor: '#8c2d19',
+          lineColor: '#c68a35',
+          secondaryColor: '#fdfbf7',
+          tertiaryColor: '#e5dcce',
+          edgeLabelBackground: '#faf5ec',
+          nodeBorder: '#8c2d19',
+          clusterBkg: '#eee5d5',
+          clusterBorder: '#c68a35',
+          titleColor: '#8c2d19'
+        };
+
+        const darkThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#241e1a',
+          primaryTextColor: '#e6dfd5',
+          primaryBorderColor: '#d44d32',
+          lineColor: '#d4a359',
+          secondaryColor: '#1a1613',
+          tertiaryColor: '#2a221c',
+          edgeLabelBackground: '#171412',
+          nodeBorder: '#d44d32',
+          clusterBkg: '#1c1815',
+          clusterBorder: '#8c6a38',
+          titleColor: '#d44d32'
+        };
+
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: 'base',
+          themeVariables: isDark ? darkThemeVariables : lightThemeVariables,
+          flowchart: {
+            curve: 'basis',
+            padding: 16,
+            nodeSpacing: 50,
+            rankSpacing: 40,
+            htmlLabels: true
+          },
+          securityLevel: 'loose'
+        });
+
+        // Convert code blocks with language-mermaid to <pre class="mermaid">
+        const mermaidCodeBlocks = document.querySelectorAll('pre > code.language-mermaid');
+        mermaidCodeBlocks.forEach((codeEl) => {
+          const preEl = codeEl.parentElement;
+          if (preEl && preEl.tagName === 'PRE') {
+            // Save raw mermaid source text if not already saved
+            if (!preEl.getAttribute('data-mermaid-src')) {
+              preEl.setAttribute('data-mermaid-src', codeEl.textContent);
+            }
+            const src = preEl.getAttribute('data-mermaid-src');
+            preEl.className = 'mermaid';
+            preEl.textContent = src;
+            preEl.removeAttribute('data-processed');
+          }
+        });
+
+        // Also handle any pre.mermaid that might need re-render on theme change
+        const directMermaidBlocks = document.querySelectorAll('pre.mermaid');
+        directMermaidBlocks.forEach((preEl) => {
+          if (!preEl.getAttribute('data-mermaid-src')) {
+            preEl.setAttribute('data-mermaid-src', preEl.textContent);
+          }
+          const src = preEl.getAttribute('data-mermaid-src');
+          preEl.textContent = src;
+          preEl.removeAttribute('data-processed');
+        });
+
+        if (document.querySelectorAll('.mermaid').length > 0) {
+          mermaid.run({
+            nodes: document.querySelectorAll('.mermaid')
+          }).catch(err => console.error('Mermaid render error:', err));
+        }
+      }
+
+      // Initial render on DOM load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMermaid);
+      } else {
+        initMermaid();
+      }
+
+      // Re-initialize mermaid when theme changes
+      const themeToggleBtn = document.getElementById('themeToggle');
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          setTimeout(initMermaid, 50);
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

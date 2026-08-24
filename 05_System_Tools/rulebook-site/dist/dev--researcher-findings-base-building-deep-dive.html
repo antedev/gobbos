@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Researcher_Findings_Base_Building_Deep_Dive — DEV Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Raw ideas and brainstorms">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,500;0,700;0,800;1,700&family=Alegreya:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab env-tab--active">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right" style="display: flex; gap: 8px; align-items: center;">
+      <div class="llm-dropdown-container">
+        <button class="llm-btn" id="llmDropdownBtn" title="LLM Continuous Markdown Bundles" aria-label="LLM Bundles" aria-expanded="false">
+          <span>🤖 LLM Files</span>
+          <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="llm-dropdown-menu" id="llmDropdownMenu">
+          <div class="llm-dropdown-header">LLM HTML (Gemini / Web)</div>
+          <a href="all_llm.html" target="_blank" class="llm-dropdown-item">👑 Master All (Rules + Lore)</a>
+          <a href="rules_all_llm.html" target="_blank" class="llm-dropdown-item">📜 Combined Rules (PROD + STAGE)</a>
+          <a href="rules_stage_llm.html" target="_blank" class="llm-dropdown-item">🧪 STAGE Rules</a>
+          <a href="rules_prod_llm.html" target="_blank" class="llm-dropdown-item">📖 PROD Rules</a>
+          <a href="lore_all_llm.html" target="_blank" class="llm-dropdown-item">🔮 Combined Lore</a>
+          <a href="lore_stage_llm.html" target="_blank" class="llm-dropdown-item">📜 STAGE Lore</a>
+          <div class="llm-dropdown-divider"></div>
+          <div class="llm-dropdown-header">Raw Markdown & Index</div>
+          <a href="all_llm.md" target="_blank" class="llm-dropdown-item">📝 all_llm.md</a>
+          <a href="llms.txt" target="_blank" class="llm-dropdown-item">📋 /llms.txt Index</a>
+        </div>
+      </div>
+      <button class="sync-btn" id="headerSyncBtn" title="Sync & Rebuild Site" aria-label="Sync and rebuild site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sync-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Sync</span>
+      </button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">DEV Rules</h2>
+        <p class="sidebar-subtitle">Raw ideas and brainstorms</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="gdrs"><span class="toggle-icon">▸</span>GDRs</button><ul class="nav-pages" id="nav-gdrs" style="display: none;"><li><a href="dev.html" class="nav-link" data-target="gdrs--gdr-001-macro-audit-and-unified-effects">GDR-001_Macro_Audit_And_Unified_Effects</a></li><li><a href="dev--gdrs--gdr-002-gang-pillar-and-lair-economy.html" class="nav-link" data-target="gdrs--gdr-002-gang-pillar-and-lair-economy">GDR-002_Gang_Pillar_And_Lair_Economy</a></li><li><a href="dev--gdrs--gdr-003-unified-modular-powers-system.html" class="nav-link" data-target="gdrs--gdr-003-unified-modular-powers-system">GDR-003_Unified_Modular_Powers_System</a></li><li><a href="dev--gdrs--gdr-004-enemy-stat-framework-and-mobs.html" class="nav-link" data-target="gdrs--gdr-004-enemy-stat-framework-and-mobs">GDR-004_Enemy_Stat_Framework_And_Mobs</a></li><li><a href="dev--gdrs--gdr-005-goblin-magic-dice-system.html" class="nav-link" data-target="gdrs--gdr-005-goblin-magic-dice-system">GDR-005_Goblin_Magic_Dice_System</a></li><li><a href="dev--gdrs--gdr-006-environmental-hazards-and-zone-statblocks.html" class="nav-link" data-target="gdrs--gdr-006-environmental-hazards-and-zone-statblocks">GDR-006_Environmental_Hazards_and_Zone_Statblocks</a></li><li><a href="dev--gdrs--gdr-template.html" class="nav-link" data-target="gdrs--gdr-template">GDR-TEMPLATE</a></li></ul></div><div class="nav-group nav-group--solo"><a href="dev--crafting-creative-analysis.html" class="nav-link nav-link--solo" data-target="crafting-creative-analysis">crafting_creative_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-framework-brainstorm">crafting_framework_brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-mechanics-audit.html" class="nav-link nav-link--solo" data-target="crafting-mechanics-audit">crafting_mechanics_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--crafting-brainstorm.html" class="nav-link nav-link--solo" data-target="crafting-brainstorm">crafting-brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--creative-genius-crafting-analysis.html" class="nav-link nav-link--solo" data-target="creative-genius-crafting-analysis">creative_genius_crafting_analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-modular-threat-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="enemy-modular-threat-framework-brainstorm">Enemy_Modular_Threat_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--enemy-stats-draft.html" class="nav-link nav-link--solo" data-target="enemy-stats-draft">Enemy_Stats_Draft</a></div><div class="nav-group nav-group--solo"><a href="dev--equipment-framework-brainstorm.html" class="nav-link nav-link--solo" data-target="equipment-framework-brainstorm">Equipment_Framework_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--gang-mechanics-brainstorm.html" class="nav-link nav-link--solo" data-target="gang-mechanics-brainstorm">Gang_Mechanics_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--generic-trick-mechanics.html" class="nav-link nav-link--solo" data-target="generic-trick-mechanics">Generic_Trick_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--initial-trick-list.html" class="nav-link nav-link--solo" data-target="initial-trick-list">Initial_Trick_List</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-brainstorm.html" class="nav-link nav-link--solo" data-target="lair-brainstorm">Lair_Brainstorm</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-mechanics-game-engineering-audit.html" class="nav-link nav-link--solo" data-target="lair-mechanics-game-engineering-audit">Lair_Mechanics_Game_Engineering_Audit</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-refined-framework.html" class="nav-link nav-link--solo" data-target="lair-system-refined-framework">Lair_System_Refined_Framework</a></div><div class="nav-group nav-group--solo"><a href="dev--lair-system-research-deep-dive.html" class="nav-link nav-link--solo" data-target="lair-system-research-deep-dive">Lair_System_Research_Deep_Dive</a></div><div class="nav-group nav-group--solo"><a href="dev--mob-combat-design-advice.html" class="nav-link nav-link--solo" data-target="mob-combat-design-advice">Mob_Combat_Design_Advice</a></div><div class="nav-group nav-group--solo"><a href="dev--research-crafting-systems.html" class="nav-link nav-link--solo" data-target="research-crafting-systems">research_crafting_systems</a></div><div class="nav-group nav-group--solo"><a href="dev--research-deeds-award-mechanics.html" class="nav-link nav-link--solo" data-target="research-deeds-award-mechanics">Research_Deeds_Award_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-base-building-deep-dive.html" class="nav-link nav-link--solo nav-link--active" data-target="researcher-findings-base-building-deep-dive">Researcher_Findings_Base_Building_Deep_Dive</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-base-building.html" class="nav-link nav-link--solo" data-target="researcher-findings-base-building">Researcher_Findings_Base_Building</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-conditions.html" class="nav-link nav-link--solo" data-target="researcher-findings-conditions">Researcher_Findings_Conditions</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-environmental-hazards.html" class="nav-link nav-link--solo" data-target="researcher-findings-environmental-hazards">Researcher_Findings_Environmental_Hazards</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-analysis.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-analysis">Researcher_Findings_OSR_Analysis</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-findings-osr-sources.html" class="nav-link nav-link--solo" data-target="researcher-findings-osr-sources">Researcher_Findings_OSR_Sources</a></div><div class="nav-group nav-group--solo"><a href="dev--researcher-notes.html" class="nav-link nav-link--solo" data-target="researcher-notes">Researcher_Notes</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-audit-equipment.html" class="nav-link nav-link--solo" data-target="rules-lawyer-audit-equipment">Rules_Lawyer_Audit_Equipment</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-crafting-audit.html" class="nav-link nav-link--solo" data-target="rules-lawyer-crafting-audit">rules_lawyer_crafting_audit</a></div><div class="nav-group nav-group--solo"><a href="dev--rules-lawyer-system-audit-report.html" class="nav-link nav-link--solo" data-target="rules-lawyer-system-audit-report">Rules_Lawyer_System_Audit_Report</a></div><div class="nav-group nav-group--solo"><a href="dev--static-resistances-opposed-tests.html" class="nav-link nav-link--solo" data-target="static-resistances-opposed-tests">Static_Resistances_Opposed_Tests</a></div><div class="nav-group nav-group--solo"><a href="dev--trick-mechanics-master-list.html" class="nav-link nav-link--solo" data-target="trick-mechanics-master-list">Trick_Mechanics_Master_List</a></div><div class="nav-group nav-group--solo"><a href="dev--unified-modular-power-system.html" class="nav-link nav-link--solo" data-target="unified-modular-power-system">Unified Modular Power System</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; align-items: center; justify-content: space-between; gap: 16px; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        <span>⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.</span>
+        <button class="sync-banner-btn" id="bannerSyncBtn">Rerun Sync</button>
+      </div>
+      <h1 id="deep-dive-research-abstract-base-building-and-societal-dynamics-in-games" tabindex="-1">Deep-Dive Research: Abstract Base-Building &amp; Societal Dynamics in Games</h1>
+<p><strong>Role:</strong> The Researcher<br>
+<strong>Scope:</strong> Cross-media analysis of TTRPGs, video games, and board games implementing abstract settlement/base-building systems, with a dedicated focus on <strong>functional design (zero floor-plan grid bloat)</strong> and <strong>how infrastructure evolution reshapes culture, power dynamics, and society</strong>.</p>
+<hr>
+<h2 id="executive-summary-and-core-insights" tabindex="-1">Executive Summary &amp; Core Insights</h2>
+<p>Base-building systems fail when they degenerate into architectural spreadsheets (e.g., measuring hallway widths and tracking copper-piece maintenance). They succeed when they treat the base as:</p>
+<ol>
+<li><strong>A Shared Character Sheet / Engine:</strong> An abstract node-map or card array where upgrades provide distinct functional unlocks (new actions, passive production, risk mitigators).</li>
+<li><strong>A Societal Crucible:</strong> A mirror that reflects and accelerates cultural transformation, class stratification, ideological friction, and internal power struggles.</li>
+<li><strong>An Adventure Generator:</strong> A system where the base’s needs (and the unintended consequences of its expansion) actively generate the next raid or mission.</li>
+</ol>
+<p><code>┌─────────────────────────────────────────────────────────────────────────┐ │                           THE BASE TRIAD                                │ ├───────────────────────────┬───────────────────────────┬─────────────────┤ │    FUNCTIONAL ENGINE      │    SOCIETAL CRUCIBLE      │ ADVENTURE ENGINE│ │ Abstract Nodes, Upgrades, │ Class Division, Decrees,  │ Rare Ingredients│ │ Resource Sinks, Passives  │ Faction Dominance, Mutiny │ Heat &amp; Raids    │ └───────────────────────────┴───────────────────────────┴─────────────────┘</code></p>
+<hr>
+<h2 id="part-1-how-other-systems-solve-abstract-base-building" tabindex="-1">Part 1: How Other Systems Solve Abstract Base-Building</h2>
+<h3 id="1-tabletop-rpgs" tabindex="-1">1. Tabletop RPGs</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Game</th>
+<th style="text-align:left">Base System / Form Factor</th>
+<th style="text-align:left">Key Functional Mechanic</th>
+<th style="text-align:left">Key Societal / Cultural Mechanic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Blades in the Dark</strong> <em>(John Harper)</em></td>
+<td style="text-align:left"><strong>The Claims Map &amp; Crew Sheet</strong> (Abstract node web, Tier 0–4, Vaults, Turf).</td>
+<td style="text-align:left">Upgrades increase Tier, vault capacity, or cohort quality. Claims are seized via targeted scores.</td>
+<td style="text-align:left"><strong>Heat &amp; Entanglements:</strong> Higher tier attracts bluecoats and rival syndicates. Faction status determines city underworld politics.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Mutant: Year Zero</strong> <em>(Free League)</em></td>
+<td style="text-align:left"><strong>The Ark</strong> (4 DEV Stats: Food Supply, Culture, Technology, Warfare).</td>
+<td style="text-align:left">Players vote on 1 communal <strong>Project</strong> per session (e.g., Palisade, Pig Farm, Scrap Cannon) resolved via progress clocks.</td>
+<td style="text-align:left"><strong>Societal Evolution:</strong> As DEV stats increase, the Ark transitions from feral mud-eaters to feudal fiefdoms or industrial cults. Rival Boss NPCs fight for project control.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Wicked Ones</strong> <em>(Ben Nielson)</em></td>
+<td style="text-align:left"><strong>Dungeon Sheet &amp; Lurking Phase</strong> (Abstract room slots, Minions, Traps).</td>
+<td style="text-align:left">Rooms house minions and brew potions. Digging actions trigger <strong>Dungeon Discoveries</strong> (unearthing lava, relics, or native horrors).</td>
+<td style="text-align:left"><strong>Calamities &amp; Minion Factions:</strong> Success breeds dungeon friction (feral minion rebellions, rampaging pets, or adventurer invasions).</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Forbidden Lands</strong> <em>(Free League)</em></td>
+<td style="text-align:left"><strong>Stronghold Functions</strong> (List of rooms: Forge, Bakery, Library, Watchtower).</td>
+<td style="text-align:left">Modular functions built on hexes. Each function requires raw building materials, build days, and a <strong>staffed Hireling NPC</strong>.</td>
+<td style="text-align:left"><strong>Reputation &amp; Attracted Trouble:</strong> Stronghold prosperity draws wandering monsters, greedy bandits, and rival warlords to attack during upkeep.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Stonetop</strong> <em>(Jeremy Strandberg)</em></td>
+<td style="text-align:left"><strong>The Steading Playbook</strong> (Population, Prosperity, Defenses, Resources).</td>
+<td style="text-align:left">Improvements (Dovecotes, Palisade) require expeditions for rare materials. <strong>Homefront Moves</strong> resolve village crises while away.</td>
+<td style="text-align:left"><strong>Hearth Ties &amp; Communal Stakes:</strong> The village is an emotional entity. Decisions force hard ethical choices on communal survival and neighborly relations.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Ars Magica</strong> <em>(Atlas Games)</em></td>
+<td style="text-align:left"><strong>The Covenant</strong> (Abstracted lab ratings, Library quality, Vis sources).</td>
+<td style="text-align:left">Seasons spent researching or expanding libraries directly unlock higher spell levels and enchanted items.</td>
+<td style="text-align:left"><strong>Covenant Aging &amp; Isolation:</strong> Over decades, covenants warp local peasant economies, attract Church inquisitions, or become paranoid hermitages.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="part-2-video-games" tabindex="-1">Part 2: Video Games</h2>
+<h3 id="a-darkest-dungeon-the-abstract-hub-engine" tabindex="-1">A. Darkest Dungeon — The Abstract Hub Engine</h3>
+<ul>
+<li><strong>The Mechanic:</strong> Static screen with clickable buildings upgraded via Heirlooms (Deeds, Crests, Portraits, Busts) from Level 1 to 5. Zero grid or spatial math.</li>
+<li><strong>Societal Reflection:</strong> The Hamlet shifts from a dilapidated ruin into an industrial meat-grinder where heroes are disposable fuel.</li>
+</ul>
+<h3 id="b-cult-of-the-lamb-doctrines-and-social-decrees" tabindex="-1">B. Cult of the Lamb — Doctrines &amp; Social Decrees</h3>
+<ul>
+<li><strong>The Mechanic:</strong> Base building paired with Commandment Stone Doctrines (Afterlife, Work &amp; Worship, Possessions, Law &amp; Order, Sustenance).</li>
+<li><strong>The Cultural Pivot:</strong> Mutually exclusive choices (e.g., Grass Eater vs Cannibalism, Fight Pit vs Re-education Prison).</li>
+</ul>
+<h3 id="c-dungeon-keeper-monster-needs-and-faction-friction" tabindex="-1">C. Dungeon Keeper — Monster Needs &amp; Faction Friction</h3>
+<ul>
+<li><strong>The Mechanic:</strong> Imps excavate dirt for functional rooms.</li>
+<li><strong>Societal Dynamic:</strong> Minions demand gold on Payday, eat food, and have inter-species hatreds that cause spontaneous tavern brawls.</li>
+</ul>
+<h3 id="d-frostpunk-the-book-of-laws" tabindex="-1">D. Frostpunk — The Book of Laws</h3>
+<ul>
+<li><strong>The Mechanic:</strong> City survival requires passing laws (Child Labor vs Shelters, Soup vs Sawdust, Public Executions vs Faith Keepers). Every structure embodies the community’s ideological shift.</li>
+</ul>
+<hr>
+<h2 id="part-3-board-games" tabindex="-1">Part 3: Board Games</h2>
+<h3 id="a-frosthaven-the-outpost-campaign-loop" tabindex="-1">A. Frosthaven — The Outpost Campaign Loop</h3>
+<ul>
+<li><strong>The Flow:</strong> Strict 5-step downtime: Time -&gt; Event -&gt; Operations -&gt; Downtime Actions -&gt; Construction.</li>
+<li><strong>Building Cards:</strong> Upgrades flip cards (Level 1 -&gt; 2 -&gt; 3). Outpost attacks damage/wreck buildings, shutting off bonuses until repaired.</li>
+</ul>
+<h3 id="b-kingdom-death-monster-innovation-deck-and-milestone-principles" tabindex="-1">B. Kingdom Death: Monster — Innovation Deck &amp; Milestone Principles</h3>
+<ul>
+<li><strong>The Mechanism:</strong> Survival/organ resources unlock Innovations (Language, Paint, Ammonia). Population milestones trigger permanent ethical choices (Graves vs Cannibalism, Survival of the Fittest vs Protect the Young).</li>
+</ul>
+<hr>
+<h2 id="part-4-the-societal-metamorphosis-in-gobbos" tabindex="-1">Part 4: The Societal Metamorphosis in Gobbos</h2>
+<ol>
+<li><strong>Emergence of Degenerate Social Castes:</strong> Tinkers in welding goggles vs Swarm Aristocrats controlling beer vs Bone Cultists demanding tribute.</li>
+<li><strong>The Greed Dilemma:</strong> Communal survival giving way to personal stashes, Gang Dominance, and tax evasion.</li>
+<li><strong>Mob Unionization &amp; Mutiny:</strong> Wealthy veteran Mobs demand higher pay and better gear, striking if the Boss fails their Pitch test.</li>
+<li><strong>Warren Decrees:</strong> Communal votes on laws (e.g., The Big Boiling Pot vs Patron Saint Shrine; Free Mob Enterprise vs Iron Whip Tyranny).</li>
+</ol>
+<hr>
+<h2 id="part-5-golden-takeaways-for-gobbos" tabindex="-1">Part 5: Golden Takeaways for Gobbos</h2>
+<ol>
+<li><strong>Visual Node Web:</strong> 6–10 abstract Cavern Nodes (no 5-foot squares).</li>
+<li><strong>Strict 5-Step Lair Phase:</strong> Time/Homecoming -&gt; Event -&gt; Labor Allocation -&gt; Boss Downtime -&gt; Construction/Decrees.</li>
+<li><strong>Personnel Gating (Elders &amp; Captives):</strong> Advanced functions require retired Bosses or captured experts.</li>
+<li><strong>Dynamic Labor Allocation:</strong> Unassigned Gobbo Pool dice become workers (high raid army = zero base progress).</li>
+<li><strong>Faction Dominance &amp; Friction:</strong> Gangs claim rooms for exclusive kickbacks, creating inter-gang stakes.</li>
+</ol>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- LLM Dropdown Toggle ---
+    (function() {
+      const btn = document.getElementById('llmDropdownBtn');
+      const menu = document.getElementById('llmDropdownMenu');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = menu.classList.toggle('show');
+        btn.setAttribute('aria-expanded', isOpen);
+      });
+
+      document.addEventListener('click', () => {
+        menu.classList.remove('show');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    })();
+
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'flex';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+
+    // --- Anchor Scroll Fix ---
+    (function() {
+      function scrollToHash() {
+        if (window.location.hash) {
+          const id = decodeURIComponent(window.location.hash.substring(1));
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }, 100);
+          }
+        }
+      }
+      window.addEventListener('hashchange', scrollToHash);
+      window.addEventListener('DOMContentLoaded', scrollToHash);
+      window.addEventListener('load', scrollToHash);
+    })();
+
+    // --- Manual Sync Trigger ---
+    (function() {
+      const headerBtn = document.getElementById('headerSyncBtn');
+      const bannerBtn = document.getElementById('bannerSyncBtn');
+      
+      function handleSync(btn) {
+        if (!btn) return;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        
+        // Add spinning/loading animation class
+        if (btn.classList.contains('sync-btn')) {
+          btn.classList.add('sync-btn--spinning');
+          btn.querySelector('span').textContent = 'Syncing...';
+        } else {
+          btn.textContent = 'Syncing...';
+        }
+        
+        fetch('/api/run-sync', { method: 'POST' })
+          .then(res => {
+            if (!res.ok) throw new Error('Server returned error status: ' + res.status);
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.status === 'success') {
+              if (btn.classList.contains('sync-btn')) {
+                btn.querySelector('span').textContent = 'Success!';
+              } else {
+                btn.textContent = 'Success!';
+              }
+              // Reload page to reflect changes
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              throw new Error(data.error || 'Sync failed');
+            }
+          })
+          .catch(err => {
+            console.error('Sync failed:', err);
+            alert('Failed to rerun sync: ' + err.message);
+            // Restore button
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            if (btn.classList.contains('sync-btn')) {
+              btn.classList.remove('sync-btn--spinning');
+            }
+          });
+      }
+
+      if (headerBtn) {
+        headerBtn.addEventListener('click', () => handleSync(headerBtn));
+      }
+      if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
+    })();
+  </script>
+
+  <!-- ===== Mermaid.js Integration ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    (function() {
+      function initMermaid() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        
+        const lightThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#f0e6d6',
+          primaryTextColor: '#231c16',
+          primaryBorderColor: '#8c2d19',
+          lineColor: '#c68a35',
+          secondaryColor: '#fdfbf7',
+          tertiaryColor: '#e5dcce',
+          edgeLabelBackground: '#faf5ec',
+          nodeBorder: '#8c2d19',
+          clusterBkg: '#eee5d5',
+          clusterBorder: '#c68a35',
+          titleColor: '#8c2d19'
+        };
+
+        const darkThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#241e1a',
+          primaryTextColor: '#e6dfd5',
+          primaryBorderColor: '#d44d32',
+          lineColor: '#d4a359',
+          secondaryColor: '#1a1613',
+          tertiaryColor: '#2a221c',
+          edgeLabelBackground: '#171412',
+          nodeBorder: '#d44d32',
+          clusterBkg: '#1c1815',
+          clusterBorder: '#8c6a38',
+          titleColor: '#d44d32'
+        };
+
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: 'base',
+          themeVariables: isDark ? darkThemeVariables : lightThemeVariables,
+          flowchart: {
+            curve: 'basis',
+            padding: 16,
+            nodeSpacing: 50,
+            rankSpacing: 40,
+            htmlLabels: true
+          },
+          securityLevel: 'loose'
+        });
+
+        // Convert code blocks with language-mermaid to <pre class="mermaid">
+        const mermaidCodeBlocks = document.querySelectorAll('pre > code.language-mermaid');
+        mermaidCodeBlocks.forEach((codeEl) => {
+          const preEl = codeEl.parentElement;
+          if (preEl && preEl.tagName === 'PRE') {
+            // Save raw mermaid source text if not already saved
+            if (!preEl.getAttribute('data-mermaid-src')) {
+              preEl.setAttribute('data-mermaid-src', codeEl.textContent);
+            }
+            const src = preEl.getAttribute('data-mermaid-src');
+            preEl.className = 'mermaid';
+            preEl.textContent = src;
+            preEl.removeAttribute('data-processed');
+          }
+        });
+
+        // Also handle any pre.mermaid that might need re-render on theme change
+        const directMermaidBlocks = document.querySelectorAll('pre.mermaid');
+        directMermaidBlocks.forEach((preEl) => {
+          if (!preEl.getAttribute('data-mermaid-src')) {
+            preEl.setAttribute('data-mermaid-src', preEl.textContent);
+          }
+          const src = preEl.getAttribute('data-mermaid-src');
+          preEl.textContent = src;
+          preEl.removeAttribute('data-processed');
+        });
+
+        if (document.querySelectorAll('.mermaid').length > 0) {
+          mermaid.run({
+            nodes: document.querySelectorAll('.mermaid')
+          }).catch(err => console.error('Mermaid render error:', err));
+        }
+      }
+
+      // Initial render on DOM load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMermaid);
+      } else {
+        initMermaid();
+      }
+
+      // Re-initialize mermaid when theme changes
+      const themeToggleBtn = document.getElementById('themeToggle');
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          setTimeout(initMermaid, 50);
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journeys_and_Hazards — PROD Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. The official rulebook">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,500;0,700;0,800;1,700&family=Alegreya:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab env-tab--active">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right" style="display: flex; gap: 8px; align-items: center;">
+      <div class="llm-dropdown-container">
+        <button class="llm-btn" id="llmDropdownBtn" title="LLM Continuous Markdown Bundles" aria-label="LLM Bundles" aria-expanded="false">
+          <span>🤖 LLM Files</span>
+          <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="llm-dropdown-menu" id="llmDropdownMenu">
+          <div class="llm-dropdown-header">LLM HTML (Gemini / Web)</div>
+          <a href="all_llm.html" target="_blank" class="llm-dropdown-item">👑 Master All (Rules + Lore)</a>
+          <a href="rules_all_llm.html" target="_blank" class="llm-dropdown-item">📜 Combined Rules (PROD + STAGE)</a>
+          <a href="rules_stage_llm.html" target="_blank" class="llm-dropdown-item">🧪 STAGE Rules</a>
+          <a href="rules_prod_llm.html" target="_blank" class="llm-dropdown-item">📖 PROD Rules</a>
+          <a href="lore_all_llm.html" target="_blank" class="llm-dropdown-item">🔮 Combined Lore</a>
+          <a href="lore_stage_llm.html" target="_blank" class="llm-dropdown-item">📜 STAGE Lore</a>
+          <div class="llm-dropdown-divider"></div>
+          <div class="llm-dropdown-header">Raw Markdown & Index</div>
+          <a href="all_llm.md" target="_blank" class="llm-dropdown-item">📝 all_llm.md</a>
+          <a href="llms.txt" target="_blank" class="llm-dropdown-item">📋 /llms.txt Index</a>
+        </div>
+      </div>
+      <button class="sync-btn" id="headerSyncBtn" title="Sync & Rebuild Site" aria-label="Sync and rebuild site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sync-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Sync</span>
+      </button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">PROD Rules</h2>
+        <p class="sidebar-subtitle">The official rulebook</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="prod.html" class="nav-link" data-target="rules--dice">Dice</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="characters-and-mobs"><span class="toggle-icon">▸</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" style="display: none;"><li><a href="prod--characters-and-mobs--stats.html" class="nav-link" data-target="characters-and-mobs--stats">Stats</a></li></ul></div><div class="nav-group nav-group--solo"><a href="prod--core-resolution.html" class="nav-link nav-link--solo" data-target="core-resolution">Core_Resolution</a></div><div class="nav-group nav-group--solo"><a href="prod--boss-profile-and-gang.html" class="nav-link nav-link--solo" data-target="boss-profile-and-gang">Boss_Profile_and_Gang</a></div><div class="nav-group nav-group--solo"><a href="prod--action-economy-and-turn-flow.html" class="nav-link nav-link--solo" data-target="action-economy-and-turn-flow">Action_Economy_and_Turn_Flow</a></div><div class="nav-group nav-group--solo"><a href="prod--zones-and-movement.html" class="nav-link nav-link--solo" data-target="zones-and-movement">Zones_and_Movement</a></div><div class="nav-group nav-group--solo"><a href="prod--combat-engine.html" class="nav-link nav-link--solo" data-target="combat-engine">Combat_Engine</a></div><div class="nav-group nav-group--solo"><a href="prod--mob-mechanics.html" class="nav-link nav-link--solo" data-target="mob-mechanics">Mob_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="prod--damage-grit-and-wounds.html" class="nav-link nav-link--solo" data-target="damage-grit-and-wounds">Damage_Grit_and_Wounds</a></div><div class="nav-group nav-group--solo"><a href="prod--magic-and-bangaranga.html" class="nav-link nav-link--solo" data-target="magic-and-bangaranga">Magic_and_Bangaranga</a></div><div class="nav-group nav-group--solo"><a href="prod--the-raid-loop.html" class="nav-link nav-link--solo" data-target="the-raid-loop">The_Raid_Loop</a></div><div class="nav-group nav-group--solo"><a href="prod--the-lair-loop-and-progression.html" class="nav-link nav-link--solo" data-target="the-lair-loop-and-progression">The_Lair_Loop_and_Progression</a></div><div class="nav-group nav-group--solo"><a href="prod--journeys-and-hazards.html" class="nav-link nav-link--solo nav-link--active" data-target="journeys-and-hazards">Journeys_and_Hazards</a></div><div class="nav-group nav-group--solo"><a href="prod--adversaries-and-threats.html" class="nav-link nav-link--solo" data-target="adversaries-and-threats">Adversaries_and_Threats</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; align-items: center; justify-content: space-between; gap: 16px; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        <span>⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.</span>
+        <button class="sync-banner-btn" id="bannerSyncBtn">Rerun Sync</button>
+      </div>
+      <h1 id="journeys-and-hazards" tabindex="-1">Journeys &amp; Hazards</h1>
+<p><em>Getting to the raid is half the chaos—and usually half the casualties. The world outside the Warren is filled with human patrol hounds, rushing toxic sewers, rotting rope bridges, and worst of all, other goblins. A clever Boss herds the green horde through the wilds, but some gobbos are bound to get lost, poisoned, or squashed along the way.</em></p>
+<hr>
+<h2 id="1-the-journey-loop-and-travel-stages" tabindex="-1">1. The Journey Loop &amp; Travel Stages</h2>
+<p>Travel in <strong>Gobbos</strong> is designed to be fast, perilous, and highly chaotic. Rather than tracking individual rations or day-by-day distances, overland and subterranean journeys are resolved in abstract <strong>Stages</strong> before the raid begins. The primary threat during travel is <strong>Mob Attrition</strong>—losing goblins to the wilderness before reaching the target.</p>
+<pre><code class="language-mermaid">flowchart TD
+    S1[&quot;1. Establish the Route&lt;br&gt;- Short: 1 Stage (Local outskirts, familiar sewers)&lt;br&gt;- Medium: 2 Stages (Wild forests, treacherous caverns)&lt;br&gt;- Long / Perilous: 3 Stages (Hostile mountains, enemy heartland)&quot;] --&gt; S2[&quot;2. Assign Travel Roles&lt;br&gt;- Map-Scrawler (Brains)&lt;br&gt;- Sniffer (Slink)&lt;br&gt;- Scavver (Tough)&lt;br&gt;- Loud-Mouth (Mouth)&quot;]
+    S2 --&gt; S3[&quot;3. Traverse Each Stage&lt;br&gt;- Step 1: Route Test (Map-Scrawler rolls Brains 5+/1)&lt;br&gt;- Step 2: Travel Event (GM rolls 1d6 targeting a specific role)&quot;]
+    S3 --&gt; S4[&quot;4. Arrival at Destination&lt;br&gt;- Party enters raid site with accumulated Attrition, boons, or banes&quot;]
+</code></pre>
+<hr>
+<h2 id="2-the-four-travel-roles" tabindex="-1">2. The Four Travel Roles</h2>
+<p>Every journey requires a clear division of labor (and someone to blame when disasters occur). All four <strong>Travel Roles</strong> must be assigned before rolling:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Travel Role</th>
+<th style="text-align:center">Primary Attribute</th>
+<th style="text-align:left">Core Responsibilities &amp; Duties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Map-Scrawler</strong></td>
+<td style="text-align:center"><strong>Brains</strong></td>
+<td style="text-align:left">Reads crude maps, interprets landmarks, and navigates routes.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Sniffer</strong></td>
+<td style="text-align:center"><strong>Slink</strong></td>
+<td style="text-align:left">Scouts ahead, detects ambushes, and smells out concealed traps.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Scavver</strong></td>
+<td style="text-align:center"><strong>Tough</strong></td>
+<td style="text-align:left">Clears physical debris, forages edible fungus, and hauls gear.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Loud-Mouth</strong></td>
+<td style="text-align:center"><strong>Mouth</strong></td>
+<td style="text-align:left">Enforces march discipline, suppresses panic, and silences bickering.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mobs-assigned-to-travel-roles" tabindex="-1">Mobs Assigned to Travel Roles</h3>
+<p>If playing with fewer than four players, a <strong>Goblin Boss</strong> may take multiple roles, or assign a commanded <strong>Goblin Mob</strong> to fill a vacant role:</p>
+<ul>
+<li><strong>Mobs testing Tough (Scavver):</strong> Roll a dice pool equal to the <strong>Mob’s current Size</strong> in d6s.</li>
+<li><strong>Mobs testing Slink, Brains, or Mouth (Sniffer, Map-Scrawler, Loud-Mouth):</strong> Lesser goblins rely on collective cunning; they roll a baseline pool of <strong>2d6</strong> (as defined in <a href="06_Mob_Mechanics.md">Mob Mechanics</a>).</li>
+</ul>
+<blockquote>
+<blockquote>
+<p><strong>THE TRAVEL RESOLUTION RULE:</strong>
+The <strong>GM</strong> never rolls dice to resolve player success or failure during a journey. All tests are rolled by the players filling the designated roles. The standard success threshold for travel tests is <strong>5+</strong> (success on 5 or 6). Exploding 6s and standard fumbles apply.</p>
+</blockquote>
+</blockquote>
+<hr>
+<h2 id="3-resolving-a-stage" tabindex="-1">3. Resolving a Stage</h2>
+<p>For each Stage of the journey, the party resolves two sequential steps:</p>
+<h3 id="step-1-the-route-test" tabindex="-1">Step 1: The Route Test</h3>
+<p>The <strong>Map-Scrawler</strong> makes a <strong>Brains 5+/1</strong> navigation test against the route’s baseline profile.</p>
+<ul>
+<li><strong>Success:</strong> The route is clear. The party advances to the Stage’s Travel Event with zero penalties.</li>
+<li><strong>Failure:</strong> The party takes a grueling, hazardous detour. The entire party suffers <strong>1 Mob Attrition</strong> (every <strong>Mob</strong> in the party takes 1 point of damage to its active health die), and the party suffers a <strong>Bane 1 (-1d)</strong> on the upcoming <strong>Travel Event</strong> test.</li>
+</ul>
+<h3 id="step-2-the-travel-event" tabindex="-1">Step 2: The Travel Event</h3>
+<p>The <strong>GM</strong> rolls <strong>1d6</strong> on the <strong>Gobbo Travel Event Table</strong> below. The resulting event targets one of the other three roles, who must make a test to resolve it:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">d6 Roll</th>
+<th style="text-align:left">Event Name</th>
+<th style="text-align:left">Target Role</th>
+<th style="text-align:center">Stat Test</th>
+<th style="text-align:left">Success Outcome</th>
+<th style="text-align:left">Failure Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>1</strong></td>
+<td style="text-align:left"><strong>Narrow Pass</strong></td>
+<td style="text-align:left">Sniffer</td>
+<td style="text-align:center"><strong>Slink 5+/1</strong></td>
+<td style="text-align:left">You slip through the crevices silently.</td>
+<td style="text-align:left">Gobbos get crushed by loose rocks. A <strong>Mob</strong> takes <strong>2 damage</strong> (or rolls armor defense). <strong>Mobs of Size 3+</strong> suffer a <strong>Bane 1 (-1d)</strong> on their next test.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:left"><strong>Deep Torrent</strong></td>
+<td style="text-align:left">Scavver</td>
+<td style="text-align:center"><strong>Tough 5+/1</strong></td>
+<td style="text-align:left">The Scavver builds a crude rope bridge.</td>
+<td style="text-align:left">Gobbos are swept away. A <strong>Mob</strong> takes <strong>Size damage</strong> (losing 1 lowest-value health die, reducing Mob <strong>Size</strong> by 1), or you must discard 1 <strong>Bulk</strong> of equipped gear to save them.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>3</strong></td>
+<td style="text-align:left"><strong>Spore Patch</strong></td>
+<td style="text-align:left">Scavver</td>
+<td style="text-align:center"><strong>Tough 5+/1</strong></td>
+<td style="text-align:left">You harvest nourishing giant mushrooms. Restore 1 health point to a Mob’s health die.</td>
+<td style="text-align:left">Poisonous bellyaches. Every <strong>Mob</strong> takes 1 damage. One random Boss tests <strong>Tough 5+/1</strong>; on failure, gains the <strong>Weakened</strong> condition.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>4</strong></td>
+<td style="text-align:left"><strong>Bickering Over Loot</strong></td>
+<td style="text-align:left">Loud-Mouth</td>
+<td style="text-align:center"><strong>Mouth 5+/1</strong></td>
+<td style="text-align:left">The Loud-Mouth cracks heads and restores order. Gain 1 <strong>Loot</strong> (T1) from the scrap.</td>
+<td style="text-align:left">Violent infighting! A <strong>Mob</strong> takes <strong>1d6/2 (rounded up) damage</strong>, and the Loud-Mouth Boss loses <strong>1 Grunt</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>5</strong></td>
+<td style="text-align:left"><strong>Shadow Ambush</strong></td>
+<td style="text-align:left">Sniffer</td>
+<td style="text-align:center"><strong>Slink 5+/1</strong></td>
+<td style="text-align:left">You detect the predator. Gain <strong>Boon 1 (+1d)</strong> on the first attack of the raid.</td>
+<td style="text-align:left">Caught off-guard! A random <strong>Mob</strong> takes <strong>2 damage</strong>, and the GM adds <strong>+2 dice</strong> to the shared <strong>Bangaranga Pool</strong> from the chaos.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>6</strong></td>
+<td style="text-align:left"><strong>“Are We There Yet?”</strong></td>
+<td style="text-align:left">Loud-Mouth</td>
+<td style="text-align:center"><strong>Mouth 5+/1</strong></td>
+<td style="text-align:left">The Loud-Mouth leads a rowdy, marching chant.</td>
+<td style="text-align:left">Desertion! The Loud-Mouth Boss loses <strong>1 Grunt</strong>, and one <strong>Mob</strong> shrinks by <strong>1 Size</strong> as runts sneak away.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="4-return-journeys-and-plunder-burden" tabindex="-1">4. Return Journeys &amp; Plunder Burden</h2>
+<p>Raiding a vault is simple; hauling heavy iron chests, bronze cauldrons, and gold idols back across the wilderness is where greed kills.</p>
+<h3 id="laden-mobs-50-carry-capacity" tabindex="-1">Laden Mobs (&gt; 50% Carry Capacity)</h3>
+<p>A <strong>Mob</strong> hauling significant expedition plunder (<strong>Carried Bulk &gt; Size x 2</strong>) is <strong>Laden</strong>:</p>
+<ul>
+<li><strong>Laden</strong> Mobs suffer <strong>Bane 1 (-1d)</strong> on all <strong>Slink</strong> and <strong>Tough</strong> tests during the return journey.</li>
+<li>The Map-Scrawler’s <strong>Route Test</strong> required successes increase by +1 (e.g., from <strong>Brains 5+/1</strong> to <strong>Brains 5+/2</strong>).</li>
+</ul>
+<h3 id="over-laden-mobs-maximum-and-dragging-capacity" tabindex="-1">Over-Laden Mobs (Maximum &amp; Dragging Capacity)</h3>
+<p>A <strong>Mob</strong> carrying at or above its unburdened carry capacity (<strong>Carried Bulk &gt;= Size x 4</strong>, up to the dragging limit of <strong>Size x 5</strong>) is <strong>Over-Laden</strong>:</p>
+<ul>
+<li><strong>Over-Laden</strong> Mobs suffer all penalties of being <strong>Laden</strong>.</li>
+<li><strong>Over-Laden</strong> Mobs cannot roll passive armor defense dice against travel hazards.</li>
+<li><strong>Over-Laden</strong> Mobs automatically take <strong>1 damage</strong> on failed Route Tests (representing exhaustion from dragging heavy scrap), in addition to standard party Attrition.</li>
+<li>If the party must flee or dodge a travel hazard, the party must immediately <strong>discard 2 Bulk of Loot</strong> per Over-Laden <strong>Mob</strong>, or that <strong>Mob</strong> becomes <strong>Uncontrolled</strong> as the Mob refuses to leave the plunder behind.</li>
+</ul>
+<hr>
+<h2 id="5-environmental-hazards-and-zone-profiles" tabindex="-1">5. Environmental Hazards &amp; Zone Profiles</h2>
+<p>All tactical environments (both during journeys and inside raid sites) are defined using the <strong>Zone Profile</strong> and <strong>Zone Traits</strong> framework.</p>
+<h3 id="zone-profiles" tabindex="-1">Zone Profiles</h3>
+<p>Every <strong>Zone</strong> possesses a standardized <strong>Zone Profile</strong> consisting of a <strong>Difficulty</strong> and a <strong>Target Number (TN)</strong> (e.g., <code>4+/1</code>, <code>5+/1</code>, <code>5+/2</code>, <code>6/2</code>).</p>
+<blockquote>
+<blockquote>
+<p><strong>THE ZONE PROFILE PRINCIPLE:</strong>
+Any general environmental interaction, traversal, climbing, jumping, or search check attempted within a Zone defaults to using that Zone’s Profile. The <strong>GM</strong> does not invent arbitrary DCs; all environmental tests test against the active Zone Profile.</p>
+</blockquote>
+</blockquote>
+<hr>
+<h3 id="zone-traits-problems-and-opportunities" tabindex="-1">Zone Traits: Problems &amp; Opportunities</h3>
+<p>A <strong>Zone Trait</strong> is a modular feature attached to a <strong>Zone</strong>, divided into <strong>Problems</strong> (Hazards/Obstacles) and <strong>Opportunities</strong> (Tactical Features/Treats):</p>
+<h4 id="1-predefined-problems-hazards-and-obstacles" tabindex="-1">1. Predefined Problems (Hazards &amp; Obstacles)</h4>
+<ul>
+<li><strong>Burning (Hazard):</strong> The Zone is engulfed in fire.
+<ul>
+<li><em>Trigger:</em> Entering the Zone or starting a turn inside it.</li>
+<li><em>Rule:</em> Test <strong>Slink</strong> against the <strong>Zone Profile</strong> or suffer <strong>1 Grit damage</strong> (Boss) / <strong>1 Size damage</strong> (Mob). Spending a <strong>Standard Action</strong> extinguishes flames on self or an adjacent ally.</li>
+</ul>
+</li>
+<li><strong>Narrow (Obstacle):</strong> Tight tunnels or low sewer crawlspaces.
+<ul>
+<li><em>Trigger:</em> Passive.</li>
+<li><em>Rule:</em> Maximum <strong>Mob</strong> size that can occupy the Zone without penalty is <strong>Size 2</strong>. Mobs of <strong>Size 3+</strong> suffer <strong>Bane 1 (-1d)</strong> on attacks and physical tests, and their <strong>Movement</strong> is capped at <strong>1 Zone</strong>. Giant enemies cannot enter.</li>
+</ul>
+</li>
+<li><strong>Slippery (Obstacle):</strong> Wet slime, grease, or ice.
+<ul>
+<li><em>Trigger:</em> Entering the Zone.</li>
+<li><em>Rule:</em> Test <strong>Slink</strong> against the <strong>Zone Profile</strong> or fall <strong>Prone</strong> (movement ends immediately).</li>
+</ul>
+</li>
+<li><strong>Smoky (Obstacle):</strong> Dense smoke, fog, or spore clouds.
+<ul>
+<li><em>Trigger:</em> Passive.</li>
+<li><em>Rule:</em> Ranged attacks targeting or passing through this Zone suffer <strong>Bane 1 (-1d)</strong>. Grants <strong>Partial Cover</strong> to all occupants.</li>
+</ul>
+</li>
+<li><strong>Toxic (Hazard):</strong> Poison gas or acid vapor.
+<ul>
+<li><em>Trigger:</em> Starting a turn inside the Zone.</li>
+<li><em>Rule:</em> Test <strong>Tough</strong> against the <strong>Zone Profile</strong> or suffer the <strong>Weakened</strong> condition until a <strong>Standard Action</strong> is spent resting in a clean Zone.</li>
+</ul>
+</li>
+<li><strong>Deep Water (Obstacle):</strong> Flooded chambers or subterranean rivers.
+<ul>
+<li><em>Trigger:</em> Passive / Traversal.</li>
+<li><em>Rule:</em> <strong>Move</strong> actions travel only <strong>1 Zone</strong>. Swimming creatures must test <strong>Tough</strong> against the <strong>Zone Profile</strong> each round or begin drowning (Bosses lose <strong>1 Grit</strong> per round; Mobs suffer <strong>1 Size damage</strong> per round).</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-predefined-opportunities-features-and-treats" tabindex="-1">2. Predefined Opportunities (Features &amp; Treats)</h4>
+<ul>
+<li><strong>High Ground (Tactical Feature):</strong> Ledges, scaffolding, or crate piles.
+<ul>
+<li><em>Trigger:</em> Passive.</li>
+<li><em>Rule:</em> Ranged attacks made from this Zone gain <strong>Boon 1 (+1d)</strong>. Melee attacks made by enemies outside the Zone against targets inside suffer <strong>Bane 1 (-1d)</strong>.</li>
+</ul>
+</li>
+<li><strong>Junk Pile (Treat):</strong> Heaps of scrap iron, bones, and discarded tools.
+<ul>
+<li><em>Trigger:</em> Interactive (<strong>Manipulate</strong> <strong>Standard Action</strong>).</li>
+<li><em>Rule:</em> Spend a <strong>Standard Action</strong> to test <strong>Notice</strong> against the <strong>Zone Profile</strong>. On success, unearth a throwable improvised weapon (1 damage ranged) or <strong>1d6 Scrap</strong>.</li>
+</ul>
+</li>
+<li><strong>Shadowy (Tactical Feature):</strong> Dark recesses and thick curtains.
+<ul>
+<li><em>Trigger:</em> Passive.</li>
+<li><em>Rule:</em> Stealth and hiding tests made in this Zone gain <strong>Boon 1 (+1d)</strong> on <strong>Slink</strong>.</li>
+</ul>
+</li>
+<li><strong>Shoring (Interactive Feature):</strong> Wooden structural beams and pillars.
+<ul>
+<li><em>Trigger:</em> Interactive (<strong>Attack</strong> or <strong>Manipulate</strong> <strong>Standard Action</strong>).</li>
+<li><em>Rule:</em> Spend a <strong>Standard Action</strong> to collapse the support beams. The Zone gains the <strong>Crumbling</strong> hazard (occupants test <strong>Slink</strong> against the <strong>Zone Profile</strong> or suffer <strong>1 Grit damage</strong> for Bosses / <strong>1 Size damage</strong> for Mobs) and blocks passage to adjacent Zones until cleared.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="6-journey-hazard-and-event-structural-schema" tabindex="-1">6. Journey Hazard &amp; Event Structural Schema</h2>
+<p>Every journey hazard, weather obstacle, or wilderness encounter is defined by the following template:</p>
+<pre><code class="language-markdown">### [Hazard / Event Name]
+- **Hazard Type:** [Environmental Obstacle | Ambush &amp; Predator | Weather &amp; Attrition | Social &amp; Infighting | Trap &amp; Debris]
+- **Zone / Terrain Tag:** [Underground / Sewer | Forest / Wilds | Mountain / Chasm | Ruins / Keep | Swamp / Mire | Wasteland]
+- **Target Role:** [Map-Scrawler (Brains) | Sniffer (Slink) | Scavver (Tough) | Loud-Mouth (Mouth)]
+- **Trigger Condition:** [Route Test Failure | Travel Event Roll (1–6) | High Loot Weight]
+- **Hazard Check &amp; Difficulty:** [Stat tested against Target Number, e.g., Slink 5+/1 or Tough 5+/2]
+- **Failure Consequence:** [Exact mechanical penalty: Mob Attrition damage, Boss Grit loss, Lost Bulk, Condition applied, or Alert increase]
+- **Success Outcome:** [Hazard bypassed, Mob healed, Boon granted, or bonus Loot secured]
+- **Mitigating Action / Avoidance:** [Equipment, Oddity, or alternative cost that bypasses the roll]
+</code></pre>
+<h3 id="reference-hazard-instances" tabindex="-1">Reference Hazard Instances</h3>
+<h4 id="rickety-rope-chasm" tabindex="-1">Rickety Rope Chasm</h4>
+<ul>
+<li><strong>Hazard Type:</strong> Environmental Obstacle</li>
+<li><strong>Zone / Terrain Tag:</strong> Mountain / Chasm</li>
+<li><strong>Target Role:</strong> Scavver (Tough)</li>
+<li><strong>Trigger Condition:</strong> Travel Event Roll (2)</li>
+<li><strong>Hazard Check &amp; Difficulty:</strong> <strong>Tough 5+/1</strong></li>
+<li><strong>Failure Consequence:</strong> Planks snap. A <strong>Mob</strong> loses 1 health die (Size reduced by 1) or the party must drop 2 <strong>Bulk</strong> of carried equipment.</li>
+<li><strong>Success Outcome:</strong> Ropes secured; the party crosses cleanly without delay.</li>
+<li><strong>Mitigating Action / Avoidance:</strong> Spending 1 Climbing Kit or grappling hook guarantees automatic success with no roll.</li>
+</ul>
+<h4 id="stalker-wolf-pack" tabindex="-1">Stalker Wolf Pack</h4>
+<ul>
+<li><strong>Hazard Type:</strong> Ambush &amp; Predator</li>
+<li><strong>Zone / Terrain Tag:</strong> Forest / Wilds</li>
+<li><strong>Target Role:</strong> Sniffer (Slink)</li>
+<li><strong>Trigger Condition:</strong> Travel Event Roll (5)</li>
+<li><strong>Hazard Check &amp; Difficulty:</strong> <strong>Slink 5+/1</strong></li>
+<li><strong>Failure Consequence:</strong> The pack attacks. A random <strong>Mob</strong> takes 2 damage and the starting <strong>Alert</strong> of the upcoming raid increases by +1.</li>
+<li><strong>Success Outcome:</strong> Wolves are smelled and avoided; party gains <strong>Boon 1 (+1d)</strong> on their first ambush attack.</li>
+<li><strong>Mitigating Action / Avoidance:</strong> Throwing 2 Bulk of meat or food distracts the wolves, bypassing the check.</li>
+</ul>
+<hr>
+<h2 id="content-extension-point" tabindex="-1">Content Extension Point</h2>
+<p>[CONTENT EXTENSION POINT: Journey Hazards &amp; Events]</p>
+<p>All future compendiums of travel encounters, wilderness terrain hazards, weather catastrophes, and subterranean navigation events must implement the Journey Hazard &amp; Event Structural Schema defined above, respecting Travel Roles, Mob Attrition rules, and Zone Profile integration.</p>
+<hr>
+<h2 id="mechanical-gaps-and-unresolved-systems" tabindex="-1">Mechanical Gaps &amp; Unresolved Systems</h2>
+<p>[MISSING RULE / GAP: Journey Terrain Difficulty Mapping &amp; Transit Alert Coupling]</p>
+<ul>
+<li><strong>Description:</strong> Stage drafts define a flat Route Test of Brains 5+/1 regardless of terrain (mountains, swamps, or paved roads). Furthermore, loud transit failures (such as the Loud-Mouth causing a riot or failing an ambush test) do not mechanically feed into the starting Alert level of the upcoming raid.</li>
+<li><strong>Why it is needed:</strong> Travel difficulty should reflect the geographical environment, and noisy travel blunders should increase operational heat at the target site.</li>
+<li><strong>Suggested Resolution:</strong>
+<ol>
+<li>Map Terrain Types to Route Test profiles: Mild Wilds = Brains 5+/1, Harsh Swamp/Chasm = Brains 5+/2, Perilous Mountains/Wasteland = Brains 6/2.</li>
+<li>Travel Failures that generate noise or reveal tracks add +1 to Starting Alert at the raid location.</li>
+</ol>
+</li>
+</ul>
+<p>[MISSING RULE / GAP: Mob Attrition Damage vs. Single Health Die Tracking]</p>
+<ul>
+<li><strong>Description:</strong> Route Test failure deals “1 Attrition (every Mob takes 1 damage to its active health die)”. However, Mob damage rules in Chapter 06 track Mob health using a pool of d6s. The travel rules do not clarify whether Attrition damage spills over between dice if a die reaches 0, or how multi-die Mobs track travel wear.</li>
+<li><strong>Why it is needed:</strong> Inconsistent damage resolution between travel attrition and tactical combat creates table confusion.</li>
+<li><strong>Suggested Resolution:</strong> Explicitly state that Travel Attrition follows standard combat damage decrement: 1 damage reduces the active lowest health die of the Mob’s pool. If a die reaches 0, it is removed and Mob Size decreases by 1, with excess damage spilling over into the next die.</li>
+</ul>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- LLM Dropdown Toggle ---
+    (function() {
+      const btn = document.getElementById('llmDropdownBtn');
+      const menu = document.getElementById('llmDropdownMenu');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = menu.classList.toggle('show');
+        btn.setAttribute('aria-expanded', isOpen);
+      });
+
+      document.addEventListener('click', () => {
+        menu.classList.remove('show');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    })();
+
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'flex';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+
+    // --- Anchor Scroll Fix ---
+    (function() {
+      function scrollToHash() {
+        if (window.location.hash) {
+          const id = decodeURIComponent(window.location.hash.substring(1));
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }, 100);
+          }
+        }
+      }
+      window.addEventListener('hashchange', scrollToHash);
+      window.addEventListener('DOMContentLoaded', scrollToHash);
+      window.addEventListener('load', scrollToHash);
+    })();
+
+    // --- Manual Sync Trigger ---
+    (function() {
+      const headerBtn = document.getElementById('headerSyncBtn');
+      const bannerBtn = document.getElementById('bannerSyncBtn');
+      
+      function handleSync(btn) {
+        if (!btn) return;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        
+        // Add spinning/loading animation class
+        if (btn.classList.contains('sync-btn')) {
+          btn.classList.add('sync-btn--spinning');
+          btn.querySelector('span').textContent = 'Syncing...';
+        } else {
+          btn.textContent = 'Syncing...';
+        }
+        
+        fetch('/api/run-sync', { method: 'POST' })
+          .then(res => {
+            if (!res.ok) throw new Error('Server returned error status: ' + res.status);
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.status === 'success') {
+              if (btn.classList.contains('sync-btn')) {
+                btn.querySelector('span').textContent = 'Success!';
+              } else {
+                btn.textContent = 'Success!';
+              }
+              // Reload page to reflect changes
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              throw new Error(data.error || 'Sync failed');
+            }
+          })
+          .catch(err => {
+            console.error('Sync failed:', err);
+            alert('Failed to rerun sync: ' + err.message);
+            // Restore button
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            if (btn.classList.contains('sync-btn')) {
+              btn.classList.remove('sync-btn--spinning');
+            }
+          });
+      }
+
+      if (headerBtn) {
+        headerBtn.addEventListener('click', () => handleSync(headerBtn));
+      }
+      if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
+    })();
+  </script>
+
+  <!-- ===== Mermaid.js Integration ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    (function() {
+      function initMermaid() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        
+        const lightThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#f0e6d6',
+          primaryTextColor: '#231c16',
+          primaryBorderColor: '#8c2d19',
+          lineColor: '#c68a35',
+          secondaryColor: '#fdfbf7',
+          tertiaryColor: '#e5dcce',
+          edgeLabelBackground: '#faf5ec',
+          nodeBorder: '#8c2d19',
+          clusterBkg: '#eee5d5',
+          clusterBorder: '#c68a35',
+          titleColor: '#8c2d19'
+        };
+
+        const darkThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#241e1a',
+          primaryTextColor: '#e6dfd5',
+          primaryBorderColor: '#d44d32',
+          lineColor: '#d4a359',
+          secondaryColor: '#1a1613',
+          tertiaryColor: '#2a221c',
+          edgeLabelBackground: '#171412',
+          nodeBorder: '#d44d32',
+          clusterBkg: '#1c1815',
+          clusterBorder: '#8c6a38',
+          titleColor: '#d44d32'
+        };
+
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: 'base',
+          themeVariables: isDark ? darkThemeVariables : lightThemeVariables,
+          flowchart: {
+            curve: 'basis',
+            padding: 16,
+            nodeSpacing: 50,
+            rankSpacing: 40,
+            htmlLabels: true
+          },
+          securityLevel: 'loose'
+        });
+
+        // Convert code blocks with language-mermaid to <pre class="mermaid">
+        const mermaidCodeBlocks = document.querySelectorAll('pre > code.language-mermaid');
+        mermaidCodeBlocks.forEach((codeEl) => {
+          const preEl = codeEl.parentElement;
+          if (preEl && preEl.tagName === 'PRE') {
+            // Save raw mermaid source text if not already saved
+            if (!preEl.getAttribute('data-mermaid-src')) {
+              preEl.setAttribute('data-mermaid-src', codeEl.textContent);
+            }
+            const src = preEl.getAttribute('data-mermaid-src');
+            preEl.className = 'mermaid';
+            preEl.textContent = src;
+            preEl.removeAttribute('data-processed');
+          }
+        });
+
+        // Also handle any pre.mermaid that might need re-render on theme change
+        const directMermaidBlocks = document.querySelectorAll('pre.mermaid');
+        directMermaidBlocks.forEach((preEl) => {
+          if (!preEl.getAttribute('data-mermaid-src')) {
+            preEl.setAttribute('data-mermaid-src', preEl.textContent);
+          }
+          const src = preEl.getAttribute('data-mermaid-src');
+          preEl.textContent = src;
+          preEl.removeAttribute('data-processed');
+        });
+
+        if (document.querySelectorAll('.mermaid').length > 0) {
+          mermaid.run({
+            nodes: document.querySelectorAll('.mermaid')
+          }).catch(err => console.error('Mermaid render error:', err));
+        }
+      }
+
+      // Initial render on DOM load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMermaid);
+      } else {
+        initMermaid();
+      }
+
+      // Re-initialize mermaid when theme changes
+      const themeToggleBtn = document.getElementById('themeToggle');
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          setTimeout(initMermaid, 50);
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

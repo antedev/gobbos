@@ -284,6 +284,13 @@ async function build() {
   await fs.copy(STYLE_PATH, path.join(DIST_DIR, 'style.css'));
   console.log('  ✅ Copied style.css');
 
+  // Copy robots.txt
+  const ROBOTS_PATH = path.join(__dirname, 'robots.txt');
+  if (await fs.pathExists(ROBOTS_PATH)) {
+    await fs.copy(ROBOTS_PATH, path.join(DIST_DIR, 'robots.txt'));
+    console.log('  ✅ Copied robots.txt');
+  }
+
   // Copy Admin (Decap CMS)
   const ADMIN_PATH = path.join(__dirname, 'admin');
   if (await fs.pathExists(ADMIN_PATH)) {

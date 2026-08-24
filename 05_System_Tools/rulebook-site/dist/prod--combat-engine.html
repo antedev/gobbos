@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combat_Engine — PROD Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. The official rulebook">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,500;0,700;0,800;1,700&family=Alegreya:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab env-tab--active">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right" style="display: flex; gap: 8px; align-items: center;">
+      <div class="llm-dropdown-container">
+        <button class="llm-btn" id="llmDropdownBtn" title="LLM Continuous Markdown Bundles" aria-label="LLM Bundles" aria-expanded="false">
+          <span>🤖 LLM Files</span>
+          <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="llm-dropdown-menu" id="llmDropdownMenu">
+          <div class="llm-dropdown-header">LLM HTML (Gemini / Web)</div>
+          <a href="all_llm.html" target="_blank" class="llm-dropdown-item">👑 Master All (Rules + Lore)</a>
+          <a href="rules_all_llm.html" target="_blank" class="llm-dropdown-item">📜 Combined Rules (PROD + STAGE)</a>
+          <a href="rules_stage_llm.html" target="_blank" class="llm-dropdown-item">🧪 STAGE Rules</a>
+          <a href="rules_prod_llm.html" target="_blank" class="llm-dropdown-item">📖 PROD Rules</a>
+          <a href="lore_all_llm.html" target="_blank" class="llm-dropdown-item">🔮 Combined Lore</a>
+          <a href="lore_stage_llm.html" target="_blank" class="llm-dropdown-item">📜 STAGE Lore</a>
+          <div class="llm-dropdown-divider"></div>
+          <div class="llm-dropdown-header">Raw Markdown & Index</div>
+          <a href="all_llm.md" target="_blank" class="llm-dropdown-item">📝 all_llm.md</a>
+          <a href="llms.txt" target="_blank" class="llm-dropdown-item">📋 /llms.txt Index</a>
+        </div>
+      </div>
+      <button class="sync-btn" id="headerSyncBtn" title="Sync & Rebuild Site" aria-label="Sync and rebuild site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sync-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Sync</span>
+      </button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">PROD Rules</h2>
+        <p class="sidebar-subtitle">The official rulebook</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="prod.html" class="nav-link" data-target="rules--dice">Dice</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="characters-and-mobs"><span class="toggle-icon">▸</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" style="display: none;"><li><a href="prod--characters-and-mobs--stats.html" class="nav-link" data-target="characters-and-mobs--stats">Stats</a></li></ul></div><div class="nav-group nav-group--solo"><a href="prod--core-resolution.html" class="nav-link nav-link--solo" data-target="core-resolution">Core_Resolution</a></div><div class="nav-group nav-group--solo"><a href="prod--boss-profile-and-gang.html" class="nav-link nav-link--solo" data-target="boss-profile-and-gang">Boss_Profile_and_Gang</a></div><div class="nav-group nav-group--solo"><a href="prod--action-economy-and-turn-flow.html" class="nav-link nav-link--solo" data-target="action-economy-and-turn-flow">Action_Economy_and_Turn_Flow</a></div><div class="nav-group nav-group--solo"><a href="prod--zones-and-movement.html" class="nav-link nav-link--solo" data-target="zones-and-movement">Zones_and_Movement</a></div><div class="nav-group nav-group--solo"><a href="prod--combat-engine.html" class="nav-link nav-link--solo nav-link--active" data-target="combat-engine">Combat_Engine</a></div><div class="nav-group nav-group--solo"><a href="prod--mob-mechanics.html" class="nav-link nav-link--solo" data-target="mob-mechanics">Mob_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="prod--damage-grit-and-wounds.html" class="nav-link nav-link--solo" data-target="damage-grit-and-wounds">Damage_Grit_and_Wounds</a></div><div class="nav-group nav-group--solo"><a href="prod--magic-and-bangaranga.html" class="nav-link nav-link--solo" data-target="magic-and-bangaranga">Magic_and_Bangaranga</a></div><div class="nav-group nav-group--solo"><a href="prod--the-raid-loop.html" class="nav-link nav-link--solo" data-target="the-raid-loop">The_Raid_Loop</a></div><div class="nav-group nav-group--solo"><a href="prod--the-lair-loop-and-progression.html" class="nav-link nav-link--solo" data-target="the-lair-loop-and-progression">The_Lair_Loop_and_Progression</a></div><div class="nav-group nav-group--solo"><a href="prod--journeys-and-hazards.html" class="nav-link nav-link--solo" data-target="journeys-and-hazards">Journeys_and_Hazards</a></div><div class="nav-group nav-group--solo"><a href="prod--adversaries-and-threats.html" class="nav-link nav-link--solo" data-target="adversaries-and-threats">Adversaries_and_Threats</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; align-items: center; justify-content: space-between; gap: 16px; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        <span>⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.</span>
+        <button class="sync-banner-btn" id="bannerSyncBtn">Rerun Sync</button>
+      </div>
+      <h1 id="combat-engine" tabindex="-1">Combat Engine</h1>
+<p><em>Combat in Gobbos is fast, visceral, and uncompromisingly deterministic. The Game Master never rolls dice to strike or calculate damage; instead, enemies present lethal Threat profiles that goblin Bosses evade through acrobatic dodges, desperate shield parries, or the noisy protection of clattering scrap-iron armor.</em></p>
+<hr>
+<h2 id="the-attack-pipeline" tabindex="-1">The Attack Pipeline</h2>
+<p>All attacks in <strong>Gobbos</strong>—whether delivered via a rusty cleaver, a scavenged crossbow, or an explosive pot—follow a unified, single-source resolution pipeline.</p>
+<pre><code class="language-mermaid">flowchart TD
+    A[&quot;Declare Attack&quot;] --&gt; B[&quot;Assemble Dice Pool&quot;] --&gt; C[&quot;Roll vs Target Defence TN&quot;]
+    C --&gt;|Successes &gt;= Defence TN| D[&quot;Full Hit / Overkill&lt;br&gt;- Minion: One-Hit Kill&lt;br&gt;- Elite: 1 Wound per multiple of TN&lt;br&gt;- Mob: Decrement Health Die&quot;]
+    C --&gt;|1 &lt;= Successes &lt; Defence TN| E[&quot;Stagger Evaluation&lt;br&gt;- Impact Size &gt;= Target Size: Target Staggered&lt;br&gt;- Impact Size &lt; Target Size: Mass Resistance&quot;]
+    C --&gt;|0 Successes| F[&quot;Bounce / Miss&lt;br&gt;- Strike glances off harmlessly&quot;]
+</code></pre>
+<hr>
+<h2 id="melee-attacks" tabindex="-1">Melee Attacks</h2>
+<p>A <strong>Melee Attack</strong> represents close-quarters combat against a target occupying the same <strong>Zone</strong>.</p>
+<h3 id="execution-and-dice-pool" tabindex="-1">Execution &amp; Dice Pool</h3>
+<ul>
+<li><strong>Action Cost:</strong> Costs one <strong>Standard Action</strong> during the <strong>Player Active Turn</strong>.</li>
+<li><strong>Base Pool:</strong> The attacking Goblin Boss rolls a dice pool equal to their <strong>Tough</strong> stat:
+<strong>Melee Attack Pool</strong> = <strong>Tough</strong> + <strong>Boons (+1d)</strong> - <strong>Banes (-1d)</strong> + <strong>Bangaranga Dice</strong></li>
+<li><strong>Target Number (TN):</strong> The attack resolves against the target’s static <strong>Defence TN</strong> (typically 1 to 4).</li>
+</ul>
+<h3 id="resolving-melee-outcomes" tabindex="-1">Resolving Melee Outcomes</h3>
+<ol>
+<li><strong>Standard Enemy (Minion):</strong> If accumulated successes meet or exceed the target’s <strong>Defence TN</strong> (Successes &gt;= Defence TN), the minion is instantly defeated and removed from play (<strong>One-Hit Kill</strong>).</li>
+<li><strong>Elite / Boss Enemy (The Overkill Rule):</strong> If successes meet or exceed the target’s <strong>Defence TN</strong>, the strike inflicts <strong>1 Wound for every full multiple of the Defence TN</strong> scored on the single roll:
+<strong>Wounds Dealt</strong> = <strong>Attack Successes</strong> / <strong>Target Defence TN</strong> (rounded down)
+<em>(Example: Against an Elite with Defence 2, rolling 2 or 3 successes deals 1 Wound; rolling 4 or 5 successes deals 2 Wounds; rolling 6 successes deals 3 Wounds).</em></li>
+<li><strong>Enemy Mob (Single-Target Melee):</strong> If successes meet or exceed the Mob’s <strong>Defence TN</strong>, the strike reduces the face value of the Mob’s lowest active health die by the weapon’s damage (default 1). If reduced below 1, the die is removed and excess damage spills over into the next lowest die.</li>
+<li><strong>Enemy Mob (Mob-on-Mob Clash):</strong> When a player Mob attacks an enemy Mob, combat resolves via the <strong>Frontline Rule</strong> (see <a href="06_Mob_Mechanics.md">Mob Mechanics</a>).</li>
+<li><strong>Partial Hit (Stagger):</strong> If the roll yields at least <strong>one (1) success</strong> but fewer than the target’s <strong>Defence TN</strong>, the strike deals 0 damage, but triggers an <strong>Impact Size vs. Target Size</strong> comparison to determine if the target is <strong>Staggered</strong>.</li>
+<li><strong>Bounce (Miss):</strong> If the roll yields <strong>zero (0) successes</strong>, the attack bounces harmlessly off the target’s armor or parry.</li>
+</ol>
+<hr>
+<h2 id="ranged-attacks" tabindex="-1">Ranged Attacks</h2>
+<p>A <strong>Ranged Attack</strong> represents firing projectiles (stones, arrows, bolts, or thrown blades) across one or more <strong>Zones</strong>.</p>
+<h3 id="execution-and-dice-pool-1" tabindex="-1">Execution &amp; Dice Pool</h3>
+<ul>
+<li><strong>Action Cost:</strong> Costs one <strong>Standard Action</strong> during the <strong>Player Active Turn</strong>.</li>
+<li><strong>Base Pool:</strong> The attacking Goblin Boss rolls a dice pool equal to their <strong>Slink</strong> stat:
+<strong>Ranged Attack Pool</strong> = <strong>Slink</strong> + <strong>Boons (+1d)</strong> - <strong>Banes (-1d)</strong> + <strong>Bangaranga Dice</strong></li>
+<li><strong>Target Number (TN):</strong> Resolves against the target’s static <strong>Defence TN</strong>.</li>
+</ul>
+<h3 id="range-in-zones" tabindex="-1">Range in Zones</h3>
+<p>Ranged weapons measure distance strictly in discrete Zone steps:</p>
+<ul>
+<li><strong>1 Zone Range (Close):</strong> Slings, thrown daggers, firepots. Targets creatures in the same Zone or 1 adjacent connected Zone.</li>
+<li><strong>2 Zones Range (Standard):</strong> Shortbows, standard crossbows. Targets creatures up to 2 connected Zones away.</li>
+<li><strong>3 Zones Range (Long / Heavy):</strong> Heavy arbalests, sniper slings. Targets creatures up to 3 connected Zones away.</li>
+</ul>
+<h3 id="ranged-environmental-penalties-and-cover" tabindex="-1">Ranged Environmental Penalties &amp; Cover</h3>
+<ul>
+<li><strong>Partial Cover:</strong> Targeting a creature behind Partial Cover imposes a <strong>Bane 1 (-1d)</strong> penalty on the attack pool.</li>
+<li><strong>Full Cover:</strong> Line of sight is completely blocked; the creature cannot be targeted.</li>
+<li><strong>Environmental Obstacles:</strong> Firing through Zones with the <code>Howling Wind</code> (<code>[Gale]</code>) trait or dense smoke screens (<code>[Gaseous]</code>) imposes a <strong>Bane 1 (-1d)</strong> penalty.</li>
+</ul>
+<hr>
+<h2 id="impact-size-and-stagger-resolution" tabindex="-1">Impact Size &amp; Stagger Resolution</h2>
+<p>When an attack scores at least <strong>one (1) success</strong> but falls short of the target’s <strong>Defence TN</strong>, the blow lands with insufficient precision to pierce armor or flesh, but carries physical momentum.</p>
+<pre><code class="language-mermaid">flowchart TD
+    P[&quot;Partial Hit: 1 &lt;= Successes &lt; Defence TN&quot;] --&gt; C[&quot;Compare Impact Size vs Target Size&quot;]
+    C --&gt;|Impact Size &gt;= Target Size| S[&quot;Target gains STAGGERED condition&lt;br&gt;(Defence TN -1 until Round End)&quot;]
+    C --&gt;|Impact Size &lt; Target Size| M[&quot;Target has MASS RESISTANCE&lt;br&gt;(Stagger is completely ignored)&quot;]
+</code></pre>
+<h3 id="calculating-impact-size" tabindex="-1">Calculating Impact Size</h3>
+<p><strong>Impact Size</strong> = <strong>Attacker Base Size</strong> + <strong>Weapon Trait Modifiers</strong></p>
+<ul>
+<li><strong>Attacker Base Size:</strong> A Goblin Boss is <strong>Size 1</strong>. A Mob has a base size equal to its current <strong>Mob Size</strong> (1 to 5).</li>
+<li><strong><code>Heavy</code> Weapon Trait:</strong> Grants <strong>+1 Impact Size</strong> (e.g. a Size 1 Boss wielding a heavy two-handed maul strikes with <strong>Impact Size 2</strong>).</li>
+<li><strong><code>Crushing</code> Weapon Trait:</strong> Grants <strong>+2 Impact Size</strong> (e.g. a Size 1 Boss swinging a wrecking flail strikes with <strong>Impact Size 3</strong>).</li>
+<li><strong>Explosives &amp; Spells:</strong> Explosive blast devices and magic attacks possess an Impact Size equal to their <strong>Tier</strong> (Tier 1 = Impact Size 1, Tier 2 = Impact Size 2, Tier 3 = Impact Size 3, Tier 4 = Impact Size 4, Tier 5 = Impact Size 5).</li>
+</ul>
+<h3 id="stagger-evaluation-and-mass-resistance" tabindex="-1">Stagger Evaluation &amp; Mass Resistance</h3>
+<ul>
+<li><strong>Stagger Applied (Impact Size &gt;= Target Size):</strong> If the attack’s Impact Size equals or exceeds the target’s physical <strong>Size</strong>, the target is thrown violently off balance and gains the <strong>Staggered</strong> condition until the <strong>Round Closure Phase</strong>.</li>
+<li><strong>Mass Resistance (Impact Size &lt; Target Size):</strong> If the attack’s Impact Size is strictly less than the target’s physical <strong>Size</strong>, the giant foe absorbs the blow without budging. The target completely ignores the Stagger effect.</li>
+</ul>
+<blockquote>
+<blockquote>
+<p><strong>THE STAGGERED CONDITION:</strong>
+A <strong>Staggered</strong> enemy or Boss suffers reduced combat effectiveness:</p>
+<ul>
+<li><strong>Enemies &amp; Bosses:</strong> Static <strong>Defence TN</strong> is reduced by <strong>1</strong> (to a minimum of 1).</li>
+<li><strong>Goblin Bosses &amp; PCs:</strong> Suffer a <strong>Bane 1 (-1d)</strong> penalty on active <strong>Dodge</strong> and <strong>Parry</strong> rolls.</li>
+<li><strong>All Staggered conditions automatically clear on all combatants at the end of each round during the Round Closure Phase.</strong></li>
+</ul>
+</blockquote>
+</blockquote>
+<hr>
+<h2 id="weapon-mechanics-and-traits" tabindex="-1">Weapon Mechanics &amp; Traits</h2>
+<p>Weapons provide tactical reach, modify Impact Size, and grant specialized combat properties.</p>
+<h3 id="structural-properties" tabindex="-1">Structural Properties</h3>
+<ul>
+<li><strong>Handedness:</strong> One-Handed (<strong>1H</strong>) weapons allow holding a Shield, torch, or Loot item in the off-hand. Two-Handed (<strong>2H</strong>) weapons require both hands to attack and prevent holding off-hand gear.</li>
+<li><strong>Bulk Footprint:</strong> Light weapons occupy <strong>Bulk 1</strong>; Medium weapons occupy <strong>Bulk 2</strong>; Heavy weapons occupy <strong>Bulk 3</strong>. Improvised weapons occupy <strong>Bulk 0</strong>.</li>
+<li><strong>Quality &amp; Durability:</strong> Weapons belong to a Quality Tier (T1 Junk, T2 Scrappy, T3 Standard, T4 Superior, T5 Legendary). When a player <strong>Fumbles</strong> a test using a weapon, they roll a 1d6 <strong>Break Roll</strong>:
+<ul>
+<li><em>T1 Junk:</em> Breaks on a roll of <strong>1–4</strong>.</li>
+<li><em>T2 Scrappy:</em> Breaks on a roll of <strong>1–3</strong>.</li>
+<li><em>T3 Standard:</em> Breaks on a roll of <strong>1–2</strong>.</li>
+<li><em>T4 Superior:</em> Breaks on a roll of <strong>1</strong>.</li>
+<li><em>T5 Legendary:</em> <strong>Never breaks</strong>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="standard-weapon-traits" tabindex="-1">Standard Weapon Traits</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Trait</th>
+<th style="text-align:left">Category</th>
+<th style="text-align:left">Mechanical Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>Heavy</code></td>
+<td style="text-align:left">Offensive</td>
+<td style="text-align:left">Adds <strong>+1 to Impact Size</strong> when calculating Stagger. Requires two hands (<strong>2H</strong>).</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Crushing</code></td>
+<td style="text-align:left">Offensive</td>
+<td style="text-align:left">Adds <strong>+2 to Impact Size</strong> when calculating Stagger. Requires two hands (<strong>2H</strong>).</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Cleave X</code></td>
+<td style="text-align:left">Offensive</td>
+<td style="text-align:left">Sweeps across frontline ranks. Deals damage simultaneously to up to <strong>X adjacent standard targets</strong> or up to <strong>X lowest active health dice</strong> in an enemy Mob.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Reach</code></td>
+<td style="text-align:left">Tactical</td>
+<td style="text-align:left">Allows melee attacks against targets in an adjacent connected Zone without moving into that Zone.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Concealable</code></td>
+<td style="text-align:left">Utility</td>
+<td style="text-align:left">Compact profile (<strong>Bulk 1</strong>). Can be drawn or stowed as an incidental <strong>Free Action</strong> once per turn.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Versatile</code></td>
+<td style="text-align:left">Tactical</td>
+<td style="text-align:left">Balanced one-handed profile (<strong>1H</strong>). Can be swung with two hands to gain <strong>+1 Impact Size</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Piercing</code></td>
+<td style="text-align:left">Tactical</td>
+<td style="text-align:left">Precision point. Effective against armored foes; suffers <strong>Bane 1 (-1d)</strong> against skeletal Undead.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Bashing</code></td>
+<td style="text-align:left">Tactical</td>
+<td style="text-align:left">Blunt impact. Grants <strong>Boon 1 (+1d)</strong> to Melee Attack pools against brittle or skeletal Undead.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="formal-weapon-structural-schema" tabindex="-1">Formal Weapon Structural Schema</h2>
+<p>[CONTENT EXTENSION POINT: Weapons]</p>
+<p>All weapon instances, armory catalogues, and custom forge chassis must adhere strictly to this standardized schema:</p>
+<pre><code class="language-markdown">### [Weapon Name]
+*   **Category:** [Melee | Ranged | Improvised]
+*   **Quality Tier:** [T1 Junk | T2 Scrappy | T3 Standard | T4 Superior | T5 Legendary]
+*   **Hands Required:** [1H | 2H]
+*   **Bulk:** [Integer 0 to 3+]
+*   **Range:** [Current Zone (Melee) | 1 Zone | 2 Zones | 3 Zones]
+*   **Base Impact Size:** [Wielder Size | Wielder Size + 1 | Wielder Size + 2]
+*   **Attack Stat Profile:** [`Tough` (Melee) | `Slink` (Ranged)] vs Target Defence TN
+*   **Break Roll Threshold:** [Breaks on 1–4 | Breaks on 1–3 | Breaks on 1–2 | Breaks on 1 | Never breaks]
+*   **Built-in Traits:** [`Heavy`, `Crushing`, `Cleave X`, `Reach`, `Concealable`, `Versatile`, `Piercing`, `Bashing`]
+*   **Elemental / Material Tags:** [Optional bracketed tags, e.g. `[Fire]`, `[Spiked]`, `[Silvered]`]
+*   **Special Mechanical Capabilities:** [Direct Tier A rules permissions or situational boons]
+</code></pre>
+<hr>
+<h2 id="armor-and-shields-mechanics" tabindex="-1">Armor &amp; Shields Mechanics</h2>
+<p>Armor and shields provide passive protection, absorb incoming blows, and enable active parrying reactions.</p>
+<h3 id="passive-armor-dice" tabindex="-1">Passive Armor Dice</h3>
+<p>Worn armor provides bonus colored dice (the <strong>Armor Dice pool</strong>) that are thrown alongside active defense dice during a <strong>Clatter Roll</strong>:</p>
+<ul>
+<li><strong>Light Armor (Bulk 1 | 0 Bane):</strong> Grants <strong>+1d Armor Die</strong>. Flexible and quiet; imposes zero mobility or stealth penalties.</li>
+<li><strong>Medium Armor (Bulk 2 | Bane 1):</strong> Grants <strong>+2d Armor Dice</strong>. Stiff leather or mail; imposes <strong>Bane 1 (-1d)</strong> on all <strong>Slink</strong> tests.</li>
+<li><strong>Heavy Armor (Bulk 3 | Bane 2):</strong> Grants <strong>+3d Armor Dice</strong>. Rigid plate; imposes <strong>Bane 2 (-2d)</strong> on all <strong>Slink</strong> tests, and the wearer <strong>cannot swim</strong> (sinks instantly in Deep Water).</li>
+</ul>
+<h3 id="shield-mechanics" tabindex="-1">Shield Mechanics</h3>
+<ul>
+<li><strong>Armor Bonus:</strong> Equipping a Shield (<strong>Bulk 1 | 1H</strong>) grants <strong>+1d Armor Die</strong> to your passive mitigation pool.</li>
+<li><strong>Enables Parry Reaction:</strong> Wielding an active Shield unlocks the ability to declare a <strong>Parry</strong> reaction using your <strong>Tough</strong> stat instead of being limited to a Slink Dodge.</li>
+</ul>
+<h3 id="passive-mitigation-ceiling" tabindex="-1">Passive Mitigation Ceiling</h3>
+<blockquote>
+<blockquote>
+<p><strong>THE 5D MITIGATION CEILING:</strong>
+The total passive mitigation pool rolled on any single Clatter Roll (combining Armor Dice, Shield bonus dice, and Slink Passive Defence dice) is hard-capped at <strong>5d6 Armor Dice</strong> to prevent absolute invulnerability.</p>
+</blockquote>
+</blockquote>
+<h3 id="ablative-gear-sacrifice-rule" tabindex="-1">Ablative Gear Sacrifice Rule</h3>
+<p>When a Goblin Boss suffers an incoming strike with enough unmitigated damage to reduce their <strong>Grit to 0</strong> (or cause immediate death), the Boss may declare an immediate <strong>Gear Sacrifice</strong>:</p>
+<ul>
+<li><strong>The Shatter:</strong> The Boss permanently destroys one equipped Shield or suit of Armor on the spot, reducing the item to worthless, unrepairable scrap.</li>
+<li><strong>The Salvation:</strong> The sacrifice completely absorbs the lethal impact, reducing the incoming strike’s damage to <strong>0</strong>.</li>
+<li><em>(Note: This rule applies strictly to PC Goblin Bosses; Mobs do not track individual ablative gear).</em></li>
+</ul>
+<hr>
+<h2 id="formal-armor-and-shield-structural-schema" tabindex="-1">Formal Armor &amp; Shield Structural Schema</h2>
+<p>[CONTENT EXTENSION POINT: Armor &amp; Shields]</p>
+<p>All protective gear instances and shields must adhere strictly to this schema:</p>
+<pre><code class="language-markdown">### [Armor / Shield Name]
+*   **Category:** [Light Armor | Medium Armor | Heavy Armor | Shield | Heavy Pavise]
+*   **Quality Tier:** [T1 Junk | T2 Scrappy | T3 Standard | T4 Superior | T5 Legendary]
+*   **Slot / Hands:** [Worn (Body) | 1H (Held)]
+*   **Bulk:** [Integer 1 to 3] (For Mobs: Bulk Rating x Mob Size)
+*   **Passive Armor Dice:** [+1d | +2d | +3d]
+*   **Mobility Penalties:** [None | Bane 1 (-1d) on Slink | Bane 2 (-2d) on Slink, Cannot Swim]
+*   **Break Roll Threshold:** [Breaks on 1–4 | Breaks on 1–3 | Breaks on 1–2 | Breaks on 1 | Never breaks]
+*   **Special Mechanical Properties:** [e.g. Enables Tough Parry reaction, Ablative Sacrifice eligible]
+*   **Elemental / Material Tags:** [Optional bracketed tags, e.g. `[Reinforced]`, `[Spiked]`, `[Insulated]`]
+</code></pre>
+<hr>
+<h2 id="gear-tools-and-consumables-mechanics" tabindex="-1">Gear, Tools &amp; Consumables Mechanics</h2>
+<p>Expedition tools, alchemical explosives, and utility gear provide non-combat problem solving and area threat projection.</p>
+<h3 id="design-mandate-difficulty-and-permissions" tabindex="-1">Design Mandate: Difficulty &amp; Permissions</h3>
+<p>Tools never grant “+1 flat math modifiers” to die faces. Instead, tools operate through three clear mechanisms:</p>
+<ol>
+<li><strong>Narrative Permission:</strong> Enables a task that is otherwise physically impossible (e.g. a 30 ft rope allows climbing sheer cliffs).</li>
+<li><strong>Difficulty Step Shift:</strong> Reduces test Difficulty (e.g. Quality Lockpicks shift lockpicking from <strong>Hard (6)</strong> to <strong>Normal (5+)</strong>).</li>
+<li><strong>Dice Boons:</strong> Adds physical dice to the test pool (<strong>Boon 1 (+1d)</strong>).</li>
+</ol>
+<h3 id="consumables-and-explosive-area-threat-profiles" tabindex="-1">Consumables &amp; Explosive Area Threat Profiles</h3>
+<p>Explosives (grenades, molotovs, powder kegs) do not roll single-target attack pools. When thrown or detonated, they project an <strong>Area Threat Profile</strong> across their target Zone:</p>
+<p><strong>Area Threat Profile</strong> = <code>Threat [Difficulty]+/[TN]</code>, <code>[Damage]</code>, <code>[Tags]</code>, <code>Blast Range: X Zones</code>, <code>Impact Size: Y</code></p>
+<ul>
+<li><strong>PC Bosses in Blast Zone:</strong> Must resolve an immediate <strong>Clatter Roll</strong> (Dodge vs Threat TN) or suffer full blast damage to Grit.</li>
+<li><strong>Mobs in Blast Zone:</strong> May execute an active <strong>Scatter</strong> reaction or suffer blast damage applied simultaneously to all health dice.</li>
+<li><strong>Standard Minions in Blast Zone:</strong> Instantly destroyed if the explosive’s Threat TN &gt;= Minion Defence TN.</li>
+<li><strong>Elite Enemies in Blast Zone:</strong> Take 1 Wound if Threat TN &gt;= Defence TN, and gain <strong>Staggered</strong> if blast Impact Size &gt;= Enemy Size.</li>
+</ul>
+<hr>
+<h2 id="formal-gear-tools-and-consumables-schema" tabindex="-1">Formal Gear, Tools &amp; Consumables Schema</h2>
+<p>[CONTENT EXTENSION POINT: Gear, Tools &amp; Consumables]</p>
+<p>All adventuring gear, tools, and consumables must adhere strictly to this schema:</p>
+<pre><code class="language-markdown">### [Item Name]
+*   **Category:** [Adventuring Tool | Utility Gear | Consumable / Explosive | Loot Plunder]
+*   **Quality Tier:** [T1 Junk | T2 Scrappy | T3 Standard | T4 Superior | T5 Legendary]
+*   **Bulk:** [Integer 0 to 4+]
+*   **Usage Lifespan:** [Permanent | Single-Use Expended | 1 Exploration Phase]
+*   **Break Roll Threshold:** [Breaks on 1–4 | Breaks on 1–3 | Breaks on 1–2 | Breaks on 1 | Never breaks]
+*   **Mechanical Function:** [Permission rule, Difficulty step shift, or Boon (+1d)]
+*   **Area Threat Profile** *(Consumables only)*: `Threat [Face]+/[TN]`, [Damage], `[Tags]`, Blast Range: [X Zones], Impact Size: [Tier 1–5]
+*   **Loot Value** *(Plunder only)*: [Tier 1–5 Value tokens]
+</code></pre>
+<hr>
+<h2 id="the-clatter-defense-roll" tabindex="-1">The Clatter Defense Roll</h2>
+<p>The <strong>Clatter Roll</strong> is the core defensive mechanic in <strong>Gobbos</strong>. When an enemy strikes during the <strong>Enemy Active Turn</strong>, the GM announces the attack’s <strong>Threat Profile</strong> (<code>Threat [Face]+/[TN]</code>) and flat <strong>Damage</strong>. The defending Goblin Boss resolves defense in a single simultaneous throw.</p>
+<pre><code class="language-mermaid">flowchart TD
+    I[&quot;Incoming Threat: Threat 5+/1, Damage 3&quot;] --&gt; T[&quot;Simultaneous Throw: The Clatter Roll&lt;br&gt;- Active Stat Dice: 2d Slink Dodge (Saved Action Spent)&lt;br&gt;- Passive Armor Dice: 2d Armor (Medium Armor)&quot;]
+    T --&gt; S1[&quot;Step 1: Check Active Stat Dice vs Threat TN&quot;]
+    S1 --&gt;|Slink scores &gt;= 1 success| CD[&quot;CLEAN DODGE (0 Damage Taken)&quot;]
+    S1 --&gt;|Slink scores 0 successes| S2[&quot;Step 2: Check Passive Armor Dice&lt;br&gt;Each 5+ reduces Damage by 1&quot;]
+    S2 --&gt; S3[&quot;Step 3: Deduct Remaining Damage from Grit&lt;br&gt;Boss takes remaining Damage to Grit&quot;]
+</code></pre>
+<h3 id="step-by-step-clatter-roll-procedure" tabindex="-1">Step-by-Step Clatter Roll Procedure</h3>
+<ol>
+<li><strong>Saved Action Declaration:</strong> To roll active <strong>Stat Dice</strong>, the Boss must spend one saved <strong>Standard Action</strong> (declaring a <strong>Dodge</strong> using <code>Slink</code>, or a <strong>Parry</strong> using <code>Tough</code> if equipped with a Shield).
+<ul>
+<li><em>Zero Saved Actions:</em> If the Boss spent all 3 actions on their active turn, they cannot roll Stat Dice and must rely entirely on passive Armor Dice.</li>
+</ul>
+</li>
+<li><strong>Simultaneous Throw:</strong> The player rolls their active Stat Dice alongside their distinct colored <strong>Armor Dice</strong> (plus any Slink Passive Defence dice) in a single roll.</li>
+<li><strong>Evaluating Active Evasion:</strong>
+<ul>
+<li>If successes on active <strong>Stat Dice</strong> meet or exceed the incoming <strong>Threat TN</strong>, the Boss achieves a <strong>Clean Dodge/Parry</strong>: <strong>0 Damage is taken</strong>.</li>
+</ul>
+</li>
+<li><strong>Evaluating Armor Mitigation:</strong>
+<ul>
+<li>If active Stat Dice fall short of the Threat TN (or if 0 saved actions were available), the attack hits.</li>
+<li>Every success (<strong>5+</strong>) rolled on the <strong>Armor Dice</strong> reduces incoming Damage by <strong>1</strong>.</li>
+</ul>
+</li>
+<li><strong>Grit Decrement:</strong> Any remaining unmitigated damage is deducted directly from the Boss’s <strong>Grit</strong> (see <a href="07_Damage_Grit_and_Wounds.md">Damage, Grit &amp; Wounds</a>).</li>
+</ol>
+<hr>
+<h2 id="group-attacks-and-flanking" tabindex="-1">Group Attacks &amp; Flanking</h2>
+<p>To prevent table slowdown and avoid draining all player reaction actions against large swarms of lesser foes, the GM uses <strong>Group Attacks</strong>.</p>
+<h3 id="group-attack-enemy-swarm-rules" tabindex="-1">Group Attack (Enemy Swarm) Rules</h3>
+<p>When multiple standard minions gang up on a single Goblin Boss:</p>
+<ul>
+<li><strong>Consolidated Attack:</strong> The GM combines up to <strong>3 standard enemies</strong> into a single incoming strike.</li>
+<li><strong>Damage Scaling:</strong> The attack uses the primary enemy’s Threat profile, and deals:
+<strong>Group Damage</strong> = <strong>Base Enemy Damage</strong> + (1 Damage per additional enemy)</li>
+<li><strong>Single Defense Resolution:</strong> The defending Boss spends only <strong>one (1) saved Standard Action</strong> to resolve a single Clatter Roll against the entire combined swarm attack.</li>
+<li><strong>Targeting Cap:</strong> A maximum of 3 standard enemies may combine against a single PC Boss. (Attacks against player Mobs have no grouping cap).</li>
+</ul>
+<h3 id="flanking-and-crossfire-boons" tabindex="-1">Flanking &amp; Crossfire Boons</h3>
+<ul>
+<li><strong>Flanking in Melee:</strong> If two allied Bosses (or a Boss and an allied Mob) engage the same enemy from different approach vectors or surround a foe within a Zone, both attackers gain a <strong>Boon 1 (+1d)</strong> on their Melee Attack rolls.</li>
+<li><strong>Crossfire in Ranged:</strong> If ranged attackers target an enemy from two separate connected Zones, ranged attacks against that target gain a <strong>Boon 1 (+1d)</strong>.</li>
+</ul>
+<hr>
+<h2 id="mechanical-gap-analysis-and-missing-rules" tabindex="-1">Mechanical Gap Analysis &amp; Missing Rules</h2>
+<p>[MISSING RULE / GAP: Dual-Wielding Light Melee Weapons — Character creation permits equipping two Light Melee weapons, but the core combat rules lack an explicit mechanical rule for dual-wielding. Suggested Resolution: Wielding a secondary off-hand Light Melee weapon grants either a passive Boon 1 (+1d) to Melee Attack pools or allows splitting successes across two distinct adjacent targets in the same Zone on a single Attack action.]</p>
+<p>[MISSING RULE / GAP: Ranged Weapon Ammunition Tracking and Depletion — Rules specify slings use scavenged stones, but bows and crossbows lack explicit ammunition management. Suggested Resolution: Standardize that a mundane Quiver/Bolt Case occupies Bulk 1 (providing sufficient ammunition for an entire raid). Fumbling a ranged attack roll with a bow or crossbow expends or breaks the active ammunition supply, requiring a Manipulate action in a Junk Pile or spending 1 Scrap to restock.]</p>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- LLM Dropdown Toggle ---
+    (function() {
+      const btn = document.getElementById('llmDropdownBtn');
+      const menu = document.getElementById('llmDropdownMenu');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = menu.classList.toggle('show');
+        btn.setAttribute('aria-expanded', isOpen);
+      });
+
+      document.addEventListener('click', () => {
+        menu.classList.remove('show');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    })();
+
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'flex';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+
+    // --- Anchor Scroll Fix ---
+    (function() {
+      function scrollToHash() {
+        if (window.location.hash) {
+          const id = decodeURIComponent(window.location.hash.substring(1));
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }, 100);
+          }
+        }
+      }
+      window.addEventListener('hashchange', scrollToHash);
+      window.addEventListener('DOMContentLoaded', scrollToHash);
+      window.addEventListener('load', scrollToHash);
+    })();
+
+    // --- Manual Sync Trigger ---
+    (function() {
+      const headerBtn = document.getElementById('headerSyncBtn');
+      const bannerBtn = document.getElementById('bannerSyncBtn');
+      
+      function handleSync(btn) {
+        if (!btn) return;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        
+        // Add spinning/loading animation class
+        if (btn.classList.contains('sync-btn')) {
+          btn.classList.add('sync-btn--spinning');
+          btn.querySelector('span').textContent = 'Syncing...';
+        } else {
+          btn.textContent = 'Syncing...';
+        }
+        
+        fetch('/api/run-sync', { method: 'POST' })
+          .then(res => {
+            if (!res.ok) throw new Error('Server returned error status: ' + res.status);
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.status === 'success') {
+              if (btn.classList.contains('sync-btn')) {
+                btn.querySelector('span').textContent = 'Success!';
+              } else {
+                btn.textContent = 'Success!';
+              }
+              // Reload page to reflect changes
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              throw new Error(data.error || 'Sync failed');
+            }
+          })
+          .catch(err => {
+            console.error('Sync failed:', err);
+            alert('Failed to rerun sync: ' + err.message);
+            // Restore button
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            if (btn.classList.contains('sync-btn')) {
+              btn.classList.remove('sync-btn--spinning');
+            }
+          });
+      }
+
+      if (headerBtn) {
+        headerBtn.addEventListener('click', () => handleSync(headerBtn));
+      }
+      if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
+    })();
+  </script>
+
+  <!-- ===== Mermaid.js Integration ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    (function() {
+      function initMermaid() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        
+        const lightThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#f0e6d6',
+          primaryTextColor: '#231c16',
+          primaryBorderColor: '#8c2d19',
+          lineColor: '#c68a35',
+          secondaryColor: '#fdfbf7',
+          tertiaryColor: '#e5dcce',
+          edgeLabelBackground: '#faf5ec',
+          nodeBorder: '#8c2d19',
+          clusterBkg: '#eee5d5',
+          clusterBorder: '#c68a35',
+          titleColor: '#8c2d19'
+        };
+
+        const darkThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#241e1a',
+          primaryTextColor: '#e6dfd5',
+          primaryBorderColor: '#d44d32',
+          lineColor: '#d4a359',
+          secondaryColor: '#1a1613',
+          tertiaryColor: '#2a221c',
+          edgeLabelBackground: '#171412',
+          nodeBorder: '#d44d32',
+          clusterBkg: '#1c1815',
+          clusterBorder: '#8c6a38',
+          titleColor: '#d44d32'
+        };
+
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: 'base',
+          themeVariables: isDark ? darkThemeVariables : lightThemeVariables,
+          flowchart: {
+            curve: 'basis',
+            padding: 16,
+            nodeSpacing: 50,
+            rankSpacing: 40,
+            htmlLabels: true
+          },
+          securityLevel: 'loose'
+        });
+
+        // Convert code blocks with language-mermaid to <pre class="mermaid">
+        const mermaidCodeBlocks = document.querySelectorAll('pre > code.language-mermaid');
+        mermaidCodeBlocks.forEach((codeEl) => {
+          const preEl = codeEl.parentElement;
+          if (preEl && preEl.tagName === 'PRE') {
+            // Save raw mermaid source text if not already saved
+            if (!preEl.getAttribute('data-mermaid-src')) {
+              preEl.setAttribute('data-mermaid-src', codeEl.textContent);
+            }
+            const src = preEl.getAttribute('data-mermaid-src');
+            preEl.className = 'mermaid';
+            preEl.textContent = src;
+            preEl.removeAttribute('data-processed');
+          }
+        });
+
+        // Also handle any pre.mermaid that might need re-render on theme change
+        const directMermaidBlocks = document.querySelectorAll('pre.mermaid');
+        directMermaidBlocks.forEach((preEl) => {
+          if (!preEl.getAttribute('data-mermaid-src')) {
+            preEl.setAttribute('data-mermaid-src', preEl.textContent);
+          }
+          const src = preEl.getAttribute('data-mermaid-src');
+          preEl.textContent = src;
+          preEl.removeAttribute('data-processed');
+        });
+
+        if (document.querySelectorAll('.mermaid').length > 0) {
+          mermaid.run({
+            nodes: document.querySelectorAll('.mermaid')
+          }).catch(err => console.error('Mermaid render error:', err));
+        }
+      }
+
+      // Initial render on DOM load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMermaid);
+      } else {
+        initMermaid();
+      }
+
+      // Re-initialize mermaid when theme changes
+      const themeToggleBtn = document.getElementById('themeToggle');
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          setTimeout(initMermaid, 50);
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

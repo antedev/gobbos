@@ -74,6 +74,16 @@
     }
     a { color: #0969da; text-decoration: none; }
     a:hover { text-decoration: underline; }
+    pre.mermaid, .mermaid {
+      background: #fbfcfd;
+      border: 1px solid #d0d7de;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      margin: 1.5em 0;
+      border-radius: 6px;
+    }
   </style>
 </head>
 <body>
@@ -82,7 +92,7 @@
 <blockquote>
 <p><strong>Gobbos TTRPG Consolidated Knowledge Document</strong>
 Contains all synthesized setting lore, world-building, and factions from LORE/01_STAGE_Lore. Dev brainstorms are excluded.
-Generated on: 2026-08-22T12:00:08.531Z
+Generated on: 2026-08-24T19:38:43.359Z
 Total Chapters/Documents included: 6</p>
 </blockquote>
 <hr>
@@ -445,5 +455,47 @@ Total Chapters/Documents included: 6</p>
 <hr>
 
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    (function() {
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: 'base',
+        themeVariables: {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#f0e6d6',
+          primaryTextColor: '#231c16',
+          primaryBorderColor: '#8c2d19',
+          lineColor: '#c68a35',
+          secondaryColor: '#fdfbf7',
+          tertiaryColor: '#e5dcce',
+          edgeLabelBackground: '#faf5ec',
+          nodeBorder: '#8c2d19',
+          clusterBkg: '#eee5d5',
+          clusterBorder: '#c68a35'
+        },
+        flowchart: {
+          curve: 'basis',
+          padding: 16,
+          nodeSpacing: 50,
+          rankSpacing: 40,
+          htmlLabels: true
+        },
+        securityLevel: 'loose'
+      });
+      const codeBlocks = document.querySelectorAll('pre > code.language-mermaid');
+      codeBlocks.forEach(code => {
+        const pre = code.parentElement;
+        if (pre) {
+          pre.className = 'mermaid';
+          pre.textContent = code.textContent;
+        }
+      });
+      if (document.querySelectorAll('.mermaid').length > 0) {
+        mermaid.run({ nodes: document.querySelectorAll('.mermaid') });
+      }
+    })();
+  </script>
 </body>
 </html>

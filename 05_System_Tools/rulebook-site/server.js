@@ -118,6 +118,12 @@ function getRequestBody(req) {
 // Server Request Handler
 // ============================================================
 const server = http.createServer((req, res) => {
+  const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+  const userAgent = req.headers['user-agent'] || 'no-ua';
+  res.on('finish', () => {
+    console.log(`[${new Date().toISOString()}] ${req.method} ${req.url} - Status: ${res.statusCode} - IP: ${ip} - UA: ${userAgent}`);
+  });
+
   const parsedUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
   let pathname = parsedUrl.pathname;
   

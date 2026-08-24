@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zones_and_Movement — PROD Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. The official rulebook">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,500;0,700;0,800;1,700&family=Alegreya:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab env-tab--active">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right" style="display: flex; gap: 8px; align-items: center;">
+      <div class="llm-dropdown-container">
+        <button class="llm-btn" id="llmDropdownBtn" title="LLM Continuous Markdown Bundles" aria-label="LLM Bundles" aria-expanded="false">
+          <span>🤖 LLM Files</span>
+          <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="llm-dropdown-menu" id="llmDropdownMenu">
+          <div class="llm-dropdown-header">LLM HTML (Gemini / Web)</div>
+          <a href="all_llm.html" target="_blank" class="llm-dropdown-item">👑 Master All (Rules + Lore)</a>
+          <a href="rules_all_llm.html" target="_blank" class="llm-dropdown-item">📜 Combined Rules (PROD + STAGE)</a>
+          <a href="rules_stage_llm.html" target="_blank" class="llm-dropdown-item">🧪 STAGE Rules</a>
+          <a href="rules_prod_llm.html" target="_blank" class="llm-dropdown-item">📖 PROD Rules</a>
+          <a href="lore_all_llm.html" target="_blank" class="llm-dropdown-item">🔮 Combined Lore</a>
+          <a href="lore_stage_llm.html" target="_blank" class="llm-dropdown-item">📜 STAGE Lore</a>
+          <div class="llm-dropdown-divider"></div>
+          <div class="llm-dropdown-header">Raw Markdown & Index</div>
+          <a href="all_llm.md" target="_blank" class="llm-dropdown-item">📝 all_llm.md</a>
+          <a href="llms.txt" target="_blank" class="llm-dropdown-item">📋 /llms.txt Index</a>
+        </div>
+      </div>
+      <button class="sync-btn" id="headerSyncBtn" title="Sync & Rebuild Site" aria-label="Sync and rebuild site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sync-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Sync</span>
+      </button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">PROD Rules</h2>
+        <p class="sidebar-subtitle">The official rulebook</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="prod.html" class="nav-link" data-target="rules--dice">Dice</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="characters-and-mobs"><span class="toggle-icon">▸</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" style="display: none;"><li><a href="prod--characters-and-mobs--stats.html" class="nav-link" data-target="characters-and-mobs--stats">Stats</a></li></ul></div><div class="nav-group nav-group--solo"><a href="prod--core-resolution.html" class="nav-link nav-link--solo" data-target="core-resolution">Core_Resolution</a></div><div class="nav-group nav-group--solo"><a href="prod--boss-profile-and-gang.html" class="nav-link nav-link--solo" data-target="boss-profile-and-gang">Boss_Profile_and_Gang</a></div><div class="nav-group nav-group--solo"><a href="prod--action-economy-and-turn-flow.html" class="nav-link nav-link--solo" data-target="action-economy-and-turn-flow">Action_Economy_and_Turn_Flow</a></div><div class="nav-group nav-group--solo"><a href="prod--zones-and-movement.html" class="nav-link nav-link--solo nav-link--active" data-target="zones-and-movement">Zones_and_Movement</a></div><div class="nav-group nav-group--solo"><a href="prod--combat-engine.html" class="nav-link nav-link--solo" data-target="combat-engine">Combat_Engine</a></div><div class="nav-group nav-group--solo"><a href="prod--mob-mechanics.html" class="nav-link nav-link--solo" data-target="mob-mechanics">Mob_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="prod--damage-grit-and-wounds.html" class="nav-link nav-link--solo" data-target="damage-grit-and-wounds">Damage_Grit_and_Wounds</a></div><div class="nav-group nav-group--solo"><a href="prod--magic-and-bangaranga.html" class="nav-link nav-link--solo" data-target="magic-and-bangaranga">Magic_and_Bangaranga</a></div><div class="nav-group nav-group--solo"><a href="prod--the-raid-loop.html" class="nav-link nav-link--solo" data-target="the-raid-loop">The_Raid_Loop</a></div><div class="nav-group nav-group--solo"><a href="prod--the-lair-loop-and-progression.html" class="nav-link nav-link--solo" data-target="the-lair-loop-and-progression">The_Lair_Loop_and_Progression</a></div><div class="nav-group nav-group--solo"><a href="prod--journeys-and-hazards.html" class="nav-link nav-link--solo" data-target="journeys-and-hazards">Journeys_and_Hazards</a></div><div class="nav-group nav-group--solo"><a href="prod--adversaries-and-threats.html" class="nav-link nav-link--solo" data-target="adversaries-and-threats">Adversaries_and_Threats</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; align-items: center; justify-content: space-between; gap: 16px; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        <span>⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.</span>
+        <button class="sync-banner-btn" id="bannerSyncBtn">Rerun Sync</button>
+      </div>
+      <h1 id="zones-movement-and-environment" tabindex="-1">Zones, Movement, and Environment</h1>
+<p><em>Battlefields in Gobbos are dynamic, chaotic playgrounds where verticality, collapsing scenery, and hazardous obstacles matter far more than measuring inches on a grid. Goblins scurry through pipes, leap across burning chasms, and hide behind crumbling statues to outmaneuver taller, stronger foes.</em></p>
+<hr>
+<h2 id="zone-topology-and-spatial-abstraction" tabindex="-1">Zone Topology &amp; Spatial Abstraction</h2>
+<p>Tactical combat and exploration in <strong>Gobbos</strong> operate on an abstract node graph rather than a square or hex grid. The physical environment is divided into discrete, bounded spatial units called <strong>Zones</strong>.</p>
+<pre><code class="language-mermaid">flowchart LR
+    ZA[&quot;Zone A: Rooftop Node&lt;br&gt;[Pillars] [5+/1]&quot;] &lt;--&gt; ZB[&quot;Zone B: Courtyard Node&lt;br&gt;[Burning] [5+/2]&quot;]
+    ZB &lt;--&gt; ZC[&quot;Zone C: Sewer Pipe Node&lt;br&gt;[Narrow] [6/1]&quot;]
+</code></pre>
+<h3 id="discrete-tactical-nodes" tabindex="-1">Discrete Tactical Nodes</h3>
+<p>A <strong>Zone</strong> represents a distinct environmental feature or bounded room, such as a tavern taproom, a raised wooden balcony, a slippery courtyard, a sewer tunnel, or a narrow rooftop.</p>
+<ul>
+<li><strong>Intra-Zone Distance (Engaged):</strong> All creatures, allies, hazards, and loot within the same Zone are considered adjacent and engaged with one another. Moving between targets within the same Zone costs no additional movement.</li>
+<li><strong>Inter-Zone Distance (Node Steps):</strong> Distance between separate locations is measured strictly as the integer number of connected Zone boundaries (steps) along the shortest available path.</li>
+<li><strong>Adjacency &amp; Connectivity:</strong> Two Zones are adjacent if they share a direct spatial connection (a doorway, an open archway, a flight of stairs, or an open courtyard border). Blocked passages or sheer cliffs require specific actions or tools to cross.</li>
+</ul>
+<h3 id="tabletop-representation" tabindex="-1">Tabletop Representation</h3>
+<p>At the physical gaming table, the environment is managed across two complementary tracking spaces:</p>
+<ol>
+<li><strong>The Macro Minimap (Point-Crawl Nodes):</strong> Tracks the overarching raid location (dungeon, fortress, or town quarter) using connected abstract nodes. A single party token represents the main horde, showing broad exploration routes, locked security gates, and designated extraction points.</li>
+<li><strong>The Clash Cluster (Micro Battleground):</strong> Deployed when combat breaks out. The GM places 3 to 6 modular Zone cards or tactile boundary markers on the table representing the immediate tactical theater. Player Boss miniatures and physical <strong>d6</strong> Mob health dice are placed directly onto these Zone cards.</li>
+</ol>
+<hr>
+<h2 id="zone-profiles" tabindex="-1">Zone Profiles</h2>
+<p>Every Zone on the battlefield possesses an intrinsic baseline difficulty known as its <strong>Zone Profile</strong>, written in standard slash notation: <code>Difficulty+/Target Number (TN)</code> (for example, <code>5+/1</code>, <code>5+/2</code>, or <code>6/1</code>).</p>
+<blockquote>
+<blockquote>
+<p><strong>THE ZONE PROFILE RULE:</strong>
+Any general physical interaction, traversal feat, jump, climb, search, door-forcing, or balance check attempted within a Zone defaults to testing against that Zone’s Profile. The GM does not invent ad-hoc Target Numbers; all unlisted environmental tests resolve against the active Zone Profile.</p>
+</blockquote>
+</blockquote>
+<h3 id="traversal-and-interaction-resolution" tabindex="-1">Traversal and Interaction Resolution</h3>
+<ul>
+<li><strong>Baseline Checks:</strong> When you attempt an unscripted physical maneuver (such as scaling a brick wall, jumping a ditch, or prying a floorboard loose), you roll the appropriate attribute pool (<strong>Slink</strong> for agility/traversal, <strong>Tough</strong> for brute force/lifting, or <strong>Brains</strong> for searching/spotting mechanisms) against the Zone Profile.</li>
+<li><strong>Applying Boons and Banes:</strong> Situational factors, specialized gear, or adverse conditions apply standard <strong>Boons (+1d)</strong> or <strong>Banes (-1d)</strong> to your dice pool before rolling, while leaving the underlying Zone Profile unchanged.</li>
+</ul>
+<blockquote>
+<p><strong>Example:</strong> A crumbling armory has a Zone Profile of <code>5+/2</code>. Attempting to climb a broken weapon rack in this Zone requires a Slink test against <code>5+/2</code> (needing 2 successes on 5s or 6s). If the Goblin Boss uses a grappling hook, the tool grants a <strong>Boon 1 (+1d)</strong> to the pool, but the test profile remains <code>5+/2</code>.</p>
+</blockquote>
+<hr>
+<h2 id="movement-and-tactical-positioning" tabindex="-1">Movement &amp; Tactical Positioning</h2>
+<p>Movement in <strong>Gobbos</strong> is measured in discrete Zones crossed rather than feet or inches.</p>
+<h3 id="the-move-action" tabindex="-1">The Move Action</h3>
+<p>Spending one <strong>Standard Action</strong> on a <strong>Move</strong> action allows a character or Mob to cross a number of connected Zones up to their <strong>Movement</strong> rating:</p>
+<ul>
+<li><strong>Goblin Boss Movement:</strong> A Goblin Boss moves a number of Zones equal to their secondary <strong>Movement</strong> stat (ranging from 2 to 5 Zones per Move action, derived from their <strong>Slink</strong> stat; see <a href="02_Boss_Profile_and_Gang.md">Boss Profile &amp; Gang</a>).</li>
+<li><strong>Mob Movement:</strong> A Mob moves a baseline of <strong>2 Zones</strong> per Move action.</li>
+<li><strong>Mobility Restrictions:</strong> Difficult terrain, heavy encumbrance, or specific traits can increase movement costs or cap maximum speed.</li>
+</ul>
+<h3 id="tactical-disengagement-and-opportunity-attacks" tabindex="-1">Tactical Disengagement &amp; Opportunity Attacks</h3>
+<p>Leaving a Zone that contains alert, unengaged enemy combatants is inherently dangerous.</p>
+<ol>
+<li><strong>The Disengage Test:</strong> To safely exit a Zone containing active enemies, a Goblin Boss or Mob must declare a Disengage maneuver as part of their Move action and pass a <strong>Slink</strong> test:
+<code>Slink 5+/[Highest Enemy Defence TN]</code></li>
+<li><strong>Successful Disengage:</strong> On a success, the unit moves out of the Zone safely along their declared movement path.</li>
+<li><strong>Failed Disengage:</strong> On a failure, the highest <strong>Threat</strong> enemy in the Zone immediately executes an unavoidable <strong>Opportunity Attack</strong> against the escaping unit. Furthermore, the unit’s movement is immediately halted, forcing them to remain inside the current Zone for the remainder of the round.</li>
+<li><strong>Bulk 3+ Restriction:</strong> Wielding or hauling a loose object of <strong>Bulk 3</strong> or greater requires both hands and total focus. A character <strong>cannot attempt a Disengage test</strong> while clutching a Bulk 3+ item. To escape, the character must drop the item as a <strong>Free Action</strong>, defeat the threatening enemies, or have a Mob transport the burden.</li>
+</ol>
+<hr>
+<h2 id="cover-mechanics" tabindex="-1">Cover Mechanics</h2>
+<p>Obstacles, low masonry, furniture, and environmental barriers provide crucial protection against incoming ranged attacks. Cover is classified into two distinct mechanical levels:</p>
+<pre><code class="language-mermaid">flowchart LR
+    subgraph PartialCover [&quot;Partial Cover (-1d Attack / +1d Dodge)&quot;]
+    A1[&quot;Attacker in Zone A&quot;] --&gt;|Ranged Attack| W[&quot;Low Wall&quot;] --&gt; D1[&quot;Defender in Zone B&quot;]
+    end
+    subgraph FullCover [&quot;Full Cover (Targeting Blocked)&quot;]
+    A2[&quot;Attacker in Zone A&quot;] -.-&gt;|Line of Sight Blocked| P[&quot;Solid Pillar&quot;] --- D2[&quot;Defender in Zone B&quot;]
+    end
+</code></pre>
+<h3 id="partial-cover" tabindex="-1">Partial Cover</h3>
+<p>Partial Cover represents waist-high stone walls, overturned tables, dense thickets, wooden barricades, or clusters of allied goblins.</p>
+<ul>
+<li><strong>Attacking into Partial Cover:</strong> Ranged attacks targeting a creature behind Partial Cover suffer a <strong>Bane 1 (-1d)</strong> penalty to the attack dice pool.</li>
+<li><strong>Defending behind Partial Cover:</strong> A defender situated behind Partial Cover gains a <strong>Boon 1 (+1d)</strong> to their active <strong>Dodge</strong> (<strong>Slink</strong>) dice pool during a <strong>Clatter Roll</strong> against ranged threats.</li>
+</ul>
+<h3 id="full-cover" tabindex="-1">Full Cover</h3>
+<p>Full Cover represents solid stone pillars, reinforced iron doors, thick masonry walls, or total line-of-sight obstruction.</p>
+<ul>
+<li><strong>Targeting Blocked:</strong> A creature behind Full Cover cannot be targeted by direct ranged attacks, single-target spells, or line-of-sight abilities originating from the blocked direction.</li>
+<li><strong>Bypassing Full Cover:</strong> An attacker must spend movement to cross into a connected Zone that clears the sightline or flank around the barrier before declaring an attack.</li>
+</ul>
+<hr>
+<h2 id="modular-zone-traits-and-hazards" tabindex="-1">Modular Zone Traits &amp; Hazards</h2>
+<p>A <strong>Zone Trait</strong> is an environmental modifier attached to a Zone that alters movement, tests, or combat resolution. Traits are modular building blocks that the GM combines to construct dynamic encounter maps.</p>
+<h3 id="hazard-severity-tiers" tabindex="-1">Hazard Severity Tiers</h3>
+<p>When an environmental hazard inflicts damage due to a failed test or unmitigated trigger, the damage scales by severity tier:</p>
+<ul>
+<li><strong>Tier 1 Hazard (Minor):</strong> Deals <strong>1 Damage</strong> to a Boss’s <strong>Grit</strong> or a Mob’s lowest active health die.</li>
+<li><strong>Tier 2 Hazard (Dangerous):</strong> Deals <strong>2 Damage</strong> to a Boss’s <strong>Grit</strong> or a Mob’s lowest active health die, or inflicts a sustained condition.</li>
+<li><strong>Tier 3 Hazard (Lethal / Catastrophic):</strong> Deals <strong>3 Damage</strong> to a Boss’s <strong>Grit</strong> or a Mob’s lowest active health die, or inflicts an immediate severe condition. Catastrophic hazards (such as collapsing mine shafts) can directly remove an entire Mob health die.</li>
+</ul>
+<h3 id="predefined-static-obstacles" tabindex="-1">Predefined Static Obstacles</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Trait Name</th>
+<th style="text-align:left">Category</th>
+<th style="text-align:left">Primary Tags</th>
+<th style="text-align:left">Trigger Timing</th>
+<th style="text-align:left">Mechanical Rule &amp; Resolution Profile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Slippery</strong></td>
+<td style="text-align:left">Obstacle</td>
+<td style="text-align:left"><code>[Slick]</code></td>
+<td style="text-align:left">On Entry / Exit</td>
+<td style="text-align:left">Any creature entering or leaving this Zone must pass a <code>Slink</code> test against the Zone Profile. On a failure, the creature falls <strong>Prone</strong> and their movement ends immediately.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Rubble</strong></td>
+<td style="text-align:left">Obstacle</td>
+<td style="text-align:left">Terrain</td>
+<td style="text-align:left">Traversing</td>
+<td style="text-align:left">Difficult ground. Moving through this Zone costs double movement speed (spending 2 Zones of movement capacity per Zone crossed).</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Narrow</strong></td>
+<td style="text-align:left">Obstacle</td>
+<td style="text-align:left">Spatial Cap</td>
+<td style="text-align:left">Passive</td>
+<td style="text-align:left">Restricts physical capacity and frontline width (default <strong>Size 2</strong>). Mobs exceeding this capacity suffer <strong>Bane 1 (-1d)</strong> on physical tests, their Movement is capped at 1 Zone, and their Melee combat pool is capped at the narrow limit. Giant foes (<code>[Huge]</code>, <code>[Colossal]</code>) cannot enter.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Chasm / Pit</strong></td>
+<td style="text-align:left">Hazard (T3)</td>
+<td style="text-align:left">Obstacle</td>
+<td style="text-align:left">Crossing / Shove</td>
+<td style="text-align:left">Crossing or being pushed into the pit requires a <code>Slink</code> test against the Zone Profile. On a failure, the creature plummets, taking <strong>3 Damage</strong> and gaining the <strong>Restrained</strong> condition. Climbing out requires a Standard Action and a successful <code>Tough</code> test against the Profile.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Vertical Cliff</strong></td>
+<td style="text-align:left">Obstacle</td>
+<td style="text-align:left">Elevation</td>
+<td style="text-align:left">Vertical Move</td>
+<td style="text-align:left">Scaling a sheer wall or scaffolding requires a Move action and a <code>Slink</code> test against the Zone Profile. On a failure, the climber falls, taking 1 Damage per Zone height fallen and landing <strong>Prone</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Deep Water</strong></td>
+<td style="text-align:left">Obstacle</td>
+<td style="text-align:left"><code>[Wet]</code></td>
+<td style="text-align:left">Passive / Move</td>
+<td style="text-align:left">Traversing requires a Move action to cross only 1 Zone. Swimming without a boat or flotation gear requires testing <code>Tough</code> against the Zone Profile at round start or taking 1 drowning damage per round.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Pillars / Statues</strong></td>
+<td style="text-align:left">Opportunity</td>
+<td style="text-align:left">Cover</td>
+<td style="text-align:left">Passive / Free Action</td>
+<td style="text-align:left">A creature occupying this Zone may declare they are ducking behind a pillar as a <strong>Free Action</strong>, gaining <strong>Full Cover</strong> against attacks originating from one designated adjacent Zone.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Hedges / Thickets</strong></td>
+<td style="text-align:left">Opportunity</td>
+<td style="text-align:left">Cover</td>
+<td style="text-align:left">Passive</td>
+<td style="text-align:left">Thick vegetation provides passive <strong>Partial Cover</strong> to all occupants against ranged attacks originating outside the Zone.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Shadowy</strong></td>
+<td style="text-align:left">Opportunity</td>
+<td style="text-align:left">Stealth</td>
+<td style="text-align:left">Passive</td>
+<td style="text-align:left">Deep darkness and heavy alcoves grant a <strong>Boon 1 (+1d)</strong> to all stealth-related <code>Slink</code> tests made within this Zone.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Junk Pile</strong></td>
+<td style="text-align:left">Opportunity</td>
+<td style="text-align:left">Treat</td>
+<td style="text-align:left">Interactive</td>
+<td style="text-align:left">A character can spend a Standard Action (<strong>Manipulate</strong>) to search the debris (<code>Brains</code> vs Zone Profile). On a success, they salvage an improvised throwing weapon (1 Damage ranged) or 1d6 Scrap. Exhausted after one successful search.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="predefined-dynamic-hazards" tabindex="-1">Predefined Dynamic Hazards</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Trait Name</th>
+<th style="text-align:left">Category</th>
+<th style="text-align:left">Primary Tags</th>
+<th style="text-align:left">Trigger Timing</th>
+<th style="text-align:left">Mechanical Rule &amp; Resolution Profile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Burning</strong></td>
+<td style="text-align:left">Hazard (T2)</td>
+<td style="text-align:left"><code>[Fire]</code>, <code>[Gaseous]</code></td>
+<td style="text-align:left">Entry / Turn Start</td>
+<td style="text-align:left">Imposes active <code>[Fire]</code> (attacks in Zone score <strong>+1 Success</strong>) and <code>[Gaseous]</code> (ranged attacks suffer <strong>Bane 1</strong>). Entering or starting a turn here requires a <code>Slink</code> test vs Zone Profile; failure deals <strong>2 Damage</strong> and inflicts Burning. Spreads to flammable adjacent Zones at Round Closure on a 1d6 roll of 5–6.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Crumbling Ceiling</strong></td>
+<td style="text-align:left">Hazard (T3)</td>
+<td style="text-align:left"><code>[Crushing]</code></td>
+<td style="text-align:left">Round Start / Trigger</td>
+<td style="text-align:left">All occupants must test <code>Slink</code> against the Zone Profile. On a failure, they take <strong>3 Damage</strong> and are knocked <strong>Prone</strong>. After resolving, the Zone permanently gains the <strong>Rubble</strong> trait.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Howling Wind</strong></td>
+<td style="text-align:left">Hazard (T1)</td>
+<td style="text-align:left"><code>[Gale]</code></td>
+<td style="text-align:left">Passive</td>
+<td style="text-align:left">All ranged attacks passing into or through this Zone suffer a <strong>Bane 1 (-1d)</strong>. Moving against the wind requires a <code>Tough</code> test vs Profile; on a failure, movement speed is halved.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Toxic Spores / Gas</strong></td>
+<td style="text-align:left">Hazard (T2)</td>
+<td style="text-align:left"><code>[Toxic]</code>, <code>[Gaseous]</code></td>
+<td style="text-align:left">Turn Start</td>
+<td style="text-align:left">All creatures starting their turn in this Zone must test <code>Tough</code> against the Zone Profile. On a failure, they suffer the <strong>Weakened</strong> condition (<strong>Bane 1 (-1d)</strong> on physical tests) until they spend a Standard Action catching breath in a clean Zone.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Quicksand / Mud</strong></td>
+<td style="text-align:left">Hazard (T2)</td>
+<td style="text-align:left"><code>[Wet]</code>, <code>[Sinking]</code></td>
+<td style="text-align:left">On Entry</td>
+<td style="text-align:left">Entering or moving inside this Zone requires a <code>Slink</code> test against the Zone Profile. On a failure, the creature gains the <strong>Restrained</strong> condition. Escaping requires spending a Standard Action to test <code>Tough</code> against the Profile.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Shoring</strong></td>
+<td style="text-align:left">Opportunity</td>
+<td style="text-align:left">Structural</td>
+<td style="text-align:left">Interactive</td>
+<td style="text-align:left">Goblins can deliberately collapse timber supports by spending a Standard Action (<strong>Manipulate</strong> or <strong>Attack</strong>) testing <code>Brains</code> or Melee attack vs Zone Profile. On a success, the Zone immediately triggers a <strong>Crumbling Ceiling</strong> hazard and all exits become blocked. Clearing a blocked exit requires a Standard Action testing <code>Tough</code> vs Profile.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="environmental-blueprints-weather-and-composite-hazards" tabindex="-1">Environmental Blueprints (Weather &amp; Composite Hazards)</h2>
+<p>The GM can construct complex, encounter-wide weather patterns or atmospheric hazards by combining modular tags into unified environmental blueprints:</p>
+<ul>
+<li><strong>Blizzard (T2 Hazard | <code>[Chilled]</code>, <code>[Blinding]</code>, <code>[Slick]</code>):</strong> Freezing winds halve movement speed (<code>[Chilled]</code>), blinding snow makes ranged attacks <strong>Hard (6)</strong> and prevents Dodge reactions (<code>[Blinding]</code>), and icy footing requires a <code>Slink</code> test vs Zone Profile upon moving or fall <strong>Prone</strong> (<code>[Slick]</code>).</li>
+<li><strong>Thunderstorm (T2 Hazard | <code>[Wet]</code>, <code>[Shock]</code>):</strong> Heavy rain douses mundane flames and soaks all occupants (<code>[Wet]</code>). Any electrical damage or spark effect conducted through wet targets makes all incoming attacks against them <strong>Easy (4+)</strong> for 1 round (<code>[Shock]</code>).</li>
+<li><strong>Smog Marsh (T2 Hazard | <code>[Wet]</code>, <code>[Toxic]</code>, <code>[Dark]</code>):</strong> Foul sewer sumps conduct lightning (<code>[Wet]</code>), noxious marsh gas forces a <code>Tough</code> test vs Profile at round start or inflicts <strong>Weakened</strong> (<code>[Toxic]</code>), and dense gloom imposes <strong>Bane 1 (-1d)</strong> on notice and attack tests (<code>[Dark]</code>).</li>
+<li><strong>Tornado / Gale Vortex (T3 Hazard | <code>[Gale]</code>, <code>[Weightless]</code>, <code>[Loud]</code>):</strong> Howling vortex deflects ranged attacks (<code>[Gale]</code>), roaring winds drown out verbal orders and stealth (<code>[Loud]</code>), and updrafts lift creatures off the ground (<code>[Weightless]</code>). Stabilizing or exiting requires a <code>Tough</code> test against the Zone Profile.</li>
+<li><strong>Acid Mire (T2 Hazard | <code>[Acidic]</code>, <code>[Slick]</code>):</strong> Corrosive sludge destroys 1 passive Armor Die on a hit or failed hazard test (<code>[Acidic]</code>), and slick chemical mud forces a <code>Slink</code> test on entry or the creature falls <strong>Prone</strong> (<code>[Slick]</code>).</li>
+</ul>
+<hr>
+<h2 id="background-node-resolution-the-chaos-tick" tabindex="-1">Background Node Resolution (The Chaos Tick)</h2>
+<p>When a player chooses to split their forces and leave an unsupervised Mob behind at an inactive macro map node (for example, to guard a captured chokepoint, harvest a scrap pile, or hold a rear exit), that node is removed from active micro-combat tracking.</p>
+<blockquote>
+<blockquote>
+<p><strong>Active vs. Background Tracking:</strong> Active tactical zones are tracked in micro-combat rounds, while unsupervised mobs at distant macro nodes resolve their actions via the <strong>Chaos Tick</strong> during the Round Closure Phase.</p>
+</blockquote>
+</blockquote>
+<h3 id="unsupervised-mob-priority-ai" tabindex="-1">Unsupervised Mob Priority AI</h3>
+<p>Without direct Boss supervision, an unsupervised Mob automatically follows its base instinct priority list:</p>
+<ol>
+<li><strong>Survival:</strong> Flee from overwhelming threats or lethal hazards.</li>
+<li><strong>Loot &amp; Eat:</strong> Scavenge loose food, mushrooms, shiny objects, and Scrap.</li>
+<li><strong>Violence:</strong> Attack vulnerable stragglers or pick fights with nearby rivals.</li>
+<li><strong>Trash Stuff:</strong> Vandalize architecture, smash furniture, and dismantle machinery.</li>
+<li><strong>Wander Off:</strong> Scurry into adjacent corridors following noise or smell.</li>
+</ol>
+<h3 id="resolving-the-chaos-tick" tabindex="-1">Resolving the Chaos Tick</h3>
+<p>At the end of each combat round during the <strong>Round Closure Phase</strong>, the controlling player resolves the background Mob’s actions by rolling the <strong>Chaos Tick</strong>:</p>
+<blockquote>
+<blockquote>
+<p><strong>THE CHAOS TICK RULE:</strong>
+The player rolls a number of <strong>d6s equal to the unsupervised Mob’s current Size</strong>. The test resolves against the background node’s assigned Zone Profile (defaulting to <strong>5+/1</strong>):</p>
+<ul>
+<li><strong>Successes (5+):</strong> Tally successes to determine task progress and loot secured.</li>
+<li><strong>Ones (1s):</strong> Each <strong>1</strong> rolled represents growing insubordination and friction. Tally all <strong>1s</strong> rolled, add <strong>+1 die per 1 rolled</strong> to the communal <strong>Bangaranga Pool</strong>, and consult the <strong>Gobbo Mischief Table</strong>.</li>
+<li><strong>The Farkle:</strong> Rolling <strong>zero successes</strong> and <strong>two or more 1s</strong> triggers a catastrophic failure, causing the Mob to mutiny, trigger a trap, or wander off the map.</li>
+</ul>
+</blockquote>
+</blockquote>
+<h3 id="the-gobbo-mischief-table" tabindex="-1">The Gobbo Mischief Table</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">1s Rolled</th>
+<th style="text-align:left">Mischief Result</th>
+<th style="text-align:left">Mechanical Consequence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>0</strong></td>
+<td style="text-align:left"><strong>Smooth Operations</strong></td>
+<td style="text-align:left">Perfect discipline! The Mob works together without internal fighting.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>1</strong></td>
+<td style="text-align:left"><strong>Bickering</strong></td>
+<td style="text-align:left">Goblins fight over a shiny rock. The Mob takes <strong>1 Damage</strong> to its lowest active health die.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:left"><strong>Tasting Time</strong></td>
+<td style="text-align:left">The runts lick glowing moss or eat questionable sludge. The Mob gains the <strong>Weakened</strong> condition.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>3</strong></td>
+<td style="text-align:left"><strong>Straying</strong></td>
+<td style="text-align:left">Several goblins get distracted and wander into dark pipes. The Mob’s <strong>Size decreases by 1</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>4+</strong></td>
+<td style="text-align:left"><strong>Mutiny / Riot</strong></td>
+<td style="text-align:left">Complete breakdown of authority! The Mob becomes <strong>Out of Control</strong> and permanently hostile to all Gangs, turning into an independent threat or vanishing with all carried gear.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="chaos-tick-success-progress" tabindex="-1">Chaos Tick Success Progress</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Successes (5+)</th>
+<th style="text-align:left">Operational Outcome &amp; Scavenged Payout</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>0 Successes</strong></td>
+<td style="text-align:left">Distracted and idle. The Mob makes zero progress on their assignment.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>1 Success</strong></td>
+<td style="text-align:left">Basic task accomplished. If foraging, the Mob secures <strong>1d6 Scrap</strong>, or heals <strong>1d6 damage</strong> on its health dice by scavenging rations.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>2 Successes</strong></td>
+<td style="text-align:left">Productive haul. The Mob gathers <strong>2d6 Scrap</strong> or unearths a low-grade <strong>Oddity</strong> chassis.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>3+ Successes</strong></td>
+<td style="text-align:left">Masterful looting! The Mob completely clears and secures the node (making future traversal <strong>Safe</strong> with no hazard tests required) and secures <strong>1 Standard Loot item</strong>.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="mechanical-gap-analysis-and-missing-rules" tabindex="-1">Mechanical Gap Analysis &amp; Missing Rules</h2>
+<p>[MISSING RULE / GAP: Vertical Zone Height and Fall Damage Scaling — While falling from cliffs specifies 1 damage per Zone height, rules do not define maximum terminal fall damage or the exact interaction with Mob cushioning when falling onto enemies. Suggested Resolution: Cap falling damage at 5 damage (terminal velocity within dungeon scale). If a Boss or creature falls onto an enemy in a lower Zone, resolve as an improvised Attack with Impact Size equal to the height fallen; on a hit, damage is split equally between the falling creature and the target.]</p>
+<p>[MISSING RULE / GAP: Zone Capacity Limits for Giant Adversaries — Narrow traits restrict Mobs and ban giant foes, but standard open Zones lack explicit entity capacity caps. In extreme scenarios, multiple player Mobs and enemy swarms could crowd into a single node. Suggested Resolution: Define standard open Zones as having a soft capacity of Size 10 total units. Exceeding Size 10 in a single Zone imposes Bane 1 (-1d) on all physical Dodge and traversal tests due to chaotic overcrowding.]</p>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- LLM Dropdown Toggle ---
+    (function() {
+      const btn = document.getElementById('llmDropdownBtn');
+      const menu = document.getElementById('llmDropdownMenu');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = menu.classList.toggle('show');
+        btn.setAttribute('aria-expanded', isOpen);
+      });
+
+      document.addEventListener('click', () => {
+        menu.classList.remove('show');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    })();
+
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'flex';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+
+    // --- Anchor Scroll Fix ---
+    (function() {
+      function scrollToHash() {
+        if (window.location.hash) {
+          const id = decodeURIComponent(window.location.hash.substring(1));
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }, 100);
+          }
+        }
+      }
+      window.addEventListener('hashchange', scrollToHash);
+      window.addEventListener('DOMContentLoaded', scrollToHash);
+      window.addEventListener('load', scrollToHash);
+    })();
+
+    // --- Manual Sync Trigger ---
+    (function() {
+      const headerBtn = document.getElementById('headerSyncBtn');
+      const bannerBtn = document.getElementById('bannerSyncBtn');
+      
+      function handleSync(btn) {
+        if (!btn) return;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        
+        // Add spinning/loading animation class
+        if (btn.classList.contains('sync-btn')) {
+          btn.classList.add('sync-btn--spinning');
+          btn.querySelector('span').textContent = 'Syncing...';
+        } else {
+          btn.textContent = 'Syncing...';
+        }
+        
+        fetch('/api/run-sync', { method: 'POST' })
+          .then(res => {
+            if (!res.ok) throw new Error('Server returned error status: ' + res.status);
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.status === 'success') {
+              if (btn.classList.contains('sync-btn')) {
+                btn.querySelector('span').textContent = 'Success!';
+              } else {
+                btn.textContent = 'Success!';
+              }
+              // Reload page to reflect changes
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              throw new Error(data.error || 'Sync failed');
+            }
+          })
+          .catch(err => {
+            console.error('Sync failed:', err);
+            alert('Failed to rerun sync: ' + err.message);
+            // Restore button
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            if (btn.classList.contains('sync-btn')) {
+              btn.classList.remove('sync-btn--spinning');
+            }
+          });
+      }
+
+      if (headerBtn) {
+        headerBtn.addEventListener('click', () => handleSync(headerBtn));
+      }
+      if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
+    })();
+  </script>
+
+  <!-- ===== Mermaid.js Integration ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    (function() {
+      function initMermaid() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        
+        const lightThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#f0e6d6',
+          primaryTextColor: '#231c16',
+          primaryBorderColor: '#8c2d19',
+          lineColor: '#c68a35',
+          secondaryColor: '#fdfbf7',
+          tertiaryColor: '#e5dcce',
+          edgeLabelBackground: '#faf5ec',
+          nodeBorder: '#8c2d19',
+          clusterBkg: '#eee5d5',
+          clusterBorder: '#c68a35',
+          titleColor: '#8c2d19'
+        };
+
+        const darkThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#241e1a',
+          primaryTextColor: '#e6dfd5',
+          primaryBorderColor: '#d44d32',
+          lineColor: '#d4a359',
+          secondaryColor: '#1a1613',
+          tertiaryColor: '#2a221c',
+          edgeLabelBackground: '#171412',
+          nodeBorder: '#d44d32',
+          clusterBkg: '#1c1815',
+          clusterBorder: '#8c6a38',
+          titleColor: '#d44d32'
+        };
+
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: 'base',
+          themeVariables: isDark ? darkThemeVariables : lightThemeVariables,
+          flowchart: {
+            curve: 'basis',
+            padding: 16,
+            nodeSpacing: 50,
+            rankSpacing: 40,
+            htmlLabels: true
+          },
+          securityLevel: 'loose'
+        });
+
+        // Convert code blocks with language-mermaid to <pre class="mermaid">
+        const mermaidCodeBlocks = document.querySelectorAll('pre > code.language-mermaid');
+        mermaidCodeBlocks.forEach((codeEl) => {
+          const preEl = codeEl.parentElement;
+          if (preEl && preEl.tagName === 'PRE') {
+            // Save raw mermaid source text if not already saved
+            if (!preEl.getAttribute('data-mermaid-src')) {
+              preEl.setAttribute('data-mermaid-src', codeEl.textContent);
+            }
+            const src = preEl.getAttribute('data-mermaid-src');
+            preEl.className = 'mermaid';
+            preEl.textContent = src;
+            preEl.removeAttribute('data-processed');
+          }
+        });
+
+        // Also handle any pre.mermaid that might need re-render on theme change
+        const directMermaidBlocks = document.querySelectorAll('pre.mermaid');
+        directMermaidBlocks.forEach((preEl) => {
+          if (!preEl.getAttribute('data-mermaid-src')) {
+            preEl.setAttribute('data-mermaid-src', preEl.textContent);
+          }
+          const src = preEl.getAttribute('data-mermaid-src');
+          preEl.textContent = src;
+          preEl.removeAttribute('data-processed');
+        });
+
+        if (document.querySelectorAll('.mermaid').length > 0) {
+          mermaid.run({
+            nodes: document.querySelectorAll('.mermaid')
+          }).catch(err => console.error('Mermaid render error:', err));
+        }
+      }
+
+      // Initial render on DOM load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMermaid);
+      } else {
+        initMermaid();
+      }
+
+      // Re-initialize mermaid when theme changes
+      const themeToggleBtn = document.getElementById('themeToggle');
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          setTimeout(initMermaid, 50);
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

@@ -7,8 +7,8 @@
   <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. The official rulebook">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=4">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,500;0,700;0,800;1,700&family=Alegreya:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 
@@ -71,7 +71,7 @@
         <p class="sidebar-subtitle">The official rulebook</p>
       </div>
       <nav class="sidebar-nav" id="sidebarNav">
-        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="true" data-target="rules"><span class="toggle-icon">▾</span>Rules</button><ul class="nav-pages" id="nav-rules" ><li><a href="prod.html" class="nav-link nav-link--active" data-target="rules--dice">Dice</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="characters-and-mobs"><span class="toggle-icon">▸</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" style="display: none;"><li><a href="prod--characters-and-mobs--stats.html" class="nav-link" data-target="characters-and-mobs--stats">Stats</a></li></ul></div>
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="true" data-target="rules"><span class="toggle-icon">▾</span>Rules</button><ul class="nav-pages" id="nav-rules" ><li><a href="prod.html" class="nav-link nav-link--active" data-target="rules--dice">Dice</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="characters-and-mobs"><span class="toggle-icon">▸</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" style="display: none;"><li><a href="prod--characters-and-mobs--stats.html" class="nav-link" data-target="characters-and-mobs--stats">Stats</a></li></ul></div><div class="nav-group nav-group--solo"><a href="prod--core-resolution.html" class="nav-link nav-link--solo" data-target="core-resolution">Core_Resolution</a></div><div class="nav-group nav-group--solo"><a href="prod--boss-profile-and-gang.html" class="nav-link nav-link--solo" data-target="boss-profile-and-gang">Boss_Profile_and_Gang</a></div><div class="nav-group nav-group--solo"><a href="prod--action-economy-and-turn-flow.html" class="nav-link nav-link--solo" data-target="action-economy-and-turn-flow">Action_Economy_and_Turn_Flow</a></div><div class="nav-group nav-group--solo"><a href="prod--zones-and-movement.html" class="nav-link nav-link--solo" data-target="zones-and-movement">Zones_and_Movement</a></div><div class="nav-group nav-group--solo"><a href="prod--combat-engine.html" class="nav-link nav-link--solo" data-target="combat-engine">Combat_Engine</a></div><div class="nav-group nav-group--solo"><a href="prod--mob-mechanics.html" class="nav-link nav-link--solo" data-target="mob-mechanics">Mob_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="prod--damage-grit-and-wounds.html" class="nav-link nav-link--solo" data-target="damage-grit-and-wounds">Damage_Grit_and_Wounds</a></div><div class="nav-group nav-group--solo"><a href="prod--magic-and-bangaranga.html" class="nav-link nav-link--solo" data-target="magic-and-bangaranga">Magic_and_Bangaranga</a></div><div class="nav-group nav-group--solo"><a href="prod--the-raid-loop.html" class="nav-link nav-link--solo" data-target="the-raid-loop">The_Raid_Loop</a></div><div class="nav-group nav-group--solo"><a href="prod--the-lair-loop-and-progression.html" class="nav-link nav-link--solo" data-target="the-lair-loop-and-progression">The_Lair_Loop_and_Progression</a></div><div class="nav-group nav-group--solo"><a href="prod--journeys-and-hazards.html" class="nav-link nav-link--solo" data-target="journeys-and-hazards">Journeys_and_Hazards</a></div><div class="nav-group nav-group--solo"><a href="prod--adversaries-and-threats.html" class="nav-link nav-link--solo" data-target="adversaries-and-threats">Adversaries_and_Threats</a></div>
       </nav>
     </aside>
 
@@ -436,6 +436,110 @@
       }
       if (bannerBtn) {
         bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
+    })();
+  </script>
+
+  <!-- ===== Mermaid.js Integration ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    (function() {
+      function initMermaid() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        
+        const lightThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#f0e6d6',
+          primaryTextColor: '#231c16',
+          primaryBorderColor: '#8c2d19',
+          lineColor: '#c68a35',
+          secondaryColor: '#fdfbf7',
+          tertiaryColor: '#e5dcce',
+          edgeLabelBackground: '#faf5ec',
+          nodeBorder: '#8c2d19',
+          clusterBkg: '#eee5d5',
+          clusterBorder: '#c68a35',
+          titleColor: '#8c2d19'
+        };
+
+        const darkThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#241e1a',
+          primaryTextColor: '#e6dfd5',
+          primaryBorderColor: '#d44d32',
+          lineColor: '#d4a359',
+          secondaryColor: '#1a1613',
+          tertiaryColor: '#2a221c',
+          edgeLabelBackground: '#171412',
+          nodeBorder: '#d44d32',
+          clusterBkg: '#1c1815',
+          clusterBorder: '#8c6a38',
+          titleColor: '#d44d32'
+        };
+
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: 'base',
+          themeVariables: isDark ? darkThemeVariables : lightThemeVariables,
+          flowchart: {
+            curve: 'basis',
+            padding: 16,
+            nodeSpacing: 50,
+            rankSpacing: 40,
+            htmlLabels: true
+          },
+          securityLevel: 'loose'
+        });
+
+        // Convert code blocks with language-mermaid to <pre class="mermaid">
+        const mermaidCodeBlocks = document.querySelectorAll('pre > code.language-mermaid');
+        mermaidCodeBlocks.forEach((codeEl) => {
+          const preEl = codeEl.parentElement;
+          if (preEl && preEl.tagName === 'PRE') {
+            // Save raw mermaid source text if not already saved
+            if (!preEl.getAttribute('data-mermaid-src')) {
+              preEl.setAttribute('data-mermaid-src', codeEl.textContent);
+            }
+            const src = preEl.getAttribute('data-mermaid-src');
+            preEl.className = 'mermaid';
+            preEl.textContent = src;
+            preEl.removeAttribute('data-processed');
+          }
+        });
+
+        // Also handle any pre.mermaid that might need re-render on theme change
+        const directMermaidBlocks = document.querySelectorAll('pre.mermaid');
+        directMermaidBlocks.forEach((preEl) => {
+          if (!preEl.getAttribute('data-mermaid-src')) {
+            preEl.setAttribute('data-mermaid-src', preEl.textContent);
+          }
+          const src = preEl.getAttribute('data-mermaid-src');
+          preEl.textContent = src;
+          preEl.removeAttribute('data-processed');
+        });
+
+        if (document.querySelectorAll('.mermaid').length > 0) {
+          mermaid.run({
+            nodes: document.querySelectorAll('.mermaid')
+          }).catch(err => console.error('Mermaid render error:', err));
+        }
+      }
+
+      // Initial render on DOM load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMermaid);
+      } else {
+        initMermaid();
+      }
+
+      // Re-initialize mermaid when theme changes
+      const themeToggleBtn = document.getElementById('themeToggle');
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          setTimeout(initMermaid, 50);
+        });
       }
     })();
   </script>

@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bestiary — STAGE Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. Playtesting & review materials">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,500;0,700;0,800;1,700&family=Alegreya:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab env-tab--active">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right" style="display: flex; gap: 8px; align-items: center;">
+      <div class="llm-dropdown-container">
+        <button class="llm-btn" id="llmDropdownBtn" title="LLM Continuous Markdown Bundles" aria-label="LLM Bundles" aria-expanded="false">
+          <span>🤖 LLM Files</span>
+          <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="llm-dropdown-menu" id="llmDropdownMenu">
+          <div class="llm-dropdown-header">LLM HTML (Gemini / Web)</div>
+          <a href="all_llm.html" target="_blank" class="llm-dropdown-item">👑 Master All (Rules + Lore)</a>
+          <a href="rules_all_llm.html" target="_blank" class="llm-dropdown-item">📜 Combined Rules (PROD + STAGE)</a>
+          <a href="rules_stage_llm.html" target="_blank" class="llm-dropdown-item">🧪 STAGE Rules</a>
+          <a href="rules_prod_llm.html" target="_blank" class="llm-dropdown-item">📖 PROD Rules</a>
+          <a href="lore_all_llm.html" target="_blank" class="llm-dropdown-item">🔮 Combined Lore</a>
+          <a href="lore_stage_llm.html" target="_blank" class="llm-dropdown-item">📜 STAGE Lore</a>
+          <div class="llm-dropdown-divider"></div>
+          <div class="llm-dropdown-header">Raw Markdown & Index</div>
+          <a href="all_llm.md" target="_blank" class="llm-dropdown-item">📝 all_llm.md</a>
+          <a href="llms.txt" target="_blank" class="llm-dropdown-item">📋 /llms.txt Index</a>
+        </div>
+      </div>
+      <button class="sync-btn" id="headerSyncBtn" title="Sync & Rebuild Site" aria-label="Sync and rebuild site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sync-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Sync</span>
+      </button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">STAGE Rules</h2>
+        <p class="sidebar-subtitle">Playtesting & review materials</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="stage.html" class="nav-link" data-target="rules--overview">Overview</a></li><li><a href="stage--rules--dice.html" class="nav-link" data-target="rules--dice">Dice</a></li><li><a href="stage--rules--combat.html" class="nav-link" data-target="rules--combat">Combat</a></li><li><a href="stage--rules--movement-and-zones.html" class="nav-link" data-target="rules--movement-and-zones">Movement &amp; Zones</a></li><li><a href="stage--rules--giving-orders.html" class="nav-link" data-target="rules--giving-orders">Giving orders</a></li><li><a href="stage--rules--raid-points.html" class="nav-link" data-target="rules--raid-points">Raid points</a></li><li><a href="stage--rules--keywords-index.html" class="nav-link" data-target="rules--keywords-index">Keywords Index</a></li><li><a href="stage--rules--wounds-conditions.html" class="nav-link" data-target="rules--wounds-conditions">Wounds_Conditions</a></li><li><a href="stage--rules--master-tag-index.html" class="nav-link" data-target="rules--master-tag-index">Master_Tag_Index</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="characters-and-mobs"><span class="toggle-icon">▸</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" style="display: none;"><li><a href="stage--characters-and-mobs--stats.html" class="nav-link" data-target="characters-and-mobs--stats">Stats</a></li><li><a href="stage--characters-and-mobs--character-creation.html" class="nav-link" data-target="characters-and-mobs--character-creation">Character Creation</a></li><li><a href="stage--characters-and-mobs--11a-roles.html" class="nav-link" data-target="characters-and-mobs--11a-roles">11a_Roles</a></li><li><a href="stage--characters-and-mobs--gang.html" class="nav-link" data-target="characters-and-mobs--gang">Gang</a></li><li><a href="stage--characters-and-mobs--boons-and-banes.html" class="nav-link" data-target="characters-and-mobs--boons-and-banes">Boons_and_Banes</a></li><li><a href="stage--characters-and-mobs--goblin-mob.html" class="nav-link" data-target="characters-and-mobs--goblin-mob">Goblin_mob</a></li><li><a href="stage--characters-and-mobs--quirks.html" class="nav-link" data-target="characters-and-mobs--quirks">Quirks</a></li><li><a href="stage--characters-and-mobs--level-up-and-death.html" class="nav-link" data-target="characters-and-mobs--level-up-and-death">Level_Up and death</a></li><li><a href="stage--characters-and-mobs--unified-modular-powers-system.html" class="nav-link" data-target="characters-and-mobs--unified-modular-powers-system">Unified_Modular_Powers_System</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="loot"><span class="toggle-icon">▸</span>Loot</button><ul class="nav-pages" id="nav-loot" style="display: none;"><li><a href="stage--loot--loot.html" class="nav-link" data-target="loot--loot">loot</a></li><li><a href="stage--loot--carry-stuff.html" class="nav-link" data-target="loot--carry-stuff">Carry Stuff</a></li><li><a href="stage--loot--equipment.html" class="nav-link" data-target="loot--equipment">Equipment</a></li><li><a href="stage--loot--crafting.html" class="nav-link" data-target="loot--crafting">Crafting</a></li><li><a href="stage--loot--equipment-catalogue.html" class="nav-link" data-target="loot--equipment-catalogue">Equipment_Catalogue</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="true" data-target="enemies"><span class="toggle-icon">▾</span>Enemies</button><ul class="nav-pages" id="nav-enemies" ><li><a href="stage--enemies--enemies.html" class="nav-link" data-target="enemies--enemies">Enemies</a></li><li><a href="stage--enemies--bestiary.html" class="nav-link nav-link--active" data-target="enemies--bestiary">Bestiary</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="base"><span class="toggle-icon">▸</span>Base</button><ul class="nav-pages" id="nav-base" style="display: none;"><li><a href="stage--base--lair-rules.html" class="nav-link" data-target="base--lair-rules">Lair_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="travel"><span class="toggle-icon">▸</span>Travel</button><ul class="nav-pages" id="nav-travel" style="display: none;"><li><a href="stage--travel--journey-rules.html" class="nav-link" data-target="travel--journey-rules">Journey_Rules</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="magic"><span class="toggle-icon">▸</span>Magic</button><ul class="nav-pages" id="nav-magic" style="display: none;"><li><a href="stage--magic--magic-rules.html" class="nav-link" data-target="magic--magic-rules">Magic_Rules</a></li></ul></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; align-items: center; justify-content: space-between; gap: 16px; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        <span>⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.</span>
+        <button class="sync-banner-btn" id="bannerSyncBtn">Rerun Sync</button>
+      </div>
+      <h1 id="21-bestiary-classic-and-tough-threats" tabindex="-1">21. Bestiary: Classic &amp; Tough Threats</h1>
+<p><em>The world above the warrens is full of terrible things: greedy tall-men with sharp iron, feral beasts that view a goblin as a crunchy mid-day snack, ancient blood-drinking counts, and colossal fire-breathing horrors that can incinerate an entire gang in a single breath. A smart Goblin Boss knows every enemy’s tricks—and more importantly, knows exactly how many goblins it takes to drag them down.</em></p>
+<hr>
+<h2 id="1-using-the-bestiary" tabindex="-1">1. Using the Bestiary</h2>
+<p>This chapter contains standardized stat blocks for adversaries encountered during <a href="stage--rules--keywords-index.html#raid" class="wikilink" data-tooltip="An expedition into dangerous territory to secure Loot, Scrap, and Glory for the Gang.">Raids</a>. All creatures operate on the deterministic rules detailed in <a href="20_Enemies.md">Enemies</a> and <a href="02%20Combat.md">Combat</a>.</p>
+<h3 id="quick-reference-rules" tabindex="-1">Quick Reference Rules</h3>
+<ul>
+<li><strong>Zero GM Rolls:</strong> The <strong>GM</strong> never rolls to hit or damage. All enemy attacks present a static <strong>Threat</strong> (difficulty and successes required to avoid) and flat <strong>Damage</strong>.</li>
+<li><strong>Player Reactions:</strong> When targeted by an enemy attack, you can spend a saved <a href="stage--rules--keywords-index.html#standard-action" class="wikilink" data-tooltip="The primary actions spent on a turn (3 per round). Used for Move, Attack, Plunder, Order, or Manipulate. See [[02 Combat]].">Standard Action</a> to make a <a href="stage--rules--keywords-index.html#clatter-roll" class="wikilink" data-tooltip="A simultaneous roll of active Stat Dice (Slink for Dodge or Tough for Parry) alongside colored passive Armor Dice. Meeting the Threat TN results in 0 damage; failing triggers Armor Dice to mitigate remaining damage.">Clatter Roll</a>, rolling <a href="stage--rules--keywords-index.html#slink" class="wikilink" data-tooltip="Main stat representing agility, stealth, and ranged combat capability.">Slink</a> to <a href="stage--rules--keywords-index.html#dodge" class="wikilink" data-tooltip="An active Reaction to completely avoid an incoming attack by rolling Slink against the attack's Threat TN in a Clatter Roll.">Dodge</a> or <a href="stage--rules--keywords-index.html#tough" class="wikilink" data-tooltip="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> to <a href="stage--rules--keywords-index.html#parry" class="wikilink" data-tooltip="An active Reaction to block incoming melee attacks by testing Tough while holding a shield, reducing damage.">Parry</a> against the attack’s <strong>Threat</strong>.</li>
+<li><strong>Passive Mitigation:</strong> Successes on your equipped <a href="#armor" class="wikilink" data-tooltip="Armor">Armor</a> dice reduce incoming damage by 1 per success (<strong>5+</strong>).</li>
+<li><strong>One-Hit Kills:</strong> Standard enemies die instantly when you roll successes equal to or greater than their <a href="stage--rules--keywords-index.html#defence" class="wikilink" data-tooltip="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a> <a href="stage--rules--keywords-index.html#target-number-tn" class="wikilink" data-tooltip="The total number of successes required to pass a test (e.g., in shorthand **5+/1**, you need one die to land on 5 or 6). This is typically a fixed number.">Target Number (TN)</a>.</li>
+<li><strong>Wounds &amp; Overkill:</strong> <a href="stage--rules--keywords-index.html#elite" class="wikilink" data-tooltip="A powerful enemy tier possessing Wounds and Grit, behaving like mini-bosses.">Elite</a> and <a href="stage--rules--keywords-index.html#boss" class="wikilink" data-tooltip="A player character or elite NPC possessing Grit, specialized Quirks, and command over Mobs.">Boss</a> enemies track damage using a <strong>Wounds</strong> track. You deal <strong>1 <a href="stage--rules--keywords-index.html#wound" class="wikilink" data-tooltip="A mark of serious physical trauma. PCs and Elite enemies are defeated or knocked down after taking their maximum Wounds.">Wound</a> for every full multiple of the target’s <a href="stage--rules--keywords-index.html#defence" class="wikilink" data-tooltip="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a> TN</strong> scored on a single attack roll (e.g., against Defence 2, scoring 2 successes deals 1 Wound, 4 successes deals 2 Wounds, and 6 successes deals 3 Wounds).</li>
+<li><strong>Mob Health (Dice-HP):</strong> An Enemy <a href="stage--rules--keywords-index.html#mob" class="wikilink" data-tooltip="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> of <strong>Size X</strong> is tracked using <strong>X physical D6s</strong> on the table. Each point of damage reduces a die’s face; losing a die removes 1 unit of <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a>.</li>
+</ul>
+<hr>
+<h2 id="2-universal-ancestries" tabindex="-1">2. Universal Ancestries</h2>
+<p>Every creature belongs to an <strong>Ancestry</strong> that establishes its universal behavior, psychological limits, and condition vulnerabilities. You resolve these rules automatically without needing them printed on individual stat blocks.</p>
+<h3 id="beast" tabindex="-1">Beast</h3>
+<p><em>Feral predators, vermin, and wild animals.</em></p>
+<ul>
+<li><strong>Instinctive Morale:</strong> Beasts trigger an immediate <a href="stage--rules--keywords-index.html#morale-check" class="wikilink" data-tooltip="A Mouth or Grunt test made by a Mob when they take heavy losses to prevent them from fleeing or going Out of Control.">Morale Check</a> if targeted by <code>[Fire]</code>, loud explosions (<code>[Loud]</code>), or if their group size is halved.</li>
+<li><strong>Lure Vulnerability:</strong> Beasts prioritize targets possessing the <code>[Tasty]</code> tag above all other tactical targets and gain a <strong>Boon (+1d)</strong> on attacks against them.</li>
+<li><strong>Mindless Immunity:</strong> Beasts are immune to verbal <a href="stage--rules--keywords-index.html#mouth" class="wikilink" data-tooltip="Main stat representing leadership, mob command capacity, and free orders.">Mouth</a> persuasion and complex magical trickery.</li>
+</ul>
+<h3 id="humanoid" tabindex="-1">Humanoid</h3>
+<p><em>Men, elves, dwarves, High Aurelians, and civilized outlaws.</em></p>
+<ul>
+<li><strong>Tactical Discipline:</strong> Humanoids utilize cover, focus fire on goblin commanders, and obey allied <a href="stage--rules--keywords-index.html#order" class="wikilink" data-tooltip="A Standard Action used by a PC Boss to direct a Mob's actions, bypassing command rolls for controlled Mobs.">Order</a> actions.</li>
+<li><strong>Standard Morale:</strong> Subject to normal group <a href="stage--rules--keywords-index.html#morale-check" class="wikilink" data-tooltip="A Mouth or Grunt test made by a Mob when they take heavy losses to prevent them from fleeing or going Out of Control.">Morale Checks</a> when suffering 50% casualties or when their Commander is killed.</li>
+<li><strong>Gear Salvage:</strong> Defeated humanoids drop salvageable <a href="stage--rules--keywords-index.html#scrap" class="wikilink" data-tooltip="Base resources used to build a Chassis. Comes in Tiers 1–5.">Scrap</a>, weapons, and <a href="stage--rules--keywords-index.html#loot" class="wikilink" data-tooltip="Valuable scrap, gear, or treasures scavenged during a raid, categorized by Quality Tiers (T1–T5) and Bulk.">Loot</a>.</li>
+</ul>
+<h3 id="undead" tabindex="-1">Undead</h3>
+<p><em>Mindless skeletons, rotting corpses, vampires, and vengeful spirits.</em></p>
+<ul>
+<li><strong>Cold &amp; Mindless:</strong> Immune to <a href="stage--rules--keywords-index.html#morale-check" class="wikilink" data-tooltip="A Mouth or Grunt test made by a Mob when they take heavy losses to prevent them from fleeing or going Out of Control.">Morale Checks</a> (they fight until destroyed) and immune to the <a href="stage--rules--keywords-index.html#terrified" class="wikilink" data-tooltip="A condition forcing a character or Mob to flee from a source of fear and preventing them from closing distance.">Terrified</a> condition.</li>
+<li><strong>Dead Flesh:</strong> Immune to <a href="stage--rules--keywords-index.html#weakened" class="wikilink" data-tooltip="A condition imposing a -1d Bane on all action tests.">Weakened</a> from poison (<code>[Toxic]</code>) and bleeding (<code>[Bleeding]</code>).</li>
+<li><strong>Holy Vulnerability:</strong> Attacks carrying the <code>[Angelic]</code> or <code>[Light]</code> tags deal <strong>+1 Success</strong> against Undead.</li>
+</ul>
+<h3 id="monstrosity" tabindex="-1">Monstrosity</h3>
+<p><em>Ogres, trolls, hydras, and colossal dragons.</em></p>
+<ul>
+<li><strong>Hulking Mass:</strong> Monstrosities cannot be knocked <a href="stage--rules--keywords-index.html#prone" class="wikilink" data-tooltip="A condition representing being knocked down. Restricts movement and imposes a -1d Bane on melee attacks.">Prone</a>, shoved, or <a href="stage--rules--keywords-index.html#staggered" class="wikilink" data-tooltip="A condition inflicted by partial combat successes, lasting until the end of the round and imposing a -1d active defense penalty.">Staggered</a> unless the attack’s <strong>Impact Size</strong> meets or exceeds the creature’s physical <strong><a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a></strong> ($\text{Impact Size} \ge \text{Target Size}$).</li>
+<li><strong>Sweeping Blows:</strong> Melee attacks made by a Monstrosity naturally Cleave, damaging all Goblins and <a href="stage--rules--keywords-index.html#mob" class="wikilink" data-tooltip="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a> dice in the target <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a>.</li>
+</ul>
+<h3 id="fiend-demon" tabindex="-1">Fiend (Demon)</h3>
+<p><em>Brimstone horrors, nether-beasts, and corrupt planar fiends.</em></p>
+<ul>
+<li><strong>Infernal Body:</strong> Immune to damage and zone hazards carrying the <code>[Fire]</code> tag; immune to the <a href="#confusing" class="wikilink" data-tooltip="Confusing">Confusing</a> and <a href="stage--rules--keywords-index.html#terrified" class="wikilink" data-tooltip="A condition forcing a character or Mob to flee from a source of fear and preventing them from closing distance.">Terrified</a> conditions.</li>
+<li><strong>Purification Weakness:</strong> Attacks carrying the <code>[Purified]</code> or <code>[Angelic]</code> tags ignore the Fiend’s passive armor and reduce its <a href="stage--rules--keywords-index.html#defence" class="wikilink" data-tooltip="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a> TN by 1.</li>
+<li><strong>Chaos Opportunism:</strong> Whenever a Goblin within 1 <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a> rolls a <a href="stage--rules--keywords-index.html#fumble" class="wikilink" data-tooltip="Rolling two or more 1s and zero successes. If you fumble near your Gobbos, you lose 1 Grunt.">Fumble</a> (two or more 1s), the Fiend immediately triggers its listed retaliation reaction.</li>
+</ul>
+<hr>
+<h2 id="3-vermin-and-wild-beasts" tabindex="-1">3. Vermin &amp; Wild Beasts</h2>
+<p><em>Dungeon floors and deep forests crawl with biting critters. While a single rat is a tasty snack, a swarm of them will strip the flesh from a goblin’s bones in seconds.</em></p>
+<h3 id="giant-sewer-rat" tabindex="-1">Giant Sewer Rat</h3>
+<p><em>Standard Beast (Size 0)</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Defence</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Morale</th>
+<th style="text-align:left">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>1</strong></td>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:center"><strong>5+/1</strong></td>
+<td style="text-align:left"><code>[Teeny]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special — Filth Fever:</strong> If you fail your <a href="stage--rules--keywords-index.html#dodge" class="wikilink" data-tooltip="An active Reaction to completely avoid an incoming attack by rolling Slink against the attack's Threat TN in a Clatter Roll.">Dodge</a> reaction against this creature’s bite, you contract filthy sewer fleas, gaining the <a href="stage--rules--keywords-index.html#weakened" class="wikilink" data-tooltip="A condition imposing a -1d Bane on all action tests.">Weakened</a> condition until treated in the Lair.</p>
+<h4 id="attack-attacks" tabindex="-1"><a href="stage--rules--keywords-index.html#attack" class="wikilink" data-tooltip="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attacks</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack</th>
+<th style="text-align:center">Threat</th>
+<th style="text-align:center">Damage</th>
+<th style="text-align:center">Range</th>
+<th style="text-align:left">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Gnawing Bite</strong></td>
+<td style="text-align:center"><code>Slink 4+/1</code></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">Inflicts <a href="stage--rules--keywords-index.html#weakened" class="wikilink" data-tooltip="A condition imposing a -1d Bane on all action tests.">Weakened</a> on failed evasion.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plunder:</strong> Matted rat pelt, sharp incisor (1 Scrap T1).</p>
+<hr>
+<h3 id="sewer-rat-swarm" tabindex="-1">Sewer Rat Swarm</h3>
+<p><em>Enemy Mob (Size 3)</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Defence</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Morale</th>
+<th style="text-align:left">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>1</strong></td>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:center"><strong>5+/2</strong></td>
+<td style="text-align:left"><code>[Teeny]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special — Swarm Overwhelm:</strong> If the Rat Swarm shares a <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a> with a <a href="stage--rules--keywords-index.html#prone" class="wikilink" data-tooltip="A condition representing being knocked down. Restricts movement and imposes a -1d Bane on melee attacks.">Prone</a> Goblin or Mob, the <strong>Threat TN</strong> of its <em>Chittering Tide</em> increases by <strong>+1</strong>.</p>
+<h4 id="attack-attacks-1" tabindex="-1"><a href="stage--rules--keywords-index.html#attack" class="wikilink" data-tooltip="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attacks</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack</th>
+<th style="text-align:center">Threat</th>
+<th style="text-align:center">Damage</th>
+<th style="text-align:center">Range</th>
+<th style="text-align:left">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Chittering Tide</strong></td>
+<td style="text-align:center"><code>Slink 5+/2</code></td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">Damage scales with Mob Size: $1 + (\text{Size} - 1)$.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plunder:</strong> Piles of mangled rat bones, 1d6 Shiny Pennies (Loot Value 1, 1 Scrap T1).</p>
+<hr>
+<h3 id="cave-bat-swarm" tabindex="-1">Cave Bat Swarm</h3>
+<p><em>Enemy Mob (Size 3)</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Defence</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Morale</th>
+<th style="text-align:left">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>1</strong></td>
+<td style="text-align:center"><strong>3</strong></td>
+<td style="text-align:center"><strong>5+/1</strong></td>
+<td style="text-align:left"><code>[Teeny]</code>, <code>[Fast]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special — Screeching Flap:</strong> At the start of the Enemy Active turn, all Goblins sharing a <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a> with the Bat Swarm must succeed on a <strong>Brains 5+/1</strong> test or gain the <a href="stage--rules--keywords-index.html#blinded" class="wikilink" data-tooltip="A condition blocking sight, making ranged attacks Hard and preventing Dodge reactions.">Blinded</a> condition for 1 round as leathery wings buffet their faces.</p>
+<h4 id="attack-attacks-2" tabindex="-1"><a href="stage--rules--keywords-index.html#attack" class="wikilink" data-tooltip="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attacks</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack</th>
+<th style="text-align:center">Threat</th>
+<th style="text-align:center">Damage</th>
+<th style="text-align:center">Range</th>
+<th style="text-align:left">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Fluttering Claws</strong></td>
+<td style="text-align:center"><code>Slink 5+/1</code></td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">Damage scales with Mob Size: $1 + (\text{Size} - 1)$.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plunder:</strong> Leathery bat wings, guano dust (1 Scrap T1).</p>
+<hr>
+<h3 id="dire-wolf-hunting-hound" tabindex="-1">Dire Wolf (Hunting Hound)</h3>
+<p><em>Standard Beast (Size 1)</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Defence</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Morale</th>
+<th style="text-align:left">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:center"><strong>3</strong></td>
+<td style="text-align:center"><strong>5+/2</strong></td>
+<td style="text-align:left"><code>[Fast]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special — Takedown:</strong> If you fail your <a href="stage--rules--keywords-index.html#dodge" class="wikilink" data-tooltip="An active Reaction to completely avoid an incoming attack by rolling Slink against the attack's Threat TN in a Clatter Roll.">Dodge</a> reaction against the wolf’s bite, you are knocked <a href="stage--rules--keywords-index.html#prone" class="wikilink" data-tooltip="A condition representing being knocked down. Restricts movement and imposes a -1d Bane on melee attacks.">Prone</a> and dragged down.</p>
+<h4 id="attack-attacks-3" tabindex="-1"><a href="stage--rules--keywords-index.html#attack" class="wikilink" data-tooltip="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attacks</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack</th>
+<th style="text-align:center">Threat</th>
+<th style="text-align:center">Damage</th>
+<th style="text-align:center">Range</th>
+<th style="text-align:left">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Snapping Jaws</strong></td>
+<td style="text-align:center"><code>Slink 5+/2</code></td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">Target is knocked <a href="stage--rules--keywords-index.html#prone" class="wikilink" data-tooltip="A condition representing being knocked down. Restricts movement and imposes a -1d Bane on melee attacks.">Prone</a> on failed evasion.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plunder:</strong> Thick canine pelt, spiked iron collar (1 Scrap T2).</p>
+<hr>
+<h3 id="forest-mauler-cave-bear" tabindex="-1">Forest Mauler (Cave Bear)</h3>
+<p><em>Elite Beast (Size 2)</em><br>
+<strong>Wounds:</strong> 3</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Defence</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Morale</th>
+<th style="text-align:left">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:center"><strong>5+/3</strong></td>
+<td style="text-align:left"><code>[Heavy]</code>, <code>[Spiky]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special — Thick Blubber:</strong> Attacks against the bear suffer a <a href="stage--rules--keywords-index.html#bane" class="wikilink" data-tooltip="A negative modifier that subtracts dice from a test's dice pool before rolling. Banes scale in integer steps: **Bane 1 (-1d)**, **Bane 2 (-2d)**, etc. If total Banes reduce a pool to 0d or less, the player rolls a 1d Salvage Roll.">Bane</a> (-1d) due to its dense layers of fat and matted fur. Attacks carrying the <code>[Fire]</code> tag bypass this blubber and roll normally without a Bane.<br>
+<strong>Special — Enraged Roar:</strong> The first time the bear takes a <a href="stage--rules--keywords-index.html#wound" class="wikilink" data-tooltip="A mark of serious physical trauma. PCs and Elite enemies are defeated or knocked down after taking their maximum Wounds.">Wound</a>, it lets loose an ear-splitting roar. All Goblins in its <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a> must succeed on a <strong>Brains 5+/1</strong> test or suffer the <a href="stage--rules--keywords-index.html#terrified" class="wikilink" data-tooltip="A condition forcing a character or Mob to flee from a source of fear and preventing them from closing distance.">Terrified</a> condition.</p>
+<h4 id="attack-attacks-4" tabindex="-1"><a href="stage--rules--keywords-index.html#attack" class="wikilink" data-tooltip="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attacks</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack</th>
+<th style="text-align:center">Threat</th>
+<th style="text-align:center">Damage</th>
+<th style="text-align:center">Range</th>
+<th style="text-align:left">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Crushing Claws</strong></td>
+<td style="text-align:center"><code>Tough 5+/2</code></td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left"><code>Cleave 2</code> (damages up to 2 Mob dice).</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Bear Hug</strong></td>
+<td style="text-align:center"><code>Slink 4+/2</code></td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">Target gains the <a href="stage--rules--keywords-index.html#restrained" class="wikilink" data-tooltip="A condition preventing movement and imposing a -1d Bane to Dodge reactions.">Restrained</a> condition.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plunder:</strong> Massive Bear Hide, Bear Skull Helm (Loot Value 2, 2 Scrap T2).</p>
+<hr>
+<h2 id="4-outlaws-and-tall-men" tabindex="-1">4. Outlaws &amp; Tall-Men</h2>
+<p><em>Tall-men are loud, arrogant, and carry shiny metal toys. They believe their heavy boots make them masters of the forest—until twenty goblins drop from the trees on top of them.</em></p>
+<h3 id="desperate-robber-footpad" tabindex="-1">Desperate Robber (Footpad)</h3>
+<p><em>Standard Humanoid (Size 1)</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Defence</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Morale</th>
+<th style="text-align:left">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>1</strong></td>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:center"><strong>5+/1</strong></td>
+<td style="text-align:left">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special — Pocket Sand:</strong> Once per encounter, when engaged in Melee, the robber throws blinding dirt; the target’s <a href="stage--rules--keywords-index.html#dodge" class="wikilink" data-tooltip="An active Reaction to completely avoid an incoming attack by rolling Slink against the attack's Threat TN in a Clatter Roll.">Dodge</a> reaction becomes <strong>Hard (6)</strong>.</p>
+<h4 id="attack-attacks-5" tabindex="-1"><a href="stage--rules--keywords-index.html#attack" class="wikilink" data-tooltip="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attacks</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack</th>
+<th style="text-align:center">Threat</th>
+<th style="text-align:center">Damage</th>
+<th style="text-align:center">Range</th>
+<th style="text-align:left">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Rusty Shiv</strong></td>
+<td style="text-align:center"><code>Slink 5+/1</code></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">None.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Thrown Cobblestone</strong></td>
+<td style="text-align:center"><code>Slink 5+/1</code></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Ranged (1 Zone)</td>
+<td style="text-align:left">None.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plunder:</strong> Pouch of copper pennies, greasy dice (Loot Value 1, 1 Scrap T1).</p>
+<hr>
+<h3 id="robber-gang" tabindex="-1">Robber Gang</h3>
+<p><em>Enemy Mob (Size 3)</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Defence</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Morale</th>
+<th style="text-align:left">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>1</strong></td>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:center"><strong>5+/2</strong></td>
+<td style="text-align:left">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special — Greedy Snatch:</strong> If the Robber Gang damages a Goblin or Mob carrying <a href="stage--rules--keywords-index.html#loot" class="wikilink" data-tooltip="Valuable scrap, gear, or treasures scavenged during a raid, categorized by Quality Tiers (T1–T5) and Bulk.">Loot</a>, the target immediately drops <strong>1 Bulk</strong> of carried treasure onto the ground.</p>
+<h4 id="attack-attacks-6" tabindex="-1"><a href="stage--rules--keywords-index.html#attack" class="wikilink" data-tooltip="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attacks</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack</th>
+<th style="text-align:center">Threat</th>
+<th style="text-align:center">Damage</th>
+<th style="text-align:center">Range</th>
+<th style="text-align:left">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Club &amp; Shiv Swarm</strong></td>
+<td style="text-align:center"><code>Slink 5+/1</code></td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">Damage scales with Mob Size: $1 + (\text{Size} - 1)$.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plunder:</strong> Stolen trade sack, cheap knives (Loot Value 2, 1 Scrap T1).</p>
+<hr>
+<h3 id="bandit-crossbowman" tabindex="-1">Bandit Crossbowman</h3>
+<p><em>Standard Humanoid (Size 1)</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Defence</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Morale</th>
+<th style="text-align:left">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>1</strong></td>
+<td style="text-align:center"><strong>1</strong></td>
+<td style="text-align:center"><strong>5+/1</strong></td>
+<td style="text-align:left">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special — Sniper’s Focus:</strong> If the crossbowman takes no <a href="stage--rules--keywords-index.html#move" class="wikilink" data-tooltip="A Standard Action allowing a character or Mob to cross a number of Zones up to their Movement rating.">Move</a> actions on their turn, the <strong>Threat TN</strong> of their <em>Heavy Crossbow</em> attack increases by <strong>+1</strong> for that turn.</p>
+<h4 id="attack-attacks-7" tabindex="-1"><a href="stage--rules--keywords-index.html#attack" class="wikilink" data-tooltip="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attacks</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack</th>
+<th style="text-align:center">Threat</th>
+<th style="text-align:center">Damage</th>
+<th style="text-align:center">Range</th>
+<th style="text-align:left">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Heavy Crossbow</strong></td>
+<td style="text-align:center"><code>Slink 5+/2</code></td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Ranged (2 Zones)</td>
+<td style="text-align:left">Piercing: Ignores 1 passive Armor Die.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Dagger Jab</strong></td>
+<td style="text-align:center"><code>Slink 5+/1</code></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">None.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plunder:</strong> Iron quarrel bundle, wooden crossbow stock (1 Scrap T2).</p>
+<hr>
+<h3 id="armored-highwayman" tabindex="-1">Armored Highwayman</h3>
+<p><em>Elite Humanoid (Size 1)</em><br>
+<strong>Wounds:</strong> 2</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Defence</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Morale</th>
+<th style="text-align:left">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:center"><strong>1</strong></td>
+<td style="text-align:center"><strong>5+/2</strong></td>
+<td style="text-align:left"><code>[Hardened]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special — Parrying Buckler:</strong> The first melee attack committed against the highwayman each round (regardless of whether it hits or misses, and whether made by a Boss or a Mob) must be rolled at <strong>Hard (6)</strong>. Once that first attack resolves, the buckler is committed and all subsequent melee attacks in the same round are resolved at Normal difficulty (<strong>5+</strong>).<br>
+<strong>Special — Heavy Cleave:</strong> Hits from the highwayman’s broadsword inflict the <a href="stage--rules--keywords-index.html#staggered" class="wikilink" data-tooltip="A condition inflicted by partial combat successes, lasting until the end of the round and imposing a -1d active defense penalty.">Staggered</a> condition on the target until the end of the round.</p>
+<h4 id="attack-attacks-8" tabindex="-1"><a href="stage--rules--keywords-index.html#attack" class="wikilink" data-tooltip="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attacks</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack</th>
+<th style="text-align:center">Threat</th>
+<th style="text-align:center">Damage</th>
+<th style="text-align:center">Range</th>
+<th style="text-align:left">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Steel Broadsword</strong></td>
+<td style="text-align:center"><code>Tough 5+/2</code></td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">Inflicts <a href="stage--rules--keywords-index.html#staggered" class="wikilink" data-tooltip="A condition inflicted by partial combat successes, lasting until the end of the round and imposing a -1d active defense penalty.">Staggered</a> on a failed <a href="stage--rules--keywords-index.html#parry" class="wikilink" data-tooltip="An active Reaction to block incoming melee attacks by testing Tough while holding a shield, reducing damage.">Parry</a>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plunder:</strong> Polished steel buckler, heavy broadsword (Loot Value 2, 2 Scrap T3).</p>
+<hr>
+<h3 id="bandit-chief-the-road-baron" tabindex="-1">Bandit Chief (The Road-Baron)</h3>
+<p><em>Boss Humanoid (Size 1)</em><br>
+<strong>Wounds:</strong> 3</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Defence</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Morale</th>
+<th style="text-align:left">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:center"><strong>5+/3</strong></td>
+<td style="text-align:left">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special — Rousing Command:</strong> As a free reaction at the start of the round, the Bandit Chief clears the <a href="stage--rules--keywords-index.html#staggered" class="wikilink" data-tooltip="A condition inflicted by partial combat successes, lasting until the end of the round and imposing a -1d active defense penalty.">Staggered</a> condition and rallies broken Morale on all allied Humanoids in the same or adjacent <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a>.<br>
+<strong>Special — Human Shield:</strong> When targeted by a <a href="stage--rules--keywords-index.html#ranged-attack" class="wikilink" data-tooltip="A distant attack action testing Slink against the target's Defence, suffering Banes for cover.">Ranged attack</a> while in Melee with a Goblin or ally, the Chief redirects the incoming attack to that adjacent target on a failed attacker roll.</p>
+<h4 id="attack-attacks-9" tabindex="-1"><a href="stage--rules--keywords-index.html#attack" class="wikilink" data-tooltip="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attacks</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack</th>
+<th style="text-align:center">Threat</th>
+<th style="text-align:center">Damage</th>
+<th style="text-align:center">Range</th>
+<th style="text-align:left">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Flanged Iron Mace</strong></td>
+<td style="text-align:center"><code>Tough 5+/2</code></td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">Target is knocked <a href="stage--rules--keywords-index.html#prone" class="wikilink" data-tooltip="A condition representing being knocked down. Restricts movement and imposes a -1d Bane on melee attacks.">Prone</a> on a failed <a href="stage--rules--keywords-index.html#parry" class="wikilink" data-tooltip="An active Reaction to block incoming melee attacks by testing Tough while holding a shield, reducing damage.">Parry</a>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Flintlock Pistol</strong></td>
+<td style="text-align:center"><code>Slink 4+/2</code></td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Ranged (1 Zone)</td>
+<td style="text-align:left"><code>[Loud]</code>: Alerts adjacent zones. 1 use per encounter.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plunder:</strong> Feathered cavalier hat, brass flintlock pistol, lockbox of silver sovereigns (Loot Value 4, 3 Scrap T3).</p>
+<hr>
+<h2 id="5-the-restless-dead-and-blood-aristocracy" tabindex="-1">5. The Restless Dead &amp; Blood Aristocracy</h2>
+<p><em>The dead are supposed to stay in the ground. When they don’t, it takes a lot of bashing to make them lie back down. From lowly rattlebones to ancient blood-drinking nobles, the undead represent unyielding, hunger-driven dread.</em></p>
+<h3 id="rattlebone-skeleton" tabindex="-1">Rattlebone Skeleton</h3>
+<p><em>Standard Undead (Size 1)</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Defence</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Morale</th>
+<th style="text-align:left">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:center"><strong>1</strong></td>
+<td style="text-align:center"><strong>Immune</strong></td>
+<td style="text-align:left"><code>[Mindless]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special — Dry Bones:</strong> Attacks with the <code>Piercing</code> or <code>Cutting</code> traits (and all ranged bow attacks) suffer a <a href="stage--rules--keywords-index.html#bane" class="wikilink" data-tooltip="A negative modifier that subtracts dice from a test's dice pool before rolling. Banes scale in integer steps: **Bane 1 (-1d)**, **Bane 2 (-2d)**, etc. If total Banes reduce a pool to 0d or less, the player rolls a 1d Salvage Roll.">Bane</a> (-1d) against the skeleton. Attacks with the <code>Bashing</code> or <code>Crushing</code> traits gain a <a href="stage--rules--keywords-index.html#boon" class="wikilink" data-tooltip="A positive modifier that adds bonus dice to a test's dice pool before rolling. Boons scale in integer steps: **Boon 1 (+1d)**, **Boon 2 (+2d)**, etc.">Boon</a> (+1d).</p>
+<h4 id="attack-attacks-10" tabindex="-1"><a href="stage--rules--keywords-index.html#attack" class="wikilink" data-tooltip="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attacks</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack</th>
+<th style="text-align:center">Threat</th>
+<th style="text-align:center">Damage</th>
+<th style="text-align:center">Range</th>
+<th style="text-align:left">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Notched Scimitar</strong></td>
+<td style="text-align:center"><code>Tough 5+/1</code></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">None.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plunder:</strong> Ancient burial coins, skull scrap (1 Scrap T1).</p>
+<hr>
+<h3 id="skeleton-legion" tabindex="-1">Skeleton Legion</h3>
+<p><em>Enemy Mob (Size 4)</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Defence</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Morale</th>
+<th style="text-align:left">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:center"><strong>1</strong></td>
+<td style="text-align:center"><strong>Immune</strong></td>
+<td style="text-align:left"><code>[Mindless]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special — Wall of Ribs:</strong> Attacks without the <code>Cleave</code> or <code>Bashing</code> traits can only reduce the Skeleton Legion’s <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a> by a maximum of <strong>1</strong> per action, regardless of total successes rolled.</p>
+<h4 id="attack-attacks-11" tabindex="-1"><a href="stage--rules--keywords-index.html#attack" class="wikilink" data-tooltip="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attacks</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack</th>
+<th style="text-align:center">Threat</th>
+<th style="text-align:center">Damage</th>
+<th style="text-align:center">Range</th>
+<th style="text-align:left">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Rattling Spear Thrust</strong></td>
+<td style="text-align:center"><code>Tough 5+/2</code></td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">Damage scales with Mob Size: $1 + (\text{Size} - 1)$.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plunder:</strong> Rusted iron spearheads, brittle bone armor (2 Scrap T1).</p>
+<hr>
+<h3 id="plague-zombie-rotting-shambler" tabindex="-1">Plague Zombie (Rotting Shambler)</h3>
+<p><em>Standard Undead (Size 1)</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Defence</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Morale</th>
+<th style="text-align:left">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>1</strong></td>
+<td style="text-align:center"><strong>1</strong></td>
+<td style="text-align:center"><strong>Immune</strong></td>
+<td style="text-align:left"><code>[Rotting]</code>, <code>[Mindless]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special — Relentless Meat:</strong> When reduced to 0 health by non-<code>[Fire]</code> and non-<code>[Acidic]</code> damage, the zombie remains standing (movement becomes 0) and takes its active turn normally this round, collapsing permanently during the <strong>Round Closure Phase</strong>.</p>
+<h4 id="attack-attacks-12" tabindex="-1"><a href="stage--rules--keywords-index.html#attack" class="wikilink" data-tooltip="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attacks</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack</th>
+<th style="text-align:center">Threat</th>
+<th style="text-align:center">Damage</th>
+<th style="text-align:center">Range</th>
+<th style="text-align:left">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Grasping Toxic Bite</strong></td>
+<td style="text-align:center"><code>Slink 5+/1</code></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">Inflicts the <code>[Toxic]</code> tag on a failed evasion.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plunder:</strong> Rotting grave shrouds, embalming wax (1 Scrap T1).</p>
+<hr>
+<h3 id="flesh-eating-ghoul" tabindex="-1">Flesh-Eating Ghoul</h3>
+<p><em>Elite Undead (Size 1)</em><br>
+<strong>Wounds:</strong> 2</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Defence</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Morale</th>
+<th style="text-align:left">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:center"><strong>3</strong></td>
+<td style="text-align:center"><strong>Immune</strong></td>
+<td style="text-align:left"><code>[Fast]</code>, <code>[Feral]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special — Paralytic Venom:</strong> Any Goblin who fails their <a href="stage--rules--keywords-index.html#dodge" class="wikilink" data-tooltip="An active Reaction to completely avoid an incoming attack by rolling Slink against the attack's Threat TN in a Clatter Roll.">Dodge</a> reaction against the ghoul’s claws must succeed on a <strong>Tough 5+/1</strong> test or become <a href="stage--rules--keywords-index.html#restrained" class="wikilink" data-tooltip="A condition preventing movement and imposing a -1d Bane to Dodge reactions.">Restrained</a> for 1 round by numbing grave-slime.<br>
+<strong>Special — Carrion Feasting:</strong> If the ghoul starts its turn in a <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a> containing a dead corpse, it can spend 1 action feasting to heal 1 lost <a href="stage--rules--keywords-index.html#wound" class="wikilink" data-tooltip="A mark of serious physical trauma. PCs and Elite enemies are defeated or knocked down after taking their maximum Wounds.">Wound</a>.</p>
+<h4 id="attack-attacks-13" tabindex="-1"><a href="stage--rules--keywords-index.html#attack" class="wikilink" data-tooltip="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attacks</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack</th>
+<th style="text-align:center">Threat</th>
+<th style="text-align:center">Damage</th>
+<th style="text-align:center">Range</th>
+<th style="text-align:left">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Ripping Talons</strong></td>
+<td style="text-align:center"><code>Slink 4+/2</code></td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">Inflicts <a href="stage--rules--keywords-index.html#restrained" class="wikilink" data-tooltip="A condition preventing movement and imposing a -1d Bane to Dodge reactions.">Restrained</a> on a failed <strong>Tough 5+/1</strong> test.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plunder:</strong> Ghoul fangs, jar of paralytic tallow (Loot Value 1, 1 Scrap T2).</p>
+<hr>
+<h3 id="barrow-wight-tomb-sentinel" tabindex="-1">Barrow Wight (Tomb Sentinel)</h3>
+<p><em>Elite Undead (Size 1)</em><br>
+<strong>Wounds:</strong> 3</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Defence</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Morale</th>
+<th style="text-align:left">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>3</strong></td>
+<td style="text-align:center"><strong>1</strong></td>
+<td style="text-align:center"><strong>Immune</strong></td>
+<td style="text-align:left"><code>[Terrifying]</code>, <code>[Haunted]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special — Grave Chill:</strong> Any living creature that enters or ends its turn in the Wight’s <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a> suffers a <a href="stage--rules--keywords-index.html#bane" class="wikilink" data-tooltip="A negative modifier that subtracts dice from a test's dice pool before rolling. Banes scale in integer steps: **Bane 1 (-1d)**, **Bane 2 (-2d)**, etc. If total Banes reduce a pool to 0d or less, the player rolls a 1d Salvage Roll.">Bane</a> (-1d) to all physical action tests due to freezing magical gloom.<br>
+<strong>Special — Life Drain:</strong> Whenever the Wight deals damage to a Goblin Boss, the Wight instantly recovers 1 lost <a href="stage--rules--keywords-index.html#wound" class="wikilink" data-tooltip="A mark of serious physical trauma. PCs and Elite enemies are defeated or knocked down after taking their maximum Wounds.">Wound</a> (up to its maximum).</p>
+<h4 id="attack-attacks-14" tabindex="-1"><a href="stage--rules--keywords-index.html#attack" class="wikilink" data-tooltip="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attacks</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack</th>
+<th style="text-align:center">Threat</th>
+<th style="text-align:center">Damage</th>
+<th style="text-align:center">Range</th>
+<th style="text-align:left">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Cursed Ancient Blade</strong></td>
+<td style="text-align:center"><code>Tough 4+/2</code></td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">Inflicts the <a href="stage--rules--keywords-index.html#weakened" class="wikilink" data-tooltip="A condition imposing a -1d Bane on all action tests.">Weakened</a> condition.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plunder:</strong> Ancient electrum burial torque, runed bronze broadsword (Loot Value 3, 2 Scrap T3).</p>
+<hr>
+<h3 id="vampire-noble-the-blood-count" tabindex="-1">Vampire Noble (The Blood Count)</h3>
+<p><em>Boss Undead (Size 1)</em><br>
+<strong>Wounds:</strong> 4</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Defence</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Morale</th>
+<th style="text-align:left">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>3</strong></td>
+<td style="text-align:center"><strong>3</strong></td>
+<td style="text-align:center"><strong>Immune</strong></td>
+<td style="text-align:left"><code>[Fast]</code>, <code>[Haunted]</code>, <code>[Siphoning]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special — Hypnotic Glare (Reaction):</strong> When targeted by a Melee attack from a Goblin Boss, the Boss must pass a <strong>Brains 5+/2</strong> test before rolling; on a failure, the Goblin freezes in awe and the attack action is wasted. If targeted by a <a href="stage--rules--keywords-index.html#mob" class="wikilink" data-tooltip="A squad of lesser goblins commanded by a Boss (Player Character). Their Size determines their combat strength and carrying capacity.">Mob</a>, the Boss must pass an immediate <strong>Mouth 5+/2</strong> <a href="stage--rules--keywords-index.html#order" class="wikilink" data-tooltip="A Standard Action used by a PC Boss to direct a Mob's actions, bypassing command rolls for controlled Mobs.">Order</a> test to force the terrified runts to strike the vampire.<br>
+<strong>Special — Mist Escape &amp; Siphon:</strong> When dealing damage with <em>Crimson Fangs</em>, the vampire heals 1 lost <a href="stage--rules--keywords-index.html#wound" class="wikilink" data-tooltip="A mark of serious physical trauma. PCs and Elite enemies are defeated or knocked down after taking their maximum Wounds.">Wound</a>. If reduced to 0 Wounds by non-<code>[Fire]</code>, non-<code>[Light]</code> attacks, the vampire dissolves into mist and flees to its coffin.</p>
+<h4 id="attack-attacks-15" tabindex="-1"><a href="stage--rules--keywords-index.html#attack" class="wikilink" data-tooltip="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attacks</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack</th>
+<th style="text-align:center">Threat</th>
+<th style="text-align:center">Damage</th>
+<th style="text-align:center">Range</th>
+<th style="text-align:left">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Noble Rapier</strong></td>
+<td style="text-align:center"><code>Slink 4+/2</code></td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">Inflicts the <a href="stage--rules--keywords-index.html#staggered" class="wikilink" data-tooltip="A condition inflicted by partial combat successes, lasting until the end of the round and imposing a -1d active defense penalty.">Staggered</a> condition.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Crimson Fangs</strong></td>
+<td style="text-align:center"><code>Tough 5+/2</code></td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">Target is <a href="stage--rules--keywords-index.html#restrained" class="wikilink" data-tooltip="A condition preventing movement and imposing a -1d Bane to Dodge reactions.">Restrained</a>; heals 1 <a href="stage--rules--keywords-index.html#wound" class="wikilink" data-tooltip="A mark of serious physical trauma. PCs and Elite enemies are defeated or knocked down after taking their maximum Wounds.">Wound</a> to the vampire.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Summon Bat Cloud</strong></td>
+<td style="text-align:center">—</td>
+<td style="text-align:center">—</td>
+<td style="text-align:center">Ranged (1 Zone)</td>
+<td style="text-align:left">Spawns 1 <strong>Cave Bat Swarm</strong> in target Zone (Once per encounter).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plunder:</strong> Blood-Ruby signet ring, silk velvet cape, silver-inlaid rapier (Loot Value 6, 4 Scrap T4).</p>
+<hr>
+<h2 id="6-big-bullies-and-arcane-bosses" tabindex="-1">6. Big Bullies &amp; Arcane Bosses</h2>
+<p><em>Some things are too large to squash with a normal hammer. Taking down a troll or an ironclad knight requires teamwork, explosives, and sacrificing a few runts to create an opening.</em></p>
+<h3 id="swamp-troll" tabindex="-1">Swamp Troll</h3>
+<p><em>Boss Monstrosity (Size 3)</em><br>
+<strong>Wounds:</strong> 4</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Defence</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Morale</th>
+<th style="text-align:left">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:center"><strong>5+/4</strong></td>
+<td style="text-align:left"><code>[Regenerating]</code>, <code>[Heavy]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special — Voracious Regrowth:</strong> The troll recovers 1 lost <a href="stage--rules--keywords-index.html#wound" class="wikilink" data-tooltip="A mark of serious physical trauma. PCs and Elite enemies are defeated or knocked down after taking their maximum Wounds.">Wound</a> at the start of each round. If the troll suffered damage with the <code>[Fire]</code> or <code>[Acidic]</code> tag during the previous round, this regeneration is disabled for that round.<br>
+<strong>Special — Zone Sweep:</strong> The troll swings massive logs with wild abandon. Its Melee attacks target every Goblin and Mob in its <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a> simultaneously.</p>
+<h4 id="attack-attacks-16" tabindex="-1"><a href="stage--rules--keywords-index.html#attack" class="wikilink" data-tooltip="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attacks</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack</th>
+<th style="text-align:center">Threat</th>
+<th style="text-align:center">Damage</th>
+<th style="text-align:center">Range</th>
+<th style="text-align:left">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Uprooted Log Smash</strong></td>
+<td style="text-align:center"><code>Tough 5+/2</code></td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Melee (Zone-Wide)</td>
+<td style="text-align:left"><code>Cleave 3</code>: Targets are knocked <a href="stage--rules--keywords-index.html#prone" class="wikilink" data-tooltip="A condition representing being knocked down. Restricts movement and imposes a -1d Bane on melee attacks.">Prone</a>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Bile Vomit</strong></td>
+<td style="text-align:center"><code>Slink 4+/2</code></td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Ranged (1 Zone)</td>
+<td style="text-align:left">Inflicts <code>[Acidic]</code> and <code>[Toxic]</code> tags.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plunder:</strong> Troll gall bladder (alchemical catalyst), petrified stone club (Loot Value 4, 3 Scrap T3).</p>
+<hr>
+<h3 id="ironclad-knight-the-tin-can-inquisitor" tabindex="-1">Ironclad Knight (The Tin-Can Inquisitor)</h3>
+<p><em>Elite Humanoid (Size 1)</em><br>
+<strong>Wounds:</strong> 3</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Defence</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Morale</th>
+<th style="text-align:left">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>3</strong></td>
+<td style="text-align:center"><strong>1</strong></td>
+<td style="text-align:center"><strong>5+/3</strong></td>
+<td style="text-align:left"><code>[Hardened]</code>, <code>[Heavy]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special — Plate Armor Bastion:</strong> The knight ignores the first 1 point of incoming damage from every attack unless the attack possesses the <code>Piercing</code> trait or an elemental Tag (<code>[Fire]</code>, <code>[Acidic]</code>, <code>[Shock]</code>).<br>
+<strong>Special — Shield Rebound:</strong> If your <a href="stage--rules--keywords-index.html#parry" class="wikilink" data-tooltip="An active Reaction to block incoming melee attacks by testing Tough while holding a shield, reducing damage.">Parry</a> reaction against the knight’s warhammer fails with zero successes, you are knocked <a href="stage--rules--keywords-index.html#prone" class="wikilink" data-tooltip="A condition representing being knocked down. Restricts movement and imposes a -1d Bane on melee attacks.">Prone</a> and lose 1 saved action.</p>
+<h4 id="attack-attacks-17" tabindex="-1"><a href="stage--rules--keywords-index.html#attack" class="wikilink" data-tooltip="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attacks</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack</th>
+<th style="text-align:center">Threat</th>
+<th style="text-align:center">Damage</th>
+<th style="text-align:center">Range</th>
+<th style="text-align:left">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Crushing Warhammer</strong></td>
+<td style="text-align:center"><code>Tough 5+/2</code></td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">High impact: Knocks target <a href="stage--rules--keywords-index.html#prone" class="wikilink" data-tooltip="A condition representing being knocked down. Restricts movement and imposes a -1d Bane on melee attacks.">Prone</a> on a failed Parry.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Tower Shield Slam</strong></td>
+<td style="text-align:center"><code>Tough 4+/1</code></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">Shoves target into an adjacent <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plunder:</strong> Heavy plate cuirass scrap, silver holy symbol, balanced warhammer (Loot Value 4, 3 Scrap T4).</p>
+<hr>
+<h3 id="corpse-stitcher-wandering-necromancer" tabindex="-1">Corpse Stitcher (Wandering Necromancer)</h3>
+<p><em>Boss Humanoid (Size 1)</em><br>
+<strong>Wounds:</strong> 3</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Defence</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Morale</th>
+<th style="text-align:left">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:center"><strong>5+/2</strong></td>
+<td style="text-align:left">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special — Animate Corpse (Reaction):</strong> At the end of any round where a living creature or skeleton was killed in the Necromancer’s <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a> or an adjacent <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a>, the Necromancer instantly raises 1 <strong>Rattlebone Skeleton</strong> or <strong>Plague Zombie</strong> under their command.<br>
+<strong>Special — Bone Shield:</strong> While in the same <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a> as at least one allied Undead creature, attacks against the Necromancer suffer a <a href="stage--rules--keywords-index.html#bane" class="wikilink" data-tooltip="A negative modifier that subtracts dice from a test's dice pool before rolling. Banes scale in integer steps: **Bane 1 (-1d)**, **Bane 2 (-2d)**, etc. If total Banes reduce a pool to 0d or less, the player rolls a 1d Salvage Roll.">Bane</a> (-1d) as rotting minions leap in front of blows.</p>
+<h4 id="attack-attacks-18" tabindex="-1"><a href="stage--rules--keywords-index.html#attack" class="wikilink" data-tooltip="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attacks</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack</th>
+<th style="text-align:center">Threat</th>
+<th style="text-align:center">Damage</th>
+<th style="text-align:center">Range</th>
+<th style="text-align:left">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Soul-Drain Ray</strong></td>
+<td style="text-align:center"><code>Slink 5+/2</code></td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Ranged (2 Zones)</td>
+<td style="text-align:left"><code>[Shock]</code>: Arcs 1 automatic damage to an adjacent Goblin.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Bone Staff Strike</strong></td>
+<td style="text-align:center"><code>Tough 5+/1</code></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">Inflicts the <code>[Chilled]</code> tag.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plunder:</strong> Grimoire of Black Ichor, soul-cage lantern, pouch of onyx gemstones (Loot Value 5, 2 Scrap T3, 1 Scrap T4).</p>
+<hr>
+<h2 id="7-imperial-horrors-the-high-aurelians" tabindex="-1">7. Imperial Horrors (The High Aurelians)</h2>
+<p><em>Seven feet tall, with burning golden eyes and brass-plated flesh, the High Aurelians viewed goblins as crude vermin born only to shovel soot. Whether sealed inside pressurized steam reliquaries or drinking toxic black ichor to cheat cellular collapse, they are lethal remnants of a fallen golden age.</em></p>
+<h3 id="ichor-gorged-tyrant-the-black-vein-noble" tabindex="-1">Ichor-Gorged Tyrant (The Black-Vein Noble)</h3>
+<p><em>Elite Humanoid (Size 2)</em><br>
+<strong>Wounds:</strong> 3</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Defence</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Morale</th>
+<th style="text-align:left">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:center"><strong>3</strong></td>
+<td style="text-align:center"><strong>5+/3</strong></td>
+<td style="text-align:left"><code>[Fast]</code>, <code>[Toxic]</code>, <code>[Frenzied]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special — Black Ichor Blood:</strong> When the Tyrant takes a <a href="stage--rules--keywords-index.html#wound" class="wikilink" data-tooltip="A mark of serious physical trauma. PCs and Elite enemies are defeated or knocked down after taking their maximum Wounds.">Wound</a> in Melee, acidic black ichor sprays onto the attacker; the attacker must pass a <strong>Slink 5+/1</strong> test or suffer 1 <a href="stage--rules--keywords-index.html#grit" class="wikilink" data-tooltip="[TODO: Define] Your health or resilience. Reducing this to 0 triggers death or a Last Stand.">Grit</a> damage (or lose 1 unit of Mob <a href="stage--rules--keywords-index.html#size" class="wikilink" data-tooltip="[TODO: Define for PCs] Influences interactions like grappling, carrying, and being shoved.">Size</a>).<br>
+<strong>Special — Solar Frenzy:</strong> While at 1 <a href="stage--rules--keywords-index.html#wound" class="wikilink" data-tooltip="A mark of serious physical trauma. PCs and Elite enemies are defeated or knocked down after taking their maximum Wounds.">Wound</a>, the Tyrant becomes <a href="#frenzied" class="wikilink" data-tooltip="Frenzied">Frenzied</a>; its Melee attacks deal <strong>+1 Damage</strong> and gain the Cleave trait.</p>
+<h4 id="attack-attacks-19" tabindex="-1"><a href="stage--rules--keywords-index.html#attack" class="wikilink" data-tooltip="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attacks</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack</th>
+<th style="text-align:center">Threat</th>
+<th style="text-align:center">Damage</th>
+<th style="text-align:center">Range</th>
+<th style="text-align:left">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Ichor-Tipped Greatsword</strong></td>
+<td style="text-align:center"><code>Tough 5+/2</code></td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">Inflicts the <code>[Toxic]</code> tag.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Black Bile Spit</strong></td>
+<td style="text-align:center"><code>Slink 4+/2</code></td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Ranged (1 Zone)</td>
+<td style="text-align:left">Inflicts <code>[Acidic]</code> and corrodes 1 Armor Die.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plunder:</strong> Distilled Black Ichor Phial, Spun-Brass Regalia, Heavy Greatsword (Loot Value 4, 3 Scrap T3).</p>
+<hr>
+<h3 id="solar-praetor-the-brass-reliquary" tabindex="-1">Solar Praetor (The Brass Reliquary)</h3>
+<p><em>Boss Humanoid / Construct (Size 2)</em><br>
+<strong>Wounds:</strong> 5</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Defence</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Morale</th>
+<th style="text-align:left">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>4</strong></td>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:center"><strong>5+/4</strong></td>
+<td style="text-align:left"><code>[Hardened]</code>, <code>[Heavy]</code>, <code>[Angelic]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special — Pressurized Steam Vent (Hazard Reaction):</strong> Whenever the Praetor takes a <a href="stage--rules--keywords-index.html#wound" class="wikilink" data-tooltip="A mark of serious physical trauma. PCs and Elite enemies are defeated or knocked down after taking their maximum Wounds.">Wound</a>, boiling steam erupts across its <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a>; all Goblins in the <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a> must succeed on a <strong>Slink 5+/2</strong> test or take 2 damage from scalding vapor (<code>[Fire]</code>).<br>
+<strong>Special — Sol-Quartz Power Core (Flaw Hook):</strong> If struck by an attack carrying the <code>[Shock]</code> or <code>[Acidic]</code> tags, the crystal core short-circuits: the Praetor’s <a href="stage--rules--keywords-index.html#defence" class="wikilink" data-tooltip="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a> TN drops to <strong>2</strong> until the end of the round.</p>
+<h4 id="attack-attacks-20" tabindex="-1"><a href="stage--rules--keywords-index.html#attack" class="wikilink" data-tooltip="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attacks</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack</th>
+<th style="text-align:center">Threat</th>
+<th style="text-align:center">Damage</th>
+<th style="text-align:center">Range</th>
+<th style="text-align:left">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Sun-Forged Lance</strong></td>
+<td style="text-align:center"><code>Tough 5+/3</code></td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">Ignores passive armor; target knocked <a href="stage--rules--keywords-index.html#prone" class="wikilink" data-tooltip="A condition representing being knocked down. Restricts movement and imposes a -1d Bane on melee attacks.">Prone</a>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Solar Purge Beam</strong></td>
+<td style="text-align:center"><code>Slink 4+/3</code></td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">Ranged (2 Zones, Line)</td>
+<td style="text-align:left">Blasts a line with <code>[Light]</code> &amp; <code>[Fire]</code>, destroying cover.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Crushing Brass Gauntlet</strong></td>
+<td style="text-align:center"><code>Tough 5+/2</code></td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">Cleave (Zone-Wide).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plunder:</strong> Intact Sol-Quartz Fuel Core, Ornate Brass Chassis Plating, Sun-Forged Lance (Loot Value 8, 5 Scrap T4, 1 Scrap T5).</p>
+<hr>
+<h2 id="8-legendary-threats-and-apex-monsters" tabindex="-1">8. Legendary Threats &amp; Apex Monsters</h2>
+<p><em>These are the apex predators of the world—ancient horrors whose mere presence shakes the earth. Fighting an apex monster is a lethal puzzle requiring planning, explosive oddities, and throwing dozens of screaming goblins into the grinder to create a single killing blow.</em></p>
+<h3 id="brimstone-fiend-the-horned-ravager" tabindex="-1">Brimstone Fiend (The Horned Ravager)</h3>
+<p><em>Boss Fiend (Size 2)</em><br>
+<strong>Wounds:</strong> 5</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Defence</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Morale</th>
+<th style="text-align:left">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>3</strong></td>
+<td style="text-align:center"><strong>3</strong></td>
+<td style="text-align:center"><strong>Immune</strong></td>
+<td style="text-align:left"><code>[Terrifying]</code>, <code>[Spiky]</code>, <code>[Vile]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special — Hellfire Aura:</strong> At the end of every round, the Fiend’s <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a> bursts into cursed flames; all creatures in the <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a> take 1 damage and gain the <code>[Burning]</code> tag.<br>
+<strong>Special — Chaos Retaliation (Fumble Punisher):</strong> Whenever a Goblin within 1 <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a> rolls a <a href="stage--rules--keywords-index.html#fumble" class="wikilink" data-tooltip="Rolling two or more 1s and zero successes. If you fumble near your Gobbos, you lose 1 Grunt.">Fumble</a> (two or more 1s), the Fiend immediately makes a free <em>Barbed Shadow-Whip</em> attack against that Goblin without spending an action.</p>
+<h4 id="attack-attacks-21" tabindex="-1"><a href="stage--rules--keywords-index.html#attack" class="wikilink" data-tooltip="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attacks</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack</th>
+<th style="text-align:center">Threat</th>
+<th style="text-align:center">Damage</th>
+<th style="text-align:center">Range</th>
+<th style="text-align:left">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Brimstone Cleaver</strong></td>
+<td style="text-align:center"><code>Tough 4+/3</code></td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left"><code>Cleave 3</code>; inflicts <code>[Vile]</code>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Barbed Shadow-Whip</strong></td>
+<td style="text-align:center"><code>Slink 5+/2</code></td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Range (1 Zone)</td>
+<td style="text-align:left">Drags target into the Fiend’s <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a> and inflicts <a href="stage--rules--keywords-index.html#restrained" class="wikilink" data-tooltip="A condition preventing movement and imposing a -1d Bane to Dodge reactions.">Restrained</a>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plunder:</strong> Demon Horn Scrap, Smoldering Infernal Core, Jagged Hell-Steel Blade (Loot Value 7, 4 Scrap T4).</p>
+<hr>
+<h3 id="ancient-cinder-dragon-the-great-ash-wyrm" tabindex="-1">Ancient Cinder Dragon (The Great Ash-Wyrm)</h3>
+<p><em>Apex Boss Monstrosity (Size 4)</em><br>
+<strong>Wounds:</strong> 8</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Defence</th>
+<th style="text-align:center">Movement</th>
+<th style="text-align:center">Morale</th>
+<th style="text-align:left">Tags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>4</strong></td>
+<td style="text-align:center"><strong>3</strong></td>
+<td style="text-align:center"><strong>5+/5</strong></td>
+<td style="text-align:left"><code>[Heavy]</code>, <code>[Hardened]</code>, <code>[Terrifying]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special — Colossal Action Clock (Automata):</strong> The Dragon acts according to a predictable 3-round destructive cycle:</p>
+<ul>
+<li><strong>Round 1 (Wing Buffet &amp; Roar):</strong> Massive hurricane gale pushes all Goblins in adjacent zones back 1 <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a>; all Goblins must test <strong>Brains 5+/2</strong> or gain the <a href="stage--rules--keywords-index.html#terrified" class="wikilink" data-tooltip="A condition forcing a character or Mob to flee from a source of fear and preventing them from closing distance.">Terrified</a> condition.</li>
+<li><strong>Round 2 (Incandescent Inhale):</strong> The Dragon’s throat ignites with white heat; the front 2 <a href="stage--rules--keywords-index.html#zones" class="wikilink" data-tooltip="Abstract spatial segments of the battlefield used to track distance, line of sight, and hazard boundaries.">Zones</a> are showered in embers (<code>[Burning]</code>). Goblins have 1 round to dive behind solid cover or scatter!</li>
+<li><strong>Round 3 (Hellfire Breath):</strong> Unleashes <em>Hellfire Breath</em> across 2 consecutive <a href="stage--rules--keywords-index.html#zones" class="wikilink" data-tooltip="Abstract spatial segments of the battlefield used to track distance, line of sight, and hazard boundaries.">Zones</a>. Resets Clock to Round 1.</li>
+</ul>
+<p><strong>Special — Greed Distraction (Flaw Hook):</strong> If a Goblin Boss spends a <a href="stage--rules--keywords-index.html#standard-action" class="wikilink" data-tooltip="The primary actions spent on a turn (3 per round). Used for Move, Attack, Plunder, Order, or Manipulate. See [[02 Combat]].">Standard Action</a> (<a href="stage--rules--keywords-index.html#manipulate" class="wikilink" data-tooltip="A Standard Action catch-all used to interact with items, machinery, traps, or environmental components.">Manipulate</a>) to throw a shiny treasure with <a href="stage--rules--keywords-index.html#loot-value" class="wikilink" data-tooltip="The worth of treasure expressed in Tier tokens (T1–T5). Follows the 5-to-1 exponential scale (5x T1 = 1x T2, 5x T2 = 1x T3, etc.) for Lair smelting, purchases, and upgrades.">Loot Value</a> <strong>3+</strong> into an adjacent <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a>, the Dragon’s pride and greed forces it to target that zone with its next melee attack instead of targeting the players.</p>
+<h4 id="attack-attacks-22" tabindex="-1"><a href="stage--rules--keywords-index.html#attack" class="wikilink" data-tooltip="A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.">Attacks</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack</th>
+<th style="text-align:center">Threat</th>
+<th style="text-align:center">Damage</th>
+<th style="text-align:center">Range</th>
+<th style="text-align:left">Special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Colossal Tail Sweep</strong></td>
+<td style="text-align:center"><code>Slink 5+/3</code></td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">Melee (Zone-Wide)</td>
+<td style="text-align:left"><code>Cleave 5</code>: All targets in <a href="stage--rules--keywords-index.html#zone" class="wikilink" data-tooltip="An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.">Zone</a> thrown 1 Zone and knocked <a href="stage--rules--keywords-index.html#prone" class="wikilink" data-tooltip="A condition representing being knocked down. Restricts movement and imposes a -1d Bane on melee attacks.">Prone</a>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Crushing Dragon Jaws</strong></td>
+<td style="text-align:center"><code>Tough 6/2</code> (Hard!)</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">Melee</td>
+<td style="text-align:left">Shatters shields; inflicts 2 Wounds on Bosses if undefended.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Hellfire Breath (Clock)</strong></td>
+<td style="text-align:center"><code>Slink 4+/3</code></td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">Ranged (2 Zones, AoE)</td>
+<td style="text-align:left">Vaporizes wooden cover; ignites both zones with <code>[Fire]</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Plunder:</strong> Hoard of the Drake-Lords (Loot Value 15, 6 Scrap T4, 2 Scrap T5, Dragon Heart Oddity T5/B0).</p>
+<hr>
+<h2 id="9-example-combat-encounters" tabindex="-1">9. Example Combat Encounters</h2>
+<blockquote>
+<p><strong>Example 1: Smashing Dry Bones</strong></p>
+<p><em>Skag and his Size 3 Mob of spears confront two Rattlebone Skeletons (Defence 2).</em></p>
+<p>Skag swings his trusty Heavy Club (a <code>Bashing</code> weapon). Because skeletons have the <em>Dry Bones</em> trait, Skag gains a <strong>Boon (+1d)</strong> to his attack roll. Skag rolls 4d6 (Tough 3 + 1d Boon) and scores three successes (<strong>5, 5, 6</strong>).</p>
+<p>Because Skag rolled <strong>3 successes</strong>, which exceeds the Skeleton’s <strong>Defence TN of 2</strong>, the first skeleton shatters instantly! The excess 1 success does not cleave because Skag is using a standard single-target weapon.</p>
+<p>Skag’s Mob then attacks the second skeleton. The Mob scores 2 successes, perfectly meeting the <strong>Defence TN of 2</strong>, crushing the second skeleton into dust.</p>
+</blockquote>
+<blockquote>
+<p><strong>Example 2: Surviving the Bear’s Claws</strong></p>
+<p><em>The Forest Mauler (Elite Beast) attacks Boss Fizzle with its Crushing Claws (Threat <code>Tough 5+/2</code>, Damage 3).</em></p>
+<p>Fizzle has saved 1 <a href="stage--rules--keywords-index.html#standard-action" class="wikilink" data-tooltip="The primary actions spent on a turn (3 per round). Used for Move, Attack, Plunder, Order, or Manipulate. See [[02 Combat]].">Standard Action</a> from his turn and holds a scrap iron shield. He declares a <strong>Parry</strong> and rolls his <strong>Clatter Roll</strong>:</p>
+<ul>
+<li><strong>Stat Dice:</strong> 2d6 for <a href="stage--rules--keywords-index.html#tough" class="wikilink" data-tooltip="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> (Fizzle’s Tough is 2).</li>
+<li><strong>Armor Dice:</strong> 2 gray d6s for his Tin Plate armor.</li>
+</ul>
+<p>Fizzle rolls his dice. On his Tough dice, he rolls a <strong>3</strong> and a <strong>5</strong> (1 success). Because the bear’s Threat requires <strong>2 successes on 5+</strong> (<code>5+/2</code>), Fizzle fails to parry cleanly!</p>
+<p>He now checks his Armor Dice for damage mitigation. The gray dice land on <strong>5</strong> and <strong>6</strong> (2 successes). Each armor success reduces the incoming 3 Damage by 1:
+$\text{Damage Taken} = 3 - 2 = 1 \text{ Grit}$</p>
+<p>Fizzle takes <strong>1 Grit</strong> damage instead of 3, absorbing the savage swipe on his trusty armor!</p>
+</blockquote>
+<blockquote>
+<p><strong>Example 3: Overclocking Against the High Aurelian Praetor</strong></p>
+<p><em>Boss Grib and his Gang face the towering Solar Praetor (Defence 4, Wounds 5).</em></p>
+<p>Grib knows attacking the Praetor’s thick brass armor head-on is suicide. Grib’s alchemist throws an alchemical <em>Shock Flask</em> (<code>[Shock]</code>) at the Praetor.</p>
+<p>Because the Praetor has the <em>Sol-Quartz Power Core</em> flaw hook, the electrical arc shorts out its crystal regulator: the Praetor’s <a href="stage--rules--keywords-index.html#defence" class="wikilink" data-tooltip="The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.">Defence</a> TN instantly drops from <strong>4</strong> to <strong>2</strong> for the rest of the round!</p>
+<p>Grib steps up with his custom Overclocked Scrap-Cleaver. Grib rolls 5d6 on <a href="stage--rules--keywords-index.html#tough" class="wikilink" data-tooltip="Main stat representing physical power, raw force, and melee combat capability.">Tough</a> and spends 2 <a href="stage--rules--keywords-index.html#grunt" class="wikilink" data-tooltip="Your authority. Can be spent before a roll (+1 Die per Grunt) or after a roll (Reroll any 1s).">Grunt</a> to boost his dice pool, achieving an incredible <strong>6 successes</strong>!</p>
+<p>By the <strong>Overkill Rule</strong>, every multiple of the Praetor’s modified Defence TN (2) inflicts a <a href="stage--rules--keywords-index.html#wound" class="wikilink" data-tooltip="A mark of serious physical trauma. PCs and Elite enemies are defeated or knocked down after taking their maximum Wounds.">Wound</a>:
+$\text{Wounds Dealt} = \frac{6 \text{ Successes}}{\text{Defence } 2} = 3 \text{ Wounds!}$</p>
+<p>Grib deals <strong>3 Wounds</strong> in a single massive blow, buckling the Praetor’s brass chassis before its steam vents can retaliate!</p>
+</blockquote>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- LLM Dropdown Toggle ---
+    (function() {
+      const btn = document.getElementById('llmDropdownBtn');
+      const menu = document.getElementById('llmDropdownMenu');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = menu.classList.toggle('show');
+        btn.setAttribute('aria-expanded', isOpen);
+      });
+
+      document.addEventListener('click', () => {
+        menu.classList.remove('show');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    })();
+
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'flex';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+
+    // --- Anchor Scroll Fix ---
+    (function() {
+      function scrollToHash() {
+        if (window.location.hash) {
+          const id = decodeURIComponent(window.location.hash.substring(1));
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }, 100);
+          }
+        }
+      }
+      window.addEventListener('hashchange', scrollToHash);
+      window.addEventListener('DOMContentLoaded', scrollToHash);
+      window.addEventListener('load', scrollToHash);
+    })();
+
+    // --- Manual Sync Trigger ---
+    (function() {
+      const headerBtn = document.getElementById('headerSyncBtn');
+      const bannerBtn = document.getElementById('bannerSyncBtn');
+      
+      function handleSync(btn) {
+        if (!btn) return;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        
+        // Add spinning/loading animation class
+        if (btn.classList.contains('sync-btn')) {
+          btn.classList.add('sync-btn--spinning');
+          btn.querySelector('span').textContent = 'Syncing...';
+        } else {
+          btn.textContent = 'Syncing...';
+        }
+        
+        fetch('/api/run-sync', { method: 'POST' })
+          .then(res => {
+            if (!res.ok) throw new Error('Server returned error status: ' + res.status);
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.status === 'success') {
+              if (btn.classList.contains('sync-btn')) {
+                btn.querySelector('span').textContent = 'Success!';
+              } else {
+                btn.textContent = 'Success!';
+              }
+              // Reload page to reflect changes
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              throw new Error(data.error || 'Sync failed');
+            }
+          })
+          .catch(err => {
+            console.error('Sync failed:', err);
+            alert('Failed to rerun sync: ' + err.message);
+            // Restore button
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            if (btn.classList.contains('sync-btn')) {
+              btn.classList.remove('sync-btn--spinning');
+            }
+          });
+      }
+
+      if (headerBtn) {
+        headerBtn.addEventListener('click', () => handleSync(headerBtn));
+      }
+      if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
+    })();
+  </script>
+
+  <!-- ===== Mermaid.js Integration ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    (function() {
+      function initMermaid() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        
+        const lightThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#f0e6d6',
+          primaryTextColor: '#231c16',
+          primaryBorderColor: '#8c2d19',
+          lineColor: '#c68a35',
+          secondaryColor: '#fdfbf7',
+          tertiaryColor: '#e5dcce',
+          edgeLabelBackground: '#faf5ec',
+          nodeBorder: '#8c2d19',
+          clusterBkg: '#eee5d5',
+          clusterBorder: '#c68a35',
+          titleColor: '#8c2d19'
+        };
+
+        const darkThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#241e1a',
+          primaryTextColor: '#e6dfd5',
+          primaryBorderColor: '#d44d32',
+          lineColor: '#d4a359',
+          secondaryColor: '#1a1613',
+          tertiaryColor: '#2a221c',
+          edgeLabelBackground: '#171412',
+          nodeBorder: '#d44d32',
+          clusterBkg: '#1c1815',
+          clusterBorder: '#8c6a38',
+          titleColor: '#d44d32'
+        };
+
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: 'base',
+          themeVariables: isDark ? darkThemeVariables : lightThemeVariables,
+          flowchart: {
+            curve: 'basis',
+            padding: 16,
+            nodeSpacing: 50,
+            rankSpacing: 40,
+            htmlLabels: true
+          },
+          securityLevel: 'loose'
+        });
+
+        // Convert code blocks with language-mermaid to <pre class="mermaid">
+        const mermaidCodeBlocks = document.querySelectorAll('pre > code.language-mermaid');
+        mermaidCodeBlocks.forEach((codeEl) => {
+          const preEl = codeEl.parentElement;
+          if (preEl && preEl.tagName === 'PRE') {
+            // Save raw mermaid source text if not already saved
+            if (!preEl.getAttribute('data-mermaid-src')) {
+              preEl.setAttribute('data-mermaid-src', codeEl.textContent);
+            }
+            const src = preEl.getAttribute('data-mermaid-src');
+            preEl.className = 'mermaid';
+            preEl.textContent = src;
+            preEl.removeAttribute('data-processed');
+          }
+        });
+
+        // Also handle any pre.mermaid that might need re-render on theme change
+        const directMermaidBlocks = document.querySelectorAll('pre.mermaid');
+        directMermaidBlocks.forEach((preEl) => {
+          if (!preEl.getAttribute('data-mermaid-src')) {
+            preEl.setAttribute('data-mermaid-src', preEl.textContent);
+          }
+          const src = preEl.getAttribute('data-mermaid-src');
+          preEl.textContent = src;
+          preEl.removeAttribute('data-processed');
+        });
+
+        if (document.querySelectorAll('.mermaid').length > 0) {
+          mermaid.run({
+            nodes: document.querySelectorAll('.mermaid')
+          }).catch(err => console.error('Mermaid render error:', err));
+        }
+      }
+
+      // Initial render on DOM load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMermaid);
+      } else {
+        initMermaid();
+      }
+
+      // Re-initialize mermaid when theme changes
+      const themeToggleBtn = document.getElementById('themeToggle');
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          setTimeout(initMermaid, 50);
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

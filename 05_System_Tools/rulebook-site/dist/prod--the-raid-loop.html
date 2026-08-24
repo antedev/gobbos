@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The_Raid_Loop — PROD Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. The official rulebook">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,500;0,700;0,800;1,700&family=Alegreya:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab env-tab--active">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right" style="display: flex; gap: 8px; align-items: center;">
+      <div class="llm-dropdown-container">
+        <button class="llm-btn" id="llmDropdownBtn" title="LLM Continuous Markdown Bundles" aria-label="LLM Bundles" aria-expanded="false">
+          <span>🤖 LLM Files</span>
+          <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="llm-dropdown-menu" id="llmDropdownMenu">
+          <div class="llm-dropdown-header">LLM HTML (Gemini / Web)</div>
+          <a href="all_llm.html" target="_blank" class="llm-dropdown-item">👑 Master All (Rules + Lore)</a>
+          <a href="rules_all_llm.html" target="_blank" class="llm-dropdown-item">📜 Combined Rules (PROD + STAGE)</a>
+          <a href="rules_stage_llm.html" target="_blank" class="llm-dropdown-item">🧪 STAGE Rules</a>
+          <a href="rules_prod_llm.html" target="_blank" class="llm-dropdown-item">📖 PROD Rules</a>
+          <a href="lore_all_llm.html" target="_blank" class="llm-dropdown-item">🔮 Combined Lore</a>
+          <a href="lore_stage_llm.html" target="_blank" class="llm-dropdown-item">📜 STAGE Lore</a>
+          <div class="llm-dropdown-divider"></div>
+          <div class="llm-dropdown-header">Raw Markdown & Index</div>
+          <a href="all_llm.md" target="_blank" class="llm-dropdown-item">📝 all_llm.md</a>
+          <a href="llms.txt" target="_blank" class="llm-dropdown-item">📋 /llms.txt Index</a>
+        </div>
+      </div>
+      <button class="sync-btn" id="headerSyncBtn" title="Sync & Rebuild Site" aria-label="Sync and rebuild site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sync-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Sync</span>
+      </button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">PROD Rules</h2>
+        <p class="sidebar-subtitle">The official rulebook</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="prod.html" class="nav-link" data-target="rules--dice">Dice</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="characters-and-mobs"><span class="toggle-icon">▸</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" style="display: none;"><li><a href="prod--characters-and-mobs--stats.html" class="nav-link" data-target="characters-and-mobs--stats">Stats</a></li></ul></div><div class="nav-group nav-group--solo"><a href="prod--core-resolution.html" class="nav-link nav-link--solo" data-target="core-resolution">Core_Resolution</a></div><div class="nav-group nav-group--solo"><a href="prod--boss-profile-and-gang.html" class="nav-link nav-link--solo" data-target="boss-profile-and-gang">Boss_Profile_and_Gang</a></div><div class="nav-group nav-group--solo"><a href="prod--action-economy-and-turn-flow.html" class="nav-link nav-link--solo" data-target="action-economy-and-turn-flow">Action_Economy_and_Turn_Flow</a></div><div class="nav-group nav-group--solo"><a href="prod--zones-and-movement.html" class="nav-link nav-link--solo" data-target="zones-and-movement">Zones_and_Movement</a></div><div class="nav-group nav-group--solo"><a href="prod--combat-engine.html" class="nav-link nav-link--solo" data-target="combat-engine">Combat_Engine</a></div><div class="nav-group nav-group--solo"><a href="prod--mob-mechanics.html" class="nav-link nav-link--solo" data-target="mob-mechanics">Mob_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="prod--damage-grit-and-wounds.html" class="nav-link nav-link--solo" data-target="damage-grit-and-wounds">Damage_Grit_and_Wounds</a></div><div class="nav-group nav-group--solo"><a href="prod--magic-and-bangaranga.html" class="nav-link nav-link--solo" data-target="magic-and-bangaranga">Magic_and_Bangaranga</a></div><div class="nav-group nav-group--solo"><a href="prod--the-raid-loop.html" class="nav-link nav-link--solo nav-link--active" data-target="the-raid-loop">The_Raid_Loop</a></div><div class="nav-group nav-group--solo"><a href="prod--the-lair-loop-and-progression.html" class="nav-link nav-link--solo" data-target="the-lair-loop-and-progression">The_Lair_Loop_and_Progression</a></div><div class="nav-group nav-group--solo"><a href="prod--journeys-and-hazards.html" class="nav-link nav-link--solo" data-target="journeys-and-hazards">Journeys_and_Hazards</a></div><div class="nav-group nav-group--solo"><a href="prod--adversaries-and-threats.html" class="nav-link nav-link--solo" data-target="adversaries-and-threats">Adversaries_and_Threats</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; align-items: center; justify-content: space-between; gap: 16px; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        <span>⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.</span>
+        <button class="sync-banner-btn" id="bannerSyncBtn">Rerun Sync</button>
+      </div>
+      <h1 id="the-raid-loop-and-economy" tabindex="-1">The Raid Loop &amp; Economy</h1>
+<p><em>A goblin without a plan gets squashed. A goblin with a plan gets squashed while carrying something shiny. The raid is the lifeblood of the Warren—a high-stakes smash-and-grab where Bosses lead their Mobs into hostile territory to plunder riches, smash infrastructure, and haul back enough scrap to keep the Lair growing.</em></p>
+<hr>
+<h2 id="1-the-four-raid-phases" tabindex="-1">1. The Four Raid Phases</h2>
+<p>Every raid operates within a continuous four-phase loop that structures the transition from the <strong>Lair</strong> to the target site and back again:</p>
+<pre><code class="language-mermaid">flowchart TD
+    P1[&quot;Phase 1: Planning &amp; Approach (The Journey)&lt;br&gt;- Select scouted target &amp; review Danger Ratings&lt;br&gt;- Mobilize Raider Mobs &amp; assign Travel Roles&lt;br&gt;- Traverse travel Stages to reach raid site&quot;] --&gt; P2[&quot;Phase 2: Infiltration &amp; Assault (Entry &amp; Breach)&lt;br&gt;- Establish starting Alert equal to Danger Rating (1–5)&lt;br&gt;- Infiltrate initial Zones &amp; bypass sentries&quot;]
+    P2 --&gt; P3[&quot;Phase 3: Objective &amp; Plunder (Tactical Execution)&lt;br&gt;- Complete Main Objective (3–5 Raid Points)&lt;br&gt;- Pursue Opportunity Targets (+2 Raid Points each)&lt;br&gt;- Dismantle infrastructure for Scrap &amp; Plunder Loot&quot;]
+    P3 --&gt; P4[&quot;Phase 4: Extraction &amp; Escape (The Return)&lt;br&gt;- Declare extraction &amp; retreat through Zones to exit&lt;br&gt;- Haul physical Loot/Scrap through Return Journey&lt;br&gt;- Manage encumbrance &amp; pursuing forces&quot;]
+</code></pre>
+<h3 id="phase-1-planning-and-approach" tabindex="-1">Phase 1: Planning &amp; Approach</h3>
+<p>Before leaving the <strong>Lair</strong>, you select a scouted target, inspect the known <strong>Base Danger Rating</strong> and <strong>Objectives</strong>, allocate <strong>Raider Mobs</strong> from the communal <strong>Gobbo Pool</strong> (up to your Boss’s <strong>Grunt</strong> limit), and assign the four <strong>Travel Roles</strong>. The party then traverses wilderness or subterranean <strong>Stages</strong> as detailed in <a href="11_Journeys_and_Hazards.md">Journeys &amp; Hazards</a>.</p>
+<h3 id="phase-2-infiltration-and-assault" tabindex="-1">Phase 2: Infiltration &amp; Assault</h3>
+<p>The party breaches the target perimeter. The <strong>GM</strong> sets the location’s starting <strong>Alert</strong> track equal to its <strong>Base Danger Rating</strong> (1 to 5). You navigate connected <strong>Zones</strong>, defeat sentries, bypass obstacles, and work to keep <strong>Alert</strong> low before sounding alarms.</p>
+<h3 id="phase-3-objective-and-plunder" tabindex="-1">Phase 3: Objective &amp; Plunder</h3>
+<p>The party executes tactical combat and exploration actions in the target <strong>Zones</strong>. You secure the <strong>Main Objective</strong> (worth 3–5 <strong>Raid Points</strong>), seek optional <strong>Targets of Opportunity</strong> (worth +2 <strong>Raid Points</strong> each), dismantle heavy machinery or architecture for <strong>Scrap</strong>, and spend <strong>Plunder</strong> <strong>Standard Actions</strong> to gather loose <strong>Loot</strong> and <strong>Oddities</strong>.</p>
+<h3 id="phase-4-extraction-and-escape" tabindex="-1">Phase 4: Extraction &amp; Escape</h3>
+<p>Once objectives are secured, or when <strong>Alert</strong> escalates to lethal levels, the party declares <strong>Extraction</strong>. You must haul all gathered physical <strong>Loot</strong>, <strong>Scrap</strong>, and <strong>Oddities</strong> back through the perimeter to the exit, managing encumbrance penalties and fighting off pursuers before resolving the return journey.</p>
+<hr>
+<h2 id="2-the-raid-economy" tabindex="-1">2. The Raid Economy</h2>
+<p>The <strong>Gobbos</strong> economy operates without fractional coinage or coin-counting math. Wealth and progress are measured across five standardized systemic resources:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Resource</th>
+<th style="text-align:left">Scope</th>
+<th style="text-align:left">Acquisition Method</th>
+<th style="text-align:left">Primary Mechanical Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Loot Value (LV)</strong></td>
+<td style="text-align:left">Liquid Wealth</td>
+<td style="text-align:left">Plundered as physical items during raids</td>
+<td style="text-align:left">Smelted via Rule of Five; buys equipment, hires specialists, expands Lair facilities.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Scrap</strong></td>
+<td style="text-align:left">Building Matter</td>
+<td style="text-align:left">Harvested from broken infrastructure and salvage</td>
+<td style="text-align:left">Constructs facility chassis, expands rooms, and provides base weapon materials.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Infamy Marks</strong></td>
+<td style="text-align:left">Gang Level</td>
+<td style="text-align:left">Contributed Loot (10 LV = 1 Mark) or Agendas</td>
+<td style="text-align:left">Determines Gang Infamy (1–5), Successor starting XP, and equipped Gang Quirks.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Raid Points (Glory)</strong></td>
+<td style="text-align:left">Shared Renown</td>
+<td style="text-align:left">Completing Main and Opportunity Objectives</td>
+<td style="text-align:left">Pooled at raid end; converts into shared <strong>Boss XP</strong> during Homecoming.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Boss XP</strong></td>
+<td style="text-align:left">Personal Power</td>
+<td style="text-align:left">Pooled Raid Points, Personal Glory, Successor pools</td>
+<td style="text-align:left">Spent during downtime to advance <strong>Main Stats</strong> (<strong>Tough</strong>, <strong>Slink</strong>, <strong>Brains</strong>, <strong>Mouth</strong>).</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-loot-value-and-the-exponential-scale" tabindex="-1">3. Loot Value &amp; The Exponential Scale</h2>
+<p>All treasure plundered from a raid belongs to a <strong>Quality Tier (T1–T5)</strong> and possesses a <strong>Loot Value (LV)</strong> representing its concentrated material worth.</p>
+<h3 id="the-5-to-1-tier-ladder" tabindex="-1">The 5-to-1 Tier Ladder</h3>
+<p>Each tier represents an exponential <strong>5-to-1 step</strong> in value. Lower-tier items cannot bypass higher-tier economy gates without combining them in groups of five:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Tier</th>
+<th style="text-align:left">Category &amp; Quality</th>
+<th style="text-align:left">Single Unit Value</th>
+<th style="text-align:left">Typical Raid Plunder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>T1</strong></td>
+<td style="text-align:left"><strong>Junk &amp; Pocket Scrap</strong></td>
+<td style="text-align:left">1x T1</td>
+<td style="text-align:left">Brass buttons, bent iron nails, tin mugs, loose teeth.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>T2</strong></td>
+<td style="text-align:left"><strong>Scrappy Plunder</strong></td>
+<td style="text-align:left">5x T1 (1x T2)</td>
+<td style="text-align:left">Silver cutlery, iron shivs, copper kettles, crude pewter rings.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>T3</strong></td>
+<td style="text-align:left"><strong>Standard Fine Treasure</strong></td>
+<td style="text-align:left">25x T1 (5x T2 / 1x T3)</td>
+<td style="text-align:left">Gold banquet chalices, guard broadswords, bolts of fine silk.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>T4</strong></td>
+<td style="text-align:left"><strong>Superior Masterwork</strong></td>
+<td style="text-align:left">125x T1 (5x T3 / 1x T4)</td>
+<td style="text-align:left">Dwarven rune-hammers, jeweled altar idols, black pearl necklaces.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>T5</strong></td>
+<td style="text-align:left"><strong>Legendary Mythic Relic</strong></td>
+<td style="text-align:left">625x T1 (5x T4 / 1x T5)</td>
+<td style="text-align:left">Dragon skull trophies, intact godstone shards, astral astrolabes.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="multi-unit-treasures-and-hoards" tabindex="-1">Multi-Unit Treasures &amp; Hoards</h3>
+<p>Massive treasures possess a <strong>Loot Value</strong> greater than 1 of their Tier:</p>
+<ul>
+<li>A stolen <strong>Alabaster Sarcophagus</strong> might be valued at <strong>4x T4</strong>.</li>
+<li>Under the exponential scale, that single sarcophagus is worth:
+<strong>4x T4</strong> = <strong>20x T3</strong> = <strong>100x T2</strong> = <strong>500x T1</strong></li>
+<li>This scale prevents hoarding loose Junk (T1) from trivializing high-tier economic purchases without physical smelting.</li>
+</ul>
+<hr>
+<h2 id="4-the-rule-of-five-smelting-and-barter" tabindex="-1">4. The Rule of Five: Smelting &amp; Barter</h2>
+<p>During the <strong>Lair Phase</strong> (downtime between raids), you can combine, melt down, or break apart plunder using the <strong>Rule of Five</strong>:</p>
+<ol>
+<li><strong>Trading Up (Smelting / Combining):</strong> You combine <strong>5 tokens of Tier X</strong> into <strong>1 token of Tier X+1</strong>.
+<ul>
+<li><em>Example:</em> 5x T2 silver goblets melt down into 1x T3 gold ingot.</li>
+</ul>
+</li>
+<li><strong>Trading Down (Breaking Down / Pawning):</strong> You break down <strong>1 token of Tier X+1</strong> into <strong>5 tokens of Tier X</strong>.
+<ul>
+<li><em>Example:</em> 1x T4 masterwork brooch trades down into 5x T3 trade bars.</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<blockquote>
+<p><strong>THE RULE OF FIVE RESTRICTION:</strong>
+Smelting upward requires exact multiples of five. Non-multiples of five cannot be traded up to the next tier until additional matching tokens are acquired.</p>
+</blockquote>
+</blockquote>
+<hr>
+<h2 id="5-scrap-generation-and-conversion" tabindex="-1">5. Scrap Generation &amp; Conversion</h2>
+<p><strong>Scrap</strong> is abstract structural building matter (reclaimed iron plates, oak beams, lead pipes, chains, and masonry) required to construct Lair facilities, build defenses, and form custom weapon chassis.</p>
+<h3 id="generating-scrap" tabindex="-1">Generating Scrap</h3>
+<ol>
+<li><strong>Dismantling Infrastructure:</strong> During a raid, a <strong>Goblin Boss</strong> or <strong>Mob</strong> can spend a <strong>Standard Action</strong> (<strong>Manipulate</strong> or <strong>Attack</strong>) to dismantle environmental objects (iron doors, portcullises, chandeliers, ballistas). A successful <strong>Tough 5+/1</strong> or <strong>Brains 5+/1</strong> test extracts <strong>1d6 Scrap</strong> (or the object’s listed yield) into the party’s carry load.</li>
+<li><strong>Salvage Yields:</strong> Plundered items with high structural bulk can be smelted down in the Lair. Dismantling a plundered item yields its listed <strong>Scrap Yield</strong> into the <strong>Communal Hoard</strong>.</li>
+<li><strong>Passive Lair Yields:</strong> Dedicated Lair facilities (such as the Junkyard Sifter or Scrap Forge) generate passive <strong>Scrap</strong> each <strong>Lair Turn</strong>.</li>
+</ol>
+<hr>
+<h2 id="6-carry-capacity-and-tactical-encumbrance" tabindex="-1">6. Carry Capacity &amp; Tactical Encumbrance</h2>
+<p>Greed has physical weight. All weapons, armor, tools, and plunder possess a <strong>Bulk</strong> rating (0 to 4+).</p>
+<h3 id="goblin-boss-carry-capacity" tabindex="-1">Goblin Boss Carry Capacity</h3>
+<p>Your unburdened <strong>Carry</strong> capacity is derived from your <strong>Tough</strong> stat:</p>
+<p><strong>Carry Capacity</strong> = <strong>4 + (2 x Tough) Bulk</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Tough Stat</th>
+<th style="text-align:center">Unburdened Carry</th>
+<th style="text-align:center">Over-Laden Threshold</th>
+<th style="text-align:center">Dragging Limit (2x Carry)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Level 1</strong></td>
+<td style="text-align:center"><strong>6 Bulk</strong></td>
+<td style="text-align:center">7–7 Bulk</td>
+<td style="text-align:center">12 Bulk</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Level 2</strong></td>
+<td style="text-align:center"><strong>8 Bulk</strong></td>
+<td style="text-align:center">9–10 Bulk</td>
+<td style="text-align:center">16 Bulk</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Level 3</strong></td>
+<td style="text-align:center"><strong>10 Bulk</strong></td>
+<td style="text-align:center">11–13 Bulk</td>
+<td style="text-align:center">20 Bulk</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Level 4</strong></td>
+<td style="text-align:center"><strong>12 Bulk</strong></td>
+<td style="text-align:center">13–16 Bulk</td>
+<td style="text-align:center">24 Bulk</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Level 5</strong></td>
+<td style="text-align:center"><strong>14 Bulk</strong></td>
+<td style="text-align:center">15–19 Bulk</td>
+<td style="text-align:center">28 Bulk</td>
+</tr>
+</tbody>
+</table>
+<h3 id="load-states-and-penalties" tabindex="-1">Load States &amp; Penalties</h3>
+<p>Total the <strong>Bulk</strong> of all carried weapons, armor, gear, and plunder to determine your current <strong>Load State</strong>:</p>
+<ul>
+<li><strong>Unburdened (&lt;= Carry):</strong> Standard <strong>Movement</strong> speed (in Zones per <strong>Move</strong> action); zero test penalties; full access to all standard actions and reactions.</li>
+<li><strong>Over-Laden (Carry + 1 to Carry + Tough):</strong> <strong>-1 Zone</strong> per <strong>Move</strong> action (minimum 1 Zone); <strong>Bane 1 (-1d)</strong> on all physical <strong>Slink</strong> and <strong>Tough</strong> tests; you cannot perform two <strong>Move</strong> actions in the same round.</li>
+<li><strong>Dragging (Carry + Tough + 1 to 2x Carry):</strong> Fixed at <strong>1 Zone</strong> per <strong>Move</strong> action; auto-fails all stealth and jumping tests; requires <strong>two hands</strong>; you cannot attack with weapons and cannot perform <strong>Dodge</strong> or <strong>Parry</strong> <strong>Reactions</strong> (0 active defense).</li>
+<li><strong>Immobilized (&gt; 2x Carry):</strong> <strong>0 Zones</strong> movement speed; you cannot move and must drop carried items as a <strong>Free Action</strong> to regain mobility.</li>
+</ul>
+<h3 id="the-bulk-3-item-rule" tabindex="-1">The Bulk 3+ Item Rule</h3>
+<p>Items of <strong>Bulk 3 or higher</strong> (iron safes, great cauldrons, stone statues, heavy kegs) represent awkward, heavy loads:</p>
+<ul>
+<li><strong>Two Hands Required:</strong> Hauling a loose Bulk 3+ item occupies two hands. You cannot wield a weapon, hold a shield, or cast somatic spells while carrying it.</li>
+<li><strong>No Disengage:</strong> You cannot perform a <strong>Disengage</strong> action while holding a Bulk 3+ item. You must drop the item as a <strong>Free Action</strong> to disengage, defeat adjacent enemies, or take Opportunity Attacks.</li>
+<li><strong>Boss Hauling Limit:</strong> A <strong>Goblin Boss</strong> can haul at most Tough / 2 (rounded down, minimum 1) loose Bulk 3+ items at one time.</li>
+</ul>
+<h3 id="mob-carry-limits-and-casualties" tabindex="-1">Mob Carry Limits &amp; Casualties</h3>
+<ul>
+<li><strong>Unburdened Mob Limit:</strong> A <strong>Mob</strong> carries up to <strong>Size x 4 Bulk</strong> with normal movement and no penalties.</li>
+<li><strong>Dragging Mob Limit:</strong> A <strong>Mob</strong> can drag up to <strong>Size x 5 Bulk</strong> (movement fixed at 1 Zone per <strong>Move</strong> action; cannot execute the reactive <strong>Scatter!</strong> order).</li>
+<li><strong>Mob Combat Penalty:</strong> Every loose object of <strong>Bulk 3+</strong> carried by a <strong>Mob</strong> imposes <strong>Bane 1 (-1d)</strong> on that <strong>Mob’s</strong> attack rolls. A <strong>Mob</strong> can carry a maximum number of Bulk 3+ items equal to its current <strong>Size</strong>.</li>
+<li><strong>Casualty Drops:</strong> When a <strong>Mob</strong> takes damage that reduces its <strong>Size</strong>, its carry capacity shrinks immediately. The controlling <strong>Goblin Boss</strong> must <strong>immediately declare which Loot items are dropped</strong> in the current <strong>Zone</strong> to meet the new capacity ceiling. Picking dropped items back up requires spending a <strong>Plunder</strong> <strong>Standard Action</strong> per item.</li>
+</ul>
+<hr>
+<h2 id="7-danger-scaling-scouting-and-alert" tabindex="-1">7. Danger Scaling, Scouting &amp; Alert</h2>
+<p>Raids scale dynamically based on site danger and the party’s operational profile.</p>
+<h3 id="base-danger-rating-1-to-5" tabindex="-1">Base Danger Rating (1 to 5)</h3>
+<p>Every raid target has a <strong>Base Danger Rating</strong> (T1 to T5) that sets its starting <strong>Alert</strong> level, baseline environmental hazard profiles, and enemy strength.</p>
+<h3 id="scouting-the-target" tabindex="-1">Scouting the Target</h3>
+<p>During the Labor step of the <strong>Lair Phase</strong>, players allocate <strong>Laborer Dice</strong> to survey a target site. Roll the allocated pool against <strong>4+</strong>:</p>
+<ul>
+<li><strong>0 Successes (Blind Entry):</strong> The location exists, but the party knows nothing. The party suffers a <strong>Bane 1 (-1d)</strong> on their first Zone entry test during the raid.</li>
+<li><strong>1 Success:</strong> Reveals the <strong>Base Danger Rating</strong> and the <strong>Main Objective</strong> (worth 3–5 <strong>Raid Points</strong>).</li>
+<li><strong>2 Successes:</strong> In addition to the above, reveals 1 <strong>Target of Opportunity</strong> (worth +2 <strong>Raid Points</strong>).</li>
+<li><strong>3+ Successes:</strong> In addition to the above, reveals 2 <strong>Targets of Opportunity</strong> (+4 <strong>Raid Points</strong> total) and a <strong>Secret Bypass</strong> (grants the party a <strong>Boon 1 (+1d)</strong> on their first Zone entry test).</li>
+</ul>
+<h3 id="the-alert-track" tabindex="-1">The Alert Track</h3>
+<p>The <strong>GM</strong> tracks the raid location’s active <strong>Alert</strong> (starting equal to the <strong>Base Danger Rating</strong>):</p>
+<ul>
+<li><strong>Alert Check Triggers:</strong> The <strong>GM</strong> rolls <strong>1d6</strong> whenever the party enters a new <strong>Zone</strong>, completes a <strong>Target of Opportunity</strong>, or takes a rest round.</li>
+<li><strong>Resolution:</strong>
+<ul>
+<li>If the roll is <strong>strictly greater</strong> than current <strong>Alert</strong>: The party remains undetected.</li>
+<li>If the roll is <strong>less than or equal to</strong> current <strong>Alert</strong>: A complication triggers (reinforcements arrive, alarms sound, or traps arm), and <strong>Alert</strong> permanently increases by <strong>+1</strong>.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="8-post-raid-reckoning-and-payout" tabindex="-1">8. Post-Raid Reckoning &amp; Payout</h2>
+<p>When the party extracts safely back to the <strong>Lair</strong>, rewards are tallied across three separate tracks:</p>
+<h3 id="1-communal-glory-to-shared-boss-xp" tabindex="-1">1. Communal Glory to Shared Boss XP</h3>
+<p>All <strong>Raid Points</strong> earned by the party from completing objectives are pooled and converted into shared <strong>Boss XP</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Pooled Raid Points</th>
+<th style="text-align:center">Shared Boss XP Awarded</th>
+<th style="text-align:left">Raid Reputation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>1–4 Points</strong></td>
+<td style="text-align:center"><strong>0 XP</strong></td>
+<td style="text-align:left">Failure. The horde throws mud at the returning raiders.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>5–9 Points</strong></td>
+<td style="text-align:center"><strong>1 XP</strong></td>
+<td style="text-align:left">Decent raid. The horde acknowledges the plunder.</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>10+ Points</strong></td>
+<td style="text-align:center"><strong>2 XP</strong></td>
+<td style="text-align:left">Legendary triumph! A feast is held in your honor.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-personal-glory-1-xp" tabindex="-1">2. Personal Glory (+1 XP)</h3>
+<p>A <strong>Goblin Boss</strong> earns <strong>+1 Personal Glory</strong> (maximum 1 per raid, converting to <strong>+1 XP</strong> during Homecoming) by fulfilling at least one of these chaotic acts:</p>
+<ul>
+<li><strong>The Compulsion:</strong> Voluntarily trigger your Gang’s <strong>Shenanigan</strong> compulsion in an disadvantageous tactical situation, causing a complication and adding a die to the communal <strong>Bangaranga Pool</strong>.</li>
+<li><strong>The Sacrifice:</strong> Completely destroy a custom gear item by declaring an <strong>Overclock</strong>.</li>
+<li><strong>The Tyrant:</strong> Use the <strong>Assert Dominance</strong> action (attacking a <strong>Mob</strong> under your command) to regain <strong>Grunt</strong> in combat.</li>
+<li><strong>The Martyr:</strong> Roll a <strong>Fumble</strong> or trigger <strong>Overreaching</strong> when rolling dice, yet survive the raid.</li>
+</ul>
+<h3 id="3-communal-hoard-deposit-vs-private-gang-hoard" tabindex="-1">3. Communal Hoard Deposit vs. Private Gang Hoard</h3>
+<ul>
+<li><strong>Communal Hoard:</strong> All standard <strong>Loot Value</strong> and <strong>Scrap</strong> gathered by the party is deposited into the <strong>Communal Hoard</strong>. Contributing 10 <strong>Loot Value</strong> to the Communal Hoard earns your Gang <strong>1 Infamy Mark</strong>.</li>
+<li><strong>Oddity Drafting:</strong> Rare <strong>Oddities</strong> extracted from the raid are placed on the table and distributed by <strong>Player Consensus</strong>. If an <strong>Oddity</strong> was physically carried out by a specific <strong>Mob</strong>, that <strong>Mob’s</strong> controlling Gang holds <strong>First Pick</strong> rights.</li>
+</ul>
+<hr>
+<h2 id="9-loot-and-salvage-structural-schema" tabindex="-1">9. Loot &amp; Salvage Structural Schema</h2>
+<p>Every plundered treasure, scrap cache, or harvested monster oddity is defined by the following structural template:</p>
+<pre><code class="language-markdown">### [Item Name]
+- **Category:** [Pocket Scrap | Scrappy Plunder | Fine Treasure | Masterwork | Mythic Relic | Oddity | Chassis | Consumable]
+- **Quality Tier:** [T1 Junk | T2 Scrappy | T3 Standard | T4 Superior | T5 Legendary]
+- **Bulk:** [0 | 1 | 2 | 3 | 4+]
+- **Loot Value (LV):** [Quantity of Tier units, e.g. 1x T1, 1x T2, 3x T3, 1x T5]
+- **Scrap Yield:** [Quantity of Scrap recovered if dismantled in Lair]
+- **Divisibility:** [Divisible | Indivisible]
+- **Special Utility / Crafting Tag:** [Attached Oddity (Tier/Bite), Weapon/Armor Tag, or Blueprint schematic]
+- **Description:** [Brief physical Tier B/C description]
+</code></pre>
+<h3 id="reference-plunder-instances" tabindex="-1">Reference Plunder Instances</h3>
+<h4 id="bent-brass-nails" tabindex="-1">Bent Brass Nails</h4>
+<ul>
+<li><strong>Category:</strong> Pocket Scrap</li>
+<li><strong>Quality Tier:</strong> T1 Junk</li>
+<li><strong>Bulk:</strong> 0</li>
+<li><strong>Loot Value (LV):</strong> 1x T1</li>
+<li><strong>Scrap Yield:</strong> 1 Scrap</li>
+<li><strong>Divisibility:</strong> Divisible</li>
+<li><strong>Special Utility / Crafting Tag:</strong> None</li>
+<li><strong>Description:</strong> <em>A pocketful of bent, tarnished brass nails pried from floorboards.</em></li>
+</ul>
+<h4 id="gilded-silver-chalice" tabindex="-1">Gilded Silver Chalice</h4>
+<ul>
+<li><strong>Category:</strong> Fine Treasure</li>
+<li><strong>Quality Tier:</strong> T3 Standard</li>
+<li><strong>Bulk:</strong> 1</li>
+<li><strong>Loot Value (LV):</strong> 1x T3</li>
+<li><strong>Scrap Yield:</strong> 2 Scrap</li>
+<li><strong>Divisibility:</strong> Indivisible</li>
+<li><strong>Special Utility / Crafting Tag:</strong> None</li>
+<li><strong>Description:</strong> <em>A heavy silver banquet cup lined with gold filigree and small garnet beads.</em></li>
+</ul>
+<h4 id="flame-drake-bile-gland" tabindex="-1">Flame Drake Bile Gland</h4>
+<ul>
+<li><strong>Category:</strong> Oddity</li>
+<li><strong>Quality Tier:</strong> T4 Superior</li>
+<li><strong>Bulk:</strong> 2</li>
+<li><strong>Loot Value (LV):</strong> 1x T4</li>
+<li><strong>Scrap Yield:</strong> 0 Scrap</li>
+<li><strong>Divisibility:</strong> Indivisible</li>
+<li><strong>Special Utility / Crafting Tag:</strong> [Fire] (Tier 4, Bite 3, [Searing] Tag)</li>
+<li><strong>Description:</strong> <em>A pulsating, smoking organ harvested from a drake carcass. Warm to the touch.</em></li>
+</ul>
+<hr>
+<h2 id="content-extension-point" tabindex="-1">Content Extension Point</h2>
+<p>[CONTENT EXTENSION POINT: Loot &amp; Salvage Items]</p>
+<p>All future compendiums of treasures, trade goods, monster harvest oddities, relics, and scrap caches must implement the Loot &amp; Salvage Structural Schema defined above, respecting Quality Tiers (T1–T5), Bulk encumbrance rules, and Scrap yields.</p>
+<hr>
+<h2 id="mechanical-gaps-and-unresolved-systems" tabindex="-1">Mechanical Gaps &amp; Unresolved Systems</h2>
+<p>[MISSING RULE / GAP: Economy Currency Normalization &amp; Tiered Conversion]</p>
+<ul>
+<li><strong>Description:</strong> Stage drafts define Loot Value on a 5-to-1 exponential scale (T1–T5), but Lair construction rules list flat costs like “10 Loot, 15 Scrap” and Gang progression awards 1 Infamy Mark per “10 Loot Value” contributed. If a single T5 Relic equals 6,250 T1 units, depositing one T5 item would grant 625 Infamy Marks, instantly maxing Gang Infamy 40 times over.</li>
+<li><strong>Why it is needed:</strong> The macro progression and Lair construction loops collapse into hyper-inflation or complete ambiguity if currency tiers are not strictly normalized.</li>
+<li><strong>Suggested Resolution:</strong>
+<ol>
+<li>Define all flat Lair construction costs in matching Tier tokens (e.g., Tier 2 rooms cost T2 tokens, Tier 3 rooms cost T3 tokens).</li>
+<li>Normalize Infamy Mark generation to require 10x T1 for Infamy 1, 10x T2 for Infamy 2, 10x T3 for Infamy 3, 10x T4 for Infamy 4, and 10x T5 for Infamy 5.</li>
+</ol>
+</li>
+</ul>
+<p>[MISSING RULE / GAP: Codified Extraction Phase &amp; Chase Mechanics]</p>
+<ul>
+<li><strong>Description:</strong> While Journey rules handle travel to and from the site, there is no formal mechanical procedure for the transition between dungeon combat/plunder and extraction. If Alert reaches 4 or 5, there are no rules for whether enemies chase the party into the return journey, or how players disengage from the dungeon node to start return stages.</li>
+<li><strong>Why it is needed:</strong> The “Extraction &amp; Escape” phase is one of the four core raid pillars, but currently lacks dedicated evasion mechanics.</li>
+<li><strong>Suggested Resolution:</strong> Define the Extraction Trigger: Once the party declares Extraction, each Zone between their current location and the entrance must be traversed. If Alert is 4+, each exit transition triggers an immediate Slink 5+/1 evasion test; failure inflicts 1 Attrition damage on all Mobs and carries +1 Alert into the Return Journey.</li>
+</ul>
+<p>[MISSING RULE / GAP: Private Gang Hoard vs. Communal Hoard Economy]</p>
+<ul>
+<li><strong>Description:</strong> The Skim Downtime Action allows a Boss to secretly divert Loot into the Gang’s Private Hoard. However, the rules never define what a Gang’s Private Hoard can be spent on versus the Communal Hoard, or whether Private Hoard wealth counts toward Infamy Marks.</li>
+<li><strong>Why it is needed:</strong> Without distinct mechanical uses (e.g. purchasing personal gear without table consensus, bribing Elders for personal perks, or buying unshared Mob upgrades), the Skim action has no tactical purpose.</li>
+<li><strong>Suggested Resolution:</strong> Clarify that the Communal Hoard is spent strictly by group consensus for Lair upgrades and shared outfitting, while a Gang’s Private Hoard is spent exclusively by that player to purchase personal gear, bribe Elders, or buy personal Mob equipment. Wealth in the Private Hoard only grants Infamy Marks when deposited into the Communal Hoard.</li>
+</ul>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- LLM Dropdown Toggle ---
+    (function() {
+      const btn = document.getElementById('llmDropdownBtn');
+      const menu = document.getElementById('llmDropdownMenu');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = menu.classList.toggle('show');
+        btn.setAttribute('aria-expanded', isOpen);
+      });
+
+      document.addEventListener('click', () => {
+        menu.classList.remove('show');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    })();
+
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'flex';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+
+    // --- Anchor Scroll Fix ---
+    (function() {
+      function scrollToHash() {
+        if (window.location.hash) {
+          const id = decodeURIComponent(window.location.hash.substring(1));
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }, 100);
+          }
+        }
+      }
+      window.addEventListener('hashchange', scrollToHash);
+      window.addEventListener('DOMContentLoaded', scrollToHash);
+      window.addEventListener('load', scrollToHash);
+    })();
+
+    // --- Manual Sync Trigger ---
+    (function() {
+      const headerBtn = document.getElementById('headerSyncBtn');
+      const bannerBtn = document.getElementById('bannerSyncBtn');
+      
+      function handleSync(btn) {
+        if (!btn) return;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        
+        // Add spinning/loading animation class
+        if (btn.classList.contains('sync-btn')) {
+          btn.classList.add('sync-btn--spinning');
+          btn.querySelector('span').textContent = 'Syncing...';
+        } else {
+          btn.textContent = 'Syncing...';
+        }
+        
+        fetch('/api/run-sync', { method: 'POST' })
+          .then(res => {
+            if (!res.ok) throw new Error('Server returned error status: ' + res.status);
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.status === 'success') {
+              if (btn.classList.contains('sync-btn')) {
+                btn.querySelector('span').textContent = 'Success!';
+              } else {
+                btn.textContent = 'Success!';
+              }
+              // Reload page to reflect changes
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              throw new Error(data.error || 'Sync failed');
+            }
+          })
+          .catch(err => {
+            console.error('Sync failed:', err);
+            alert('Failed to rerun sync: ' + err.message);
+            // Restore button
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            if (btn.classList.contains('sync-btn')) {
+              btn.classList.remove('sync-btn--spinning');
+            }
+          });
+      }
+
+      if (headerBtn) {
+        headerBtn.addEventListener('click', () => handleSync(headerBtn));
+      }
+      if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
+    })();
+  </script>
+
+  <!-- ===== Mermaid.js Integration ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    (function() {
+      function initMermaid() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        
+        const lightThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#f0e6d6',
+          primaryTextColor: '#231c16',
+          primaryBorderColor: '#8c2d19',
+          lineColor: '#c68a35',
+          secondaryColor: '#fdfbf7',
+          tertiaryColor: '#e5dcce',
+          edgeLabelBackground: '#faf5ec',
+          nodeBorder: '#8c2d19',
+          clusterBkg: '#eee5d5',
+          clusterBorder: '#c68a35',
+          titleColor: '#8c2d19'
+        };
+
+        const darkThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#241e1a',
+          primaryTextColor: '#e6dfd5',
+          primaryBorderColor: '#d44d32',
+          lineColor: '#d4a359',
+          secondaryColor: '#1a1613',
+          tertiaryColor: '#2a221c',
+          edgeLabelBackground: '#171412',
+          nodeBorder: '#d44d32',
+          clusterBkg: '#1c1815',
+          clusterBorder: '#8c6a38',
+          titleColor: '#d44d32'
+        };
+
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: 'base',
+          themeVariables: isDark ? darkThemeVariables : lightThemeVariables,
+          flowchart: {
+            curve: 'basis',
+            padding: 16,
+            nodeSpacing: 50,
+            rankSpacing: 40,
+            htmlLabels: true
+          },
+          securityLevel: 'loose'
+        });
+
+        // Convert code blocks with language-mermaid to <pre class="mermaid">
+        const mermaidCodeBlocks = document.querySelectorAll('pre > code.language-mermaid');
+        mermaidCodeBlocks.forEach((codeEl) => {
+          const preEl = codeEl.parentElement;
+          if (preEl && preEl.tagName === 'PRE') {
+            // Save raw mermaid source text if not already saved
+            if (!preEl.getAttribute('data-mermaid-src')) {
+              preEl.setAttribute('data-mermaid-src', codeEl.textContent);
+            }
+            const src = preEl.getAttribute('data-mermaid-src');
+            preEl.className = 'mermaid';
+            preEl.textContent = src;
+            preEl.removeAttribute('data-processed');
+          }
+        });
+
+        // Also handle any pre.mermaid that might need re-render on theme change
+        const directMermaidBlocks = document.querySelectorAll('pre.mermaid');
+        directMermaidBlocks.forEach((preEl) => {
+          if (!preEl.getAttribute('data-mermaid-src')) {
+            preEl.setAttribute('data-mermaid-src', preEl.textContent);
+          }
+          const src = preEl.getAttribute('data-mermaid-src');
+          preEl.textContent = src;
+          preEl.removeAttribute('data-processed');
+        });
+
+        if (document.querySelectorAll('.mermaid').length > 0) {
+          mermaid.run({
+            nodes: document.querySelectorAll('.mermaid')
+          }).catch(err => console.error('Mermaid render error:', err));
+        }
+      }
+
+      // Initial render on DOM load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMermaid);
+      } else {
+        initMermaid();
+      }
+
+      // Re-initialize mermaid when theme changes
+      const themeToggleBtn = document.getElementById('themeToggle');
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          setTimeout(initMermaid, 50);
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

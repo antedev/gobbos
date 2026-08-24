@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Action_Economy_and_Turn_Flow — PROD Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. The official rulebook">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,500;0,700;0,800;1,700&family=Alegreya:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab env-tab--active">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right" style="display: flex; gap: 8px; align-items: center;">
+      <div class="llm-dropdown-container">
+        <button class="llm-btn" id="llmDropdownBtn" title="LLM Continuous Markdown Bundles" aria-label="LLM Bundles" aria-expanded="false">
+          <span>🤖 LLM Files</span>
+          <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="llm-dropdown-menu" id="llmDropdownMenu">
+          <div class="llm-dropdown-header">LLM HTML (Gemini / Web)</div>
+          <a href="all_llm.html" target="_blank" class="llm-dropdown-item">👑 Master All (Rules + Lore)</a>
+          <a href="rules_all_llm.html" target="_blank" class="llm-dropdown-item">📜 Combined Rules (PROD + STAGE)</a>
+          <a href="rules_stage_llm.html" target="_blank" class="llm-dropdown-item">🧪 STAGE Rules</a>
+          <a href="rules_prod_llm.html" target="_blank" class="llm-dropdown-item">📖 PROD Rules</a>
+          <a href="lore_all_llm.html" target="_blank" class="llm-dropdown-item">🔮 Combined Lore</a>
+          <a href="lore_stage_llm.html" target="_blank" class="llm-dropdown-item">📜 STAGE Lore</a>
+          <div class="llm-dropdown-divider"></div>
+          <div class="llm-dropdown-header">Raw Markdown & Index</div>
+          <a href="all_llm.md" target="_blank" class="llm-dropdown-item">📝 all_llm.md</a>
+          <a href="llms.txt" target="_blank" class="llm-dropdown-item">📋 /llms.txt Index</a>
+        </div>
+      </div>
+      <button class="sync-btn" id="headerSyncBtn" title="Sync & Rebuild Site" aria-label="Sync and rebuild site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sync-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Sync</span>
+      </button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">PROD Rules</h2>
+        <p class="sidebar-subtitle">The official rulebook</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="prod.html" class="nav-link" data-target="rules--dice">Dice</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="characters-and-mobs"><span class="toggle-icon">▸</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" style="display: none;"><li><a href="prod--characters-and-mobs--stats.html" class="nav-link" data-target="characters-and-mobs--stats">Stats</a></li></ul></div><div class="nav-group nav-group--solo"><a href="prod--core-resolution.html" class="nav-link nav-link--solo" data-target="core-resolution">Core_Resolution</a></div><div class="nav-group nav-group--solo"><a href="prod--boss-profile-and-gang.html" class="nav-link nav-link--solo" data-target="boss-profile-and-gang">Boss_Profile_and_Gang</a></div><div class="nav-group nav-group--solo"><a href="prod--action-economy-and-turn-flow.html" class="nav-link nav-link--solo nav-link--active" data-target="action-economy-and-turn-flow">Action_Economy_and_Turn_Flow</a></div><div class="nav-group nav-group--solo"><a href="prod--zones-and-movement.html" class="nav-link nav-link--solo" data-target="zones-and-movement">Zones_and_Movement</a></div><div class="nav-group nav-group--solo"><a href="prod--combat-engine.html" class="nav-link nav-link--solo" data-target="combat-engine">Combat_Engine</a></div><div class="nav-group nav-group--solo"><a href="prod--mob-mechanics.html" class="nav-link nav-link--solo" data-target="mob-mechanics">Mob_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="prod--damage-grit-and-wounds.html" class="nav-link nav-link--solo" data-target="damage-grit-and-wounds">Damage_Grit_and_Wounds</a></div><div class="nav-group nav-group--solo"><a href="prod--magic-and-bangaranga.html" class="nav-link nav-link--solo" data-target="magic-and-bangaranga">Magic_and_Bangaranga</a></div><div class="nav-group nav-group--solo"><a href="prod--the-raid-loop.html" class="nav-link nav-link--solo" data-target="the-raid-loop">The_Raid_Loop</a></div><div class="nav-group nav-group--solo"><a href="prod--the-lair-loop-and-progression.html" class="nav-link nav-link--solo" data-target="the-lair-loop-and-progression">The_Lair_Loop_and_Progression</a></div><div class="nav-group nav-group--solo"><a href="prod--journeys-and-hazards.html" class="nav-link nav-link--solo" data-target="journeys-and-hazards">Journeys_and_Hazards</a></div><div class="nav-group nav-group--solo"><a href="prod--adversaries-and-threats.html" class="nav-link nav-link--solo" data-target="adversaries-and-threats">Adversaries_and_Threats</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; align-items: center; justify-content: space-between; gap: 16px; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        <span>⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.</span>
+        <button class="sync-banner-btn" id="bannerSyncBtn">Rerun Sync</button>
+      </div>
+      <h1 id="action-economy-and-turn-flow" tabindex="-1">Action Economy &amp; Turn Flow</h1>
+<p><em>A goblin battle is a storm of frantic screaming, chaotic orders, flying junk, and desperate scurrying. Victory belongs to the Boss who spends their momentum wisely—knowing when to strike, when to command the horde, and when to save an action to dive out of the way of a swinging axe.</em></p>
+<p>This chapter defines the action budgets for <strong>Goblin Bosses</strong> and <strong>Mobs</strong>, the standard action catalog, reaction holding mechanics, and the structured 5-Phase combat loop.</p>
+<hr>
+<h2 id="action-budgets-and-categories" tabindex="-1">Action Budgets &amp; Categories</h2>
+<p>During an encounter, time is measured in <strong>Rounds</strong>. Every round, combatants receive a fresh allocation of actions that resets at the start of each round.</p>
+<blockquote>
+<blockquote>
+<p><strong>Round Action Budgets:</strong></p>
+<ul>
+<li><strong>Goblin Boss:</strong> 3 Standard Actions + 1 to 3 Free Orders + Free Actions</li>
+<li><strong>Goblin Mob:</strong> 2 Actions (Governed by the Boredom Rule)</li>
+</ul>
+</blockquote>
+</blockquote>
+<h3 id="goblin-boss-action-budget" tabindex="-1">Goblin Boss Action Budget</h3>
+<p>Every <strong>Goblin Boss</strong> receives the following action budget per round:</p>
+<ol>
+<li><strong>Three (3) Standard Actions</strong>: The core currency of your turn. Standard Actions are spent to <strong>Move</strong>, <strong>Attack</strong>, <strong>Plunder</strong>, <strong>Manipulate</strong>, or issue an <strong>Order</strong>. Unspent Standard Actions may be saved to perform <strong>Reactions</strong> during the enemy turn.</li>
+<li><strong>Free Orders per Round</strong>: An innate command allowance determined by your <strong>Mouth</strong> stat (1 Free Order at Mouth 1–2; 2 Free Orders at Mouth 3–4; 3 Free Orders at Mouth 5). Free Orders allow commanding Mobs without spending your precious Standard Actions.</li>
+<li><strong>Free Actions</strong>: Minor, instantaneous maneuvers that cost zero Standard Actions (e.g. dropping an item, speaking, shouting a battle cry, drawing 1 light item once per turn).</li>
+<li><strong>Reactions</strong>: Out-of-turn defensive or triggered responses (such as <strong>Dodge</strong>, <strong>Parry</strong>, <strong>Scatter</strong>, or reactive Quirks). Performing a Reaction strictly requires spending a saved <strong>Standard Action</strong> (or an unused Free Order for the Scatter reaction).</li>
+</ol>
+<h3 id="mob-action-budget" tabindex="-1">Mob Action Budget</h3>
+<p>Every allied <strong>Mob</strong> possesses a strict budget of <strong>two (2) actions</strong> per round:</p>
+<ul>
+<li>Mobs only act when given an <strong>Order</strong> by a Boss or during the <strong>Unordered Mobs</strong> step of the Player Active Turn.</li>
+<li>If an Order directs a Mob to spend both actions on offense or movement, the Mob has 0 saved actions remaining and cannot react defensively if attacked later in the round.</li>
+</ul>
+<h3 id="the-boredom-rule" tabindex="-1">The Boredom Rule</h3>
+<p>Goblins have notoriously short attention spans and cannot stay focused on repetitive tasks.</p>
+<ul>
+<li><strong>The Constraint</strong>: A <strong>Mob</strong> cannot perform the exact same action twice in a single round. A Mob cannot Attack twice or Plunder twice in the same round.</li>
+<li><strong>The Sole Exception</strong>: A Mob <em>can</em> perform the <strong>Move</strong> action twice in a single round if it is actively charging toward an enemy or fleeing from danger.</li>
+</ul>
+<hr>
+<h2 id="standard-action-catalog" tabindex="-1">Standard Action Catalog</h2>
+<p>The following five actions constitute the core activities available to <strong>Goblin Bosses</strong> and <strong>Mobs</strong>:</p>
+<blockquote>
+<blockquote>
+<p><strong>Standard Actions:</strong> 1. <strong>Move</strong> | 2. <strong>Attack</strong> | 3. <strong>Plunder</strong> | 4. <strong>Manipulate</strong> | 5. <strong>Order</strong></p>
+</blockquote>
+</blockquote>
+<h3 id="1-move-boss-or-mob" tabindex="-1">1. Move (Boss or Mob)</h3>
+<p>Spend 1 action to cross up to your <strong>Movement</strong> rating in connected <strong>Zones</strong>:</p>
+<ul>
+<li><strong>Boss Movement</strong>: Equal to your derived <strong>Movement</strong> stat (2 to 5 Zones based on <strong>Slink</strong>; see <a href="02_Boss_Profile_and_Gang.md">Boss Profile and Gang</a>).</li>
+<li><strong>Mob Movement</strong>: Baseline 2 Zones per Move action (see <a href="06_Mob_Mechanics.md">Mob Mechanics</a>).</li>
+<li><strong>Environmental Profiles</strong>: Crossing hazardous terrain, climbing vertical cliffs, or leaping chasms requires testing <strong>Slink</strong> against the established <strong>Zone Profile</strong> (e.g. <code>Slink 5+/1</code>; see <a href="04_Zones_and_Movement.md">Zones, Movement &amp; Environment</a>).</li>
+</ul>
+<h3 id="2-attack-boss-or-mob" tabindex="-1">2. Attack (Boss or Mob)</h3>
+<p>Spend 1 action to engage an enemy in combat:</p>
+<ul>
+<li><strong>Melee Attack</strong>: Roll your <strong>Tough</strong> dice pool against the target’s static <strong>Defence TN</strong> in your current Zone.</li>
+<li><strong>Ranged Attack</strong>: Roll your <strong>Slink</strong> dice pool against the target’s static <strong>Defence TN</strong> across connected Zones within weapon range.</li>
+<li><strong>Mob Attack</strong>: Mobs roll <strong>Size d6</strong> for melee attacks (or 2d6 for ranged thrown attacks; see <a href="05_Combat_Engine.md">Combat Engine</a>).</li>
+</ul>
+<h3 id="3-plunder-boss-or-mob" tabindex="-1">3. Plunder (Boss or Mob)</h3>
+<p>Spend 1 action to snatch, strip, and secure treasure in your current Zone:</p>
+<ul>
+<li><strong>Securing Loot</strong>: Collect loose Loot items, open unlocked chests, or strip valuables from fallen enemies (see <a href="09_The_Raid_Loop.md">The Raid Loop</a>).</li>
+<li><strong>Mob Plundering</strong>: A Mob spending a Plunder action strips up to its current <strong>Size</strong> in loose Loot items from the Zone into its Loot Capacity.</li>
+</ul>
+<h3 id="4-manipulate-boss-or-mob" tabindex="-1">4. Manipulate (Boss or Mob)</h3>
+<p>Spend 1 action to interact with physical mechanisms, terrain objects, or volatile contraptions:</p>
+<ul>
+<li><strong>Simple Manipulation</strong>: Open doors, throw levers, pick up dropped weapons, light torches, or uncork potions (requires no roll).</li>
+<li><strong>Complex Manipulation</strong>: Picking complex locks, disarming traps, or sabotaging steam pipes requires a <strong>Brains</strong> test against the mechanism’s profile (e.g. <code>Brains 5+/2</code>).</li>
+</ul>
+<h3 id="5-order-boss-action-only" tabindex="-1">5. Order (Boss Action Only)</h3>
+<p>Spend 1 <strong>Free Order</strong> (or 1 <strong>Standard Action</strong>) to issue verbal or physical commands to an allied <strong>Mob</strong>:</p>
+<ul>
+<li><strong>Controlled Mobs</strong>: Issuing orders to a Mob whose <strong>Size</strong> is &lt;= your current <strong>Grunt</strong> requires no dice roll.</li>
+<li><strong>Rebellious Mobs</strong>: If Mob Size &gt; your current Grunt, issuing an order requires passing an immediate <strong>Rebellion Test</strong> (<code>Tough or Mouth 5+/[Mob Size]</code>).</li>
+<li><strong>Scope of Orders</strong>: An Order directs the Mob to spend 1 or both of its round actions immediately (e.g. “Move and Attack!”, “Plunder the chest!”, “Hold the line!”).</li>
+</ul>
+<blockquote>
+<blockquote>
+<p><strong>IMPORTANT (Free Orders vs. Standard Orders):</strong> Free Orders can only be spent on the <strong>Order</strong> action. They cannot be converted into personal attacks, movement, or plunder actions for the Boss.</p>
+</blockquote>
+</blockquote>
+<hr>
+<h2 id="free-actions-and-free-orders" tabindex="-1">Free Actions &amp; Free Orders</h2>
+<p>To maintain fast tactical flow, minor adjustments and commanding shouts do not consume your primary combat budget.</p>
+<h3 id="free-actions" tabindex="-1">Free Actions</h3>
+<p>A <strong>Free Action</strong> takes negligible time and can be performed freely on your turn (up to a reasonable limit enforced by common sense):</p>
+<ul>
+<li>Dropping a held weapon or item to the ground.</li>
+<li>Speaking a short sentence, screaming an insult, or sounding a war horn.</li>
+<li>Drawing or stowing 1 light weapon/item (once per turn).</li>
+<li>Spending a <strong>Critical Success</strong> bonus action to Move, Plunder, or Manipulate.</li>
+</ul>
+<h3 id="free-orders" tabindex="-1">Free Orders</h3>
+<p>A <strong>Free Order</strong> is a dedicated command shout granted by your <strong>Mouth</strong> stat.</p>
+<ul>
+<li>Free Orders function identically to the standard <strong>Order</strong> action, but <strong>do not consume any of your 3 Standard Actions</strong>.</li>
+<li>You may spend Free Orders during your turn to command Mobs, or save an unused Free Order to shout the reactive <strong>“Scatter!”</strong> command during the enemy turn.</li>
+</ul>
+<p>[MISSING RULE / GAP: Free Order Action Permissibility in Self-Defense Reactions — Rules clarify that Free Orders can be saved to issue a reactive “Scatter!” command to a Mob, but must explicitly define whether an unused Free Order can be spent by the Boss to Dodge or Parry in self-defense. Resolution: Free Orders are strictly limited to Mob command actions. A Boss cannot spend a Free Order to actively Dodge or Parry an attack directed at the Boss’s own person; personal evasion strictly requires spending a saved Standard Action.]</p>
+<hr>
+<h2 id="reactions-and-holding-actions" tabindex="-1">Reactions &amp; Holding Actions</h2>
+<p>Combat in <strong>Gobbos</strong> is reactive. Enemies act deterministically, and player survival depends on tactical action preservation.</p>
+<blockquote>
+<blockquote>
+<p><strong>The Reaction Doctrine:</strong></p>
+<ul>
+<li><strong>SAVE Standard Actions on your turn</strong> -&gt; Spend as Reactions on enemy turn</li>
+<li><strong>SPEND ALL Actions on your turn</strong> -&gt; 0 Active Defense (Armor only!)</li>
+</ul>
+</blockquote>
+</blockquote>
+<h3 id="holding-actions-for-defense" tabindex="-1">Holding Actions for Defense</h3>
+<p>On the Player Active Turn, you are not required to spend all 3 Standard Actions. Any unspent Standard Actions are <strong>held</strong>:</p>
+<ul>
+<li><strong>Active Defense Requirement</strong>: When targeted by an incoming enemy attack or area hazard during the Enemy Active Turn, you must spend <strong>1 saved Standard Action</strong> to make an active defense roll (<strong>Dodge</strong> or <strong>Parry</strong>).</li>
+<li><strong>Zero Saved Actions</strong>: If you spent all 3 Standard Actions on your turn, you have <strong>0 saved actions</strong>. You cannot attempt to actively evade, and must rely entirely on passive <strong>Armor Dice</strong> to absorb the strike!</li>
+</ul>
+<h3 id="reaction-types" tabindex="-1">Reaction Types</h3>
+<ol>
+<li><strong>Dodge (Boss Reaction)</strong>: Spend 1 saved Standard Action. Roll your active <strong>Slink</strong> dice pool against the incoming attack’s <strong>Threat TN</strong> in the <strong>Clatter Roll</strong>. Scoring successes &gt;= Threat TN completely negates the attack (0 damage).</li>
+<li><strong>Parry (Boss Reaction)</strong>: Spend 1 saved Standard Action. Roll your active <strong>Tough</strong> dice pool against the incoming attack’s <strong>Threat TN</strong> in the <strong>Clatter Roll</strong>. Requires an equipped <strong>Shield</strong> or <strong>Heavy Weapon</strong>. Scoring successes &gt;= Threat TN completely negates the attack (0 damage).</li>
+<li><strong>Scatter (Mob Reaction)</strong>: Spend 1 saved Boss Standard Action (or 1 unused Free Order) to order a targeted Mob with &gt;= 1 unused action to disperse. Roll your Boss’s <strong>Mouth</strong> pool against <code>Threat TN + (Mob Size - 1)</code>. Success negates damage and scurries the Mob 1 Zone into cover.</li>
+<li><strong>Reactive Quirks</strong>: Specific Boss abilities (such as <em>Meat Shield</em> or <em>Ankle Bite</em>) trigger out of turn by paying their stated Grunt or Reaction cost.on cost.</li>
+</ol>
+<hr>
+<h2 id="the-5-phase-round-flow" tabindex="-1">The 5-Phase Round Flow</h2>
+<p>Every round of combat follows a strict 5-phase sequence:</p>
+<pre><code class="language-mermaid">flowchart TD
+    P0[&quot;Phase 0: Setup (First Round Only)&quot;] --&gt; P1[&quot;Phase 1: Round Start&lt;br&gt;- Evaluate Start-of-Round triggers&lt;br&gt;- Spawn reinforcements &amp; update active Raid Points&quot;]
+    P1 --&gt; P2[&quot;Phase 2: Player Active Turn&lt;br&gt;- Boss declarations: Move, Attack, Plunder, Manipulate, Order&lt;br&gt;- Resolve Unordered Mobs (Loitering / Out of Control)&lt;br&gt;- GM declares triggered enemy reactions&quot;]
+    P2 --&gt; P3[&quot;Phase 3: Enemy Active Turn&lt;br&gt;- Deterministic threat resolution (GM never rolls)&lt;br&gt;- Players execute Clatter Rolls (Dodge/Parry)&lt;br&gt;- Bosses issue reactive Scatter orders&quot;]
+    P3 --&gt; P4[&quot;Phase 4: Round Closure&lt;br&gt;- Tally Raid Points &amp; process hazard ticks&lt;br&gt;- Automatically remove Staggered conditions&lt;br&gt;- Resolve Swarm Terror Morale checks (if 50% casualties)&lt;br&gt;- Reset action budgets for Bosses &amp; Mobs&quot;]
+    P4 --&gt;|Combat Continues| P1
+    P4 --&gt;|Combat Concludes| P5[&quot;Phase 5: Combat End &amp; Tactical Retreat&quot;]
+</code></pre>
+<h3 id="phase-0-combat-setup-initial-encounter-start" tabindex="-1">Phase 0: Combat Setup (Initial Encounter Start)</h3>
+<ol>
+<li><strong>Zone Graph Deployment</strong>: The GM reveals the node graph of interconnected <strong>Zones</strong>, identifying terrain traits, cover points, and baseline <strong>Zone Profiles</strong> (<code>Difficulty+/TN</code>).</li>
+<li><strong>Unit Placement</strong>: Place Bosses, allied Mobs, and visible enemies in starting Zones.</li>
+<li><strong>Objective Declaration</strong>: The GM declares active <strong>Raid Point</strong> objectives and visible <strong>Loot</strong> caches.</li>
+</ol>
+<h3 id="phase-1-round-start" tabindex="-1">Phase 1: Round Start</h3>
+<ol>
+<li><strong>Condition Triggers</strong>: Resolve any conditions or environmental hazards with “Start of Round” triggers (e.g. acid burns, regeneration).</li>
+<li><strong>Reinforcements</strong>: Deploy newly arriving enemies or wandering patrols into entry Zones.</li>
+<li><strong>Raid Point Assessment</strong>: Update active timers or moving objectives.</li>
+</ol>
+<h3 id="phase-2-player-active-turn" tabindex="-1">Phase 2: Player Active Turn</h3>
+<ol>
+<li><strong>Player Declarations</strong>: Players act in any order they choose. Bosses spend Standard Actions and Free Orders to move, attack, plunder, manipulate mechanisms, and command Mobs.</li>
+<li><strong>Unordered Mobs Step</strong>: Once all players have completed their actions, any allied Mob that did not receive an Order this round resolves its behavior:
+<ul>
+<li><em>Loitering Mob</em>: Roll on the Loitering Table (spends 1 action, saves 1 action for defense).</li>
+<li><em>Out of Control Mob</em>: Roll on the Out of Control Table (spends 2 actions, saves 0 actions).</li>
+</ul>
+</li>
+<li><strong>Enemy Reactions</strong>: The GM resolves any triggered enemy reactions (e.g. counter-attacks or opportunity shots).</li>
+</ol>
+<h3 id="phase-3-enemy-active-turn" tabindex="-1">Phase 3: Enemy Active Turn</h3>
+<p>Enemies act deterministically in accordance with their statblock profiles:</p>
+<ul>
+<li>Standard enemies and Enemy Mobs receive <strong>2 actions</strong>; Apex Bosses receive <strong>3 actions</strong>.</li>
+<li>Enemies move toward priority targets and unleash attacks with listed <strong>Threat Profiles</strong> and flat <strong>Damage</strong>.</li>
+<li>Players resolve incoming attacks via the <strong>Clatter Roll</strong>, spending saved Standard Actions to Dodge or Parry, shouting “Scatter!” to save Mobs, or rolling passive Armor Dice.</li>
+</ul>
+<h3 id="phase-4-round-closure" tabindex="-1">Phase 4: Round Closure</h3>
+<ol>
+<li><strong>Raid Points Tally</strong>: Tally confirmed and contested Raid Points for the round.</li>
+<li><strong>End-of-Round Ticks</strong>: Resolve lingering hazard ticks (e.g. fire spreading on 1d6 roll of 5–6, poison degradation).</li>
+<li><strong>Clear Staggered</strong>: Automatically remove the <strong>Staggered</strong> condition from all PCs, Mobs, and enemies.</li>
+<li><strong>Morale Checks</strong>: If any Mob or enemy force suffered 50% casualties this round, resolve a <strong>Swarm Terror Morale Check</strong> (see <a href="06_Mob_Mechanics.md">Mob Mechanics</a>).</li>
+<li><strong>Reset Action Budgets</strong>: Reset all Boss budgets to 3 Standard Actions + Free Orders, and all Mob budgets to 2 Actions.</li>
+</ol>
+<hr>
+<h2 id="combat-end-and-tactical-retreat" tabindex="-1">Combat End &amp; Tactical Retreat</h2>
+<p>Combat concludes when all enemies are slain, all PCs are eliminated, or one side flees the battlefield.</p>
+<h3 id="fleeing-and-disengaging" tabindex="-1">Fleeing &amp; Disengaging</h3>
+<p>Goblins are practical cowards; a tactical retreat preserves stolen Loot and saves lives.</p>
+<ul>
+<li><strong>Escape Zones</strong>: To escape an encounter, a Boss or Mob must enter a designated exit Zone and spend 1 Move action to withdraw.</li>
+<li><strong>Disengaging from Melee</strong>: Leaving a Zone containing alert enemies without fighting triggers an immediate Opportunity Attack. To disengage safely, a Boss or Mob must spend 1 Standard Action to <strong>Disengage</strong>, testing:
+<code>Slink 5+/[Highest Enemy Defence TN]</code>
+<ul>
+<li><strong>Success</strong>: The unit withdraws safely into an adjacent connected Zone without taking damage.</li>
+<li><strong>Failure</strong>: The highest-Threat enemy in the Zone executes an immediate Opportunity Attack against the fleeing unit, and the unit’s movement immediately ends inside the current Zone.</li>
+</ul>
+</li>
+</ul>
+<p>[MISSING RULE / GAP: Disengage Failure &amp; Opportunity Attack Resolution — Legacy drafts did not define exact mechanical outcomes when failing a Disengage test. Resolution codified: On a failed Disengage test, the highest Threat enemy in the zone executes an immediate Opportunity Attack, and the fleeing unit’s movement ends immediately in the contested zone.]</p>
+<ul>
+<li><strong>The Heavy Loot Restriction (Bulk 3+)</strong>: Hauling an unwieldy item of <strong>Bulk 3 or higher</strong> requires two hands. You <strong>cannot perform a Disengage action while clutching a Bulk 3+ item</strong>. To escape safely, you must drop the heavy loot as a Free Action, hand it off to a Mob, or defeat the pursuing enemies.</li>
+</ul>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- LLM Dropdown Toggle ---
+    (function() {
+      const btn = document.getElementById('llmDropdownBtn');
+      const menu = document.getElementById('llmDropdownMenu');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = menu.classList.toggle('show');
+        btn.setAttribute('aria-expanded', isOpen);
+      });
+
+      document.addEventListener('click', () => {
+        menu.classList.remove('show');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    })();
+
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'flex';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+
+    // --- Anchor Scroll Fix ---
+    (function() {
+      function scrollToHash() {
+        if (window.location.hash) {
+          const id = decodeURIComponent(window.location.hash.substring(1));
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }, 100);
+          }
+        }
+      }
+      window.addEventListener('hashchange', scrollToHash);
+      window.addEventListener('DOMContentLoaded', scrollToHash);
+      window.addEventListener('load', scrollToHash);
+    })();
+
+    // --- Manual Sync Trigger ---
+    (function() {
+      const headerBtn = document.getElementById('headerSyncBtn');
+      const bannerBtn = document.getElementById('bannerSyncBtn');
+      
+      function handleSync(btn) {
+        if (!btn) return;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        
+        // Add spinning/loading animation class
+        if (btn.classList.contains('sync-btn')) {
+          btn.classList.add('sync-btn--spinning');
+          btn.querySelector('span').textContent = 'Syncing...';
+        } else {
+          btn.textContent = 'Syncing...';
+        }
+        
+        fetch('/api/run-sync', { method: 'POST' })
+          .then(res => {
+            if (!res.ok) throw new Error('Server returned error status: ' + res.status);
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.status === 'success') {
+              if (btn.classList.contains('sync-btn')) {
+                btn.querySelector('span').textContent = 'Success!';
+              } else {
+                btn.textContent = 'Success!';
+              }
+              // Reload page to reflect changes
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              throw new Error(data.error || 'Sync failed');
+            }
+          })
+          .catch(err => {
+            console.error('Sync failed:', err);
+            alert('Failed to rerun sync: ' + err.message);
+            // Restore button
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            if (btn.classList.contains('sync-btn')) {
+              btn.classList.remove('sync-btn--spinning');
+            }
+          });
+      }
+
+      if (headerBtn) {
+        headerBtn.addEventListener('click', () => handleSync(headerBtn));
+      }
+      if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
+    })();
+  </script>
+
+  <!-- ===== Mermaid.js Integration ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    (function() {
+      function initMermaid() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        
+        const lightThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#f0e6d6',
+          primaryTextColor: '#231c16',
+          primaryBorderColor: '#8c2d19',
+          lineColor: '#c68a35',
+          secondaryColor: '#fdfbf7',
+          tertiaryColor: '#e5dcce',
+          edgeLabelBackground: '#faf5ec',
+          nodeBorder: '#8c2d19',
+          clusterBkg: '#eee5d5',
+          clusterBorder: '#c68a35',
+          titleColor: '#8c2d19'
+        };
+
+        const darkThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#241e1a',
+          primaryTextColor: '#e6dfd5',
+          primaryBorderColor: '#d44d32',
+          lineColor: '#d4a359',
+          secondaryColor: '#1a1613',
+          tertiaryColor: '#2a221c',
+          edgeLabelBackground: '#171412',
+          nodeBorder: '#d44d32',
+          clusterBkg: '#1c1815',
+          clusterBorder: '#8c6a38',
+          titleColor: '#d44d32'
+        };
+
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: 'base',
+          themeVariables: isDark ? darkThemeVariables : lightThemeVariables,
+          flowchart: {
+            curve: 'basis',
+            padding: 16,
+            nodeSpacing: 50,
+            rankSpacing: 40,
+            htmlLabels: true
+          },
+          securityLevel: 'loose'
+        });
+
+        // Convert code blocks with language-mermaid to <pre class="mermaid">
+        const mermaidCodeBlocks = document.querySelectorAll('pre > code.language-mermaid');
+        mermaidCodeBlocks.forEach((codeEl) => {
+          const preEl = codeEl.parentElement;
+          if (preEl && preEl.tagName === 'PRE') {
+            // Save raw mermaid source text if not already saved
+            if (!preEl.getAttribute('data-mermaid-src')) {
+              preEl.setAttribute('data-mermaid-src', codeEl.textContent);
+            }
+            const src = preEl.getAttribute('data-mermaid-src');
+            preEl.className = 'mermaid';
+            preEl.textContent = src;
+            preEl.removeAttribute('data-processed');
+          }
+        });
+
+        // Also handle any pre.mermaid that might need re-render on theme change
+        const directMermaidBlocks = document.querySelectorAll('pre.mermaid');
+        directMermaidBlocks.forEach((preEl) => {
+          if (!preEl.getAttribute('data-mermaid-src')) {
+            preEl.setAttribute('data-mermaid-src', preEl.textContent);
+          }
+          const src = preEl.getAttribute('data-mermaid-src');
+          preEl.textContent = src;
+          preEl.removeAttribute('data-processed');
+        });
+
+        if (document.querySelectorAll('.mermaid').length > 0) {
+          mermaid.run({
+            nodes: document.querySelectorAll('.mermaid')
+          }).catch(err => console.error('Mermaid render error:', err));
+        }
+      }
+
+      // Initial render on DOM load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMermaid);
+      } else {
+        initMermaid();
+      }
+
+      // Re-initialize mermaid when theme changes
+      const themeToggleBtn = document.getElementById('themeToggle');
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          setTimeout(initMermaid, 50);
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

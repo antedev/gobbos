@@ -129,3 +129,1531 @@ Rebuilding site to ensure local sync...
 🎉 Build complete! Files in: /home/ante/projects/gobbos/05_System_Tools/rulebook-site/dist
 Finished check at Mon 20 Jul 07:47:58 CEST 2026
 ---------------------------------------------
+=============================================
+Update check triggered on Sat 22 Aug 02:00:01 CEST 2026
+=============================================
+No remote changes detected.
+Rebuilding site to ensure local sync...
+
+> gobbos-rulebook-site@1.0.0 build
+> node build.js
+
+🔨 Building Gobbos Rulebook & Lore Site (Multi-Page Agent-Friendly)...
+
+  ✅ Loaded 168 keywords for tooltips
+  ✅ Copied style.css
+  ✅ Copied admin/ (Decap CMS)
+  ✅ Built environment dev (31 sections, 37 pages)
+Generating target anchor ID for: action on page: rules--keywords-index
+Generating target anchor ID for: ancestry on page: rules--keywords-index
+Generating target anchor ID for: area-of-effect-aoe on page: rules--keywords-index
+Generating target anchor ID for: assert-dominance on page: rules--keywords-index
+Generating target anchor ID for: attack on page: rules--keywords-index
+Generating target anchor ID for: bane on page: rules--keywords-index
+Generating target anchor ID for: bangaranga on page: rules--keywords-index
+Generating target anchor ID for: bangaranga-dice on page: rules--keywords-index
+Generating target anchor ID for: bangaranga-pool on page: rules--keywords-index
+Generating target anchor ID for: base-danger-rating on page: rules--keywords-index
+Generating target anchor ID for: bite-b on page: rules--keywords-index
+Generating target anchor ID for: blinded on page: rules--keywords-index
+Generating target anchor ID for: blueprint on page: rules--keywords-index
+Generating target anchor ID for: bone-oddity on page: rules--keywords-index
+Generating target anchor ID for: bone-pile on page: rules--keywords-index
+Generating target anchor ID for: boon on page: rules--keywords-index
+Generating target anchor ID for: boon on page: rules--keywords-index
+Generating target anchor ID for: boss on page: rules--keywords-index
+Generating target anchor ID for: brains on page: rules--keywords-index
+Generating target anchor ID for: bulk on page: rules--keywords-index
+Generating target anchor ID for: carry on page: rules--keywords-index
+Generating target anchor ID for: carry-capacity on page: rules--keywords-index
+Generating target anchor ID for: chassis on page: rules--keywords-index
+Generating target anchor ID for: cleave on page: rules--keywords-index
+Generating target anchor ID for: condition on page: rules--keywords-index
+Generating target anchor ID for: cover on page: rules--keywords-index
+Generating target anchor ID for: boon on page: rules--keywords-index
+Generating target anchor ID for: bane on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: crafting-capacity on page: rules--keywords-index
+Generating target anchor ID for: critical on page: rules--keywords-index
+Generating target anchor ID for: critical-success on page: rules--keywords-index
+Generating target anchor ID for: custom-gear on page: rules--keywords-index
+Generating target anchor ID for: defence on page: rules--keywords-index
+Generating target anchor ID for: defence-tn on page: rules--keywords-index
+Generating target anchor ID for: delivery on page: rules--keywords-index
+Generating target anchor ID for: dice-pool on page: rules--keywords-index
+Generating target anchor ID for: difficulty on page: rules--keywords-index
+Generating target anchor ID for: dodge on page: rules--keywords-index
+Generating target anchor ID for: dominance on page: rules--keywords-index
+Generating target anchor ID for: dragging on page: rules--keywords-index
+Generating target anchor ID for: dumb on page: rules--keywords-index
+Generating target anchor ID for: duration on page: rules--keywords-index
+Generating target anchor ID for: easy on page: rules--keywords-index
+Generating target anchor ID for: elder on page: rules--keywords-index
+Generating target anchor ID for: elite on page: rules--keywords-index
+Generating target anchor ID for: encounter on page: rules--keywords-index
+Generating target anchor ID for: exploding-dice on page: rules--keywords-index
+Generating target anchor ID for: first-pick-my-mob-my-loot on page: rules--keywords-index
+Generating target anchor ID for: free-action on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: free-orders on page: rules--keywords-index
+Generating target anchor ID for: full-cover on page: rules--keywords-index
+Generating target anchor ID for: fumble on page: rules--keywords-index
+Generating target anchor ID for: fumbled on page: rules--keywords-index
+Generating target anchor ID for: fumbles on page: rules--keywords-index
+Generating target anchor ID for: fumbling on page: rules--keywords-index
+Generating target anchor ID for: gang on page: rules--keywords-index
+Generating target anchor ID for: gang-agenda on page: rules--keywords-index
+Generating target anchor ID for: gang-agenda on page: rules--keywords-index
+Generating target anchor ID for: gang-mark on page: rules--keywords-index
+Generating target anchor ID for: gang-quirks on page: rules--keywords-index
+Generating target anchor ID for: gang-sheet on page: rules--keywords-index
+Generating target anchor ID for: glory on page: rules--keywords-index
+Generating target anchor ID for: glory-raid-points on page: rules--keywords-index
+Generating target anchor ID for: greed-loot-value on page: rules--keywords-index
+Generating target anchor ID for: grit on page: rules--keywords-index
+Generating target anchor ID for: group-attack on page: rules--keywords-index
+Generating target anchor ID for: grunt on page: rules--keywords-index
+Generating target anchor ID for: hard on page: rules--keywords-index
+Generating target anchor ID for: infamy on page: rules--keywords-index
+Generating target anchor ID for: infamy-level on page: rules--keywords-index
+Generating target anchor ID for: infamy-mark on page: rules--keywords-index
+Generating target anchor ID for: junk on page: rules--keywords-index
+Generating target anchor ID for: lair-phase on page: rules--keywords-index
+Generating target anchor ID for: lair-upgrades on page: rules--keywords-index
+Generating target anchor ID for: legendary on page: rules--keywords-index
+Generating target anchor ID for: loitering on page: rules--keywords-index
+Generating target anchor ID for: loot on page: rules--keywords-index
+Generating target anchor ID for: loot-capacity on page: rules--keywords-index
+Generating target anchor ID for: loot-value on page: rules--keywords-index
+Generating target anchor ID for: main-stats on page: rules--keywords-index
+Generating target anchor ID for: manipulate on page: rules--keywords-index
+Generating target anchor ID for: marks on page: rules--keywords-index
+Generating target anchor ID for: max-mobs on page: rules--keywords-index
+Generating target anchor ID for: melee on page: rules--keywords-index
+Generating target anchor ID for: melee-attack on page: rules--keywords-index
+Generating target anchor ID for: mob on page: rules--keywords-index
+Generating target anchor ID for: mob on page: rules--keywords-index
+Generating target anchor ID for: morale on page: rules--keywords-index
+Generating target anchor ID for: morale-check on page: rules--keywords-index
+Generating target anchor ID for: mouth on page: rules--keywords-index
+Generating target anchor ID for: move on page: rules--keywords-index
+Generating target anchor ID for: movement on page: rules--keywords-index
+Generating target anchor ID for: named-item on page: rules--keywords-index
+Generating target anchor ID for: normal on page: rules--keywords-index
+Generating target anchor ID for: oddities on page: rules--keywords-index
+Generating target anchor ID for: oddity on page: rules--keywords-index
+Generating target anchor ID for: order on page: rules--keywords-index
+Generating target anchor ID for: order-action on page: rules--keywords-index
+Generating target anchor ID for: out-of-control on page: rules--keywords-index
+Generating target anchor ID for: over-laden on page: rules--keywords-index
+Generating target anchor ID for: overclock on page: rules--keywords-index
+Generating target anchor ID for: overreaching on page: rules--keywords-index
+Generating target anchor ID for: parry on page: rules--keywords-index
+Generating target anchor ID for: partial-cover on page: rules--keywords-index
+Generating target anchor ID for: passive on page: rules--keywords-index
+Generating target anchor ID for: passive-defence on page: rules--keywords-index
+Generating target anchor ID for: patron-saint on page: rules--keywords-index
+Generating target anchor ID for: persistent on page: rules--keywords-index
+Generating target anchor ID for: personal-quirks on page: rules--keywords-index
+Generating target anchor ID for: pile-of-bones on page: rules--keywords-index
+Generating target anchor ID for: player on page: rules--keywords-index
+Generating target anchor ID for: plunder on page: rules--keywords-index
+Generating target anchor ID for: power-words on page: rules--keywords-index
+Generating target anchor ID for: prone on page: rules--keywords-index
+Generating target anchor ID for: quality on page: rules--keywords-index
+Generating target anchor ID for: quirk on page: rules--keywords-index
+Generating target anchor ID for: quirk on page: rules--keywords-index
+Generating target anchor ID for: raid on page: rules--keywords-index
+Generating target anchor ID for: raid on page: rules--keywords-index
+Generating target anchor ID for: raid-boss-mvp on page: rules--keywords-index
+Generating target anchor ID for: raid-points on page: rules--keywords-index
+Generating target anchor ID for: raid-points on page: rules--keywords-index
+Generating target anchor ID for: ranged-attack on page: rules--keywords-index
+Generating target anchor ID for: reaction on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: relic on page: rules--keywords-index
+Generating target anchor ID for: restrained on page: rules--keywords-index
+Generating target anchor ID for: retire on page: rules--keywords-index
+Generating target anchor ID for: route-test on page: rules--keywords-index
+Generating target anchor ID for: scarred on page: rules--keywords-index
+Generating target anchor ID for: scouting on page: rules--keywords-index
+Generating target anchor ID for: scrap on page: rules--keywords-index
+Generating target anchor ID for: scrap-cascade on page: rules--keywords-index
+Generating target anchor ID for: scrappy on page: rules--keywords-index
+Generating target anchor ID for: secondary-stats on page: rules--keywords-index
+Generating target anchor ID for: shenanigan on page: rules--keywords-index
+Generating target anchor ID for: size on page: rules--keywords-index
+Generating target anchor ID for: slink on page: rules--keywords-index
+Generating target anchor ID for: staggered on page: rules--keywords-index
+Generating target anchor ID for: standard on page: rules--keywords-index
+Generating target anchor ID for: standard-action on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: stat on page: rules--keywords-index
+Generating target anchor ID for: stats-main on page: rules--keywords-index
+Generating target anchor ID for: status-effects-conditions on page: rules--keywords-index
+Generating target anchor ID for: prone on page: rules--keywords-index
+Generating target anchor ID for: stunned on page: rules--keywords-index
+Generating target anchor ID for: weakened on page: rules--keywords-index
+Generating target anchor ID for: restrained on page: rules--keywords-index
+Generating target anchor ID for: blinded on page: rules--keywords-index
+Generating target anchor ID for: terrified on page: rules--keywords-index
+Generating target anchor ID for: staggered on page: rules--keywords-index
+Generating target anchor ID for: stunned on page: rules--keywords-index
+Generating target anchor ID for: success on page: rules--keywords-index
+Generating target anchor ID for: success on page: rules--keywords-index
+Generating target anchor ID for: superior on page: rules--keywords-index
+Generating target anchor ID for: tag on page: rules--keywords-index
+Generating target anchor ID for: tag on page: rules--keywords-index
+Generating target anchor ID for: taming on page: rules--keywords-index
+Generating target anchor ID for: target-number-tn on page: rules--keywords-index
+Generating target anchor ID for: terrified on page: rules--keywords-index
+Generating target anchor ID for: test on page: rules--keywords-index
+Generating target anchor ID for: tier on page: rules--keywords-index
+Generating target anchor ID for: tier-t on page: rules--keywords-index
+Generating target anchor ID for: tn on page: rules--keywords-index
+Generating target anchor ID for: tough on page: rules--keywords-index
+Generating target anchor ID for: trait on page: rules--keywords-index
+Generating target anchor ID for: traits-weapon-armor on page: rules--keywords-index
+Generating target anchor ID for: travel-event on page: rules--keywords-index
+Generating target anchor ID for: twist on page: rules--keywords-index
+Generating target anchor ID for: uncontrolled on page: rules--keywords-index
+Generating target anchor ID for: uncontrolled-mobs on page: rules--keywords-index
+Generating target anchor ID for: weakened on page: rules--keywords-index
+Generating target anchor ID for: wound on page: rules--keywords-index
+Generating target anchor ID for: wound on page: rules--keywords-index
+Generating target anchor ID for: xp on page: rules--keywords-index
+Generating target anchor ID for: zone on page: rules--keywords-index
+Generating target anchor ID for: zone-profile on page: rules--keywords-index
+Generating target anchor ID for: zone-trait on page: rules--keywords-index
+Generating target anchor ID for: zones on page: rules--keywords-index
+  ✅ Built environment stage (7 sections, 25 pages)
+  ✅ Built environment prod (2 sections, 2 pages)
+  ✅ Built environment dev-lore (1 sections, 1 pages)
+  ✅ Built environment stage-lore (6 sections, 6 pages)
+  ✅ Built environment prod-lore (1 sections, 1 pages)
+  ✅ Built index.html
+
+  ✅ Written status.json (success)
+
+🎉 Build complete! Files in: /home/ante/projects/gobbos/05_System_Tools/rulebook-site/dist
+Finished check at Sat 22 Aug 02:00:02 CEST 2026
+---------------------------------------------
+=============================================
+Update check triggered on Sat 22 Aug 10:09:04 CEST 2026
+=============================================
+No remote changes detected.
+Rebuilding site to ensure local sync...
+
+> gobbos-rulebook-site@1.0.0 build
+> node build.js
+
+🔨 Building Gobbos Rulebook & Lore Site (Multi-Page Agent-Friendly)...
+
+  ✅ Loaded 168 keywords for tooltips
+  ✅ Copied style.css
+  ✅ Copied admin/ (Decap CMS)
+  ✅ Built environment dev (31 sections, 37 pages)
+Generating target anchor ID for: action on page: rules--keywords-index
+Generating target anchor ID for: ancestry on page: rules--keywords-index
+Generating target anchor ID for: area-of-effect-aoe on page: rules--keywords-index
+Generating target anchor ID for: assert-dominance on page: rules--keywords-index
+Generating target anchor ID for: attack on page: rules--keywords-index
+Generating target anchor ID for: bane on page: rules--keywords-index
+Generating target anchor ID for: bangaranga on page: rules--keywords-index
+Generating target anchor ID for: bangaranga-dice on page: rules--keywords-index
+Generating target anchor ID for: bangaranga-pool on page: rules--keywords-index
+Generating target anchor ID for: base-danger-rating on page: rules--keywords-index
+Generating target anchor ID for: bite-b on page: rules--keywords-index
+Generating target anchor ID for: blinded on page: rules--keywords-index
+Generating target anchor ID for: blueprint on page: rules--keywords-index
+Generating target anchor ID for: bone-oddity on page: rules--keywords-index
+Generating target anchor ID for: bone-pile on page: rules--keywords-index
+Generating target anchor ID for: boon on page: rules--keywords-index
+Generating target anchor ID for: boon on page: rules--keywords-index
+Generating target anchor ID for: boss on page: rules--keywords-index
+Generating target anchor ID for: brains on page: rules--keywords-index
+Generating target anchor ID for: bulk on page: rules--keywords-index
+Generating target anchor ID for: carry on page: rules--keywords-index
+Generating target anchor ID for: carry-capacity on page: rules--keywords-index
+Generating target anchor ID for: chassis on page: rules--keywords-index
+Generating target anchor ID for: cleave on page: rules--keywords-index
+Generating target anchor ID for: condition on page: rules--keywords-index
+Generating target anchor ID for: cover on page: rules--keywords-index
+Generating target anchor ID for: boon on page: rules--keywords-index
+Generating target anchor ID for: bane on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: crafting-capacity on page: rules--keywords-index
+Generating target anchor ID for: critical on page: rules--keywords-index
+Generating target anchor ID for: critical-success on page: rules--keywords-index
+Generating target anchor ID for: custom-gear on page: rules--keywords-index
+Generating target anchor ID for: defence on page: rules--keywords-index
+Generating target anchor ID for: defence-tn on page: rules--keywords-index
+Generating target anchor ID for: delivery on page: rules--keywords-index
+Generating target anchor ID for: dice-pool on page: rules--keywords-index
+Generating target anchor ID for: difficulty on page: rules--keywords-index
+Generating target anchor ID for: dodge on page: rules--keywords-index
+Generating target anchor ID for: dominance on page: rules--keywords-index
+Generating target anchor ID for: dragging on page: rules--keywords-index
+Generating target anchor ID for: dumb on page: rules--keywords-index
+Generating target anchor ID for: duration on page: rules--keywords-index
+Generating target anchor ID for: easy on page: rules--keywords-index
+Generating target anchor ID for: elder on page: rules--keywords-index
+Generating target anchor ID for: elite on page: rules--keywords-index
+Generating target anchor ID for: encounter on page: rules--keywords-index
+Generating target anchor ID for: exploding-dice on page: rules--keywords-index
+Generating target anchor ID for: first-pick-my-mob-my-loot on page: rules--keywords-index
+Generating target anchor ID for: free-action on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: free-orders on page: rules--keywords-index
+Generating target anchor ID for: full-cover on page: rules--keywords-index
+Generating target anchor ID for: fumble on page: rules--keywords-index
+Generating target anchor ID for: fumbled on page: rules--keywords-index
+Generating target anchor ID for: fumbles on page: rules--keywords-index
+Generating target anchor ID for: fumbling on page: rules--keywords-index
+Generating target anchor ID for: gang on page: rules--keywords-index
+Generating target anchor ID for: gang-agenda on page: rules--keywords-index
+Generating target anchor ID for: gang-agenda on page: rules--keywords-index
+Generating target anchor ID for: gang-mark on page: rules--keywords-index
+Generating target anchor ID for: gang-quirks on page: rules--keywords-index
+Generating target anchor ID for: gang-sheet on page: rules--keywords-index
+Generating target anchor ID for: glory on page: rules--keywords-index
+Generating target anchor ID for: glory-raid-points on page: rules--keywords-index
+Generating target anchor ID for: greed-loot-value on page: rules--keywords-index
+Generating target anchor ID for: grit on page: rules--keywords-index
+Generating target anchor ID for: group-attack on page: rules--keywords-index
+Generating target anchor ID for: grunt on page: rules--keywords-index
+Generating target anchor ID for: hard on page: rules--keywords-index
+Generating target anchor ID for: infamy on page: rules--keywords-index
+Generating target anchor ID for: infamy-level on page: rules--keywords-index
+Generating target anchor ID for: infamy-mark on page: rules--keywords-index
+Generating target anchor ID for: junk on page: rules--keywords-index
+Generating target anchor ID for: lair-phase on page: rules--keywords-index
+Generating target anchor ID for: lair-upgrades on page: rules--keywords-index
+Generating target anchor ID for: legendary on page: rules--keywords-index
+Generating target anchor ID for: loitering on page: rules--keywords-index
+Generating target anchor ID for: loot on page: rules--keywords-index
+Generating target anchor ID for: loot-capacity on page: rules--keywords-index
+Generating target anchor ID for: loot-value on page: rules--keywords-index
+Generating target anchor ID for: main-stats on page: rules--keywords-index
+Generating target anchor ID for: manipulate on page: rules--keywords-index
+Generating target anchor ID for: marks on page: rules--keywords-index
+Generating target anchor ID for: max-mobs on page: rules--keywords-index
+Generating target anchor ID for: melee on page: rules--keywords-index
+Generating target anchor ID for: melee-attack on page: rules--keywords-index
+Generating target anchor ID for: mob on page: rules--keywords-index
+Generating target anchor ID for: mob on page: rules--keywords-index
+Generating target anchor ID for: morale on page: rules--keywords-index
+Generating target anchor ID for: morale-check on page: rules--keywords-index
+Generating target anchor ID for: mouth on page: rules--keywords-index
+Generating target anchor ID for: move on page: rules--keywords-index
+Generating target anchor ID for: movement on page: rules--keywords-index
+Generating target anchor ID for: named-item on page: rules--keywords-index
+Generating target anchor ID for: normal on page: rules--keywords-index
+Generating target anchor ID for: oddities on page: rules--keywords-index
+Generating target anchor ID for: oddity on page: rules--keywords-index
+Generating target anchor ID for: order on page: rules--keywords-index
+Generating target anchor ID for: order-action on page: rules--keywords-index
+Generating target anchor ID for: out-of-control on page: rules--keywords-index
+Generating target anchor ID for: over-laden on page: rules--keywords-index
+Generating target anchor ID for: overclock on page: rules--keywords-index
+Generating target anchor ID for: overreaching on page: rules--keywords-index
+Generating target anchor ID for: parry on page: rules--keywords-index
+Generating target anchor ID for: partial-cover on page: rules--keywords-index
+Generating target anchor ID for: passive on page: rules--keywords-index
+Generating target anchor ID for: passive-defence on page: rules--keywords-index
+Generating target anchor ID for: patron-saint on page: rules--keywords-index
+Generating target anchor ID for: persistent on page: rules--keywords-index
+Generating target anchor ID for: personal-quirks on page: rules--keywords-index
+Generating target anchor ID for: pile-of-bones on page: rules--keywords-index
+Generating target anchor ID for: player on page: rules--keywords-index
+Generating target anchor ID for: plunder on page: rules--keywords-index
+Generating target anchor ID for: power-words on page: rules--keywords-index
+Generating target anchor ID for: prone on page: rules--keywords-index
+Generating target anchor ID for: quality on page: rules--keywords-index
+Generating target anchor ID for: quirk on page: rules--keywords-index
+Generating target anchor ID for: quirk on page: rules--keywords-index
+Generating target anchor ID for: raid on page: rules--keywords-index
+Generating target anchor ID for: raid on page: rules--keywords-index
+Generating target anchor ID for: raid-boss-mvp on page: rules--keywords-index
+Generating target anchor ID for: raid-points on page: rules--keywords-index
+Generating target anchor ID for: raid-points on page: rules--keywords-index
+Generating target anchor ID for: ranged-attack on page: rules--keywords-index
+Generating target anchor ID for: reaction on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: relic on page: rules--keywords-index
+Generating target anchor ID for: restrained on page: rules--keywords-index
+Generating target anchor ID for: retire on page: rules--keywords-index
+Generating target anchor ID for: route-test on page: rules--keywords-index
+Generating target anchor ID for: scarred on page: rules--keywords-index
+Generating target anchor ID for: scouting on page: rules--keywords-index
+Generating target anchor ID for: scrap on page: rules--keywords-index
+Generating target anchor ID for: scrap-cascade on page: rules--keywords-index
+Generating target anchor ID for: scrappy on page: rules--keywords-index
+Generating target anchor ID for: secondary-stats on page: rules--keywords-index
+Generating target anchor ID for: shenanigan on page: rules--keywords-index
+Generating target anchor ID for: size on page: rules--keywords-index
+Generating target anchor ID for: slink on page: rules--keywords-index
+Generating target anchor ID for: staggered on page: rules--keywords-index
+Generating target anchor ID for: standard on page: rules--keywords-index
+Generating target anchor ID for: standard-action on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: stat on page: rules--keywords-index
+Generating target anchor ID for: stats-main on page: rules--keywords-index
+Generating target anchor ID for: status-effects-conditions on page: rules--keywords-index
+Generating target anchor ID for: prone on page: rules--keywords-index
+Generating target anchor ID for: stunned on page: rules--keywords-index
+Generating target anchor ID for: weakened on page: rules--keywords-index
+Generating target anchor ID for: restrained on page: rules--keywords-index
+Generating target anchor ID for: blinded on page: rules--keywords-index
+Generating target anchor ID for: terrified on page: rules--keywords-index
+Generating target anchor ID for: staggered on page: rules--keywords-index
+Generating target anchor ID for: stunned on page: rules--keywords-index
+Generating target anchor ID for: success on page: rules--keywords-index
+Generating target anchor ID for: success on page: rules--keywords-index
+Generating target anchor ID for: superior on page: rules--keywords-index
+Generating target anchor ID for: tag on page: rules--keywords-index
+Generating target anchor ID for: tag on page: rules--keywords-index
+Generating target anchor ID for: taming on page: rules--keywords-index
+Generating target anchor ID for: target-number-tn on page: rules--keywords-index
+Generating target anchor ID for: terrified on page: rules--keywords-index
+Generating target anchor ID for: test on page: rules--keywords-index
+Generating target anchor ID for: tier on page: rules--keywords-index
+Generating target anchor ID for: tier-t on page: rules--keywords-index
+Generating target anchor ID for: tn on page: rules--keywords-index
+Generating target anchor ID for: tough on page: rules--keywords-index
+Generating target anchor ID for: trait on page: rules--keywords-index
+Generating target anchor ID for: traits-weapon-armor on page: rules--keywords-index
+Generating target anchor ID for: travel-event on page: rules--keywords-index
+Generating target anchor ID for: twist on page: rules--keywords-index
+Generating target anchor ID for: uncontrolled on page: rules--keywords-index
+Generating target anchor ID for: uncontrolled-mobs on page: rules--keywords-index
+Generating target anchor ID for: weakened on page: rules--keywords-index
+Generating target anchor ID for: wound on page: rules--keywords-index
+Generating target anchor ID for: wound on page: rules--keywords-index
+Generating target anchor ID for: xp on page: rules--keywords-index
+Generating target anchor ID for: zone on page: rules--keywords-index
+Generating target anchor ID for: zone-profile on page: rules--keywords-index
+Generating target anchor ID for: zone-trait on page: rules--keywords-index
+Generating target anchor ID for: zones on page: rules--keywords-index
+  ✅ Built environment stage (7 sections, 25 pages)
+  ✅ Built environment prod (2 sections, 2 pages)
+  ✅ Built environment dev-lore (1 sections, 1 pages)
+  ✅ Built environment stage-lore (6 sections, 6 pages)
+  ✅ Built environment prod-lore (1 sections, 1 pages)
+  ✅ Built index.html
+
+  ✅ Written status.json (success)
+
+🎉 Build complete! Files in: /home/ante/projects/gobbos/05_System_Tools/rulebook-site/dist
+Finished check at Sat 22 Aug 10:09:05 CEST 2026
+---------------------------------------------
+=============================================
+Update check triggered on Sat 22 Aug 10:09:11 CEST 2026
+=============================================
+No remote changes detected.
+Rebuilding site to ensure local sync...
+
+> gobbos-rulebook-site@1.0.0 build
+> node build.js
+
+🔨 Building Gobbos Rulebook & Lore Site (Multi-Page Agent-Friendly)...
+
+  ✅ Loaded 168 keywords for tooltips
+  ✅ Copied style.css
+  ✅ Copied admin/ (Decap CMS)
+  ✅ Built environment dev (31 sections, 37 pages)
+Generating target anchor ID for: action on page: rules--keywords-index
+Generating target anchor ID for: ancestry on page: rules--keywords-index
+Generating target anchor ID for: area-of-effect-aoe on page: rules--keywords-index
+Generating target anchor ID for: assert-dominance on page: rules--keywords-index
+Generating target anchor ID for: attack on page: rules--keywords-index
+Generating target anchor ID for: bane on page: rules--keywords-index
+Generating target anchor ID for: bangaranga on page: rules--keywords-index
+Generating target anchor ID for: bangaranga-dice on page: rules--keywords-index
+Generating target anchor ID for: bangaranga-pool on page: rules--keywords-index
+Generating target anchor ID for: base-danger-rating on page: rules--keywords-index
+Generating target anchor ID for: bite-b on page: rules--keywords-index
+Generating target anchor ID for: blinded on page: rules--keywords-index
+Generating target anchor ID for: blueprint on page: rules--keywords-index
+Generating target anchor ID for: bone-oddity on page: rules--keywords-index
+Generating target anchor ID for: bone-pile on page: rules--keywords-index
+Generating target anchor ID for: boon on page: rules--keywords-index
+Generating target anchor ID for: boon on page: rules--keywords-index
+Generating target anchor ID for: boss on page: rules--keywords-index
+Generating target anchor ID for: brains on page: rules--keywords-index
+Generating target anchor ID for: bulk on page: rules--keywords-index
+Generating target anchor ID for: carry on page: rules--keywords-index
+Generating target anchor ID for: carry-capacity on page: rules--keywords-index
+Generating target anchor ID for: chassis on page: rules--keywords-index
+Generating target anchor ID for: cleave on page: rules--keywords-index
+Generating target anchor ID for: condition on page: rules--keywords-index
+Generating target anchor ID for: cover on page: rules--keywords-index
+Generating target anchor ID for: boon on page: rules--keywords-index
+Generating target anchor ID for: bane on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: crafting-capacity on page: rules--keywords-index
+Generating target anchor ID for: critical on page: rules--keywords-index
+Generating target anchor ID for: critical-success on page: rules--keywords-index
+Generating target anchor ID for: custom-gear on page: rules--keywords-index
+Generating target anchor ID for: defence on page: rules--keywords-index
+Generating target anchor ID for: defence-tn on page: rules--keywords-index
+Generating target anchor ID for: delivery on page: rules--keywords-index
+Generating target anchor ID for: dice-pool on page: rules--keywords-index
+Generating target anchor ID for: difficulty on page: rules--keywords-index
+Generating target anchor ID for: dodge on page: rules--keywords-index
+Generating target anchor ID for: dominance on page: rules--keywords-index
+Generating target anchor ID for: dragging on page: rules--keywords-index
+Generating target anchor ID for: dumb on page: rules--keywords-index
+Generating target anchor ID for: duration on page: rules--keywords-index
+Generating target anchor ID for: easy on page: rules--keywords-index
+Generating target anchor ID for: elder on page: rules--keywords-index
+Generating target anchor ID for: elite on page: rules--keywords-index
+Generating target anchor ID for: encounter on page: rules--keywords-index
+Generating target anchor ID for: exploding-dice on page: rules--keywords-index
+Generating target anchor ID for: first-pick-my-mob-my-loot on page: rules--keywords-index
+Generating target anchor ID for: free-action on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: free-orders on page: rules--keywords-index
+Generating target anchor ID for: full-cover on page: rules--keywords-index
+Generating target anchor ID for: fumble on page: rules--keywords-index
+Generating target anchor ID for: fumbled on page: rules--keywords-index
+Generating target anchor ID for: fumbles on page: rules--keywords-index
+Generating target anchor ID for: fumbling on page: rules--keywords-index
+Generating target anchor ID for: gang on page: rules--keywords-index
+Generating target anchor ID for: gang-agenda on page: rules--keywords-index
+Generating target anchor ID for: gang-agenda on page: rules--keywords-index
+Generating target anchor ID for: gang-mark on page: rules--keywords-index
+Generating target anchor ID for: gang-quirks on page: rules--keywords-index
+Generating target anchor ID for: gang-sheet on page: rules--keywords-index
+Generating target anchor ID for: glory on page: rules--keywords-index
+Generating target anchor ID for: glory-raid-points on page: rules--keywords-index
+Generating target anchor ID for: greed-loot-value on page: rules--keywords-index
+Generating target anchor ID for: grit on page: rules--keywords-index
+Generating target anchor ID for: group-attack on page: rules--keywords-index
+Generating target anchor ID for: grunt on page: rules--keywords-index
+Generating target anchor ID for: hard on page: rules--keywords-index
+Generating target anchor ID for: infamy on page: rules--keywords-index
+Generating target anchor ID for: infamy-level on page: rules--keywords-index
+Generating target anchor ID for: infamy-mark on page: rules--keywords-index
+Generating target anchor ID for: junk on page: rules--keywords-index
+Generating target anchor ID for: lair-phase on page: rules--keywords-index
+Generating target anchor ID for: lair-upgrades on page: rules--keywords-index
+Generating target anchor ID for: legendary on page: rules--keywords-index
+Generating target anchor ID for: loitering on page: rules--keywords-index
+Generating target anchor ID for: loot on page: rules--keywords-index
+Generating target anchor ID for: loot-capacity on page: rules--keywords-index
+Generating target anchor ID for: loot-value on page: rules--keywords-index
+Generating target anchor ID for: main-stats on page: rules--keywords-index
+Generating target anchor ID for: manipulate on page: rules--keywords-index
+Generating target anchor ID for: marks on page: rules--keywords-index
+Generating target anchor ID for: max-mobs on page: rules--keywords-index
+Generating target anchor ID for: melee on page: rules--keywords-index
+Generating target anchor ID for: melee-attack on page: rules--keywords-index
+Generating target anchor ID for: mob on page: rules--keywords-index
+Generating target anchor ID for: mob on page: rules--keywords-index
+Generating target anchor ID for: morale on page: rules--keywords-index
+Generating target anchor ID for: morale-check on page: rules--keywords-index
+Generating target anchor ID for: mouth on page: rules--keywords-index
+Generating target anchor ID for: move on page: rules--keywords-index
+Generating target anchor ID for: movement on page: rules--keywords-index
+Generating target anchor ID for: named-item on page: rules--keywords-index
+Generating target anchor ID for: normal on page: rules--keywords-index
+Generating target anchor ID for: oddities on page: rules--keywords-index
+Generating target anchor ID for: oddity on page: rules--keywords-index
+Generating target anchor ID for: order on page: rules--keywords-index
+Generating target anchor ID for: order-action on page: rules--keywords-index
+Generating target anchor ID for: out-of-control on page: rules--keywords-index
+Generating target anchor ID for: over-laden on page: rules--keywords-index
+Generating target anchor ID for: overclock on page: rules--keywords-index
+Generating target anchor ID for: overreaching on page: rules--keywords-index
+Generating target anchor ID for: parry on page: rules--keywords-index
+Generating target anchor ID for: partial-cover on page: rules--keywords-index
+Generating target anchor ID for: passive on page: rules--keywords-index
+Generating target anchor ID for: passive-defence on page: rules--keywords-index
+Generating target anchor ID for: patron-saint on page: rules--keywords-index
+Generating target anchor ID for: persistent on page: rules--keywords-index
+Generating target anchor ID for: personal-quirks on page: rules--keywords-index
+Generating target anchor ID for: pile-of-bones on page: rules--keywords-index
+Generating target anchor ID for: player on page: rules--keywords-index
+Generating target anchor ID for: plunder on page: rules--keywords-index
+Generating target anchor ID for: power-words on page: rules--keywords-index
+Generating target anchor ID for: prone on page: rules--keywords-index
+Generating target anchor ID for: quality on page: rules--keywords-index
+Generating target anchor ID for: quirk on page: rules--keywords-index
+Generating target anchor ID for: quirk on page: rules--keywords-index
+Generating target anchor ID for: raid on page: rules--keywords-index
+Generating target anchor ID for: raid on page: rules--keywords-index
+Generating target anchor ID for: raid-boss-mvp on page: rules--keywords-index
+Generating target anchor ID for: raid-points on page: rules--keywords-index
+Generating target anchor ID for: raid-points on page: rules--keywords-index
+Generating target anchor ID for: ranged-attack on page: rules--keywords-index
+Generating target anchor ID for: reaction on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: relic on page: rules--keywords-index
+Generating target anchor ID for: restrained on page: rules--keywords-index
+Generating target anchor ID for: retire on page: rules--keywords-index
+Generating target anchor ID for: route-test on page: rules--keywords-index
+Generating target anchor ID for: scarred on page: rules--keywords-index
+Generating target anchor ID for: scouting on page: rules--keywords-index
+Generating target anchor ID for: scrap on page: rules--keywords-index
+Generating target anchor ID for: scrap-cascade on page: rules--keywords-index
+Generating target anchor ID for: scrappy on page: rules--keywords-index
+Generating target anchor ID for: secondary-stats on page: rules--keywords-index
+Generating target anchor ID for: shenanigan on page: rules--keywords-index
+Generating target anchor ID for: size on page: rules--keywords-index
+Generating target anchor ID for: slink on page: rules--keywords-index
+Generating target anchor ID for: staggered on page: rules--keywords-index
+Generating target anchor ID for: standard on page: rules--keywords-index
+Generating target anchor ID for: standard-action on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: stat on page: rules--keywords-index
+Generating target anchor ID for: stats-main on page: rules--keywords-index
+Generating target anchor ID for: status-effects-conditions on page: rules--keywords-index
+Generating target anchor ID for: prone on page: rules--keywords-index
+Generating target anchor ID for: stunned on page: rules--keywords-index
+Generating target anchor ID for: weakened on page: rules--keywords-index
+Generating target anchor ID for: restrained on page: rules--keywords-index
+Generating target anchor ID for: blinded on page: rules--keywords-index
+Generating target anchor ID for: terrified on page: rules--keywords-index
+Generating target anchor ID for: staggered on page: rules--keywords-index
+Generating target anchor ID for: stunned on page: rules--keywords-index
+Generating target anchor ID for: success on page: rules--keywords-index
+Generating target anchor ID for: success on page: rules--keywords-index
+Generating target anchor ID for: superior on page: rules--keywords-index
+Generating target anchor ID for: tag on page: rules--keywords-index
+Generating target anchor ID for: tag on page: rules--keywords-index
+Generating target anchor ID for: taming on page: rules--keywords-index
+Generating target anchor ID for: target-number-tn on page: rules--keywords-index
+Generating target anchor ID for: terrified on page: rules--keywords-index
+Generating target anchor ID for: test on page: rules--keywords-index
+Generating target anchor ID for: tier on page: rules--keywords-index
+Generating target anchor ID for: tier-t on page: rules--keywords-index
+Generating target anchor ID for: tn on page: rules--keywords-index
+Generating target anchor ID for: tough on page: rules--keywords-index
+Generating target anchor ID for: trait on page: rules--keywords-index
+Generating target anchor ID for: traits-weapon-armor on page: rules--keywords-index
+Generating target anchor ID for: travel-event on page: rules--keywords-index
+Generating target anchor ID for: twist on page: rules--keywords-index
+Generating target anchor ID for: uncontrolled on page: rules--keywords-index
+Generating target anchor ID for: uncontrolled-mobs on page: rules--keywords-index
+Generating target anchor ID for: weakened on page: rules--keywords-index
+Generating target anchor ID for: wound on page: rules--keywords-index
+Generating target anchor ID for: wound on page: rules--keywords-index
+Generating target anchor ID for: xp on page: rules--keywords-index
+Generating target anchor ID for: zone on page: rules--keywords-index
+Generating target anchor ID for: zone-profile on page: rules--keywords-index
+Generating target anchor ID for: zone-trait on page: rules--keywords-index
+Generating target anchor ID for: zones on page: rules--keywords-index
+  ✅ Built environment stage (7 sections, 25 pages)
+  ✅ Built environment prod (2 sections, 2 pages)
+  ✅ Built environment dev-lore (1 sections, 1 pages)
+  ✅ Built environment stage-lore (6 sections, 6 pages)
+  ✅ Built environment prod-lore (1 sections, 1 pages)
+  ✅ Built index.html
+
+  ✅ Written status.json (success)
+
+🎉 Build complete! Files in: /home/ante/projects/gobbos/05_System_Tools/rulebook-site/dist
+Finished check at Sat 22 Aug 10:09:12 CEST 2026
+---------------------------------------------
+=============================================
+Update check triggered on Sat 22 Aug 10:10:02 CEST 2026
+=============================================
+From https://github.com/antedev/gobbos
+   ef49739..29d0d03  main       -> origin/main
+Local is behind. Stashing local changes and pulling remote...
+Local changes detected. Stashing...
+=============================================
+Update check triggered on Sat 22 Aug 14:01:10 CEST 2026
+=============================================
+No remote changes detected.
+Rebuilding site to ensure local sync...
+
+> gobbos-rulebook-site@1.0.0 build
+> node build.js
+
+🔨 Building Gobbos Rulebook & Lore Site (Multi-Page Agent-Friendly)...
+
+  ✅ Loaded 168 keywords for tooltips
+  ✅ Copied style.css
+  ✅ Copied robots.txt
+  ✅ Copied admin/ (Decap CMS)
+  ✅ Built environment dev (31 sections, 37 pages)
+Generating target anchor ID for: action on page: rules--keywords-index
+Generating target anchor ID for: ancestry on page: rules--keywords-index
+Generating target anchor ID for: area-of-effect-aoe on page: rules--keywords-index
+Generating target anchor ID for: assert-dominance on page: rules--keywords-index
+Generating target anchor ID for: attack on page: rules--keywords-index
+Generating target anchor ID for: bane on page: rules--keywords-index
+Generating target anchor ID for: bangaranga on page: rules--keywords-index
+Generating target anchor ID for: bangaranga-dice on page: rules--keywords-index
+Generating target anchor ID for: bangaranga-pool on page: rules--keywords-index
+Generating target anchor ID for: base-danger-rating on page: rules--keywords-index
+Generating target anchor ID for: bite-b on page: rules--keywords-index
+Generating target anchor ID for: blinded on page: rules--keywords-index
+Generating target anchor ID for: blueprint on page: rules--keywords-index
+Generating target anchor ID for: bone-oddity on page: rules--keywords-index
+Generating target anchor ID for: bone-pile on page: rules--keywords-index
+Generating target anchor ID for: boon on page: rules--keywords-index
+Generating target anchor ID for: boon on page: rules--keywords-index
+Generating target anchor ID for: boss on page: rules--keywords-index
+Generating target anchor ID for: brains on page: rules--keywords-index
+Generating target anchor ID for: bulk on page: rules--keywords-index
+Generating target anchor ID for: carry on page: rules--keywords-index
+Generating target anchor ID for: carry-capacity on page: rules--keywords-index
+Generating target anchor ID for: chassis on page: rules--keywords-index
+Generating target anchor ID for: cleave on page: rules--keywords-index
+Generating target anchor ID for: condition on page: rules--keywords-index
+Generating target anchor ID for: cover on page: rules--keywords-index
+Generating target anchor ID for: boon on page: rules--keywords-index
+Generating target anchor ID for: bane on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: crafting-capacity on page: rules--keywords-index
+Generating target anchor ID for: critical on page: rules--keywords-index
+Generating target anchor ID for: critical-success on page: rules--keywords-index
+Generating target anchor ID for: custom-gear on page: rules--keywords-index
+Generating target anchor ID for: defence on page: rules--keywords-index
+Generating target anchor ID for: defence-tn on page: rules--keywords-index
+Generating target anchor ID for: delivery on page: rules--keywords-index
+Generating target anchor ID for: dice-pool on page: rules--keywords-index
+Generating target anchor ID for: difficulty on page: rules--keywords-index
+Generating target anchor ID for: dodge on page: rules--keywords-index
+Generating target anchor ID for: dominance on page: rules--keywords-index
+Generating target anchor ID for: dragging on page: rules--keywords-index
+Generating target anchor ID for: dumb on page: rules--keywords-index
+Generating target anchor ID for: duration on page: rules--keywords-index
+Generating target anchor ID for: easy on page: rules--keywords-index
+Generating target anchor ID for: elder on page: rules--keywords-index
+Generating target anchor ID for: elite on page: rules--keywords-index
+Generating target anchor ID for: encounter on page: rules--keywords-index
+Generating target anchor ID for: exploding-dice on page: rules--keywords-index
+Generating target anchor ID for: first-pick-my-mob-my-loot on page: rules--keywords-index
+Generating target anchor ID for: free-action on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: free-orders on page: rules--keywords-index
+Generating target anchor ID for: full-cover on page: rules--keywords-index
+Generating target anchor ID for: fumble on page: rules--keywords-index
+Generating target anchor ID for: fumbled on page: rules--keywords-index
+Generating target anchor ID for: fumbles on page: rules--keywords-index
+Generating target anchor ID for: fumbling on page: rules--keywords-index
+Generating target anchor ID for: gang on page: rules--keywords-index
+Generating target anchor ID for: gang-agenda on page: rules--keywords-index
+Generating target anchor ID for: gang-agenda on page: rules--keywords-index
+Generating target anchor ID for: gang-mark on page: rules--keywords-index
+Generating target anchor ID for: gang-quirks on page: rules--keywords-index
+Generating target anchor ID for: gang-sheet on page: rules--keywords-index
+Generating target anchor ID for: glory on page: rules--keywords-index
+Generating target anchor ID for: glory-raid-points on page: rules--keywords-index
+Generating target anchor ID for: greed-loot-value on page: rules--keywords-index
+Generating target anchor ID for: grit on page: rules--keywords-index
+Generating target anchor ID for: group-attack on page: rules--keywords-index
+Generating target anchor ID for: grunt on page: rules--keywords-index
+Generating target anchor ID for: hard on page: rules--keywords-index
+Generating target anchor ID for: infamy on page: rules--keywords-index
+Generating target anchor ID for: infamy-level on page: rules--keywords-index
+Generating target anchor ID for: infamy-mark on page: rules--keywords-index
+Generating target anchor ID for: junk on page: rules--keywords-index
+Generating target anchor ID for: lair-phase on page: rules--keywords-index
+Generating target anchor ID for: lair-upgrades on page: rules--keywords-index
+Generating target anchor ID for: legendary on page: rules--keywords-index
+Generating target anchor ID for: loitering on page: rules--keywords-index
+Generating target anchor ID for: loot on page: rules--keywords-index
+Generating target anchor ID for: loot-capacity on page: rules--keywords-index
+Generating target anchor ID for: loot-value on page: rules--keywords-index
+Generating target anchor ID for: main-stats on page: rules--keywords-index
+Generating target anchor ID for: manipulate on page: rules--keywords-index
+Generating target anchor ID for: marks on page: rules--keywords-index
+Generating target anchor ID for: max-mobs on page: rules--keywords-index
+Generating target anchor ID for: melee on page: rules--keywords-index
+Generating target anchor ID for: melee-attack on page: rules--keywords-index
+Generating target anchor ID for: mob on page: rules--keywords-index
+Generating target anchor ID for: mob on page: rules--keywords-index
+Generating target anchor ID for: morale on page: rules--keywords-index
+Generating target anchor ID for: morale-check on page: rules--keywords-index
+Generating target anchor ID for: mouth on page: rules--keywords-index
+Generating target anchor ID for: move on page: rules--keywords-index
+Generating target anchor ID for: movement on page: rules--keywords-index
+Generating target anchor ID for: named-item on page: rules--keywords-index
+Generating target anchor ID for: normal on page: rules--keywords-index
+Generating target anchor ID for: oddities on page: rules--keywords-index
+Generating target anchor ID for: oddity on page: rules--keywords-index
+Generating target anchor ID for: order on page: rules--keywords-index
+Generating target anchor ID for: order-action on page: rules--keywords-index
+Generating target anchor ID for: out-of-control on page: rules--keywords-index
+Generating target anchor ID for: over-laden on page: rules--keywords-index
+Generating target anchor ID for: overclock on page: rules--keywords-index
+Generating target anchor ID for: overreaching on page: rules--keywords-index
+Generating target anchor ID for: parry on page: rules--keywords-index
+Generating target anchor ID for: partial-cover on page: rules--keywords-index
+Generating target anchor ID for: passive on page: rules--keywords-index
+Generating target anchor ID for: passive-defence on page: rules--keywords-index
+Generating target anchor ID for: patron-saint on page: rules--keywords-index
+Generating target anchor ID for: persistent on page: rules--keywords-index
+Generating target anchor ID for: personal-quirks on page: rules--keywords-index
+Generating target anchor ID for: pile-of-bones on page: rules--keywords-index
+Generating target anchor ID for: player on page: rules--keywords-index
+Generating target anchor ID for: plunder on page: rules--keywords-index
+Generating target anchor ID for: power-words on page: rules--keywords-index
+Generating target anchor ID for: prone on page: rules--keywords-index
+Generating target anchor ID for: quality on page: rules--keywords-index
+Generating target anchor ID for: quirk on page: rules--keywords-index
+Generating target anchor ID for: quirk on page: rules--keywords-index
+Generating target anchor ID for: raid on page: rules--keywords-index
+Generating target anchor ID for: raid on page: rules--keywords-index
+Generating target anchor ID for: raid-boss-mvp on page: rules--keywords-index
+Generating target anchor ID for: raid-points on page: rules--keywords-index
+Generating target anchor ID for: raid-points on page: rules--keywords-index
+Generating target anchor ID for: ranged-attack on page: rules--keywords-index
+Generating target anchor ID for: reaction on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: relic on page: rules--keywords-index
+Generating target anchor ID for: restrained on page: rules--keywords-index
+Generating target anchor ID for: retire on page: rules--keywords-index
+Generating target anchor ID for: route-test on page: rules--keywords-index
+Generating target anchor ID for: scarred on page: rules--keywords-index
+Generating target anchor ID for: scouting on page: rules--keywords-index
+Generating target anchor ID for: scrap on page: rules--keywords-index
+Generating target anchor ID for: scrap-cascade on page: rules--keywords-index
+Generating target anchor ID for: scrappy on page: rules--keywords-index
+Generating target anchor ID for: secondary-stats on page: rules--keywords-index
+Generating target anchor ID for: shenanigan on page: rules--keywords-index
+Generating target anchor ID for: size on page: rules--keywords-index
+Generating target anchor ID for: slink on page: rules--keywords-index
+Generating target anchor ID for: staggered on page: rules--keywords-index
+Generating target anchor ID for: standard on page: rules--keywords-index
+Generating target anchor ID for: standard-action on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: stat on page: rules--keywords-index
+Generating target anchor ID for: stats-main on page: rules--keywords-index
+Generating target anchor ID for: status-effects-conditions on page: rules--keywords-index
+Generating target anchor ID for: prone on page: rules--keywords-index
+Generating target anchor ID for: stunned on page: rules--keywords-index
+Generating target anchor ID for: weakened on page: rules--keywords-index
+Generating target anchor ID for: restrained on page: rules--keywords-index
+Generating target anchor ID for: blinded on page: rules--keywords-index
+Generating target anchor ID for: terrified on page: rules--keywords-index
+Generating target anchor ID for: staggered on page: rules--keywords-index
+Generating target anchor ID for: stunned on page: rules--keywords-index
+Generating target anchor ID for: success on page: rules--keywords-index
+Generating target anchor ID for: success on page: rules--keywords-index
+Generating target anchor ID for: superior on page: rules--keywords-index
+Generating target anchor ID for: tag on page: rules--keywords-index
+Generating target anchor ID for: tag on page: rules--keywords-index
+Generating target anchor ID for: taming on page: rules--keywords-index
+Generating target anchor ID for: target-number-tn on page: rules--keywords-index
+Generating target anchor ID for: terrified on page: rules--keywords-index
+Generating target anchor ID for: test on page: rules--keywords-index
+Generating target anchor ID for: tier on page: rules--keywords-index
+Generating target anchor ID for: tier-t on page: rules--keywords-index
+Generating target anchor ID for: tn on page: rules--keywords-index
+Generating target anchor ID for: tough on page: rules--keywords-index
+Generating target anchor ID for: trait on page: rules--keywords-index
+Generating target anchor ID for: traits-weapon-armor on page: rules--keywords-index
+Generating target anchor ID for: travel-event on page: rules--keywords-index
+Generating target anchor ID for: twist on page: rules--keywords-index
+Generating target anchor ID for: uncontrolled on page: rules--keywords-index
+Generating target anchor ID for: uncontrolled-mobs on page: rules--keywords-index
+Generating target anchor ID for: weakened on page: rules--keywords-index
+Generating target anchor ID for: wound on page: rules--keywords-index
+Generating target anchor ID for: wound on page: rules--keywords-index
+Generating target anchor ID for: xp on page: rules--keywords-index
+Generating target anchor ID for: zone on page: rules--keywords-index
+Generating target anchor ID for: zone-profile on page: rules--keywords-index
+Generating target anchor ID for: zone-trait on page: rules--keywords-index
+Generating target anchor ID for: zones on page: rules--keywords-index
+  ✅ Built environment stage (7 sections, 25 pages)
+  ✅ Built environment prod (2 sections, 2 pages)
+  ✅ Built environment dev-lore (1 sections, 1 pages)
+  ✅ Built environment stage-lore (6 sections, 6 pages)
+  ✅ Built environment prod-lore (1 sections, 1 pages)
+  ✅ Built index.html
+
+🤖 Generating LLM Single-File Continuous Bundles...
+  ✅ Generated rules_stage_llm.md, rules_prod_llm.md, rules_all_llm.md
+  ✅ Generated lore_stage_llm.md, lore_prod_llm.md, lore_all_llm.md
+  ✅ Generated all_llm.md and llms.txt
+
+  ✅ Written status.json (success)
+
+🎉 Build complete! Files in: /home/ante/projects/gobbos/05_System_Tools/rulebook-site/dist
+Finished check at Sat 22 Aug 14:01:12 CEST 2026
+---------------------------------------------
+=============================================
+Update check triggered on Sat 22 Aug 14:04:27 CEST 2026
+=============================================
+Local is behind. Stashing local changes and pulling remote...
+Local changes detected. Stashing...
+=============================================
+Update check triggered on Sat 22 Aug 23:11:33 CEST 2026
+=============================================
+From https://github.com/antedev/gobbos
+   304688a..9caca94  main       -> origin/main
+Local is behind. Stashing local changes and pulling remote...
+Local changes detected. Stashing...
+=============================================
+Update check triggered on Sun 23 Aug 02:00:01 CEST 2026
+=============================================
+No remote changes detected.
+Rebuilding site to ensure local sync...
+
+> gobbos-rulebook-site@1.0.0 build
+> node build.js
+
+🔨 Building Gobbos Rulebook & Lore Site (Multi-Page Agent-Friendly)...
+
+  ✅ Loaded 170 keywords for tooltips
+  ✅ Copied style.css
+  ✅ Copied robots.txt
+  ✅ Copied admin/ (Decap CMS)
+  ✅ Built environment dev (31 sections, 37 pages)
+Generating target anchor ID for: action on page: rules--keywords-index
+Generating target anchor ID for: ancestry on page: rules--keywords-index
+Generating target anchor ID for: area-of-effect-aoe on page: rules--keywords-index
+Generating target anchor ID for: assert-dominance on page: rules--keywords-index
+Generating target anchor ID for: attack on page: rules--keywords-index
+Generating target anchor ID for: bane on page: rules--keywords-index
+Generating target anchor ID for: bangaranga on page: rules--keywords-index
+Generating target anchor ID for: bangaranga-dice on page: rules--keywords-index
+Generating target anchor ID for: bangaranga-pool on page: rules--keywords-index
+Generating target anchor ID for: base-danger-rating on page: rules--keywords-index
+Generating target anchor ID for: bite-b on page: rules--keywords-index
+Generating target anchor ID for: blinded on page: rules--keywords-index
+Generating target anchor ID for: blueprint on page: rules--keywords-index
+Generating target anchor ID for: bone-oddity on page: rules--keywords-index
+Generating target anchor ID for: bone-pile on page: rules--keywords-index
+Generating target anchor ID for: boon on page: rules--keywords-index
+Generating target anchor ID for: boon on page: rules--keywords-index
+Generating target anchor ID for: boss on page: rules--keywords-index
+Generating target anchor ID for: brains on page: rules--keywords-index
+Generating target anchor ID for: bulk on page: rules--keywords-index
+Generating target anchor ID for: carry on page: rules--keywords-index
+Generating target anchor ID for: carry-capacity on page: rules--keywords-index
+Generating target anchor ID for: chassis on page: rules--keywords-index
+Generating target anchor ID for: clatter-roll on page: rules--keywords-index
+Generating target anchor ID for: cleave on page: rules--keywords-index
+Generating target anchor ID for: condition on page: rules--keywords-index
+Generating target anchor ID for: cover on page: rules--keywords-index
+Generating target anchor ID for: boon on page: rules--keywords-index
+Generating target anchor ID for: bane on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: crafting-capacity on page: rules--keywords-index
+Generating target anchor ID for: critical on page: rules--keywords-index
+Generating target anchor ID for: critical-success on page: rules--keywords-index
+Generating target anchor ID for: custom-gear on page: rules--keywords-index
+Generating target anchor ID for: defence on page: rules--keywords-index
+Generating target anchor ID for: defence-tn on page: rules--keywords-index
+Generating target anchor ID for: delivery on page: rules--keywords-index
+Generating target anchor ID for: dice-pool on page: rules--keywords-index
+Generating target anchor ID for: difficulty on page: rules--keywords-index
+Generating target anchor ID for: dodge on page: rules--keywords-index
+Generating target anchor ID for: dominance on page: rules--keywords-index
+Generating target anchor ID for: dragging on page: rules--keywords-index
+Generating target anchor ID for: dumb on page: rules--keywords-index
+Generating target anchor ID for: duration on page: rules--keywords-index
+Generating target anchor ID for: easy on page: rules--keywords-index
+Generating target anchor ID for: elder on page: rules--keywords-index
+Generating target anchor ID for: elite on page: rules--keywords-index
+Generating target anchor ID for: encounter on page: rules--keywords-index
+Generating target anchor ID for: exploding-dice on page: rules--keywords-index
+Generating target anchor ID for: first-pick-my-mob-my-loot on page: rules--keywords-index
+Generating target anchor ID for: free-action on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: free-orders on page: rules--keywords-index
+Generating target anchor ID for: full-cover on page: rules--keywords-index
+Generating target anchor ID for: fumble on page: rules--keywords-index
+Generating target anchor ID for: fumbled on page: rules--keywords-index
+Generating target anchor ID for: fumbles on page: rules--keywords-index
+Generating target anchor ID for: fumbling on page: rules--keywords-index
+Generating target anchor ID for: gang on page: rules--keywords-index
+Generating target anchor ID for: gang-agenda on page: rules--keywords-index
+Generating target anchor ID for: gang-agenda on page: rules--keywords-index
+Generating target anchor ID for: gang-mark on page: rules--keywords-index
+Generating target anchor ID for: gang-quirks on page: rules--keywords-index
+Generating target anchor ID for: gang-sheet on page: rules--keywords-index
+Generating target anchor ID for: glory on page: rules--keywords-index
+Generating target anchor ID for: glory-raid-points on page: rules--keywords-index
+Generating target anchor ID for: greed-loot-value on page: rules--keywords-index
+Generating target anchor ID for: grit on page: rules--keywords-index
+Generating target anchor ID for: group-attack on page: rules--keywords-index
+Generating target anchor ID for: grunt on page: rules--keywords-index
+Generating target anchor ID for: hard on page: rules--keywords-index
+Generating target anchor ID for: infamy on page: rules--keywords-index
+Generating target anchor ID for: infamy-level on page: rules--keywords-index
+Generating target anchor ID for: infamy-mark on page: rules--keywords-index
+Generating target anchor ID for: junk on page: rules--keywords-index
+Generating target anchor ID for: lair-phase on page: rules--keywords-index
+Generating target anchor ID for: lair-upgrades on page: rules--keywords-index
+Generating target anchor ID for: legendary on page: rules--keywords-index
+Generating target anchor ID for: loitering on page: rules--keywords-index
+Generating target anchor ID for: loot on page: rules--keywords-index
+Generating target anchor ID for: loot-capacity on page: rules--keywords-index
+Generating target anchor ID for: loot-value on page: rules--keywords-index
+Generating target anchor ID for: main-stats on page: rules--keywords-index
+Generating target anchor ID for: manipulate on page: rules--keywords-index
+Generating target anchor ID for: marks on page: rules--keywords-index
+Generating target anchor ID for: max-mobs on page: rules--keywords-index
+Generating target anchor ID for: melee on page: rules--keywords-index
+Generating target anchor ID for: melee-attack on page: rules--keywords-index
+Generating target anchor ID for: mob on page: rules--keywords-index
+Generating target anchor ID for: mob on page: rules--keywords-index
+Generating target anchor ID for: morale on page: rules--keywords-index
+Generating target anchor ID for: morale-check on page: rules--keywords-index
+Generating target anchor ID for: mouth on page: rules--keywords-index
+Generating target anchor ID for: move on page: rules--keywords-index
+Generating target anchor ID for: movement on page: rules--keywords-index
+Generating target anchor ID for: named-item on page: rules--keywords-index
+Generating target anchor ID for: normal on page: rules--keywords-index
+Generating target anchor ID for: oddities on page: rules--keywords-index
+Generating target anchor ID for: oddity on page: rules--keywords-index
+Generating target anchor ID for: order on page: rules--keywords-index
+Generating target anchor ID for: order-action on page: rules--keywords-index
+Generating target anchor ID for: out-of-control on page: rules--keywords-index
+Generating target anchor ID for: over-laden on page: rules--keywords-index
+Generating target anchor ID for: overclock on page: rules--keywords-index
+Generating target anchor ID for: overreaching on page: rules--keywords-index
+Generating target anchor ID for: parry on page: rules--keywords-index
+Generating target anchor ID for: partial-cover on page: rules--keywords-index
+Generating target anchor ID for: passive on page: rules--keywords-index
+Generating target anchor ID for: passive-defence on page: rules--keywords-index
+Generating target anchor ID for: patron-saint on page: rules--keywords-index
+Generating target anchor ID for: persistent on page: rules--keywords-index
+Generating target anchor ID for: personal-quirks on page: rules--keywords-index
+Generating target anchor ID for: pile-of-bones on page: rules--keywords-index
+Generating target anchor ID for: player on page: rules--keywords-index
+Generating target anchor ID for: plunder on page: rules--keywords-index
+Generating target anchor ID for: power-words on page: rules--keywords-index
+Generating target anchor ID for: prone on page: rules--keywords-index
+Generating target anchor ID for: quality on page: rules--keywords-index
+Generating target anchor ID for: quirk on page: rules--keywords-index
+Generating target anchor ID for: quirk on page: rules--keywords-index
+Generating target anchor ID for: raid on page: rules--keywords-index
+Generating target anchor ID for: raid on page: rules--keywords-index
+Generating target anchor ID for: raid-boss-mvp on page: rules--keywords-index
+Generating target anchor ID for: raid-points on page: rules--keywords-index
+Generating target anchor ID for: raid-points on page: rules--keywords-index
+Generating target anchor ID for: ranged-attack on page: rules--keywords-index
+Generating target anchor ID for: reaction on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: relic on page: rules--keywords-index
+Generating target anchor ID for: restrained on page: rules--keywords-index
+Generating target anchor ID for: retire on page: rules--keywords-index
+Generating target anchor ID for: route-test on page: rules--keywords-index
+Generating target anchor ID for: scarred on page: rules--keywords-index
+Generating target anchor ID for: scouting on page: rules--keywords-index
+Generating target anchor ID for: scrap on page: rules--keywords-index
+Generating target anchor ID for: scrap-cascade on page: rules--keywords-index
+Generating target anchor ID for: scrappy on page: rules--keywords-index
+Generating target anchor ID for: secondary-stats on page: rules--keywords-index
+Generating target anchor ID for: shenanigan on page: rules--keywords-index
+Generating target anchor ID for: size on page: rules--keywords-index
+Generating target anchor ID for: slink on page: rules--keywords-index
+Generating target anchor ID for: staggered on page: rules--keywords-index
+Generating target anchor ID for: standard on page: rules--keywords-index
+Generating target anchor ID for: standard-action on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: stat on page: rules--keywords-index
+Generating target anchor ID for: stats-main on page: rules--keywords-index
+Generating target anchor ID for: status-effects-conditions on page: rules--keywords-index
+Generating target anchor ID for: prone on page: rules--keywords-index
+Generating target anchor ID for: stunned on page: rules--keywords-index
+Generating target anchor ID for: weakened on page: rules--keywords-index
+Generating target anchor ID for: restrained on page: rules--keywords-index
+Generating target anchor ID for: blinded on page: rules--keywords-index
+Generating target anchor ID for: terrified on page: rules--keywords-index
+Generating target anchor ID for: staggered on page: rules--keywords-index
+Generating target anchor ID for: stunned on page: rules--keywords-index
+Generating target anchor ID for: success on page: rules--keywords-index
+Generating target anchor ID for: success on page: rules--keywords-index
+Generating target anchor ID for: superior on page: rules--keywords-index
+Generating target anchor ID for: tag on page: rules--keywords-index
+Generating target anchor ID for: tag on page: rules--keywords-index
+Generating target anchor ID for: taming on page: rules--keywords-index
+Generating target anchor ID for: target-number-tn on page: rules--keywords-index
+Generating target anchor ID for: terrified on page: rules--keywords-index
+Generating target anchor ID for: test on page: rules--keywords-index
+Generating target anchor ID for: threat on page: rules--keywords-index
+Generating target anchor ID for: tier on page: rules--keywords-index
+Generating target anchor ID for: tier-t on page: rules--keywords-index
+Generating target anchor ID for: tn on page: rules--keywords-index
+Generating target anchor ID for: tough on page: rules--keywords-index
+Generating target anchor ID for: trait on page: rules--keywords-index
+Generating target anchor ID for: traits-weapon-armor on page: rules--keywords-index
+Generating target anchor ID for: travel-event on page: rules--keywords-index
+Generating target anchor ID for: twist on page: rules--keywords-index
+Generating target anchor ID for: uncontrolled on page: rules--keywords-index
+Generating target anchor ID for: uncontrolled-mobs on page: rules--keywords-index
+Generating target anchor ID for: weakened on page: rules--keywords-index
+Generating target anchor ID for: wound on page: rules--keywords-index
+Generating target anchor ID for: wound on page: rules--keywords-index
+Generating target anchor ID for: xp on page: rules--keywords-index
+Generating target anchor ID for: zone on page: rules--keywords-index
+Generating target anchor ID for: zone-profile on page: rules--keywords-index
+Generating target anchor ID for: zone-trait on page: rules--keywords-index
+Generating target anchor ID for: zones on page: rules--keywords-index
+  ✅ Built environment stage (7 sections, 25 pages)
+  ✅ Built environment prod (2 sections, 2 pages)
+  ✅ Built environment dev-lore (1 sections, 1 pages)
+  ✅ Built environment stage-lore (6 sections, 6 pages)
+  ✅ Built environment prod-lore (1 sections, 1 pages)
+  ✅ Built index.html
+
+🤖 Generating LLM Single-File Continuous Bundles (Markdown & HTML)...
+  ✅ Generated Markdown & HTML LLM bundles (.md, .html, .txt)
+
+  ✅ Written status.json (success)
+
+🎉 Build complete! Files in: /home/ante/projects/gobbos/05_System_Tools/rulebook-site/dist
+Finished check at Sun 23 Aug 02:00:03 CEST 2026
+---------------------------------------------
+=============================================
+Update check triggered on Sun 23 Aug 16:53:04 CEST 2026
+=============================================
+From https://github.com/antedev/gobbos
+   9caca94..e55ef8c  main       -> origin/main
+Local is behind. Stashing local changes and pulling remote...
+Local changes detected. Stashing...
+=============================================
+Update check triggered on Mon 24 Aug 02:00:01 CEST 2026
+=============================================
+From https://github.com/antedev/gobbos
+   e55ef8c..9e629db  main       -> origin/main
+Local is behind. Stashing local changes and pulling remote...
+Local changes detected. Stashing...
+=============================================
+Update check triggered on Mon 24 Aug 21:18:02 CEST 2026
+=============================================
+No remote changes detected.
+Rebuilding site to ensure local sync...
+
+> gobbos-rulebook-site@1.0.0 build
+> node build.js
+
+🔨 Building Gobbos Rulebook & Lore Site (Multi-Page Agent-Friendly)...
+
+  ✅ Loaded 171 keywords for tooltips
+  ✅ Copied style.css
+  ✅ Copied robots.txt
+  ✅ Copied admin/ (Decap CMS)
+  ✅ Built environment dev (32 sections, 38 pages)
+Generating target anchor ID for: action on page: rules--keywords-index
+Generating target anchor ID for: ancestry on page: rules--keywords-index
+Generating target anchor ID for: area-of-effect-aoe on page: rules--keywords-index
+Generating target anchor ID for: assert-dominance on page: rules--keywords-index
+Generating target anchor ID for: attack on page: rules--keywords-index
+Generating target anchor ID for: bane on page: rules--keywords-index
+Generating target anchor ID for: bangaranga on page: rules--keywords-index
+Generating target anchor ID for: bangaranga-dice on page: rules--keywords-index
+Generating target anchor ID for: bangaranga-pool on page: rules--keywords-index
+Generating target anchor ID for: base-danger-rating on page: rules--keywords-index
+Generating target anchor ID for: bite-b on page: rules--keywords-index
+Generating target anchor ID for: blinded on page: rules--keywords-index
+Generating target anchor ID for: blueprint on page: rules--keywords-index
+Generating target anchor ID for: bone-oddity on page: rules--keywords-index
+Generating target anchor ID for: bone-pile on page: rules--keywords-index
+Generating target anchor ID for: boon on page: rules--keywords-index
+Generating target anchor ID for: boon on page: rules--keywords-index
+Generating target anchor ID for: boss on page: rules--keywords-index
+Generating target anchor ID for: brains on page: rules--keywords-index
+Generating target anchor ID for: bulk on page: rules--keywords-index
+Generating target anchor ID for: carry on page: rules--keywords-index
+Generating target anchor ID for: carry-capacity on page: rules--keywords-index
+Generating target anchor ID for: chassis on page: rules--keywords-index
+Generating target anchor ID for: clatter-roll on page: rules--keywords-index
+Generating target anchor ID for: cleave on page: rules--keywords-index
+Generating target anchor ID for: condition on page: rules--keywords-index
+Generating target anchor ID for: cover on page: rules--keywords-index
+Generating target anchor ID for: boon on page: rules--keywords-index
+Generating target anchor ID for: bane on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: crafting-capacity on page: rules--keywords-index
+Generating target anchor ID for: critical on page: rules--keywords-index
+Generating target anchor ID for: critical-success on page: rules--keywords-index
+Generating target anchor ID for: custom-gear on page: rules--keywords-index
+Generating target anchor ID for: defence on page: rules--keywords-index
+Generating target anchor ID for: defence-tn on page: rules--keywords-index
+Generating target anchor ID for: delivery on page: rules--keywords-index
+Generating target anchor ID for: dice-pool on page: rules--keywords-index
+Generating target anchor ID for: difficulty on page: rules--keywords-index
+Generating target anchor ID for: dodge on page: rules--keywords-index
+Generating target anchor ID for: dominance on page: rules--keywords-index
+Generating target anchor ID for: dragging on page: rules--keywords-index
+Generating target anchor ID for: dumb on page: rules--keywords-index
+Generating target anchor ID for: duration on page: rules--keywords-index
+Generating target anchor ID for: easy on page: rules--keywords-index
+Generating target anchor ID for: elder on page: rules--keywords-index
+Generating target anchor ID for: elite on page: rules--keywords-index
+Generating target anchor ID for: encounter on page: rules--keywords-index
+Generating target anchor ID for: exploding-dice on page: rules--keywords-index
+Generating target anchor ID for: first-pick-my-mob-my-loot on page: rules--keywords-index
+Generating target anchor ID for: free-action on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: free-orders on page: rules--keywords-index
+Generating target anchor ID for: full-cover on page: rules--keywords-index
+Generating target anchor ID for: fumble on page: rules--keywords-index
+Generating target anchor ID for: fumbled on page: rules--keywords-index
+Generating target anchor ID for: fumbles on page: rules--keywords-index
+Generating target anchor ID for: fumbling on page: rules--keywords-index
+Generating target anchor ID for: gang on page: rules--keywords-index
+Generating target anchor ID for: gang-agenda on page: rules--keywords-index
+Generating target anchor ID for: gang-agenda on page: rules--keywords-index
+Generating target anchor ID for: gang-mark on page: rules--keywords-index
+Generating target anchor ID for: gang-quirks on page: rules--keywords-index
+Generating target anchor ID for: gang-sheet on page: rules--keywords-index
+Generating target anchor ID for: glory on page: rules--keywords-index
+Generating target anchor ID for: glory-raid-points on page: rules--keywords-index
+Generating target anchor ID for: greed-loot-value on page: rules--keywords-index
+Generating target anchor ID for: grit on page: rules--keywords-index
+Generating target anchor ID for: group-attack on page: rules--keywords-index
+Generating target anchor ID for: grunt on page: rules--keywords-index
+Generating target anchor ID for: hard on page: rules--keywords-index
+Generating target anchor ID for: infamy on page: rules--keywords-index
+Generating target anchor ID for: infamy-level on page: rules--keywords-index
+Generating target anchor ID for: infamy-mark on page: rules--keywords-index
+Generating target anchor ID for: junk on page: rules--keywords-index
+Generating target anchor ID for: lair-phase on page: rules--keywords-index
+Generating target anchor ID for: lair-upgrades on page: rules--keywords-index
+Generating target anchor ID for: legendary on page: rules--keywords-index
+Generating target anchor ID for: loitering on page: rules--keywords-index
+Generating target anchor ID for: loot on page: rules--keywords-index
+Generating target anchor ID for: loot-capacity on page: rules--keywords-index
+Generating target anchor ID for: loot-value on page: rules--keywords-index
+Generating target anchor ID for: main-stats on page: rules--keywords-index
+Generating target anchor ID for: manipulate on page: rules--keywords-index
+Generating target anchor ID for: marks on page: rules--keywords-index
+Generating target anchor ID for: max-mobs on page: rules--keywords-index
+Generating target anchor ID for: melee on page: rules--keywords-index
+Generating target anchor ID for: melee-attack on page: rules--keywords-index
+Generating target anchor ID for: mob on page: rules--keywords-index
+Generating target anchor ID for: mob on page: rules--keywords-index
+Generating target anchor ID for: morale on page: rules--keywords-index
+Generating target anchor ID for: morale-check on page: rules--keywords-index
+Generating target anchor ID for: mouth on page: rules--keywords-index
+Generating target anchor ID for: move on page: rules--keywords-index
+Generating target anchor ID for: movement on page: rules--keywords-index
+Generating target anchor ID for: named-item on page: rules--keywords-index
+Generating target anchor ID for: normal on page: rules--keywords-index
+Generating target anchor ID for: oddities on page: rules--keywords-index
+Generating target anchor ID for: oddity on page: rules--keywords-index
+Generating target anchor ID for: order on page: rules--keywords-index
+Generating target anchor ID for: order-action on page: rules--keywords-index
+Generating target anchor ID for: out-of-control on page: rules--keywords-index
+Generating target anchor ID for: over-laden on page: rules--keywords-index
+Generating target anchor ID for: overclock on page: rules--keywords-index
+Generating target anchor ID for: overreaching on page: rules--keywords-index
+Generating target anchor ID for: parry on page: rules--keywords-index
+Generating target anchor ID for: partial-cover on page: rules--keywords-index
+Generating target anchor ID for: passive on page: rules--keywords-index
+Generating target anchor ID for: passive-defence on page: rules--keywords-index
+Generating target anchor ID for: patron-saint on page: rules--keywords-index
+Generating target anchor ID for: persistent on page: rules--keywords-index
+Generating target anchor ID for: personal-quirks on page: rules--keywords-index
+Generating target anchor ID for: pile-of-bones on page: rules--keywords-index
+Generating target anchor ID for: player on page: rules--keywords-index
+Generating target anchor ID for: plunder on page: rules--keywords-index
+Generating target anchor ID for: power-words on page: rules--keywords-index
+Generating target anchor ID for: prone on page: rules--keywords-index
+Generating target anchor ID for: quality on page: rules--keywords-index
+Generating target anchor ID for: quirk on page: rules--keywords-index
+Generating target anchor ID for: quirk on page: rules--keywords-index
+Generating target anchor ID for: raid on page: rules--keywords-index
+Generating target anchor ID for: raid on page: rules--keywords-index
+Generating target anchor ID for: raid-boss-mvp on page: rules--keywords-index
+Generating target anchor ID for: raid-points on page: rules--keywords-index
+Generating target anchor ID for: raid-points on page: rules--keywords-index
+Generating target anchor ID for: ranged-attack on page: rules--keywords-index
+Generating target anchor ID for: reaction on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: relic on page: rules--keywords-index
+Generating target anchor ID for: restrained on page: rules--keywords-index
+Generating target anchor ID for: retire on page: rules--keywords-index
+Generating target anchor ID for: route-test on page: rules--keywords-index
+Generating target anchor ID for: salvage-roll on page: rules--keywords-index
+Generating target anchor ID for: dice-pool on page: rules--keywords-index
+Generating target anchor ID for: success on page: rules--keywords-index
+Generating target anchor ID for: fumble on page: rules--keywords-index
+Generating target anchor ID for: scarred on page: rules--keywords-index
+Generating target anchor ID for: scouting on page: rules--keywords-index
+Generating target anchor ID for: scrap on page: rules--keywords-index
+Generating target anchor ID for: scrap-cascade on page: rules--keywords-index
+Generating target anchor ID for: scrappy on page: rules--keywords-index
+Generating target anchor ID for: secondary-stats on page: rules--keywords-index
+Generating target anchor ID for: shenanigan on page: rules--keywords-index
+Generating target anchor ID for: size on page: rules--keywords-index
+Generating target anchor ID for: slink on page: rules--keywords-index
+Generating target anchor ID for: staggered on page: rules--keywords-index
+Generating target anchor ID for: standard on page: rules--keywords-index
+Generating target anchor ID for: standard-action on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: stat on page: rules--keywords-index
+Generating target anchor ID for: stats-main on page: rules--keywords-index
+Generating target anchor ID for: status-effects-conditions on page: rules--keywords-index
+Generating target anchor ID for: prone on page: rules--keywords-index
+Generating target anchor ID for: stunned on page: rules--keywords-index
+Generating target anchor ID for: weakened on page: rules--keywords-index
+Generating target anchor ID for: restrained on page: rules--keywords-index
+Generating target anchor ID for: blinded on page: rules--keywords-index
+Generating target anchor ID for: terrified on page: rules--keywords-index
+Generating target anchor ID for: staggered on page: rules--keywords-index
+Generating target anchor ID for: stunned on page: rules--keywords-index
+Generating target anchor ID for: success on page: rules--keywords-index
+Generating target anchor ID for: success on page: rules--keywords-index
+Generating target anchor ID for: superior on page: rules--keywords-index
+Generating target anchor ID for: tag on page: rules--keywords-index
+Generating target anchor ID for: tag on page: rules--keywords-index
+Generating target anchor ID for: taming on page: rules--keywords-index
+Generating target anchor ID for: target-number-tn on page: rules--keywords-index
+Generating target anchor ID for: terrified on page: rules--keywords-index
+Generating target anchor ID for: test on page: rules--keywords-index
+Generating target anchor ID for: threat on page: rules--keywords-index
+Generating target anchor ID for: tier on page: rules--keywords-index
+Generating target anchor ID for: tier-t on page: rules--keywords-index
+Generating target anchor ID for: tn on page: rules--keywords-index
+Generating target anchor ID for: tough on page: rules--keywords-index
+Generating target anchor ID for: trait on page: rules--keywords-index
+Generating target anchor ID for: traits-weapon-armor on page: rules--keywords-index
+Generating target anchor ID for: travel-event on page: rules--keywords-index
+Generating target anchor ID for: twist on page: rules--keywords-index
+Generating target anchor ID for: uncontrolled on page: rules--keywords-index
+Generating target anchor ID for: uncontrolled-mobs on page: rules--keywords-index
+Generating target anchor ID for: weakened on page: rules--keywords-index
+Generating target anchor ID for: wound on page: rules--keywords-index
+Generating target anchor ID for: wound on page: rules--keywords-index
+Generating target anchor ID for: xp on page: rules--keywords-index
+Generating target anchor ID for: zone on page: rules--keywords-index
+Generating target anchor ID for: zone-profile on page: rules--keywords-index
+Generating target anchor ID for: zone-trait on page: rules--keywords-index
+Generating target anchor ID for: zones on page: rules--keywords-index
+  ✅ Built environment stage (7 sections, 28 pages)
+  ✅ Built environment prod (14 sections, 14 pages)
+  ✅ Built environment dev-lore (1 sections, 1 pages)
+  ✅ Built environment stage-lore (6 sections, 6 pages)
+  ✅ Built environment prod-lore (1 sections, 1 pages)
+  ✅ Built index.html
+
+🤖 Generating LLM Single-File Continuous Bundles (Markdown & HTML)...
+  ✅ Generated Markdown & HTML LLM bundles (.md, .html, .txt)
+
+  ✅ Written status.json (success)
+
+🎉 Build complete! Files in: /home/ante/projects/gobbos/05_System_Tools/rulebook-site/dist
+Finished check at Mon 24 Aug 21:18:04 CEST 2026
+---------------------------------------------
+=============================================
+Update check triggered on Mon 24 Aug 21:28:43 CEST 2026
+=============================================
+No remote changes detected.
+Rebuilding site to ensure local sync...
+
+> gobbos-rulebook-site@1.0.0 build
+> node build.js
+
+🔨 Building Gobbos Rulebook & Lore Site (Multi-Page Agent-Friendly)...
+
+  ✅ Loaded 171 keywords for tooltips
+  ✅ Copied style.css
+  ✅ Copied robots.txt
+  ✅ Copied admin/ (Decap CMS)
+  ✅ Built environment dev (32 sections, 38 pages)
+Generating target anchor ID for: action on page: rules--keywords-index
+Generating target anchor ID for: ancestry on page: rules--keywords-index
+Generating target anchor ID for: area-of-effect-aoe on page: rules--keywords-index
+Generating target anchor ID for: assert-dominance on page: rules--keywords-index
+Generating target anchor ID for: attack on page: rules--keywords-index
+Generating target anchor ID for: bane on page: rules--keywords-index
+Generating target anchor ID for: bangaranga on page: rules--keywords-index
+Generating target anchor ID for: bangaranga-dice on page: rules--keywords-index
+Generating target anchor ID for: bangaranga-pool on page: rules--keywords-index
+Generating target anchor ID for: base-danger-rating on page: rules--keywords-index
+Generating target anchor ID for: bite-b on page: rules--keywords-index
+Generating target anchor ID for: blinded on page: rules--keywords-index
+Generating target anchor ID for: blueprint on page: rules--keywords-index
+Generating target anchor ID for: bone-oddity on page: rules--keywords-index
+Generating target anchor ID for: bone-pile on page: rules--keywords-index
+Generating target anchor ID for: boon on page: rules--keywords-index
+Generating target anchor ID for: boon on page: rules--keywords-index
+Generating target anchor ID for: boss on page: rules--keywords-index
+Generating target anchor ID for: brains on page: rules--keywords-index
+Generating target anchor ID for: bulk on page: rules--keywords-index
+Generating target anchor ID for: carry on page: rules--keywords-index
+Generating target anchor ID for: carry-capacity on page: rules--keywords-index
+Generating target anchor ID for: chassis on page: rules--keywords-index
+Generating target anchor ID for: clatter-roll on page: rules--keywords-index
+Generating target anchor ID for: cleave on page: rules--keywords-index
+Generating target anchor ID for: condition on page: rules--keywords-index
+Generating target anchor ID for: cover on page: rules--keywords-index
+Generating target anchor ID for: boon on page: rules--keywords-index
+Generating target anchor ID for: bane on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: crafting-capacity on page: rules--keywords-index
+Generating target anchor ID for: critical on page: rules--keywords-index
+Generating target anchor ID for: critical-success on page: rules--keywords-index
+Generating target anchor ID for: custom-gear on page: rules--keywords-index
+Generating target anchor ID for: defence on page: rules--keywords-index
+Generating target anchor ID for: defence-tn on page: rules--keywords-index
+Generating target anchor ID for: delivery on page: rules--keywords-index
+Generating target anchor ID for: dice-pool on page: rules--keywords-index
+Generating target anchor ID for: difficulty on page: rules--keywords-index
+Generating target anchor ID for: dodge on page: rules--keywords-index
+Generating target anchor ID for: dominance on page: rules--keywords-index
+Generating target anchor ID for: dragging on page: rules--keywords-index
+Generating target anchor ID for: dumb on page: rules--keywords-index
+Generating target anchor ID for: duration on page: rules--keywords-index
+Generating target anchor ID for: easy on page: rules--keywords-index
+Generating target anchor ID for: elder on page: rules--keywords-index
+Generating target anchor ID for: elite on page: rules--keywords-index
+Generating target anchor ID for: encounter on page: rules--keywords-index
+Generating target anchor ID for: exploding-dice on page: rules--keywords-index
+Generating target anchor ID for: first-pick-my-mob-my-loot on page: rules--keywords-index
+Generating target anchor ID for: free-action on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: free-orders on page: rules--keywords-index
+Generating target anchor ID for: full-cover on page: rules--keywords-index
+Generating target anchor ID for: fumble on page: rules--keywords-index
+Generating target anchor ID for: fumbled on page: rules--keywords-index
+Generating target anchor ID for: fumbles on page: rules--keywords-index
+Generating target anchor ID for: fumbling on page: rules--keywords-index
+Generating target anchor ID for: gang on page: rules--keywords-index
+Generating target anchor ID for: gang-agenda on page: rules--keywords-index
+Generating target anchor ID for: gang-agenda on page: rules--keywords-index
+Generating target anchor ID for: gang-mark on page: rules--keywords-index
+Generating target anchor ID for: gang-quirks on page: rules--keywords-index
+Generating target anchor ID for: gang-sheet on page: rules--keywords-index
+Generating target anchor ID for: glory on page: rules--keywords-index
+Generating target anchor ID for: glory-raid-points on page: rules--keywords-index
+Generating target anchor ID for: greed-loot-value on page: rules--keywords-index
+Generating target anchor ID for: grit on page: rules--keywords-index
+Generating target anchor ID for: group-attack on page: rules--keywords-index
+Generating target anchor ID for: grunt on page: rules--keywords-index
+Generating target anchor ID for: hard on page: rules--keywords-index
+Generating target anchor ID for: infamy on page: rules--keywords-index
+Generating target anchor ID for: infamy-level on page: rules--keywords-index
+Generating target anchor ID for: infamy-mark on page: rules--keywords-index
+Generating target anchor ID for: junk on page: rules--keywords-index
+Generating target anchor ID for: lair-phase on page: rules--keywords-index
+Generating target anchor ID for: lair-upgrades on page: rules--keywords-index
+Generating target anchor ID for: legendary on page: rules--keywords-index
+Generating target anchor ID for: loitering on page: rules--keywords-index
+Generating target anchor ID for: loot on page: rules--keywords-index
+Generating target anchor ID for: loot-capacity on page: rules--keywords-index
+Generating target anchor ID for: loot-value on page: rules--keywords-index
+Generating target anchor ID for: main-stats on page: rules--keywords-index
+Generating target anchor ID for: manipulate on page: rules--keywords-index
+Generating target anchor ID for: marks on page: rules--keywords-index
+Generating target anchor ID for: max-mobs on page: rules--keywords-index
+Generating target anchor ID for: melee on page: rules--keywords-index
+Generating target anchor ID for: melee-attack on page: rules--keywords-index
+Generating target anchor ID for: mob on page: rules--keywords-index
+Generating target anchor ID for: mob on page: rules--keywords-index
+Generating target anchor ID for: morale on page: rules--keywords-index
+Generating target anchor ID for: morale-check on page: rules--keywords-index
+Generating target anchor ID for: mouth on page: rules--keywords-index
+Generating target anchor ID for: move on page: rules--keywords-index
+Generating target anchor ID for: movement on page: rules--keywords-index
+Generating target anchor ID for: named-item on page: rules--keywords-index
+Generating target anchor ID for: normal on page: rules--keywords-index
+Generating target anchor ID for: oddities on page: rules--keywords-index
+Generating target anchor ID for: oddity on page: rules--keywords-index
+Generating target anchor ID for: order on page: rules--keywords-index
+Generating target anchor ID for: order-action on page: rules--keywords-index
+Generating target anchor ID for: out-of-control on page: rules--keywords-index
+Generating target anchor ID for: over-laden on page: rules--keywords-index
+Generating target anchor ID for: overclock on page: rules--keywords-index
+Generating target anchor ID for: overreaching on page: rules--keywords-index
+Generating target anchor ID for: parry on page: rules--keywords-index
+Generating target anchor ID for: partial-cover on page: rules--keywords-index
+Generating target anchor ID for: passive on page: rules--keywords-index
+Generating target anchor ID for: passive-defence on page: rules--keywords-index
+Generating target anchor ID for: patron-saint on page: rules--keywords-index
+Generating target anchor ID for: persistent on page: rules--keywords-index
+Generating target anchor ID for: personal-quirks on page: rules--keywords-index
+Generating target anchor ID for: pile-of-bones on page: rules--keywords-index
+Generating target anchor ID for: player on page: rules--keywords-index
+Generating target anchor ID for: plunder on page: rules--keywords-index
+Generating target anchor ID for: power-words on page: rules--keywords-index
+Generating target anchor ID for: prone on page: rules--keywords-index
+Generating target anchor ID for: quality on page: rules--keywords-index
+Generating target anchor ID for: quirk on page: rules--keywords-index
+Generating target anchor ID for: quirk on page: rules--keywords-index
+Generating target anchor ID for: raid on page: rules--keywords-index
+Generating target anchor ID for: raid on page: rules--keywords-index
+Generating target anchor ID for: raid-boss-mvp on page: rules--keywords-index
+Generating target anchor ID for: raid-points on page: rules--keywords-index
+Generating target anchor ID for: raid-points on page: rules--keywords-index
+Generating target anchor ID for: ranged-attack on page: rules--keywords-index
+Generating target anchor ID for: reaction on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: relic on page: rules--keywords-index
+Generating target anchor ID for: restrained on page: rules--keywords-index
+Generating target anchor ID for: retire on page: rules--keywords-index
+Generating target anchor ID for: route-test on page: rules--keywords-index
+Generating target anchor ID for: salvage-roll on page: rules--keywords-index
+Generating target anchor ID for: dice-pool on page: rules--keywords-index
+Generating target anchor ID for: success on page: rules--keywords-index
+Generating target anchor ID for: fumble on page: rules--keywords-index
+Generating target anchor ID for: scarred on page: rules--keywords-index
+Generating target anchor ID for: scouting on page: rules--keywords-index
+Generating target anchor ID for: scrap on page: rules--keywords-index
+Generating target anchor ID for: scrap-cascade on page: rules--keywords-index
+Generating target anchor ID for: scrappy on page: rules--keywords-index
+Generating target anchor ID for: secondary-stats on page: rules--keywords-index
+Generating target anchor ID for: shenanigan on page: rules--keywords-index
+Generating target anchor ID for: size on page: rules--keywords-index
+Generating target anchor ID for: slink on page: rules--keywords-index
+Generating target anchor ID for: staggered on page: rules--keywords-index
+Generating target anchor ID for: standard on page: rules--keywords-index
+Generating target anchor ID for: standard-action on page: rules--keywords-index
+Generating target anchor ID for: 02-combat on page: rules--keywords-index
+Generating target anchor ID for: stat on page: rules--keywords-index
+Generating target anchor ID for: stats-main on page: rules--keywords-index
+Generating target anchor ID for: status-effects-conditions on page: rules--keywords-index
+Generating target anchor ID for: prone on page: rules--keywords-index
+Generating target anchor ID for: stunned on page: rules--keywords-index
+Generating target anchor ID for: weakened on page: rules--keywords-index
+Generating target anchor ID for: restrained on page: rules--keywords-index
+Generating target anchor ID for: blinded on page: rules--keywords-index
+Generating target anchor ID for: terrified on page: rules--keywords-index
+Generating target anchor ID for: staggered on page: rules--keywords-index
+Generating target anchor ID for: stunned on page: rules--keywords-index
+Generating target anchor ID for: success on page: rules--keywords-index
+Generating target anchor ID for: success on page: rules--keywords-index
+Generating target anchor ID for: superior on page: rules--keywords-index
+Generating target anchor ID for: tag on page: rules--keywords-index
+Generating target anchor ID for: tag on page: rules--keywords-index
+Generating target anchor ID for: taming on page: rules--keywords-index
+Generating target anchor ID for: target-number-tn on page: rules--keywords-index
+Generating target anchor ID for: terrified on page: rules--keywords-index
+Generating target anchor ID for: test on page: rules--keywords-index
+Generating target anchor ID for: threat on page: rules--keywords-index
+Generating target anchor ID for: tier on page: rules--keywords-index
+Generating target anchor ID for: tier-t on page: rules--keywords-index
+Generating target anchor ID for: tn on page: rules--keywords-index
+Generating target anchor ID for: tough on page: rules--keywords-index
+Generating target anchor ID for: trait on page: rules--keywords-index
+Generating target anchor ID for: traits-weapon-armor on page: rules--keywords-index
+Generating target anchor ID for: travel-event on page: rules--keywords-index
+Generating target anchor ID for: twist on page: rules--keywords-index
+Generating target anchor ID for: uncontrolled on page: rules--keywords-index
+Generating target anchor ID for: uncontrolled-mobs on page: rules--keywords-index
+Generating target anchor ID for: weakened on page: rules--keywords-index
+Generating target anchor ID for: wound on page: rules--keywords-index
+Generating target anchor ID for: wound on page: rules--keywords-index
+Generating target anchor ID for: xp on page: rules--keywords-index
+Generating target anchor ID for: zone on page: rules--keywords-index
+Generating target anchor ID for: zone-profile on page: rules--keywords-index
+Generating target anchor ID for: zone-trait on page: rules--keywords-index
+Generating target anchor ID for: zones on page: rules--keywords-index
+  ✅ Built environment stage (7 sections, 28 pages)
+  ✅ Built environment prod (14 sections, 14 pages)
+  ✅ Built environment dev-lore (1 sections, 1 pages)
+  ✅ Built environment stage-lore (6 sections, 6 pages)
+  ✅ Built environment prod-lore (1 sections, 1 pages)
+  ✅ Built index.html
+
+🤖 Generating LLM Single-File Continuous Bundles (Markdown & HTML)...
+  ✅ Generated Markdown & HTML LLM bundles (.md, .html, .txt)
+
+  ✅ Written status.json (success)
+
+🎉 Build complete! Files in: /home/ante/projects/gobbos/05_System_Tools/rulebook-site/dist
+Finished check at Mon 24 Aug 21:28:44 CEST 2026
+---------------------------------------------

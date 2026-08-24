@@ -1,0 +1,4 @@
+nohup: ignoring input
+Server is running at http://localhost:8666
+Review tool is running at http://localhost:8666/review
+Serving files from: /home/ante/projects/gobbos/05_System_Tools/rulebook-site/dist

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adversaries_and_Threats — PROD Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. The official rulebook">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,500;0,700;0,800;1,700&family=Alegreya:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab env-tab--active">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right" style="display: flex; gap: 8px; align-items: center;">
+      <div class="llm-dropdown-container">
+        <button class="llm-btn" id="llmDropdownBtn" title="LLM Continuous Markdown Bundles" aria-label="LLM Bundles" aria-expanded="false">
+          <span>🤖 LLM Files</span>
+          <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="llm-dropdown-menu" id="llmDropdownMenu">
+          <div class="llm-dropdown-header">LLM HTML (Gemini / Web)</div>
+          <a href="all_llm.html" target="_blank" class="llm-dropdown-item">👑 Master All (Rules + Lore)</a>
+          <a href="rules_all_llm.html" target="_blank" class="llm-dropdown-item">📜 Combined Rules (PROD + STAGE)</a>
+          <a href="rules_stage_llm.html" target="_blank" class="llm-dropdown-item">🧪 STAGE Rules</a>
+          <a href="rules_prod_llm.html" target="_blank" class="llm-dropdown-item">📖 PROD Rules</a>
+          <a href="lore_all_llm.html" target="_blank" class="llm-dropdown-item">🔮 Combined Lore</a>
+          <a href="lore_stage_llm.html" target="_blank" class="llm-dropdown-item">📜 STAGE Lore</a>
+          <div class="llm-dropdown-divider"></div>
+          <div class="llm-dropdown-header">Raw Markdown & Index</div>
+          <a href="all_llm.md" target="_blank" class="llm-dropdown-item">📝 all_llm.md</a>
+          <a href="llms.txt" target="_blank" class="llm-dropdown-item">📋 /llms.txt Index</a>
+        </div>
+      </div>
+      <button class="sync-btn" id="headerSyncBtn" title="Sync & Rebuild Site" aria-label="Sync and rebuild site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sync-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Sync</span>
+      </button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">PROD Rules</h2>
+        <p class="sidebar-subtitle">The official rulebook</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="prod.html" class="nav-link" data-target="rules--dice">Dice</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="characters-and-mobs"><span class="toggle-icon">▸</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" style="display: none;"><li><a href="prod--characters-and-mobs--stats.html" class="nav-link" data-target="characters-and-mobs--stats">Stats</a></li></ul></div><div class="nav-group nav-group--solo"><a href="prod--core-resolution.html" class="nav-link nav-link--solo" data-target="core-resolution">Core_Resolution</a></div><div class="nav-group nav-group--solo"><a href="prod--boss-profile-and-gang.html" class="nav-link nav-link--solo" data-target="boss-profile-and-gang">Boss_Profile_and_Gang</a></div><div class="nav-group nav-group--solo"><a href="prod--action-economy-and-turn-flow.html" class="nav-link nav-link--solo" data-target="action-economy-and-turn-flow">Action_Economy_and_Turn_Flow</a></div><div class="nav-group nav-group--solo"><a href="prod--zones-and-movement.html" class="nav-link nav-link--solo" data-target="zones-and-movement">Zones_and_Movement</a></div><div class="nav-group nav-group--solo"><a href="prod--combat-engine.html" class="nav-link nav-link--solo" data-target="combat-engine">Combat_Engine</a></div><div class="nav-group nav-group--solo"><a href="prod--mob-mechanics.html" class="nav-link nav-link--solo" data-target="mob-mechanics">Mob_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="prod--damage-grit-and-wounds.html" class="nav-link nav-link--solo" data-target="damage-grit-and-wounds">Damage_Grit_and_Wounds</a></div><div class="nav-group nav-group--solo"><a href="prod--magic-and-bangaranga.html" class="nav-link nav-link--solo" data-target="magic-and-bangaranga">Magic_and_Bangaranga</a></div><div class="nav-group nav-group--solo"><a href="prod--the-raid-loop.html" class="nav-link nav-link--solo" data-target="the-raid-loop">The_Raid_Loop</a></div><div class="nav-group nav-group--solo"><a href="prod--the-lair-loop-and-progression.html" class="nav-link nav-link--solo" data-target="the-lair-loop-and-progression">The_Lair_Loop_and_Progression</a></div><div class="nav-group nav-group--solo"><a href="prod--journeys-and-hazards.html" class="nav-link nav-link--solo" data-target="journeys-and-hazards">Journeys_and_Hazards</a></div><div class="nav-group nav-group--solo"><a href="prod--adversaries-and-threats.html" class="nav-link nav-link--solo nav-link--active" data-target="adversaries-and-threats">Adversaries_and_Threats</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; align-items: center; justify-content: space-between; gap: 16px; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        <span>⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.</span>
+        <button class="sync-banner-btn" id="bannerSyncBtn">Rerun Sync</button>
+      </div>
+      <h1 id="adversaries-and-threats" tabindex="-1">Adversaries and Threats</h1>
+<p><em>Gobbos are small, loud, and easily crushed underfoot. The world is infested with towering knights, lumbering trolls, and howling beasts that want nothing more than to wipe your gang off the map. But tall-men fight in rigid formations, and monsters are predictable. Goblins win through numbers, dirty tricks, and chaotic swarm violence.</em></p>
+<hr>
+<h2 id="1-deterministic-threat-resolution-engine" tabindex="-1">1. Deterministic Threat Resolution Engine</h2>
+<p>In Gobbos, the Game Master (GM) <strong>never rolls dice</strong>. Adversaries do not test for success, roll to hit, or roll variable damage. Every enemy action is a deterministic, incoming physical threat.</p>
+<pre><code class="language-mermaid">flowchart TD
+    A[&quot;Adversary Declares Attack&lt;br&gt;(Static Threat Profile + Flat Damage)&quot;] --&gt; CR[&quot;Goblin Boss Clatter Roll&quot;]
+    CR --&gt; SA{&quot;Saved Action Available?&quot;}
+    SA --&gt;|Yes| E1[&quot;Roll Active Stat Dice + Passive Armor Dice&quot;]
+    SA --&gt;|No / 0 Saved Actions| E2[&quot;Cannot Dodge/Parry!&lt;br&gt;(Roll Passive Armor Dice Only)&quot;]
+    E1 --&gt; ST{&quot;Stat Successes?&quot;}
+    ST --&gt;|Successes &gt;= Threat TN| ZD[&quot;0 Damage Taken&lt;br&gt;(Clean Dodge/Parry)&quot;]
+    ST --&gt;|Successes &lt; Threat TN| PA[&quot;Apply Armor Mitigation&quot;]
+    E2 --&gt; PA
+    PA --&gt; RD[&quot;Every Armor Die 5+ Reduces Damage by 1&lt;br&gt;Remaining Damage Deducted from Grit&quot;]
+</code></pre>
+<h3 id="threat-profiles-and-flat-damage" tabindex="-1">Threat Profiles and Flat Damage</h3>
+<p>Every enemy attack is defined by a <strong>Threat Profile</strong> (<code>[Stat] [Target Face]+/[Successes]</code>) and a flat <strong>Damage</strong> value:</p>
+<ul>
+<li><strong>Active Defense (Evasion):</strong> When targeted by an attack, a <strong>Goblin Boss</strong> with a saved <strong>Standard Action</strong> rolls active stat dice (<strong>Slink</strong> to <strong>Dodge</strong>, or <strong>Tough</strong> to <strong>Parry</strong> if wielding a shield or heavy weapon). If the successes rolled meet or exceed the attack’s <strong>Threat TN</strong>, the attack misses completely (<strong>0 Damage taken</strong>).</li>
+<li><strong>Passive Defense (Armor):</strong> If active evasion fails or the <strong>Goblin Boss</strong> has 0 saved actions, the attack hits. The player rolls passive <strong>Armor Dice</strong>; each die showing <strong>5+</strong> reduces incoming flat <strong>Damage</strong> by <strong>1</strong>.</li>
+<li><strong>Unmitigated Damage:</strong> Any remaining damage reduces the target’s <strong>Grit</strong> (for Bosses) or removes health dice values (for Mobs).</li>
+</ul>
+<hr>
+<h2 id="2-the-three-enemy-scales" tabindex="-1">2. The Three Enemy Scales</h2>
+<p>Adversaries are categorized into three distinct mechanical scales to govern how they absorb damage and die:</p>
+<h3 id="1-standard-enemies-one-hit-kill" tabindex="-1">1. Standard Enemies (One-Hit Kill)</h3>
+<p>Standard enemies represent individual grunts, peasants, city guards, footpads, and minor monsters:</p>
+<ul>
+<li><strong>One-Hit Kill:</strong> When a player’s attack scores successes equal to or greater than the standard enemy’s <strong>Defence TN</strong>, the enemy is killed instantly and removed from the map.</li>
+<li><strong>No Wounds:</strong> Standard enemies do not possess a wounds track. Rolling fewer successes than <strong>Defence TN</strong> inflicts 0 damage (though it may inflict the <strong>Staggered</strong> condition if <strong>Impact Size</strong> meets or exceeds the target’s physical <strong>Size</strong>).</li>
+</ul>
+<h3 id="2-elites-and-bosses-the-wounds-track" tabindex="-1">2. Elites and Bosses (The Wounds Track)</h3>
+<p>Elites and Bosses represent formidable champions, armored commanders, and colossal apex predators:</p>
+<ul>
+<li><strong>The Wounds Track:</strong> Elites and Bosses track survivability using a <strong>Wounds Track</strong> (typically <strong>2 to 8 Wounds</strong>).</li>
+<li><strong>The Overkill Rule:</strong> An attack deals <strong>1 Wound for every full multiple of the target’s Defence TN</strong> scored on a single attack roll:</li>
+</ul>
+<p><strong>Wounds Dealt</strong> = <strong>Attack Successes</strong> / <strong>Target Defence TN</strong> (rounded down)</p>
+<blockquote>
+<blockquote>
+<p><strong>GOLDEN RULE: No Fractional Wounds</strong>
+Leftover successes that do not form a complete multiple of the enemy’s <strong>Defence TN</strong> are discarded. They do not carry over to subsequent attacks.</p>
+</blockquote>
+</blockquote>
+<h3 id="3-enemy-mobs-swarms" tabindex="-1">3. Enemy Mobs (Swarms)</h3>
+<p>Enemy Mobs represent coordinated squads of standard foes acting as a single unit (e.g. a squad of 4 Town Watchmen or a swarm of 5 Giant Rats):</p>
+<ul>
+<li><strong>Symmetrical Health Dice:</strong> An Enemy <strong>Mob</strong> of <strong>Size X</strong> is tracked using <strong>X physical d6s</strong> on the table, each starting at the <strong>“6” face</strong>.</li>
+<li><strong>Damage Resolution:</strong> Single-target strikes damage the Mob’s lowest active health die, spilling over to the next lowest die when a die reaches 0 and is removed.</li>
+<li><strong>Frontline Rule:</strong> Melee attacks from a player <strong>Mob</strong> apply damage simultaneously to a number of enemy health dice equal to the attacking Mob’s current <strong>Size</strong>.</li>
+<li><strong>Area Threats (<code>[AoE]</code>):</strong> Full-zone explosive or breath hazards apply flat damage to <strong>every single active die</strong> in the Enemy Mob’s pool simultaneously.</li>
+<li><strong>The No Elite Mobs Rule:</strong> Mobs can only consist of standard, one-hit-kill units. Elite and Boss enemies must always be fought as individual entities.</li>
+</ul>
+<hr>
+<h2 id="3-enemy-mob-damage-scaling" tabindex="-1">3. Enemy Mob Damage Scaling</h2>
+<p>An Enemy Mob’s automatic attack damage scales deterministically with its current <strong>Size</strong>:</p>
+<p><strong>Enemy Mob Damage</strong> = <strong>Base Unit Damage</strong> + (<strong>Current Mob Size</strong> - 1)</p>
+<ul>
+<li><strong>Attacking a Player Mob:</strong> The Enemy Mob delivers this damage across the frontline, affecting a number of player goblin health dice equal to the Enemy Mob’s current <strong>Size</strong> (targeting the lowest-value dice first).</li>
+<li><strong>Attacking a Goblin Boss:</strong> The Enemy Mob delivers this total damage as a single combined strike, which the <strong>Goblin Boss</strong> defends against using a single <strong>Clatter Roll</strong>.</li>
+</ul>
+<hr>
+<h2 id="4-the-three-layer-trait-hierarchy" tabindex="-1">4. The Three-Layer Trait Hierarchy</h2>
+<p>To eliminate rulebook page-flipping and prevent rules bloat during combat, all adversary behaviors are organized into a strict three-layer hierarchy.</p>
+<pre><code class="language-mermaid">flowchart TD
+    L1[&quot;LAYER 1: UNIVERSAL ANCESTRIES&lt;br&gt;(Beast, Humanoid, Undead, Monstrosity, Fiend)&lt;br&gt;- Universal biological/psychological rules&lt;br&gt;- Resolved by GM without printing on individual statblocks&quot;] --&gt; L2[&quot;LAYER 2: STANDARDIZED TAGS&lt;br&gt;([Hardened], [Heavy], [Fast], [Regenerating], etc.)&lt;br&gt;- Universal physical modifiers from Master Tag Index&lt;br&gt;- Compact keyword notation on statblocks&quot;]
+    L2 --&gt; L3[&quot;LAYER 3: UNIQUE STATBLOCK TRAITS&lt;br&gt;(Custom monster mechanics, reactions, and special triggers)&lt;br&gt;- Standard Enemies: Maximum 1 Unique Trait&lt;br&gt;- Elites &amp; Bosses: Maximum 2 Unique Traits&lt;br&gt;- Printed directly on the creature's statblock&quot;]
+</code></pre>
+<h3 id="layer-1-universal-ancestries" tabindex="-1">Layer 1: Universal Ancestries</h3>
+<p>Every adversary belongs to exactly one <strong>Ancestry</strong>, establishing its core psychological and biological baseline:</p>
+<h4 id="1-beast" tabindex="-1">1. Beast</h4>
+<ul>
+<li><strong>Morale Vulnerability:</strong> Triggers an immediate <strong>Morale Check</strong> if exposed to sudden <code>[Fire]</code> or <code>[Loud]</code> tags in its <strong>Zone</strong>.</li>
+<li><strong>Predatory Instinct:</strong> Gains a <strong>Boon 1 (+1d)</strong> to attack targets with the <code>[Tasty]</code> or <code>[Bleeding]</code> tag, prioritizing them over all other targets.</li>
+<li><strong>Social Immunity:</strong> Immune to verbal <strong>Mouth</strong> manipulation or intimidation.</li>
+</ul>
+<h4 id="2-humanoid" tabindex="-1">2. Humanoid</h4>
+<ul>
+<li><strong>Tactical Discipline:</strong> Utilizes cover and prioritizes attacking enemy commanders (<strong>Goblin Bosses</strong>).</li>
+<li><strong>Standard Morale:</strong> Subject to group <strong>Morale Checks</strong> upon suffering 50% casualties or the death of a leader.</li>
+<li><strong>Plunder:</strong> Drops salvageable weapons, armor, and <strong>Loot</strong> upon defeat.</li>
+</ul>
+<h4 id="3-undead" tabindex="-1">3. Undead</h4>
+<ul>
+<li><strong>Morale &amp; Fear Immunity:</strong> Completely immune to <strong>Morale Checks</strong> and the <strong>Terrified</strong> condition.</li>
+<li><strong>Biological Immunity:</strong> Immune to the <strong>Weakened</strong> condition caused by poison or disease; immune to <code>[Bleeding]</code>.</li>
+<li><strong>Holy Vulnerability:</strong> Attacks carrying the <code>[Angelic]</code> or <code>[Light]</code> tags deal <strong>+1 Success</strong> (lowering effective <strong>Defence TN</strong> by 1).</li>
+</ul>
+<h4 id="4-monstrosity" tabindex="-1">4. Monstrosity</h4>
+<ul>
+<li><strong>Mass &amp; Stagger Resistance:</strong> Immune to the <strong>Staggered</strong> condition from partial hits unless the attack’s <strong>Impact Size</strong> meets or exceeds the monster’s physical <strong>Size</strong> (Impact Size &gt;= Size).</li>
+<li><strong>Natural Cleave:</strong> All melee attacks possess the <code>Cleave 2</code> trait (or higher), sweeping across multiple frontline health dice.</li>
+</ul>
+<h4 id="5-fiend-demon" tabindex="-1">5. Fiend (Demon)</h4>
+<ul>
+<li><strong>Fire &amp; Terror Immunity:</strong> Immune to damage and hazards with the <code>[Fire]</code> tag; immune to <strong>Terrified</strong> and <strong>Dumb</strong> conditions.</li>
+<li><strong>Holy Bane:</strong> Attacks carrying the <code>[Angelic]</code> tag ignore passive armor and reduce the Fiend’s <strong>Defence TN</strong> by 1.</li>
+<li><strong>Chaos Retaliation:</strong> When a <strong>Player</strong> rolls a <strong>Fumble</strong> within 1 <strong>Zone</strong> of a Fiend, the Fiend immediately triggers a free reaction attack against that player.</li>
+</ul>
+<h3 id="layer-2-standardized-tags" tabindex="-1">Layer 2: Standardized Tags</h3>
+<p>Tags represent universal physical modifiers (e.g. <code>[Hardened]</code>, <code>[Heavy]</code>, <code>[Teeny]</code>, <code>[Fast]</code>, <code>[Regenerating]</code>, <code>[Spiky]</code>). Their mechanical effects are identical across items, environments, and creatures (see <a href="05_Combat_Engine.md">Combat Engine</a>).</p>
+<h3 id="layer-3-unique-statblock-traits" tabindex="-1">Layer 3: Unique Statblock Traits</h3>
+<p>Unique traits represent specialized combat maneuvers, reactions, or unique abilities printed directly on the creature’s statblock:</p>
+<ul>
+<li><strong>Standard Enemies:</strong> Limited to a maximum of <strong>one (1) unique statblock trait</strong>.</li>
+<li><strong>Elites and Bosses:</strong> Limited to a maximum of <strong>two (2) unique statblock traits</strong>.</li>
+</ul>
+<hr>
+<h2 id="5-enemy-action-economy-reactions-and-group-attacks" tabindex="-1">5. Enemy Action Economy, Reactions, and Group Attacks</h2>
+<h3 id="action-economy" tabindex="-1">Action Economy</h3>
+<ul>
+<li><strong>Standard Action Pool:</strong> On the Enemy Active Turn, each enemy unit (Standard, Mob, or Elite) receives <strong>two (2) actions</strong> per round to spend on <strong>Move</strong>, <strong>Attack</strong>, or <strong>Manipulate</strong> actions.</li>
+<li><strong>Apex Bosses:</strong> Colossal Bosses may possess traits granting <strong>three (3) actions</strong> or multi-phase action clocks.</li>
+</ul>
+<h3 id="enemy-reactions" tabindex="-1">Enemy Reactions</h3>
+<p>Adversaries can trigger specialized reactions (such as parrying shields, retaliatory strikes, or steam vents) outside their active turn:</p>
+<ul>
+<li><strong>Action Deduction:</strong> Triggering an active reaction immediately expends <strong>1 action</strong> from the enemy’s upcoming active turn.</li>
+<li><strong>Reaction Cap:</strong> Standard enemies and Elites may perform a maximum of <strong>one (1) reaction per round</strong>, and only if they have at least 1 saved action remaining. If an enemy has already spent both actions on its turn, it cannot trigger active reactions until actions reset at Round Start.</li>
+</ul>
+<h3 id="group-attacks-enemy-swarms-vs-bosses" tabindex="-1">Group Attacks (Enemy Swarms vs Bosses)</h3>
+<p>To prevent overwhelming action-economy drain and endless individual rolls when multiple standard enemies surround a single <strong>Goblin Boss</strong>:</p>
+<ul>
+<li><strong>Combined Strike:</strong> Up to <strong>three (3) standard enemies</strong> in melee range of the same <strong>Goblin Boss</strong> combine their attacks into a single strike.</li>
+<li><strong>Damage Formula:</strong> <strong>Combined Damage</strong> = <strong>Base Damage</strong> + 1 per additional attacking enemy.</li>
+<li><strong>Single Defense:</strong> The <strong>Goblin Boss</strong> defends against the combined blow using a single <strong>Clatter Roll</strong>.</li>
+</ul>
+<hr>
+<h2 id="6-enemy-morale-swarm-terror-and-rallying" tabindex="-1">6. Enemy Morale, Swarm Terror, and Rallying</h2>
+<h3 id="the-morale-trigger" tabindex="-1">The Morale Trigger</h3>
+<p>An enemy group must make an immediate <strong>Morale Check</strong> during the <strong>Round Closure Phase</strong> if they suffer catastrophic collapse:</p>
+<ol>
+<li>The enemy group loses <strong>50% or more of its total units</strong> (or 50% of an Enemy Mob’s starting <strong>Size</strong>).</li>
+<li>The enemy group’s <strong>Commander</strong> is slain.</li>
+</ol>
+<h3 id="the-swarm-terror-check" tabindex="-1">The Swarm Terror Check</h3>
+<p>The players roll a combined <strong>Swarm Terror Pool</strong> against the enemy group’s static <strong>Morale TN</strong> (testing against <strong>5+</strong> difficulty):</p>
+<p><strong>Swarm Terror Dice</strong> = <strong>Surviving Mob Sizes in Zone/Adjacent</strong> + <strong>Surviving Bosses in Zone/Adjacent</strong></p>
+<ul>
+<li><strong>Success (Successes &gt;= Morale TN):</strong> The enemy group breaks! The enemies drop heavy gear and must spend <strong>two (2) Move actions</strong> on their turns fleeing toward the nearest exit.</li>
+<li><strong>Failure (Successes &lt; Morale TN):</strong> The enemies hold their ground and continue fighting.</li>
+</ul>
+<h3 id="the-commander-rally" tabindex="-1">The Commander Rally</h3>
+<p>If an <strong>Enemy Commander</strong> survives and did not break, the commander may spend <strong>1 Standard Action</strong> on its turn to attempt a <strong>Rally</strong>:</p>
+<ul>
+<li><strong>Opposed Roll:</strong> The players roll their current <strong>Swarm Terror Pool</strong> against the Commander’s <strong>Morale TN</strong>.</li>
+<li><strong>Resolution:</strong> If the players succeed, the goblin shouting and shield-banging drowns out the commander, and the troops continue fleeing. If the players fail, the commander restores order, and the troops return to combat.</li>
+</ul>
+<hr>
+<h2 id="7-adversary-and-npc-statblock-structural-schema" tabindex="-1">7. Adversary and NPC Statblock Structural Schema</h2>
+<p>[CONTENT EXTENSION POINT: Bestiary &amp; Adversary Statblocks]</p>
+<p>All living bestiary compendiums, monster catalogs, and NPC adversaries must follow this deterministic statblock schema:</p>
+<pre><code class="language-markdown">### [Enemy Name]
+*[Threat Classification: Standard | Elite | Boss | Enemy Mob] [Ancestry: Beast | Humanoid | Undead | Monstrosity | Fiend | Construct] (Size [0–5])*  
+*(If Elite or Boss) **Wounds:** [Wounds Track Value, e.g. 2–8]*  
+*(If Enemy Mob) **Mob Size:** [Size 1–5, tracked via X physical d6s]*
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **[Defence TN 1–4]** | **[Zones 1–4]** | **[Morale Profile, e.g. 5+/2, Immune]** | `[Tag 1]`, `[Tag 2]` |
+
+**Special — [Unique Trait 1 Name]:** [Mechanical rule, trigger condition, and resolution. Standard enemies max 1 trait, Elites/Bosses max 2.]  
+**Special — [Unique Trait 2 Name (Elite/Boss Only)]:** [Second unique trait or triggered reaction.]
+
+#### Attacks
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **[Attack Name 1]** | `[Stat] [Face]+/[TN]` (e.g. `Slink 5+/1`, `Tough 5+/2`) | [Flat Damage, e.g. 1–4] | [Melee | Ranged (X Zones) | Zone-Wide] | [Traits: Cleave X, Piercing, inflicts Condition on failed evasion] |
+| **[Attack Name 2 (Optional)]** | `[Stat] [Face]+/[TN]` | [Flat Damage] | [Range] | [Special effects] |
+
+**Reactions:** [Specific out-of-turn triggers, deducting 1 action from active turn if used.]  
+**Flaw Hook / Vulnerability:** [Specific Tag interaction that lowers Defence TN or makes attacks Easy (4+).]  
+**Plunder:** [Salvageable Scrap tier, Loot Value tokens, or Oddity parts dropped on defeat.]
+</code></pre>
+<hr>
+<h2 id="8-mechanical-gaps-and-system-clarifications" tabindex="-1">8. Mechanical Gaps and System Clarifications</h2>
+<p>[MISSING RULE / GAP: Enemy reaction economy is capped at 1 reaction per round for Standard and Elite foes. An enemy must have at least 1 saved action remaining to react; an enemy that spent both actions on its turn cannot react until Round Start.]</p>
+<p>[MISSING RULE / GAP: The Swarm Terror pool formula sums both surviving Mob Sizes and surviving Goblin Bosses in the combat zone and adjacent zones. This ensures high-chaos goblin swarms exert psychological pressure proportional to their collective presence.]</p>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- LLM Dropdown Toggle ---
+    (function() {
+      const btn = document.getElementById('llmDropdownBtn');
+      const menu = document.getElementById('llmDropdownMenu');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = menu.classList.toggle('show');
+        btn.setAttribute('aria-expanded', isOpen);
+      });
+
+      document.addEventListener('click', () => {
+        menu.classList.remove('show');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    })();
+
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'flex';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+
+    // --- Anchor Scroll Fix ---
+    (function() {
+      function scrollToHash() {
+        if (window.location.hash) {
+          const id = decodeURIComponent(window.location.hash.substring(1));
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }, 100);
+          }
+        }
+      }
+      window.addEventListener('hashchange', scrollToHash);
+      window.addEventListener('DOMContentLoaded', scrollToHash);
+      window.addEventListener('load', scrollToHash);
+    })();
+
+    // --- Manual Sync Trigger ---
+    (function() {
+      const headerBtn = document.getElementById('headerSyncBtn');
+      const bannerBtn = document.getElementById('bannerSyncBtn');
+      
+      function handleSync(btn) {
+        if (!btn) return;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        
+        // Add spinning/loading animation class
+        if (btn.classList.contains('sync-btn')) {
+          btn.classList.add('sync-btn--spinning');
+          btn.querySelector('span').textContent = 'Syncing...';
+        } else {
+          btn.textContent = 'Syncing...';
+        }
+        
+        fetch('/api/run-sync', { method: 'POST' })
+          .then(res => {
+            if (!res.ok) throw new Error('Server returned error status: ' + res.status);
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.status === 'success') {
+              if (btn.classList.contains('sync-btn')) {
+                btn.querySelector('span').textContent = 'Success!';
+              } else {
+                btn.textContent = 'Success!';
+              }
+              // Reload page to reflect changes
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              throw new Error(data.error || 'Sync failed');
+            }
+          })
+          .catch(err => {
+            console.error('Sync failed:', err);
+            alert('Failed to rerun sync: ' + err.message);
+            // Restore button
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            if (btn.classList.contains('sync-btn')) {
+              btn.classList.remove('sync-btn--spinning');
+            }
+          });
+      }
+
+      if (headerBtn) {
+        headerBtn.addEventListener('click', () => handleSync(headerBtn));
+      }
+      if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
+    })();
+  </script>
+
+  <!-- ===== Mermaid.js Integration ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    (function() {
+      function initMermaid() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        
+        const lightThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#f0e6d6',
+          primaryTextColor: '#231c16',
+          primaryBorderColor: '#8c2d19',
+          lineColor: '#c68a35',
+          secondaryColor: '#fdfbf7',
+          tertiaryColor: '#e5dcce',
+          edgeLabelBackground: '#faf5ec',
+          nodeBorder: '#8c2d19',
+          clusterBkg: '#eee5d5',
+          clusterBorder: '#c68a35',
+          titleColor: '#8c2d19'
+        };
+
+        const darkThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#241e1a',
+          primaryTextColor: '#e6dfd5',
+          primaryBorderColor: '#d44d32',
+          lineColor: '#d4a359',
+          secondaryColor: '#1a1613',
+          tertiaryColor: '#2a221c',
+          edgeLabelBackground: '#171412',
+          nodeBorder: '#d44d32',
+          clusterBkg: '#1c1815',
+          clusterBorder: '#8c6a38',
+          titleColor: '#d44d32'
+        };
+
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: 'base',
+          themeVariables: isDark ? darkThemeVariables : lightThemeVariables,
+          flowchart: {
+            curve: 'basis',
+            padding: 16,
+            nodeSpacing: 50,
+            rankSpacing: 40,
+            htmlLabels: true
+          },
+          securityLevel: 'loose'
+        });
+
+        // Convert code blocks with language-mermaid to <pre class="mermaid">
+        const mermaidCodeBlocks = document.querySelectorAll('pre > code.language-mermaid');
+        mermaidCodeBlocks.forEach((codeEl) => {
+          const preEl = codeEl.parentElement;
+          if (preEl && preEl.tagName === 'PRE') {
+            // Save raw mermaid source text if not already saved
+            if (!preEl.getAttribute('data-mermaid-src')) {
+              preEl.setAttribute('data-mermaid-src', codeEl.textContent);
+            }
+            const src = preEl.getAttribute('data-mermaid-src');
+            preEl.className = 'mermaid';
+            preEl.textContent = src;
+            preEl.removeAttribute('data-processed');
+          }
+        });
+
+        // Also handle any pre.mermaid that might need re-render on theme change
+        const directMermaidBlocks = document.querySelectorAll('pre.mermaid');
+        directMermaidBlocks.forEach((preEl) => {
+          if (!preEl.getAttribute('data-mermaid-src')) {
+            preEl.setAttribute('data-mermaid-src', preEl.textContent);
+          }
+          const src = preEl.getAttribute('data-mermaid-src');
+          preEl.textContent = src;
+          preEl.removeAttribute('data-processed');
+        });
+
+        if (document.querySelectorAll('.mermaid').length > 0) {
+          mermaid.run({
+            nodes: document.querySelectorAll('.mermaid')
+          }).catch(err => console.error('Mermaid render error:', err));
+        }
+      }
+
+      // Initial render on DOM load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMermaid);
+      } else {
+        initMermaid();
+      }
+
+      // Re-initialize mermaid when theme changes
+      const themeToggleBtn = document.getElementById('themeToggle');
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          setTimeout(initMermaid, 50);
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mob_Mechanics — PROD Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. The official rulebook">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,500;0,700;0,800;1,700&family=Alegreya:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab env-tab--active">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right" style="display: flex; gap: 8px; align-items: center;">
+      <div class="llm-dropdown-container">
+        <button class="llm-btn" id="llmDropdownBtn" title="LLM Continuous Markdown Bundles" aria-label="LLM Bundles" aria-expanded="false">
+          <span>🤖 LLM Files</span>
+          <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="llm-dropdown-menu" id="llmDropdownMenu">
+          <div class="llm-dropdown-header">LLM HTML (Gemini / Web)</div>
+          <a href="all_llm.html" target="_blank" class="llm-dropdown-item">👑 Master All (Rules + Lore)</a>
+          <a href="rules_all_llm.html" target="_blank" class="llm-dropdown-item">📜 Combined Rules (PROD + STAGE)</a>
+          <a href="rules_stage_llm.html" target="_blank" class="llm-dropdown-item">🧪 STAGE Rules</a>
+          <a href="rules_prod_llm.html" target="_blank" class="llm-dropdown-item">📖 PROD Rules</a>
+          <a href="lore_all_llm.html" target="_blank" class="llm-dropdown-item">🔮 Combined Lore</a>
+          <a href="lore_stage_llm.html" target="_blank" class="llm-dropdown-item">📜 STAGE Lore</a>
+          <div class="llm-dropdown-divider"></div>
+          <div class="llm-dropdown-header">Raw Markdown & Index</div>
+          <a href="all_llm.md" target="_blank" class="llm-dropdown-item">📝 all_llm.md</a>
+          <a href="llms.txt" target="_blank" class="llm-dropdown-item">📋 /llms.txt Index</a>
+        </div>
+      </div>
+      <button class="sync-btn" id="headerSyncBtn" title="Sync & Rebuild Site" aria-label="Sync and rebuild site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sync-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Sync</span>
+      </button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">PROD Rules</h2>
+        <p class="sidebar-subtitle">The official rulebook</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="prod.html" class="nav-link" data-target="rules--dice">Dice</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="characters-and-mobs"><span class="toggle-icon">▸</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" style="display: none;"><li><a href="prod--characters-and-mobs--stats.html" class="nav-link" data-target="characters-and-mobs--stats">Stats</a></li></ul></div><div class="nav-group nav-group--solo"><a href="prod--core-resolution.html" class="nav-link nav-link--solo" data-target="core-resolution">Core_Resolution</a></div><div class="nav-group nav-group--solo"><a href="prod--boss-profile-and-gang.html" class="nav-link nav-link--solo" data-target="boss-profile-and-gang">Boss_Profile_and_Gang</a></div><div class="nav-group nav-group--solo"><a href="prod--action-economy-and-turn-flow.html" class="nav-link nav-link--solo" data-target="action-economy-and-turn-flow">Action_Economy_and_Turn_Flow</a></div><div class="nav-group nav-group--solo"><a href="prod--zones-and-movement.html" class="nav-link nav-link--solo" data-target="zones-and-movement">Zones_and_Movement</a></div><div class="nav-group nav-group--solo"><a href="prod--combat-engine.html" class="nav-link nav-link--solo" data-target="combat-engine">Combat_Engine</a></div><div class="nav-group nav-group--solo"><a href="prod--mob-mechanics.html" class="nav-link nav-link--solo nav-link--active" data-target="mob-mechanics">Mob_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="prod--damage-grit-and-wounds.html" class="nav-link nav-link--solo" data-target="damage-grit-and-wounds">Damage_Grit_and_Wounds</a></div><div class="nav-group nav-group--solo"><a href="prod--magic-and-bangaranga.html" class="nav-link nav-link--solo" data-target="magic-and-bangaranga">Magic_and_Bangaranga</a></div><div class="nav-group nav-group--solo"><a href="prod--the-raid-loop.html" class="nav-link nav-link--solo" data-target="the-raid-loop">The_Raid_Loop</a></div><div class="nav-group nav-group--solo"><a href="prod--the-lair-loop-and-progression.html" class="nav-link nav-link--solo" data-target="the-lair-loop-and-progression">The_Lair_Loop_and_Progression</a></div><div class="nav-group nav-group--solo"><a href="prod--journeys-and-hazards.html" class="nav-link nav-link--solo" data-target="journeys-and-hazards">Journeys_and_Hazards</a></div><div class="nav-group nav-group--solo"><a href="prod--adversaries-and-threats.html" class="nav-link nav-link--solo" data-target="adversaries-and-threats">Adversaries_and_Threats</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; align-items: center; justify-content: space-between; gap: 16px; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        <span>⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.</span>
+        <button class="sync-banner-btn" id="bannerSyncBtn">Rerun Sync</button>
+      </div>
+      <h1 id="mob-mechanics" tabindex="-1">Mob Mechanics</h1>
+<p><em>A Goblin Boss is only as terrifying as the screaming swarm of runts behind you. A Mob is your living shield, your sledgehammer, and your treasure wagon. When ordered well, they overwhelm knights and plunder vaults; when left to their own devices, they pick their noses, argue over shiny pebbles, and set things on fire.</em></p>
+<hr>
+<h2 id="mob-anatomy-and-metrics" tabindex="-1">Mob Anatomy &amp; Metrics</h2>
+<p>A <strong>Mob</strong> is a collection of lesser goblins under the direct command of a <strong>Goblin Boss</strong> (Player Character). Mobs do not possess individual attribute ratings; all of their combat strength, physical mass, and carrying capacities scale from their current <strong>Size</strong> rating (ranging from <strong>Size 1</strong> to <strong>Size 5</strong>).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Classification</th>
+<th style="text-align:center">Size</th>
+<th style="text-align:center">Combat Dice</th>
+<th style="text-align:center">Required Grunt</th>
+<th style="text-align:center">Loot Capacity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Runt Mob</strong></td>
+<td style="text-align:center"><strong>1</strong></td>
+<td style="text-align:center"><strong>1d6</strong></td>
+<td style="text-align:center"><strong>1</strong></td>
+<td style="text-align:center"><strong>4 Bulk</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Skirmish Group</strong></td>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:center"><strong>2d6</strong></td>
+<td style="text-align:center"><strong>2</strong></td>
+<td style="text-align:center"><strong>8 Bulk</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Raid Troop</strong></td>
+<td style="text-align:center"><strong>3</strong></td>
+<td style="text-align:center"><strong>3d6</strong></td>
+<td style="text-align:center"><strong>3</strong></td>
+<td style="text-align:center"><strong>12 Bulk</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>War Gang</strong></td>
+<td style="text-align:center"><strong>4</strong></td>
+<td style="text-align:center"><strong>4d6</strong></td>
+<td style="text-align:center"><strong>4</strong></td>
+<td style="text-align:center"><strong>16 Bulk</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Horde Company</strong></td>
+<td style="text-align:center"><strong>5</strong></td>
+<td style="text-align:center"><strong>5d6</strong></td>
+<td style="text-align:center"><strong>5</strong></td>
+<td style="text-align:center"><strong>20 Bulk</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="core-mob-attributes" tabindex="-1">Core Mob Attributes</h3>
+<ol>
+<li><strong>Combat &amp; Tough Dice Pool:</strong> A Mob rolls a physical dice pool equal to its current <strong>Size</strong> (<strong>1d6 to 5d6</strong>) for Melee Attacks, physical force, lifting, and <strong>Tough</strong> hazard tests.</li>
+<li><strong>General Skill Baseline:</strong> For non-physical tests (<strong>Slink</strong>, <strong>Brains</strong>, and <strong>Mouth</strong>), a Mob rolls a flat baseline pool of <strong>2d6</strong>, reflecting the aggregate cunning of the crowd.</li>
+<li><strong>Required Grunt:</strong> To maintain absolute authority without command resistance, the controlling Boss must maintain a current <strong>Grunt &gt;= Mob Size</strong>.</li>
+<li><strong>Loot Capacity:</strong> A Mob carries up to <strong>Size x 4 Bulk</strong> in loose Loot and expedition gear without suffering encumbrance penalties.</li>
+<li><strong>Over-Laden Mobs:</strong> If a Mob carries Bulk exceeding its Loot Capacity (up to a hard cap of <strong>Size x 6 Bulk</strong>), it becomes <strong>Over-Laden</strong>: its Movement is reduced by <strong>-1 Zone</strong> per Move action (minimum 1 Zone) and it suffers a <strong>Bane 1 (-1d)</strong> penalty on all physical tests.</li>
+</ol>
+<hr>
+<h2 id="mob-equipment-and-loot-tradeoff" tabindex="-1">Mob Equipment &amp; Loot Tradeoff</h2>
+<p>A Boss can outfit a Mob with protective armor and specialized tools, but doing so directly consumes the Mob’s carrying capacity.</p>
+<h3 id="mob-armor-scaled-bulk" tabindex="-1">Mob Armor (Scaled Bulk)</h3>
+<p>Equipping an entire Mob with armor requires sufficient scrap-plates or quilted hides for every runt in the Mob.</p>
+<ul>
+<li><strong>Bulk Cost:</strong> Mob Armor costs <strong>Bulk equal to the Armor’s Bulk rating multiplied by current Mob Size</strong> (e.g. Light Armor costs Size x 1 Bulk; Medium Armor costs Size x 2 Bulk).</li>
+<li><strong>Passive Armor Dice:</strong> An armored Mob rolls its passive Armor Dice (+1d or +2d) <strong>once per incoming attack</strong>. Every success (<strong>5+</strong>) reduces incoming damage by 1 across all targeted health dice before damage is applied.</li>
+<li><strong>Casualty Scaling:</strong> When a Mob suffers casualties and loses Size, the armor of the fallen goblins remains on their corpses on the battlefield. Equipped Mob Armor never causes an encumbrance overload when Size drops.</li>
+</ul>
+<h3 id="expedition-tools-and-weapons" tabindex="-1">Expedition Tools &amp; Weapons</h3>
+<ul>
+<li><strong>Shared Expedition Tools:</strong> Expedition tools (such as Ropes, Crowbars, Lanterns, and Shovels) are shared across the Mob. Each tool occupies its standard flat <strong>Bulk</strong> rating (e.g. 1 Bulk for a Climbing Rope).</li>
+<li><strong>Mob Weapons:</strong> Equipping a Mob with specialized weapons (e.g. Cleavers or Greatclubs) costs <strong>Size x Weapon Bulk</strong>, granting the entire Mob the weapon’s traits (e.g. <code>Heavy</code> granting +1 Impact Size, or <code>Cleave</code> damaging additional unengaged frontline dice).</li>
+</ul>
+<hr>
+<h2 id="health-dice-pool-and-damage-resolution" tabindex="-1">Health Dice Pool &amp; Damage Resolution</h2>
+<p>A Mob’s health is physically represented on the gaming table by a pool of <strong>d6s equal to its current Size</strong>, with each die starting at the <strong>“6” face</strong>.</p>
+<blockquote>
+<p><strong>Example (Size 3 Mob at Full Health):</strong> <code>[Die 1: Face 6]</code> <code>[Die 2: Face 6]</code> <code>[Die 3: Face 6]</code></p>
+</blockquote>
+<h3 id="damage-delivery-modes" tabindex="-1">Damage Delivery Modes</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attack Delivery Type</th>
+<th style="text-align:left">Mechanical Resolution Across Health Dice Pool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Single-Target Attack</strong></td>
+<td style="text-align:left">Deduct from lowest-value active die. Spillover into next lowest die if reduced below 1.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Mob-on-Mob Melee</strong></td>
+<td style="text-align:left"><strong>The Frontline Rule:</strong> Deduct damage simultaneously from min(Attacker Size, Defender Size) lowest-value dice.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Cleaving Strike (<code>Cleave X</code>)</strong></td>
+<td style="text-align:left">Deduct damage simultaneously from up to X lowest-value active health dice.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>True Area Threat (<code>[AoE]</code>, Explosives)</strong></td>
+<td style="text-align:left"><strong>Full Zone AoE:</strong> Deduct damage simultaneously from EVERY SINGLE active health die in the Mob’s pool.</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><strong>Single-Target Damage &amp; Spillover:</strong> Single-target strikes (arrows, single sword thrusts) apply damage directly to the Mob’s <strong>lowest-value active health die</strong>. If the die drops below 1, that die is permanently removed from the table (reducing Mob Size by 1), and any remaining excess damage <strong>spills over</strong> into the next lowest die.</li>
+<li><strong>The Frontline Rule (Mob-on-Mob Melee):</strong> When two Mobs clash in close combat, the attacking Mob strikes a number of health dice equal to its own current Size: <strong>min(Attacker Size, Defender Size)</strong>.
+<ul>
+<li><em>Lowest Dice First:</em> Damage is applied simultaneously to the defender’s lowest-value health dice up to the engagement cap.</li>
+<li><em>Simultaneous Reduction:</em> Each engaged die is reduced by the attack’s effective damage. Any die reduced below 1 is removed.</li>
+<li><em>Backline Immunity:</em> Unengaged backline dice suffer <strong>0 damage</strong>.</li>
+</ul>
+</li>
+<li><strong>Cleaving Attacks (<code>Cleave X</code>):</strong> Strikes with <code>Cleave X</code> sweep across frontline ranks, applying damage simultaneously to <strong>up to X of the Mob’s lowest-value active health dice</strong>.</li>
+<li><strong>True Area Threats (<code>[AoE]</code> &amp; Explosives):</strong> Full-zone hazards, blast devices, and dragon breath apply damage simultaneously to <strong>every single active health die</strong> in the Mob’s pool without an engagement cap.</li>
+<li><strong>Casualties &amp; Dropped Loot:</strong> When a Mob shrinks in Size, its Loot Capacity shrinks immediately. If carried loose Loot and tools exceed the new capacity, the controlling Boss must immediately declare which items are dropped onto the Zone floor.</li>
+<li><strong>Post-Combat Regrouping:</strong> Mid-combat health dice redistribution is strictly forbidden. Once an active battle concludes (or during the Round Closure of Combat End), the Boss may freely rearrange remaining health points across all surviving dice. Lost Size can only be replenished through recruitment during the Lair Phase.</li>
+</ol>
+<blockquote>
+<p><strong>Example (Frontline Clash):</strong> A Size 4 Goblin Mob has health dice reading <code>[6, 4, 2, 1]</code>. A Size 2 Town Guard unit attacks and deals 2 damage. Because the guards are Size 2, they engage the 2 lowest dice (<code>[1]</code> and <code>[2]</code>). Both dice take 2 damage and are reduced below 1 and removed. The Goblin Mob is now Size 2, with surviving dice <code>[6, 4]</code>.</p>
+</blockquote>
+<hr>
+<h2 id="boss-orders-and-command-flow" tabindex="-1">Boss Orders &amp; Command Flow</h2>
+<p>A Mob receives <strong>two (2) actions</strong> per round, reset at Round Start. Mobs act during the <strong>Player Active Turn</strong> when directed by their Boss.</p>
+<h3 id="command-line-of-sight-and-distance" tabindex="-1">Command Line of Sight &amp; Distance</h3>
+<ul>
+<li><strong>Visual Line of Sight:</strong> The Boss must maintain direct visual line of sight to the Mob (or a portion of the Mob) to issue verbal or somatic commands.</li>
+<li><strong>Command Test Profile:</strong> Issuing an Order to a controlled Mob within Grunt limits in the same Zone requires no roll (<strong>Automatic Success</strong>). When commanding across distances or exceeding Grunt, resolve using this profile:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Command Factor</th>
+<th style="text-align:left">Distance / Condition</th>
+<th style="text-align:left">Command Resolution Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Size &lt;= Grunt</strong></td>
+<td style="text-align:left">Baseline</td>
+<td style="text-align:left"><strong>Target Number (TN) = 1</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Size &gt; Grunt</strong></td>
+<td style="text-align:left">Rebellious Swarm</td>
+<td style="text-align:left"><strong>TN increases by +1 per point of difference</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Same Zone</strong></td>
+<td style="text-align:left">Point-blank</td>
+<td style="text-align:left"><strong>+1 Automatic Success</strong> (Guaranteed pass if Size &lt;= Grunt)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Distance &lt;= Mouth</strong></td>
+<td style="text-align:left">Voice Range</td>
+<td style="text-align:left"><strong>Normal (5+)</strong> Difficulty test</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Distance = Mouth + 1</strong></td>
+<td style="text-align:left">Shouting Range</td>
+<td style="text-align:left"><strong>Hard (6)</strong> Difficulty test</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Distance &gt; Mouth + 1</strong></td>
+<td style="text-align:left">Out of Range</td>
+<td style="text-align:left"><strong>Command is physically impossible</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-boredom-rule" tabindex="-1">The Boredom Rule</h3>
+<blockquote>
+<blockquote>
+<p><strong>THE BOREDOM RULE:</strong>
+Goblins possess notoriously short attention spans. An ordered Mob cannot perform the exact same action twice in a single round (e.g. a Mob cannot Attack twice or Plunder twice).
+<em>Exception:</em> A Mob may spend both actions taking <strong>Move</strong> actions if they are fleeing or charging.</p>
+</blockquote>
+</blockquote>
+<h3 id="action-economy-allocation" tabindex="-1">Action Economy Allocation</h3>
+<ul>
+<li><strong>Spending 2 Actions:</strong> If an Order directs a Mob to spend both actions (e.g. Move then Attack), the Mob has 0 saved actions remaining for defense reactions.</li>
+<li><strong>Saving 1 Action:</strong> If an Order directs a Mob to spend only 1 action (e.g. Move into cover), its second action is saved, enabling the Boss to order an active <strong>Scatter</strong> reaction during the Enemy Active Turn.</li>
+</ul>
+<hr>
+<h2 id="unordered-mob-states-and-behavior-tables" tabindex="-1">Unordered Mob States &amp; Behavior Tables</h2>
+<p>Mobs that receive no direct orders from their Boss resolve their actions at the end of the <strong>Player Active Turn</strong> (after all player characters have finished their declarations).</p>
+<pre><code class="language-mermaid">flowchart TD
+    M[&quot;Mob Receives No Order&quot;] --&gt; CS{&quot;Check Command State&quot;}
+    CS --&gt;|Under Control: Size &lt;= Grunt| L[&quot;LOITERING STATE&lt;br&gt;- Spends 1 Action on Loitering Table&lt;br&gt;- Saves 1 Action for Defense Reactions&quot;]
+    CS --&gt;|Broken Command / Panicked| OC[&quot;OUT OF CONTROL STATE&lt;br&gt;- Spends 2 Actions under GM Control&lt;br&gt;- Saves 0 Actions for Defense&quot;]
+</code></pre>
+<h3 id="loitering-table-1d6" tabindex="-1">Loitering Table (1d6)</h3>
+<p><em>Under control, but idle. The Mob spends <strong>1 action</strong> resolving the rolled behavior and saves <strong>1 action</strong> for defense:</em></p>
+<ul>
+<li><strong>1 (Bicker):</strong> Goblins push, argue, and complain. <em>(Spends 1 action, saves 1 action).</em></li>
+<li><strong>2 (Inspect):</strong> Runts pick their noses, stare at architecture, or draw crude graffiti. <em>(Spends 1 action, saves 1 action).</em></li>
+<li><strong>3 (Snatch):</strong> Goblins plunder a loose shiny object or eat nearby rations (resolves as a Plunder action if Loot is present). <em>(Spends 1 action, saves 1 action).</em></li>
+<li><strong>4 (Wander):</strong> The Mob scurries <strong>1 Zone</strong> in a random direction, refusing to leave visual line of sight of their Boss. <em>(Spends 1 action, saves 1 action).</em></li>
+<li><strong>5 (Snoop):</strong> The Mob peers around curiously, granting a <strong>Boon 1 (+1d)</strong> to the next allied Boss who tests to search or disarm traps in the Zone. <em>(Spends 1 action, saves 1 action).</em></li>
+<li><strong>6 (Taunt):</strong> Goblins scream insults, rattle pots, and moon the nearest enemy. <em>(Spends 1 action, saves 1 action).</em></li>
+</ul>
+<h3 id="out-of-control-table-1d6" tabindex="-1">Out of Control Table (1d6)</h3>
+<p><em>Uncontrolled swarm. The Mob spends <strong>both actions</strong> running amok under GM direction (0 saved actions):</em></p>
+<ul>
+<li><strong>1–2 (Panic / Flee):</strong> If a <strong>Terrifying Enemy</strong> (Elite, Boss, or creature with <code>[Frightening]</code>) is present, the Mob spends both actions fleeing toward the nearest exit. Otherwise, they squabble violently: the Mob takes <strong>1 Damage</strong> to its lowest health die and gains the <strong>Staggered</strong> condition. <em>(Spends 2 actions, 0 saved).</em></li>
+<li><strong>3–4 (Loot / Trash):</strong> If unattended loot or food is present, the Mob plunders it (eating food heals <strong>1d6 damage</strong> on its health dice). Otherwise, they spend both actions vandalizing doors, crates, and scenery. <em>(Spends 2 actions, 0 saved).</em></li>
+<li><strong>5–6 (Frenzy):</strong> The Mob swarms and attacks the nearest living creature in their Zone (friend or foe!). If no creatures are present, they sprint <strong>1 Zone</strong> toward the loudest noise. <em>(Spends 2 actions, 0 saved).</em></li>
+</ul>
+<h3 id="rallying-and-regaining-control" tabindex="-1">Rallying &amp; Regaining Control</h3>
+<p>To restore command over an <strong>Out of Control</strong> Mob, the Boss must spend a Standard Action (<strong>Order</strong>) on your turn and pass a <strong>Mouth</strong> test against the standard command distance profile. On a success, the Mob immediately returns to the <strong>Ordered</strong> state; on a failure, it remains Out of Control.</p>
+<hr>
+<h2 id="mob-defense-and-the-scatter-reaction" tabindex="-1">Mob Defense &amp; The “Scatter!” Reaction</h2>
+<p>Mobs do not possess individual stats and cannot naturally perform a Dodge or Parry. When targeted by an incoming attack during the <strong>Enemy Active Turn</strong>:</p>
+<h3 id="1-passive-armor-roll" tabindex="-1">1. Passive Armor Roll</h3>
+<p>If equipped with Mob Armor, the player rolls the Mob’s passive <strong>Armor Dice</strong> once per incoming attack. Every success (<strong>5+</strong>) reduces incoming damage by <strong>1</strong> across all targeted health dice before damage is applied.</p>
+<h3 id="2-the-scatter-order-reaction" tabindex="-1">2. The “Scatter!” Order Reaction</h3>
+<p>If the Mob has at least <strong>1 saved action remaining</strong>, the Boss may spend a saved Standard Action (or an unused <strong>Free Order</strong>) to scream “Scatter!”:</p>
+<ol>
+<li><strong>Assemble Mouth Pool:</strong> The Boss rolls a dice pool equal to the Boss’s <strong>Mouth</strong> stat.</li>
+<li><strong>The Size Penalty:</strong> Large swarms are clumsy to disperse. The Scatter TN equals the attack’s Threat TN plus the Mob’s Size penalty:
+<strong>Scatter TN</strong> = <strong>Threat TN</strong> + (<strong>Mob Size</strong> - 1)</li>
+<li><strong>Clean Scatter:</strong> If Mouth successes &gt;= Scatter TN, the Mob evades completely (<strong>0 Damage taken</strong>) and immediately moves <strong>1 Zone</strong> into available cover.</li>
+<li><strong>Failed Scatter:</strong> If Mouth successes &lt; Scatter TN, the Mob takes incoming damage normally, mitigated only by passive Armor Dice.</li>
+<li><strong>The Scatter Gamble (Gobbo Gamble):</strong> If the initial Scatter roll falls short, the Boss may reroll all <strong>1s</strong> on the Mouth dice.
+<ul>
+<li><em>If the Gamble Succeeds:</em> The Mob pulls off a chaotic miracle dive, taking <strong>0 Damage</strong>.</li>
+<li><em>If the Gamble Fails:</em> Catastrophic stampede! The Mob takes the full attack damage, suffers <strong>1 Trample Damage to EVERY active health die</strong> in its pool, drops <strong>1 Bulk</strong> of carried Loot, and immediately becomes <strong>Out of Control</strong>. If the Boss occupies the same Zone, the Boss is caught in the stampede and gains the <strong>Staggered</strong> condition.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="morale-and-swarm-terror" tabindex="-1">Morale &amp; Swarm Terror</h2>
+<p>Goblins are cowardly by nature. When battle turns against them, discipline shatters.</p>
+<h3 id="player-mob-morale-checks" tabindex="-1">Player Mob Morale Checks</h3>
+<ul>
+<li><strong>Trigger:</strong> Occurs during the <strong>Round Closure Phase</strong> if a Mob lost <strong>50% or more of its starting Size</strong> during the round, or if its controlling Boss was incapacitated.</li>
+<li><strong>The Check:</strong> The Boss must pass an immediate <strong>Mouth</strong> or <strong>Grunt</strong> test against <strong>Normal (5+/1)</strong> difficulty (or <strong>5+/2</strong> if facing a <code>[Terrifying]</code> foe).</li>
+<li><strong>Failure:</strong> The Mob breaks command and enters the <strong>Out of Control</strong> state, fleeing toward the exit on its next turn.</li>
+</ul>
+<h3 id="enemy-morale-and-the-swarm-terror-check" tabindex="-1">Enemy Morale &amp; The Swarm Terror Check</h3>
+<p>When an enemy group suffers catastrophic loss (50% casualties or their commander is slain), the player horde unleashes their collective terror:</p>
+<p><strong>Swarm Terror Pool</strong> = <strong>Surviving Mob Sizes in Zone/Adjacent</strong> + <strong>Surviving Bosses in Zone/Adjacent</strong></p>
+<ul>
+<li><strong>The Roll:</strong> Players roll the combined <strong>Swarm Terror Pool</strong> against the enemy’s static <strong>Morale TN</strong> (typically 1 to 3).</li>
+<li><strong>Success (Successes &gt;= Morale TN):</strong> The enemy force breaks and flees toward the nearest exit for 2 actions per turn until off the map.</li>
+<li><strong>Commander Rally:</strong> A surviving Enemy Commander can spend 1 action on their active turn to attempt a Rally, testing against the players’ Swarm Terror profile.</li>
+</ul>
+<hr>
+<h2 id="splitting-merging-and-cross-gang-mobs" tabindex="-1">Splitting, Merging &amp; Cross-Gang Mobs</h2>
+<h3 id="splitting-a-mob" tabindex="-1">Splitting a Mob</h3>
+<p>A Boss can spend one <strong>Order Action</strong> to split a Mob into two smaller Mobs:</p>
+<ul>
+<li><strong>Dice Distribution:</strong> The Boss freely divides active health dice between the two new Mobs (e.g. a Size 5 Mob splits into Size 3 and Size 2).</li>
+<li><strong>Gear Distribution:</strong> Equipped Mob Armor travels with the goblins wearing it (both Mobs retain the armor tier). Carried tools are explicitly assigned to one of the split Mobs.</li>
+</ul>
+<h3 id="merging-mobs" tabindex="-1">Merging Mobs</h3>
+<p>Two allied Mobs occupying the same Zone can be merged into a single Mob using an <strong>Order</strong> or <strong>Manipulate</strong> action:</p>
+<ul>
+<li><strong>Dice Combination:</strong> Add surviving health dice together. Total combined Size <strong>cannot exceed the Boss’s Grunt</strong> (otherwise an immediate Rebellion test is triggered: Mouth or Tough <code>5+/Size</code>).</li>
+<li><strong>Armor Dilution:</strong> If an armored Mob merges with an unarmored Mob, the armor is diluted and drops by <strong>1 Tier</strong> (e.g. Medium Armor becomes Light Armor) unless additional armor is equipped.</li>
+</ul>
+<h3 id="the-super-mob-cross-gang-merging" tabindex="-1">The Super-Mob (Cross-Gang Merging)</h3>
+<p>Mobs belonging to different player Gangs can merge into a single colossal <strong>Super-Mob</strong>:</p>
+<ul>
+<li><strong>Command Friction:</strong> Any Boss attempting to issue an Order to a Cross-Gang Super-Mob must pass a <strong>Grunt test</strong> (<strong>Tough</strong> if in the same Zone, or <strong>Mouth</strong> from afar).</li>
+<li><strong>In-Fighting Trigger:</strong> Whenever a Cross-Gang Mob rolls a dice pool for <em>any check</em> (Attack, Move, or Hazard), <strong>every 1 rolled deals 1 self-inflicted Damage to the Mob’s active health dice</strong>.</li>
+</ul>
+<hr>
+<h2 id="mob-sacrifice-maneuvers" tabindex="-1">Mob Sacrifice Maneuvers</h2>
+<p>When a Gang lacks proper tools, a Boss can order expendable runts into desperate tactical maneuvers:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Maneuver Name</th>
+<th style="text-align:center">Minimum Mob Size</th>
+<th style="text-align:left">Cost</th>
+<th style="text-align:left">Mechanical Benefit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Gobbo Pyramid</strong> <em>(Living Ladder)</em></td>
+<td style="text-align:center"><strong>Size 2</strong></td>
+<td style="text-align:left"><strong>1 Mob Action</strong></td>
+<td style="text-align:left">Goblins stack onto shoulders. An allied Boss or character climbs <strong>1 vertical Zone</strong> without making a climbing test.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Living Bridge</strong> <em>(Chasm Crosser)</em></td>
+<td style="text-align:center"><strong>Size 3</strong></td>
+<td style="text-align:left"><strong>1 Mob Action</strong> + <strong>1 Mob Damage</strong></td>
+<td style="text-align:left">Goblins link arms across a chasm. Allied characters walk across safely without tests. The Mob takes 1 Damage from trample strain.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Canary Runt</strong> <em>(Trap Tripper)</em></td>
+<td style="text-align:center"><strong>Size 1</strong></td>
+<td style="text-align:left"><strong>1 Mob Health Die</strong></td>
+<td style="text-align:left">A single runt triggers a discrete pressure trap or tests thin ice, clearing the passage safely for the rest of the gang.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Meat Cushion</strong> <em>(Soft Landing)</em></td>
+<td style="text-align:center"><strong>Size 1</strong></td>
+<td style="text-align:left"><strong>Mob Reaction</strong> (Takes Fall Damage)</td>
+<td style="text-align:left">If a Boss falls into a Zone occupied by an allied Mob, the Mob absorbs the blow: Boss takes <strong>0 Damage</strong>; Mob takes the full fall damage across its health dice.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Gnaw the Hinges</strong> <em>(Pry-bar Substitute)</em></td>
+<td style="text-align:center"><strong>Size 2</strong></td>
+<td style="text-align:left"><strong>1 Mob Action</strong></td>
+<td style="text-align:left">The Mob tears at locked doors or chest hinges. Roll a <code>Tough</code> test (<strong>Size dice</strong>). If the test fails after pushing 1s, the Mob takes <strong>1 Damage</strong> from chipped teeth and crushed fingers.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="mechanical-gap-analysis-and-missing-rules" tabindex="-1">Mechanical Gap Analysis &amp; Missing Rules</h2>
+<p>[MISSING RULE / GAP: Mob Weapon Equipping &amp; Scaling Rules — While Mob armor and tools have detailed Bulk rules, rules for outfitting Mobs with specialized melee weapons (e.g. Greatclubs, Cleavers, Polearms) lack an explicit framework in early drafts. Suggested Resolution: Standardize that equipping a Mob with specialized weapons costs Size x Weapon Bulk from their Loot Capacity, granting the entire Mob the weapon’s built-in traits (such as Cleave or Heavy +1 Impact Size).]</p>
+<p>[MISSING RULE / GAP: Maximum Swarm Terror Pool Ceiling — In massive multi-player raids with multiple Size 5 Mobs, Swarm Terror dice pools can reach 15d–20d6, mathematically guaranteeing enemy routs. Suggested Resolution: Cap the Swarm Terror dice pool at a maximum of 8d6 on any single Morale test, ensuring high-morale commanders retain a viable chance to hold the line.]</p>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- LLM Dropdown Toggle ---
+    (function() {
+      const btn = document.getElementById('llmDropdownBtn');
+      const menu = document.getElementById('llmDropdownMenu');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = menu.classList.toggle('show');
+        btn.setAttribute('aria-expanded', isOpen);
+      });
+
+      document.addEventListener('click', () => {
+        menu.classList.remove('show');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    })();
+
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'flex';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+
+    // --- Anchor Scroll Fix ---
+    (function() {
+      function scrollToHash() {
+        if (window.location.hash) {
+          const id = decodeURIComponent(window.location.hash.substring(1));
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }, 100);
+          }
+        }
+      }
+      window.addEventListener('hashchange', scrollToHash);
+      window.addEventListener('DOMContentLoaded', scrollToHash);
+      window.addEventListener('load', scrollToHash);
+    })();
+
+    // --- Manual Sync Trigger ---
+    (function() {
+      const headerBtn = document.getElementById('headerSyncBtn');
+      const bannerBtn = document.getElementById('bannerSyncBtn');
+      
+      function handleSync(btn) {
+        if (!btn) return;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        
+        // Add spinning/loading animation class
+        if (btn.classList.contains('sync-btn')) {
+          btn.classList.add('sync-btn--spinning');
+          btn.querySelector('span').textContent = 'Syncing...';
+        } else {
+          btn.textContent = 'Syncing...';
+        }
+        
+        fetch('/api/run-sync', { method: 'POST' })
+          .then(res => {
+            if (!res.ok) throw new Error('Server returned error status: ' + res.status);
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.status === 'success') {
+              if (btn.classList.contains('sync-btn')) {
+                btn.querySelector('span').textContent = 'Success!';
+              } else {
+                btn.textContent = 'Success!';
+              }
+              // Reload page to reflect changes
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              throw new Error(data.error || 'Sync failed');
+            }
+          })
+          .catch(err => {
+            console.error('Sync failed:', err);
+            alert('Failed to rerun sync: ' + err.message);
+            // Restore button
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            if (btn.classList.contains('sync-btn')) {
+              btn.classList.remove('sync-btn--spinning');
+            }
+          });
+      }
+
+      if (headerBtn) {
+        headerBtn.addEventListener('click', () => handleSync(headerBtn));
+      }
+      if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
+    })();
+  </script>
+
+  <!-- ===== Mermaid.js Integration ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    (function() {
+      function initMermaid() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        
+        const lightThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#f0e6d6',
+          primaryTextColor: '#231c16',
+          primaryBorderColor: '#8c2d19',
+          lineColor: '#c68a35',
+          secondaryColor: '#fdfbf7',
+          tertiaryColor: '#e5dcce',
+          edgeLabelBackground: '#faf5ec',
+          nodeBorder: '#8c2d19',
+          clusterBkg: '#eee5d5',
+          clusterBorder: '#c68a35',
+          titleColor: '#8c2d19'
+        };
+
+        const darkThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#241e1a',
+          primaryTextColor: '#e6dfd5',
+          primaryBorderColor: '#d44d32',
+          lineColor: '#d4a359',
+          secondaryColor: '#1a1613',
+          tertiaryColor: '#2a221c',
+          edgeLabelBackground: '#171412',
+          nodeBorder: '#d44d32',
+          clusterBkg: '#1c1815',
+          clusterBorder: '#8c6a38',
+          titleColor: '#d44d32'
+        };
+
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: 'base',
+          themeVariables: isDark ? darkThemeVariables : lightThemeVariables,
+          flowchart: {
+            curve: 'basis',
+            padding: 16,
+            nodeSpacing: 50,
+            rankSpacing: 40,
+            htmlLabels: true
+          },
+          securityLevel: 'loose'
+        });
+
+        // Convert code blocks with language-mermaid to <pre class="mermaid">
+        const mermaidCodeBlocks = document.querySelectorAll('pre > code.language-mermaid');
+        mermaidCodeBlocks.forEach((codeEl) => {
+          const preEl = codeEl.parentElement;
+          if (preEl && preEl.tagName === 'PRE') {
+            // Save raw mermaid source text if not already saved
+            if (!preEl.getAttribute('data-mermaid-src')) {
+              preEl.setAttribute('data-mermaid-src', codeEl.textContent);
+            }
+            const src = preEl.getAttribute('data-mermaid-src');
+            preEl.className = 'mermaid';
+            preEl.textContent = src;
+            preEl.removeAttribute('data-processed');
+          }
+        });
+
+        // Also handle any pre.mermaid that might need re-render on theme change
+        const directMermaidBlocks = document.querySelectorAll('pre.mermaid');
+        directMermaidBlocks.forEach((preEl) => {
+          if (!preEl.getAttribute('data-mermaid-src')) {
+            preEl.setAttribute('data-mermaid-src', preEl.textContent);
+          }
+          const src = preEl.getAttribute('data-mermaid-src');
+          preEl.textContent = src;
+          preEl.removeAttribute('data-processed');
+        });
+
+        if (document.querySelectorAll('.mermaid').length > 0) {
+          mermaid.run({
+            nodes: document.querySelectorAll('.mermaid')
+          }).catch(err => console.error('Mermaid render error:', err));
+        }
+      }
+
+      // Initial render on DOM load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMermaid);
+      } else {
+        initMermaid();
+      }
+
+      // Re-initialize mermaid when theme changes
+      const themeToggleBtn = document.getElementById('themeToggle');
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          setTimeout(initMermaid, 50);
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

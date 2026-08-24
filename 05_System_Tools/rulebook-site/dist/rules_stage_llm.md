@@ -2,38 +2,41 @@
 
 > **Gobbos TTRPG Consolidated Knowledge Document**
 > Contains all working rules, character creation, combat, and systems from STAGE_Drafts. Brainstorms and dev notes are excluded.
-> Generated on: 2026-08-22T12:00:08.491Z
-> Total Chapters/Documents included: 25
+> Generated on: 2026-08-24T19:38:43.329Z
+> Total Chapters/Documents included: 28
 
 ---
 
 ## Table of Contents
 
 1. [Rules / Overview](#doc-1) — `01_STAGE_Drafts/00_Rules/00_Overview.md`
-2. [Rules / Combat](#doc-2) — `01_STAGE_Drafts/00_Rules/02 Combat.md`
-3. [Rules / Movement & Zones](#doc-3) — `01_STAGE_Drafts/00_Rules/03_Movement & Zones.md`
-4. [Rules / Giving orders](#doc-4) — `01_STAGE_Drafts/00_Rules/04_Giving orders.md`
-5. [Rules / Raid points](#doc-5) — `01_STAGE_Drafts/00_Rules/05_Raid points.md`
-6. [Rules / Keywords Index](#doc-6) — `01_STAGE_Drafts/00_Rules/06_Keywords Index.md`
-7. [Rules / Wounds_Conditions](#doc-7) — `01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md`
-8. [Rules / Master_Tag_Index](#doc-8) — `01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md`
-9. [Characters & Mobs / Stats](#doc-9) — `01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md`
-10. [Characters & Mobs / Character Creation](#doc-10) — `01_STAGE_Drafts/01_Characters & Mobs/11_Character Creation.md`
-11. [Characters & Mobs / 11a_Roles](#doc-11) — `01_STAGE_Drafts/01_Characters & Mobs/11a_Roles.md`
-12. [Characters & Mobs / Gang](#doc-12) — `01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md`
-13. [Characters & Mobs / Boons_and_Banes](#doc-13) — `01_STAGE_Drafts/01_Characters & Mobs/13_Boons_and_Banes.md`
-14. [Characters & Mobs / Goblin_mob](#doc-14) — `01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md`
-15. [Characters & Mobs / Quirks](#doc-15) — `01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md`
-16. [Characters & Mobs / Level_Up and death](#doc-16) — `01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md`
-17. [Characters & Mobs / Unified_Modular_Powers_System](#doc-17) — `01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md`
-18. [Loot / loot](#doc-18) — `01_STAGE_Drafts/03_Loot/31_loot.md`
-19. [Loot / Carry Stuff](#doc-19) — `01_STAGE_Drafts/03_Loot/32_Carry Stuff.md`
-20. [Loot / Equipment](#doc-20) — `01_STAGE_Drafts/03_Loot/33_Equipment.md`
-21. [Loot / Crafting](#doc-21) — `01_STAGE_Drafts/03_Loot/34_Crafting.md`
-22. [Enemies / Enemies](#doc-22) — `01_STAGE_Drafts/04_Enemies/20_Enemies.md`
-23. [Base / Lair_Rules](#doc-23) — `01_STAGE_Drafts/05_Base/00_Lair_Rules.md`
-24. [Travel / Journey_Rules](#doc-24) — `01_STAGE_Drafts/07_Travel/00_Journey_Rules.md`
-25. [Magic / Magic_Rules](#doc-25) — `01_STAGE_Drafts/08_Magic/00_Magic_Rules.md`
+2. [Rules / Dice](#doc-2) — `01_STAGE_Drafts/00_Rules/01_Dice.md`
+3. [Rules / Combat](#doc-3) — `01_STAGE_Drafts/00_Rules/02 Combat.md`
+4. [Rules / Movement & Zones](#doc-4) — `01_STAGE_Drafts/00_Rules/03_Movement & Zones.md`
+5. [Rules / Giving orders](#doc-5) — `01_STAGE_Drafts/00_Rules/04_Giving orders.md`
+6. [Rules / Raid points](#doc-6) — `01_STAGE_Drafts/00_Rules/05_Raid points.md`
+7. [Rules / Keywords Index](#doc-7) — `01_STAGE_Drafts/00_Rules/06_Keywords Index.md`
+8. [Rules / Wounds_Conditions](#doc-8) — `01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md`
+9. [Rules / Master_Tag_Index](#doc-9) — `01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md`
+10. [Characters & Mobs / Stats](#doc-10) — `01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md`
+11. [Characters & Mobs / Character Creation](#doc-11) — `01_STAGE_Drafts/01_Characters & Mobs/11_Character Creation.md`
+12. [Characters & Mobs / 11a_Roles](#doc-12) — `01_STAGE_Drafts/01_Characters & Mobs/11a_Roles.md`
+13. [Characters & Mobs / Gang](#doc-13) — `01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md`
+14. [Characters & Mobs / Boons_and_Banes](#doc-14) — `01_STAGE_Drafts/01_Characters & Mobs/13_Boons_and_Banes.md`
+15. [Characters & Mobs / Goblin_mob](#doc-15) — `01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md`
+16. [Characters & Mobs / Quirks](#doc-16) — `01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md`
+17. [Characters & Mobs / Level_Up and death](#doc-17) — `01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md`
+18. [Characters & Mobs / Unified_Modular_Powers_System](#doc-18) — `01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md`
+19. [Loot / loot](#doc-19) — `01_STAGE_Drafts/03_Loot/31_loot.md`
+20. [Loot / Carry Stuff](#doc-20) — `01_STAGE_Drafts/03_Loot/32_Carry Stuff.md`
+21. [Loot / Equipment](#doc-21) — `01_STAGE_Drafts/03_Loot/33_Equipment.md`
+22. [Loot / Crafting](#doc-22) — `01_STAGE_Drafts/03_Loot/34_Crafting.md`
+23. [Loot / Equipment_Catalogue](#doc-23) — `01_STAGE_Drafts/03_Loot/35_Equipment_Catalogue.md`
+24. [Enemies / Enemies](#doc-24) — `01_STAGE_Drafts/04_Enemies/20_Enemies.md`
+25. [Enemies / Bestiary](#doc-25) — `01_STAGE_Drafts/04_Enemies/21_Bestiary.md`
+26. [Base / Lair_Rules](#doc-26) — `01_STAGE_Drafts/05_Base/00_Lair_Rules.md`
+27. [Travel / Journey_Rules](#doc-27) — `01_STAGE_Drafts/07_Travel/00_Journey_Rules.md`
+28. [Magic / Magic_Rules](#doc-28) — `01_STAGE_Drafts/08_Magic/00_Magic_Rules.md`
 
 ---
 
@@ -72,7 +75,131 @@ The game is set in a fantasy world, where goblins are a race of small, green-ski
 
 <a id="doc-2"></a>
 <!-- ============================================================ -->
-<!-- DOCUMENT 2: 01_STAGE_Drafts/00_Rules/02 Combat.md -->
+<!-- DOCUMENT 2: 01_STAGE_Drafts/00_Rules/01_Dice.md -->
+<!-- ============================================================ -->
+# Rules — Dice
+*Source: `01_STAGE_Drafts/00_Rules/01_Dice.md`*
+
+# Dice
+
+Rolling dice is fun, and in Gobbos you roll a lot of dice if you are a player. The GM on the other hand never rolls dice, unless to possibly determine the outcome of a random event.
+
+The only dice used in Gobbos are normal 6-sided dice, or d6. It is recommended that each player have bunch of them, preferably 8-10 dice in the same color.
+
+## Tests
+
+A [[Test]] in Gobbos is carried out by the player rolling a number of **d6s** (their [[Dice Pool]]). They then try to score as many [[Success|Successes]] as the GM has decided is the target for the [[Test]].
+
+### Difficulty and Target Number
+
+For any [[Test]], the GM sets a [[Difficulty]] and a [[Target Number (TN)]]. [[Difficulty]] depends on the circumstances, such as having the high ground when attacking or using quality lockpicks to pick a lock. [[Difficulty]] determines what counts as a [[Success]]:
+
+*   **[[Easy]]:** A **4, 5, or 6** is a [[Success]]. *(Note: Certain special actions, such as a dying Boss's Last Act, are always Easy by default).*
+*   **[[Normal]]:** A **5 or 6** is a [[Success]]. This is the default difficulty for most tests.
+*   **[[Hard]]:** Only **6s** count as a [[Success]].
+
+[[Target Number (TN)]] is typically fixed, such as how good armor an enemy has or the quality of the lock that is about to be picked. [[TN]] then denotes how many [[Success|Successes]] you need to make whatever you are trying to do.
+
+Most of the time, you will roll a [[Normal]] test with a [[TN]] of 1, denoted as **5+/1**. This means that whatever number of dice you have in your [[Dice Pool]], you succeed if there is at least one **5** or **6**.
+
+| Difficulty | Success on |
+| :--- | :--- |
+| [[Easy]] | 4, 5, 6 |
+| [[Normal]] | 5, 6 |
+| [[Hard]] | 6 |
+
+> **Example:** Picking a lock is typically a [Slink](../01_Characters & Mobs/10_Stats.md#slink) **5+/1** test. But if the lock is of extra good quality, it could be a **5+/2** test. And if the lockpicker has brought quality lockpicks, it could turn into an **4+/2** test.
+
+### Dice Pool
+
+The player is responsible for assembling their [[Dice Pool]]. If they carry out the task with their [[Boss]], it is almost always equal to their main stat, modified by equipment, [[Quirk|Quirks]], [[Boon|Boons]] (**+1d**, **+2d**), or [[Bane|Banes]] (**-1d**, **-2d**). So, if you have a [[Tough]] stat of 2, you roll 2 dice, or **2d6**.
+
+If rolling for a [[Mob]] instead, the base number of dice in your [[Dice Pool]] is equal to the [[Size]] of the [[Mob]]. A [[Size]] 2 [[Mob]] rolls **2d6**, a [[Size]] 5 [[Mob]] rolls **5d6**, etc.
+
+### Zero Dice Pools (The Salvage Roll)
+
+If penalties, conditions, or [[Bane|Banes]] reduce your [[Dice Pool]] to **0d6 or less**, the test automatically fails by default. However, goblins never give up without a desperate flail. You still roll a single **1d6** as a **Salvage Roll**:
+
+*   **Roll a 6:** The action is miraculously salvaged, generating exactly **1 Success**. (This die does not explode).
+*   **Roll a 1:** A catastrophic failure occurs—you immediately suffer a [[Fumble]] and lose 1 [[Grunt]] (if you have one or more [[Mob|Mobs]] in your zone or an adjacent zone).
+*   **Roll 2–5:** The test fails normally without additional penalty or Fumble consequences.
+
+### Exploding Dice
+
+Every time you roll a **6**, it is not only a [[Success]] but it allows you to roll an additional die. If that roll is a **6** again, you keep rolling until you no longer roll **6s**. This makes it possible, but still perhaps unlikely, to get a lot of [[Success|Successes]] on a single roll. If you have enough dice, it is recommended to grab a new dice instead of rerolling the 6 to make it easier to see the total number of successes.
+
+### Criticals
+
+Whenever you roll a **6** that explodes, and the new die you roll also turns into a **6**, you have achieved a [[Critical Success]]! This impressive feat allows you to regain 1 [[Grunt]] (up to your maximum) and also grants you a surge of adrenaline, allowing you to immediately perform an additional non-offensive action (a [[Move]], [[Plunder]], or [[Manipulate]] action).
+
+*(Note: Grunt is fully explained in the [Character Stats rules](../01_Characters & Mobs/10_Stats.md#grunt)).*
+
+### 1s and Fumbles
+
+Sometimes, luck is just a bad joke waiting for a punchline. When you roll a [[Test]] and fail to accumulate enough [[Success|Successes]] (your [[Success|Successes]] are less than the [[Target Number (TN)]]), but you have one or more dice showing **1s**, you can choose to push your luck and re-roll all of those **1s**. 
+
+* **The Blessing:** If the re-rolled dice generate enough [[Success|Successes]] to meet or exceed the [[Test|Test's]] [[TN]], the [[Test]] succeeds normally. 
+* **The Fumble:** If the [[Test]] still fails after re-rolling the **1s**, you have [[Fumbled]]! The effort backfires catastrophically, and you lose 1 [[Grunt]].
+* **Accepting Failure:** If you choose not to re-roll the **1s** (or if you failed the [[Test]] but rolled no **1s** at all), the action simply fails normally. You do not lose 1 [[Grunt]] or trigger any Fumble effects.
+
+## The Bangaranga Pool
+
+Goblins are easily carried away by their own rowdy excitement. When the crowd gets hyped by awesome stunts, hilarious disasters, or massive payouts, their collective noise and rowdiness builds up. This is represented by a shared pool of dice called the [[Bangaranga Pool]]. These should be of a distinct color from the other dice, e.g. bright red.
+
+### Seeding the Pool (Start of Raid)
+
+At the start of a [[Raid]], the [[Bangaranga Pool]] is seeded with a baseline level of chaotic energy based on the size and composition of the raiding party:
+
+| Number of Gobbos | Dice to Add |
+| :--- | :--- |
+| Number of [[Boss|Bosses]] | **1d** per [[Boss]] |
+| Number of [[Mob|Mobs]] ([[Size]] 3 or 4) | **1d** per [[Mob]] |
+| Number of [[Mob|Mobs]] ([[Size]] 5) | **2d** per [[Mob]] |
+
+> **Example:** A 3-player raid party has one [[Size]] 3 [[Mob]], one [[Size]] 4 [[Mob]], and one [[Size]] 2 [[Mob]]. The starting [[Bangaranga Pool]] is **5d** (3 baseline + 1 + 1 + 0).
+
+### Loading the Pool (Hype Triggers)
+
+Dice are added to the physical [[Bangaranga Pool]] during a [[Raid]] when notable events hype up the horde:
+
+| Event | Description | Dice to Add |
+| :--- | :--- | :--- |
+| [[Critical Success|Critical Successes]] | Any player rolls a [[Critical Success]] | **+1d6** |
+| [[Fumbles]] | Any player [[Fumbles]] a test | **+1d6** |
+| Defeating a Notable Enemy | Defeating an enemy with the `[Notable]` or `[Big Threat]` tag | **+1d6** |
+| Claiming a Big Loot Cache | Looting a chest, room, or zone with the `[Big Loot]` or `[Hoard]` tag | **+1d6** |
+
+### Tapping the Pool & The Bangaranga Tax
+
+Before rolling any test, a player can choose to take a number of dice from the [[Bangaranga Pool]] (up to a maximum equal to their Boss's [[Grunt]] stat) and add them to their current test's [[Dice Pool]].
+
+However, using the crowd's energy for mundane tasks is considered "cheating" and costs a premium:
+
+| Condition | Consequence |
+| :--- | :--- |
+| If the number of Bangaranga dice taken is **less than or equal to the Target Number (TN)** of the test | It costs nothing extra. |
+| If the number of Bangaranga dice taken is **greater than the test's TN** | It costs **1 extra die** from the pool as a tax. This tax die is simply removed from the pool and discarded back to the box (not rolled). |
+| If the pool does not contain enough dice to cover both the dice rolled and the tax die | The player cannot take that many dice. |
+
+> **Example (5+/2 Test):**
+> *   If you take **1 or 2 Bangaranga dice**, it costs no tax. You simply take them from the pool and roll them.
+> *   If you want to take 3 [[Bangaranga dice]], 3 is greater than the TN of 2. You must pay a **1 die tax**. This requires a total of **4 dice** to be present in the pool. 3 dice are rolled, 1 die is discarded.
+
+### Rolling Bangaranga Dice - Double Explosion!
+
+Every **6** rolled on a Bangaranga Die counts as 1 [[Success]], but it **explodes twice**, meaning you immediately roll *two* additional regular dice instead of one, which can themselves succeed or explode normally!
+
+### Overreaching
+
+If your [[Test]] fails when you use [[Bangaranga Dice]], you lose 1 [[Grunt]]. Because a failed [[Bangaranga]] roll already carries this penalty, you have nothing to lose by re-rolling any **1s** in a desperate bid for [[Success]]!
+
+However, using the horde's noise carries a high risk of exhausting their hype. If you fail the [[Test]] when using [[Bangaranga Dice]] (either by choosing not to re-roll **1s**, or by re-rolling them and still failing), and your final roll contains any **1s** (including those rolled on the re-roll), you immediately drain the [[Bangaranga Pool]], removing a number of [[Bangaranga Dice]] from the pool equal to the number of [[Bangaranga Dice]] you took for the [[Test]].
+
+---
+
+<a id="doc-3"></a>
+<!-- ============================================================ -->
+<!-- DOCUMENT 3: 01_STAGE_Drafts/00_Rules/02 Combat.md -->
 <!-- ============================================================ -->
 # Rules — Combat
 *Source: `01_STAGE_Drafts/00_Rules/02 Combat.md`*
@@ -96,26 +223,44 @@ With a Move action, you can move up to your [[Movement]] number of zones. The di
 #### Attack (Mob or PC)
 The Attack action can only be used in the Players Active turn. 
 To Attack, the player's base [[dice pool]] is based on the player's [[Tough]] for [[Melee attack]] and [[Slink]] for [[Ranged attack]], modified by any equipment, Quirks, or other circumstances. 
-*   **Kill / Wound:** If you roll successes equal to or greater than the target's current [[Defence]] (acting as the test's [[TN]]), you instantly defeat a standard enemy, deal 1 [[Wound]] to a Boss/Elite (see [Enemies](../04_Enemies/20_Enemies.md)), or reduce a Mob's [[Size]] by the number of successes scored.
-*   **Stagger:** If you roll at least **one (1) success** but fewer than the target's current [[Defence]] TN, the attack does not deal damage, but it throws them off balance. The target gains the [[Staggered]] condition until the end of the round.
+*   **Kill / Wound / Mob Damage:** If you roll successes equal to or greater than the target's current [[Defence]] (acting as the test's [[TN]]):
+    *   *Standard Enemy:* Instantly defeated (**One-Hit Kill**).
+    *   *Boss / Elite:* Deals **1 [[Wound]] for every full multiple of the target's Defence TN** scored on the roll (see [Enemies](../04_Enemies/20_Enemies.md)).
+    *   *Enemy Mob (Single-Target Attack):* Reduces the face value of the Mob's lowest active health die by the attack's damage (or by 1 if untyped).
+    *   *Enemy Mob (Mob-on-Mob Melee):* Resolves via the **Frontline Rule** (see [Goblin Mobs](../01_Characters%20&%20Mobs/13_Goblin_mob.md)), applying damage simultaneously to the enemy's lowest-value health dice up to your attacking Mob's current [[Size]]. *(Note: Melee dice pools may be constrained by environmental terrain, such as `Narrow` choke points; see [Movement & Zones](03_Movement%20&%20Zones.md)).*
+*   **Stagger (Impact Size vs. Target Size):** If you roll at least **one (1) success** but fewer than the target's current [[Defence]] TN, the attack does not deal damage, but it can throw the target off balance. To inflict the [[Staggered]] condition, the attack's **Impact Size** must be equal to or greater than the target's **Physical [[Size]]** (Impact Size >= Target Size):
+    *   **Calculating Impact Size:**
+        *   *Standard Attacks:* Equal to the attacker's physical [[Size]] (a lone Goblin Boss is **Size 1**; a [[Mob]] uses its current **Mob [[Size]]**).
+        *   *`Heavy` Weapon Trait:* Adds **+1** to Impact Size (a Size 1 Goblin swinging a heavy hammer attacks with **Impact Size 2**).
+        *   *`Crushing` Weapon Trait:* Adds **+2** to Impact Size (attacks with **Impact Size 3**).
+        *   *Explosives & Spells:* An explosion's Impact Size equals its **Tier** (T1 = Size 1, T2 Grenade = Size 2, T3 Powder Keg = Size 3, T4 Mortar/Cannon = Size 4, T5 Reactor = Size 5).
+    *   *Result:* If Impact Size >= Target Size, the target gains the [[Staggered]] condition until the end of the round. If Impact Size < Target Size, the target has natural mass resistance and ignores the Stagger effect entirely.
 *   **Bounce:** If you roll **zero (0) successes**, the attack bounces harmlessly off their armor. Nothing happens.
 #### Plunder (Mob or PC)
 The [[Plunder]] action is to pick up any [[Loot]] at where the Player or the Mob stands.  
-#### Dodge / Parry (Reaction)
-The Dodge or Parry action can only be used as a [[Reaction]] to an incoming Attack or Environmental effect. Typically this is in the Enemy Active turn. You **must** have saved a [[Standard Action]] from your turn to use this. If you are out of actions, you simply take the damage!
-*   **Dodge:** Test [[Slink]] (typically **5+/1**). Every success you roll reduces incoming damage by 1.
-*   **Parry:** Test [[Tough]] (requires a shield, typically **5+/1**). Every success you roll reduces incoming damage by 1.
-*   **Armor:** Armor adds [[Passive defence]] dice that do NOT need an action. See more under equipment.
-*   **The Math:** Every success you roll reduces the incoming Damage by 1. If any damage remains, your Gobbo or Mob takes it.
+#### Dodge / Parry (Reaction) & The Clatter Roll
+The Dodge or Parry action can only be used as a [[Reaction]] to an incoming Attack or Environmental effect (typically during the Enemy Active turn). You **must** have saved a [[Standard Action]] from your turn to use this. If you have no saved actions, you cannot attempt to evade and must rely entirely on passive armor to absorb the blow!
 
-**Mob Defense:**
-Mobs do not naturally dodge. They are a chaotic swarm and simply absorb damage. However, a Mob's defensive capabilities depend on their equipment and their current combat state (saved actions):
-1.  **Armored (Passive):** If a Mob is equipped with Armor, they gain passive defense dice (e.g., **+1d6** or **+2d6**) which are rolled against every incoming attack.
-2.  **Saved Actions (Active Defense):** If a Mob has saved actions (because they are [[Loitering]] and only used 1 action on their turn), they can use their saved action as a Reaction to defend. For each saved action spent, the Mob rolls **1d6** Defence.
-    *   *[[Loitering]] Mobs (1 Saved Action):* Rolls **1d6** Defence.
-    *   *Ordered or [[Out of Control]] Mobs (0 Saved Actions):* Rolls **0d6** Defence (relying only on passive Armor).
-    *   *Bane:* A [[Staggered]] Mob suffers a **Bane (-1d)** to their Defence rolls, reducing a [[loitering]] Mob's active defense roll to **0d6**.
-3.  **Ordered Scatter (Reaction):** If a Mob with 0 saved actions is targeted by an attack, the Boss can spend a saved action (or an unused Free Order Reaction) to yell at them to "Scatter!". The Mob rolls active defense dice equal to the Boss's [[Mouth]] stat (e.g., if Mouth is 3, the Mob rolls **3d**). If they survive the attack, they may immediately Move 1 Zone to take cover.
+When targeted by an attack with a listed **Threat** (e.g., `5+/1`) and **Damage** (e.g., `3`), resolve the defense in a single simultaneous throw—the **Clatter Roll**:
+*   **Stat Dice:** Roll your active defense dice: [[Slink]] (for Dodge) or [[Tough]] (for Parry with an equipped shield or heavy weapon).
+*   **Armor Dice:** Roll any passive bonus dice granted by your equipped [[Armor]] (use distinct colored dice, such as gray or black).
+
+**Resolving the Clatter Roll:**
+1.  **Check Stat Dice vs. Threat:** Count successes rolled on your **Stat Dice**. If your successes meet or exceed the attack's **Threat TN**, you achieve a clean Dodge or Parry: **you take 0 Damage**.
+2.  **Mitigation on Failed Evasion:** If your Stat Dice fall short of the Threat TN (or if you had 0 saved actions), the evasion fails. You now look at your **Armor Dice**:
+    *   Every success (**5+**) rolled on your Armor Dice reduces the incoming Damage by 1.
+    *   Any remaining Damage is deducted directly from your [[Grit]].
+
+**Mob Defense & The "Scatter!" Order:**
+Mobs do not have individual attributes and cannot naturally dodge. A Mob has a strict maximum of **two (2) actions per round**. If an Order directed them to spend both actions on the Player Active turn, they have 0 actions left and cannot react. When targeted by an attack, a Mob resolves defense based on its state and available actions:
+1.  **Passive Armor:** If equipped with Armor, the Mob rolls its passive Armor Dice **once per incoming attack**. Each success (**5+**) reduces the incoming attack damage by 1 across all targeted dice before damage is applied.
+2.  **Active Scatter ("Scatter!" Reaction):** If a Mob has at least **1 unused action remaining**, the Boss can spend a saved [[Standard Action]] (or an unused Free Order) as a reaction to scream "Scatter!". The Mob uses its remaining action to roll active defense dice equal to the Boss's [[Mouth]] stat.
+    *   **The Size Target Penalty:** Large mobs occupy more space and are sluggish to disperse. Every point of Mob [[Size]] above 1 increases the enemy attack's Threat TN by **+1** for the Scatter test (e.g., a Size 3 Mob faces a +2 TN penalty).
+    *   **Clean Scatter:** If the Mouth dice meet the modified Threat TN, the Mob evades completely (0 damage) and immediately moves **1 Zone** into cover.
+    *   **Failed Scatter:** If the Mouth dice fail, the Mob takes damage normally, reduced only by any passive Armor Dice successes.
+    *   **Mob Gambling (High-Stakes Mouth Gamble):** If the initial Scatter roll falls short, the Boss may use the [[Gobbo Gamble]] to reroll all **1s** on the Mouth dice. 
+        *   *If the Gamble succeeds:* The Mob pulls off a miracle dive and takes 0 damage.
+        *   *If the Gamble fails:* Panic ensues! The Mob takes the full attack damage, suffers **1 Trample Damage** applied to every single die in the Mob's health pool (like an AoE crush), drops **1 Bulk** of carried [[Loot]], and immediately breaks into the [[Out of Control]] state. If the Boss is present in the same [[Zone]], the Boss is caught in the stampede and gains the [[Staggered]] condition until the end of the round.
 
 ### GM Tactics: Group Attacks (Enemy Swarms)
 If multiple enemies surround and attack a Gobbo, the GM should NOT make separate attacks. Instead, they combine into a [[Group Attack]]. While a PC can only be attacked by a maximum of 3 enemies, there is no limit on attacker on a Mob
@@ -125,11 +270,12 @@ If multiple enemies surround and attack a Gobbo, the GM should NOT make separate
 
 #### Manipulate
 The Manipulate action is a catch-all for whenever a Mob or PC tries to interact with an item or the environment in any way. The base [[dice pool]] is based on whatever attribute is most relevant to the action, modified by any equipment, Quirks, or other circumstances. The GM sets the [[Difficulty]] and [[TN]] (typically **5+/1**). 
+*   **Player-Triggered Traps & Hazards:** When a player spends an action to trigger an environmental hazard or trap against enemies (such as dropping a chandelier or cutting a rope), the player first tests the relevant stat to activate it. To determine the effect without GM rolls, the player rolls the trap's listed **Damage Dice Pool** (e.g. 3d6, where each success on **5+** deals 1 Damage or 1 Wound).
 
 #### Order 
-The [[Order action]] is used to give commands to your goblins, directing a Mob to use both of their actions for the round. Standard Orders to controlled Mobs do not require a dice roll.
+The [[Order action]] is used to give commands to your goblins, directing a Mob to use up to their **two (2) actions** for the round. Standard Orders to controlled Mobs do not require a dice roll.
 *   **The 3 Mob States:** A Mob is always in one of three states on their turn:
-    *   **Ordered:** Direct instructions from the Boss. They spend both actions as ordered (0 saved actions for defense).
+    *   **Ordered:** Direct instructions from the Boss. They spend 1 or both actions as ordered. If they spend both actions, they have 0 saved actions left for defense. If ordered to spend only 1 action (e.g. Move), their remaining 1 action is saved.
     *   **[[Loitering]]:** Under control, but receives no orders. Goblins use **1 action** to loiter (roll/choose on the [[Loitering]] Table in [Goblin Mobs](../01_Characters%20&%20Mobs/13_Goblin_mob.md)) and save **1 action** for defense (1d6 [[Defence]]).
     *   **[[Out of Control]]:** Broken command (out of sight, size exceeds Grunt, or failed morale). They spend both actions running amok under GM control (roll/choose on the [[Out of Control]] Table in [Goblin Mobs](../01_Characters%20&%20Mobs/13_Goblin_mob.md)), leaving them with 0 saved actions for defense.
 *   **Regaining Control:** To regain control of an [[Out of Control]] Mob, the Boss must spend a [[Standard Action]] to [[Order]] them, resolving it using the standard command test rules in [Giving Orders](04_Giving%20orders.md). On a success, the Mob becomes controlled and receives their instructions; on a failure, they ignore the Boss and remain [[Out of Control]].
@@ -173,8 +319,8 @@ On the Players *active* turn, they can use any actions they want to move, plunde
 2.  **Unordered Mobs:** Once all players have finished taking their actions, any Mobs that were **not ordered** this turn (both [[Loitering]] and [[Out of Control]] Mobs) resolve their behaviors. Roll on the appropriate behavior table for each.
 During this phase, the GM may use enemy reactions to respond to players or mobs (e.g., taking opportunity shots or counter-attacking). 
 ### Enemy active turn
-On the Enemies active turn, they can use whatever action they have left, which might have been spent on reactions. 
-In this phase the Players might react to anything a enemy is doing, if they saved up any actions from their active phase. 
+On the Enemy Active turn, all enemies take their actions. Standard enemies, Enemy Mobs, and Elites receive **two (2) actions** per round by default (used to Move, Attack, etc.). Truly colossal Apex Bosses or specialized monsters may possess traits granting **three (3) actions** or unique action clocks. If an enemy spent an action on a reaction earlier in the round, that action is deducted from their pool now.
+In this phase, players might react to enemy attacks using saved Standard Actions (e.g., Dodge or Parry Clatter Rolls, or shouting "Scatter!" to a Mob with a saved action).
 ### Round closure
 #### Points
 [[Raid points]] are calculated, including currently held as well as confirmed, based on objectives and the basic Raid rules. 
@@ -192,14 +338,15 @@ If there are no one fighting on one side, or one side gives up or flees, the Com
 Goblins are cowards at heart, and running away is a highly viable survival strategy.
 *   **Escape Zones:** To flee an encounter, a PC or Mob must move into a designated escape zone or exit.
 *   **Disengaging & Opportunity Attacks:** If a PC or Mob attempts to leave a Zone containing alert enemies, they trigger a reactionary Opportunity Attack from each enemy in the zone. To prevent this, they must spend a [[Standard Action]] to Disengage, testing [[Slink]] against a difficulty of **5+** and successes required equal to the highest enemy [[Defence]] TN (denoted as **5+/Defence**). On a success, they may move out of the Zone safely.
+    *   *Bulk 3+ Restriction:* Hauling a loose Bulk 3+ item requires two hands. You **cannot perform a Disengage action** while clutching a Bulk 3+ item. To escape safely, you must either drop the item as a [[Free Action]], defeat the threatening enemies, or have a Mob carry the loot.
 *   **Carrying Bulk:** Goblins fleeing with heavy treasure are slowed. Standard movement and dragging penalties for [[Bulk]] apply while fleeing. A PC or Mob can choose to drop their loot as a [[Free Action]] to restore full movement speed.
 *   **Mob Fleeing:** Mobs flee when given a "Scatter" or "Retreat" Order, or automatically when a failed [[Morale Check]] triggers group panic.
 
 ---
 
-<a id="doc-3"></a>
+<a id="doc-4"></a>
 <!-- ============================================================ -->
-<!-- DOCUMENT 3: 01_STAGE_Drafts/00_Rules/03_Movement & Zones.md -->
+<!-- DOCUMENT 4: 01_STAGE_Drafts/00_Rules/03_Movement & Zones.md -->
 <!-- ============================================================ -->
 # Rules — Movement & Zones
 *Source: `01_STAGE_Drafts/00_Rules/03_Movement & Zones.md`*
@@ -330,9 +477,9 @@ GMs can customize battlefields by placing these standardized, modular traits ont
 *   **Deep Water (Obstacle):** Flooded chambers, sewer channels, or rapid rivers.
     *   *Trigger:* Passive / Interactive (for swimming).
     *   *Rules:* Traversing this Zone requires a [[Move]] action to travel only 1 [[Zone]] (ignoring standard movement speed). If forced to swim or stay afloat (directly in the water without a boat or bridge), a creature starting their turn in this Zone must test [[Tough]] against the [[Zone Profile]] or begin drowning (taking 1 damage per round).
-*   **Narrow (Obstacle):** A tight crawlspace, pipe, or rocky crevice.
+*   **Narrow (Obstacle):** A tight crawlspace, pipe, doorway, or rocky crevice.
     *   *Trigger:* Passive.
-    *   *Rules:* The maximum Mob size that can occupy this Zone without penalty is **Size 2**. Mobs of **Size 3+** suffer a [[Bane]] (-1d) to all attack rolls and physical tests while in this Zone, and their Movement is capped at 1 [[Zone]]. Giant enemies cannot enter.
+    *   *Rules:* A Narrow zone defines a maximum physical capacity and frontline width (default **Size 2**, though specific zone descriptions may define tighter or wider limits). Mobs exceeding this capacity suffer a [[Bane]] (-1d) to all physical tests, have their Movement capped at 1 [[Zone]], and their maximum Melee Combat Dice pool / Frontline Width is capped at the zone's listed rating as backline units queue behind. Giant enemies cannot enter.
 *   **Pillars / Statues (Tactical Feature):** Solid stone pillars or crumbling carvings.
     *   *Trigger:* Passive.
     *   *Rules:* Anyone occupying this Zone can declare they are taking cover behind a pillar (as a [[Free Action]]), granting them [[Full Cover]] against attacks coming from one specific adjacent Zone.
@@ -415,7 +562,7 @@ These scenarios illustrate how different hazards, opportunities, and Mob rules p
 ### Example 1: Slipping on the Ice (Slink Tests)
 > **Example:** Grub (PC) and his **Size 3** Mob run from town guards into a frozen courtyard designated as **Zone A** (Profile: **5+/2**; Trait: **Slippery**). 
 > * **The PC**: Grub enters the zone and must make a Slink test. Grub has **Slink 2**, rolling **2d6** (Stat). He rolls `5, 5`—two successes! He keeps his footing.
-> * **The Mob**: The Mob enters the zone. Mobs roll exactly **1d6** for [[Slink]] tests. The player rolls `5`—only one success! The Mob fails the **5+/2** Slink test. The Mob falls [[Prone]] and their movement ends immediately in the middle of the ice sheet.
+> * **The Mob**: The Mob enters the zone. Mobs roll a base of **2d6** for [[Slink]] tests. The player rolls `5, 3`—only one success! The Mob fails the **5+/2** Slink test. The Mob falls [[Prone]] in a dog-pile, and their movement ends immediately in the middle of the ice sheet. Grub could choose to push the roll and reroll the `3`, risking a Fumble if it still fails!
 
 ### Example 2: Braving the Toxic Fumes (Tough Tests & Mob Scaling)
 > **Example:** Snarl (PC) and her massive **Size 5** Mob are pursuing a dwarf through a sewer pipe designated as **Zone B** (Profile: **5+/2**; Traits: [Toxic] and **Narrow**). They start their turn in the zone.
@@ -474,9 +621,9 @@ At the end of each combat round, the player resolves the unsupervised Mob's acti
 
 ---
 
-<a id="doc-4"></a>
+<a id="doc-5"></a>
 <!-- ============================================================ -->
-<!-- DOCUMENT 4: 01_STAGE_Drafts/00_Rules/04_Giving orders.md -->
+<!-- DOCUMENT 5: 01_STAGE_Drafts/00_Rules/04_Giving orders.md -->
 <!-- ============================================================ -->
 # Rules — Giving orders
 *Source: `01_STAGE_Drafts/00_Rules/04_Giving orders.md`*
@@ -506,9 +653,9 @@ This is the basic flow of giving an order:
 
 ---
 
-<a id="doc-5"></a>
+<a id="doc-6"></a>
 <!-- ============================================================ -->
-<!-- DOCUMENT 5: 01_STAGE_Drafts/00_Rules/05_Raid points.md -->
+<!-- DOCUMENT 6: 01_STAGE_Drafts/00_Rules/05_Raid points.md -->
 <!-- ============================================================ -->
 # Rules — Raid points
 *Source: `01_STAGE_Drafts/00_Rules/05_Raid points.md`*
@@ -563,9 +710,9 @@ Completing the Main Objective and immediately fleeing is the safest route; stayi
 
 ---
 
-<a id="doc-6"></a>
+<a id="doc-7"></a>
 <!-- ============================================================ -->
-<!-- DOCUMENT 6: 01_STAGE_Drafts/00_Rules/06_Keywords Index.md -->
+<!-- DOCUMENT 7: 01_STAGE_Drafts/00_Rules/06_Keywords Index.md -->
 <!-- ============================================================ -->
 # Rules — Keywords Index
 *Source: `01_STAGE_Drafts/00_Rules/06_Keywords Index.md`*
@@ -579,7 +726,7 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 *   [[Area of Effect (AoE)]]: An attack or spell property that targets all characters or Mobs within a designated Zone.
 *   [[Assert Dominance]]: A Lair Action testing Mouth or Tough to secure control over Lair facilities and thralls.
 *   [[Attack]]: A Standard Action spent to engage an enemy in melee or ranged combat, rolling successes against their Defence.
-*   [[Bane]]: A negative modifier imposing a -1d penalty on a test's dice pool. Multiple Banes do not stack.
+*   [[Bane]]: A negative modifier that subtracts dice from a test's dice pool before rolling. Banes scale in integer steps: **Bane 1 (-1d)**, **Bane 2 (-2d)**, etc. If total Banes reduce a pool to 0d or less, the player rolls a 1d Salvage Roll.
 *   [[Bangaranga]]: The chaotic energy generated by goblin failures, fuel for catastrophic fumbles and high magic.
 *   [[Bangaranga Dice]]: Extra dice added to a roll by spending points from the communal Bangaranga Pool.
 *   [[Bangaranga Pool]]: A communal pool of d6s built by fumbles and ones, spent by players to purchase temporary Boons or activate magic.
@@ -590,15 +737,16 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 *   **[Bonded]:** A Tag on an Oddity that cannot be freely removed once installed. Removing it requires a specific condition defined by the GM.
 *   [[Bone Oddity]]: An Oddity crafted from the remains of a dead Gobbo Boss. Always T1–T2, always B0–B1. Tags reflect how the Boss died.
 *   [[Bone Pile]]: A memorial in the Lair where dead PCs are recorded, granting boons to their successors.
-*   [[Boon]]: A positive modifier granting a +1d bonus on a test's dice pool. Multiple Boons do not stack.
-*   [[Boon|Boons]]: A positive modifier granting a +1d bonus on a test's dice pool. Multiple Boons do not stack.
+*   [[Boon]]: A positive modifier that adds bonus dice to a test's dice pool before rolling. Boons scale in integer steps: **Boon 1 (+1d)**, **Boon 2 (+2d)**, etc.
+*   [[Boon|Boons]]: Positive modifiers adding bonus dice to a test's dice pool (**Boon 1 (+1d)**, **Boon 2 (+2d)**).
 *   [[Boss]]: A player character or elite NPC possessing Grit, specialized Quirks, and command over Mobs.
 *   [[Brains]]: Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.
 *   [[Bulk]]: A measure of how heavy/unwieldy an item is. High bulk reduces movement or requires multiple goblins.
 *   [[Carry]]: An attribute indicating the maximum Bulk of items a character or Mob can carry without penalty.
 *   [[Carry Capacity]]: The maximum weight or Bulk a character can carry without speed or action penalties.
 *   [[Chassis]]: The base item that forms the body of a piece of Custom Gear. Built from Scrap. Determines the item type, Bulk, and base dice.
-*   [[Cleave]]: An attack property allowing excess successes to overflow and damage adjacent targets.
+*   [[Clatter Roll]]: A simultaneous roll of active Stat Dice (Slink for Dodge or Tough for Parry) alongside colored passive Armor Dice. Meeting the Threat TN results in 0 damage; failing triggers Armor Dice to mitigate remaining damage.
+*   [[Cleave|Cleave X]]: A weapon or monster attack property allowing melee strikes to sweep across multiple foes, dealing its damage simultaneously to up to **X adjacent targets** or up to **X of the lowest-value health dice** in a Mob (e.g., a standard Greataxe has `Cleave 2`, an Ogre has `Cleave 3`, and a Colossal Giant has `Cleave 5`).
 *   [[Condition]]: A temporary state applied to a character or Mob, imposing penalties or mechanical limits.
 *   [[Cover]]: Defensive positioning against ranged attacks. Partial cover grants a [[Boon]] (+1d) to Dodge, or imposes a [[Bane]] (-1d) on attacks. Full cover blocks targeting. See [[02 Combat]].
 *   [[Crafting Capacity]]: The maximum number of Oddities that can be attached to a single item. Equal to the crafter's Brains score.
@@ -610,9 +758,9 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 *   [[Delivery]]: The method by which a magical spell is projected, such as Touch, Ray, or Zone.
 *   [[Dice Pool]]: The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.
 *   [[Difficulty]]: The die face needed to score a success (Easy 4+, Normal 5+, Hard 6). This is typically dependent on the circumstances of the test.
-*   [[Dodge]]: An active Reaction to avoid incoming ranged or area damage by testing Slink, with successes reducing damage.
+*   [[Dodge]]: An active Reaction to completely avoid an incoming attack by rolling Slink against the attack's Threat TN in a Clatter Roll.
 *   [[Dominance]]: A Lair test made to command internal Lair factions or establish authority, reducing unrest.
-*   [[Dragging]]: Pulling Loot that exceeds your carry capacity. Halves your Movement and imposes penalties.
+*   [[Dragging]]: Hauling massive plunder exceeding your Over-Laden threshold (up to 2x Carry). Locks movement to 1 Zone, requires both hands, and prevents active Dodge or Parry reactions.
 *   [[Dumb]]: A condition preventing the wielder from casting spells or using Brains-based active Quirks.
 *   [[Duration]]: The timeframe that an effect, spell, or condition remains active on a target or Zone.
 *   [[Easy]]: A test Difficulty requiring a die face of 4+ to score a success.
@@ -649,9 +797,9 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 *   [[Lair Upgrades]]: Improvements to the base bought with pooled Loot, granting permanent boons to all raiding goblins.
 *   [[Legendary]]: The highest quality tier (T5) of equipment, crafted from mythic materials like godstone.
 *   [[Loitering]]: A Mob state where no order is given. The Mob performs a minor loitering action and saves 1 action for defense.
-*   [[Loot]]: Valuable scrap, gear, or treasures scavenged during a raid, pooled to upgrade the Lair and gain XP.
-*   [[Loot Capacity]]: The maximum Bulk of items a goblin or Mob can carry during a raid.
-*   [[Loot Value]]: The raw value of items secured during raids, pooled to increase Infamy and Lair Scrap.
+*   [[Loot]]: Valuable scrap, gear, or treasures scavenged during a raid, categorized by Quality Tiers (T1–T5) and Bulk.
+*   [[Loot Capacity]]: The maximum Bulk of items a goblin or Mob can carry during a raid without penalty.
+*   [[Loot Value]]: The worth of treasure expressed in Tier tokens (T1–T5). Follows the 5-to-1 exponential scale (5x T1 = 1x T2, 5x T2 = 1x T3, etc.) for Lair smelting, purchases, and upgrades.
 *   [[Main Stats]]: The four primary attributes defining a goblin: Tough, Slink, Brains, and Mouth.
 *   [[Manipulate]]: A Standard Action catch-all used to interact with items, machinery, traps, or environmental components.
 *   [[Marks]]: Communal Gang progression milestones equivalent to levels, unlocking new quirks and upgrades.
@@ -672,7 +820,7 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 *   [[Order]]: A Standard Action used by a PC Boss to direct a Mob's actions, bypassing command rolls for controlled Mobs.
 *   [[Order Action]]: The action spent to direct a Mob, executing their priority combat behavior.
 *   [[Out of Control]]: A Mob state triggered by failed command rolls or size limits. The Mob acts randomly under GM direction.
-*   [[Over-Laden]]: A state of carrying Bulk exceeding capacity, reducing movement speed and imposing Banes on physical tests.
+*   [[Over-Laden]]: A load state where carried Bulk exceeds baseline Carry capacity (up to Carry + Tough). Reduces movement speed by 1 Zone and imposes Bane 1 (-1d) on physical Slink and Tough tests.
 *   [[Overclock]]: A declaration made before an Attack Action that amplifies Custom Gear's effect to its maximum, destroys the item, and ignores the target's Passive Defence dice.
 *   [[Overreaching]]: The risk of casting magic beyond safety limits, drawing d6s from the Bangaranga Pool and risking fumbles.
 *   [[Parry]]: An active Reaction to block incoming melee attacks by testing Tough while holding a shield, reducing damage.
@@ -701,6 +849,7 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 *   [[Restrained]]: A condition preventing movement and imposing a -1d Bane to Dodge reactions.
 *   [[Retire]]: The process of withdrawing a high-level goblin Boss (reaching a stat of 6) to become a Patron Saint or Elder.
 *   [[Route Test]]: A travel test made during journeys using Brains or Slink to navigate path hazards and find safe passages.
+*   [[Salvage Roll]]: A single **1d6** rolled when a test's [[Dice Pool]] is reduced to **0d6 or less**. A roll of **6** generates 1 [[Success]] (non-exploding); a roll of **1** triggers an immediate [[Fumble]].
 *   [[Scarred]]: An Oddity that has survived a Scrap Cascade. Has permanently gained +1 Bite.
 *   [[Scouting]]: A travel role utilizing Slink or Brains to identify path hazards and choose route options.
 *   [[Scrap]]: Base resources used to build a Chassis. Comes in Tiers 1–5.
@@ -726,6 +875,7 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 *   [[Target Number (TN)]]: The total number of successes required to pass a test (e.g., in shorthand **5+/1**, you need one die to land on 5 or 6). This is typically a fixed number. 
 *   [[Terrified]]: A condition forcing a character or Mob to flee from a source of fear and preventing them from closing distance.
 *   [[Test]]: A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).
+*   [[Threat]]: The incoming evasion profile of an enemy attack (e.g. `5+/1`), defining the Difficulty and TN a defender must meet to avoid damage.
 *   [[Tier]]: The mechanical power level of a Quirk, Tag, Oddity, or item, ranging from 1 to 5.
 *   [[Tier (T)]]: The power level of an Oddity's positive effect. Ranges from 1 to 5.
 *   [[TN]]: Target Number. The total number of success rolls (usually meeting the Difficulty face) required to pass a test.
@@ -747,9 +897,9 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 
 ---
 
-<a id="doc-7"></a>
+<a id="doc-8"></a>
 <!-- ============================================================ -->
-<!-- DOCUMENT 7: 01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md -->
+<!-- DOCUMENT 8: 01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md -->
 <!-- ============================================================ -->
 # Rules — Wounds_Conditions
 *Source: `01_STAGE_Drafts/00_Rules/07_Wounds_Conditions.md`*
@@ -773,16 +923,16 @@ There are a number of conditions that can affect a gobbo. Most of these have a d
 | Condition | PC | Mob |
 |---|---|---|   
 | [[Weakened]] | **-1d** on [[Tough]] | **-1d** on Attack |
-| [[Restrained]] | **-1d** on [[Slink]], [[Movement]] becomes 0 | **-1d** on Dodge, [[Movement]] becomes 0 |
+| [[Restrained]] | **-1d** on [[Slink]], [[Movement]] becomes 0 | Cannot Scatter, [[Movement]] becomes 0 |
 | [[Dumb]] | **-1d** on [[Brains]] and [[Mouth]] | **-1d** on Morale (TBD: Might fail to obey orders) |
 | **Silenced** | **-1d** on [[Mouth]] | **-1d** on Morale |
 | [[Blinded]] | **-1d** on Physical tests | **-1d** on Physical tests |
 | [[Terrified]] | **-1d** on [[Brains]] and [[Mouth]] tests, cannot move closer to the source of fear | **-2d** on Morale tests, Order tests are Hard |
 | [[Stunned]] | Cannot take any actions or reactions | Cannot take any actions or reactions |
-| [[Prone]] | **-1d** on [[Slink]], 1 [[Move]] action to stand up | **-1d** on Dodge, 1 [[Move]] action to stand up |
-| [[Staggered]] | **-1d** on [[Dodge]] and [[Parry]] tests | **-1d** on [[Dodge]] tests (or **-1 Passive Defense** die) |
+| [[Prone]] | **-1d** on [[Slink]], 1 [[Move]] action to stand up | **-1d** on Scatter tests, 1 [[Move]] action to stand up |
+| [[Staggered]] | **-1d** on [[Dodge]] and [[Parry]] tests | **-1 Armor Die** (or **-1d** on Scatter tests) |
 
-*Note: For **Enemies** (who use static target numbers instead of stat pools), the [[Staggered]] condition reduces their [[Defence]] stat by **1** (minimum 1). Additionally, the [[Staggered]] condition is temporary and automatically clears during the Round Closure phase.*
+*Note: For **Enemies** (who use static target numbers instead of stat pools), the [[Staggered]] condition reduces their [[Defence]] stat by **1** (minimum 1). The [[Staggered]] condition is temporary and automatically clears during the Round Closure phase. An attack can only inflict [[Staggered]] if its **Impact Size** meets or exceeds the target's physical **[[Size]]** (Impact Size >= Target Size). Attacks with lower Impact Size deal normal damage on a full hit, but cannot Stagger on a partial hit.*
 
 # Healing
 
@@ -800,9 +950,9 @@ Typically a condition is removed once the cause of it is removed. Usually this i
 
 ---
 
-<a id="doc-8"></a>
+<a id="doc-9"></a>
 <!-- ============================================================ -->
-<!-- DOCUMENT 8: 01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md -->
+<!-- DOCUMENT 9: 01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md -->
 <!-- ============================================================ -->
 # Rules — Master_Tag_Index
 *Source: `01_STAGE_Drafts/00_Rules/08_Master_Tag_Index.md`*
@@ -864,6 +1014,11 @@ When two dynamic elements meet (either combined in [[custom gear]] crafting or o
 *   *Flavor:* Frost-covered metal, frozen wind, or magical numbing cold.
 *   *Universal Baseline:* Reduces the target's [[Movement]] by 1 Zone (minimum 0) for 1 round.
 *   *Fictional Interaction:* Freezes standing water, cracks brittle stone, and extinguishes fires.
+
+#### `[Explosive]`
+*   *Flavor:* Black powder, pressurized boilers bursting, or volatile alchemical detonations.
+*   *Universal Baseline:* Detonation. Produces an Area Threat Profile affecting all targets in the [[Zone]]. An explosion has an **Impact Size equal to its Tier (T1–T5)**, allowing it to **Stagger**, shove, or knock [[Prone]] any creature whose physical [[Size]] is equal to or smaller than the explosion's Impact Size (Impact Size >= Target Size).
+*   *Fictional Interaction:* Shatters wooden barricades, collapses stone tunnels, destroys cover, and ignites `[Slick]` grease.
 
 #### `[Fire]`
 *   *Flavor:* Crackling embers, liquid pitch, or sudden alchemical heat.
@@ -1202,9 +1357,9 @@ When two dynamic elements meet (either combined in [[custom gear]] crafting or o
 
 ---
 
-<a id="doc-9"></a>
+<a id="doc-10"></a>
 <!-- ============================================================ -->
-<!-- DOCUMENT 9: 01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md -->
+<!-- DOCUMENT 10: 01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md -->
 <!-- ============================================================ -->
 # Characters & Mobs — Stats
 *Source: `01_STAGE_Drafts/01_Characters & Mobs/10_Stats.md`*
@@ -1259,7 +1414,7 @@ Your movement stat determines how many zones you can move per [[Move]] action. H
 
 ### Passive Defence
 
-[[Passive Defence]] gives you passive protection against enemy attacks, which essentially means that you have that many extra dice to roll when you are making a save against an attack, even if you don't even spend an action to dodge!
+[[Passive Defence]] gives you passive protection against enemy attacks. These dice roll alongside your armor dice in the colored mitigation pool of the [[Clatter Roll]], reducing incoming damage even if you have no saved actions to dodge!
 
 ---
 
@@ -1349,9 +1504,9 @@ If you roll a [Critical Success](../00_Rules/01_Dice.md#criticals) on a test, yo
 
 ---
 
-<a id="doc-10"></a>
+<a id="doc-11"></a>
 <!-- ============================================================ -->
-<!-- DOCUMENT 10: 01_STAGE_Drafts/01_Characters & Mobs/11_Character Creation.md -->
+<!-- DOCUMENT 11: 01_STAGE_Drafts/01_Characters & Mobs/11_Character Creation.md -->
 <!-- ============================================================ -->
 # Characters & Mobs — Character Creation
 *Source: `01_STAGE_Drafts/01_Characters & Mobs/11_Character Creation.md`*
@@ -1467,9 +1622,9 @@ Choose one option from each of the following categories:
 
 ---
 
-<a id="doc-11"></a>
+<a id="doc-12"></a>
 <!-- ============================================================ -->
-<!-- DOCUMENT 11: 01_STAGE_Drafts/01_Characters & Mobs/11a_Roles.md -->
+<!-- DOCUMENT 12: 01_STAGE_Drafts/01_Characters & Mobs/11a_Roles.md -->
 <!-- ============================================================ -->
 # Characters & Mobs — 11a_Roles
 *Source: `01_STAGE_Drafts/01_Characters & Mobs/11a_Roles.md`*
@@ -1653,9 +1808,9 @@ Your **Role Level** determines which tier of your Role Skill is currently active
 
 ---
 
-<a id="doc-12"></a>
+<a id="doc-13"></a>
 <!-- ============================================================ -->
-<!-- DOCUMENT 12: 01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md -->
+<!-- DOCUMENT 13: 01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md -->
 <!-- ============================================================ -->
 # Characters & Mobs — Gang
 *Source: `01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md`*
@@ -1777,9 +1932,9 @@ Direct conflict and sabotage between players' Gangs is strictly resolved during 
 
 ---
 
-<a id="doc-13"></a>
+<a id="doc-14"></a>
 <!-- ============================================================ -->
-<!-- DOCUMENT 13: 01_STAGE_Drafts/01_Characters & Mobs/13_Boons_and_Banes.md -->
+<!-- DOCUMENT 14: 01_STAGE_Drafts/01_Characters & Mobs/13_Boons_and_Banes.md -->
 <!-- ============================================================ -->
 # Characters & Mobs — Boons_and_Banes
 *Source: `01_STAGE_Drafts/01_Characters & Mobs/13_Boons_and_Banes.md`*
@@ -1870,9 +2025,9 @@ This list contains the raw mechanical effects used to build Quirks, Items, and M
 
 ---
 
-<a id="doc-14"></a>
+<a id="doc-15"></a>
 <!-- ============================================================ -->
-<!-- DOCUMENT 14: 01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md -->
+<!-- DOCUMENT 15: 01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md -->
 <!-- ============================================================ -->
 # Characters & Mobs — Goblin_mob
 *Source: `01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md`*
@@ -1895,25 +2050,27 @@ The absolute most important stat for a Mob is its [[Size]]. Size determines ever
 *Note: The number of goblins in a Mob is abstract. A Size 1 Mob might be 3-5 goblins, while a Size 5 Mob is a swarming horde of 30+.*
 
 ## Mob Equipment & Loot Tradeoff
-Mobs can be equipped with scavenged weapons and armor, but this comes at a steep cost to their greed. 
-*   **Mob Armor:** Equipping a Mob with Armor grants them passive Defense Dice (e.g., +1d6 or +2d6). Whenever the Mob is attacked, you roll these bonus dice, and every success reduces the incoming damage. 
-*   **The Tradeoff:** Every piece of Gear a Mob is equipped with reduces their **Carry / [[Loot Capacity]]** by an equal amount of Bulk. A heavily armored Mob will survive longer, but they will not be able to carry the raiding loot back to the lair! A naked, feral Mob will die quickly but can carry a horde of treasure.
+Mobs can be equipped with scavenged weapons, armor, and utility tools, but this comes at a steep cost to their greed. 
+
+*   **Mob Armor:** Equipping a Mob with Armor grants them passive **Armor Dice** (e.g., **+1d6** or **+2d6**). Whenever the Mob is attacked, you roll these dice **once per incoming attack**. Every success (**5+**) reduces the incoming damage by 1 across all targeted dice before damage is applied. Outfitting a Mob with armor requires sufficient gear for the swarm: Mob Armor costs **Bulk equal to the Armor's Bulk rating multiplied by Mob Size** (e.g., Light Armor costs **Size x 1 Bulk**; Medium Armor costs **Size x 2 Bulk**).
+*   **Expedition Tools & Utility Gear:** Tools (such as Ropes, Crowbars, Lanterns, or Shovels) are shared by the squad. Each tool costs its standard flat **Bulk** rating (e.g., 1 Bulk for 1 Rope & Grappling Hook). 1 tool carried in the squad's pack serves the entire Mob.
+*   **The Tradeoff:** Every piece of gear a Mob is equipped with reduces their **Carry / [[Loot Capacity]]** by an equal amount of Bulk. A heavily armored Mob will survive longer, but they will not be able to carry the raiding loot back to the lair! A naked, feral Mob will die quickly but can carry a horde of treasure.
+*   **Casualties & Equipped Gear:** Equipped **Mob Armor** and **Mob Weapons** scale dynamically with the Mob's current **Size**. When a Mob loses Size from casualties, the armor and weapons of the fallen goblins remain on their corpses on the battlefield. Equipped gear never causes an encumbrance overload when Size drops. Only loose **Loot** and **Expedition Tools** count against the Mob's reduced capacity.
 
 ### Health & Taking Damage
-A Mob's health is tracked physically on the table using a number of D6s equal to its Size (e.g., A Size 3 mob starts with three physical dice turned to the "6" face). 
+A Mob's health is tracked physically on the table using a number of D6s equal to its Size (e.g., a Size 3 Mob starts with three physical dice turned to the "6" face). How damage is applied depends on the source of the attack:
 
-When a Mob takes standard damage, you turn the face down on one of those dice by the damage amount. When a die drops below 1, that die is removed, and the Mob permanently shrinks 1 point in Size. 
-*   **Damage Spillover:** In Gobbos, damage is lethal and always carries over! If a die is removed and there is still incoming damage left over, that remaining damage spills over into the next die. 
+1.  **Single-Target Attacks:** Damage is applied to the Mob's **lowest-value active health die**. If the die drops below 1, that die is removed (reducing the Mob's [[Size]] by 1), and any remaining damage spills over into the next lowest die.
+2.  **Mob-on-Mob Melee (The Frontline Rule):** When two Mobs clash in close combat, the attacking Mob strikes a number of health dice equal to its own current [[Size]] ($\min(\text{Attacker Size}, \text{Defender Size})$).
+    *   *Lowest Dice First:* Damage is applied to the defender's **lowest-value health dice first** (representing battered frontline runts absorbing the impact).
+    *   *Simultaneous Reduction:* Each engaged die suffers the full effective damage. Any die reduced below 1 is removed from the table. Any unengaged dice in the back ranks take **0 damage**.
+    *   *(Note: The maximum number of Melee Combat Dice or frontline width may be restricted by zone terrain, such as `Narrow` choke points; see [Movement & Zones](../00_Rules/03_Movement%20&%20Zones.md)).*
+3.  **Cleaving Attacks (`Cleave X`):** Attacks made with the `Cleave X` trait (such as a `Cleave 2` Greataxe or a `Cleave 3` Ogre Club) sweep across the frontline, applying their damage simultaneously to **up to X of the Mob's lowest-value health dice**.
+4.  **True Area Threats (`[AoE]` & Explosives):** Environmental catastrophes, explosive devices, and dragon breath weapons blanket the entire zone without an engagement cap. Incoming damage is applied to **every single active die** in the Mob's pool simultaneously.
 
-> *Example: A Size 3 mob has one die currently reading "2". They take 3 damage. The die is turned to 0 and removed (the mob is now Size 2). The remaining 1 damage spills over to the next die, turning a "6" into a "5".*
+> *Example (Mob-on-Mob Clash): A Size 4 Goblin Mob has dice reading `[6, 4, 2, 1]`. A Size 2 Guard Mob attacks and deals 2 effective damage. The guards are Size 2, so they damage the 2 lowest dice (`[1]` and `[2]`). Both dice take 2 damage and are reduced below 1 and removed. The Goblin Mob is now Size 2, with surviving dice `[6, 4]`.*
 
-**AoE & Cleave Damage (The Mob Killer):**
-Mobs are strong against single-target damage, but incredibly weak to Area of Effect (AoE) or Cleave attacks (like a roaring dragon's breath or a wizard's fireball). 
-If an attack explicitly has the AoE or Cleave trait, the incoming damage is applied to **EVERY SINGLE DIE** in the Mob.
-
-> *Example: A Fireball deals 3 Damage to a Size 5 Mob. Instead of just reducing one die by 3, you reduce ALL 5 dice by 3. That single fireball just dealt 15 total damage!*
-
-**Dropping Loot:** If a Mob shrinks in Size, their [[Loot Capacity]] also drops! If they are suddenly carrying more Bulk than their new Size allows, the controlling PC must immediately choose which Loot is dropped on the floor. 
+**Dropping Loot:** If a Mob shrinks in Size, their [[Loot Capacity]] also drops! If they are suddenly carrying more loose [[Loot]] and tools than their new Size allows, the controlling Boss must immediately choose which Loot is dropped on the floor. 
 
 ## Splitting and Merging Mobs
 A Boss can dynamically manage their swarm by splitting Mobs apart or merging them together. 
@@ -1922,30 +2079,44 @@ A Boss can dynamically manage their swarm by splitting Mobs apart or merging the
 A Boss can use an [[Order]] to tell a Mob to split instead of taking their normal 2 actions. 
 *   **The Math:** A Size 5 mob splits into two smaller mobs (e.g., Size 3 and Size 2). The Boss decides how to distribute the current physical dice.
 *   **The Benefit:** Splitting is an excellent way to mitigate AoE/Cleave damage, or to fit Mobs into narrow terrain.
+*   **Gear Distribution on Split:** 
+    *   *Expedition Tools:* The Boss assigns each carried tool (Ropes, Crowbars) to one specific resulting Mob. Tools cannot be duplicated.
+    *   *Mob Armor:* Armor travels with the goblins wearing it. Both split squads retain the same Armor Tier (+1d or +2d), and their carried Bulk reflects their new individual Size (e.g., a Size 2 Mob carrying 4 Bulk of Medium Armor).
 
 ### Merging Mobs
 If two Mobs belonging to the same player end their turn in the same Zone, the Boss can use an [[Order]] or [[Manipulate]] action to merge them.
 *   **The Math:** You add the D6s together (e.g., a Size 2 and Size 3 Mob become a new Size 5 Mob). 
 *   **The Grunt Cap:** The total Size of the new Mob *cannot exceed* the Boss's [[Grunt]]. If a Boss merges a Mob until it exceeds their Grunt, it immediately becomes Uncontrolled (see below).
+*   **Gear Merging & Armor Dilution:** All carried tools and loot combine into the new Mob's pool. If an armored Mob merges with an unarmored Mob, the new combined Mob only gains the Armor bonus if the total equipped armor covers the new combined Size. Otherwise, the armor is diluted and drops by 1 Tier (e.g., Medium Armor drops to Light Armor).
 
 ### The Super-Mob (Cross-Gang Merging)
 Mobs from different player Gangs *can* merge if both Bosses agree. This creates a terrifying, chaotic massive [[dice pool]].
 *   **The Command Struggle:** The new Super-Mob is extremely volatile. Every time *either* Boss wants to issue an Order to the Super-Mob, it requires a **Grunt test** (Testing [[Tough]] if in the same Zone, or [[Mouth]] from afar).
 *   **In-Fighting:** Whenever a Cross-Gang Mob rolls a [[dice pool]] for *any reason* (like an Attack roll, or a Manipulate check), **every 1 rolled results in 1 damage to the Mob itself.** They cannot help themselves; they just start stabbing the other gang! This happens regardless of whether the action is successful or not.
 
-### Action Economy & Combat States
+### Action Economy & Mob Defense
 
 A Mob gets **two (2) actions** per round, reset at the start of each round. A Mob's behavior, actions spent, and defensive capabilities are determined strictly by their combat state:
 
-1.  **Ordered:** The Mob receives direct instructions from the Boss (using a [[Standard Action]] or Free Order). They use **both actions** as per the player's instructions (e.g., moving and attacking). They have **0 saved actions** left for defense (0d6 [[Defence]]).
-2.  **[[Loitering]]:** The Mob is under control but receives no orders on their turn. Goblins are naturally distracted and lazy; they use **1 action** to loiter (roll/choose on the **[[Loitering]] Table** below) and save **1 action** for defense. When attacked, they spend their saved action to roll 1d6 [[Defence]].
-3.  **[[Out of Control]]:** The Mob is uncontrolled (see below). They spend **both actions** running amok under GM control (roll/choose on the **[[Out of Control]] Table** below), leaving them with **0 saved actions** left for defense (0d6 [[Defence]]).
+1.  **Ordered:** The Mob receives direct instructions from the Boss (using a [[Standard Action]] or Free Order). They use **both actions** as per the player's instructions (e.g., moving and attacking).
+2.  **[[Loitering]]:** The Mob is under control but receives no orders on their turn. Goblins are naturally distracted and lazy; they use **1 action** to loiter (roll/choose on the **[[Loitering]] Table** below) and save **1 action**.
+3.  **[[Out of Control]]:** The Mob is uncontrolled (see below). They spend **both actions** running amok under GM control (roll/choose on the **[[Out of Control]] Table** below).
+
+#### Mob Defense & The "Scatter!" Order
+Mobs cannot naturally dodge. When targeted by an incoming attack:
+*   **Passive Armor:** If equipped with Armor, the Mob rolls its passive Armor Dice (5s/6s reduce incoming damage).
+*   **The "Scatter!" Reaction:** The Boss can spend a saved Reaction to yell "Scatter!", rolling Stat dice equal to the Boss's [[Mouth]] stat against the attack's **Threat TN**.
+    *   **Size Target Penalty:** Large swarms are clumsy to disperse. Every point of Mob [[Size]] above 1 increases the attack's Threat TN by **+1** (e.g., a Size 3 Mob suffers +2 TN).
+    *   **Success:** The Mob evades completely (0 damage) and immediately scurries **1 Zone** into cover.
+    *   **Failure:** The Mob takes incoming damage, mitigated only by passive Armor Dice.
+    *   **Mob Gambling:** The Boss can use the [[Gobbo Gamble]] to reroll **1s** on the Mouth dice. If the Gamble still fails, panic breaks out: the Mob takes the attack damage, suffers **1 Trample Damage** to *every single die* in its health pool (like an AoE crush), drops **1 Bulk** of Loot, and becomes [[Out of Control]]. If the Boss is in the same [[Zone]], the Boss is caught in the mob stampede and becomes [[Staggered]].
 
 ### Command Limits (Control vs. Out of Control)
 A Mob is under command as long as they are within line of sight of their Boss and the Mob's current [[Size]] does not exceed the Boss's maximum [[Grunt]] stat. A Mob immediately becomes [[Out of Control]] if:
 1.  **Broken Command:** They break line of sight with their Boss (e.g., they move behind a solid wall or enter a separate room).
 2.  **Command Limit Exceeded:** The Mob's [[Size]] increases beyond the Boss's current [[Grunt]] (often due to merging or the Boss losing Grunt from a Fumble).
 3.  **Morale Failure:** The Mob fails a group [[Morale Check]] and panics.
+4.  **Scatter Gamble Failure:** The Boss fails a [[Gobbo Gamble]] while ordering the Mob to Scatter.
 
 #### Regaining Control
 To bring an [[Out of Control]] Mob back under command, the Boss must spend a [[Standard Action]] to [[Order]] them, resolving it using the standard command test rules in [Giving Orders](../00_Rules/04_Giving%20orders.md). On a success, the Mob becomes controlled and receives their instructions; on a failure, they ignore the Boss and remain [[Out of Control]].
@@ -1971,22 +2142,50 @@ When a Mob is [[Loitering]] or [[Out of Control]], roll **1d6** on the appropria
 
 ---
 
-## Mob Tests & Attributes
-Goblins in a Mob do not have individual stats (like [[Tough]], [[Slink]], [[Brains]], or [[Mouth]]). Instead, their [[dice pool]] for any non-combat test is resolved using the core [[Stat]] dice rule based on the nature of the test:
+## Mob Tests & Hazard Resolution
+Goblins in a Mob do not have individual stats (like [[Tough]], [[Slink]], [[Brains]], or [[Mouth]]). When an ordered Mob makes a non-combat test against a [[Zone Profile]] or obstacle, assemble their [[dice pool]] using the following core framework:
 
-*   **Tough Tests (Strength, Endurance, Mass):** Roll [[Size]] dice. A Mob's collective strength and body mass are directly tied to their [[Size]]. Larger Mobs are much better at lifting gates, swimming against currents, or resisting toxic gas.
-*   **Slink Tests (Stealth, Dodging, Balance):** Always roll exactly **1d6** (representing a default stat value of 1). A crowd is inherently loud and clumsy. Regardless of the Mob's [[Size]], one goblin tripping cascades to others, making stealth, balance, and quick dodging difficult.
-*   **Brains & Mouth Tests (Thinking, Social):** Always roll exactly **1d6** (representing a default stat value of 1). Without their Boss's direct instructions, a Mob is a disorganized mess and cannot coordinate complex tasks or trade.
+*   **Tough Tests (Strength, Endurance, Mass, Resisting Toxins):** Roll dice equal to the Mob's current **[[Size]]** (**1d6 to 5d6**). A large Mob has tremendous mass, collective leverage, and muscle.
+*   **Slink Tests (Stealth, Dodging, Balance on Ice, Climbing):** Always roll a base of **2d6**. A crowd of goblins has enough natural agility to manage basic traversal, but remains prone to clumsiness.
+*   **Brains & Mouth Tests (Searching Junk, Deciphering, Social):** Always roll a base of **2d6**. Without the Boss's direct intellect, a Mob has a baseline cunning but lacks specialized expertise.
 
-### Mob Gear Upgrades
-Any gear equipped to a Mob that assists with specific tests (like *silent shoes* for Slink tests or *protective masks* for Tough tests against gas) applies its benefits as standard [[Boon|Boons]] (+1d per Boon) to these base rolls.
-> **Example:** A Mob equipped with *silent shoes* gains a [[Boon]] (+1d) to Slink tests, rolling **2d6** instead of the base **1d6**.
+### Fumbles & Pushing 1s on Mob Tests
+If a Mob fails a test and one or more dice show **1s**, the controlling **Goblin Boss** can choose to push their luck and reroll all **1s**. If the rerolled test still fails, the effort suffers a [[Fumble]], and the **Goblin Boss loses 1 [[Grunt]]** as their authority takes the blame for the blunder.
+
+### Mob Hazard Consequences
+When a Mob fails a test against an environmental obstacle or hazard:
+*   **Slippery / Slick Surfaces:** The Mob slips and crashes into a dog-pile, gaining the **[[Prone]]** condition. Their movement ends immediately inside the zone, and they must spend 1 Action on their next turn to stand back up.
+*   **Chasms & Heights:** The lead runts plummet over the edge. The Mob suffers standard Hazard Damage (1–3 damage applied to its active Mob health dice) and lands **[[Prone]]** at the bottom.
+*   **Toxic Spores / Gas Clouds:** The Mob gags and chokes, gaining the **[[Weakened]]** condition (**Bane 1 (-1d)** on all physical tests).
+*   **Deep Mud / Quicksand:** The Mob gets bogged down, gaining the **[[Restrained]]** condition. Escaping requires 1 Action and a successful [[Tough]] test (rolling **Size dice**).
+
+### Mob Gear Upgrades & Tools
+Equipping a Mob with relevant tools modifies their base test pools:
+*   **Permission Tools (Ropes, Torches):** Bypasses the need for a roll entirely once set up (e.g., swarming up an anchored climbing rope requires no test).
+*   **Boon Tools (Crowbars, Crampons, Camo-Tarps):** Grants **+1d** to the test pool (e.g., a Mob with *crampons* rolls **3d6** on Slippery tests).
+*   **Difficulty Tools (Lockpicks):** Shifts the test Difficulty (e.g., from Hard to Normal).
 
 ---
 
-<a id="doc-15"></a>
+## Mob Sacrifice Maneuvers
+
+When a Gang lacks the proper tools (or wants to save precious [[Bulk]] capacity for heavy [[Loot]]), a **Goblin Boss** can order their **Mob** to perform disposable goblin maneuvers. 
+
+Sacrifice maneuvers utilize the expendable bodies of lesser goblins to bypass dungeon hazards, assist the Boss, or clear obstacles:
+
+| Maneuver Name | Minimum Mob Size | Action & Damage Cost | Mechanical Benefit |
+| :--- | :---: | :--- | :--- |
+| **Gobbo Pyramid** *(Living Ladder)* | **Size 2** | **1 Mob Action** | Goblins stack onto shoulders. The Boss or an allied character climbs **1 vertical Zone** without needing a rope or making a climbing test. |
+| **Living Bridge** *(Chasm Crosser)* | **Size 3** | **1 Mob Action** + **1 Mob Health Damage** | Goblins link arms and bite belts across a pit or gap. Allied Bosses walk across safely without making any test. The Mob takes 1 damage to its active health die from trample strain. |
+| **Canary Runt** *(Trap Tripper)* | **Size 1** | **1 Mob Health Damage** | A single runt is sent sprinting ahead into a discrete triggered trap (pressure plates, tripwires, falling dart blocks) or across untested ice. The trap triggers, clearing the path safely for the rest of the gang. *(Note: Cannot clear persistent ambient Zone traits like gas clouds or burning zones).* |
+| **Meat Cushion** *(Soft Landing)* | **Size 1** | **Mob Reaction** (Cost: Mob takes Fall Damage) | If a Boss falls into a Zone occupied by an allied Mob, the Mob cushions the fall. The Boss takes **0 damage**. The Mob absorbs the impact, taking the full falling damage across its health dice. |
+| **Gnaw the Hinges** *(Crowbar Substitute)* | **Size 2** | **1 Mob Action** | The Mob tears at locked iron doors or chest hinges with teeth and crude shivs. Roll a standard [[Tough]] test (**Size dice**). If the test fails after pushing 1s, the Mob takes **1 damage** from chipped teeth, crushed fingers, and falling debris. |
+
+---
+
+<a id="doc-16"></a>
 <!-- ============================================================ -->
-<!-- DOCUMENT 15: 01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md -->
+<!-- DOCUMENT 16: 01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md -->
 <!-- ============================================================ -->
 # Characters & Mobs — Quirks
 *Source: `01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md`*
@@ -2083,9 +2282,9 @@ The following [[Quirk|Quirks]] are assembled using the successes and condition s
 
 ---
 
-<a id="doc-16"></a>
+<a id="doc-17"></a>
 <!-- ============================================================ -->
-<!-- DOCUMENT 16: 01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md -->
+<!-- DOCUMENT 17: 01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md -->
 <!-- ============================================================ -->
 # Characters & Mobs — Level_Up and death
 *Source: `01_STAGE_Drafts/01_Characters & Mobs/15_Level_Up and death.md`*
@@ -2201,9 +2400,9 @@ Retiring is highly beneficial because it cements long-term power for the Gang wi
 
 ---
 
-<a id="doc-17"></a>
+<a id="doc-18"></a>
 <!-- ============================================================ -->
-<!-- DOCUMENT 17: 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md -->
+<!-- DOCUMENT 18: 01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md -->
 <!-- ============================================================ -->
 # Characters & Mobs — Unified_Modular_Powers_System
 *Source: `01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md`*
@@ -2501,143 +2700,429 @@ Narrative tags map directly to the condition baseline rules established in the [
 
 ---
 
-<a id="doc-18"></a>
+<a id="doc-19"></a>
 <!-- ============================================================ -->
-<!-- DOCUMENT 18: 01_STAGE_Drafts/03_Loot/31_loot.md -->
+<!-- DOCUMENT 19: 01_STAGE_Drafts/03_Loot/31_loot.md -->
 <!-- ============================================================ -->
 # Loot — loot
 *Source: `01_STAGE_Drafts/03_Loot/31_loot.md`*
 
-# Loot
-Loot gives goblins joy, and the goblin with more loot gets more resources to get even more loot. Loot can be a bit of anything. Goblins are not that picky, but from a game perspective the GM decides the attributes of any particular loot.
-## Loot Attributes
-There are a few attributes to loot; value, bulk, divisibility and usage. Value is used for purchasing things back in the lair (or possibly outside if the goblin find any one willing to trade with them). Bulk is simply how much it bulks. Heavier bulks requires a bigger mob or a stronger goblin to carry. Divisibility is it the loot can be divided up into smaller parts. Usage is if there is an alternative usage for the loot other than selling it or purchasing stuff for it.
+# Loot & Plunder
 
-### Value
-[[Loot value]] goes from 1-10, where loot 1 is a handful of coins or a shiny candlestick. 5 could be a sack of coins or the whole table dressing of a nobles banquet. 10 is chest of gems, the crown of the local ruler or holy statue covered in gold. However, from a game perspective the actual item itself is usually not relevant but more dressing. The value is what matters, especially back in the lair where you can assume to pawn any item for it’s full value. Trading with the outside world is a bit different. Here the actual item itself can be relevant, driving the price up or down, depending on the GM rulings. Using a few coins is probably not going to be a problem, pawning the kings crown comes with a few more caveats.
-
-### Bulk
-Bulk is a combination of how difficult it is to carry something and it’s weight. Divisibility is if it is possible to divide it up without breaking it. Most often this is obvious, such as with a bag of coins that is easy to divvy up, whereas as a statue most likely is not. Unless for very specific reasons set forth by the GM goblins can be expected to have bags, pouches and similar enough to be able to store stuff.
-
-### Usage
-Some things are not only shiny, they can actually be used for stuff. A common usage is to use it as weapon or armour. Other items give situational bonuses. Often it is obvious if an item can be used by a PC or a mob. For instance, the dukes sword might be a very good weapon, but it is only one weapon so it do not give any mechanical effect to a goblin mob.
-
-s
+*Goblins do not hoard shiny trinkets out of delicate aesthetic appreciation. You hoard plunder because a goblin with a mountain of scrap gets bigger choppers, better armor, and more underlings to kick around. If it shines, snatch it. If it is heavy, drag it. If someone complains, hit them with it.*
 
 ---
 
-<a id="doc-19"></a>
-<!-- ============================================================ -->
-<!-- DOCUMENT 19: 01_STAGE_Drafts/03_Loot/32_Carry Stuff.md -->
-<!-- ============================================================ -->
-# Loot — Carry Stuff
-*Source: `01_STAGE_Drafts/03_Loot/32_Carry Stuff.md`*
+## The Plunder Economy
 
-# Carrying stuff
-## PC rules 
-The stronger you are, the more you can carry. A Goblin can carry 4 Bulk and then + 2 for each level of Tough. Bulk 1-2 is assumed that you can stove in bags, pouches or similar. Heavier objects, Bulk 3 and above, typically means you need to carry them in one or two hands. Use common sense here depending on the object unless it is clearly stated. However, you can never carry more than your Tough / 2 (rounded down) Bulk 3+ item at a time. So at 1-3 Tough you can only carry one, at 4-5 Tough you can carry 2. 
-## Dragging 
-If you want to be able to carry more loot than you handle, you can drag it. Consider your Tough+1 if you drag stuff. This effectively halves your M, and also make any Slink or Tough checks hard as long as you hold on to the stuff.
+In **Gobbos**, there is no tedious coin-counting or fractional currency bookkeeping. Goblins do not track copper, silver, and gold coins. Instead, all treasure, plunder, and salvage is measured using the **Exponential Tier System (T1–T5)**.
 
-## Mob rules
-A Mob can carry loot without penalty up to a maximum of **Size x 4 Bulk**, or drag stuff up to **Size x 5 Bulk**. The same penalties apply to a Mob dragging stuff as a PC. 
+### The 5-to-1 Exponential Scale
 
-Any single object of Bulk 3+ effectively reduces the combat power of the Mob by -1d (because too many goblins are focused on holding it instead of stabbing). A Mob can carry a maximum number of Bulk 3+ items equal to their Size, still respecting the total bulk limit.
+Every piece of treasure belongs to a **Quality Tier (T1–T5)** and has a **Loot Value (LV)** expressed in units of that Tier (e.g., 1x T2, 3x T3, 10x T5). 
 
-If a Mob is reduced in Size (due to taking damage), they might exceed their carrying capacity mid-raid. The controlling PC must immediately decide what Loot is dropped. A Mob may also voluntarily drop Loot at any time to fight more effectively, but it takes 1 action per Loot item to pick it back up after the fight.  
+Each Tier represents a direct **5-to-1 step** in concentrated worth:
+
+| Plunder Tier | Category & Flavour | Single Unit Equivalencies | Common Dungeon Examples |
+| :---: | :--- | :--- | :--- |
+| **T1** | **Junk & Pocket Scrap** | = 1x T1 base scrap | Brass buttons, bent iron nails, rusted tin cups, chipped teeth. |
+| **T2** | **Scrappy Plunder** | = 5x T1 | Silver cutlery, forged iron shiv, pouch of silver shillings, copper kettle. |
+| **T3** | **Standard Fine Treasure** | = 5x T2 = 25x T1 | Gold banquet chalice, royal guard broadsword, bolt of elven silk. |
+| **T4** | **Superior Masterwork** | = 5x T3 = 125x T1 | Dwarven rune-hammer, chest of black pearls, jeweled altar idol. |
+| **T5** | **Legendary Mythic Relic** | = 5x T4 = 625x T1 | Dragon skull, intact godstone shard, ancient celestial astrolabe. |
+
+### Multi-Unit Relics & Hoards
+Exceptionally grand treasures possess a **Loot Value** greater than 1 of their Tier:
+*   A stolen **King's Golden Crown** might be valued at **10x T5**.
+*   In the exponential conversion ladder, that single crown is worth:
+    **10x T5 = 50x T4 = 250x T3 = 1,250x T2 = 6,250x T1**
+*   This ensures that no goblin can buy a King's Crown by hoarding loose buttons (T1), while a massive haul of standard gold treasures (T3) can legitimately be pooled and smelted down to purchase high-tier masterworks.
+
+---
+
+## Loot Attributes
+
+Every piece of plunder brought back from a raid is defined by four core attributes:
+
+### 1. Quality Tier (T1–T5)
+Defines the base grade and material density of the treasure (Junk, Scrappy, Standard, Superior, Legendary).
+
+### 2. Loot Value (LV)
+The total quantity of Tier units the item contains (e.g., 1x T2, 3x T2, 2x T4, 10x T5).
+
+### 3. Bulk (0–4+)
+How heavy, large, and unwieldy the treasure is to carry (see [Carrying Stuff](32_Carry%20Stuff.md)):
+*   **High-Density Plunder:** Small, concentrated valuables (such as a T4 cut ruby at Bulk 0, or a T3 gold cup at Bulk 1) provide massive wealth with negligible encumbrance.
+*   **Low-Density Plunder:** Heavy or bulky objects (such as a T2 bronze cauldron at Bulk 3, or a T3 marble statue at Bulk 4) force hard tactical decisions between carrying weapons or hauling loot.
+
+### 4. Divisibility
+*   **Divisible:** Treasure that can be split into smaller fractions or distributed across multiple goblins (e.g., a sack of 5 silver coins can be split into 5 individual T2 tokens).
+*   **Indivisible:** Single solid objects that cannot be broken apart without destroying their value (e.g., a solid gold statue or a masterwork dwarven scepter).
+
+---
+
+## The Rule of Five: Smelting & Barter
+
+During the **Lair Phase** (downtime between raids), goblins can freely melt down, combine, or trade their plunder using the **Rule of Five**:
+
+1. **Trading Up (Smelting / Combining):** You may combine or melt down **5 tokens of Tier X** into **1 token of Tier X+1**.
+   *   *Example:* Smelting 5x T2 silver goblets produces 1x T3 gold ingot.
+2. **Trading Down (Breaking Down / Pawning):** You may break down or trade **1 token of Tier X+1** into **5 tokens of Tier X**.
+   *   *Example:* Trading 1x T4 dwarven pearl brooch to a merchant yields 5x T3 standard trade bars.
+
+---
+
+## Purchasing Equipment in the Lair
+
+Between raids, a [[Goblin Boss]] can spend plunder to purchase new mundane equipment, shields, armor, and tools from the Lair's smiths, workshops, and goblin traders.
+
+### Standard Equipment Pricing
+The purchase cost of any standard mundane item is equal to **1 token of its Quality Tier**:
+
+| Equipment Quality Tier | Base Purchase Cost | Alternative Lower-Tier Cost |
+| :---: | :---: | :---: |
+| **T1 Junk** | Free / 1x T1 | Scavenged freely from Lair scrap |
+| **T2 Scrappy** | **1x T2** | 5x T1 |
+| **T3 Standard** | **1x T3** | 5x T2 |
+| **T4 Superior** | **1x T4** | 5x T3 |
+| **T5 Legendary** | **1x T5** | 5x T4 |
+
+*(Note: In addition to the purchase cost, crafting or purchasing items of Tier 3 or higher requires that your Lair possesses a Workshop of matching Quality; see [Crafting & Custom Gear](34_Crafting.md)).*
+
+### Outfitting Mobs
+Equipping an entire [[Mob]] with standardized military gear (e.g., spears, shields, or archer shortbows) requires specialized bulk purchasing:
+*   Outfitting a Mob costs **1 token of the desired Tier per point of Mob [[Size]]**.
+*   *Example:* Equipping a **Size 3 Mob** with T2 Scrappy Spears costs **3x T2** (or 15x T1).
+*   *Example:* Equipping a **Size 2 Mob** with T3 Standard Crossbows costs **2x T3** (or 10x T2).
+
+---
+
+## Tracking Plunder on the Character Sheet
+
+To avoid math bloat and arithmetic errors, plunder is tracked in simple tally boxes:
+
+```
+[ T1: ___ ]       [ T2: ___ ]       [ T3: ___ ]       [ T4: ___ ]       [ T5: ___ ]
+```
+
+Whenever you earn plunder, write the tokens into the matching tier box. Whenever you spend or melt loot during downtime, adjust the tallies using the 5-to-1 exchange.
+
+---
 
 ## Examples
-### PC
-Grugor has a Tough of 3. He can carry loot up to a total of bulk of 8 (4 starting + 4 for level 3). He has found a sack of coins (Bulk 2, Loot 3), a fancy helmet  (Bulk 1, Loot 1) and a mirror (Bulk 2, Loot 2). He then stumbles onto a large locked box (Bulk 3, Loot ?). If he picks it up, he has to drag it, reducing his Movement to half and it requires both his hands. He can drop the fancy helmet, and still move unburdened. However it still requires both his hands to carry the box, so need to be carful to not end up in a fight, and should probably ensure to off load it to a Mob somewhere.
-### Mob
-A large Troop of goblin warriors of size 3 has been plundering, and are currentsly carrying loot to a value of Bulk 8, Loot 10. They are within their limit of Bulk 9, and can move normally. However one of the loot objects are a large statue (Bulk 4, Loot 4), which requires a number of goblins to carry it around, so their fighting power is reduced with -1d. If they would find a Bulk 2 item, they will be overloaded and their movement will be reduced as well, as they have to start dragging the statue.
+
+> **Example (Raid Plunder & Exchange):**
+> Boss Skitter returns from a raid with:
+> *   3x Silver Candlesticks (1x T2 each, Bulk 1) -> **3x T2**
+> *   1x Knight's Gilded Shield (1x T3, Bulk 1) -> **1x T3**
+> *   10x Rusted Iron Nails (1x T1 each, Bulk 0) -> **10x T1**
+>
+> During the Lair Phase, Skitter visits the forge. Skitter trades the 10x T1 nails for **2x T2** scrap bars (10 / 5 = 2).
+>
+> Adding those to the existing 3x T2 candlesticks gives Skitter **5x T2** tokens total.
+>
+> Skitter melts the 5x T2 tokens into a second **1x T3** token (5 / 5 = 1).
+>
+> Skitter now holds **2x T3** tokens. Skitter spends 1x T3 to purchase a Standard Heavy Crossbow for personal use, and deposits the remaining 1x T3 into the Lair's building fund.
 
 ---
 
 <a id="doc-20"></a>
 <!-- ============================================================ -->
-<!-- DOCUMENT 20: 01_STAGE_Drafts/03_Loot/33_Equipment.md -->
+<!-- DOCUMENT 20: 01_STAGE_Drafts/03_Loot/32_Carry Stuff.md -->
 <!-- ============================================================ -->
-# Loot — Equipment
-*Source: `01_STAGE_Drafts/03_Loot/33_Equipment.md`*
+# Loot — Carry Stuff
+*Source: `01_STAGE_Drafts/03_Loot/32_Carry Stuff.md`*
 
-# Standard Equipment & Loadouts
+# Carrying Stuff & Load Capacity
 
-*UPDATING NEEDED!* - As per the crafting rules the equipment should be an extension of the crafting rules, not the other way around. This means that the crafting rules should define the tiers of equipment, and the equipment section should reflect that. 
-
-A Goblin's power comes from the shiny junk they carry. Equipment is highly abstracted to keep the game fast and focus entirely on [[Bulk]] (inventory management) and tactical choice.
-
-## Attributes and Traits
-
-Attributes and Traits give equipment predefinced effects and abilities. 
-
-### Weapon traits 
-Weapon traits is used to differince weapons from each other, so that it feels different to bash with a mace instead of stab with a dagger. 
-
-| Trait | Effect |
-|---|---|
-| Cutting | TDB |
-| Bashing | Gives -1d on Passive Defence |
-| Poking | TDB |
-| Fast | Gives -1d on Active Defence |
-| Slow | Allows the enemy to use an Reaction to counterattack, instead of taking a Doge Defence | 
-| Long | Allows the wielder to use a Reaction to attack if a enemy moves in to attack with a shorter weapon |
-| Short | TDB | 
-
-### Armor Traits 
-| Trait | Effect |
-|---|---|
-| Light  | TDB |
-| Medium | -1d on Slink |
-| Heavy | -2d on Slink, cannot Swim |
-| Loud | -2d on Slink when trying to Sneak | 
-| 
-
-
-## Weapons
-Weapons are categorized into three simple tiers based on how clunky they are to bring into a dungeon. You can flavor the weapon however you want (a rusty cleaver, a stolen dwarf-hammer, a sharpened stick), but the mechanical stats remain the same.
-
-| Melee Weapon | Bulk | Handedness | Damage | Requirement |
-|---|---|---|---|---|
-| Unarmed | 0 | N/A | +1d | |
-| Light Weapons | 1 | One-Handed | +2d | |
-| Medium Weapons | 2 | One-Handed | +3d | |
-| Heavy Weapons | 3 | Two-Handed | +4d | |
-
-
-| Ranged Weapon | Bulk | Handedness | Damage | Requirement |
-|---|---|---|---|---|
-| Sling | 1 | One-Handed | +0d | |
-| Shortbow | 2 | Two-Handed | +1d | |  
-| Crossbow | 2 | Two-Handed | +1d | B2 |
-| Heavy Crossbow | 3 | Two-Handed | +2d | T2, B2 |
-| Throwing Axes | 1 | One-Handed | +0d |  |
-| Throwing Daggers | 1 | One-Handed | +0d |  |
-
-## Armor (Tough & Grunt)
-Armor is balanced exactly like weapons: trading defensive power for Bulk and situational banes.
-
-| Armor | Bulk | Boon | Bane | 
-|---|---|---|---|
-| None | 0 | +0d Passive Defense | |
-| Light Armor | 1 | +1d Passive Defense | |
-| Medium Armor | 2 | +2d Passive Defense | -1d Slink |
-| Heavy Armor | 3 | +3d Passive Defense | -2d Slink |
-| Shield | 1 | +1d Passive Defense (One Handed) |
+*Greed is a goblin's greatest virtue and heaviest burden. You can find all the shiny crowns, gilded idols, and copper kettles in the world, but they do you no good if you are too weighed down to outrun the angry troll chasing you.*
 
 ---
 
-## Gadgets & Throwables
-Items that provide temporary or highly specific utility.
-*   **Bombs / Throwables (Bulk 1, Consumable):** Grant a massive +2d to a Violence check against a Group/Mob, but are destroyed after one use.
-*   **Lockpicks / Crowbars (Bulk 1):** Changes a `Hard` Brains (Tinker) test to a `Normal` test.
-*   **Flashy Bauble (Bulk 1):** Grants +1d to Mouth (Order) tests to impress your Mobs or distract an enemy for one turn.
+## Goblin Boss Carry Limits
+
+Your capacity to carry weapons, armor, tools, and plunder into and out of a raid is determined directly by your [[Tough]] stat. Your secondary stat **[[Carry]]** defines how many units of [[Bulk]] you can carry unhindered.
+
+### Carry Capacity Progression
+
+| Tough Level | Unburdened Carry Capacity | Over-Laden Threshold | Maximum Dragging Limit (2x Carry) |
+| :---: | :---: | :---: | :---: |
+| **Level 1** | **6 Bulk** | 7–7 Bulk | 12 Bulk |
+| **Level 2** | **8 Bulk** | 9–10 Bulk | 16 Bulk |
+| **Level 3** | **10 Bulk** | 11–13 Bulk | 20 Bulk |
+| **Level 4** | **12 Bulk** | 13–16 Bulk | 24 Bulk |
+| **Level 5** | **14 Bulk** | 15–19 Bulk | 28 Bulk |
+
+*Calculation:* Your baseline **[[Carry]]** capacity is **4 + (2 x Tough) Bulk**.
+
+---
+
+## Load States & Encumbrance
+
+Whenever you pick up new [[Loot]] or gear, add together the total [[Bulk]] of all carried and equipped items to determine your current **Load State**:
+
+| Load State | Carried Bulk | Movement Profile | Physical Test Modifiers | Combat & Defense Effects |
+| :--- | :--- | :--- | :--- | :--- |
+| **Unburdened** | Less than or equal to **Carry** | Normal ([[Movement]] Zones per [[Move]] action) | None | Full standard actions and reactions. |
+| **Over-Laden** | **Carry + 1** to **Carry + Tough** | **-1 Zone** per [[Move]] action (minimum 1 Zone) | **Bane 1 (-1d)** on all physical [[Slink]] and [[Tough]] tests | Cannot perform two [[Move]] actions in the same round. |
+| **Dragging** | **Carry + Tough + 1** to **2x Carry** | Fixed at **1 Zone** per [[Move]] action | Automatic failure on stealth and jumping tests | Requires **both hands**; cannot attack with weapons or perform [[Dodge]] / [[Parry]] reactions (0 active defense). |
+| **Immobilized** | Greater than **2x Carry** | **0 Zones** (Cannot move) | Automatic failure on all movement tests | Must drop items as a [[Free Action]] to restore mobility. |
+
+---
+
+## The Bulk 3+ Item Rule
+
+Most standard weapons and tools are Bulk 1 or 2, fitting neatly into packs, belt holsters, or single-hand grips. Heavy objects of **Bulk 3 or higher** (such as massive iron chests, great anvils, stone gargoyles, or siege kegs) are clumsy and require special handling:
+
+*   **Two Hands Required:** Hauling a loose Bulk 3+ item requires **two hands**. While holding it, you cannot wield a weapon, hold a shield, or perform somatic spellcasting.
+*   **Dropping vs. Stowing:** Dropping a carried item onto the floor is a [[Free Action]] (which you can do at any time, even during an enemy's turn before rolling a [[Dodge]] reaction). Safely stowing an item into a pack, sack, or belt harness requires a [[Standard Action]].
+*   **No Disengage with Bulk 3+:** Because hauling a Bulk 3+ item requires two hands and impairs agile movement, you **cannot perform a Disengage action** while clutching it. If threatened in Melee, you must either drop the item as a Free Action to attempt Disengaging, defeat the threatening foes first, take the Opportunity Attacks, or order a Mob to haul the plunder.
+*   **Boss Item Limit:** A [[Goblin Boss]] cannot haul more than half their Tough (Tough / 2, rounded down; minimum 1) in loose Bulk 3+ items at one time. For example, a Boss with Tough 1–3 can haul at most one loose Bulk 3+ item, while a Boss with Tough 4–5 can haul two.
+
+---
+
+## Mob Carrying Capacity
+
+A [[Mob]] of lesser goblins can haul far more plunder than a lone Boss, making them essential pack mules during a raid.
+
+### Mob Capacity & Movement
+*   **Unburdened Mob Limit:** A Mob carries up to **Size x 4 Bulk** without any penalties.
+*   **Dragging Mob Limit:** A Mob can drag up to **Size x 5 Bulk**. While dragging, the Mob's movement is fixed at **1 Zone per Move action**, and the Mob cannot execute the reactive **"Scatter!"** maneuver.
+
+### Clunky Plunder in Combat (The -1d Fighting Penalty)
+Lesser goblins are easily distracted. If a Mob is forced to haul heavy, awkward objects into battle, fewer goblins have their hands free to stab enemies:
+*   Every single object of **Bulk 3+** carried by a Mob imposes a **Bane 1 (-1d)** penalty on that Mob's combat attack pool.
+*   A Mob can carry a maximum number of Bulk 3+ items equal to its current **Size**.
+
+### Mid-Raid Casualties & Dropped Plunder
+If a Mob suffers damage that reduces its **Size**, its carrying capacity drops immediately.
+*   If the Mob's carried Bulk now exceeds its new maximum capacity, the controlling [[Goblin Boss]] must **immediately declare which Loot items are dropped** in the current [[Zone]].
+*   A Mob can also voluntarily drop Loot as a [[Free Action]] on its turn to clear combat penalties. Picking dropped items back up requires spending 1 [[Plunder]] action per item.
+
+---
+
+## Examples
+
+> **Example (PC Load):**
+> Grugor is a goblin Boss with **Tough 3** and **Movement 3**. His baseline **Carry** capacity is **10 Bulk** (4 + 2 x 3).
+>
+> He enters a crypt wearing Medium Armor (Bulk 2) and carrying a Shortsword (Bulk 2), a Shield (Bulk 1), and a Crowbar (Bulk 1), totaling **6 Bulk** (Unburdened).
+>
+> In the burial vault, Grugor scoops up a jeweled goblet (Bulk 1, Loot 2) and a heavy sack of silver (Bulk 2, Loot 4). His total load is now **9 Bulk**—still within his 10 Bulk limit, allowing him to move 3 Zones per Move action.
+>
+> He then finds a solid bronze statue (Bulk 3, Loot 5). Picking it up pushes his total load to **12 Bulk**. Because 12 Bulk falls into his **Over-Laden** bracket (11–13 Bulk for Tough 3), his movement drops from 3 Zones to 2 Zones per Move action, all his physical Slink and Tough tests suffer **Bane 1 (-1d)**, and carrying the Bulk 3 statue occupies both of his hands. If guards arrive, Grugor can drop the statue as a Free Action to draw his sword and regain his full mobility.
+
+> **Example (Mob Plunder & Casualties):**
+> Boss Skitter commands a **Size 3 Mob** of spearmen. The Mob can carry up to **12 Bulk** unburdened (3 x 4).
+>
+> During a raid on a tavern, Skitter orders the Mob to loot an iron beer keg (Bulk 3, Loot 3) and three sacks of cured ham (Bulk 2 each, totaling 6 Bulk). The Mob carries **9 Bulk** total, well within its 12 Bulk limit.
+>
+> However, because the Mob is hauling one Bulk 3 item (the beer keg), two goblins are occupied holding the barrel, imposing **Bane 1 (-1d)** on the Mob's attack rolls.
+>
+> An enemy knight charges in and deals enough damage to reduce the Mob from **Size 3 to Size 1**. At Size 1, the Mob's unburdened capacity plummets to **4 Bulk** (1 x 4). The Mob is instantly over capacity (holding 9 Bulk against a 4 Bulk limit). Skitter must immediately choose what to drop. Skitter commands them to dump the heavy beer keg (Bulk 3) and one sack of ham (Bulk 2), leaving the surviving runt clutching the remaining 4 Bulk of ham as the runt scurries away.
 
 ---
 
 <a id="doc-21"></a>
 <!-- ============================================================ -->
-<!-- DOCUMENT 21: 01_STAGE_Drafts/03_Loot/34_Crafting.md -->
+<!-- DOCUMENT 21: 01_STAGE_Drafts/03_Loot/33_Equipment.md -->
+<!-- ============================================================ -->
+# Loot — Equipment
+*Source: `01_STAGE_Drafts/03_Loot/33_Equipment.md`*
+
+# Equipment & Gear
+
+*A goblin's life is short, violent, and cheap, but good gear makes it loud and glorious. Whether swinging a sharpened shovel, hiding behind a dented wash-tub, or hauling a stolen cannon, your gear is the difference between a dead runt and a living Boss. Take everything that is not nailed down, and bring a crowbar for the rest.*
+
+---
+
+## The Equipment Framework
+
+Every physical item in the game—from a rusty shiv plucked from a mud puddle to a masterwork dwarven breastplate—is built upon a single unified foundation called the **Base Chassis**. 
+
+Equipment in **Gobbos** serves two distinct purposes:
+1. **Immediate Tactical Utility:** Mundane gear provides immediate survival tools, offensive reach, passive armor mitigation, and test difficulty adjustments during raids.
+2. **The Crafting Foundation:** Every piece of mundane gear functions as an un-upgraded **Base Chassis** for the crafting system (see [Crafting & Custom Gear](34_Crafting.md)). When you attach volatile components to gear between raids, the item retains its underlying chassis stats while gaining explosive new powers.
+
+>> **GOLDEN RULE: No Math Bloat**
+>> Equipment never adds awkward `+1` or `+2` arithmetic to die faces after a roll. Equipment modifies your tests in three clean ways: adding dice to your pool (**Boon 1 (+1d)**, **Boon 2 (+2d)**), shifting the test Difficulty (**Hard (6)** -> **Normal (5+)** -> **Easy (4+)**), or increasing your **Impact Size** to stagger heavy targets.
+
+---
+
+## Base Item Attributes
+
+Every item is defined by five core mechanical properties:
+
+### 1. Classification & Category
+*   **Melee Weapon:** Wielded in close combat within the same [[Zone]], rolling [[Tough]] to attack.
+*   **Ranged Weapon:** Fired across 1 or more [[Zones]], rolling [[Slink]] to attack.
+*   **Armor:** Worn protective clothing providing passive mitigation dice in the [[Clatter Roll]].
+*   **Shield:** Held defensive barrier providing passive mitigation dice and enabling the [[Parry]] [[Reaction]].
+*   **Tool & Utility:** Functional gear used to overcome obstacles, pick locks, or manipulate the environment.
+*   **Consumable:** Single-use items (potions, explosives, alchemical flasks) that produce an immediate effect and are destroyed upon use.
+*   **Loot & Treasure:** Plunder scavenged during raids. It has high [[Loot Value]] and heavy [[Bulk]], but no combat function.
+
+### 2. Bulk & Handedness
+[[Bulk]] measures an item's weight, awkward size, and physical encumbrance.
+*   **Bulk 0 (Negligible):** Tiny objects (lockpicks, coins, rings, loose blueprints). Carried freely in pouches and pockets.
+*   **Bulk 1 (Light / Compact):** One-handed weapons, daggers, bucklers, light armor, single grenades, crowbars. Easily strapped to a belt or shoulder sling.
+*   **Bulk 2 (Medium / Standard):** Shortswords, maces, shortbows, crossbows, medium armor, heavy toolkits. Standard expedition gear.
+*   **Bulk 3 (Heavy / Bulky):** Greataxes, two-handed polearms, heavy arbalests, heavy plate armor, treasure chests, powder kegs. Highly taxing to carry; requires **two hands** to haul or wield in combat.
+*   **Bulk 4+ (Massive / Obscene):** Stolen statues, siege engine parts, giant iron cauldrons. Cannot be packed in a bag; must be dragged or carried collectively by a [[Mob]].
+
+**Handedness & Slots:**
+*   **Worn:** Fitted to the body (e.g., 1 suit of Armor). Does not occupy hands.
+*   **One-Handed (1H):** Requires 1 hand to wield. Leaves your other hand free to hold a shield, torch, ladder, or piece of [[Loot]].
+*   **Two-Handed (2H):** Requires both hands to wield effectively in combat. You cannot hold another item or weapon while attacking.
+*   **Stowed:** Packed inside a sack, pack, or pocket. Drawing a stowed weapon or item takes a [[Free Action]] (once per turn) or a [[Manipulate]] action.
+
+### 3. Quality & Durability
+Every mundane item belongs to a **Quality Tier** (T1 to T5). This rating determines the item's physical resilience when you push it beyond its limits:
+
+| Quality Tier | Equivalent Level | Typical Materials & Origin | Base Purchase Cost | Break Roll on Fumble |
+| :---: | :---: | :--- | :---: | :---: |
+| **T1** | [[Junk]] | Splintered wood, brittle bones, rusted wire, scrap metal. | Free / 1x T1 | Breaks on **1–4** |
+| **T2** | [[Scrappy]] | Rough-hammered goblin forge-iron, boiled hide, cobbled tools. | **1x T2** *(or 5x T1)* | Breaks on **1–3** |
+| **T3** | [[Standard]] | Proper human military steel, cured leather, dwarven surplus. | **1x T3** *(or 5x T2)* | Breaks on **1–2** |
+| **T4** | [[Superior]] | Mastercrafted alloys, tempered rune-steel, hardened carapace. | **1x T4** *(or 5x T3)* | Breaks on **1** |
+| **T5** | [[Legendary]] | Mythic godstone, relic forge-alloys, ancient titan bone. | **1x T5** *(or 5x T4)* | **Never breaks** |
+
+#### Durability & The Break Roll
+Mundane equipment does not wear down from regular hits. An item is only tested when you suffer a [[Fumble]] on a test using that item (rolling multiple 1s without scoring sufficient successes, as detailed in [Dice](../00_Rules/01_Dice.md#1s-and-fumbles)).
+
+When you Fumble a test using an item:
+1. Roll a single **1d6** for the **Break Roll**.
+2. Compare the result to the item's Quality threshold in the table above.
+3. **If the roll is higher than the threshold:** The item holds together, though it might spark, crack, or rattle alarmingly.
+4. **If the roll is equal to or below the threshold:** The item snaps, shatters, or crumples into useless debris. It is permanently broken and reduced to 0 Bulk scrap.
+
+### 4. Action Economy of Gear
+*   **Passive:** Operates automatically at all times without costing actions (e.g., passive armor mitigation dice).
+*   **Standard Action:** Requires spending 1 [[Standard Action]] to use, swing, shoot, or activate.
+*   **Reaction:** Usable out-of-turn in response to an enemy trigger (e.g., a [[Parry]] with a shield), costing 1 saved [[Standard Action]].
+*   **Free Action:** Dropping a held item, or drawing/sheathing 1 light item (Bulk 0–1) once per turn.
+
+---
+
+## Weapons
+
+Weapons allow a [[Goblin Boss]] or [[Mob]] to inflict damage, defeat enemies, and throw monsters off balance.
+
+### Melee Weapons
+All melee attacks roll a [[Dice Pool]] based on your [[Tough]] stat against the target's [[Defence]] TN. 
+
+Melee weapons have an **Impact Size**. If your attack scores at least 1 success but falls short of the target's [[Defence]] TN, the strike does not deal damage, but it can inflict the [[Staggered]] condition if the weapon's **Impact Size** is equal to or greater than the target's physical [[Size]] (Impact Size >= Target Size).
+
+| Weapon Category | Bulk | Hands | Base Impact Size | Special Capabilities & Traits |
+| :--- | :---: | :---: | :---: | :--- |
+| **Unarmed / Improvised** | 0 | 1H | Size 0 | *Crude:* Breaks on any Fumble regardless of Quality. Cannot stagger targets of Size 1+. |
+| **Light Melee** *(Dagger, Shiv, Handaxe, Club, Cleaver)* | 1 | 1H | Wielder Size | *Concealable:* Can be drawn as an incidental Free Action. Bulk 1 allows carrying multiple sidearms. |
+| **Medium Melee** *(Shortsword, Spiked Mace, Spear, Flail)* | 2 | 1H | Wielder Size | *Versatile:* Balanced one-handed profile. Leaves an off-hand free for a Shield or Loot. |
+| **Heavy Melee** *(Greataxe, Greatclub, Halberd, War-pick)* | 3 | 2H | Wielder Size + 1 | `Heavy`: Adds **+1 to Impact Size** when attacking. Requires 2 hands; cannot hold a shield. |
+
+### Ranged Weapons
+All ranged attacks roll a [[Dice Pool]] based on your [[Slink]] stat against the target's [[Defence]] TN. Ranged combat measures distance across discrete [[Zones]].
+
+| Ranged Weapon | Bulk | Hands | Range | Requirements | Special Capabilities & Traits |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **Sling / Thrown Knives** | 1 | 1H | 1 Zone | None | *Scavenged Ammo:* Ammo is assumed freely available in any zone. Compact Bulk 1. |
+| **Shortbow** | 2 | 2H | 2 Zones | None | *Rapid Fire:* Standard two-handed goblin bow. Fires across 2 zones without penalty. |
+| **Crossbow** | 2 | 2H | 2 Zones | [[Brains]] 2 | *Mechanical Crank:* Requires mechanical understanding to reload smoothly under pressure. |
+| **Heavy Crossbow / Arbalest** | 3 | 2H | 3 Zones | [[Tough]] 2, [[Brains]] 2 | `Heavy`: Long range (3 Zones). Requires massive physical strength and winch knowledge to operate. |
+
+---
+
+## Armor & Shields
+
+Armor keeps goblins alive when dodging fails. Armor operates entirely through the **[[Clatter Roll]]** (see [Combat](../00_Rules/02%20Combat.md#dodge--parry-reaction--the-clatter-roll)).
+
+### Passive Armor Dice
+When you are targeted by an attack and fail your active [[Dodge]] or [[Parry]] evasion (or have no saved actions left to react), you roll your **Passive Armor Dice** (using distinct colored dice):
+*   Every success (**5+**) rolled on your Armor Dice reduces the incoming Damage by 1.
+*   Any remaining unmitigated damage is deducted directly from your [[Grit]].
+
+| Armor Type | Bulk | Passive Armor Dice | Mobility Penalties | Special Properties |
+| :--- | :---: | :---: | :--- | :--- |
+| **Unarmored** | 0 | +0d | None | Maximum agility. 0 Bulk footprint. |
+| **Light Armor** *(Padded cloth, Cured leather, Quilted hides)* | 1 | **+1d** | None | Silent and flexible; no stealth or movement penalties. |
+| **Medium Armor** *(Chain shirt, Scaled reptile hide, Scrap-plate)* | 2 | **+2d** | **Bane 1 (-1d)** on [[Slink]] tests | Heavy metal links or stiff plates impose a Bane on stealth and acrobatics. |
+| **Heavy Armor** *(Full Knight Plate, Dwarven Iron Carapace)* | 3 | **+3d** | **Bane 2 (-2d)** on [[Slink]] tests; cannot swim | Massive steel protection; noisy and exhausting. Sinks like a stone in water. |
+| **Shield** *(Spiked Pot Lid, Wooden Pavise, Iron Buckler)* | 1 | **+1d** | Requires 1 Hand | Adds **+1d Armor Die** to your mitigation pool AND enables the **[[Parry]] [[Reaction]]** using [[Tough]]. |
+
+### Optional Rule: Ablative Shield & Armor Sacrifice
+When an incoming strike would deal enough unmitigated damage to reduce your [[Grit]] to 0 (or inflict a lethal wound), a [[Goblin Boss]] may declare an immediate **Gear Sacrifice**:
+*   **The Shatter:** Your equipped Shield or Armor suit is violently and permanently destroyed on the spot, reduced to worthless shrapnel.
+*   **The Salvation:** The destroyed piece of gear absorbs the blow completely, reducing the incoming attack's damage for that strike to **0**.
+*   *(Note: This desperate tactic applies strictly to PC Bosses. Mobs do not track individual ablative equipment).*
+
+### Equipping Mobs with Armor & Tools
+Outfitting a [[Mob]] with gear follows two distinct rules:
+*   **Mob Armor (Scaled Bulk):** Outfitting an entire swarm with protective scrap requires sufficient metal for every goblin. Mob Armor costs **Bulk equal to the Armor's Bulk rating multiplied by Mob Size** (e.g., Light Armor costs **Size x 1 Bulk**; Medium Armor costs **Size x 2 Bulk**). When a Mob suffers casualties and shrinks in Size, the armor of the fallen remains with their corpses on the battlefield—it does not cause an encumbrance overload.
+*   **Expedition Tools (Flat Bulk):** Tools (Ropes, Crowbars, Lanterns, Shovels) are shared by the squad. Each tool costs its standard flat **Bulk** rating (e.g., 1 Bulk for 1 Climbing Rope). 1 tool carried in the squad's pack serves the entire Mob.
+
+---
+
+## Tools & Mundane Utility
+
+Tools allow goblins to bypass deadly obstacles, breach reinforced doors, and manipulate hazardous machinery.
+
+>> **DESIGN MANDATE: Difficulty & Permission**
+>> Tools never grant "+1 flat math modifiers." Instead, they either **step test Difficulty down** (e.g. from Hard to Normal), grant **Boon 1 (+1d)**, or grant **Narrative Permission** to perform an action that would otherwise be impossible.
+
+| Tool / Item | Bulk | Primary Function & Mechanical Rule |
+| :--- | :---: | :--- |
+| **Quality Lockpicks** | 0 | *Precision Tension:* Reduces lockpicking and trap-disarming tests from **Hard (6)** to **Normal (5+)**, or from **Normal (5+)** to **Easy (4+)**. |
+| **Crowbar / Pry-bar** | 1 | *Mechanical Leverage:* Grants **Boon 1 (+1d)** to [[Tough]] tests made to force heavy doors, pry open treasure chests, or unseat iron portcullises. |
+| **Rope & Grappling Hook** (30 ft) | 1 | *Vertical Access:* Allows climbing sheer vertical surfaces without making hazard tests. Can also be thrown 1 Zone to snag and pull unattended Bulk 1–2 items. |
+| **Lantern & Oil Flask** | 1 | *Illumination:* Strips the `[Dark]` tag from your current [[Zone]] for 1 exploration phase or combat encounter. Provides the `[Light]` tag. |
+| **Heavy Iron Shackles & Key** | 1 | *Restraint:* Can be locked onto an incapacitated or willing target to inflict the `[Restrained]` condition. Escaping without a key requires a `Slink 5+/2` test. |
+| **Chalk & Marking Grease** | 0 | *Dungeon Mapping:* Leaves glowing or greasy symbols on stone walls, granting **Boon 1 (+1d)** on [[Route Test|Route Tests]] when navigating complex labyrinths. |
+| **Scent-Masking Paste** | 0 | *Pungent Odor:* Smearing yourself with foul sludge grants **Boon 1 (+1d)** to [[Slink]] stealth tests against beasts that hunt by scent. |
+
+---
+
+## Consumables & Explosives
+
+Consumables are single-use devices that trigger instantaneous effects and are consumed in the process.
+
+### Explosives & Area Hazards
+Explosives, alchemical bombs, and environmental blast traps do not roll standard single-target weapon attacks. Instead, they produce an **Area Threat Profile** that affects every target within their blast [[Zone]].
+
+| Explosive Device | Quality | Bulk | Area Threat Profile | Blast Range | Impact Size & Environmental Effects |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **T1 Spark Bomb** | T1 | 1 | `Threat 4+/1`, 1 Damage, `[Explosive]` | Current Zone | **Impact Size 1:** Staggers Size 1 targets. Rattles windows, ignites dry leaves. |
+| **T2 Fire Flask (Molotov)** | T2 | 1 | `Threat 5+/1`, 2 Damage, `[Fire]` | 1 Zone | **Impact Size 2:** Staggers up to Size 2. Fills Zone with fire (`[Burning]`). |
+| **T2 Choking Smoke Pot** | T2 | 1 | `Threat 4+/1`, 0 Damage, `[Gaseous]` | 1 Zone | **Impact Size 0:** Fills Zone with dense fog (`[Dark]`), imposing **Bane 1 (-1d)** on ranged attacks. |
+| **T3 Powder Keg** | T3 | 2 | `Threat 5+/2`, 3 Damage, `[Explosive]` | 1 Zone | **Impact Size 3:** Staggers up to Size 3. Shatters wooden doors and breaches stone barricades. |
+| **T4 Siege Mortar Shell** | T4 | 3 | `Threat 5+/3`, 4 Damage, `[Explosive]` | 2 Adjacent Zones | **Impact Size 4:** Staggers monsters and war-wagons. Demolishes fortified stone masonry. |
+| **T5 Sol-Quartz Core** | T5 | 4 | `Threat 6/3`, 5 Damage, `[Explosive]` | Full Quadrant | **Impact Size 5:** Staggers colossal titans. Obliterates all structures and incinerates cover. |
+
+#### Using an Explosive in Combat
+*   **Throwing / Placing:** Spending 1 [[Standard Action]] allows you to throw an explosive up to **1 Zone away** or place it at your feet with a lit fuse. Throwing under heavy enemy pressure or into tight cover requires a `Slink 5+/1` test; on a failure, the bomb scatters into an adjacent zone or detonates early.
+*   **Enemy Usage:** If an enemy picks up or throws a bomb, it uses the exact same printed Area Threat Profile.
+
+#### Resolving Area Blasts by Target Type:
+1.  **Goblin Bosses (PCs):** Roll a standard [[Clatter Roll]] (`Slink` Dodge vs the explosion's Threat TN). If evasion fails, roll passive Armor Dice to mitigate the incoming Damage; remaining damage reduces [[Grit]].
+2.  **Mobs (PC or Enemy):** May spend a Reaction to **Scatter** (Boss Mouth test vs Threat TN) or roll passive Armor Dice. Unmitigated damage reduces Mob [[Size]].
+3.  **Standard Enemies (Minions):** If the explosion's Threat TN meets or exceeds their static [[Defence]] TN, they are instantly destroyed.
+4.  **Boss / Elite Enemies:** If the explosion's Threat TN meets or exceeds their [[Defence]] TN, the enemy suffers **1 Wound**. If the explosion's Impact Size meets or exceeds the Boss's physical Size (Impact Size >= Target Size), the Boss also gains the [[Staggered]] condition.
+
+---
+
+## Loot & Treasure Items
+
+Not everything dragged out of a dungeon is useful in a fight. **Loot items** represent pure wealth—stolen silverware, golden chalices, jeweled idols, and kegs of vintage dwarven ale.
+
+*   **Zero Combat Function:** Loot items provide no dice, armor, or tactical utility during an encounter.
+*   **The Greed Dilemma:** Loot takes up valuable [[Bulk]]. Carrying heavy plunder directly competes with carrying extra weapons, shields, and tools.
+*   **End-of-Raid Value:** When brought safely back to the Lair, Loot items are cashed in for [[Loot Value]], which feeds the Gang's [[Infamy]], funds [[Lair Upgrades]], and grants shared **XP** (see [Carrying Stuff](32_Carry%20Stuff.md) and [Loot](31_loot.md)).
+
+---
+
+<a id="doc-22"></a>
+<!-- ============================================================ -->
+<!-- DOCUMENT 22: 01_STAGE_Drafts/03_Loot/34_Crafting.md -->
 <!-- ============================================================ -->
 # Loot — Crafting
 *Source: `01_STAGE_Drafts/03_Loot/34_Crafting.md`*
@@ -2865,9 +3350,146 @@ When you declare an [[Overclock]] during combat, your brilliant understanding of
 
 ---
 
-<a id="doc-22"></a>
+<a id="doc-23"></a>
 <!-- ============================================================ -->
-<!-- DOCUMENT 22: 01_STAGE_Drafts/04_Enemies/20_Enemies.md -->
+<!-- DOCUMENT 23: 01_STAGE_Drafts/03_Loot/35_Equipment_Catalogue.md -->
+<!-- ============================================================ -->
+# Loot — Equipment_Catalogue
+*Source: `01_STAGE_Drafts/03_Loot/35_Equipment_Catalogue.md`*
+
+# Mundane Equipment & Plunder Catalogue
+
+*A proper goblin does not care where a weapon came from—only how hard it hits, how heavy it is to drag, and how much shiny scrap you can pawn it for back at the Lair. Here is a master ledger of standard gear, armor, tools, and plunder found across the fantasy realm.*
+
+---
+
+## Catalogue Overview & Notation
+
+Every item in this catalogue is a mundane **Base Chassis** possessing a standard **Quality Tier (T1–T5)** and zero magical Oddities (see [Equipment & Gear](33_Equipment.md) and [Loot & Plunder](31_loot.md)). 
+
+### Statblock Headers
+*   **Bulk (0–4+):** The physical weight and pack space of the item (see [Carrying Stuff](32_Carry%20Stuff.md)).
+*   **Hands / Slot:** Worn, One-Handed (1H), Two-Handed (2H), or Stowed.
+*   **Quality:** T1 Junk, T2 Scrappy, T3 Standard, T4 Superior, or T5 Legendary.
+*   **Base Cost:** The standard purchase price in the Lair.
+*   **Break Roll:** The die threshold rolled on a 1d6 when a test using the item suffers a [[Fumble]].
+*   **Rules & Profile:** The active mechanical impact on tests, ranges, mitigation, or difficulties.
+
+---
+
+## 1. Melee Weapons
+
+Melee attacks roll a [[Dice Pool]] based on [[Tough]] against the target's [[Defence]] TN. If an attack scores at least 1 success but does not meet the target's [[Defence]] TN, it inflicts the [[Staggered]] condition if its **Impact Size** is equal to or greater than the target's physical [[Size]] (Impact Size >= Target Size).
+
+| Item Name | Quality | Bulk | Hands | Base Cost | Break Roll | Impact Size | Mechanical Profile & Capabilities |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
+| **Sharpened Bone Shiv** | T1 | 1 | 1H | Free / 1x T1 | Breaks on 1–4 | Wielder Size | *Concealable:* Can be drawn as an incidental [[Free Action]]. |
+| **Crude Spiked Club** | T1 | 2 | 1H | Free / 1x T1 | Breaks on 1–4 | Wielder Size | *Heavy Wood:* Splintered log with rusty nails hammered in. |
+| **Rusty Cleaver** | T2 | 1 | 1H | 1x T2 | Breaks on 1–3 | Wielder Size | *Chopper:* Standard goblin kitchen chopper. One-handed. |
+| **Goblin Shortspear** | T2 | 2 | 1H | 1x T2 | Breaks on 1–3 | Wielder Size | *Reach:* Can strike enemies in your zone while standing behind an ally. |
+| **Scrappy War-Flail** | T2 | 2 | 1H | 1x T2 | Breaks on 1–3 | Wielder Size | *Flexible Chain:* Ignores enemy cover benefits from shields. |
+| **Scrap Greataxe** | T2 | 3 | 2H | 1x T2 | Breaks on 1–3 | Wielder Size + 1 | `Heavy`: Adds **+1 to Impact Size**; requires 2 hands. |
+| **Soldier's Shortsword** | T3 | 2 | 1H | 1x T3 | Breaks on 1–2 | Wielder Size | *Balanced Steel:* Standard human military infantry blade. |
+| **Knight's Longsword** | T3 | 2 | 1H | 1x T3 | Breaks on 1–2 | Wielder Size | *Versatile Grip:* Can be used 1H or 2H (grants **Boon 1 (+1d)** when swung 2H). |
+| **Heavy Halberd** | T3 | 3 | 2H | 1x T3 | Breaks on 1–2 | Wielder Size + 1 | `Heavy`: Adds **+1 to Impact Size**. Can attack targets 1 Zone away. |
+| **Dwarven War-Pick** | T4 | 2 | 1H | 1x T4 | Breaks on 1 | Wielder Size | *Armor Piercing:* Bypasses 1 Passive Armor Die from target armor on a hit. |
+| **Dwarven Great-Hammer** | T4 | 3 | 2H | 1x T4 | Breaks on 1 | Wielder Size + 2 | `Heavy`: Adds **+2 to Impact Size**; shatters physical stone barriers. |
+| **Ancient Titan Cleaver** | T5 | 4 | 2H | 1x T5 | **Never breaks** | Wielder Size + 2 | `Heavy`: Adds **+2 to Impact Size**. Requires [[Tough]] 3 to swing. |
+
+---
+
+## 2. Ranged Weapons & Ammunition
+
+Ranged attacks roll a [[Dice Pool]] based on [[Slink]] against the target's [[Defence]] TN. Distance is measured in discrete battlefield [[Zones]].
+
+| Item Name | Quality | Bulk | Hands | Base Cost | Break Roll | Range | Requirements & Capabilities |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
+| **Leather Sling** | T1 | 1 | 1H | Free / 1x T1 | Breaks on 1–4 | 1 Zone | *Scavenged Ammo:* Uses stones picked up freely in any zone. |
+| **Throwing Daggers (Set of 3)** | T2 | 1 | 1H | 1x T2 | Breaks on 1–3 | 1 Zone | *Fast Throw:* Can be thrown as an attack without needing to stow your other hand. |
+| **Goblin Shortbow** | T2 | 2 | 2H | 1x T2 | Breaks on 1–3 | 2 Zones | *Rapid Shot:* Fires across 2 zones without penalty. |
+| **Scrappy Light Crossbow** | T2 | 2 | 2H | 1x T2 | Breaks on 1–3 | 2 Zones | *Winch Crank:* Requires [[Brains]] 2 to reload and fire smoothly. |
+| **Military Longbow** | T3 | 2 | 2H | 1x T3 | Breaks on 1–2 | 3 Zones | *High Tension:* Requires [[Tough]] 2 to draw. Fires across 3 zones. |
+| **Heavy Arbalest** | T3 | 3 | 2H | 1x T3 | Breaks on 1–2 | 3 Zones | `Heavy`: Requires [[Tough]] 2 and [[Brains]] 2. Adds **+1 to Impact Size**. |
+| **Dwarven Repeating Crossbow**| T4 | 3 | 2H | 1x T4 | Breaks on 1 | 2 Zones | *Clockwork Feed:* Can make two Ranged Attacks with 1 Standard Action. |
+
+---
+
+## 3. Armor & Shields
+
+Armor and Shields provide passive colored dice rolled in the **[[Clatter Roll]]** to mitigate incoming damage when active dodging fails (see [Combat](../00_Rules/02%20Combat.md#dodge--parry-reaction--the-clatter-roll)).
+
+| Item Name | Quality | Bulk | Hands / Slot | Base Cost | Break Roll | Armor Dice | Mobility Penalties & Special Capabilities |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
+| **Padded Rag Tunic** | T1 | 1 | Worn | Free / 1x T1 | Breaks on 1–4 | **+1d** | *Light:* Quilted rags. No penalties. |
+| **Boiled Hide Armor** | T2 | 1 | Worn | 1x T2 | Breaks on 1–3 | **+1d** | *Light:* Tough cured reptile leather. No penalties. |
+| **Cobbled Scrap-Plate** | T2 | 2 | Worn | 1x T2 | Breaks on 1–3 | **+2d** | *Medium:* **Bane 1 (-1d)** on [[Slink]] tests. |
+| **Spiked Pot-Lid Shield** | T2 | 1 | 1H | 1x T2 | Breaks on 1–3 | **+1d** | *Shield:* Adds **+1d Armor Die** and enables [[Parry]] [[Reaction]] using [[Tough]]. |
+| **Knight's Chain Shirt** | T3 | 2 | Worn | 1x T3 | Breaks on 1–2 | **+2d** | *Medium:* **Bane 1 (-1d)** on [[Slink]] tests. |
+| **Full Plate Harness** | T3 | 3 | Worn | 1x T3 | Breaks on 1–2 | **+3d** | *Heavy:* **Bane 2 (-2d)** on [[Slink]] tests; cannot swim. |
+| **Reinforced Tower Pavise** | T3 | 2 | 1H | 1x T3 | Breaks on 1–2 | **+2d** | *Heavy Shield:* Grants **+2d Armor Dice** and enables [[Parry]], but halves movement while held. |
+| **Dwarven Runed Carapace** | T4 | 3 | Worn | 1x T4 | Breaks on 1 | **+3d** | *Heavy:* **Bane 1 (-1d)** on [[Slink]] (lighter dwarven alloy). Cannot swim. |
+| **Ancient Godstone Aegis** | T5 | 2 | 1H | 1x T5 | **Never breaks** | **+2d** | *Relic Shield:* Adds **+2d Armor Dice**; immune to all armor-piercing effects. |
+
+---
+
+## 4. Adventuring Tools & Exploration Gear
+
+Tools never use flat `+1` modifier math. They adjust Difficulty tiers (**Hard 6 -> Normal 5+ -> Easy 4+**), grant Boons, or provide narrative permission to perform physical feats.
+
+| Tool Name | Quality | Bulk | Base Cost | Break Roll | Mechanical Function & Rule |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **Crude Bone Wire** | T1 | 0 | Free / 1x T1 | Breaks on 1–4 | *Makeshift Picks:* Allows picking basic locks, but fumbling breaks the wire instantly. |
+| **Heavy Crowbar** | T2 | 1 | 1x T2 | Breaks on 1–3 | *Leverage:* Grants **Boon 1 (+1d)** to [[Tough]] tests to force doors or smash chests. |
+| **Hemp Rope & Iron Hook (30 ft)** | T2 | 1 | 1x T2 | Breaks on 1–3 | *Climbing:* Allows scaling vertical walls without a Slink test; can snag Bulk 1–2 items 1 Zone away. |
+| **Smelly Scent-Masking Paste** | T2 | 0 | 1x T2 | Breaks on 1–3 | *Deodorant:* Grants **Boon 1 (+1d)** to [[Slink]] stealth tests against guard beasts. |
+| **Iron Bear Trap** | T2 | 2 | 1x T2 | Breaks on 1–3 | *Snap-Trap:* Concealed in a Zone; triggers a `5+/2` test when stepped on, inflicting `[Restrained]` and 2 damage. |
+| **Master Thief's Lockpicks** | T3 | 0 | 1x T3 | Breaks on 1–2 | *Precision Tools:* Reduces lockpicking and trap tests from **Hard (6)** to **Normal (5+)**, or **Normal (5+)** to **Easy (4+)**. |
+| **Brass Bullseye Lantern** | T3 | 1 | 1x T3 | Breaks on 1–2 | *Focused Beam:* Strips the `[Dark]` tag across **2 Zones in a line**; provides `[Light]`. |
+| **Heavy Manacles & Key** | T3 | 1 | 1x T3 | Breaks on 1–2 | *Restraint:* Locks an incapacitated foe into `[Restrained]`. Escaping without key requires `Slink 5+/2`. |
+| **Dwarven Miner's Pick** | T4 | 2 | 1x T4 | Breaks on 1 | *Excavation:* Can breach solid stone walls in 3 rounds; grants **Boon 2 (+2d)** on mining tests. |
+
+---
+
+## 5. Consumables & Alchemical Devices
+
+Consumables are single-use devices that trigger instantaneous effects and are destroyed upon use. Explosives and hazard flasks use the standardized **Area Threat Profile** (`Threat [Face]+/[TN]`, Damage, `[Tags]`) against all targets in their blast [[Zone]].
+
+| Item Name | Quality | Bulk | Base Cost | Impact Size | Area Threat / Mechanical Effect |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **Torch** | T1 | 1 | Free / 1x T1 | Size 0 | *Light & Weapon:* Burns for 1 exploration phase; strips `[Dark]`. Usable as an Improvised Melee Weapon (`Tough` test) carrying `[Fire]` and `[Light]` tags. |
+| **Bag of Caltrops** | T2 | 1 | 1x T2 | Size 1 | *Zone Trap:* Coats 1 Zone in spikes. Moving through forces a `Slink 5+/1` test or creature halts and takes 1 Damage. |
+| **Fire Flask (Molotov)** | T2 | 1 | 1x T2 | Size 2 | *Fireblast:* Thrown 1 Zone. `Threat 5+/1`, 2 Damage, `[Fire]`. Sets flammable terrain on fire (`[Burning]`). |
+| **Choking Smoke Pot** | T2 | 1 | 1x T2 | Size 0 | *Screen:* Thrown 1 Zone. `Threat 4+/1`, 0 Damage, `[Gaseous]`. Fills Zone with dense fog (`[Dark]`), imposing **Bane 1 (-1d)** on ranged attacks. |
+| **Foul Troll-Slime Poultice** | T2 | 0 | 1x T2 | Size 0 | *First Aid:* Action to apply. Restores **1 [[Grit]]**; roll `Tough 5+/1` or suffer nausea for 1 round. |
+| **Demolition Powder Keg** | T3 | 2 | 1x T3 | Size 3 | *Detonation:* `Threat 5+/2`, 3 Damage, `[Explosive]`. Shatters wooden doors, collapses barricades, and breaches stone walls. |
+| **Siege Mortar Shell** | T4 | 3 | 1x T4 | Size 4 | *Heavy Shell:* `Threat 5+/3`, 4 Damage, `[Explosive]`. Affects **2 adjacent [[Zones]]**; shatters fortified stone masonry. |
+| **Sol-Quartz Core** | T5 | 4 | 1x T5 | Size 5 | *Cataclysm:* `Threat 6/3`, 5 Damage, `[Explosive]`. Blasts an entire battlefield quadrant; incinerates all cover and structures. |
+
+---
+
+## 6. Mundane Plunder & Trade Treasures
+
+Plunder items have zero combat function, but provide pure wealth when hauled back to the Lair. Plunder follows the **5-to-1 exponential scale** (5x T1 = 1x T2, 5x T2 = 1x T3, etc.).
+
+| Plunder Name | Quality | Bulk | Loot Value (LV) | Equivalent Base Scrap | Typical Origin & Flavour |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **Pocketful of Brass Buttons** | T1 | 0 | 1x T1 | 1 Scrap | Stolen from peasant shirts and farm coats. |
+| **Rusted Iron Kettle** | T1 | 1 | 1x T1 | 1 Scrap | Dented copper or iron cookware. |
+| **Pouch of Silver Shillings** | T2 | 0 | 1x T2 | 5 Scrap | Standard currency from a merchant's purse. |
+| **Silver Banquet Cutlery** | T2 | 1 | 1x T2 | 5 Scrap | Ornate silver forks, spoons, and plates. |
+| **Heavy Bronze Cauldron** | T2 | 3 | 2x T2 | 10 Scrap | Clumsy, heavy bronze cooking vat. |
+| **Gold Wine Chalice** | T3 | 1 | 1x T3 | 25 Scrap | Solid gold drinking goblet with small gems. |
+| **Bolt of Noble's Silk** | T3 | 2 | 1x T3 | 25 Scrap | Fine dyed elven fabric. |
+| **Solid Marble Bust** | T3 | 4 | 2x T3 | 50 Scrap | Heavy sculpture of a human lord. Requires dragging or a Mob. |
+| **Pouch of Flawless Diamonds**| T4 | 0 | 1x T4 | 125 Scrap | Ultra-high density wealth; negligible bulk. |
+| **Dwarven Master Anvil** | T4 | 4 | 2x T4 | 250 Scrap | Solid rune-forged iron. Essential for building a Master Forge. |
+| **Royal Crown of the High King** | T5 | 1 | **10x T5** | **6,250 Scrap** | Solid gold, rubies, and ancient empire seal. Priceless relic. |
+
+---
+
+<a id="doc-24"></a>
+<!-- ============================================================ -->
+<!-- DOCUMENT 24: 01_STAGE_Drafts/04_Enemies/20_Enemies.md -->
 <!-- ============================================================ -->
 # Enemies — Enemies
 *Source: `01_STAGE_Drafts/04_Enemies/20_Enemies.md`*
@@ -2883,13 +3505,16 @@ When you declare an [[Overclock]] during combat, your brilliant understanding of
 All combat encounters in Gobbos are governed by three overarching rules that define how enemies operate:
 
 ### Deterministic Threats
-The GM never rolls dice. Enemies do not test for success or roll to hit. Their actions are guaranteed threats. If an enemy attacks a [[Boss]] or [[Mob]], it deals its listed damage automatically unless the player spends a saved action to [[Dodge]] (testing [[Slink]]) or [[Parry]] (testing [[Tough]]).
+The GM never rolls dice. Enemies do not test for success or roll to hit. Their actions are guaranteed threats. Every attack has an incoming **Threat** profile and flat **Damage**. When an enemy attacks, it deals its listed damage automatically unless the player resolves a **Clatter Roll** by spending a saved action to [[Dodge]] (testing [[Slink]]) or [[Parry]] (testing [[Tough]]), or absorbs damage with passive **Armor Dice**.
 
 ### The Three Enemy Scales
 Enemies are structured into three distinct mechanical types to determine how they take damage and die:
 1.  **Standard Enemies:** The default foe. They are **One-Hit Kill**. Rolling successes equal to or greater than their [[Defence]] [[Target Number (TN)]] instantly defeats them.
 2.  **Bosses & Elites:** Powerhouses that cannot be killed in a single strike. They track damage using a [[Wound|Wounds]] track.
 3.  **Enemy Mobs:** Groups of standard enemies acting as a single unit, using a shared **Dice-HP** pool.
+
+### Enemy Actions
+On the Enemy Active Turn, each enemy unit (Standard, Mob, or Elite) receives **two (2) actions** per round by default to spend on moving, attacking, or interacting with the environment. Colossal Apex Bosses or specialized threats may possess unique traits granting **three (3) actions** or automated action clocks. Any action spent on a reaction earlier in the round reduces their available actions during their turn.
 
 ---
 
@@ -2906,8 +3531,8 @@ Every enemy is defined by a standardized, table-based stat block. The top sectio
 *   **Tags:** Standardized keywords representing physiological or behavioral modifiers.
 *   **Special:** Any unique, custom rules or passive abilities.
 *   **Attacks:** The combat options the enemy can execute.
-    *   **Attack (TN):** The difficulty and [[Target Number (TN)]] a player must roll on their [[Dodge]] or [[Parry]] test to avoid the attack.
-    *   **Damage:** The flat amount of damage dealt if the player fails to defend.
+    *   **Threat:** The difficulty and [[Target Number (TN)]] a player must roll on their [[Dodge]] or [[Parry]] test (or Mob "Scatter!" roll) to completely avoid the blow (e.g. `5+/1`, `4+/2`, `6/1`).
+    *   **Damage:** The flat amount of damage dealt if evasion fails (mitigated by passive Armor Dice).
     *   **Range:** The distance the attack can reach (Melee or Ranged).
     *   **AoE:** The area of effect, if it hits multiple targets.
     *   **Special:** Any special rules applied when using this attack.
@@ -2922,7 +3547,7 @@ Every enemy is defined by a standardized, table-based stat block. The top sectio
 > **Special:** None
 > 
 > #### [[Attack|Attacks]]
-> | Attack | Target (Attack) | Damage | Range | Special |
+> | Attack | Threat | Damage | Range | Special |
 > | :--- | :---: | :---: | :---: | :--- |
 > | **Rusty Pitchfork** | 5+/1 | 1 | Melee | None |
 
@@ -2955,15 +3580,17 @@ Unique Statblock Traits are specialized behaviors or combat tactics custom-writt
 Enemy Mobs represent swarms of standard, weak units acting as a single tactical squad.
 
 ### Symmetrical Health (Dice-HP)
-An Enemy [[Mob]] of **Size X** (Size 1–5) is tracked using **X physical D6s** on the table, starting at the "6" face. 
-*   **Standard Damage:** Damage reduces the face of a single die. Spillover damage applies. 
-*   **AoE / Cleave:** [[Area of Effect (AoE)]] and Cleave attacks apply their damage to **every single die** in the Mob's pool simultaneously.
-    *   *Cleave Attacks:* A player using a weapon/ability with the `Cleave` trait can distribute their excess **successes** to kill multiple units in the Mob (each multiple of the unit's [[Defence TN]] removes 1 point of Mob Size).
-    *   *AoE Attacks:* An `AoE` attack (like a fire bomb) deals its flat damage directly to every die in the Mob's pool.
+An Enemy [[Mob]] of **Size X** (Size 1–5) is tracked using **X physical D6s** on the table, starting at the "6" face.
+*   **Single-Target Damage:** Damage reduces the face value of the Mob's lowest active health die. Spillover damage applies to the next lowest die if a die is removed.
+*   **Mob-on-Mob Melee (The Frontline Rule):** When attacked in melee by a Player [[Mob]], incoming damage applies simultaneously to the enemy's lowest-value health dice up to the attacking Mob's current [[Size]].
+*   **Cleave Attacks (`Cleave X`):** Attacks with the `Cleave X` trait sweep across multiple foes, applying damage simultaneously to **up to X of the Mob's lowest-value health dice** (e.g., standard two-handed greataxes have `Cleave 2`, while massive monsters possess `Cleave 3` or `Cleave 5`). (Overkill multi-wound scaling applies strictly against [[Elite]] and [[Boss]] foes on a Wounds track).
+*   **True Area Threats (`[AoE]`):** Attacks with the `[AoE]` tag (like fire bombs or dragon breath) apply their flat damage to **every single active die** in the Mob's pool simultaneously.
 
 ### Deterministic Damage Scaling
 An Enemy [[Mob]]'s automatic damage scales with its size:
 $$\text{Mob Damage} = \text{Base Unit Damage} + (\text{Current Size} - 1)$$
+*   **Attacking a Player Mob:** The Enemy Mob applies this damage via the **Frontline Rule** to a number of goblin dice equal to its current [[Size]] (targeting the lowest-value dice first).
+*   **Attacking a PC Boss:** The Enemy Mob delivers this damage as a single combined strike, defended with a single [[Clatter Roll]].
 
 ### Mob Constraints
 *   **No Elite Mobs:** [[Mob|Mobs]] can only consist of standard, one-hit-kill enemies. Elite and Boss enemies must always be fought as individual units.
@@ -2977,7 +3604,15 @@ Elite units and Bosses utilize a [[Wound|Wounds]] track.
 *   To deal 1 [[Wound]] to a Boss, a player must roll **successes** equal to or greater than its [[Defence]] [[Target Number (TN)]] in a single attack.
 
 >> **GOLDEN RULE: The Overkill Rule**
->> For every multiple of the [[Defence]] [[Target Number (TN)]] achieved on a single roll, the Boss takes an additional [[Wound]]. 
+>> Against Elites and Bosses, you deal **1 Wound for every full multiple of the target's Defence TN** scored on a single attack roll (e.g., against Defence 2, scoring 2 successes deals 1 Wound, 4 successes deals 2 Wounds, and 6 successes deals 3 Wounds).
+
+### Mass & Stagger Resistance (The Impact Size Standard)
+Enemies whose physical [[Size]] exceeds an attack's **Impact Size** possess natural mass resistance. A foe is **immune to the [[Staggered]] condition** from partial hits unless the attack's **Impact Size** meets or exceeds the target's physical **[[Size]]** ($\text{Impact Size} \ge \text{Target Size}$):
+*   **Standard Single Attacks:** $\text{Impact Size} = \text{Attacker Physical Size}$ (Size 1 for Goblins and standard humanoids).
+*   **Mob Swarms:** $\text{Impact Size} = \text{Current Mob Size}$ (Size 1 to 5).
+*   **Heavy Weapons:** Adds **+1** to Impact Size (a Size 1 Goblin wielding a two-handed hammer attacks with **Impact Size 2**).
+*   **Crushing Weapons:** Adds **+2** to Impact Size (attacks with **Impact Size 3**).
+*   **Explosives & Spells:** $\text{Impact Size} = \text{Tier}$ (T1 = Size 1, T2 Grenade = Size 2, T3 Powder Keg = Size 3, T4 Mortar = Size 4, T5 Reactor = Size 5).
 
 ---
 
@@ -3003,197 +3638,903 @@ If there is a surviving **Enemy Commander** who did not break, they can use an a
 
 ---
 
-<a id="doc-23"></a>
+## 7. The Bestiary
+
+For a comprehensive roster of standard, elite, boss, and mob creature stat blocks, see [Bestiary: Classic & Tough Threats](21_Bestiary.md).
+
+---
+
+<a id="doc-25"></a>
 <!-- ============================================================ -->
-<!-- DOCUMENT 23: 01_STAGE_Drafts/05_Base/00_Lair_Rules.md -->
+<!-- DOCUMENT 25: 01_STAGE_Drafts/04_Enemies/21_Bestiary.md -->
+<!-- ============================================================ -->
+# Enemies — Bestiary
+*Source: `01_STAGE_Drafts/04_Enemies/21_Bestiary.md`*
+
+# 21. Bestiary: Classic & Tough Threats
+
+*The world above the warrens is full of terrible things: greedy tall-men with sharp iron, feral beasts that view a goblin as a crunchy mid-day snack, ancient blood-drinking counts, and colossal fire-breathing horrors that can incinerate an entire gang in a single breath. A smart Goblin Boss knows every enemy's tricks—and more importantly, knows exactly how many goblins it takes to drag them down.*
+
+---
+
+## 1. Using the Bestiary
+
+This chapter contains standardized stat blocks for adversaries encountered during [[Raid|Raids]]. All creatures operate on the deterministic rules detailed in [Enemies](20_Enemies.md) and [Combat](02%20Combat.md).
+
+### Quick Reference Rules
+*   **Zero GM Rolls:** The **GM** never rolls to hit or damage. All enemy attacks present a static **Threat** (difficulty and successes required to avoid) and flat **Damage**.
+*   **Player Reactions:** When targeted by an enemy attack, you can spend a saved [[Standard Action]] to make a [[Clatter Roll]], rolling [[Slink]] to [[Dodge]] or [[Tough]] to [[Parry]] against the attack's **Threat**. 
+*   **Passive Mitigation:** Successes on your equipped [[Armor]] dice reduce incoming damage by 1 per success (**5+**).
+*   **One-Hit Kills:** Standard enemies die instantly when you roll successes equal to or greater than their [[Defence]] [[Target Number (TN)]].
+*   **Wounds & Overkill:** [[Elite]] and [[Boss]] enemies track damage using a **Wounds** track. You deal **1 [[Wound]] for every full multiple of the target's [[Defence]] TN** scored on a single attack roll (e.g., against Defence 2, scoring 2 successes deals 1 Wound, 4 successes deals 2 Wounds, and 6 successes deals 3 Wounds).
+*   **Mob Health (Dice-HP):** An Enemy [[Mob]] of **Size X** is tracked using **X physical D6s** on the table. Each point of damage reduces a die's face; losing a die removes 1 unit of [[Size]].
+
+---
+
+## 2. Universal Ancestries
+
+Every creature belongs to an **Ancestry** that establishes its universal behavior, psychological limits, and condition vulnerabilities. You resolve these rules automatically without needing them printed on individual stat blocks.
+
+### Beast
+*Feral predators, vermin, and wild animals.*
+*   **Instinctive Morale:** Beasts trigger an immediate [[Morale Check]] if targeted by `[Fire]`, loud explosions (`[Loud]`), or if their group size is halved.
+*   **Lure Vulnerability:** Beasts prioritize targets possessing the `[Tasty]` tag above all other tactical targets and gain a **Boon (+1d)** on attacks against them.
+*   **Mindless Immunity:** Beasts are immune to verbal [[Mouth]] persuasion and complex magical trickery.
+
+### Humanoid
+*Men, elves, dwarves, High Aurelians, and civilized outlaws.*
+*   **Tactical Discipline:** Humanoids utilize cover, focus fire on goblin commanders, and obey allied [[Order]] actions.
+*   **Standard Morale:** Subject to normal group [[Morale Check|Morale Checks]] when suffering 50% casualties or when their Commander is killed.
+*   **Gear Salvage:** Defeated humanoids drop salvageable [[Scrap]], weapons, and [[Loot]].
+
+### Undead
+*Mindless skeletons, rotting corpses, vampires, and vengeful spirits.*
+*   **Cold & Mindless:** Immune to [[Morale Check|Morale Checks]] (they fight until destroyed) and immune to the [[Terrified]] condition.
+*   **Dead Flesh:** Immune to [[Weakened]] from poison (`[Toxic]`) and bleeding (`[Bleeding]`).
+*   **Holy Vulnerability:** Attacks carrying the `[Angelic]` or `[Light]` tags deal **+1 Success** against Undead.
+
+### Monstrosity
+*Ogres, trolls, hydras, and colossal dragons.*
+*   **Hulking Mass:** Monstrosities cannot be knocked [[Prone]], shoved, or [[Staggered]] unless the attack's **Impact Size** meets or exceeds the creature's physical **[[Size]]** ($\text{Impact Size} \ge \text{Target Size}$).
+*   **Sweeping Blows:** Melee attacks made by a Monstrosity naturally Cleave, damaging all Goblins and [[Mob]] dice in the target [[Zone]].
+
+### Fiend (Demon)
+*Brimstone horrors, nether-beasts, and corrupt planar fiends.*
+*   **Infernal Body:** Immune to damage and zone hazards carrying the `[Fire]` tag; immune to the [[Confusing]] and [[Terrified]] conditions.
+*   **Purification Weakness:** Attacks carrying the `[Purified]` or `[Angelic]` tags ignore the Fiend's passive armor and reduce its [[Defence]] TN by 1.
+*   **Chaos Opportunism:** Whenever a Goblin within 1 [[Zone]] rolls a [[Fumble]] (two or more 1s), the Fiend immediately triggers its listed retaliation reaction.
+
+---
+
+## 3. Vermin & Wild Beasts
+
+*Dungeon floors and deep forests crawl with biting critters. While a single rat is a tasty snack, a swarm of them will strip the flesh from a goblin's bones in seconds.*
+
+### Giant Sewer Rat
+*Standard Beast (Size 0)*
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **1** | **2** | **5+/1** | `[Teeny]` |
+
+**Special — Filth Fever:** If you fail your [[Dodge]] reaction against this creature's bite, you contract filthy sewer fleas, gaining the [[Weakened]] condition until treated in the Lair.
+
+#### [[Attack|Attacks]]
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **Gnawing Bite** | `Slink 4+/1` | 1 | Melee | Inflicts [[Weakened]] on failed evasion. |
+
+**Plunder:** Matted rat pelt, sharp incisor (1 Scrap T1).
+
+---
+
+### Sewer Rat Swarm
+*Enemy Mob (Size 3)*
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **1** | **2** | **5+/2** | `[Teeny]` |
+
+**Special — Swarm Overwhelm:** If the Rat Swarm shares a [[Zone]] with a [[Prone]] Goblin or Mob, the **Threat TN** of its *Chittering Tide* increases by **+1**.
+
+#### [[Attack|Attacks]]
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **Chittering Tide** | `Slink 5+/2` | 3 | Melee | Damage scales with Mob Size: $1 + (\text{Size} - 1)$. |
+
+**Plunder:** Piles of mangled rat bones, 1d6 Shiny Pennies (Loot Value 1, 1 Scrap T1).
+
+---
+
+### Cave Bat Swarm
+*Enemy Mob (Size 3)*
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **1** | **3** | **5+/1** | `[Teeny]`, `[Fast]` |
+
+**Special — Screeching Flap:** At the start of the Enemy Active turn, all Goblins sharing a [[Zone]] with the Bat Swarm must succeed on a **Brains 5+/1** test or gain the [[Blinded]] condition for 1 round as leathery wings buffet their faces.
+
+#### [[Attack|Attacks]]
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **Fluttering Claws** | `Slink 5+/1` | 3 | Melee | Damage scales with Mob Size: $1 + (\text{Size} - 1)$. |
+
+**Plunder:** Leathery bat wings, guano dust (1 Scrap T1).
+
+---
+
+### Dire Wolf (Hunting Hound)
+*Standard Beast (Size 1)*
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **2** | **3** | **5+/2** | `[Fast]` |
+
+**Special — Takedown:** If you fail your [[Dodge]] reaction against the wolf's bite, you are knocked [[Prone]] and dragged down.
+
+#### [[Attack|Attacks]]
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **Snapping Jaws** | `Slink 5+/2` | 2 | Melee | Target is knocked [[Prone]] on failed evasion. |
+
+**Plunder:** Thick canine pelt, spiked iron collar (1 Scrap T2).
+
+---
+
+### Forest Mauler (Cave Bear)
+*Elite Beast (Size 2)*  
+**Wounds:** 3
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **2** | **2** | **5+/3** | `[Heavy]`, `[Spiky]` |
+
+**Special — Thick Blubber:** Attacks against the bear suffer a [[Bane]] (-1d) due to its dense layers of fat and matted fur. Attacks carrying the `[Fire]` tag bypass this blubber and roll normally without a Bane.  
+**Special — Enraged Roar:** The first time the bear takes a [[Wound]], it lets loose an ear-splitting roar. All Goblins in its [[Zone]] must succeed on a **Brains 5+/1** test or suffer the [[Terrified]] condition.
+
+#### [[Attack|Attacks]]
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **Crushing Claws** | `Tough 5+/2` | 3 | Melee | `Cleave 2` (damages up to 2 Mob dice). |
+| **Bear Hug** | `Slink 4+/2` | 2 | Melee | Target gains the [[Restrained]] condition. |
+
+**Plunder:** Massive Bear Hide, Bear Skull Helm (Loot Value 2, 2 Scrap T2).
+
+---
+
+## 4. Outlaws & Tall-Men
+
+*Tall-men are loud, arrogant, and carry shiny metal toys. They believe their heavy boots make them masters of the forest—until twenty goblins drop from the trees on top of them.*
+
+### Desperate Robber (Footpad)
+*Standard Humanoid (Size 1)*
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **1** | **2** | **5+/1** | None |
+
+**Special — Pocket Sand:** Once per encounter, when engaged in Melee, the robber throws blinding dirt; the target's [[Dodge]] reaction becomes **Hard (6)**.
+
+#### [[Attack|Attacks]]
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **Rusty Shiv** | `Slink 5+/1` | 1 | Melee | None. |
+| **Thrown Cobblestone** | `Slink 5+/1` | 1 | Ranged (1 Zone) | None. |
+
+**Plunder:** Pouch of copper pennies, greasy dice (Loot Value 1, 1 Scrap T1).
+
+---
+
+### Robber Gang
+*Enemy Mob (Size 3)*
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **1** | **2** | **5+/2** | None |
+
+**Special — Greedy Snatch:** If the Robber Gang damages a Goblin or Mob carrying [[Loot]], the target immediately drops **1 Bulk** of carried treasure onto the ground.
+
+#### [[Attack|Attacks]]
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **Club & Shiv Swarm** | `Slink 5+/1` | 3 | Melee | Damage scales with Mob Size: $1 + (\text{Size} - 1)$. |
+
+**Plunder:** Stolen trade sack, cheap knives (Loot Value 2, 1 Scrap T1).
+
+---
+
+### Bandit Crossbowman
+*Standard Humanoid (Size 1)*
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **1** | **1** | **5+/1** | None |
+
+**Special — Sniper's Focus:** If the crossbowman takes no [[Move]] actions on their turn, the **Threat TN** of their *Heavy Crossbow* attack increases by **+1** for that turn.
+
+#### [[Attack|Attacks]]
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **Heavy Crossbow** | `Slink 5+/2` | 2 | Ranged (2 Zones) | Piercing: Ignores 1 passive Armor Die. |
+| **Dagger Jab** | `Slink 5+/1` | 1 | Melee | None. |
+
+**Plunder:** Iron quarrel bundle, wooden crossbow stock (1 Scrap T2).
+
+---
+
+### Armored Highwayman
+*Elite Humanoid (Size 1)*  
+**Wounds:** 2
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **2** | **1** | **5+/2** | `[Hardened]` |
+
+**Special — Parrying Buckler:** The first melee attack committed against the highwayman each round (regardless of whether it hits or misses, and whether made by a Boss or a Mob) must be rolled at **Hard (6)**. Once that first attack resolves, the buckler is committed and all subsequent melee attacks in the same round are resolved at Normal difficulty (**5+**).  
+**Special — Heavy Cleave:** Hits from the highwayman's broadsword inflict the [[Staggered]] condition on the target until the end of the round.
+
+#### [[Attack|Attacks]]
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **Steel Broadsword** | `Tough 5+/2` | 2 | Melee | Inflicts [[Staggered]] on a failed [[Parry]]. |
+
+**Plunder:** Polished steel buckler, heavy broadsword (Loot Value 2, 2 Scrap T3).
+
+---
+
+### Bandit Chief (The Road-Baron)
+*Boss Humanoid (Size 1)*  
+**Wounds:** 3
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **2** | **2** | **5+/3** | None |
+
+**Special — Rousing Command:** As a free reaction at the start of the round, the Bandit Chief clears the [[Staggered]] condition and rallies broken Morale on all allied Humanoids in the same or adjacent [[Zone]].  
+**Special — Human Shield:** When targeted by a [[ranged attack]] while in Melee with a Goblin or ally, the Chief redirects the incoming attack to that adjacent target on a failed attacker roll.
+
+#### [[Attack|Attacks]]
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **Flanged Iron Mace** | `Tough 5+/2` | 3 | Melee | Target is knocked [[Prone]] on a failed [[Parry]]. |
+| **Flintlock Pistol** | `Slink 4+/2` | 3 | Ranged (1 Zone) | `[Loud]`: Alerts adjacent zones. 1 use per encounter. |
+
+**Plunder:** Feathered cavalier hat, brass flintlock pistol, lockbox of silver sovereigns (Loot Value 4, 3 Scrap T3).
+
+---
+
+## 5. The Restless Dead & Blood Aristocracy
+
+*The dead are supposed to stay in the ground. When they don't, it takes a lot of bashing to make them lie back down. From lowly rattlebones to ancient blood-drinking nobles, the undead represent unyielding, hunger-driven dread.*
+
+### Rattlebone Skeleton
+*Standard Undead (Size 1)*
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **2** | **1** | **Immune** | `[Mindless]` |
+
+**Special — Dry Bones:** Attacks with the `Piercing` or `Cutting` traits (and all ranged bow attacks) suffer a [[Bane]] (-1d) against the skeleton. Attacks with the `Bashing` or `Crushing` traits gain a [[Boon]] (+1d).
+
+#### [[Attack|Attacks]]
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **Notched Scimitar** | `Tough 5+/1` | 1 | Melee | None. |
+
+**Plunder:** Ancient burial coins, skull scrap (1 Scrap T1).
+
+---
+
+### Skeleton Legion
+*Enemy Mob (Size 4)*
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **2** | **1** | **Immune** | `[Mindless]` |
+
+**Special — Wall of Ribs:** Attacks without the `Cleave` or `Bashing` traits can only reduce the Skeleton Legion's [[Size]] by a maximum of **1** per action, regardless of total successes rolled.
+
+#### [[Attack|Attacks]]
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **Rattling Spear Thrust** | `Tough 5+/2` | 4 | Melee | Damage scales with Mob Size: $1 + (\text{Size} - 1)$. |
+
+**Plunder:** Rusted iron spearheads, brittle bone armor (2 Scrap T1).
+
+---
+
+### Plague Zombie (Rotting Shambler)
+*Standard Undead (Size 1)*
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **1** | **1** | **Immune** | `[Rotting]`, `[Mindless]` |
+
+**Special — Relentless Meat:** When reduced to 0 health by non-`[Fire]` and non-`[Acidic]` damage, the zombie remains standing (movement becomes 0) and takes its active turn normally this round, collapsing permanently during the **Round Closure Phase**.
+
+#### [[Attack|Attacks]]
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **Grasping Toxic Bite** | `Slink 5+/1` | 1 | Melee | Inflicts the `[Toxic]` tag on a failed evasion. |
+
+**Plunder:** Rotting grave shrouds, embalming wax (1 Scrap T1).
+
+---
+
+### Flesh-Eating Ghoul
+*Elite Undead (Size 1)*  
+**Wounds:** 2
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **2** | **3** | **Immune** | `[Fast]`, `[Feral]` |
+
+**Special — Paralytic Venom:** Any Goblin who fails their [[Dodge]] reaction against the ghoul's claws must succeed on a **Tough 5+/1** test or become [[Restrained]] for 1 round by numbing grave-slime.  
+**Special — Carrion Feasting:** If the ghoul starts its turn in a [[Zone]] containing a dead corpse, it can spend 1 action feasting to heal 1 lost [[Wound]].
+
+#### [[Attack|Attacks]]
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **Ripping Talons** | `Slink 4+/2` | 2 | Melee | Inflicts [[Restrained]] on a failed **Tough 5+/1** test. |
+
+**Plunder:** Ghoul fangs, jar of paralytic tallow (Loot Value 1, 1 Scrap T2).
+
+---
+
+### Barrow Wight (Tomb Sentinel)
+*Elite Undead (Size 1)*  
+**Wounds:** 3
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **3** | **1** | **Immune** | `[Terrifying]`, `[Haunted]` |
+
+**Special — Grave Chill:** Any living creature that enters or ends its turn in the Wight's [[Zone]] suffers a [[Bane]] (-1d) to all physical action tests due to freezing magical gloom.  
+**Special — Life Drain:** Whenever the Wight deals damage to a Goblin Boss, the Wight instantly recovers 1 lost [[Wound]] (up to its maximum).
+
+#### [[Attack|Attacks]]
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **Cursed Ancient Blade** | `Tough 4+/2` | 2 | Melee | Inflicts the [[Weakened]] condition. |
+
+**Plunder:** Ancient electrum burial torque, runed bronze broadsword (Loot Value 3, 2 Scrap T3).
+
+---
+
+### Vampire Noble (The Blood Count)
+*Boss Undead (Size 1)*  
+**Wounds:** 4
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **3** | **3** | **Immune** | `[Fast]`, `[Haunted]`, `[Siphoning]` |
+
+**Special — Hypnotic Glare (Reaction):** When targeted by a Melee attack from a Goblin Boss, the Boss must pass a **Brains 5+/2** test before rolling; on a failure, the Goblin freezes in awe and the attack action is wasted. If targeted by a [[Mob]], the Boss must pass an immediate **Mouth 5+/2** [[Order]] test to force the terrified runts to strike the vampire.  
+**Special — Mist Escape & Siphon:** When dealing damage with *Crimson Fangs*, the vampire heals 1 lost [[Wound]]. If reduced to 0 Wounds by non-`[Fire]`, non-`[Light]` attacks, the vampire dissolves into mist and flees to its coffin.
+
+#### [[Attack|Attacks]]
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **Noble Rapier** | `Slink 4+/2` | 2 | Melee | Inflicts the [[Staggered]] condition. |
+| **Crimson Fangs** | `Tough 5+/2` | 3 | Melee | Target is [[Restrained]]; heals 1 [[Wound]] to the vampire. |
+| **Summon Bat Cloud** | — | — | Ranged (1 Zone) | Spawns 1 **Cave Bat Swarm** in target Zone (Once per encounter). |
+
+**Plunder:** Blood-Ruby signet ring, silk velvet cape, silver-inlaid rapier (Loot Value 6, 4 Scrap T4).
+
+---
+
+## 6. Big Bullies & Arcane Bosses
+
+*Some things are too large to squash with a normal hammer. Taking down a troll or an ironclad knight requires teamwork, explosives, and sacrificing a few runts to create an opening.*
+
+### Swamp Troll
+*Boss Monstrosity (Size 3)*  
+**Wounds:** 4
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **2** | **2** | **5+/4** | `[Regenerating]`, `[Heavy]` |
+
+**Special — Voracious Regrowth:** The troll recovers 1 lost [[Wound]] at the start of each round. If the troll suffered damage with the `[Fire]` or `[Acidic]` tag during the previous round, this regeneration is disabled for that round.  
+**Special — Zone Sweep:** The troll swings massive logs with wild abandon. Its Melee attacks target every Goblin and Mob in its [[Zone]] simultaneously.
+
+#### [[Attack|Attacks]]
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **Uprooted Log Smash** | `Tough 5+/2` | 3 | Melee (Zone-Wide) | `Cleave 3`: Targets are knocked [[Prone]]. |
+| **Bile Vomit** | `Slink 4+/2` | 2 | Ranged (1 Zone) | Inflicts `[Acidic]` and `[Toxic]` tags. |
+
+**Plunder:** Troll gall bladder (alchemical catalyst), petrified stone club (Loot Value 4, 3 Scrap T3).
+
+---
+
+### Ironclad Knight (The Tin-Can Inquisitor)
+*Elite Humanoid (Size 1)*  
+**Wounds:** 3
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **3** | **1** | **5+/3** | `[Hardened]`, `[Heavy]` |
+
+**Special — Plate Armor Bastion:** The knight ignores the first 1 point of incoming damage from every attack unless the attack possesses the `Piercing` trait or an elemental Tag (`[Fire]`, `[Acidic]`, `[Shock]`).  
+**Special — Shield Rebound:** If your [[Parry]] reaction against the knight's warhammer fails with zero successes, you are knocked [[Prone]] and lose 1 saved action.
+
+#### [[Attack|Attacks]]
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **Crushing Warhammer** | `Tough 5+/2` | 3 | Melee | High impact: Knocks target [[Prone]] on a failed Parry. |
+| **Tower Shield Slam** | `Tough 4+/1` | 1 | Melee | Shoves target into an adjacent [[Zone]]. |
+
+**Plunder:** Heavy plate cuirass scrap, silver holy symbol, balanced warhammer (Loot Value 4, 3 Scrap T4).
+
+---
+
+### Corpse Stitcher (Wandering Necromancer)
+*Boss Humanoid (Size 1)*  
+**Wounds:** 3
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **2** | **2** | **5+/2** | None |
+
+**Special — Animate Corpse (Reaction):** At the end of any round where a living creature or skeleton was killed in the Necromancer's [[Zone]] or an adjacent [[Zone]], the Necromancer instantly raises 1 **Rattlebone Skeleton** or **Plague Zombie** under their command.  
+**Special — Bone Shield:** While in the same [[Zone]] as at least one allied Undead creature, attacks against the Necromancer suffer a [[Bane]] (-1d) as rotting minions leap in front of blows.
+
+#### [[Attack|Attacks]]
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **Soul-Drain Ray** | `Slink 5+/2` | 2 | Ranged (2 Zones) | `[Shock]`: Arcs 1 automatic damage to an adjacent Goblin. |
+| **Bone Staff Strike** | `Tough 5+/1` | 1 | Melee | Inflicts the `[Chilled]` tag. |
+
+**Plunder:** Grimoire of Black Ichor, soul-cage lantern, pouch of onyx gemstones (Loot Value 5, 2 Scrap T3, 1 Scrap T4).
+
+---
+
+## 7. Imperial Horrors (The High Aurelians)
+
+*Seven feet tall, with burning golden eyes and brass-plated flesh, the High Aurelians viewed goblins as crude vermin born only to shovel soot. Whether sealed inside pressurized steam reliquaries or drinking toxic black ichor to cheat cellular collapse, they are lethal remnants of a fallen golden age.*
+
+### Ichor-Gorged Tyrant (The Black-Vein Noble)
+*Elite Humanoid (Size 2)*  
+**Wounds:** 3
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **2** | **3** | **5+/3** | `[Fast]`, `[Toxic]`, `[Frenzied]` |
+
+**Special — Black Ichor Blood:** When the Tyrant takes a [[Wound]] in Melee, acidic black ichor sprays onto the attacker; the attacker must pass a **Slink 5+/1** test or suffer 1 [[Grit]] damage (or lose 1 unit of Mob [[Size]]).  
+**Special — Solar Frenzy:** While at 1 [[Wound]], the Tyrant becomes [[Frenzied]]; its Melee attacks deal **+1 Damage** and gain the Cleave trait.
+
+#### [[Attack|Attacks]]
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **Ichor-Tipped Greatsword** | `Tough 5+/2` | 3 | Melee | Inflicts the `[Toxic]` tag. |
+| **Black Bile Spit** | `Slink 4+/2` | 2 | Ranged (1 Zone) | Inflicts `[Acidic]` and corrodes 1 Armor Die. |
+
+**Plunder:** Distilled Black Ichor Phial, Spun-Brass Regalia, Heavy Greatsword (Loot Value 4, 3 Scrap T3).
+
+---
+
+### Solar Praetor (The Brass Reliquary)
+*Boss Humanoid / Construct (Size 2)*  
+**Wounds:** 5
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **4** | **2** | **5+/4** | `[Hardened]`, `[Heavy]`, `[Angelic]` |
+
+**Special — Pressurized Steam Vent (Hazard Reaction):** Whenever the Praetor takes a [[Wound]], boiling steam erupts across its [[Zone]]; all Goblins in the [[Zone]] must succeed on a **Slink 5+/2** test or take 2 damage from scalding vapor (`[Fire]`).  
+**Special — Sol-Quartz Power Core (Flaw Hook):** If struck by an attack carrying the `[Shock]` or `[Acidic]` tags, the crystal core short-circuits: the Praetor's [[Defence]] TN drops to **2** until the end of the round.
+
+#### [[Attack|Attacks]]
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **Sun-Forged Lance** | `Tough 5+/3` | 4 | Melee | Ignores passive armor; target knocked [[Prone]]. |
+| **Solar Purge Beam** | `Slink 4+/3` | 4 | Ranged (2 Zones, Line) | Blasts a line with `[Light]` & `[Fire]`, destroying cover. |
+| **Crushing Brass Gauntlet** | `Tough 5+/2` | 3 | Melee | Cleave (Zone-Wide). |
+
+**Plunder:** Intact Sol-Quartz Fuel Core, Ornate Brass Chassis Plating, Sun-Forged Lance (Loot Value 8, 5 Scrap T4, 1 Scrap T5).
+
+---
+
+## 8. Legendary Threats & Apex Monsters
+
+*These are the apex predators of the world—ancient horrors whose mere presence shakes the earth. Fighting an apex monster is a lethal puzzle requiring planning, explosive oddities, and throwing dozens of screaming goblins into the grinder to create a single killing blow.*
+
+### Brimstone Fiend (The Horned Ravager)
+*Boss Fiend (Size 2)*  
+**Wounds:** 5
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **3** | **3** | **Immune** | `[Terrifying]`, `[Spiky]`, `[Vile]` |
+
+**Special — Hellfire Aura:** At the end of every round, the Fiend's [[Zone]] bursts into cursed flames; all creatures in the [[Zone]] take 1 damage and gain the `[Burning]` tag.  
+**Special — Chaos Retaliation (Fumble Punisher):** Whenever a Goblin within 1 [[Zone]] rolls a [[Fumble]] (two or more 1s), the Fiend immediately makes a free *Barbed Shadow-Whip* attack against that Goblin without spending an action.
+
+#### [[Attack|Attacks]]
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **Brimstone Cleaver** | `Tough 4+/3` | 4 | Melee | `Cleave 3`; inflicts `[Vile]`. |
+| **Barbed Shadow-Whip** | `Slink 5+/2` | 2 | Range (1 Zone) | Drags target into the Fiend's [[Zone]] and inflicts [[Restrained]]. |
+
+**Plunder:** Demon Horn Scrap, Smoldering Infernal Core, Jagged Hell-Steel Blade (Loot Value 7, 4 Scrap T4).
+
+---
+
+### Ancient Cinder Dragon (The Great Ash-Wyrm)
+*Apex Boss Monstrosity (Size 4)*  
+**Wounds:** 8
+
+| Defence | Movement | Morale | Tags |
+| :---: | :---: | :---: | :--- |
+| **4** | **3** | **5+/5** | `[Heavy]`, `[Hardened]`, `[Terrifying]` |
+
+**Special — Colossal Action Clock (Automata):** The Dragon acts according to a predictable 3-round destructive cycle:
+*   **Round 1 (Wing Buffet & Roar):** Massive hurricane gale pushes all Goblins in adjacent zones back 1 [[Zone]]; all Goblins must test **Brains 5+/2** or gain the [[Terrified]] condition.
+*   **Round 2 (Incandescent Inhale):** The Dragon's throat ignites with white heat; the front 2 [[Zones]] are showered in embers (`[Burning]`). Goblins have 1 round to dive behind solid cover or scatter!
+*   **Round 3 (Hellfire Breath):** Unleashes *Hellfire Breath* across 2 consecutive [[Zones]]. Resets Clock to Round 1.
+
+**Special — Greed Distraction (Flaw Hook):** If a Goblin Boss spends a [[Standard Action]] ([[Manipulate]]) to throw a shiny treasure with [[Loot Value]] **3+** into an adjacent [[Zone]], the Dragon's pride and greed forces it to target that zone with its next melee attack instead of targeting the players.
+
+#### [[Attack|Attacks]]
+| Attack | Threat | Damage | Range | Special |
+| :--- | :---: | :---: | :---: | :--- |
+| **Colossal Tail Sweep** | `Slink 5+/3` | 4 | Melee (Zone-Wide) | `Cleave 5`: All targets in [[Zone]] thrown 1 Zone and knocked [[Prone]]. |
+| **Crushing Dragon Jaws** | `Tough 6/2` (Hard!) | 6 | Melee | Shatters shields; inflicts 2 Wounds on Bosses if undefended. |
+| **Hellfire Breath (Clock)** | `Slink 4+/3` | 5 | Ranged (2 Zones, AoE) | Vaporizes wooden cover; ignites both zones with `[Fire]`. |
+
+**Plunder:** Hoard of the Drake-Lords (Loot Value 15, 6 Scrap T4, 2 Scrap T5, Dragon Heart Oddity T5/B0).
+
+---
+
+## 9. Example Combat Encounters
+
+> **Example 1: Smashing Dry Bones**
+> 
+> *Skag and his Size 3 Mob of spears confront two Rattlebone Skeletons (Defence 2).* 
+> 
+> Skag swings his trusty Heavy Club (a `Bashing` weapon). Because skeletons have the *Dry Bones* trait, Skag gains a **Boon (+1d)** to his attack roll. Skag rolls 4d6 (Tough 3 + 1d Boon) and scores three successes (**5, 5, 6**). 
+> 
+> Because Skag rolled **3 successes**, which exceeds the Skeleton's **Defence TN of 2**, the first skeleton shatters instantly! The excess 1 success does not cleave because Skag is using a standard single-target weapon.
+> 
+> Skag's Mob then attacks the second skeleton. The Mob scores 2 successes, perfectly meeting the **Defence TN of 2**, crushing the second skeleton into dust.
+
+> **Example 2: Surviving the Bear's Claws**
+> 
+> *The Forest Mauler (Elite Beast) attacks Boss Fizzle with its Crushing Claws (Threat `Tough 5+/2`, Damage 3).*
+> 
+> Fizzle has saved 1 [[Standard Action]] from his turn and holds a scrap iron shield. He declares a **Parry** and rolls his **Clatter Roll**:
+> *   **Stat Dice:** 2d6 for [[Tough]] (Fizzle's Tough is 2).
+> *   **Armor Dice:** 2 gray d6s for his Tin Plate armor.
+> 
+> Fizzle rolls his dice. On his Tough dice, he rolls a **3** and a **5** (1 success). Because the bear's Threat requires **2 successes on 5+** (`5+/2`), Fizzle fails to parry cleanly!
+> 
+> He now checks his Armor Dice for damage mitigation. The gray dice land on **5** and **6** (2 successes). Each armor success reduces the incoming 3 Damage by 1:
+> $$\text{Damage Taken} = 3 - 2 = 1 \text{ Grit}$$
+> 
+> Fizzle takes **1 Grit** damage instead of 3, absorbing the savage swipe on his trusty armor!
+
+> **Example 3: Overclocking Against the High Aurelian Praetor**
+> 
+> *Boss Grib and his Gang face the towering Solar Praetor (Defence 4, Wounds 5).*
+> 
+> Grib knows attacking the Praetor's thick brass armor head-on is suicide. Grib's alchemist throws an alchemical *Shock Flask* (`[Shock]`) at the Praetor. 
+> 
+> Because the Praetor has the *Sol-Quartz Power Core* flaw hook, the electrical arc shorts out its crystal regulator: the Praetor's [[Defence]] TN instantly drops from **4** to **2** for the rest of the round!
+> 
+> Grib steps up with his custom Overclocked Scrap-Cleaver. Grib rolls 5d6 on [[Tough]] and spends 2 [[Grunt]] to boost his dice pool, achieving an incredible **6 successes**!
+> 
+> By the **Overkill Rule**, every multiple of the Praetor's modified Defence TN (2) inflicts a [[Wound]]:
+> $$\text{Wounds Dealt} = \frac{6 \text{ Successes}}{\text{Defence } 2} = 3 \text{ Wounds!}$$
+> 
+> Grib deals **3 Wounds** in a single massive blow, buckling the Praetor's brass chassis before its steam vents can retaliate!
+
+---
+
+<a id="doc-26"></a>
+<!-- ============================================================ -->
+<!-- DOCUMENT 26: 01_STAGE_Drafts/05_Base/00_Lair_Rules.md -->
 <!-- ============================================================ -->
 # Base — Lair_Rules
 *Source: `01_STAGE_Drafts/05_Base/00_Lair_Rules.md`*
 
-# Lair & Base Building
+# The Lair
 
-*Goblins are weak, stupid, and easily squashed. But a Warren of goblins? That is a swarm. That is a society. The Lair is the heart of your gang—a place to heal, lick your wounds, build ridiculous weapons, and plot the next raid. Expand the warren, secure outposts, and build an empire of scrap.*
+*Goblins are weak, stupid, and easily squashed. But a Warren of goblins? That is a swarm. That is a society. The Lair is the heart of your gang—a place to lick wounds, brew questionable concoctions, build ridiculous weapons, and plot the next raid. Expand the warren, protect your weird experts, and build an empire of scrap.*
 
-The Lair is a shared, cooperative project managed by all players. It grows, levels up, and unlocks new options for characters and Mobs alike.
-
----
-
-## The Lair Turn
-
-Campaign play in *Gobbos* is divided into **Lair Turns**. A Lair Turn represents roughly **one week** of in-game time, split into two phases:
-
-1.  **The Raid Phase:** Bosses and their Mobs travel to a location, attempt a raid, gather loot, and return (or die trying).
-2.  **The [[Lair Phase]]:** Gobbos return to safety. Players resolve recovery, handle random events, allocate labor, craft gear, and expand the Lair.
-
-### Sequence of the Lair Phase
-When returning from a raid, resolve the following steps in order:
-1.  **Homecoming & Casualties:** Pool all [[Loot]] and [[Scrap]] into the Communal Hoard. Calculate XP. Dead Bosses are added to the [[Bone Pile]].
-2.  **Lair Event:** The GM draws and resolves a random card from the Lair Event deck.
-3.  **Labor Allocation:** Players count their available workforce and allocate them to Lair tasks.
-4.  **Labor Resolution:** Roll dice pools for all assigned Lair tasks to generate Scrap, recruit new gobbos, or clear rooms.
-5.  **Construction & Upgrades:** Spend resources from the Communal Hoard to clear new slots or build facilities. Construction completes at the end of the phase.
+The **Lair** is the shared, cooperative base of operations managed by all players. It acts as the central hub of **Loop 2 (The Lair & Downtime)**, converting raw plunder extracted from raids into permanent upgrades, customized equipment, larger armies, and strategic advantages.
 
 ---
 
-## The Gobbo Pool (Population)
+## 1. The Lair Dashboard (Core Attributes)
 
-Instead of tracking individual goblins, the Lair's population is tracked as a single, communal pool of dice: **The Gobbo Pool** (measured in **d6s**). 
+The Lair is tracked on a shared **Lair Sheet**. It is defined by six core metrics:
 
-The Gobbo Pool represents the total healthy workforce of the Lair. At the start of a Lair Turn, players must divide the Gobbo Pool into two groups:
+`
+┌─────────────────────────────────────────────────────────────────────────┐
+│                           THE LAIR DASHBOARD                            │
+├───────────────────────────────────┬─────────────────────────────────────┤
+│ 1. WARREN TIER & ASSET CAPACITY   │ 2. THE SWARM (The Gobbo Pool)       │
+│    • Tier 1 to 4 (Scale & Renown) │    • Total Workforce Pool (in d6s)  │
+│    • Max Active Assets: Tier×2 + 2│    • Raider Dice vs. Laborer Dice   │
+├───────────────────────────────────┼─────────────────────────────────────┤
+│ 3. THE COMMUNAL HOARD             │ 4. SWARM MOOD (Morale & Mutiny)     │
+│    • Pooled Loot (Gold & Wealth)  │    • 0–5 Track (Mutiny State at 5)  │
+│    • Pooled Scrap (Raw Materials) │                                     │
+├───────────────────────────────────┴─────────────────────────────────────┤
+│ 5. THREAT LEVEL (Regional Heat)                                         │
+│    • 0–5 Track (Retaliatory Raid at 5)                                  │
+├─────────────────────────────────────────────────────────────────────────┤
+│ 6. THE BONE PILE (Ancestral Memorial)                                   │
+│    • Dead Boss Skull Tally & Milestone Boons                            │
+└─────────────────────────────────────────────────────────────────────────┘
+`
 
-*   **Raider Mobs:** Dice taken from the Gobbo Pool to go on the raid. A Boss can command a Mob with a [[Size]] up to their [[Grunt]] stat. Any d6s allocated to Raider Mobs risk permanent death.
-*   **Laborer Dice:** The remaining d6s left behind in the safety of the Lair. These dice are rolled during the [[Lair Phase]] to perform work.
+### Warren Tier & Asset Capacity
+**Warren Tier** measures the overall size, reputation, and structural complexity of the settlement. 
+*   **Tier 1: Ragtag Mob Camp** (Hidden hovels, squatter camps under bridges; Max **4** Active Assets).
+*   **Tier 2: Fortified Warren** (Recognized regional menace, established defenses; Max **6** Active Assets).
+*   **Tier 3: Subterranean Stronghold** (Sprawling underground complex, heavy industry; Max **8** Active Assets).
+*   **Tier 4: The Goblin Under-Kingdom** (Legendary hive commanding regional outposts; Max **10** Active Assets).
 
-> **Example:** A Lair has a **Gobbo Pool** of **12d6**. At the start of the week, three players each take a **2d6** Mob for the raid (**6d6** total Raiders). This leaves **6d6** Laborer Dice in the Lair to do chores.
+>> **THE ASSET CAPACITY CEILING:**
+>> A Lair can only maintain a maximum number of **Active Assets** equal to **(Warren Tier × 2) + 2**. If the Lair exceeds this limit, the settlement descends into chaos: **Swarm Mood increases by +1 at the start of every Lair Turn for each asset over the cap.**
 
-### Casualties & Auto-Healing
-Combat is lethal, but goblins are resilient:
-*   **Resilient Survival:** If a Raider Mob returns from a raid with *at least 1 point of health on at least one die* (meaning the Mob was not completely reduced to Size 0), they immediately **auto-heal back to their full allocated Size** for free during Homecoming.
-*   **Wiped Mobs:** If a Mob is reduced to Size 0 during the raid, those d6s are **permanently removed** from the Lair's Gobbo Pool. They are dead.
+### The Communal Hoard
+The **Communal Hoard** stores the shared raw capital brought back from raids:
+*   **Loot:** Liquid wealth (coins, gems, jewelry, fine mechanisms). Used to bribe troops, hire specialists, settle mutinies, and fund high-tier construction.
+*   **Scrap:** Raw physical building matter (rusted iron plates, pipes, timber, nails, stone blocks). Used to build facilities, craft equipment chassis, and construct defenses.
 
-### Preventing the Death Spiral
-If the Lair suffers catastrophic casualties, the game does not grind to a halt. The Lair has built-in safety valves:
-1.  **Communal Runts (The Floor):** The Lair always has a baseline of **3d6 communal runts**. These runts cannot be used as Laborers, but they ensure each player can always take at least a **Size 1 Runt Mob (1d6)** on a raid, even if the Gobbo Pool is reduced to 0d6.
-2.  **Vacant Nest Growth:** During the Homecoming step, if the total Gobbo Pool is less than **3d6 per player** (e.g., under 9d6 in a 3-player game), the Lair automatically recruits **1d6** to the pool for free as wandering wild runts move into the empty warrens.
+### The Gobbo Pool (Workforce)
+The Lair's population is tracked as a single communal dice pool: **The Gobbo Pool** (measured in **d6s**).
+*   **The Division:** At the start of a Lair Turn, players split the Gobbo Pool into two groups:
+    *   **Raider Mobs:** Dice taken on the raid wagon by **Bosses** (up to their **Grunt** limit). These dice face lethal combat risks.
+    *   **Laborer Dice:** Dice remaining in the safety of the Lair to perform work, construction, and scavenging.
+*   **Resilient Survival:** If a Raider **Mob** returns from a raid with at least 1 point of health on at least one die (meaning the **Mob** was not reduced to **Size 0**), it immediately **auto-heals back to its full allocated Size** for free during Homecoming.
+*   **Wiped Mobs:** If a **Mob** is reduced to **Size 0**, those dice are permanently removed from the **Gobbo Pool**.
+*   **The Floor (Communal Runts):** The Lair always maintains a baseline of **3d6 communal runts**. These runts cannot perform heavy labor, but ensure each **Player** can always lead at least a **Size 1 Runt Mob (1d6)** on a raid, even if the **Gobbo Pool** is reduced to 0d6.
+*   **Vacant Nest Growth:** During Homecoming, if the total **Gobbo Pool** is under **3d6 per Player** (e.g., under 9d6 in a 3-player game), the Lair automatically recruits **1d6** to the pool for free as wild runts move into empty nests.
 
----
+### Threat Level (The Outside World Clock)
+**Threat Level** is a track rated from **0 to 5** representing regional alert:
+*   **0–1 (Quiet):** The outside world assumes you are minor pests.
+*   **2–3 (Guarded):** Local human towns and dwarven patrols double their watch; dungeons in the region gain +1 hazard.
+*   **4 (Hunted):** Search parties scour the wilderness; Lair complications gain a **Bane**.
+*   **5 (Retaliatory Assault!):** The enemy launches an immediate military assault against the Lair. Players must defend the base using their **Mobs** and defenses. After resolving the defense, **Threat Level** resets to 2.
 
-## Labor & Lair Actions
+### Swarm Mood (Morale & Mutiny)
+**Swarm Mood** is a track rated from **0 to 5** representing goblin discipline and contentment:
+*   **0–1 (Eager):** Grunts are inspired; all **Players** add **+1 die** to the communal **Bangaranga Pool** at the start of the next raid.
+*   **2–3 (Grumbly):** Standard goblin squabbling; failed orders during raids cause immediate morale checks.
+*   **4 (Restless):** Grunts demand extra food or loot; recruitment tests suffer a **Bane**.
+*   **5 (Mob Mutiny!):** Grunts refuse to embark on raids without upfront bribes (**5 Loot** per **Mob**). Internal brawls break out, locking one random Lair facility until resolved.
 
-During the Labor step of the [[Lair Phase]], players assign their available **Laborer Dice** to various tasks. To resolve these tasks, roll the assigned [[dice pool]]. Standard [[exploding dice]] rules apply (every 6 explodes into an additional die). Successes are **4, 5, or 6**.
-
-### Lair Tasks
-*   **Gathering Scrap:** Assign any number of Laborer dice and roll them. Every success (**4+**) generates 1 [[Scrap]] for the Hoard.
-*   **Scouting Locations:** Assign Laborer dice to survey your next target location. Successes (**4+**) reveal Danger Ratings, Main Objectives, and Targets of Opportunity (see [Raid Points & Scouting](05_Raid%20points.md)).
-*   **Recruiting Gobbos:** Assign any number of Laborer dice to go out and capture or bribe wild runts. Roll them. Every **6** rolled (exploding!) permanently adds **1d6** to the Lair's **Gobbo Pool** (up to the Lair Cap).
-    *   *Boss Assist:* A Boss can spend their personal Lair action to lead the recruiters, adding their [[Mouth]] stat as bonus dice to the roll.
-    *   *Bribes:* Spend 5 [[Loot]] from the Hoard to buy shiny junk, granting a **Boon (+1d6)** to the recruitment roll.
-*   **Clearing Slots:** Assign Laborer dice to an unexplored or blocked slot. Each success (**4+**) adds 1 progress toward clearing it. (See Lair Expansion below).
-*   **Crafting [[Custom Gear]]:** See [Crafting & Custom Gear](34_Crafting.md) for details. Crafting requires [[Brains]] and a Workshop, and consumes 1 **Laborer die** to operate.
-
-### Building the Engine (Guaranteed Successes)
-While rolling dice is chaotic and fun, players can invest Loot and Scrap to upgrade Lair rooms, transforming the Lair into a self-sustaining engine. Upgrades grant **guaranteed successes** or **automatic growth** that bypasses the dice roll:
-
-*   **Breeding Pits:** Automatically generates **1d6** new Gobbos to the pool every Lair Turn for free (up to the Lair Cap), without requiring a recruitment roll. Upgrading to Tier 2 Breeding Pits generates **2d6** per turn.
-*   **Mud Tavern:** Grants **1 guaranteed success** on all active Recruitment rolls (meaning you always recruit at least 1 Gobbo, plus whatever you roll).
-*   **Scrap Collector Yard:** Passively generates 2 [[Scrap]] every Lair Turn (no dice roll required).
-*   **Dwarven Forge:** Grants **1 guaranteed success** (1 [[Taming]] success) to all Crafting rolls performed in the Lair.
-
----
-
-## Lair Expansion (Clear & Build)
-
-Every Lair has a layout of **Slots**. Initially, only a few slots are open. The rest are Locked (blocked by cave-ins, ruins, or thick briars).
-
-To unlock a Slot, players must pay its **Scrap Cost** and assign at least 1 **Laborer die** to clear it.
-1.  **Guaranteed Clearance:** The slot is always successfully cleared when its target progress (e.g., 5 successes) is met.
-2.  **The Clear Roll:** When a Slot is cleared, the active player rolls **1d6** for complications:
-    *   **6 (Lucky Find):** The workers uncover a hidden stash. Gain **+1d6 Loot** or a random Tier 1/2 [[Oddity]].
-    *   **2–5 (Smooth Work):** The slot is cleared without incident.
-    *   **1 (Goblin Complication):** The slot is cleared, but something goes wrong. The GM rolls on the Site-specific Complication table.
-
-### Lair Site Types
-At campaign start, players choose one of three Lair Site Types, which dictates their layout and complication table:
-
-#### The Caverns (Underground)
-*   **Theme:** Digging out rock.
-*   **Complication (1):** **Cave-in!** A laboring Gobbo is crushed. Remove **1d6** from the Gobbo Pool for the next Lair Turn (they are in the medical tent).
-
-#### The Feral Camp (Wilds)
-*   **Theme:** Clearing thick swamp, forest, or jungle.
-*   **Complication (1):** **Beast Attack!** Disturbed wild fauna attacks. The Lair takes a [[Bane]] on all Lair Actions next turn unless players spend 5 [[Loot]] to buy meat to distract the beasts.
-
-#### The Ruined Keep (Structures)
-*   **Theme:** Restoring crumbled stone halls and cellars.
-*   **Complication (1):** **Ancient Wards!** An old magical trap triggers. The noise and magic increase Lair Alert by **+1** and inflict a [[Bane]] on the next Lair Event roll.
+### The Bone Pile (Ancestral Legacy)
+The **Bone Pile** is an ancestral memorial of dead **Bosses**:
+*   Every dead **Boss** adds **1 Skull** to the Bone Pile track.
+*   **Ancestral Boons:** Every **4 Skulls** marked unlocks a permanent, Lair-wide ancestral perk (e.g., *Ancestral Grudge:* +1d attack against the faction that killed the most Bosses; *Haunted Warrens:* enemies suffer a **Bane** when attacking the Lair).
+*   **Relic Forging:** A **Boss** may harvest a skull or bone from the Bone Pile to craft a unique **Relic** (see Crafting rules).
 
 ---
 
-## The Communal Hoard & Dominance
+## 2. The Lair Phase (Sequence of Downtime)
 
-Goblins cooperate because they must, but they are greedy by nature. The Lair's resources are stored in the **Communal Hoard**, but tracked via **The Ledger** to determine [[Dominance]].
+The **Lair Phase** resolves in a strict 4-step sequence lasting 10–15 minutes between raids:
+
+`
+┌─────────────────────────────────────────────────────────────────────────┐
+│                       SEQUENCE OF THE LAIR PHASE                        │
+├─────────────────────────────────────────────────────────────────────────┤
+│ STEP 1: HOMECOMING & TALLY                                              │
+│ • Deposit extracted Loot and Scrap into the Communal Hoard.             │
+│ • Record dead Bosses on the Bone Pile; surviving Mobs auto-heal.        │
+│ • Check Vacant Nest Growth (if Gobbo Pool is below baseline).           │
+│                                                                         │
+│ STEP 2: THE LAIR PULSE & COMPLICATION                                   │
+│ • Evaluate Threat Level and Swarm Mood.                                 │
+│ • The GM rolls once on the Lair Complications Table.                    │
+│                                                                         │
+│ STEP 3: LABOR ALLOCATION & PASSIVE RESOLUTION                           │
+│ • Harvest passive yields from active Facilities and Outposts.           │
+│ • Assign remaining Laborer Dice (Choose Safe 2-Dice or Risky 1-Die).    │
+│                                                                         │
+│ STEP 4: BOSS DOWNTIME ACTIONS & FORGING                                 │
+│ • Each Boss takes ONE Downtime Action (Craft, Pitch, Brawl, Scout).     │
+│ • Re-calculate Dominance for newly built or upgraded Assets.           │
+└─────────────────────────────────────────────────────────────────────────┘
+`
+
+### Step 1: Homecoming & Tally
+1.  **Tally Wealth:** Transfer all **Loot Value** and **Scrap** gathered during the raid into the **Communal Hoard**.
+2.  **Mourn the Dead:** Add all dead **Bosses** to the **Bone Pile**. Generate successor **Bosses** with starting **Successor XP** equal to **Infamy × 4** (see [12_Gang.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md)).
+3.  **Recover Mobs:** Surviving **Mobs** with $\ge 1$ health die auto-heal to their full allocated **Size**. Wiped **Mobs** are erased from the **Gobbo Pool**.
+
+### Step 2: The Lair Pulse & Complications
+The **GM** rolls **1d66** on the **Lair Complications Table**. Complications test the security of captives, the health of elders, or the stability of the warren.
+
+### Step 3: Labor Allocation & Operations
+1.  **Passive Operations:** Collect all automatic yields from active assets (e.g., Scrap Yards generating passive Scrap, Breeding Pits generating Runts).
+2.  **Labor Allocation:** Players assign their available **Laborer Dice** (Gobbo Pool - Raider Mobs) to tasks:
+    *   **Scavenging Scrap:** Generates raw **Scrap** for the Hoard.
+    *   **Recruiting Runts:** Captures wild goblins to expand the **Gobbo Pool** permanently (up to the Tier cap).
+    *   **Scouting Targets:** Surveys upcoming raid sites to reveal **Zone Profiles**, hazards, and hidden objectives.
+    *   **Excavating Projects:** Completes construction requirements for new facilities.
+
+>> **THE WORKER ALLOCATION RULE: SAFE VS. PUSH**
+>> When assigning Laborer Dice to a task, players choose how to commit their workforce:
+>> * **Safe Labor (2 Dice):** Guarantees **1 automatic success**. No dice rolled; instant resolution with zero risk.
+>> * **Risky Push (1 Die):** Roll **1d6** (Standard Gobbos test: **4+ = 1 success**, **6s explode**). However, rolling a **1** triggers a minor job complication (a runt gets injured, placing 1 die in the medical tent for 1 turn).
+
+### Step 4: Boss Downtime Actions
+Each active **Boss** takes **one** personal Downtime Action:
+*   **The Pitch (Mouth Test):** Address the swarm to lower mutiny. Pass a **Mouth 4+/1** test to reduce **Swarm Mood by 1**. (Alternatively, spend **5 Loot** from the Hoard to buy a round of grog, automatically lowering Swarm Mood by 1 with no roll).
+*   **Laying Low (Slink Test):** Lead scouts to silence human patrols and wipe tracks. Pass a **Slink 4+/1** test to reduce **Threat Level by 1**. (Alternatively, spend **5 Loot** to bribe local corrupt watchmen).
+*   **Custom Crafting (Brains Test):** Operate a workshop to forge or modify weapons and armor using **Scrap** and **Oddities** (see [34_Crafting.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/03_Loot/34_Crafting.md)).
+*   **The Skim (Slink Test):** Attempt to secretly divert **Loot** from the Communal Hoard into your **Gang's Private Hoard**. Pass a **Slink 4+/1** test to skim up to your **Slink** rating in **Loot**. If you roll any **1s**, you are caught: gain 0 Loot and increase **Swarm Mood by +1**.
+*   **Bar Brawl / Power Play (Tough or Mouth Test):** Challenge a rival Gang's **Dominance** over a Lair asset. Pass a **Tough 4+/1** test (physical brawl) or **Mouth 4+/1** test (screaming intimidation) to shift 1 point of contribution on that asset's ledger from the defender to your Gang.
+*   **Beast Taming (Brains or Tough Test):** Domesticate a captured wild creature. Pass a **Brains 4+/1** or **Tough 4+/1** test to attach a beast tag (e.g., [Wolf Mount], [Squig Hound]) to a **Mob**.
+
+---
+
+## 3. The Modular Asset Framework
+
+Knowledge in the Lair is not an abstract, permanent tech tree. **Knowledge is held by Persons, Facilities, Allies, and Physical Blueprints.** If a knowledge vessel is lost, killed, or escapes, the Lair immediately loses the ability to utilize that capability.
+
+`
+┌─────────────────────────────────────────────────────────────────────────┐
+│                       MODULAR LAIR ASSET TEMPLATE                       │
+├─────────────────────────────────────────────────────────────────────────┤
+│ [ASSET NAME]                                       [TYPE]  [TIER (1–4)] │
+├─────────────────────────────────────────────────────────────────────────┤
+│ • BOON (Mechanical Effect):   [Unified Power Modification Block]        │
+│ • BANE (The Goblin Catch):    [Unified Cost / Risk / Flight Block]      │
+│ • DOMINANCE KICKBACK:         [Perk for Controlling Gang]               │
+└─────────────────────────────────────────────────────────────────────────┘
+`
+
+### The 4 Asset Types
+1.  **[Person] (Elders, Specialists, Captives):** Living experts.
+    *   *Elders:* Retired Level 6 Bosses. High loyalty, but frail (vulnerable to age complications).
+    *   *Specialists:* Hired or rescued non-goblin outcasts. Require weekly **Loot Upkeep**; leave if unpaid.
+    *   *Captives:* Enslaved enemies (Dwarves, Humans, Elves). Provide elite knowledge, but carry high **Flight Risk** and increase **Threat Level**.
+2.  **[Facility] (Workshops, Dens, Barricades):** Physical structures built using **Loot** and **Scrap**.
+3.  **[Ally] (Befriended Monsters, Patron Factions):** External creatures living alongside the horde. Powerful, but cause social friction or demand meat.
+4.  **[Blueprint] (Physical Schematics, Stolen Scrolls):** Physical items stored in the Hoard. Fragile; destroyed if hit by fire or water complications.
+
+### Core Rules Governing Assets
+1.  **The Non-Stacking Clause:** Lair Boons of the identical mechanical type do not stack. A **Mob** can only receive a maximum of **+1 passive Defense Die** from the Lair, regardless of how many armories or martial Elders are present.
+2.  **Guaranteed Successes in Crafting:** An asset providing +1 Guaranteed Taming Success reduces the required Bite threshold on craft rolls. If a crafter still rolls dice for remaining Bite, **any 1s rolled on the actual dice still generate Chaos as normal.**
+3.  **Loss of Knowledge:** If an asset is lost (an Elder dies, a captive escapes, or a blueprint burns), any associated capability is disabled immediately until a replacement asset is acquired.
+
+---
+
+## 4. Dominance & Inter-Gang Politics
+
+The Lair belongs to all goblins, but individual assets are claimed by specific Gangs through **Dominance**.
 
 >> **THE GOLDEN RULE OF DOMINANCE:**
->> Da Lair belongs to everyone, but if my Gang dragged back da most shiny rocks to build da Blacksmith, den my Gang gets to skip da line when we want swords made. Dat's just fair.
+>> Da Lair belongs to everyone, but if my Gang dragged back da heavy iron beams to build da Scrap Forge, my Gang gets da sharpest swords first. Dat's just fair.
 
-### Dominance Mechanics
-1.  **Contributions:** When building or upgrading a room, players contribute Loot and Scrap. The GM records which Gang contributed the most resources (or dedicated the most Laborer dice) to that room.
-2.  **Claiming Dominance:** The Gang with the highest contribution gains [[Dominance]] over that room.
-3.  **Dominance Benefits:**
-    *   **Renaming Rights:** The dominant Gang names the room (e.g., *"The Smelly-Feet Brewery"*).
-    *   **Priority Use:** If multiple players want to use the room in the same turn, the dominant Gang goes first.
-    *   **Specialty Kickback:** The room grants a passive bonus exclusive to the dominant Gang.
-        *   *Example (Proper Smithy):* The dominant Gang's Boss gets a free **[[Taming]] Success** when crafting weapons here.
-        *   *Example (Brewery Cavern):* The dominant Gang's Mobs gain **+1 Grit** when fueled by the special reserve brew.
+### Claiming Dominance
+1.  **The Ledger:** When building, capturing, or upgrading an asset, players record the total **Loot**, **Scrap**, and **Laborer Dice** contributed by their specific **Gang**.
+2.  **Dominant Gang:** The **Gang** with the highest cumulative contribution holds **Dominance** over that asset.
+3.  **Ties & Disputes:** If two Gangs are tied, the asset is *Disputed* (neither receives the kickback) until one Gang invests at least 1 additional point of **Loot** or **Scrap**, or wins a **Bar Brawl** Downtime Action.
 
----
-
-## Populating the Lair: Elders & NPCs
-
-The Lair is empty and useless without people running the facilities. Rooms must be staffed to unlock their functions.
-
-```
-                  ┌───────────────────────────┐
-                  │      LAIR POPULATION      │
-                  └─────────────┬─────────────┘
-                                │
-        ┌───────────────────────┼───────────────────────┐
-        ▼                       ▼                       ▼
- ┌─────────────┐         ┌─────────────┐         ┌─────────────┐
- │   ELDERS    │         │ SPECIALISTS │         │  CAPTIVES   │
- │ Retired PCs │         │ Hired/Saved │         │ Dragged In  │
- └─────────────┘         └─────────────┘         └─────────────┘
-```
-
-### 1. Elders (Retired Bosses)
-When a player Boss reaches Max Level (Level 6 in any stat) or suffers too many permanent injuries, they can [[Retire]]. 
-*   **The Transition:** The retired Boss becomes a permanent **Elder NPC** on the Lair sheet. The player rolls a new Level 1 Boss.
-*   **Staffing:** Assigning an Elder to run a Lair room unlocks its advanced functions.
-    *   *Example:* An Elder placed in the **Training Grounds** unlocks high-tier [[Quirk|Quirks]] that other players can pay Loot to learn.
-
-### 2. Specialist NPCs
-Specialists are friendly (or highly bribable) experts recruited during raids or random events.
-*   **The Pig-Whisperer:** Staffs the Pig Sties. Unlocks pig-riding skirmishers.
-*   **The Scrap-Shaman:** Staffs the Scrap Yard. Passively generates **+2 Scrap** every Lair Turn.
-
-### 3. Captives (Forced Labor)
-During raids, players can kidnap human, elven, or dwarven NPCs and drag them back to the Lair.
-*   **The Prisoner Cage:** A Lair room required to house Captives.
-*   **Labor:** Captives can be forced to work in workshops to provide free successes, but they increase the chance of negative **Lair Events** (sabotage, escape attempts).
+### Dominance Benefits
+*   **Renaming Rights:** The dominant Gang names the asset (e.g., *"Snikt's Exploding Forge"*).
+*   **Priority Access:** The dominant Gang acts first whenever facility usage is contested during a turn.
+*   **Dominance Kickback:** The dominant Gang exclusively gains the asset's specific **Dominance Perk**.
 
 ---
 
-## Outposts & Trade Routes
+## 5. Sample Asset Directory
 
-As the Lair's [[Infamy]] grows, the Gobbos can expand their territory, establishing a network of outposts to feed the Lair's engine.
+The following sample assets illustrate how the unified modular framework is implemented:
 
-```
-       [Lumber Outpost]
-              \ (Trade Route: Wilds)
-               \
-                v
-          [THE LAIR] <=========> [Dwarven Mine Outpost]
-                        (Trade Route: High Risk)
-```
+### Industry & Scrap
 
-### 1. Establishing an Outpost
-If the players clear an external location during a raid (e.g., an abandoned mine, a human lumber mill), they can choose to establish an **Outpost** instead of just looting and leaving.
-*   **Garrison Cost:** The players must leave one of their Mobs behind as a permanent garrison. This temporarily reduces the Lair's total Gobbo Pool by the size of that Mob.
-*   **Yield:** The Outpost generates a specific resource yield every turn (e.g., +5 Scrap from the Mine, +3 Loot from a toll-road).
+#### The Scrap Forge
+*   **Type:** [Facility: Industry] (Tier 2)
+*   **Build Cost:** 10 Loot, 15 Scrap.
+*   **Boon:** [Quality Unlock: Standard Gear] + [+1 Guaranteed Taming Success on Weapon Crafting].
+*   **Bane:** [Volatile: Crafting rolls containing any 1s inflict 1 Grit damage to the crafter].
+*   **Dominance Kickback:** The dominant Gang crafts weapons for 0 base Scrap chassis cost.
 
-### 2. Trade Routes & Supply Runs
-To get the Outpost's yield back to the Lair, you must maintain a **Trade Route**. Trade routes are rated by danger: **Safe**, **Wilds**, or **High Risk**.
-During the [[Lair Phase]], the players make a **Supply Roll** for each active trade route:
-*   **Safe Route:** Auto-success. The resources arrive safely in the Hoard.
-*   **Wilds Route:** Roll **1d6**. On a **1–2**, the shipment is ambushed. Gobbos must spend a Mob action to rescue it, or lose the shipment.
-*   **High Risk Route:** Roll **2d6**. Needs a success (**4+**) to get through. Fumbles (all 1s) mean the Outpost is besieged and must be defended in a combat encounter.
-*   **Smuggler Pact:** Players can spend 5 [[Loot]] to hire a merchant guild to run the route. This turns a *High Risk* route into a *Safe* route, but the guild takes a 20% cut of the yield.
+#### Brokk the Iron-Breaker
+*   **Type:** [Person: Captive] (Tier 3)
+*   **Boon:** [Quality Unlock: Superior Gear] + [Bite Reduction: -1 to all crafted metal gear].
+*   **Bane:** [Flight Risk: Escapes on roll of 1 during Lair Events] + [Heat Magnet: +1 Threat Level per week].
+*   **Dominance Kickback:** The dominant Gang gains **+1 free Oddity Slot** on all custom weapons crafted under Brokk.
+
+#### Junkyard Sifter
+*   **Type:** [Facility: Industry] (Tier 1)
+*   **Build Cost:** 5 Loot, 10 Scrap.
+*   **Boon:** [Passive Yield: +2 Scrap] added to the Hoard at the start of every Lair Turn.
+*   **Bane:** [Fragile: Shuts down for 1 turn if the Lair suffers a complication].
+*   **Dominance Kickback:** Dominant Gang claims 1 free piece of mundane gear per raid.
 
 ---
 
-<a id="doc-24"></a>
+### Swarm & Beasts
+
+#### Spore Breeding Nursery
+*   **Type:** [Facility: Swarm] (Tier 2)
+*   **Build Cost:** 10 Loot, 20 Scrap.
+*   **Boon:** [Passive Yield: +1d6 Runts] added to the **Gobbo Pool** at the start of every Lair Turn (up to Tier cap).
+*   **Bane:** [Fungal Rot: If Swarm Mood is 4+, rolls of 1 on Lair Events spoil 5 Loot worth of food/supplies].
+*   **Dominance Kickback:** The dominant Gang gets first pick of recruits, raising their commanded Mob's **Size cap by +1**.
+
+#### Wolf Breeding Pit
+*   **Type:** [Facility: Beasts] (Tier 2)
+*   **Build Cost:** 15 Loot, 20 Scrap.
+*   **Boon:** [Mob Archetype Unlock: [Wolf Mount]] (Increases Mob Movement by +1 Zone and grants +1 success on charge attacks).
+*   **Bane:** [Hungry Beasts: Requires spending 1 Laborer Die each turn to hunt meat, or wolves eat 1d6 Runts].
+*   **Dominance Kickback:** The dominant Gang mounts their Mobs for 0 Hoard cost.
+
+#### Uncle Mordred (Swamp Necromancer)
+*   **Type:** [Ally: Outcast] (Tier 4)
+*   **Boon:** [Passive Labor: +2d6 Undead Laborers] added to the Lair workforce. Undead laborers never die from job complications.
+*   **Bane:** [Creepy Stench: Swarm Mood increases by +1] + [Upkeep Tax: Demands 2 Loot per week].
+*   **Dominance Kickback:** The dominant Gang gains 1 free Zombie Bodyguard on raids.
+
+---
+
+### Martial & Security
+
+#### Old Snikt (Elder of Tough)
+*   **Type:** [Person: Elder] (Tier 3)
+*   **Boon:** [Mob Armor Grant: +1 passive Defense Die] to all commanded friendly Mobs.
+*   **Bane:** [Frail & Cranky: Must be protected during Lair attacks; dies on a roll of 1 during health complications].
+*   **Dominance Kickback:** Snikt's Gang gains +1 Grunt command cap.
+
+#### Trapped Palisade & Murder Holes
+*   **Type:** [Facility: Defense] (Tier 2)
+*   **Build Cost:** 5 Loot, 25 Scrap.
+*   **Boon:** [Base Defense: Roll 3d6 defensive damage] against attackers during retaliatory Lair assaults.
+*   **Bane:** [Accidental Trigger: Rolls of 1 on labor tests near the gate deal 1 Wound to a working runt].
+*   **Dominance Kickback:** Dominant Gang's personal quarters cannot be looted in a siege.
+
+---
+
+## 6. Lair Complications (The Event Table)
+
+During Step 2 of the Lair Phase, roll **1d66** on the table below:
+
+| d66 | Event Name | Event Effect & Resolution |
+| :--- | :--- | :--- |
+| **11–13** | **Tunnel Cave-In** | A work passage collapses. Lose **1d6 Scrap** from the Hoard, or assign 2 Laborer Dice to clear it. |
+| **14–16** | **Squig Rampage** | A captive beast breaks loose in the mess hall. A Boss must pass a **Tough 4+/1** test to wrestle it down, or lose **1d6 Runts** from the Gobbo Pool. |
+| **21–23** | **Captive Breakout!** | All [Person: Captive] assets attempt to escape. Roll 1d6 for each captive: on a **1–2**, they escape unless a Boss spends a Downtime Action to recapture them. |
+| **24–26** | **Elder Tantrum** | An Elder feels disrespected. Increase **Swarm Mood by +1** unless a Gang gives up **5 Loot** from their private stash to throw them a feast. |
+| **31–33** | **Human Scout Probe** | A ranger patrol spots smoke from the warren. Increase **Threat Level by +1** unless a Boss passes a **Slink 4+/1** test to ambush them. |
+| **34–36** | **Mushroom Rot** | Damp rot infects the nursery. The Lair loses all passive recruitment boons for this turn. |
+| **41–43** | **Wandering Outcast** | A weird specialist (e.g., Kobold Sapper, Swamp Witch) visits the Lair. Pay **5 Loot** to recruit them as an active [Ally] asset. |
+| **44–46** | **Inter-Gang Turf War** | Grunts brawl over shiny scrap. The two Gangs with the highest Infamy must each lose **1d3 Mob Size** from their Gobbo Pool or fight a Boss **Bar Brawl**. |
+| **51–53** | **Stolen Shiny** | A clever runt unearths a hidden dungeon cache near the camp. Gain **+2d6 Loot** into the Communal Hoard. |
+| **54–56** | **Greedy Tax Collector** | Imperial tax collectors or rival Bugbear enforcers demand a cut. Pay **10 Loot** or increase **Threat Level by +2**. |
+| **61–65** | **Smooth Operations** | The warren is humming. All active Labor tasks gain a **Boon (+1d)** this turn. |
+| **66** | **Ancestral Miracle!** | The Bone Pile glows with green fire. Add **+1 free Skull** to the Bone Pile track and reset **Swarm Mood to 0**. |
+
+---
+
+## 7. Outposts & Macro-Territory
+
+When a raiding party secures an external dungeon or structure (e.g., an iron mine, ruined watchtower, abandoned brewery), the Gangs may declare it an **Outpost**.
+
+*   **Garrison Cost:** Deduct **1d6** permanently from the **Gobbo Pool** to man the Outpost.
+*   **Yield:** Generates a flat passive yield per turn (e.g., *Mine: +4 Scrap; Brewery: -1 Swarm Mood*).
+*   **Supply Run Check:** During Step 3 of the Lair Phase, roll for supply delivery:
+    *   *Safe Route (Close):* Automatic delivery.
+    *   *Wild Route (Distant):* Roll **1d6**. On a **1**, the shipment is intercepted by bandits; lose this turn's yield.
+    *   *Hostile Route (Near Enemy Fort):* Roll **2d6**. Needs at least one success (**4+**) to deliver. Rolling all 1s means the Outpost is besieged and must be relieved in a combat raid.
+
+---
+
+<a id="doc-27"></a>
 <!-- ============================================================ -->
-<!-- DOCUMENT 24: 01_STAGE_Drafts/07_Travel/00_Journey_Rules.md -->
+<!-- DOCUMENT 27: 01_STAGE_Drafts/07_Travel/00_Journey_Rules.md -->
 <!-- ============================================================ -->
 # Travel — Journey_Rules
 *Source: `01_STAGE_Drafts/07_Travel/00_Journey_Rules.md`*
@@ -3314,9 +4655,9 @@ These scenarios illustrate how roles, route tests, and travel events are resolve
 
 ---
 
-<a id="doc-25"></a>
+<a id="doc-28"></a>
 <!-- ============================================================ -->
-<!-- DOCUMENT 25: 01_STAGE_Drafts/08_Magic/00_Magic_Rules.md -->
+<!-- DOCUMENT 28: 01_STAGE_Drafts/08_Magic/00_Magic_Rules.md -->
 <!-- ============================================================ -->
 # Magic — Magic_Rules
 *Source: `01_STAGE_Drafts/08_Magic/00_Magic_Rules.md`*

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magic_and_Bangaranga — PROD Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. The official rulebook">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,500;0,700;0,800;1,700&family=Alegreya:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab env-tab--active">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right" style="display: flex; gap: 8px; align-items: center;">
+      <div class="llm-dropdown-container">
+        <button class="llm-btn" id="llmDropdownBtn" title="LLM Continuous Markdown Bundles" aria-label="LLM Bundles" aria-expanded="false">
+          <span>🤖 LLM Files</span>
+          <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="llm-dropdown-menu" id="llmDropdownMenu">
+          <div class="llm-dropdown-header">LLM HTML (Gemini / Web)</div>
+          <a href="all_llm.html" target="_blank" class="llm-dropdown-item">👑 Master All (Rules + Lore)</a>
+          <a href="rules_all_llm.html" target="_blank" class="llm-dropdown-item">📜 Combined Rules (PROD + STAGE)</a>
+          <a href="rules_stage_llm.html" target="_blank" class="llm-dropdown-item">🧪 STAGE Rules</a>
+          <a href="rules_prod_llm.html" target="_blank" class="llm-dropdown-item">📖 PROD Rules</a>
+          <a href="lore_all_llm.html" target="_blank" class="llm-dropdown-item">🔮 Combined Lore</a>
+          <a href="lore_stage_llm.html" target="_blank" class="llm-dropdown-item">📜 STAGE Lore</a>
+          <div class="llm-dropdown-divider"></div>
+          <div class="llm-dropdown-header">Raw Markdown & Index</div>
+          <a href="all_llm.md" target="_blank" class="llm-dropdown-item">📝 all_llm.md</a>
+          <a href="llms.txt" target="_blank" class="llm-dropdown-item">📋 /llms.txt Index</a>
+        </div>
+      </div>
+      <button class="sync-btn" id="headerSyncBtn" title="Sync & Rebuild Site" aria-label="Sync and rebuild site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sync-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Sync</span>
+      </button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">PROD Rules</h2>
+        <p class="sidebar-subtitle">The official rulebook</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="prod.html" class="nav-link" data-target="rules--dice">Dice</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="characters-and-mobs"><span class="toggle-icon">▸</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" style="display: none;"><li><a href="prod--characters-and-mobs--stats.html" class="nav-link" data-target="characters-and-mobs--stats">Stats</a></li></ul></div><div class="nav-group nav-group--solo"><a href="prod--core-resolution.html" class="nav-link nav-link--solo" data-target="core-resolution">Core_Resolution</a></div><div class="nav-group nav-group--solo"><a href="prod--boss-profile-and-gang.html" class="nav-link nav-link--solo" data-target="boss-profile-and-gang">Boss_Profile_and_Gang</a></div><div class="nav-group nav-group--solo"><a href="prod--action-economy-and-turn-flow.html" class="nav-link nav-link--solo" data-target="action-economy-and-turn-flow">Action_Economy_and_Turn_Flow</a></div><div class="nav-group nav-group--solo"><a href="prod--zones-and-movement.html" class="nav-link nav-link--solo" data-target="zones-and-movement">Zones_and_Movement</a></div><div class="nav-group nav-group--solo"><a href="prod--combat-engine.html" class="nav-link nav-link--solo" data-target="combat-engine">Combat_Engine</a></div><div class="nav-group nav-group--solo"><a href="prod--mob-mechanics.html" class="nav-link nav-link--solo" data-target="mob-mechanics">Mob_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="prod--damage-grit-and-wounds.html" class="nav-link nav-link--solo" data-target="damage-grit-and-wounds">Damage_Grit_and_Wounds</a></div><div class="nav-group nav-group--solo"><a href="prod--magic-and-bangaranga.html" class="nav-link nav-link--solo nav-link--active" data-target="magic-and-bangaranga">Magic_and_Bangaranga</a></div><div class="nav-group nav-group--solo"><a href="prod--the-raid-loop.html" class="nav-link nav-link--solo" data-target="the-raid-loop">The_Raid_Loop</a></div><div class="nav-group nav-group--solo"><a href="prod--the-lair-loop-and-progression.html" class="nav-link nav-link--solo" data-target="the-lair-loop-and-progression">The_Lair_Loop_and_Progression</a></div><div class="nav-group nav-group--solo"><a href="prod--journeys-and-hazards.html" class="nav-link nav-link--solo" data-target="journeys-and-hazards">Journeys_and_Hazards</a></div><div class="nav-group nav-group--solo"><a href="prod--adversaries-and-threats.html" class="nav-link nav-link--solo" data-target="adversaries-and-threats">Adversaries_and_Threats</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; align-items: center; justify-content: space-between; gap: 16px; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        <span>⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.</span>
+        <button class="sync-banner-btn" id="bannerSyncBtn">Rerun Sync</button>
+      </div>
+      <h1 id="magic-and-bangaranga" tabindex="-1">Magic and Bangaranga</h1>
+<p><em>Goblins do not study dusty, leather-bound grimoires in high towers. We shout words carved into mossy dungeon stones, crush glowing cavern mushrooms in our bare fists, and cling to raw cosmic lightning until our teeth rattle. If you are not risking a catastrophic explosion, you are not really casting.</em></p>
+<hr>
+<h2 id="1-the-pure-mechanical-casting-engine" tabindex="-1">1. The Pure Mechanical Casting Engine</h2>
+<p>Magic in Gobbos is unstable, highly tactile, and governed by a <strong>Push-Your-Luck (Farkle-style)</strong> pattern-matching dice engine. There are no mana points, spell slots, or daily casting limits. Magic is limited solely by your nerve, your <strong>Brains</strong> attribute, and the imminent danger of your head detonating.</p>
+<pre><code class="language-mermaid">flowchart TD
+    D[&quot;Declare Power Word Tag (1 Standard Action)&quot;] --&gt; R[&quot;Roll Brains Dice Pool (d6s)&quot;]
+    R --&gt; S1{&quot;At Least 1 Success?&quot;}
+    S1 --&gt;|No / 0 Successes| F1[&quot;Farkle Mishap!&lt;br&gt;(Catastrophic Backfire)&quot;]
+    S1 --&gt;|Yes| C{&quot;Choose Action&quot;}
+    C --&gt;|Settle| ST[&quot;SETTLE FOR TIER&lt;br&gt;(Lock matching set &amp; resolve effect)&quot;]
+    C --&gt;|Push| P[&quot;PUSH YOUR LUCK!&lt;br&gt;(Lock current successes, reroll non-success dice)&quot;]
+    P --&gt; S2{&quot;New Successes?&quot;}
+    S2 --&gt;|Yes| BS[&quot;Build Larger Set&lt;br&gt;(Push again or Settle)&quot;]
+    BS --&gt; C
+    S2 --&gt;|No / 0 New Successes| F2[&quot;Farkle Mishap!&lt;br&gt;(Spell Fails &amp; Backfires)&quot;]
+</code></pre>
+<h3 id="prerequisites-to-cast" tabindex="-1">Prerequisites to Cast</h3>
+<p>To channel the unstable currents of magic, a <strong>Goblin Boss</strong> must meet two mechanical requirements:</p>
+<ol>
+<li><strong>Brains Level 3+:</strong> You must possess at least <strong>Brains 3</strong> to unlock <strong>Power Word Slots</strong>. Characters with <strong>Brains 1</strong> or <strong>Brains 2</strong> have 0 slots and cannot cast magic.</li>
+<li><strong>Magical Conduit:</strong> You must possess a magic-focused <strong>Quirk</strong> (such as <em>Weirdo</em>, <em>Bone-Speaker</em>, or <em>Shaman</em>) or wield an active magical <strong>Oddity</strong> (such as a runic staff, crystal skull, or channeling wand).</li>
+</ol>
+<h3 id="power-word-slots-and-memorization" tabindex="-1">Power Word Slots and Memorization</h3>
+<p>Goblins do not learn rigid spells; they memorize <strong>Power Words</strong> represented by narrative <strong>Tags</strong> (e.g. <code>[Fire]</code>, <code>[Sticky]</code>, <code>[Shock]</code>, <code>[Spooky]</code>, <code>[Slip]</code>):</p>
+<ul>
+<li><strong>Brains Level 1–2:</strong> 0 Power Word Slots (Cannot cast).</li>
+<li><strong>Brains Level 3:</strong> <strong>2 Power Word Slots</strong>.</li>
+<li><strong>Brains Level 4:</strong> <strong>4 Power Word Slots</strong>.</li>
+<li><strong>Brains Level 5:</strong> <strong>6 Power Word Slots</strong>.</li>
+<li><strong>Tag Swapping:</strong> Swapping prepared <strong>Power Words</strong> in your slots takes place strictly in the <strong>Lair</strong> during the <strong>Lair Phase</strong> (see <a href="10_The_Lair_Loop_and_Progression.md">The Lair Loop &amp; Progression</a>). A character can attune to any Tag accessible through personal <strong>Quirks</strong>, carried <strong>Gear</strong>, or <strong>Lair Upgrades</strong>.</li>
+</ul>
+<hr>
+<h2 id="2-the-casting-step-by-step-procedure" tabindex="-1">2. The Casting Step-by-Step Procedure</h2>
+<p>Casting a spell costs <strong>1 Standard Action</strong>. When your <strong>Goblin Boss</strong> casts a spell, execute the following four steps:</p>
+<h3 id="step-1-declare-power-word" tabindex="-1">Step 1 — Declare Power Word</h3>
+<p>Announce the primary <strong>Tag</strong> being channeled from your memorized slots (e.g. <code>[Fire]</code>, <code>[Toxic]</code>, <code>[Teleport]</code>).</p>
+<h3 id="step-2-roll-brains-pool" tabindex="-1">Step 2 — Roll Brains Pool</h3>
+<p>Assemble a dice pool of <strong>d6s</strong> equal to your <strong>Brains</strong> attribute (plus any optional <strong>Bangaranga Dice</strong> drawn from the pool). Roll against the <strong>Difficulty</strong> set by the <strong>GM</strong> based on the target’s resistance or environmental warding:</p>
+<ul>
+<li><strong>Easy (4+):</strong> 4, 5, 6 are successes.</li>
+<li><strong>Normal (5+):</strong> 5, 6 are successes.</li>
+<li><strong>Hard (6):</strong> Only 6s are successes.</li>
+</ul>
+<blockquote>
+<blockquote>
+<p><strong>RULE: Exploding 6s in Magic</strong>
+Any <strong>6</strong> rolled on a regular die counts as 1 success and explodes, immediately adding +1 regular die to your un-locked pool. Any <strong>6</strong> rolled on a <strong>Bangaranga Die</strong> explodes twice (+2 regular dice).</p>
+</blockquote>
+</blockquote>
+<h3 id="step-3-lock-and-push" tabindex="-1">Step 3 — Lock and Push</h3>
+<p>To maintain the spell, the roll must generate at least <strong>one (1) success</strong>:</p>
+<ul>
+<li><strong>Settle:</strong> You choose to stop rolling. Immediately resolve the spell’s effect based on your current locked successes.</li>
+<li><strong>Push:</strong> You lock all current success dice and reroll all remaining non-success dice to hunt for matching faces and build higher-tier sets.</li>
+</ul>
+<h3 id="step-4-the-farkle-mishap" tabindex="-1">Step 4 — The Farkle (Mishap)</h3>
+<p>If you choose to <strong>Push</strong> your luck and a reroll yields <strong>zero (0) new successes</strong>, the spell collapses into a <strong>Farkle</strong>. The casting fails completely, no spell effect is produced, and you must immediately roll on the <strong>Spell Mishap</strong> table corresponding to the spell’s category.</p>
+<hr>
+<h2 id="3-resolving-spell-tiers-and-potency" tabindex="-1">3. Resolving Spell Tiers and Potency</h2>
+<p>The mechanical potency and area of effect of a spell are determined strictly by the size of the <strong>largest matching set of success dice</strong> (e.g. two 5s, three 6s, four 4s).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Matching Set Size</th>
+<th style="text-align:left">Spell Tier</th>
+<th style="text-align:left">Delivery Footprint &amp; Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Single Success (No Pairs)</strong></td>
+<td style="text-align:left"><strong>T1 (Minor)</strong></td>
+<td style="text-align:left">Touch / Melee (1 Success / 1 Damage)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Pair (2-of-a-kind)</strong></td>
+<td style="text-align:left"><strong>T2 (Standard)</strong></td>
+<td style="text-align:left">Ranged 1 Zone (2 Successes / 2 Damage)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Triple (3-of-a-kind)</strong></td>
+<td style="text-align:left"><strong>T3 (Heroic)</strong></td>
+<td style="text-align:left">Zone-Wide Area (3 Successes / 3 Damage)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Quadruple (4-of-a-kind)</strong></td>
+<td style="text-align:left"><strong>T4 (Blast)</strong></td>
+<td style="text-align:left">Multi-Zone Blast (4 Successes / 4 Damage)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Quintuple (5-of-a-kind)</strong></td>
+<td style="text-align:left"><strong>T5 (Legendary)</strong></td>
+<td style="text-align:left">Map-Wide Reality Warp / Annihilation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-five-spell-tiers" tabindex="-1">The Five Spell Tiers</h3>
+<ul>
+<li><strong>T1 Effect (Single Success, No Pairs):</strong> Minor or niche manifestation. Inflicts 1 Grit/Size damage or grants +1 Success to an immediate physical action. Range: Touch / Melee.</li>
+<li><strong>T2 Effect (Pair / 2-of-a-kind):</strong> Standard tactical magic. Inflicts 2 Grit/Size damage or applies a sustained condition to 1 target. Range: Ranged (1 Zone).</li>
+<li><strong>T3 Effect (Triple / 3-of-a-kind):</strong> Heroic area magic. Inflicts 3 Grit/Size damage or applies a persistent condition across an entire <strong>Zone</strong>. Range: Zone-Wide.</li>
+<li><strong>T4 Effect (Quadruple / 4-of-a-kind):</strong> Destructive blast magic. Inflicts 4 Grit/Size damage or applies severe environmental hazards across the target Zone and all adjacent Zones. Range: Blast Area.</li>
+<li><strong>T5 Effect (Quintuple / 5-of-a-kind):</strong> Legendary encounter-scale catastrophe. Wipes out standard enemy swarms, collapses large structures, or permanently alters the battlefield topology.</li>
+</ul>
+<h3 id="potency-singleton-successes" tabindex="-1">Potency (Singleton Successes)</h3>
+<p>If you roll multiple successes that do not form matching pairs (for example, rolling <code>[4, 5, 6]</code> on an Easy 4+ test), the spell resolves as a <strong>T1 Effect</strong>. However, every success beyond the first provides <strong>Potency</strong>. For each point of Potency, choose one:</p>
+<ul>
+<li><strong>Extra Target:</strong> Strike 1 additional enemy in the delivery area.</li>
+<li><strong>Bonus Magnitude:</strong> Add <strong>+1 Damage</strong> (against Grit or Mob health dice) or <strong>+1 Success</strong> to the spell’s resolution.</li>
+</ul>
+<blockquote>
+<p><strong>Example:</strong> A caster with <strong>Brains 5</strong> casts <code>[Shock]</code> against a <strong>5+</strong> profile.</p>
+<ul>
+<li><strong>First Roll:</strong> <code>[5, 5, 3, 2, 1]</code> -&gt; The caster locks the two <code>5</code>s (a pair -&gt; <strong>T2 Effect</strong>).</li>
+<li><strong>The Push:</strong> The caster wants a zone-wide lightning blast. The two <code>5</code>s remain locked, and the caster rerolls the <code>[3, 2, 1]</code>.</li>
+<li><strong>Second Roll:</strong> <code>[5, 6, 2]</code> -&gt; The roll yields a new <code>5</code> and an exploding <code>6</code>. The caster locks both. The pool now contains three <code>5</code>s (a triple -&gt; <strong>T3 Effect</strong>) plus one singleton <code>6</code> (providing <strong>1 Potency</strong>).</li>
+<li><strong>Final Resolution:</strong> The caster stops. The spell unleashes a <strong>T3 Zone-Wide</strong> shockwave dealing 3 damage to all enemies in the target Zone, plus +1 damage to the enemy commander from the Potency die.</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="4-chaotic-leakage-side-effects" tabindex="-1">4. Chaotic Leakage (Side Effects)</h2>
+<p>Channeling magical energy without precision causes raw power to bleed into the environment. Sets formed by <strong>non-success dice</strong> (dice faces falling below the success threshold) represent <strong>Chaotic Leakage</strong>:</p>
+<ul>
+<li><strong>Pair of Non-Successes:</strong> Triggers a <strong>T2 Side Effect</strong>.</li>
+<li><strong>Triple of Non-Successes:</strong> Triggers a <strong>T3 Side Effect</strong>.</li>
+<li><strong>Quadruple+ of Non-Successes:</strong> Triggers a <strong>T4 Side Effect</strong>.</li>
+</ul>
+<blockquote>
+<blockquote>
+<p><strong>GOLDEN RULE: Hard Difficulty Volatility</strong>
+On <strong>Hard (6)</strong> casting tests, non-6 faces are non-successes. Hard casts naturally produce large non-success pools, making <strong>Chaotic Leakage</strong> almost guaranteed unless the caster takes the risk to <strong>Push</strong> and convert those non-successes into successes.</p>
+</blockquote>
+</blockquote>
+<hr>
+<h2 id="5-standardized-mishap-and-side-effect-tables" tabindex="-1">5. Standardized Mishap and Side Effect Tables</h2>
+<p>When resolving <strong>Chaotic Leakage</strong> or a <strong>Farkle Mishap</strong>, locate the table matching your <strong>Power Word’s</strong> category:</p>
+<h3 id="category-1-elemental-and-physical" tabindex="-1">Category 1: Elemental &amp; Physical</h3>
+<p><em>(Tags: <code>[Fire]</code>, <code>[Sticky]</code>, <code>[Shock]</code>, <code>[Toxic]</code>, <code>[Acidic]</code>, <code>[Chilled]</code>, <code>[Slick]</code>)</em></p>
+<h4 id="elemental-side-effects-leakage" tabindex="-1">Elemental Side Effects (Leakage)</h4>
+<ul>
+<li><strong>T2 Leakage:</strong> The element coats the floor in your <strong>Zone</strong>. All movement into or out of the <strong>Zone</strong> suffers a <strong>Bane 1 (-1d)</strong> until the end of the round.</li>
+<li><strong>T3 Leakage:</strong> Sudden backfire. The caster suffers the corresponding <strong>T2 Condition</strong> (e.g. <strong>Weakened</strong> from <code>[Toxic]</code>, <strong>Restrained</strong> from <code>[Sticky]</code>, or 1 fire damage from <code>[Fire]</code>).</li>
+<li><strong>T4+ Leakage:</strong> A wild elemental vortex engulfs your <strong>Zone</strong>. Every creature in the <strong>Zone</strong> (friend and foe) immediately loses <strong>2 Grit</strong> (or suffers 2 damage to Mob health dice).</li>
+</ul>
+<h4 id="elemental-spell-mishap-farkle" tabindex="-1">Elemental Spell Mishap (Farkle)</h4>
+<ul>
+<li><strong>Mishap Outcome:</strong> The spell detonates violently in your hands. The spell fails completely. The caster loses <strong>2 Grit</strong>, and the occupied <strong>Zone</strong> gains a permanent hazardous terrain tag matching the element (e.g. <code>[Burning]</code> or <code>[Toxic]</code>).</li>
+</ul>
+<hr>
+<h3 id="category-2-mental-and-social" tabindex="-1">Category 2: Mental &amp; Social</h3>
+<p><em>(Tags: <code>[Spooky]</code>, <code>[Loud]</code>, <code>[Confusing]</code>, <code>[Angelic]</code>, <code>[Vile]</code>, <code>[Soporific]</code>)</em></p>
+<h4 id="mental-side-effects-leakage" tabindex="-1">Mental Side Effects (Leakage)</h4>
+<ul>
+<li><strong>T2 Leakage:</strong> Sensory overload. Your eyes glow and you speak in overlapping whispers. You cannot issue verbal commands or coordinate with your <strong>Mob</strong> until the end of your next turn.</li>
+<li><strong>T3 Leakage:</strong> Psychic backlash. All allies in your <strong>Zone</strong> suffer a <strong>Bane 1 (-1d)</strong> on their next action test.</li>
+<li><strong>T4+ Leakage:</strong> Mental fracture. The caster gains the <strong>Terrified</strong> or <strong>Dumb</strong> condition, fleeing from the nearest ally or enemy for 1 round.</li>
+</ul>
+<h4 id="mental-spell-mishap-farkle" tabindex="-1">Mental Spell Mishap (Farkle)</h4>
+<ul>
+<li><strong>Mishap Outcome:</strong> Your mind snaps under magical pressure. The spell fails, you black out until the end of the round (suffering the <strong>Stunned</strong> condition), and you suffer a <strong>Bane 1 (-1d)</strong> to all <strong>Brains</strong> tests until resting in the <strong>Lair</strong>.</li>
+</ul>
+<hr>
+<h3 id="category-3-movement-and-spatial" tabindex="-1">Category 3: Movement &amp; Spatial</h3>
+<p><em>(Tags: <code>[Slip]</code>, <code>[Elastic]</code>, <code>[Teleport]</code>, <code>[Fast]</code>, <code>[Bouncy]</code>, <code>[Weightless]</code>)</em></p>
+<h4 id="movement-side-effects-leakage" tabindex="-1">Movement Side Effects (Leakage)</h4>
+<ul>
+<li><strong>T2 Leakage:</strong> Gravitational wobble. The caster is violently yanked 1 <strong>Zone</strong> in a random direction and falls <strong>Prone</strong>.</li>
+<li><strong>T3 Leakage:</strong> Spatial swap. The caster and a random creature (friend or foe) in the same or adjacent <strong>Zone</strong> instantly swap physical positions.</li>
+<li><strong>T4+ Leakage:</strong> Dimensional phase. The caster becomes partially detached from reality, suffering a <strong>Bane 1 (-1d)</strong> on all physical tests (<strong>Tough</strong> and <strong>Slink</strong>) until combat ends.</li>
+</ul>
+<h4 id="movement-spell-mishap-farkle" tabindex="-1">Movement Spell Mishap (Farkle)</h4>
+<ul>
+<li><strong>Mishap Outcome:</strong> Catastrophic kinetic ejection. The spell fails. You are hurled through the air into an adjacent <strong>Zone</strong>, take <strong>2 Grit Damage</strong> from the physical impact, drop all carried hand gear, and land <strong>Prone</strong>.</li>
+</ul>
+<hr>
+<h2 id="6-bangaranga-integration-in-spellcasting" tabindex="-1">6. Bangaranga Integration in Spellcasting</h2>
+<p>A spellcaster can tap the communal <strong>Bangaranga Pool</strong> (see <a href="01_Core_Resolution.md">Core Resolution</a>) to supercharge their magical channeling:</p>
+<ul>
+<li><strong>Drawing Dice:</strong> Before rolling <strong>Step 2</strong>, you may take a number of <strong>Bangaranga Dice</strong> up to your <strong>Goblin Boss’s</strong> <strong>Grunt</strong> attribute and add them to your <strong>Brains</strong> casting pool.</li>
+<li><strong>The Bangaranga Tax:</strong> If the number of Bangaranga dice taken exceeds the test’s <strong>Target Number (TN)</strong>, <strong>1 extra die</strong> must be removed from the pool and discarded back to the box as a tax.</li>
+<li><strong>Double Explosions:</strong> Every <strong>6</strong> rolled on a <strong>Bangaranga Die</strong> counts as a success and <strong>explodes twice</strong>, immediately granting two additional regular dice to the casting pool.</li>
+<li><strong>Overreaching &amp; Drain Risk:</strong>
+<ul>
+<li>If a spell that used Bangaranga dice fails or suffers a <strong>Farkle</strong>, the caster loses <strong>1 Grunt</strong>.</li>
+<li>If the failed roll contains any <strong>1s</strong> (even after pushing luck), the <strong>Bangaranga Pool</strong> is drained, immediately discarding dice equal to the number of Bangaranga dice taken.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="7-ritual-casting-mechanics" tabindex="-1">7. Ritual Casting Mechanics</h2>
+<p>Ritual Magic represents extended, cooperative spellcasting used for monumental supernatural feats: purifying <strong><code>[Cursed]</code></strong> or <strong><code>[Bonded]</code></strong> oddities, warding the <strong>Lair</strong>, erecting permanent elemental barriers, or crafting magical artifacts.</p>
+<pre><code class="language-mermaid">flowchart TD
+    P[&quot;Assemble Pool:&lt;br&gt;Lead Caster (Brains 3+) + Mouth Assistants + Bangaranga&quot;] --&gt; R[&quot;Roll Pool against Normal (5+) Difficulty&quot;]
+    R --&gt; ACC[&quot;Accumulate Successes toward Ritual TN&quot;]
+    ACC --&gt; S{&quot;Successes &gt;= Ritual TN?&quot;}
+    S --&gt;|Yes| DONE[&quot;Ritual Complete!&lt;br&gt;(Curse Broken / Lair Warded / Item Crafted)&quot;]
+    S --&gt;|No| CHK{&quot;Any 1s Rolled?&quot;}
+    CHK --&gt;|Yes| COST[&quot;Material Attrition &amp; Leakage&lt;br&gt;(Lose 1 Scrap/Loot per 1 rolled or spawn T2 Hazard)&quot;]
+    CHK --&gt;|No| NEXT[&quot;Continue Ritual Working&quot;]
+    COST --&gt; NEXT
+    NEXT --&gt; R
+</code></pre>
+<h3 id="ritual-parameters" tabindex="-1">Ritual Parameters</h3>
+<ul>
+<li><strong>Time &amp; Scale:</strong> A ritual requires <strong>1 Lair Phase Turn</strong> in the <strong>Lair</strong> (or 3 consecutive, uninterrupted combat rounds during a raid).</li>
+<li><strong>Lead Caster:</strong> Must possess <strong>Brains 3+</strong> and the relevant <strong>Power Word</strong> Tag.</li>
+<li><strong>Assistants:</strong> Up to a number of goblins equal to the Lead Caster’s <strong>Mouth</strong> stat may assist. Each assistant contributes <strong>+1d</strong> to the ritual pool.</li>
+<li><strong>Communal Fuel:</strong> The Lead Caster may draw up to their <strong>Grunt</strong> in <strong>Bangaranga Dice</strong> to fuel the ritual.</li>
+</ul>
+<h3 id="extended-accumulation-engine" tabindex="-1">Extended Accumulation Engine</h3>
+<p>Rituals do not use the single-round Farkle loop. Instead, the Lead Caster rolls the assembled pool against <strong>Normal (5+)</strong> difficulty, accumulating successes across steps toward a <strong>Ritual Target Number</strong>:</p>
+<ul>
+<li><strong>Tier 3 Ritual (Cleansing Minor Curses / Basic Wards):</strong> Requires <strong>5 Accumulated Successes</strong>.</li>
+<li><strong>Tier 4 Ritual (Cleansing Bonded Relics / Fortress Wards):</strong> Requires <strong>8 Accumulated Successes</strong>.</li>
+<li><strong>Tier 5 Ritual (Major Reality Transmutation / Artifact Crafting):</strong> Requires <strong>12 Accumulated Successes</strong>.</li>
+</ul>
+<h3 id="ritual-complications-and-resource-attrition" tabindex="-1">Ritual Complications and Resource Attrition</h3>
+<p>Because rituals are grounded, stable workings, failing a single roll does not destroy accumulated successes:</p>
+<ul>
+<li><strong>The Cost of Failure:</strong> Every <strong>1</strong> rolled during a ritual step consumes extra resources: the party must immediately discard <strong>1 Scrap</strong> (or 1 Bulk of carried <strong>Loot</strong>) per 1 rolled, or suffer a <strong>T2 Chaotic Leakage Hazard</strong> in the ritual chamber.</li>
+<li><strong>Interruption:</strong> If the Lead Caster suffers unmitigated damage or gains the <strong>Stunned</strong> condition during the ritual, the working collapses, wasting all invested materials.</li>
+</ul>
+<hr>
+<h2 id="8-tag-effect-and-spell-structural-schema" tabindex="-1">8. Tag Effect and Spell Structural Schema</h2>
+<p>[CONTENT EXTENSION POINT: Magic Spells &amp; Tag Effects]</p>
+<p>All modular tag effects, living spell compendiums, and grimoire expansions must follow this formal structural schema:</p>
+<pre><code class="language-markdown">### [Spell / Tag Power Name]
+*   **Primary Tag:** `[Tag Name]` (e.g. `[Fire]`, `[Sticky]`, `[Shock]`, `[Spooky]`, `[Slip]`)
+*   **Tag Category:** [Elemental / Physical | Mental / Social | Movement / Spatial | Metaphysical]
+*   **Delivery Type:** [Personal | Touch / Melee | Ranged (1–3 Zones) | Zone-Wide | Blast]
+*   **Bangaranga / Action Cost:** 1 Standard Action (Optional: Draw up to Grunt in Bangaranga Dice)
+*   **Target Profile:** GM-set Difficulty (Easy 4+, Normal 5+, Hard 6) vs Target / Environment
+*   **Effect by Tier:**
+    *   **T1 (Single Success):** [Minor/Niche effect, +1 Success on attack OR 1 Grit/Size damage; Potency options]
+    *   **T2 (Pair / 2-of-a-kind):** [Standard effect, +2 Successes OR 2 Grit/Size damage; Sustained condition]
+    *   **T3 (Triple / 3-of-a-kind):** [Heroic / Zone-wide effect, +3 Successes OR 3 Grit/Size damage; Persistent condition]
+    *   **T4 (Quadruple / 4-of-a-kind):** [Destructive / Blast effect, +4 Successes OR 4 Grit/Size damage; Encounter condition]
+    *   **T5 (Quintuple / 5-of-a-kind):** [Legendary / Encounter-scale effect; Instant defeat OR permanent reality warp]
+*   **Chaotic Leakage (Side Effects):**
+    *   *Pair of Non-Successes (T2):* [Minor zone hazard, temporary Bane, or positioning wobble]
+    *   *Triple of Non-Successes (T3):* [Dangerous self-inflicted condition, friendly Bane, or spatial warp]
+    *   *Quadruple+ of Non-Successes (T4+):* [Zone-wide damage, severe condition, or dimensional fracture]
+*   **Farkle / Mishap Outcome:** [Catastrophic consequence triggered when a push yields zero new successes]
+*   **Element Synthesis Hooks:** [Predefined synergies when combined with other tags, e.g. `[Tag]` + `[Other]` -&gt; Result]
+</code></pre>
+<hr>
+<h2 id="9-mechanical-gaps-and-system-clarifications" tabindex="-1">9. Mechanical Gaps and System Clarifications</h2>
+<p>[MISSING RULE / GAP: Power Word slot progression is strictly bound to Brains Level 3+ (Level 3 = 2 slots, Level 4 = 4 slots, Level 5 = 6 slots). Any early draft reference to Brains 2 granting Power Word slots is deprecated; Brains 1 and 2 characters possess 0 slots and cannot cast magic.]</p>
+<p>[MISSING RULE / GAP: Ritual casting mechanics were previously absent from stage drafts despite multiple references to cleansing curses and warding lairs. The extended cooperative accumulation engine (Lead Caster + Assistants + Bangaranga vs TN 5/8/12) is the authoritative rule for non-combat extended magic.]</p>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- LLM Dropdown Toggle ---
+    (function() {
+      const btn = document.getElementById('llmDropdownBtn');
+      const menu = document.getElementById('llmDropdownMenu');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = menu.classList.toggle('show');
+        btn.setAttribute('aria-expanded', isOpen);
+      });
+
+      document.addEventListener('click', () => {
+        menu.classList.remove('show');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    })();
+
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'flex';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+
+    // --- Anchor Scroll Fix ---
+    (function() {
+      function scrollToHash() {
+        if (window.location.hash) {
+          const id = decodeURIComponent(window.location.hash.substring(1));
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }, 100);
+          }
+        }
+      }
+      window.addEventListener('hashchange', scrollToHash);
+      window.addEventListener('DOMContentLoaded', scrollToHash);
+      window.addEventListener('load', scrollToHash);
+    })();
+
+    // --- Manual Sync Trigger ---
+    (function() {
+      const headerBtn = document.getElementById('headerSyncBtn');
+      const bannerBtn = document.getElementById('bannerSyncBtn');
+      
+      function handleSync(btn) {
+        if (!btn) return;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        
+        // Add spinning/loading animation class
+        if (btn.classList.contains('sync-btn')) {
+          btn.classList.add('sync-btn--spinning');
+          btn.querySelector('span').textContent = 'Syncing...';
+        } else {
+          btn.textContent = 'Syncing...';
+        }
+        
+        fetch('/api/run-sync', { method: 'POST' })
+          .then(res => {
+            if (!res.ok) throw new Error('Server returned error status: ' + res.status);
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.status === 'success') {
+              if (btn.classList.contains('sync-btn')) {
+                btn.querySelector('span').textContent = 'Success!';
+              } else {
+                btn.textContent = 'Success!';
+              }
+              // Reload page to reflect changes
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              throw new Error(data.error || 'Sync failed');
+            }
+          })
+          .catch(err => {
+            console.error('Sync failed:', err);
+            alert('Failed to rerun sync: ' + err.message);
+            // Restore button
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            if (btn.classList.contains('sync-btn')) {
+              btn.classList.remove('sync-btn--spinning');
+            }
+          });
+      }
+
+      if (headerBtn) {
+        headerBtn.addEventListener('click', () => handleSync(headerBtn));
+      }
+      if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
+    })();
+  </script>
+
+  <!-- ===== Mermaid.js Integration ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    (function() {
+      function initMermaid() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        
+        const lightThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#f0e6d6',
+          primaryTextColor: '#231c16',
+          primaryBorderColor: '#8c2d19',
+          lineColor: '#c68a35',
+          secondaryColor: '#fdfbf7',
+          tertiaryColor: '#e5dcce',
+          edgeLabelBackground: '#faf5ec',
+          nodeBorder: '#8c2d19',
+          clusterBkg: '#eee5d5',
+          clusterBorder: '#c68a35',
+          titleColor: '#8c2d19'
+        };
+
+        const darkThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#241e1a',
+          primaryTextColor: '#e6dfd5',
+          primaryBorderColor: '#d44d32',
+          lineColor: '#d4a359',
+          secondaryColor: '#1a1613',
+          tertiaryColor: '#2a221c',
+          edgeLabelBackground: '#171412',
+          nodeBorder: '#d44d32',
+          clusterBkg: '#1c1815',
+          clusterBorder: '#8c6a38',
+          titleColor: '#d44d32'
+        };
+
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: 'base',
+          themeVariables: isDark ? darkThemeVariables : lightThemeVariables,
+          flowchart: {
+            curve: 'basis',
+            padding: 16,
+            nodeSpacing: 50,
+            rankSpacing: 40,
+            htmlLabels: true
+          },
+          securityLevel: 'loose'
+        });
+
+        // Convert code blocks with language-mermaid to <pre class="mermaid">
+        const mermaidCodeBlocks = document.querySelectorAll('pre > code.language-mermaid');
+        mermaidCodeBlocks.forEach((codeEl) => {
+          const preEl = codeEl.parentElement;
+          if (preEl && preEl.tagName === 'PRE') {
+            // Save raw mermaid source text if not already saved
+            if (!preEl.getAttribute('data-mermaid-src')) {
+              preEl.setAttribute('data-mermaid-src', codeEl.textContent);
+            }
+            const src = preEl.getAttribute('data-mermaid-src');
+            preEl.className = 'mermaid';
+            preEl.textContent = src;
+            preEl.removeAttribute('data-processed');
+          }
+        });
+
+        // Also handle any pre.mermaid that might need re-render on theme change
+        const directMermaidBlocks = document.querySelectorAll('pre.mermaid');
+        directMermaidBlocks.forEach((preEl) => {
+          if (!preEl.getAttribute('data-mermaid-src')) {
+            preEl.setAttribute('data-mermaid-src', preEl.textContent);
+          }
+          const src = preEl.getAttribute('data-mermaid-src');
+          preEl.textContent = src;
+          preEl.removeAttribute('data-processed');
+        });
+
+        if (document.querySelectorAll('.mermaid').length > 0) {
+          mermaid.run({
+            nodes: document.querySelectorAll('.mermaid')
+          }).catch(err => console.error('Mermaid render error:', err));
+        }
+      }
+
+      // Initial render on DOM load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMermaid);
+      } else {
+        initMermaid();
+      }
+
+      // Re-initialize mermaid when theme changes
+      const themeToggleBtn = document.getElementById('themeToggle');
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          setTimeout(initMermaid, 50);
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

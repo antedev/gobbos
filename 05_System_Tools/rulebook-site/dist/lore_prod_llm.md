@@ -2,7 +2,7 @@
 
 > **Gobbos TTRPG Consolidated Knowledge Document**
 > Contains the official, locked canon lore from LORE/03_PROD_Lore.
-> Generated on: 2026-08-22T12:00:08.533Z
+> Generated on: 2026-08-24T19:38:43.359Z
 > Total Chapters/Documents included: 1
 
 ---

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Damage_Grit_and_Wounds — PROD Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. The official rulebook">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,500;0,700;0,800;1,700&family=Alegreya:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab env-tab--active">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right" style="display: flex; gap: 8px; align-items: center;">
+      <div class="llm-dropdown-container">
+        <button class="llm-btn" id="llmDropdownBtn" title="LLM Continuous Markdown Bundles" aria-label="LLM Bundles" aria-expanded="false">
+          <span>🤖 LLM Files</span>
+          <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="llm-dropdown-menu" id="llmDropdownMenu">
+          <div class="llm-dropdown-header">LLM HTML (Gemini / Web)</div>
+          <a href="all_llm.html" target="_blank" class="llm-dropdown-item">👑 Master All (Rules + Lore)</a>
+          <a href="rules_all_llm.html" target="_blank" class="llm-dropdown-item">📜 Combined Rules (PROD + STAGE)</a>
+          <a href="rules_stage_llm.html" target="_blank" class="llm-dropdown-item">🧪 STAGE Rules</a>
+          <a href="rules_prod_llm.html" target="_blank" class="llm-dropdown-item">📖 PROD Rules</a>
+          <a href="lore_all_llm.html" target="_blank" class="llm-dropdown-item">🔮 Combined Lore</a>
+          <a href="lore_stage_llm.html" target="_blank" class="llm-dropdown-item">📜 STAGE Lore</a>
+          <div class="llm-dropdown-divider"></div>
+          <div class="llm-dropdown-header">Raw Markdown & Index</div>
+          <a href="all_llm.md" target="_blank" class="llm-dropdown-item">📝 all_llm.md</a>
+          <a href="llms.txt" target="_blank" class="llm-dropdown-item">📋 /llms.txt Index</a>
+        </div>
+      </div>
+      <button class="sync-btn" id="headerSyncBtn" title="Sync & Rebuild Site" aria-label="Sync and rebuild site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sync-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Sync</span>
+      </button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">PROD Rules</h2>
+        <p class="sidebar-subtitle">The official rulebook</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="prod.html" class="nav-link" data-target="rules--dice">Dice</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="characters-and-mobs"><span class="toggle-icon">▸</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" style="display: none;"><li><a href="prod--characters-and-mobs--stats.html" class="nav-link" data-target="characters-and-mobs--stats">Stats</a></li></ul></div><div class="nav-group nav-group--solo"><a href="prod--core-resolution.html" class="nav-link nav-link--solo" data-target="core-resolution">Core_Resolution</a></div><div class="nav-group nav-group--solo"><a href="prod--boss-profile-and-gang.html" class="nav-link nav-link--solo" data-target="boss-profile-and-gang">Boss_Profile_and_Gang</a></div><div class="nav-group nav-group--solo"><a href="prod--action-economy-and-turn-flow.html" class="nav-link nav-link--solo" data-target="action-economy-and-turn-flow">Action_Economy_and_Turn_Flow</a></div><div class="nav-group nav-group--solo"><a href="prod--zones-and-movement.html" class="nav-link nav-link--solo" data-target="zones-and-movement">Zones_and_Movement</a></div><div class="nav-group nav-group--solo"><a href="prod--combat-engine.html" class="nav-link nav-link--solo" data-target="combat-engine">Combat_Engine</a></div><div class="nav-group nav-group--solo"><a href="prod--mob-mechanics.html" class="nav-link nav-link--solo" data-target="mob-mechanics">Mob_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="prod--damage-grit-and-wounds.html" class="nav-link nav-link--solo nav-link--active" data-target="damage-grit-and-wounds">Damage_Grit_and_Wounds</a></div><div class="nav-group nav-group--solo"><a href="prod--magic-and-bangaranga.html" class="nav-link nav-link--solo" data-target="magic-and-bangaranga">Magic_and_Bangaranga</a></div><div class="nav-group nav-group--solo"><a href="prod--the-raid-loop.html" class="nav-link nav-link--solo" data-target="the-raid-loop">The_Raid_Loop</a></div><div class="nav-group nav-group--solo"><a href="prod--the-lair-loop-and-progression.html" class="nav-link nav-link--solo" data-target="the-lair-loop-and-progression">The_Lair_Loop_and_Progression</a></div><div class="nav-group nav-group--solo"><a href="prod--journeys-and-hazards.html" class="nav-link nav-link--solo" data-target="journeys-and-hazards">Journeys_and_Hazards</a></div><div class="nav-group nav-group--solo"><a href="prod--adversaries-and-threats.html" class="nav-link nav-link--solo" data-target="adversaries-and-threats">Adversaries_and_Threats</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; align-items: center; justify-content: space-between; gap: 16px; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        <span>⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.</span>
+        <button class="sync-banner-btn" id="bannerSyncBtn">Rerun Sync</button>
+      </div>
+      <h1 id="damage-grit-conditions-and-wounds" tabindex="-1">Damage, Grit, Conditions and Wounds</h1>
+<p><em>Goblins are squishy, breakable, and full of bad ideas. When a tall-man swings a poleaxe, you do not absorb the blow with stoic dignity. You duck, you shriek, your armor dents, or you get flattened into paste. Surviving a raid is not about being unbreakable; it is about making sure someone else takes the hit.</em></p>
+<hr>
+<h2 id="1-damage-resolution-and-boss-grit" tabindex="-1">1. Damage Resolution and Boss Grit</h2>
+<p>The Game Master (GM) never rolls attack tests or damage rolls. All enemy attacks present a deterministic <strong>Threat Profile</strong> (<code>Difficulty+/TN</code>) and a flat <strong>Damage</strong> value (see <a href="12_Adversaries_and_Threats.md">Adversaries &amp; Threats</a>).</p>
+<h3 id="boss-grit-pool" tabindex="-1">Boss Grit Pool</h3>
+<p><strong>Grit</strong> is the mechanical tracker for a <strong>Goblin Boss’s</strong> personal survival, physical stamina, and sheer luck.</p>
+<ul>
+<li><strong>Starting Grit:</strong> A <strong>Goblin Boss</strong> has a maximum <strong>Grit</strong> determined strictly by the <strong>Tough</strong> attribute score (see <a href="02_Boss_Profile_and_Gang.md">Boss Profile &amp; Gang</a>):
+<ul>
+<li><strong>Tough 1:</strong> 3 <strong>Grit</strong>.</li>
+<li><strong>Tough 2–3:</strong> 4 <strong>Grit</strong>.</li>
+<li><strong>Tough 4–5:</strong> 5 <strong>Grit</strong>.</li>
+</ul>
+</li>
+<li><strong>The Synonym Ban:</strong> A <strong>Goblin Boss</strong> tracks <strong>Grit</strong>. A <strong>Goblin Boss</strong> never tracks <em>Health</em> or <em>Wounds</em>. <strong>Health Dice</strong> are used exclusively by <strong>Mobs</strong> (see <a href="06_Mob_Mechanics.md">Mob Mechanics</a>), and <strong>Wounds</strong> are tracked exclusively by <strong>Elite</strong> and <strong>Boss</strong> enemies.</li>
+</ul>
+<h3 id="unmitigated-damage-decrement" tabindex="-1">Unmitigated Damage Decrement</h3>
+<p>When an incoming attack targets a <strong>Goblin Boss</strong>, the <strong>Player</strong> resolves defense using a <strong>Clatter Roll</strong> (see <a href="05_Combat_Engine.md">Combat Engine</a>):</p>
+<ol>
+<li><strong>Active Evasion:</strong> If the <strong>Player</strong> spent a saved <strong>Standard Action</strong> to declare a <strong>Dodge</strong> (testing <strong>Slink</strong>) or <strong>Parry</strong> (testing <strong>Tough</strong> with a shield or heavy weapon), scoring successes equal to or exceeding the attack’s <strong>Threat TN</strong> negates the attack entirely (<strong>0 Damage taken</strong>).</li>
+<li><strong>Passive Armor Mitigation:</strong> If active evasion fails or no saved action was available, the <strong>Player</strong> rolls passive <strong>Armor Dice</strong>. Every die showing <strong>5+</strong> reduces incoming <strong>Damage</strong> by <strong>1</strong>.</li>
+<li><strong>Grit Loss:</strong> Any remaining unmitigated <strong>Damage</strong> reduces the <strong>Goblin Boss’s</strong> current <strong>Grit</strong> on a 1-for-1 basis.</li>
+</ol>
+<blockquote>
+<blockquote>
+<p><strong>RULE: No Mid-Roll Modifiers</strong>
+Damage reduction applies strictly through passive <strong>Armor Dice</strong> or explicit traits before deducting points. You never perform post-roll arithmetic to alter incoming damage values.</p>
+</blockquote>
+</blockquote>
+<hr>
+<h2 id="2-zero-grit-the-final-act-and-death" tabindex="-1">2. Zero Grit, The Final Act, and Death</h2>
+<p>When a <strong>Goblin Boss</strong> reaches <strong>0 Grit</strong>, the character dies. However, death in Gobbos is never instantaneous or silent; it triggers a blaze of chaotic glory before the character is removed from play.</p>
+<pre><code class="language-mermaid">flowchart TD
+    D[&quot;Incoming Unmitigated Damage&quot;] --&gt; Z[&quot;Grit Drops to 0&quot;]
+    Z --&gt; FA[&quot;THE FINAL ACT (Last Stand)&lt;br&gt;- 1 Standard Action at Easy (4+)&lt;br&gt;- 1 Free Order Action (Automatic Success)&lt;br&gt;- Rule of Cool Resolution&quot;]
+    FA --&gt; DTH[&quot;Goblin Boss Dies&lt;br&gt;- Drop all carried gear in Zone&lt;br&gt;- Temporary Boss steps up from Mob&lt;br&gt;- Respawn &amp; Successor XP in Lair&quot;]
+</code></pre>
+<h3 id="the-final-act-last-stand" tabindex="-1">The Final Act (Last Stand)</h3>
+<p>The moment your <strong>Grit</strong> reaches <strong>0</strong>, your <strong>Goblin Boss</strong> immediately triggers <strong>The Final Act</strong>:</p>
+<ul>
+<li><strong>Action Grant:</strong> You immediately receive <strong>1 Standard Action</strong> plus <strong>1 Free Order Action</strong>, resolved out of turn sequence before your character falls.</li>
+<li><strong>Easy Difficulty:</strong> The <strong>Standard Action</strong> is resolved at <strong>Easy (4+)</strong> difficulty, regardless of standard environmental penalties or combat conditions.</li>
+<li><strong>Guaranteed Orders:</strong> The <strong>Order Action</strong> succeeds automatically without a dice roll, provided the target <strong>Mob</strong> is within visual line of sight.</li>
+<li><strong>The Rule of Cool:</strong> The <strong>GM</strong> must interpret the outcome under the <strong>Rule of Cool</strong>, allowing the dying <strong>Goblin Boss</strong> to pull off an epic stunt, detonate a hidden explosive, shove an ally to safety, or take down a hated nemesis.</li>
+<li><strong>Death Execution:</strong> Once <strong>The Final Act</strong> concludes, the <strong>Goblin Boss</strong> dies permanently. All carried weapons, armor, tools, and <strong>Loot</strong> drop to the floor in the current <strong>Zone</strong>.</li>
+</ul>
+<h3 id="the-temporary-boss" tabindex="-1">The Temporary Boss</h3>
+<p>During the remainder of the active raid, the <strong>Player</strong> cannot generate a new full <strong>Goblin Boss</strong> until returning to the <strong>Lair</strong>:</p>
+<ul>
+<li><strong>Stepping Forward:</strong> If the deceased character’s <strong>Gang</strong> still has a surviving <strong>Mob</strong> on the map, one runt steps forward as a <strong>Temporary Boss</strong>.</li>
+<li><strong>Profile:</strong> The <strong>Temporary Boss</strong> is controlled by the <strong>Player</strong>, possesses no <strong>Quirks</strong>, and has all attribute stats reduced by <strong>1</strong> compared to the deceased <strong>Goblin Boss</strong> (to a minimum attribute score of <strong>1</strong>).</li>
+<li><strong>Survival:</strong> The <strong>Temporary Boss</strong> allows the <strong>Player</strong> to remain active, issue commands, and extract surviving <strong>Loot</strong> back to the <strong>Lair</strong>.</li>
+</ul>
+<h3 id="successor-generation-in-the-lair" tabindex="-1">Successor Generation in the Lair</h3>
+<p>When the raid party returns to the <strong>Lair</strong>, the player generates a true <strong>Successor Boss</strong> (see <a href="10_The_Lair_Loop_and_Progression.md">The Lair Loop &amp; Progression</a>):</p>
+<ul>
+<li><strong>Successor XP:</strong> The new <strong>Goblin Boss</strong> starts with baseline stats plus bonus <strong>Successor XP</strong> equal to <strong>Gang Infamy x 4</strong>.</li>
+<li><strong>Inherited Quirks:</strong> The new character inherits 1 <strong>Gang Mark Quirk</strong> from the ancestral pool.</li>
+<li><strong>Named Items:</strong> The favorite weapon of the fallen boss can be recovered and enshrined as a <strong>Named Item</strong> in the <strong>Lair</strong>.</li>
+</ul>
+<hr>
+<h2 id="3-enemy-wounds-and-the-overkill-rule" tabindex="-1">3. Enemy Wounds and The Overkill Rule</h2>
+<p>Adversaries do not use <strong>Grit</strong>. Instead, enemy casualties are resolved through two distinct mechanics based on threat tier:</p>
+<h3 id="one-hit-kill-on-standard-enemies" tabindex="-1">One-Hit Kill on Standard Enemies</h3>
+<p>Standard adversaries (peasants, town guards, minor beasts, skeleton grunts) possess no wound tracks:</p>
+<ul>
+<li><strong>Execution:</strong> When an attack roll scores successes equal to or greater than the standard enemy’s <strong>Defence TN</strong>, the target is instantly killed and removed from the map.</li>
+<li><strong>No Partial Damage:</strong> Rolling fewer successes than the enemy’s <strong>Defence TN</strong> inflicts <strong>0 Damage</strong> (though it may inflict the <strong>Staggered</strong> condition if <strong>Impact Size</strong> requirements are met).</li>
+</ul>
+<h3 id="the-wounds-track-elites-and-bosses" tabindex="-1">The Wounds Track (Elites and Bosses)</h3>
+<p>Powerful adversaries (<strong>Elites</strong> and <strong>Bosses</strong>) track survivability using a physical <strong>Wounds Track</strong> (ranging from <strong>2 to 8 Wounds</strong>).</p>
+<ul>
+<li><strong>Baseline Hit:</strong> Scoring successes equal to the target’s <strong>Defence TN</strong> inflicts <strong>1 Wound</strong>.</li>
+<li><strong>The Overkill Rule:</strong> When a single attack roll exceeds the target’s <strong>Defence TN</strong>, the attack deals <strong>1 Wound for every full multiple of the Defence TN</strong> scored on that roll:</li>
+</ul>
+<p><strong>Wounds Dealt</strong> = <strong>Attack Successes</strong> / <strong>Target Defence TN</strong> (rounded down)</p>
+<blockquote>
+<p><strong>Example:</strong> A <strong>Goblin Boss</strong> strikes an Elite Solar Praetor (<strong>Defence 2</strong>, <strong>5 Wounds</strong>).</p>
+<ul>
+<li>Rolling <strong>1 Success:</strong> The attack fails to meet <strong>Defence 2</strong>. It deals <strong>0 Wounds</strong> (but may inflict <strong>Staggered</strong> if Impact Size &gt;= Praetor Size).</li>
+<li>Rolling <strong>2 or 3 Successes:</strong> Scores 1 full multiple of 2. Inflicts <strong>1 Wound</strong>.</li>
+<li>Rolling <strong>4 or 5 Successes:</strong> Scores 2 full multiples of 2. Inflicts <strong>2 Wounds</strong>.</li>
+<li>Rolling <strong>6 Successes:</strong> Scores 3 full multiples of 2. Inflicts <strong>3 Wounds</strong>.</li>
+</ul>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><strong>GOLDEN RULE: No Fractional Wounds</strong>
+Remainder successes that do not form a complete multiple of the target’s <strong>Defence TN</strong> are discarded. They do not carry over to subsequent attacks.</p>
+</blockquote>
+</blockquote>
+<hr>
+<h2 id="4-impact-size-and-stagger-resistance" tabindex="-1">4. Impact Size and Stagger Resistance</h2>
+<p>When an attack scores at least <strong>1 Success</strong> but fails to meet the target’s full <strong>Defence TN</strong>, the strike is a partial hit. A partial hit deals <strong>0 Damage</strong> and <strong>0 Wounds</strong>, but can throw the target off balance by applying the <strong>Staggered</strong> condition.</p>
+<h3 id="impact-size-values" tabindex="-1">Impact Size Values</h3>
+<p>Every attack possesses an <strong>Impact Size</strong> determined by its weapon traits, source entity, or spell tier:</p>
+<ul>
+<li><strong>Standard Attack:</strong> <strong>Impact Size = 1</strong> (or current <strong>Mob Size</strong> for <strong>Mob</strong> attacks).</li>
+<li><strong>Heavy Weapon Trait:</strong> +1 to <strong>Impact Size</strong> (a Size 1 <strong>Goblin Boss</strong> attacks with <strong>Impact Size 2</strong>).</li>
+<li><strong>Crushing Weapon Trait:</strong> +2 to <strong>Impact Size</strong> (attacks with <strong>Impact Size 3</strong>).</li>
+<li><strong>Spells &amp; Explosives:</strong> <strong>Impact Size</strong> = <strong>Spell/Explosive Tier</strong> (T1 = Size 1, T2 = Size 2, T3 = Size 3, T4 = Size 4, T5 = Size 5).</li>
+</ul>
+<h3 id="mass-resistance-rule" tabindex="-1">Mass Resistance Rule</h3>
+<p>A target is immune to the <strong>Staggered</strong> condition from partial hits unless the attack’s <strong>Impact Size</strong> meets or exceeds the target’s physical <strong>Size</strong>:</p>
+<p><strong>Impact Size &gt;= Target Physical Size</strong></p>
+<ul>
+<li><strong>Size 1 Target (Humanoid/Goblin):</strong> Staggered by <strong>Impact Size 1</strong> or higher.</li>
+<li><strong>Size 2 Target (Warhorse/Bear):</strong> Requires <strong>Impact Size 2</strong> or higher.</li>
+<li><strong>Size 3 Target (Troll/Ogre):</strong> Requires <strong>Impact Size 3</strong> or higher.</li>
+<li><strong>Mass Resistance Execution:</strong> If an attack’s <strong>Impact Size</strong> is lower than the target’s physical <strong>Size</strong>, the target has natural mass resistance and completely ignores the <strong>Staggered</strong> condition on a partial hit.</li>
+</ul>
+<hr>
+<h2 id="5-in-game-status-conditions-matrix" tabindex="-1">5. In-Game Status Conditions Matrix</h2>
+<p>Conditions represent temporary physiological, psychological, or tactical hindrances. Gobbos features <strong>9 official systemic conditions</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Condition</th>
+<th style="text-align:left">Goblin Boss (PC)</th>
+<th style="text-align:left">Goblin Mob</th>
+<th style="text-align:left">Enemy / NPC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Weakened</strong></td>
+<td style="text-align:left"><strong>Bane 1 (-1d)</strong> on <strong>Tough</strong> tests.</td>
+<td style="text-align:left"><strong>Bane 1 (-1d)</strong> on <strong>Attack</strong> rolls.</td>
+<td style="text-align:left">Attack <strong>Threat TN</strong> reduced by <strong>1</strong> (minimum 1).</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Restrained</strong></td>
+<td style="text-align:left"><strong>Bane 1 (-1d)</strong> on <strong>Slink</strong> tests; <strong>Movement</strong> becomes <strong>0</strong>.</td>
+<td style="text-align:left">Cannot <strong>Scatter</strong>; <strong>Movement</strong> becomes <strong>0</strong>.</td>
+<td style="text-align:left"><strong>Movement</strong> becomes <strong>0</strong>; <strong>Defence TN</strong> reduced by <strong>1</strong> (minimum 1).</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Dumb</strong></td>
+<td style="text-align:left"><strong>Bane 1 (-1d)</strong> on <strong>Brains</strong> and <strong>Mouth</strong> tests; cannot cast spells or activate <strong>Brains</strong> quirks.</td>
+<td style="text-align:left"><strong>Bane 1 (-1d)</strong> on <strong>Morale</strong> checks; cannot receive complex orders.</td>
+<td style="text-align:left">Cannot cast spells or use tactical reactions.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Silenced</strong></td>
+<td style="text-align:left"><strong>Bane 1 (-1d)</strong> on <strong>Mouth</strong> tests; cannot issue verbal orders or cast vocal spells.</td>
+<td style="text-align:left">Cannot hear orders; <strong>Bane 1 (-1d)</strong> on <strong>Morale</strong> checks.</td>
+<td style="text-align:left">Cannot issue orders or shout tactical warnings.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Blinded</strong></td>
+<td style="text-align:left"><strong>Bane 1 (-1d)</strong> on physical tests; ranged attacks are <strong>Hard (6)</strong>; cannot <strong>Dodge</strong>.</td>
+<td style="text-align:left"><strong>Bane 1 (-1d)</strong> on physical tests; ranged attacks are <strong>Hard (6)</strong>; cannot <strong>Scatter</strong>.</td>
+<td style="text-align:left">Attacks become <strong>Hard (6)</strong>; <strong>Defence TN</strong> reduced by <strong>1</strong> (minimum 1).</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Terrified</strong></td>
+<td style="text-align:left"><strong>Bane 1 (-1d)</strong> on <strong>Brains</strong> and <strong>Mouth</strong> tests; cannot move closer to source of fear.</td>
+<td style="text-align:left"><strong>Bane 2 (-2d)</strong> on <strong>Morale</strong> checks; <strong>Order</strong> tests targeting <strong>Mob</strong> are <strong>Hard (6)</strong>.</td>
+<td style="text-align:left">Must spend all active actions fleeing from the source of fear.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Stunned</strong></td>
+<td style="text-align:left">Cannot take any <strong>Standard Actions</strong>, <strong>Free Actions</strong>, or <strong>Reactions</strong>.</td>
+<td style="text-align:left">Cannot take any actions or reactions.</td>
+<td style="text-align:left">Skips active turn; incoming attacks against target are <strong>Easy (4+)</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Prone</strong></td>
+<td style="text-align:left"><strong>Bane 1 (-1d)</strong> on <strong>Slink</strong> and <strong>Dodge</strong> tests; costs 1 <strong>Move</strong> action to stand up.</td>
+<td style="text-align:left"><strong>Bane 1 (-1d)</strong> on <strong>Scatter</strong> tests; costs 1 <strong>Move</strong> action to stand up.</td>
+<td style="text-align:left">Incoming melee attacks against target gain <strong>+1d</strong>; costs 1 <strong>Move</strong> action to stand up.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Staggered</strong></td>
+<td style="text-align:left"><strong>Bane 1 (-1d)</strong> on <strong>Dodge</strong> and <strong>Parry</strong> Clatter rolls.</td>
+<td style="text-align:left"><strong>-1 Armor Die</strong> (or <strong>-1d</strong> on <strong>Scatter</strong> tests).</td>
+<td style="text-align:left"><strong>Defence TN</strong> reduced by <strong>1</strong> (minimum 1).</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<blockquote>
+<p><strong>RULE: Bane Stacking Limits</strong>
+Multiple conditions applying Banes to the same attribute do not stack beyond the standard environmental limit. A character either has a single <strong>Bane 1 (-1d)</strong>, a single <strong>Bane 2 (-2d)</strong> from a severe specific rule, or a neutral pool if countered by Boons (see <a href="01_Core_Resolution.md">Core Resolution</a>).</p>
+</blockquote>
+</blockquote>
+<hr>
+<h2 id="6-application-triggers-duration-and-recovery" tabindex="-1">6. Application Triggers, Duration, and Recovery</h2>
+<p>Conditions are applied by weapon traits, spells, monster abilities, or environmental hazards. They clear according to strict duration classes:</p>
+<h3 id="round-closure-clearance-instant-conditions" tabindex="-1">Round-Closure Clearance (Instant Conditions)</h3>
+<ul>
+<li><strong>Staggered:</strong> The <strong>Staggered</strong> condition is temporary. It clears automatically from all <strong>Goblin Bosses</strong>, <strong>Mobs</strong>, and <strong>Enemies</strong> during the <strong>Round Closure Phase</strong> at the end of each combat round.</li>
+</ul>
+<h3 id="action-clearance-hazard-and-sustained-conditions" tabindex="-1">Action Clearance (Hazard &amp; Sustained Conditions)</h3>
+<ul>
+<li><strong>Environmental Obstacles:</strong> Conditions inflicted by terrain or hazards (such as <strong>Weakened</strong> from toxic gas, <strong>Restrained</strong> from sticky mud, or <strong>Blinded</strong> from smoke) persist while remaining in the affected <strong>Zone</strong>.</li>
+<li><strong>Standard Action Recovery:</strong> Once in a clean <strong>Zone</strong>, a character can clear a sustained condition by spending <strong>1 Standard Action</strong> (performing a <strong>Manipulate</strong> action to wipe eyes, cut ropes, or catch breath) and passing a <strong>Tough 5+/1</strong> or <strong>Slink 5+/1</strong> test.</li>
+<li><strong>Combat End:</strong> All hazard-inflicted conditions clear automatically once combat concludes and the party catches their breath.</li>
+</ul>
+<h3 id="rest-and-medical-recovery-downtime-afflictions" tabindex="-1">Rest &amp; Medical Recovery (Downtime Afflictions)</h3>
+<ul>
+<li><strong>Long-Term Afflictions:</strong> Severe conditions (such as rotting filth fever, cursed blindness, or demonic corruption) persist beyond the raid. They can only be cleansed during the <strong>Lair Phase</strong> through specialized apothecary treatment, surgery, or purification rituals (see <a href="10_The_Lair_Loop_and_Progression.md">The Lair Loop &amp; Progression</a>).</li>
+</ul>
+<h3 id="healing-rates" tabindex="-1">Healing Rates</h3>
+<ul>
+<li><strong>Goblin Bosses:</strong> A <strong>Goblin Boss</strong> recovers <strong>1 Grit per hour</strong> of quiet, uninterrupted rest outside of combat.</li>
+<li><strong>Goblin Mobs:</strong> A <strong>Mob</strong> does <strong>not heal</strong> lost <strong>Size</strong> during a raid. Fallen goblins are permanently dead. After a battle concludes, the <strong>Goblin Boss</strong> may freely rearrange the face values of surviving <strong>Health Dice</strong> (e.g. turning two dice showing <code>[2, 3]</code> into <code>[5]</code> to consolidate stability). Lost <strong>Size</strong> can only be replenished by recruiting new goblins in the <strong>Lair</strong>.</li>
+</ul>
+<hr>
+<h2 id="7-condition-and-hazard-structural-schema" tabindex="-1">7. Condition and Hazard Structural Schema</h2>
+<p>[CONTENT EXTENSION POINT: Environmental Hazards &amp; Conditions]</p>
+<p>All custom environmental hazards, status effects, and zone traps must follow this structural schema:</p>
+<pre><code class="language-markdown">### [Condition / Hazard Name]
+*   **Classification:** [Status Condition | Static Environmental Obstacle | Dynamic Zone Hazard | Complex Weather Blueprint]
+*   **Associated Tags:** `[Tag 1]`, `[Tag 2]` (e.g. `[Toxic]`, `[Gaseous]`, `[Slick]`, `[Burning]`)
+*   **Severity Tier:** [T1 Minor | T2 Dangerous | T3 Lethal / Catastrophic]
+*   **Application Trigger:** [On entering zone | At start of turn in zone | On taking unmitigated damage | On failing physical check]
+*   **Target Profile / Check:** `[Stat] [Target Face]+/[Successes]` (e.g. `Tough 5+/1` or `Slink 4+/2`) to resist or avoid.
+*   **Mechanical Effects:**
+    *   *Goblin Boss (PC):* [Specific stat penalty, Bane modifier, movement restriction, or Grit loss]
+    *   *Goblin Mob:* [Specific attack penalty, Scatter restriction, health die damage, or Morale Bane]
+    *   *Enemy / NPC:* [Specific Defence TN reduction, action loss, or movement cap]
+*   **Duration &amp; Persistence:** [Instant | Round-Closure Clearance | Sustained (Action-Clear) | Encounter-Bounded | Lair-Treated]
+*   **Removal / Recovery Check:** [Action cost and test required to clear, e.g. Spend 1 Standard Action in clean zone testing Tough 5+/1]
+</code></pre>
+<hr>
+<h2 id="8-mechanical-gaps-and-system-clarifications" tabindex="-1">8. Mechanical Gaps and System Clarifications</h2>
+<p>[MISSING RULE / GAP: Mid-combat redistribution of Mob health dice is explicitly forbidden. Health dice face values can only be rearranged during the Round Closure phase of Combat End or during quiet exploration outside combat to prevent game-state manipulation during active initiative rounds.]</p>
+<p>[MISSING RULE / GAP: Player Goblin Bosses exclusively track Grit (3 to 5 points) and never possess Wounds. Wounds are strictly reserved for Elite and Boss enemy tracks, and Health Dice are strictly reserved for Mobs. Any legacy reference to PC Wounds must be treated as Grit damage.]</p>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- LLM Dropdown Toggle ---
+    (function() {
+      const btn = document.getElementById('llmDropdownBtn');
+      const menu = document.getElementById('llmDropdownMenu');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = menu.classList.toggle('show');
+        btn.setAttribute('aria-expanded', isOpen);
+      });
+
+      document.addEventListener('click', () => {
+        menu.classList.remove('show');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    })();
+
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'flex';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+
+    // --- Anchor Scroll Fix ---
+    (function() {
+      function scrollToHash() {
+        if (window.location.hash) {
+          const id = decodeURIComponent(window.location.hash.substring(1));
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }, 100);
+          }
+        }
+      }
+      window.addEventListener('hashchange', scrollToHash);
+      window.addEventListener('DOMContentLoaded', scrollToHash);
+      window.addEventListener('load', scrollToHash);
+    })();
+
+    // --- Manual Sync Trigger ---
+    (function() {
+      const headerBtn = document.getElementById('headerSyncBtn');
+      const bannerBtn = document.getElementById('bannerSyncBtn');
+      
+      function handleSync(btn) {
+        if (!btn) return;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        
+        // Add spinning/loading animation class
+        if (btn.classList.contains('sync-btn')) {
+          btn.classList.add('sync-btn--spinning');
+          btn.querySelector('span').textContent = 'Syncing...';
+        } else {
+          btn.textContent = 'Syncing...';
+        }
+        
+        fetch('/api/run-sync', { method: 'POST' })
+          .then(res => {
+            if (!res.ok) throw new Error('Server returned error status: ' + res.status);
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.status === 'success') {
+              if (btn.classList.contains('sync-btn')) {
+                btn.querySelector('span').textContent = 'Success!';
+              } else {
+                btn.textContent = 'Success!';
+              }
+              // Reload page to reflect changes
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              throw new Error(data.error || 'Sync failed');
+            }
+          })
+          .catch(err => {
+            console.error('Sync failed:', err);
+            alert('Failed to rerun sync: ' + err.message);
+            // Restore button
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            if (btn.classList.contains('sync-btn')) {
+              btn.classList.remove('sync-btn--spinning');
+            }
+          });
+      }
+
+      if (headerBtn) {
+        headerBtn.addEventListener('click', () => handleSync(headerBtn));
+      }
+      if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
+    })();
+  </script>
+
+  <!-- ===== Mermaid.js Integration ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    (function() {
+      function initMermaid() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        
+        const lightThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#f0e6d6',
+          primaryTextColor: '#231c16',
+          primaryBorderColor: '#8c2d19',
+          lineColor: '#c68a35',
+          secondaryColor: '#fdfbf7',
+          tertiaryColor: '#e5dcce',
+          edgeLabelBackground: '#faf5ec',
+          nodeBorder: '#8c2d19',
+          clusterBkg: '#eee5d5',
+          clusterBorder: '#c68a35',
+          titleColor: '#8c2d19'
+        };
+
+        const darkThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#241e1a',
+          primaryTextColor: '#e6dfd5',
+          primaryBorderColor: '#d44d32',
+          lineColor: '#d4a359',
+          secondaryColor: '#1a1613',
+          tertiaryColor: '#2a221c',
+          edgeLabelBackground: '#171412',
+          nodeBorder: '#d44d32',
+          clusterBkg: '#1c1815',
+          clusterBorder: '#8c6a38',
+          titleColor: '#d44d32'
+        };
+
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: 'base',
+          themeVariables: isDark ? darkThemeVariables : lightThemeVariables,
+          flowchart: {
+            curve: 'basis',
+            padding: 16,
+            nodeSpacing: 50,
+            rankSpacing: 40,
+            htmlLabels: true
+          },
+          securityLevel: 'loose'
+        });
+
+        // Convert code blocks with language-mermaid to <pre class="mermaid">
+        const mermaidCodeBlocks = document.querySelectorAll('pre > code.language-mermaid');
+        mermaidCodeBlocks.forEach((codeEl) => {
+          const preEl = codeEl.parentElement;
+          if (preEl && preEl.tagName === 'PRE') {
+            // Save raw mermaid source text if not already saved
+            if (!preEl.getAttribute('data-mermaid-src')) {
+              preEl.setAttribute('data-mermaid-src', codeEl.textContent);
+            }
+            const src = preEl.getAttribute('data-mermaid-src');
+            preEl.className = 'mermaid';
+            preEl.textContent = src;
+            preEl.removeAttribute('data-processed');
+          }
+        });
+
+        // Also handle any pre.mermaid that might need re-render on theme change
+        const directMermaidBlocks = document.querySelectorAll('pre.mermaid');
+        directMermaidBlocks.forEach((preEl) => {
+          if (!preEl.getAttribute('data-mermaid-src')) {
+            preEl.setAttribute('data-mermaid-src', preEl.textContent);
+          }
+          const src = preEl.getAttribute('data-mermaid-src');
+          preEl.textContent = src;
+          preEl.removeAttribute('data-processed');
+        });
+
+        if (document.querySelectorAll('.mermaid').length > 0) {
+          mermaid.run({
+            nodes: document.querySelectorAll('.mermaid')
+          }).catch(err => console.error('Mermaid render error:', err));
+        }
+      }
+
+      // Initial render on DOM load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMermaid);
+      } else {
+        initMermaid();
+      }
+
+      // Re-initialize mermaid when theme changes
+      const themeToggleBtn = document.getElementById('themeToggle');
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          setTimeout(initMermaid, 50);
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

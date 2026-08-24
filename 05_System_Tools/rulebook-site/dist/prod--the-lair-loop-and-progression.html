@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The_Lair_Loop_and_Progression — PROD Rules — Gobbos</title>
+  <meta name="description" content="Gobbos — A Roguelite Tactical Skirmish RPG for Goblins. The official rulebook">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,500;0,700;0,800;1,700&family=Alegreya:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+
+  <!-- ===== Top Header Bar ===== -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo">
+        <span class="logo-icon">👺</span>
+        <span class="logo-text">Gobbos</span>
+      </a>
+    </div>
+    <nav class="env-nav" id="envNav">
+      <a href="dev.html" class="env-tab">💡 DEV Rules</a>
+<a href="stage.html" class="env-tab">🧪 STAGE Rules</a>
+<a href="prod.html" class="env-tab env-tab--active">📖 PROD Rules</a>
+<a href="dev-lore.html" class="env-tab">🔮 DEV Lore</a>
+<a href="stage-lore.html" class="env-tab">📜 STAGE Lore</a>
+<a href="prod-lore.html" class="env-tab">🏛️ PROD Lore</a>
+    </nav>
+    <div class="top-bar-right" style="display: flex; gap: 8px; align-items: center;">
+      <div class="llm-dropdown-container">
+        <button class="llm-btn" id="llmDropdownBtn" title="LLM Continuous Markdown Bundles" aria-label="LLM Bundles" aria-expanded="false">
+          <span>🤖 LLM Files</span>
+          <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="llm-dropdown-menu" id="llmDropdownMenu">
+          <div class="llm-dropdown-header">LLM HTML (Gemini / Web)</div>
+          <a href="all_llm.html" target="_blank" class="llm-dropdown-item">👑 Master All (Rules + Lore)</a>
+          <a href="rules_all_llm.html" target="_blank" class="llm-dropdown-item">📜 Combined Rules (PROD + STAGE)</a>
+          <a href="rules_stage_llm.html" target="_blank" class="llm-dropdown-item">🧪 STAGE Rules</a>
+          <a href="rules_prod_llm.html" target="_blank" class="llm-dropdown-item">📖 PROD Rules</a>
+          <a href="lore_all_llm.html" target="_blank" class="llm-dropdown-item">🔮 Combined Lore</a>
+          <a href="lore_stage_llm.html" target="_blank" class="llm-dropdown-item">📜 STAGE Lore</a>
+          <div class="llm-dropdown-divider"></div>
+          <div class="llm-dropdown-header">Raw Markdown & Index</div>
+          <a href="all_llm.md" target="_blank" class="llm-dropdown-item">📝 all_llm.md</a>
+          <a href="llms.txt" target="_blank" class="llm-dropdown-item">📋 /llms.txt Index</a>
+        </div>
+      </div>
+      <button class="sync-btn" id="headerSyncBtn" title="Sync & Rebuild Site" aria-label="Sync and rebuild site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="sync-icon"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+        <span>Sync</span>
+      </button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon--light">☀️</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Layout Wrapper ===== -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-title">PROD Rules</h2>
+        <p class="sidebar-subtitle">The official rulebook</p>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="rules"><span class="toggle-icon">▸</span>Rules</button><ul class="nav-pages" id="nav-rules" style="display: none;"><li><a href="prod.html" class="nav-link" data-target="rules--dice">Dice</a></li></ul></div><div class="nav-group"><button class="nav-group-toggle" aria-expanded="false" data-target="characters-and-mobs"><span class="toggle-icon">▸</span>Characters &amp; Mobs</button><ul class="nav-pages" id="nav-characters-and-mobs" style="display: none;"><li><a href="prod--characters-and-mobs--stats.html" class="nav-link" data-target="characters-and-mobs--stats">Stats</a></li></ul></div><div class="nav-group nav-group--solo"><a href="prod--core-resolution.html" class="nav-link nav-link--solo" data-target="core-resolution">Core_Resolution</a></div><div class="nav-group nav-group--solo"><a href="prod--boss-profile-and-gang.html" class="nav-link nav-link--solo" data-target="boss-profile-and-gang">Boss_Profile_and_Gang</a></div><div class="nav-group nav-group--solo"><a href="prod--action-economy-and-turn-flow.html" class="nav-link nav-link--solo" data-target="action-economy-and-turn-flow">Action_Economy_and_Turn_Flow</a></div><div class="nav-group nav-group--solo"><a href="prod--zones-and-movement.html" class="nav-link nav-link--solo" data-target="zones-and-movement">Zones_and_Movement</a></div><div class="nav-group nav-group--solo"><a href="prod--combat-engine.html" class="nav-link nav-link--solo" data-target="combat-engine">Combat_Engine</a></div><div class="nav-group nav-group--solo"><a href="prod--mob-mechanics.html" class="nav-link nav-link--solo" data-target="mob-mechanics">Mob_Mechanics</a></div><div class="nav-group nav-group--solo"><a href="prod--damage-grit-and-wounds.html" class="nav-link nav-link--solo" data-target="damage-grit-and-wounds">Damage_Grit_and_Wounds</a></div><div class="nav-group nav-group--solo"><a href="prod--magic-and-bangaranga.html" class="nav-link nav-link--solo" data-target="magic-and-bangaranga">Magic_and_Bangaranga</a></div><div class="nav-group nav-group--solo"><a href="prod--the-raid-loop.html" class="nav-link nav-link--solo" data-target="the-raid-loop">The_Raid_Loop</a></div><div class="nav-group nav-group--solo"><a href="prod--the-lair-loop-and-progression.html" class="nav-link nav-link--solo nav-link--active" data-target="the-lair-loop-and-progression">The_Lair_Loop_and_Progression</a></div><div class="nav-group nav-group--solo"><a href="prod--journeys-and-hazards.html" class="nav-link nav-link--solo" data-target="journeys-and-hazards">Journeys_and_Hazards</a></div><div class="nav-group nav-group--solo"><a href="prod--adversaries-and-threats.html" class="nav-link nav-link--solo" data-target="adversaries-and-threats">Adversaries_and_Threats</a></div>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <div id="statusBanner" style="display: none; align-items: center; justify-content: space-between; gap: 16px; background-color: rgba(217, 83, 79, 0.15); border: 1px solid #d9534f; color: #d9534f; padding: 12px 16px; border-radius: var(--radius-md); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; margin-bottom: 24px;">
+        <span>⚠️ <strong>Update Failed:</strong> The last nightly automated update failed. The rules below may be outdated.</span>
+        <button class="sync-banner-btn" id="bannerSyncBtn">Rerun Sync</button>
+      </div>
+      <h1 id="the-lair-loop-and-progression" tabindex="-1">The Lair Loop &amp; Progression</h1>
+<p><em>A single goblin dies in the mud, forgotten. A Warren of goblins builds an underground empire of rusted iron, stolen treasure, and smoking workshops. The Lair is the communal sanctuary where plunder is smelted, wild beasts are tamed, and the next generation of Bosses rises from the muck.</em></p>
+<hr>
+<h2 id="1-the-lair-dashboard-and-core-metrics" tabindex="-1">1. The Lair Dashboard &amp; Core Metrics</h2>
+<p>The <strong>Lair</strong> is the shared, cooperative base of operations managed by all players. The state of the settlement is tracked on the <strong>Lair Sheet</strong> across six core metrics:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Metric</th>
+<th style="text-align:left">Category</th>
+<th style="text-align:left">Mechanical Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>1. Warren Tier &amp; Capacity</strong></td>
+<td style="text-align:left">Settlement Scale</td>
+<td style="text-align:left">Tier 1 to 4; Max Active Assets = (Tier x 2) + 2</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>2. The Swarm (Gobbo Pool)</strong></td>
+<td style="text-align:left">Workforce Pool</td>
+<td style="text-align:left">Total population in d6s; split between Raider Mobs &amp; Laborer Dice</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>3. The Communal Hoard</strong></td>
+<td style="text-align:left">Shared Capital</td>
+<td style="text-align:left">Pooled Loot Value (liquid wealth) &amp; Scrap (building matter)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>4. Swarm Mood</strong></td>
+<td style="text-align:left">Morale &amp; Discipline</td>
+<td style="text-align:left">0–5 Morale Track; Mob Mutiny triggers at Level 5</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>5. Threat Level</strong></td>
+<td style="text-align:left">Regional Heat</td>
+<td style="text-align:left">0–5 Heat Track; Retaliatory Lair Assault triggers at Level 5</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>6. The Bone Pile</strong></td>
+<td style="text-align:left">Ancestral Legacy</td>
+<td style="text-align:left">Skull Tally; unlocks permanent Ancestral Boons every 4 Skulls</td>
+</tr>
+</tbody>
+</table>
+<h3 id="warren-tier-and-asset-capacity" tabindex="-1">Warren Tier &amp; Asset Capacity</h3>
+<p><strong>Warren Tier</strong> measures the overall physical scale, engineering complexity, and regional renown of the goblin settlement:</p>
+<ul>
+<li><strong>Tier 1: Ragtag Mob Camp</strong> (Hidden hovels, squatter dens under ruins; Max <strong>4</strong> Active Assets).</li>
+<li><strong>Tier 2: Fortified Warren</strong> (Recognized regional hazard, reinforced palisades; Max <strong>6</strong> Active Assets).</li>
+<li><strong>Tier 3: Subterranean Stronghold</strong> (Sprawling underground cavern network, heavy industry; Max <strong>8</strong> Active Assets).</li>
+<li><strong>Tier 4: Goblin Under-Kingdom</strong> (Legendary subterranean fortress commanding regional outposts; Max <strong>10</strong> Active Assets).</li>
+</ul>
+<p><strong>Asset Capacity</strong> = (<strong>Warren Tier</strong> x 2) + 2</p>
+<blockquote>
+<blockquote>
+<p><strong>THE ASSET CAPACITY CEILING:</strong>
+A Lair can only maintain a maximum number of <strong>Active Assets</strong> equal to (<strong>Warren Tier</strong> x 2) + 2. If the Lair exceeds this ceiling, the settlement suffers from overcrowding and structural strain: <strong>Swarm Mood increases by +1 at the start of every Lair Turn for each asset over the cap.</strong></p>
+</blockquote>
+</blockquote>
+<hr>
+<h3 id="the-gobbo-pool-workforce" tabindex="-1">The Gobbo Pool (Workforce)</h3>
+<p>The Lair’s total goblin population is tracked as a communal dice pool: <strong>The Gobbo Pool</strong> (measured in <strong>d6s</strong>).</p>
+<ul>
+<li><strong>The Workforce Division:</strong> At the start of each <strong>Lair Turn</strong>, players divide the <strong>Gobbo Pool</strong> into two groups:
+<ol>
+<li><strong>Raider Mobs:</strong> Dice assigned to <strong>Bosses</strong> (up to each Boss’s <strong>Grunt</strong> limit) to form tactical <strong>Mobs</strong> for raids.</li>
+<li><strong>Laborer Dice:</strong> Dice remaining in the Lair to perform scavenging, excavation, recruitment, and crafting operations.</li>
+</ol>
+</li>
+<li><strong>Mob Survival &amp; Auto-Heal:</strong> If a Raider <strong>Mob</strong> returns from a raid with at least 1 health point on at least one health die (<strong>Size</strong> &gt;= 1), it immediately <strong>auto-heals back to its full allocated Size</strong> for free during Step 1 (Homecoming).</li>
+<li><strong>Casualty Elimination:</strong> If a <strong>Mob</strong> is reduced to <strong>Size 0</strong> (all health dice lost), those dice are permanently removed from the <strong>Gobbo Pool</strong>.</li>
+<li><strong>The Communal Runts Floor:</strong> The Lair always maintains a baseline floor of <strong>3d6 communal runts</strong>. These runts cannot perform heavy labor or be assigned as Laborer Dice, but they guarantee that each <strong>Player</strong> can always lead at least a <strong>Size 1 Runt Mob (1d6)</strong> on a raid, even after a catastrophic wipe.</li>
+<li><strong>Vacant Nest Growth:</strong> During Step 1 (Homecoming), if the total <strong>Gobbo Pool</strong> falls below <strong>3d6 per Player</strong> (e.g., under 9d6 in a 3-player campaign), the Lair automatically gains <strong>+1d6</strong> to the <strong>Gobbo Pool</strong> for free as wild runts move into empty burrows.</li>
+</ul>
+<hr>
+<h3 id="the-communal-hoard" tabindex="-1">The Communal Hoard</h3>
+<p>The <strong>Communal Hoard</strong> stores shared capital brought back from raids:</p>
+<ul>
+<li><strong>Loot Value (LV):</strong> Liquid wealth (coins, gems, jewelry, fine mechanisms) used to fund Lair room construction, bribe troops, hire specialists, and purchase equipment.</li>
+<li><strong>Scrap:</strong> Physical building material (rusted iron plates, oak timber, lead pipes, chains) used to construct facilities, clear excavations, and assemble weapon chassis.</li>
+</ul>
+<hr>
+<h3 id="threat-level-the-regional-heat-clock" tabindex="-1">Threat Level (The Regional Heat Clock)</h3>
+<p><strong>Threat Level</strong> is a track rated from <strong>0 to 5</strong> representing regional awareness and organized military response:</p>
+<ul>
+<li><strong>0–1 (Quiet):</strong> The outside world considers the Lair minor vermin.</li>
+<li><strong>2–3 (Guarded):</strong> Local settlements double their sentries; regional dungeon nodes gain +1 hazard.</li>
+<li><strong>4 (Hunted):</strong> Enemy scout parties comb the wilderness; Lair complications suffer a <strong>Bane 1 (-1d)</strong>.</li>
+<li><strong>5 (Retaliatory Assault!):</strong> The enemy launches a direct assault against the Lair. Players must defend the base using their <strong>Mobs</strong> and defenses. Following the assault resolution, <strong>Threat Level</strong> resets to 2.</li>
+</ul>
+<hr>
+<h3 id="swarm-mood-morale-and-mutiny" tabindex="-1">Swarm Mood (Morale &amp; Mutiny)</h3>
+<p><strong>Swarm Mood</strong> is a track rated from <strong>0 to 5</strong> representing internal discipline, morale, and obedience:</p>
+<ul>
+<li><strong>0–1 (Eager):</strong> Grunts are hyped; all <strong>Players</strong> add <strong>+1 die</strong> to the communal <strong>Bangaranga Pool</strong> at the start of the next raid.</li>
+<li><strong>2–3 (Grumbly):</strong> Standard goblin squabbling; failed orders during combat trigger immediate morale checks.</li>
+<li><strong>4 (Restless):</strong> Grunts demand extra grog; Labor recruitment tests suffer a <strong>Bane 1 (-1d)</strong>.</li>
+<li><strong>5 (Mob Mutiny!):</strong> Grunts refuse to embark on raids without upfront bribes (<strong>5 Loot</strong> per <strong>Mob</strong>). Internal brawls lock one random Lair facility until mutiny is suppressed.</li>
+</ul>
+<hr>
+<h3 id="the-bone-pile-ancestral-legacy" tabindex="-1">The Bone Pile (Ancestral Legacy)</h3>
+<p>The <strong>Bone Pile</strong> is a sacred memorial containing the skulls of fallen <strong>Bosses</strong>:</p>
+<ul>
+<li>Every dead <strong>Boss</strong> adds <strong>1 Skull</strong> to the <strong>Bone Pile</strong> track.</li>
+<li><strong>Ancestral Boons:</strong> Every <strong>4 Skulls</strong> marked unlocks a permanent, Lair-wide ancestral perk (e.g., <em>Ancestral Grudge:</em> +1d attack against the enemy faction responsible for the most Boss deaths; <em>Haunted Warrens:</em> invaders suffer <strong>Bane 1 (-1d)</strong> during Lair assaults).</li>
+<li><strong>Relic Harvesting:</strong> A <strong>Boss</strong> may salvage a skull or bone from the <strong>Bone Pile</strong> to forge a unique <strong>Relic</strong> item.</li>
+</ul>
+<hr>
+<h2 id="2-the-four-step-lair-phase-sequence" tabindex="-1">2. The Four-Step Lair Phase Sequence</h2>
+<p>The <strong>Lair Phase</strong> resolves in a strict four-step procedure between raids:</p>
+<pre><code class="language-mermaid">flowchart TD
+    S1[&quot;Step 1: Homecoming &amp; Tally&lt;br&gt;- Deposit Loot &amp; Scrap into Hoard&lt;br&gt;- Record dead Bosses on Bone Pile; surviving Mobs auto-heal&lt;br&gt;- Check Vacant Nest Growth&quot;] --&gt; S2[&quot;Step 2: Lair Pulse &amp; Complications&lt;br&gt;- Evaluate Threat Level &amp; Swarm Mood&lt;br&gt;- GM rolls 1d66 on Complications Table&quot;]
+    S2 --&gt; S3[&quot;Step 3: Labor Allocation &amp; Passive Resolution&lt;br&gt;- Harvest automatic facility yields&lt;br&gt;- Assign Laborer Dice (Safe vs Risky)&quot;]
+    S3 --&gt; S4[&quot;Step 4: Boss Downtime Actions &amp; Dominance&lt;br&gt;- Each Boss executes 1 personal Downtime Action&lt;br&gt;- Update Dominance ledgers for assets&quot;]
+</code></pre>
+<h3 id="step-1-homecoming-and-tally" tabindex="-1">Step 1: Homecoming &amp; Tally</h3>
+<ol>
+<li><strong>Deposit Wealth:</strong> Transfer all plundered <strong>Loot Value</strong> and <strong>Scrap</strong> into the <strong>Communal Hoard</strong>.</li>
+<li><strong>Honour the Fallen:</strong> Add deceased <strong>Bosses</strong> to the <strong>Bone Pile</strong>. Generate successor <strong>Bosses</strong> with starting <strong>Successor XP</strong> equal to <strong>Gang Infamy x 4</strong>.</li>
+<li><strong>Regenerate Mobs:</strong> Surviving <strong>Mobs</strong> (Size &gt;= 1) restore all health dice to full allocated <strong>Size</strong>. Wiped <strong>Mobs</strong> are deleted from the pool.</li>
+<li><strong>Vacant Nest Check:</strong> If total <strong>Gobbo Pool</strong> is under 3d6 per player, add <strong>+1d6</strong> for free.</li>
+</ol>
+<h3 id="step-2-lair-pulse-and-complications" tabindex="-1">Step 2: Lair Pulse &amp; Complications</h3>
+<p>The <strong>GM</strong> rolls <strong>1d66</strong> on the <strong>Lair Complications Table</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">d66</th>
+<th style="text-align:left">Event Name</th>
+<th style="text-align:left">Mechanical Resolution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>11–13</strong></td>
+<td style="text-align:left"><strong>Tunnel Cave-In</strong></td>
+<td style="text-align:left">Lose <strong>1d6 Scrap</strong> from the Hoard, or assign 2 Laborer Dice to clear rubble.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>14–16</strong></td>
+<td style="text-align:left"><strong>Squig Rampage</strong></td>
+<td style="text-align:left">A Boss must pass a <strong>Tough 4+/1</strong> test to subdue the beast, or lose <strong>1d6 Runts</strong> from the Gobbo Pool.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>21–23</strong></td>
+<td style="text-align:left"><strong>Captive Breakout!</strong></td>
+<td style="text-align:left">All <code>[Person: Captive]</code> assets test escape: on a <strong>1–2</strong> on 1d6, they escape unless a Boss spends a Downtime Action to recapture them.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>24–26</strong></td>
+<td style="text-align:left"><strong>Elder Tantrum</strong></td>
+<td style="text-align:left">Increase <strong>Swarm Mood by +1</strong> unless a Gang pays <strong>5 Loot</strong> from their private hoard to host a feast.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>31–33</strong></td>
+<td style="text-align:left"><strong>Scout Probe</strong></td>
+<td style="text-align:left">Human or dwarven scouts spot smoke. Increase <strong>Threat Level by +1</strong> unless a Boss passes <strong>Slink 4+/1</strong> to silence them.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>34–36</strong></td>
+<td style="text-align:left"><strong>Mushroom Rot</strong></td>
+<td style="text-align:left">Nursery mold rots food supplies. The Lair loses all passive recruitment yields this turn.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>41–43</strong></td>
+<td style="text-align:left"><strong>Wandering Outcast</strong></td>
+<td style="text-align:left">A strange specialist visits the Lair. Pay <strong>5 Loot</strong> to recruit them as an active <code>[Ally]</code> asset.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>44–46</strong></td>
+<td style="text-align:left"><strong>Turf Brawl</strong></td>
+<td style="text-align:left">Grunts riot over scrap. The two highest-Infamy Gangs lose 1 Mob health die or fight a Boss <strong>Bar Brawl</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>51–53</strong></td>
+<td style="text-align:left"><strong>Stolen Cache</strong></td>
+<td style="text-align:left">A runt finds buried dungeon loot near the camp. Add <strong>+2d6 Loot</strong> (T1) to the Communal Hoard.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>54–56</strong></td>
+<td style="text-align:left"><strong>Tribute Demand</strong></td>
+<td style="text-align:left">Rival warlords demand tribute. Pay <strong>10 Loot</strong> (T1) or increase <strong>Threat Level by +2</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>61–65</strong></td>
+<td style="text-align:left"><strong>Smooth Operations</strong></td>
+<td style="text-align:left">The warren is humming. All active Labor tasks gain a <strong>Boon 1 (+1d)</strong> this turn.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>66</strong></td>
+<td style="text-align:left"><strong>Ancestral Miracle!</strong></td>
+<td style="text-align:left">Green flames erupt from the Bone Pile. Add <strong>+1 Skull</strong> to the Bone Pile and reset <strong>Swarm Mood to 0</strong>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-3-labor-allocation-and-operations" tabindex="-1">Step 3: Labor Allocation &amp; Operations</h3>
+<ol>
+<li><strong>Passive Harvest:</strong> Collect automatic yields from active <code>[Facility]</code> and <code>[Outpost]</code> assets (e.g., Junkyard Sifter generating +2 Scrap).</li>
+<li><strong>Workforce Allocation:</strong> Assign available <strong>Laborer Dice</strong> to active projects:
+<ul>
+<li><strong>Scavenging Scrap:</strong> Produces raw <strong>Scrap</strong> for the Hoard.</li>
+<li><strong>Recruiting Runts:</strong> Captures wild goblins to expand the <strong>Gobbo Pool</strong> permanently.</li>
+<li><strong>Scouting Targets:</strong> Surveys upcoming raid sites to reveal <strong>Danger Ratings</strong>, <strong>Objectives</strong>, and <strong>Bypasses</strong>.</li>
+<li><strong>Excavating Projects:</strong> Progresses construction thresholds for new facilities.</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<blockquote>
+<p><strong>THE LABOR RESOLUTION RULE: SAFE VS. PUSH</strong>
+When committing Laborer Dice to any labor task, players declare their work method:</p>
+<ul>
+<li><strong>Safe Labor (2 Dice):</strong> Guarantees <strong>1 automatic success</strong>. No dice rolled; zero risk of injury.</li>
+<li><strong>Risky Push (1 Die):</strong> Roll <strong>1d6</strong> against <strong>4+</strong> (6s explode). However, rolling a <strong>1</strong> triggers a workplace accident: the working runt is injured, placing that 1 die in the medical tent (unavailable for labor or raids for 1 Lair Turn).</li>
+</ul>
+</blockquote>
+</blockquote>
+<h3 id="step-4-boss-downtime-actions" tabindex="-1">Step 4: Boss Downtime Actions</h3>
+<p>Each active <strong>Goblin Boss</strong> executes <strong>one</strong> personal Downtime Action:</p>
+<ul>
+<li><strong>The Pitch (Mouth Test):</strong> Deliver an inspiring or terrifying speech. Pass a <strong>Mouth 4+/1</strong> test to reduce <strong>Swarm Mood by 1</strong>. <em>(Alternative: Spend 5 Loot from the Hoard to buy a round of rotgut grog, automatically reducing Swarm Mood by 1 with no roll).</em></li>
+<li><strong>Laying Low (Slink Test):</strong> Lead scouts into the surrounding wilderness to eliminate enemy patrols and erase tracks. Pass a <strong>Slink 4+/1</strong> test to reduce <strong>Threat Level by 1</strong>. <em>(Alternative: Spend 5 Loot to bribe local corrupt watchmen).</em></li>
+<li><strong>Custom Crafting (Brains Test):</strong> Operate a workshop to assemble, modify, or overclock weapons and armor using <strong>Scrap</strong> and <strong>Oddities</strong> (see <a href="05_Combat_Engine.md">Combat Engine</a>).</li>
+<li><strong>The Skim (Slink Test):</strong> Secretly divert wealth from the Communal Hoard into your <strong>Gang’s Private Hoard</strong>. Pass a <strong>Slink 4+/1</strong> test to divert up to your <strong>Slink</strong> rating in <strong>Loot Value</strong>. If your roll contains any <strong>1s</strong>, you are caught: you receive 0 Loot and <strong>Swarm Mood increases by +1</strong>.</li>
+<li><strong>Bar Brawl / Power Play (Tough or Mouth Test):</strong> Challenge a rival Gang’s dominance over a Lair facility. Pass a <strong>Tough 4+/1</strong> (physical brawl) or <strong>Mouth 4+/1</strong> (screaming dominance) test to transfer 1 point of contribution on that asset’s ledger from the defender to your Gang.</li>
+<li><strong>Beast Taming (Brains or Tough Test):</strong> Break and train a captured beast. Pass a <strong>Brains 4+/1</strong> or <strong>Tough 4+/1</strong> test to attach a beast archetype tag (e.g., <code>[Wolf Mount]</code>, <code>[Squig Hound]</code>) to a commanded <strong>Mob</strong>.</li>
+</ul>
+<hr>
+<h2 id="3-the-modular-asset-framework-and-dominance" tabindex="-1">3. The Modular Asset Framework &amp; Dominance</h2>
+<p>Knowledge and infrastructure in the Lair are not an abstract tech tree. <strong>Knowledge is held in living Persons, physical Facilities, Allies, and Blueprints.</strong> If an asset is killed, destroyed, or lost, its capability is disabled immediately.</p>
+<h3 id="the-four-asset-categories" tabindex="-1">The Four Asset Categories</h3>
+<ol>
+<li><code>[Person]</code> <strong>(Elders, Specialists, Captives):</strong> Living experts.
+<ul>
+<li><em>Elders:</em> Retired Level 6 Bosses. High loyalty, but frail (vulnerable to health complications).</li>
+<li><em>Specialists:</em> Hired non-goblin outcasts. Require weekly <strong>Loot Upkeep</strong>; leave if unpaid.</li>
+<li><em>Captives:</em> Enslaved enemies (Dwarves, Humans, Elves). Provide elite masterwork knowledge, but carry high <strong>Flight Risk</strong> and increase <strong>Threat Level</strong>.</li>
+</ul>
+</li>
+<li><code>[Facility]</code> <strong>(Workshops, Dens, Fortifications):</strong> Physical structures built with <strong>Loot</strong> and <strong>Scrap</strong>.</li>
+<li><code>[Ally]</code> <strong>(Befriended Monsters, Patron Factions):</strong> External creatures living alongside the horde. Powerful, but demand food or cause social friction.</li>
+<li><code>[Blueprint]</code> <strong>(Physical Schematics, Stolen Scrolls):</strong> Fragile paper or stone schematics (Bulk 0). Destroyed if hit by fire or water complications.</li>
+</ol>
+<h3 id="core-asset-rules" tabindex="-1">Core Asset Rules</h3>
+<ul>
+<li><strong>The Non-Stacking Clause:</strong> Identical mechanical boons from Lair assets do not stack. A <strong>Mob</strong> can only gain a maximum of <strong>+1 passive Defense Die</strong> from Lair assets, regardless of how many armories or martial Elders are present.</li>
+<li><strong>Loss of Knowledge:</strong> Destroying or losing an asset immediately disables its associated capability until a replacement asset is secured.</li>
+</ul>
+<hr>
+<h3 id="dominance-and-inter-gang-politics" tabindex="-1">Dominance &amp; Inter-Gang Politics</h3>
+<p>While the Lair belongs to all goblins, individual assets are controlled by specific Gangs through <strong>Dominance</strong>:</p>
+<ol>
+<li><strong>The Contribution Ledger:</strong> When constructing or upgrading an asset, players record the total <strong>Loot</strong>, <strong>Scrap</strong>, and <strong>Laborer Dice</strong> contributed by their specific Gang.</li>
+<li><strong>Dominant Gang:</strong> The Gang with the highest cumulative contribution holds <strong>Dominance</strong> over that asset.</li>
+<li><strong>Disputed Status:</strong> Tied contributions render an asset <em>Disputed</em> (no Gang gains the kickback) until one Gang contributes additional resources or wins a <strong>Bar Brawl</strong> Downtime Action.</li>
+</ol>
+<h4 id="dominance-benefits" tabindex="-1">Dominance Benefits</h4>
+<ul>
+<li><strong>Renaming Rights:</strong> The dominant Gang names the facility (e.g., <em>“Snikt’s Exploding Forge”</em>).</li>
+<li><strong>Priority Access:</strong> The dominant Gang acts first whenever facility use is contested.</li>
+<li><strong>Dominance Kickback:</strong> The dominant Gang exclusively receives the asset’s specific <strong>Dominance Perk</strong>.</li>
+</ul>
+<hr>
+<h3 id="outposts-and-macro-territory" tabindex="-1">Outposts &amp; Macro-Territory</h3>
+<p>Secured dungeon sites or regional structures (iron mines, ruined watchtowers, breweries) can be garrisoned as <strong>Outposts</strong>:</p>
+<ul>
+<li><strong>Garrison Cost:</strong> Deduct <strong>1d6</strong> permanently from the <strong>Gobbo Pool</strong> to staff the outpost.</li>
+<li><strong>Passive Yield:</strong> Generates a flat resource yield each <strong>Lair Turn</strong> (e.g., <em>Iron Mine: +4 Scrap; Brewery: -1 Swarm Mood</em>).</li>
+<li><strong>Supply Run Checks:</strong> During Step 3, resolve shipment delivery:
+<ul>
+<li><em>Safe Route:</em> Automatic delivery.</li>
+<li><em>Wild Route:</em> Roll <strong>1d6</strong>. On a <strong>1</strong>, bandits intercept the shipment (lose yield for this turn).</li>
+<li><em>Hostile Route:</em> Roll <strong>2d6</strong> against <strong>4+</strong>. Needs at least one success to deliver. Rolling all 1s means the Outpost is besieged and must be relieved in a raid.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="4-roguelite-generational-progression-and-death" tabindex="-1">4. Roguelite Generational Progression &amp; Death</h2>
+<p>Death in <strong>Gobbos</strong> is a stepping stone to greater power. When a <strong>Goblin Boss</strong> dies, the player does not start from zero.</p>
+<h3 id="the-next-gobbo-up-successor-creation" tabindex="-1">The “Next Gobbo Up” (Successor Creation)</h3>
+<p>When a Boss dies, the next prominent goblin in the Gang takes command:</p>
+<ul>
+<li><strong>Starting Stats:</strong> Successors start with <strong>1</strong> in all Main Stats, receive <strong>2 starting advances</strong> (standard character creation), plus a starting pool of <strong>Successor XP</strong>:
+<strong>Successor XP</strong> = <strong>Gang Infamy x 4</strong></li>
+<li><strong>Successor Caps:</strong> A successor cannot raise any stat above <strong>Level 4</strong> at creation and cannot start as an <strong>Elder</strong> (Level 6).</li>
+<li><strong>The Catch-Up Boost:</strong> A fresh successor receives <strong>+2 bonus XP</strong> on the first survived raid.</li>
+</ul>
+<h3 id="gang-marks-tattoos-of-the-dead" tabindex="-1">Gang Marks (Tattoos of the Dead)</h3>
+<p>The successor honors the fallen predecessor by receiving a crude soot tattoo:</p>
+<ul>
+<li>The successor inherits <strong>one Quirk or Twist</strong> possessed by the deceased Boss.</li>
+<li>The successor <strong>ignores all Stat and Tier requirements</strong> for this inherited Quirk.</li>
+<li>This Quirk counts toward the Boss’s limit of 3 personal Quirks.</li>
+</ul>
+<h3 id="named-items-and-revenge-quests" tabindex="-1">Named Items &amp; Revenge Quests</h3>
+<p>When a Boss dies, the Boss’s favored equipment absorbs that chaotic spirit and becomes a <strong>Named Item</strong>:</p>
+<ul>
+<li><strong>Imbued Boon:</strong> The item gains a <strong>T1 Boon</strong> reflecting the deceased Boss’s highest stat or cause of death.</li>
+<li><strong>Recovery:</strong> If surviving goblins drag the item back to the Lair, the successor inherits it.</li>
+<li><strong>Enemy Wielders:</strong> If the raid wipes and the item is lost, the enemy killer claims the weapon. The item can be reclaimed in future revenge raids.</li>
+<li><strong>Gang Rebellion:</strong> Named items rebel if wielded by a rival Gang (e.g., treating all Criticals as Fumbles).</li>
+</ul>
+<h3 id="patron-saints-of-the-bone-pile" tabindex="-1">Patron Saints of the Bone Pile</h3>
+<p>When creating a successor, the player may select one deceased Boss from the <strong>Bone Pile</strong> to adopt as a <strong>Patron Saint</strong>:</p>
+<ul>
+<li><strong>The Boon:</strong> Grants a specific situational power related to how the Saint lived or died (e.g., <em>Saint Grugor: Ignore fire damage once per raid</em>).</li>
+<li><strong>The Behavioral Catch:</strong> To maintain the boon, the Boss must follow the Saint’s behavioral quirk (e.g., always choosing the loudest path, or never retreating).</li>
+</ul>
+<h3 id="retirement-and-elders" tabindex="-1">Retirement &amp; Elders</h3>
+<p>When a Boss earns enough XP to raise any Main Stat to <strong>Level 6</strong>, the Boss automatically <strong>Retires</strong> from active raiding to become an <strong>Elder</strong>:</p>
+<ul>
+<li><strong>Elder of Tough:</strong> Staffed at the Training Ring; grants <strong>+1 passive Defense Die</strong> (Armor) to all commanded friendly Mobs.</li>
+<li><strong>Elder of Slink:</strong> Staffed at the Shadow Den; reduces trap <strong>Target Numbers (TN)</strong> by <strong>1</strong> (minimum 1) for the Gang.</li>
+<li><strong>Elder of Mouth:</strong> Staffed at the Council Room; increases starting and maximum <strong>Grunt</strong> by <strong>+1</strong>, and allows rallying fleeing Mobs as a <strong>Free Action</strong> once per raid.</li>
+<li><strong>Elder of Brains:</strong> Staffed at the Tinker Yard; enables installing <strong>1 extra Oddity</strong> on custom gear items.</li>
+</ul>
+<hr>
+<h2 id="5-lair-room-and-facility-structural-schema" tabindex="-1">5. Lair Room &amp; Facility Structural Schema</h2>
+<p>Every constructible room, workshop, outpost, or living asset is defined by the following template:</p>
+<pre><code class="language-markdown">### [Asset Name]
+- **Category / Type:** [Person: Elder | Person: Specialist | Person: Captive | Facility: Industry | Facility: Swarm | Facility: Beasts | Facility: Defense | Ally: Outcast | Blueprint]
+- **Tier:** [Tier 1–4]
+- **Construction Cost:** [X Base Loot, Y Base Scrap (or &quot;None / Recruited / Discovered&quot;)]
+- **Requirements &amp; Prerequisites:** [Warren Tier X, Outpost / Mine required, or specific Elder staffed]
+- **Upkeep:** [None | X Loot per Lair Turn | 1 Laborer Die per turn]
+- **Passive Benefit (Boon):** [Exact mechanical modification or passive yield per Lair Turn]
+- **Active Function / Crafting Station:** [Downtime Action enabled, Quality unlock, or Taming modifier]
+- **Volatility &amp; Cost (Bane / Catch):** [Complication trigger, flight risk, mutiny risk, or hazard]
+- **Dominance Kickback:** [Exclusive mechanical perk granted to the Gang holding Dominance]
+- **Upgrade Tiers:** [Path to upgrade to higher Tier and associated costs]
+</code></pre>
+<h3 id="reference-facility-instances" tabindex="-1">Reference Facility Instances</h3>
+<h4 id="the-scrap-forge" tabindex="-1">The Scrap Forge</h4>
+<ul>
+<li><strong>Category / Type:</strong> Facility: Industry</li>
+<li><strong>Tier:</strong> Tier 2</li>
+<li><strong>Construction Cost:</strong> 10 Loot (T2), 15 Scrap</li>
+<li><strong>Requirements &amp; Prerequisites:</strong> Warren Tier 2</li>
+<li><strong>Upkeep:</strong> None</li>
+<li><strong>Passive Benefit (Boon):</strong> Unlocks Standard Quality (T3) weapon crafting; provides +1 Guaranteed Taming Success on weapon crafting.</li>
+<li><strong>Active Function / Crafting Station:</strong> Custom Crafting Station for weapons and armor.</li>
+<li><strong>Volatility &amp; Cost (Bane / Catch):</strong> Crafting rolls containing any 1s inflict 1 Grit damage to the crafter.</li>
+<li><strong>Dominance Kickback:</strong> The dominant Gang crafts weapon chassis for 0 base Scrap cost.</li>
+<li><strong>Upgrade Tiers:</strong> Upgrade to Masterwork Foundry (Tier 3) for 20 Loot (T3), 30 Scrap.</li>
+</ul>
+<h4 id="spore-breeding-nursery" tabindex="-1">Spore Breeding Nursery</h4>
+<ul>
+<li><strong>Category / Type:</strong> Facility: Swarm</li>
+<li><strong>Tier:</strong> Tier 2</li>
+<li><strong>Construction Cost:</strong> 10 Loot (T2), 20 Scrap</li>
+<li><strong>Requirements &amp; Prerequisites:</strong> Warren Tier 2</li>
+<li><strong>Upkeep:</strong> None</li>
+<li><strong>Passive Benefit (Boon):</strong> Generates <strong>+1d6 Runts</strong> added to the Gobbo Pool at the start of every Lair Turn (up to Tier cap).</li>
+<li><strong>Active Function / Crafting Station:</strong> Safe labor assignment for runt cultivation.</li>
+<li><strong>Volatility &amp; Cost (Bane / Catch):</strong> If Swarm Mood is 4+, rolls of 1 on Lair Events spoil 5 Loot worth of supplies.</li>
+<li><strong>Dominance Kickback:</strong> The dominant Gang gains first pick of recruits, increasing their commanded Mob’s <strong>Size cap by +1</strong>.</li>
+<li><strong>Upgrade Tiers:</strong> Upgrade to Great Fungal Warren (Tier 3) for 25 Loot (T3), 35 Scrap.</li>
+</ul>
+<hr>
+<h2 id="content-extension-point" tabindex="-1">Content Extension Point</h2>
+<p>[CONTENT EXTENSION POINT: Lair Rooms &amp; Facilities]</p>
+<p>All future compendiums of Lair structures, workshops, specialist quarters, beast pens, fortifications, and ancestral shrines must implement the Lair Room &amp; Facility Structural Schema defined above, respecting Warren Tier caps, asset capacity limits, and Dominance kickbacks.</p>
+<hr>
+<h2 id="mechanical-gaps-and-unresolved-systems" tabindex="-1">Mechanical Gaps &amp; Unresolved Systems</h2>
+<p>[MISSING RULE / GAP: Retaliatory Lair Assault Resolution Engine]</p>
+<ul>
+<li><strong>Description:</strong> Reaching Threat Level 5 triggers a “Retaliatory Assault” against the Lair, after which Threat resets to 2. However, there are no codified rules for how this assault is resolved, no enemy assault force generation tables, no rules for how defense facilities (like Trapped Palisade rolling 3d6) apply defensive damage, and no defined consequences if the defense is lost.</li>
+<li><strong>Why it is needed:</strong> Threat Level 5 is the primary external pressure clock in the game. Without clear resolution mechanics and stakes, regional heat has zero teeth.</li>
+<li><strong>Suggested Resolution:</strong> Establish a formal 3-step Lair Defense procedure:
+<ol>
+<li>Determine Enemy Force based on Warren Tier and Threat level.</li>
+<li>Automated Defense Phase: Roll active Defense Facilities (e.g. 3d6 from Palisade) and assign Laborer Dice to inflict damage before enemies breach.</li>
+<li>Tactical Skirmish Phase: If enemies survive, resolve a combat round in the Lair Entrance Zone using Bosses and Raider Mobs. If defeated, the Lair suffers 1 destroyed Asset, loses 1d6 from the Gobbo Pool, and loses half the Communal Hoard.</li>
+</ol>
+</li>
+</ul>
+<p>[MISSING RULE / GAP: Mutiny Resolution Mechanics &amp; Facility Recovery]</p>
+<ul>
+<li><strong>Description:</strong> At Swarm Mood 5, a “Mob Mutiny” locks one random Lair facility and forces grunts to demand upfront bribes of 5 Loot per Mob to embark on raids. The rules do not define how a locked facility is unlocked, what happens if players refuse to pay bribes, or how mutiny is suppressed without money.</li>
+<li><strong>Why it is needed:</strong> Mutiny is the core internal pressure clock. Players need actionable mechanical paths to break a strike through intimidation, brawling, or concessions.</li>
+<li><strong>Suggested Resolution:</strong> Codify Mutiny suppression options:
+<ol>
+<li>Bribe: Pay 5 T1 Loot per Mob to clear the raid lockout.</li>
+<li>Tyrant’s Beatdown: A Boss makes an opposed Tough 5+/2 or Mouth 5+/2 test as a Downtime Action. Success reduces Swarm Mood to 3 and unlocks the facility; failure inflicts 1 Grit damage on the Boss and increases Threat by +1 from the riot.</li>
+</ol>
+</li>
+</ul>
+<p>[MISSING RULE / GAP: Asset Decommissioning, Destruction, and Slot Recovery]</p>
+<ul>
+<li><strong>Description:</strong> A Lair can maintain up to (Tier * 2) + 2 active assets. If players wish to replace an obsolete Tier 1 facility with an advanced Tier 3 workshop, there are no rules for demolishing or dismantling existing assets, nor is it clear if dismantling returns Scrap to the Hoard.</li>
+<li><strong>Why it is needed:</strong> Hard asset caps force players to cycle assets as the Warren expands.</li>
+<li><strong>Suggested Resolution:</strong> Add a “Dismantle Asset” Downtime action: spending 1 Laborer Die dismantles an existing facility, frees the asset slot immediately, and recovers 50% of its base Scrap cost into the Communal Hoard.</li>
+</ul>
+<p>[MISSING RULE / GAP: Mid-Raid Boss Death &amp; Successor Spawning Timing]</p>
+<ul>
+<li><strong>Description:</strong> The rules describe the “Next Gobbo Up” successor generation during Homecoming. However, they do not specify what happens in the middle of a raid when a Boss dies. Does the player sit out the session, or does the next biggest runt in their Mob immediately promote to Boss status mid-combat?</li>
+<li><strong>Why it is needed:</strong> Player elimination during tactical skirmishes ruins table engagement and violates Tenet 1 (Fun at the Table).</li>
+<li><strong>Suggested Resolution:</strong> Implement the “Instant Promotion” rule: If a Boss dies during combat and commands an active Mob, the player immediately promotes the leading runt of that Mob into a makeshift Boss (with 3 Grit, 1 in all stats, and current Mob Size reduced by 1). Full successor generation and XP allocation take place during Homecoming.</li>
+</ul>
+<p>[MISSING RULE / GAP: Formal Patron Saint Ledger &amp; Appeasement Trigger System]</p>
+<ul>
+<li><strong>Description:</strong> The rules introduce Patron Saints from the Bone Pile with situational boons and behavioral appeasement catches, but lack rules governing: (a) how many Patron Saints a Gang can maintain; (b) the exact mechanical trigger for losing/restoring the boon; © the minimum criteria for a dead Boss to qualify as a Saint vs. a generic Skull.</li>
+<li><strong>Why it is needed:</strong> Patron Saints provide key roguelite meta-progression, but currently read as loose flavor suggestions.</li>
+<li><strong>Suggested Resolution:</strong>
+<ol>
+<li>A Boss can attune to exactly 1 Patron Saint from the Gang’s Bone Pile during character creation or Homecoming.</li>
+<li>Qualifying as a Saint requires the dead Boss to have reached at least Level 3 in one Main Stat or earned at least 5 Lifetime Glory.</li>
+<li>If the active Boss violates the Saint’s behavioral catch during a raid, the boon is disabled for the remainder of that raid and the subsequent Lair Phase.</li>
+</ol>
+</li>
+</ul>
+
+    </main>
+  </div>
+
+  <!-- ===== Scroll-to-top Button ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // --- LLM Dropdown Toggle ---
+    (function() {
+      const btn = document.getElementById('llmDropdownBtn');
+      const menu = document.getElementById('llmDropdownMenu');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = menu.classList.toggle('show');
+        btn.setAttribute('aria-expanded', isOpen);
+      });
+
+      document.addEventListener('click', () => {
+        menu.classList.remove('show');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    })();
+
+    // --- Theme Toggle ---
+    (function() {
+      const toggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      const stored = localStorage.getItem('gobbos-theme');
+      if (stored) html.setAttribute('data-theme', stored);
+
+      toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('gobbos-theme', next);
+      });
+    })();
+
+    // --- Sidebar Toggle (Mobile) ---
+    (function() {
+      const btn = document.getElementById('sidebarToggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+
+      function closeSidebar() {
+        sidebar.classList.remove('sidebar--open');
+        overlay.classList.remove('sidebar-overlay--visible');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('sidebar--open');
+        overlay.classList.toggle('sidebar-overlay--visible', isOpen);
+      });
+
+      overlay.addEventListener('click', closeSidebar);
+
+      // Close sidebar when clicking a nav link on mobile
+      sidebar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 900) closeSidebar();
+        });
+      });
+    })();
+
+    // --- Sidebar Collapse Toggle ---
+    document.querySelectorAll('.nav-group-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const targetId = 'nav-' + btn.getAttribute('data-target');
+        const list = document.getElementById(targetId);
+        if (list) list.style.display = expanded ? 'none' : '';
+        btn.querySelector('.toggle-icon').textContent = expanded ? '▸' : '▾';
+      });
+    });
+
+    // --- Scroll Spy ---
+    (function() {
+      const links = document.querySelectorAll('.nav-link');
+      const anchors = [];
+      links.forEach(link => {
+        const id = link.getAttribute('data-target');
+        const el = document.getElementById(id);
+        if (el) anchors.push({ el, link });
+      });
+
+      function updateActive() {
+        let current = null;
+        for (const item of anchors) {
+          const rect = item.el.getBoundingClientRect();
+          if (rect.top <= 120) current = item;
+        }
+        links.forEach(l => l.classList.remove('nav-link--active'));
+        if (current) current.link.classList.add('nav-link--active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    // --- Scroll to Top ---
+    (function() {
+      const btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', () => {
+        btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
+      }, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // --- Fetch Update Status ---
+    (function() {
+      fetch('status.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.status === 'error') {
+            const banner = document.getElementById('statusBanner');
+            if (banner) banner.style.display = 'flex';
+          }
+        })
+        .catch(err => {
+          // If status.json does not exist or fails, do nothing
+          console.log('Update status check skipped:', err);
+        });
+    })();
+
+    // --- Anchor Scroll Fix ---
+    (function() {
+      function scrollToHash() {
+        if (window.location.hash) {
+          const id = decodeURIComponent(window.location.hash.substring(1));
+          const el = document.getElementById(id);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }, 100);
+          }
+        }
+      }
+      window.addEventListener('hashchange', scrollToHash);
+      window.addEventListener('DOMContentLoaded', scrollToHash);
+      window.addEventListener('load', scrollToHash);
+    })();
+
+    // --- Manual Sync Trigger ---
+    (function() {
+      const headerBtn = document.getElementById('headerSyncBtn');
+      const bannerBtn = document.getElementById('bannerSyncBtn');
+      
+      function handleSync(btn) {
+        if (!btn) return;
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        
+        // Add spinning/loading animation class
+        if (btn.classList.contains('sync-btn')) {
+          btn.classList.add('sync-btn--spinning');
+          btn.querySelector('span').textContent = 'Syncing...';
+        } else {
+          btn.textContent = 'Syncing...';
+        }
+        
+        fetch('/api/run-sync', { method: 'POST' })
+          .then(res => {
+            if (!res.ok) throw new Error('Server returned error status: ' + res.status);
+            return res.json();
+          })
+          .then(data => {
+            if (data && data.status === 'success') {
+              if (btn.classList.contains('sync-btn')) {
+                btn.querySelector('span').textContent = 'Success!';
+              } else {
+                btn.textContent = 'Success!';
+              }
+              // Reload page to reflect changes
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              throw new Error(data.error || 'Sync failed');
+            }
+          })
+          .catch(err => {
+            console.error('Sync failed:', err);
+            alert('Failed to rerun sync: ' + err.message);
+            // Restore button
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            if (btn.classList.contains('sync-btn')) {
+              btn.classList.remove('sync-btn--spinning');
+            }
+          });
+      }
+
+      if (headerBtn) {
+        headerBtn.addEventListener('click', () => handleSync(headerBtn));
+      }
+      if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => handleSync(bannerBtn));
+      }
+    })();
+  </script>
+
+  <!-- ===== Mermaid.js Integration ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    (function() {
+      function initMermaid() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        
+        const lightThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#f0e6d6',
+          primaryTextColor: '#231c16',
+          primaryBorderColor: '#8c2d19',
+          lineColor: '#c68a35',
+          secondaryColor: '#fdfbf7',
+          tertiaryColor: '#e5dcce',
+          edgeLabelBackground: '#faf5ec',
+          nodeBorder: '#8c2d19',
+          clusterBkg: '#eee5d5',
+          clusterBorder: '#c68a35',
+          titleColor: '#8c2d19'
+        };
+
+        const darkThemeVariables = {
+          fontFamily: "'Alegreya', 'Lora', Georgia, serif",
+          fontSize: '14.5px',
+          primaryColor: '#241e1a',
+          primaryTextColor: '#e6dfd5',
+          primaryBorderColor: '#d44d32',
+          lineColor: '#d4a359',
+          secondaryColor: '#1a1613',
+          tertiaryColor: '#2a221c',
+          edgeLabelBackground: '#171412',
+          nodeBorder: '#d44d32',
+          clusterBkg: '#1c1815',
+          clusterBorder: '#8c6a38',
+          titleColor: '#d44d32'
+        };
+
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: 'base',
+          themeVariables: isDark ? darkThemeVariables : lightThemeVariables,
+          flowchart: {
+            curve: 'basis',
+            padding: 16,
+            nodeSpacing: 50,
+            rankSpacing: 40,
+            htmlLabels: true
+          },
+          securityLevel: 'loose'
+        });
+
+        // Convert code blocks with language-mermaid to <pre class="mermaid">
+        const mermaidCodeBlocks = document.querySelectorAll('pre > code.language-mermaid');
+        mermaidCodeBlocks.forEach((codeEl) => {
+          const preEl = codeEl.parentElement;
+          if (preEl && preEl.tagName === 'PRE') {
+            // Save raw mermaid source text if not already saved
+            if (!preEl.getAttribute('data-mermaid-src')) {
+              preEl.setAttribute('data-mermaid-src', codeEl.textContent);
+            }
+            const src = preEl.getAttribute('data-mermaid-src');
+            preEl.className = 'mermaid';
+            preEl.textContent = src;
+            preEl.removeAttribute('data-processed');
+          }
+        });
+
+        // Also handle any pre.mermaid that might need re-render on theme change
+        const directMermaidBlocks = document.querySelectorAll('pre.mermaid');
+        directMermaidBlocks.forEach((preEl) => {
+          if (!preEl.getAttribute('data-mermaid-src')) {
+            preEl.setAttribute('data-mermaid-src', preEl.textContent);
+          }
+          const src = preEl.getAttribute('data-mermaid-src');
+          preEl.textContent = src;
+          preEl.removeAttribute('data-processed');
+        });
+
+        if (document.querySelectorAll('.mermaid').length > 0) {
+          mermaid.run({
+            nodes: document.querySelectorAll('.mermaid')
+          }).catch(err => console.error('Mermaid render error:', err));
+        }
+      }
+
+      // Initial render on DOM load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMermaid);
+      } else {
+        initMermaid();
+      }
+
+      // Re-initialize mermaid when theme changes
+      const themeToggleBtn = document.getElementById('themeToggle');
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          setTimeout(initMermaid, 50);
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>
