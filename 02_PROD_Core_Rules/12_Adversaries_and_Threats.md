@@ -8,29 +8,17 @@
 
 In Gobbos, the Game Master (GM) **never rolls dice**. Adversaries do not test for success, roll to hit, or roll variable damage. Every enemy action is a deterministic, incoming physical threat.
 
-```
-                    Adversary Declares Attack
-               (Static Threat Profile + Flat Damage)
-                                 │
-                                 ▼
-                     Goblin Boss Clatter Roll
-                                 │
-                   ┌─────────────┴─────────────┐
-                   ▼                           ▼
-          Saved Action Available?        0 Saved Actions?
-                   │                           │
-                   ▼                           ▼
-        Roll Active Stat Dice +            Cannot Dodge/Parry!
-        Passive Armor Dice                 (Roll Armor Dice Only)
-                   │                           │
-        ┌──────────┴──────────┐                │
-        ▼                     ▼                ▼
-   Stat Successes        Stat Successes   Every Armor Die 5+
-   >= Threat TN           < Threat TN     Reduces Damage by 1
-        │                     │                │
-        ▼                     ▼                ▼
-    0 Damage             Apply Armor      Remaining Damage
-  (Clean Dodge/Parry)    Mitigation       Deducted from Grit
+```mermaid
+flowchart TD
+    A["Adversary Declares Attack<br>(Static Threat Profile + Flat Damage)"] --> CR["Goblin Boss Clatter Roll"]
+    CR --> SA{"Saved Action Available?"}
+    SA -->|Yes| E1["Roll Active Stat Dice + Passive Armor Dice"]
+    SA -->|No / 0 Saved Actions| E2["Cannot Dodge/Parry!<br>(Roll Passive Armor Dice Only)"]
+    E1 --> ST{"Stat Successes?"}
+    ST -->|Successes >= Threat TN| ZD["0 Damage Taken<br>(Clean Dodge/Parry)"]
+    ST -->|Successes < Threat TN| PA["Apply Armor Mitigation"]
+    E2 --> PA
+    PA --> RD["Every Armor Die 5+ Reduces Damage by 1<br>Remaining Damage Deducted from Grit"]
 ```
 
 ### Threat Profiles and Flat Damage
@@ -55,7 +43,7 @@ Elites and Bosses represent formidable champions, armored commanders, and coloss
 *   **The Wounds Track:** Elites and Bosses track survivability using a **Wounds Track** (typically **2 to 8 Wounds**).
 *   **The Overkill Rule:** An attack deals **1 Wound for every full multiple of the target's Defence TN** scored on a single attack roll:
 
-$$\text{Wounds Dealt} = \left\lfloor \frac{\text{Attack Successes}}{\text{Target Defence TN}} \right\rfloor$$
+**Wounds Dealt** = **Attack Successes** / **Target Defence TN** (rounded down)
 
 >> **GOLDEN RULE: No Fractional Wounds**
 >> Leftover successes that do not form a complete multiple of the enemy's **Defence TN** are discarded. They do not carry over to subsequent attacks.
@@ -74,7 +62,7 @@ Enemy Mobs represent coordinated squads of standard foes acting as a single unit
 
 An Enemy Mob's automatic attack damage scales deterministically with its current **Size**:
 
-$$\text{Enemy Mob Damage} = \text{Base Unit Damage} + (\text{Current Mob Size} - 1)$$
+**Enemy Mob Damage** = **Base Unit Damage** + (**Current Mob Size** - 1)
 
 *   **Attacking a Player Mob:** The Enemy Mob delivers this damage across the frontline, affecting a number of player goblin health dice equal to the Enemy Mob's current **Size** (targeting the lowest-value dice first).
 *   **Attacking a Goblin Boss:** The Enemy Mob delivers this total damage as a single combined strike, which the **Goblin Boss** defends against using a single **Clatter Roll**.
@@ -85,30 +73,10 @@ $$\text{Enemy Mob Damage} = \text{Base Unit Damage} + (\text{Current Mob Size} -
 
 To eliminate rulebook page-flipping and prevent rules bloat during combat, all adversary behaviors are organized into a strict three-layer hierarchy.
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│ LAYER 1: UNIVERSAL ANCESTRIES                               │
-│ (Beast, Humanoid, Undead, Monstrosity, Fiend)               │
-│ • Universal biological/psychological rules                  │
-│ • Resolved by GM without printing on individual statblocks  │
-└──────────────────────────────┬──────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────┐
-│ LAYER 2: STANDARDIZED TAGS                                  │
-│ (`[Hardened]`, `[Heavy]`, `[Fast]`, `[Regenerating]`, etc.) │
-│ • Universal physical modifiers from Master Tag Index        │
-│ • Compact keyword notation on statblocks                    │
-└──────────────────────────────┬──────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────┐
-│ LAYER 3: UNIQUE STATBLOCK TRAITS                            │
-│ (Custom monster mechanics, reactions, and special triggers) │
-│ • Standard Enemies: Maximum 1 Unique Trait                  │
-│ • Elites & Bosses: Maximum 2 Unique Traits                  │
-│ • Printed directly on the creature's statblock              │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    L1["LAYER 1: UNIVERSAL ANCESTRIES<br>(Beast, Humanoid, Undead, Monstrosity, Fiend)<br>- Universal biological/psychological rules<br>- Resolved by GM without printing on individual statblocks"] --> L2["LAYER 2: STANDARDIZED TAGS<br>([Hardened], [Heavy], [Fast], [Regenerating], etc.)<br>- Universal physical modifiers from Master Tag Index<br>- Compact keyword notation on statblocks"]
+    L2 --> L3["LAYER 3: UNIQUE STATBLOCK TRAITS<br>(Custom monster mechanics, reactions, and special triggers)<br>- Standard Enemies: Maximum 1 Unique Trait<br>- Elites & Bosses: Maximum 2 Unique Traits<br>- Printed directly on the creature's statblock"]
 ```
 
 ### Layer 1: Universal Ancestries
@@ -130,7 +98,7 @@ Every adversary belongs to exactly one **Ancestry**, establishing its core psych
 *   **Holy Vulnerability:** Attacks carrying the `[Angelic]` or `[Light]` tags deal **+1 Success** (lowering effective **Defence TN** by 1).
 
 #### 4. Monstrosity
-*   **Mass & Stagger Resistance:** Immune to the **Staggered** condition from partial hits unless the attack's **Impact Size** meets or exceeds the monster's physical **Size** ($\text{Impact Size} \ge \text{Size}$).
+*   **Mass & Stagger Resistance:** Immune to the **Staggered** condition from partial hits unless the attack's **Impact Size** meets or exceeds the monster's physical **Size** (Impact Size >= Size).
 *   **Natural Cleave:** All melee attacks possess the `Cleave 2` trait (or higher), sweeping across multiple frontline health dice.
 
 #### 5. Fiend (Demon)
@@ -162,7 +130,7 @@ Adversaries can trigger specialized reactions (such as parrying shields, retalia
 ### Group Attacks (Enemy Swarms vs Bosses)
 To prevent overwhelming action-economy drain and endless individual rolls when multiple standard enemies surround a single **Goblin Boss**:
 *   **Combined Strike:** Up to **three (3) standard enemies** in melee range of the same **Goblin Boss** combine their attacks into a single strike.
-*   **Damage Formula:** $\text{Combined Damage} = \text{Base Damage} + 1 \text{ per additional attacking enemy}$.
+*   **Damage Formula:** **Combined Damage** = **Base Damage** + 1 per additional attacking enemy.
 *   **Single Defense:** The **Goblin Boss** defends against the combined blow using a single **Clatter Roll**.
 
 ---
@@ -177,10 +145,10 @@ An enemy group must make an immediate **Morale Check** during the **Round Closur
 ### The Swarm Terror Check
 The players roll a combined **Swarm Terror Pool** against the enemy group's static **Morale TN** (testing against **5+** difficulty):
 
-$$\text{Swarm Terror Dice} = \sum \text{Surviving Mob Sizes in Zone/Adjacent} + \sum \text{Surviving Bosses in Zone/Adjacent}$$
+**Swarm Terror Dice** = **Surviving Mob Sizes in Zone/Adjacent** + **Surviving Bosses in Zone/Adjacent**
 
-*   **Success ($\text{Successes} \ge \text{Morale TN}$):** The enemy group breaks! The enemies drop heavy gear and must spend **two (2) Move actions** on their turns fleeing toward the nearest exit.
-*   **Failure ($\text{Successes} < \text{Morale TN}$):** The enemies hold their ground and continue fighting.
+*   **Success (Successes >= Morale TN):** The enemy group breaks! The enemies drop heavy gear and must spend **two (2) Move actions** on their turns fleeing toward the nearest exit.
+*   **Failure (Successes < Morale TN):** The enemies hold their ground and continue fighting.
 
 ### The Commander Rally
 If an **Enemy Commander** survives and did not break, the commander may spend **1 Standard Action** on its turn to attempt a **Rally**:

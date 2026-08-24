@@ -8,33 +8,18 @@
 
 Magic in Gobbos is unstable, highly tactile, and governed by a **Push-Your-Luck (Farkle-style)** pattern-matching dice engine. There are no mana points, spell slots, or daily casting limits. Magic is limited solely by your nerve, your **Brains** attribute, and the imminent danger of your head detonating.
 
-```
-       Declare Power Word Tag (1 Standard Action)
-                           │
-                           ▼
-               Roll Brains Dice Pool (d6s)
-                           │
-             ┌─────────────┴─────────────┐
-             ▼                           ▼
-      At Least 1 Success?            0 Successes?
-             │                           │
-             │                           ▼
-             │                     Farkle Mishap!
-             │                  (Catastrophic Backfire)
-             │
-             ├───────────────────────────┐
-             ▼                           ▼
-      SETTLE FOR TIER             PUSH YOUR LUCK!
-  (Lock largest matching      (Lock current successes,
-   set & resolve effect)      reroll non-success dice)
-                                         │
-                         ┌───────────────┴───────────────┐
-                         ▼                               ▼
-                 New Successes?                   0 New Successes?
-                         │                               │
-                         ▼                               ▼
-                 Build Larger Set                 Farkle Mishap!
-               (Push again or Settle)          (Spell Fails & Backfires)
+```mermaid
+flowchart TD
+    D["Declare Power Word Tag (1 Standard Action)"] --> R["Roll Brains Dice Pool (d6s)"]
+    R --> S1{"At Least 1 Success?"}
+    S1 -->|No / 0 Successes| F1["Farkle Mishap!<br>(Catastrophic Backfire)"]
+    S1 -->|Yes| C{"Choose Action"}
+    C -->|Settle| ST["SETTLE FOR TIER<br>(Lock matching set & resolve effect)"]
+    C -->|Push| P["PUSH YOUR LUCK!<br>(Lock current successes, reroll non-success dice)"]
+    P --> S2{"New Successes?"}
+    S2 -->|Yes| BS["Build Larger Set<br>(Push again or Settle)"]
+    BS --> C
+    S2 -->|No / 0 New Successes| F2["Farkle Mishap!<br>(Spell Fails & Backfires)"]
 ```
 
 ### Prerequisites to Cast
@@ -82,15 +67,13 @@ If you choose to **Push** your luck and a reroll yields **zero (0) new successes
 
 The mechanical potency and area of effect of a spell are determined strictly by the size of the **largest matching set of success dice** (e.g. two 5s, three 6s, four 4s).
 
-```
-Matching Set Size             Spell Tier        Delivery Footprint & Impact
-──────────────────────────────────────────────────────────────────────────
-Single Success (No Pairs) ──► T1 (Minor)    ──► Touch / Melee (1 Success / 1 Damage)
-Pair (2-of-a-kind)        ──► T2 (Standard) ──► Ranged 1 Zone (2 Successes / 2 Damage)
-Triple (3-of-a-kind)      ──► T3 (Heroic)   ──► Zone-Wide Area (3 Successes / 3 Damage)
-Quadruple (4-of-a-kind)   ──► T4 (Blast)    ──► Multi-Zone Blast (4 Successes / 4 Damage)
-Quintuple (5-of-a-kind)   ──► T5 (Legendary)──► Map-Wide Reality Warp / Annihilation
-```
+| Matching Set Size | Spell Tier | Delivery Footprint & Impact |
+| :--- | :--- | :--- |
+| **Single Success (No Pairs)** | **T1 (Minor)** | Touch / Melee (1 Success / 1 Damage) |
+| **Pair (2-of-a-kind)** | **T2 (Standard)** | Ranged 1 Zone (2 Successes / 2 Damage) |
+| **Triple (3-of-a-kind)** | **T3 (Heroic)** | Zone-Wide Area (3 Successes / 3 Damage) |
+| **Quadruple (4-of-a-kind)** | **T4 (Blast)** | Multi-Zone Blast (4 Successes / 4 Damage) |
+| **Quintuple (5-of-a-kind)** | **T5 (Legendary)** | Map-Wide Reality Warp / Annihilation |
 
 ### The Five Spell Tiers
 *   **T1 Effect (Single Success, No Pairs):** Minor or niche manifestation. Inflicts 1 Grit/Size damage or grants +1 Success to an immediate physical action. Range: Touch / Melee.
@@ -105,9 +88,9 @@ If you roll multiple successes that do not form matching pairs (for example, rol
 *   **Bonus Magnitude:** Add **+1 Damage** (against Grit or Mob health dice) or **+1 Success** to the spell's resolution.
 
 > **Example:** A caster with **Brains 5** casts `[Shock]` against a **5+** profile.
-> *   **First Roll:** `[5, 5, 3, 2, 1]` $\rightarrow$ The caster locks the two `5`s (a pair $\rightarrow$ **T2 Effect**).
+> *   **First Roll:** `[5, 5, 3, 2, 1]` -> The caster locks the two `5`s (a pair -> **T2 Effect**).
 > *   **The Push:** The caster wants a zone-wide lightning blast. The two `5`s remain locked, and the caster rerolls the `[3, 2, 1]`.
-> *   **Second Roll:** `[5, 6, 2]` $\rightarrow$ The roll yields a new `5` and an exploding `6`. The caster locks both. The pool now contains three `5`s (a triple $\rightarrow$ **T3 Effect**) plus one singleton `6` (providing **1 Potency**).
+> *   **Second Roll:** `[5, 6, 2]` -> The roll yields a new `5` and an exploding `6`. The caster locks both. The pool now contains three `5`s (a triple -> **T3 Effect**) plus one singleton `6` (providing **1 Potency**).
 > *   **Final Resolution:** The caster stops. The spell unleashes a **T3 Zone-Wide** shockwave dealing 3 damage to all enemies in the target Zone, plus +1 damage to the enemy commander from the Potency die.
 
 ---
@@ -183,24 +166,17 @@ A spellcaster can tap the communal **Bangaranga Pool** (see [Core Resolution](01
 
 Ritual Magic represents extended, cooperative spellcasting used for monumental supernatural feats: purifying **`[Cursed]`** or **`[Bonded]`** oddities, warding the **Lair**, erecting permanent elemental barriers, or crafting magical artifacts.
 
-```
-  Lead Caster (Brains 3+) + Up to Mouth Assistants + Bangaranga Pool
-                                  │
-                                  ▼
-                     Extended Assembly Dice Pool
-              (Brains + 1d per Assistant + Bangaranga)
-                                  │
-                                  ▼
-                     Cooperative Test Sequence
-               (Accumulate successes toward Ritual TN)
-                                  │
-                ┌─────────────────┴─────────────────┐
-                ▼                                   ▼
-        Successes >= Ritual TN                  1s Rolled?
-                │                                   │
-                ▼                                   ▼
-        Ritual Complete!                    Material Attrition
-    (Curse Broken / Lair Warded)      (Lose Scrap & Spawn Hazards)
+```mermaid
+flowchart TD
+    P["Assemble Pool:<br>Lead Caster (Brains 3+) + Mouth Assistants + Bangaranga"] --> R["Roll Pool against Normal (5+) Difficulty"]
+    R --> ACC["Accumulate Successes toward Ritual TN"]
+    ACC --> S{"Successes >= Ritual TN?"}
+    S -->|Yes| DONE["Ritual Complete!<br>(Curse Broken / Lair Warded / Item Crafted)"]
+    S -->|No| CHK{"Any 1s Rolled?"}
+    CHK -->|Yes| COST["Material Attrition & Leakage<br>(Lose 1 Scrap/Loot per 1 rolled or spawn T2 Hazard)"]
+    CHK -->|No| NEXT["Continue Ritual Working"]
+    COST --> NEXT
+    NEXT --> R
 ```
 
 ### Ritual Parameters

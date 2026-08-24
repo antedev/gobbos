@@ -16,7 +16,7 @@ All mechanical resolution is player-facing. **The Game Master (GM)** never rolls
 ### Assembling the Dice Pool
 When you attempt an action that carries a risk of failure or meaningful consequence, you assemble a **Dice Pool** of standard **d6s**:
 
-$$\text{Dice Pool} = \text{Base Stat / Mob Size} + \text{Boons (+1d)} - \text{Banes (-1d)} + \text{Bangaranga Dice}$$
+**Dice Pool** = **Base Stat / Mob Size** + **Boons (+1d)** - **Banes (-1d)** + **Bangaranga Dice**
 
 *   **Goblin Boss Tests**: Your base pool equals your current rating in the relevant **Main Stat** (**Tough**, **Slink**, **Brains**, or **Mouth**), which ranges from 1 to 5 dice.
 *   **Mob Tests**: When rolling for a **Mob**, the base pool equals the Mob's current **Size** (1 to 5) for **Tough** tests, or a flat **2d6** for **Slink**, **Brains**, and **Mouth** tests (see [Mob Mechanics](06_Mob_Mechanics.md)).
@@ -45,7 +45,7 @@ The **Target Number (TN)** is the total count of successes required to pass the 
 ### Standard Slash Notation
 To eliminate math bloat during play, all checks use the standard slash notation:
 
-$$\text{[Stat]} \quad \text{[Target Face]+/[\text{Required Successes}]}$$
+`[Stat] [Target Face]+/[Required Successes]`
 
 *   **In Narrative Text**: *“You must pass a Slink test, needing at least 2 successes on a 5 or higher.”*
 *   **In System Paragraphs**: *“Climbing the slick wall requires a Slink test against the zone profile of 5+ (2 successes).”*
@@ -72,14 +72,11 @@ When you achieve a **Critical Success**, you immediately receive two mechanical 
 1.  **Grunt Surge**: Your **Goblin Boss** immediately regains **+1 Grunt** (up to your maximum **Grunt** rating).
 2.  **Adrenaline Burst**: You immediately gain **1 Free Action** (which must be a non-offensive **Move**, **Plunder**, or **Manipulate** action; see [Action Economy & Turn Flow](03_Action_Economy_and_Turn_Flow.md)).
 
-```
-[Natural 6 Rolled] ---> Counts as 1 Success ---> Roll +1 Bonus Die
-                              |
-                              +---> If Bonus Die is 6: CRITICAL SUCCESS!
-                                    - Counts as 1 Success
-                                    - Regain +1 Grunt
-                                    - Gain 1 Free Non-Offensive Action
-                                    - Roll another Bonus Die (Chains!)
+```mermaid
+flowchart LR
+    A["Natural 6 Rolled"] -->|Counts as 1 Success| B["Roll +1 Bonus Die"]
+    B -->|Rolls 6| C["CRITICAL SUCCESS!"]
+    C --> D["- Counts as 1 Success<br>- Regain +1 Grunt<br>- Gain 1 Free Non-Offensive Action<br>- Roll another Bonus Die (Chains!)"]
 ```
 
 [MISSING RULE / GAP: Bangaranga Multi-Explosion Critical Cascade Definition — When rolling Bangaranga Dice, a natural 6 explodes into two regular dice simultaneously. The rules must define whether a 6 rolled on either bonus die triggers a Critical Success. Suggested Resolution: Any bonus die generated from an exploding die that rolls a 6 is treated as a Critical Success, granting +1 Grunt and a free non-offensive action. However, a single test action can grant a maximum of +1 Grunt and 1 bonus Free Action regardless of how many individual double-six chains occur in that single pool throw.]
@@ -141,12 +138,7 @@ Multiple environmental, tactical, or situational modifiers do not stack indefini
 
 The **Bangaranga Pool** is a shared, communal pool of distinctly colored standard d6s (such as bright red or neon green) placed in the center of the table. It represents the collective hype, screaming, bloodlust, and erratic momentum of the entire goblin horde.
 
-```
-+-------------------------------------------------------------+
-|                   THE BANGARANGA POOL                       |
-|   Shared Horde Momentum  •  Double-Exploding 6s  •  High Risk |
-+-------------------------------------------------------------+
-```
+>> **The Bangaranga Pool:** Shared Horde Momentum • Double-Exploding 6s • High Risk
 
 ### 1. Seeding the Pool (Raid Start)
 At the start of every raid, the **Bangaranga Pool** is seeded with initial dice based on party composition:
@@ -178,8 +170,8 @@ Before rolling any test, a **Goblin Boss** may draw dice from the **Bangaranga P
 *   **Pool Coverage Requirement**: If the Bangaranga Pool contains insufficient dice to cover both the drawn dice and the required tax die, you cannot draw that number of dice.
 
 > **Example (Tax Calculation on a 5+/2 Test):**
-> *   Drawing 1 or 2 Bangaranga dice: No tax (2 dice drawn $\le$ TN 2). Exactly 2 dice are drawn and rolled.
-> *   Drawing 3 Bangaranga dice: Tax applies (3 dice drawn $>$ TN 2). Requires 4 total dice in the pool. 3 dice are rolled, and 1 die is discarded unrolled.
+> *   Drawing 1 or 2 Bangaranga dice: No tax (2 dice drawn <= TN 2). Exactly 2 dice are drawn and rolled.
+> *   Drawing 3 Bangaranga dice: Tax applies (3 dice drawn > TN 2). Requires 4 total dice in the pool. 3 dice are rolled, and 1 die is discarded unrolled.
 
 ### 4. Rolling Bangaranga Dice (Double Explosions)
 Bangaranga dice are rolled alongside your standard pool dice:
@@ -209,16 +201,12 @@ When an NPC, enemy guard, or trap resists a player's action:
 
 ## Summary of Core Resolution Rules
 
-```
-+------------------------------------------------------------------------------------+
-| 1. ROLL: Assemble pool = Stat/Size + Boons - Banes + Bangaranga. GM never rolls.   |
-| 2. COUNT: Match faces against Difficulty (Easy 4+, Normal 5+, Hard 6).             |
-| 3. EXPLODE: Every natural 6 is +1 success and rolls +1 bonus d6.                  |
-|    - Double explosion (6 -> 6) is a Critical: +1 Grunt & +1 Free Action.           |
-|    - Bangaranga 6 explodes into TWO regular dice.                                  |
-| 4. EVALUATE: Compare total successes to Target Number (TN).                        |
-|    - Successes >= TN: Action succeeds.                                             |
-|    - Successes < TN with 1s: Optional Gobbo Gamble (reroll 1s; fail = lose 1 Grunt).|
-|    - Pool <= 0d6: Salvage Roll (1d6: 6=Success, 1=Fumble & -1 Grunt, 2-5=Fail).   |
-+------------------------------------------------------------------------------------+
-```
+1.  **ROLL:** Assemble pool = **Base Stat / Mob Size** + **Boons** - **Banes** + **Bangaranga**. The GM never rolls.
+2.  **COUNT:** Match faces against Difficulty (**Easy 4+**, **Normal 5+**, **Hard 6**).
+3.  **EXPLODE:** Every natural **6** is +1 success and rolls +1 bonus d6.
+    *   Double explosion (6 -> 6) is a **Critical Success**: +1 Grunt & +1 Free Non-Offensive Action.
+    *   Bangaranga **6** explodes into **two regular dice**.
+4.  **EVALUATE:** Compare total successes to **Target Number (TN)**.
+    *   **Successes >= TN:** Action succeeds.
+    *   **Successes < TN with 1s:** Optional **Gobbo Gamble** (reroll all 1s; fail = lose 1 Grunt).
+    *   **Pool <= 0d6:** **Salvage Roll** (1d6: 6 = Success, 1 = Fumble & lose 1 Grunt, 2–5 = Failure).

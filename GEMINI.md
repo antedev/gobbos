@@ -259,3 +259,19 @@ To ensure that the setting feels immersive, lived-in, and highly atmospheric (dr
 1.  **No Negative Definitions**: Never define setting elements, cultures, or objects by stating what they are *not* (e.g., avoid "Goblins are not...", "Mire-Wells are not merely...", "They do not have..."). Instead, write active, positive, and declarative statements that establish what things *are* as absolute, objective fact.
 2.  **In-World Thematic Terminology**: Keep the running text grounded strictly in the fantasy setting. Do not intermingle modern, scientific, or clinical jargon (such as *somatic*, *database*, *software*, *hardware*, *clones*, *upload*, *containment registry*) into the in-universe lore. Place any real-world scientific comparisons or game-design rationales in separate, out-of-character "Behind the Scenes" notes, keeping the primary setting text fully immersive.
 3.  **Evocative Gothic-Victorian Prose**: Avoid dry, static bullet-point lists when describing lore. Write rich, descriptive narrative paragraphs focusing on sensory details (textures, smells of sulfur and boiling tallow, the visual weight of stone). Surface machinery and buildings must feel heavy, ornate, alchemical, and gothic (gargoyles venting steam, wrought-iron chains, brass-plated vaults) rather than clean, industrial, or modern.
+
+---
+
+### Markdown Formatting, Math & Diagramming Standards
+
+1.  **Zero LaTeX Math (The Plain Markdown Rule):**
+    LaTeX syntax (e.g., `$$...$$`, `$...$`, `\text{...}`, `\le`, `\ge`, `\times`, `\sum`, `\frac`) is strictly forbidden across all rulebook and lore files. It fails to render across standard Markdown parsers, mobile readers, and web views. Use standard Markdown typography and clean arithmetic instead:
+    *   **Formulas & Math Equations:** Format using bolded mechanical terms or inline code (e.g., `**Dice Pool** = **Base Stat** + **Boons** - **Banes**` or `**Wounds Dealt** = **Attack Successes** / **Target Defence TN** (rounded down)`).
+    *   **Comparisons & Operators:** Use standard symbols or plain English (e.g., `>= 1`, `<= Grunt`, `Size x 4 Bulk`).
+    *   **Standard Slash Notation:** Write checks directly as text or bold shorthand: `Slink 5+/2`, `Tough 4+/1`, `Brains 6/2`.
+
+2.  **Diagrams and Visual Layouts (Mermaid vs. Plain Markdown):**
+    *   **No Raw ASCII Art:** Raw ASCII diagrams (using `+---+`, `||`, `\/`, etc.) are strictly forbidden. They warp on smaller screens and break layout flow.
+    *   **Mermaid Diagrams:** When a visual diagram is genuinely needed (e.g., Round Phase sequences, Clatter Roll decision flows, Stagger checks, Raid phase loops), use standard **Mermaid** syntax (` ```mermaid `). Mermaid is cleanly readable in text editors and natively supported by Obsidian, GitHub, and web frontends.
+    *   **Text/Table Fallbacks:** If a concept can be explained cleanly in a Markdown table or a numbered procedural list, prefer the text/table approach over complex diagrams.
+

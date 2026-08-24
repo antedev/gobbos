@@ -31,27 +31,11 @@ When an incoming attack targets a **Goblin Boss**, the **Player** resolves defen
 
 When a **Goblin Boss** reaches **0 Grit**, the character dies. However, death in Gobbos is never instantaneous or silent; it triggers a blaze of chaotic glory before the character is removed from play.
 
-```
-Incoming Unmitigated Damage
-             │
-             ▼
-      Grit Drops to 0
-             │
-             ▼
-  THE FINAL ACT (Last Stand)
-  ┌────────────────────────────────────────┐
-  │ • 1 Standard Action at Easy (4+)       │
-  │ • 1 Free Order Action (Automatic Hit)  │
-  │ • Rule of Cool Resolution              │
-  └────────────────────────────────────────┘
-             │
-             ▼
-     Goblin Boss Dies
-  ┌────────────────────────────────────────┐
-  │ • Drop all carried gear in Zone        │
-  │ • Temporary Boss steps up from Mob     │
-  │ • Respawn & Successor XP in Lair       │
-  └────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    D["Incoming Unmitigated Damage"] --> Z["Grit Drops to 0"]
+    Z --> FA["THE FINAL ACT (Last Stand)<br>- 1 Standard Action at Easy (4+)<br>- 1 Free Order Action (Automatic Success)<br>- Rule of Cool Resolution"]
+    FA --> DTH["Goblin Boss Dies<br>- Drop all carried gear in Zone<br>- Temporary Boss steps up from Mob<br>- Respawn & Successor XP in Lair"]
 ```
 
 ### The Final Act (Last Stand)
@@ -70,7 +54,7 @@ During the remainder of the active raid, the **Player** cannot generate a new fu
 
 ### Successor Generation in the Lair
 When the raid party returns to the **Lair**, the player generates a true **Successor Boss** (see [The Lair Loop & Progression](10_The_Lair_Loop_and_Progression.md)):
-*   **Successor XP:** The new **Goblin Boss** starts with baseline stats plus bonus **Successor XP** equal to $\text{Gang Infamy} \times 4$.
+*   **Successor XP:** The new **Goblin Boss** starts with baseline stats plus bonus **Successor XP** equal to **Gang Infamy x 4**.
 *   **Inherited Quirks:** The new character inherits 1 **Gang Mark Quirk** from the ancestral pool.
 *   **Named Items:** The favorite weapon of the fallen boss can be recovered and enshrined as a **Named Item** in the **Lair**.
 
@@ -90,10 +74,10 @@ Powerful adversaries (**Elites** and **Bosses**) track survivability using a phy
 *   **Baseline Hit:** Scoring successes equal to the target's **Defence TN** inflicts **1 Wound**.
 *   **The Overkill Rule:** When a single attack roll exceeds the target's **Defence TN**, the attack deals **1 Wound for every full multiple of the Defence TN** scored on that roll:
 
-$$\text{Wounds Dealt} = \left\lfloor \frac{\text{Attack Successes}}{\text{Target Defence TN}} \right\rfloor$$
+**Wounds Dealt** = **Attack Successes** / **Target Defence TN** (rounded down)
 
 > **Example:** A **Goblin Boss** strikes an Elite Solar Praetor (**Defence 2**, **5 Wounds**).
-> *   Rolling **1 Success:** The attack fails to meet **Defence 2**. It deals **0 Wounds** (but may inflict **Staggered** if Impact Size $\ge$ Praetor Size).
+> *   Rolling **1 Success:** The attack fails to meet **Defence 2**. It deals **0 Wounds** (but may inflict **Staggered** if Impact Size >= Praetor Size).
 > *   Rolling **2 or 3 Successes:** Scores 1 full multiple of 2. Inflicts **1 Wound**.
 > *   Rolling **4 or 5 Successes:** Scores 2 full multiples of 2. Inflicts **2 Wounds**.
 > *   Rolling **6 Successes:** Scores 3 full multiples of 2. Inflicts **3 Wounds**.
@@ -109,15 +93,15 @@ When an attack scores at least **1 Success** but fails to meet the target's full
 
 ### Impact Size Values
 Every attack possesses an **Impact Size** determined by its weapon traits, source entity, or spell tier:
-*   **Standard Attack:** $\text{Impact Size} = 1$ (or current **Mob Size** for **Mob** attacks).
-*   **Heavy Weapon Trait:** $+1$ to **Impact Size** (a Size 1 **Goblin Boss** attacks with **Impact Size 2**).
-*   **Crushing Weapon Trait:** $+2$ to **Impact Size** (attacks with **Impact Size 3**).
-*   **Spells & Explosives:** $\text{Impact Size} = \text{Spell/Explosive Tier}$ (T1 = Size 1, T2 = Size 2, T3 = Size 3, T4 = Size 4, T5 = Size 5).
+*   **Standard Attack:** **Impact Size = 1** (or current **Mob Size** for **Mob** attacks).
+*   **Heavy Weapon Trait:** +1 to **Impact Size** (a Size 1 **Goblin Boss** attacks with **Impact Size 2**).
+*   **Crushing Weapon Trait:** +2 to **Impact Size** (attacks with **Impact Size 3**).
+*   **Spells & Explosives:** **Impact Size** = **Spell/Explosive Tier** (T1 = Size 1, T2 = Size 2, T3 = Size 3, T4 = Size 4, T5 = Size 5).
 
 ### Mass Resistance Rule
 A target is immune to the **Staggered** condition from partial hits unless the attack's **Impact Size** meets or exceeds the target's physical **Size**:
 
-$$\text{Impact Size} \ge \text{Target Physical Size}$$
+**Impact Size >= Target Physical Size**
 
 *   **Size 1 Target (Humanoid/Goblin):** Staggered by **Impact Size 1** or higher.
 *   **Size 2 Target (Warhorse/Bear):** Requires **Impact Size 2** or higher.

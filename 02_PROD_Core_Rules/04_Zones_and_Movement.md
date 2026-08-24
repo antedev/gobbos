@@ -8,12 +8,10 @@
 
 Tactical combat and exploration in **Gobbos** operate on an abstract node graph rather than a square or hex grid. The physical environment is divided into discrete, bounded spatial units called **Zones**.
 
-```
-+-------------------+       +-------------------+       +-------------------+
-|      Zone A       |       |      Zone B       |       |      Zone C       |
-|    Rooftop Node   |<=====>|  Courtyard Node   |<=====>|  Sewer Pipe Node  |
-| [Pillars] [5+/1]  |       | [Burning] [5+/2]  |       |  [Narrow] [6/1]   |
-+-------------------+       +-------------------+       +-------------------+
+```mermaid
+flowchart LR
+    ZA["Zone A: Rooftop Node<br>[Pillars] [5+/1]"] <--> ZB["Zone B: Courtyard Node<br>[Burning] [5+/2]"]
+    ZB <--> ZC["Zone C: Sewer Pipe Node<br>[Narrow] [6/1]"]
 ```
 
 ### Discrete Tactical Nodes
@@ -58,7 +56,7 @@ Spending one **Standard Action** on a **Move** action allows a character or Mob 
 Leaving a Zone that contains alert, unengaged enemy combatants is inherently dangerous.
 
 1.  **The Disengage Test:** To safely exit a Zone containing active enemies, a Goblin Boss or Mob must declare a Disengage maneuver as part of their Move action and pass a **Slink** test:
-    $$\text{Disengage Test} = \text{Slink } 5+ / \text{Highest Enemy Defence TN}$$
+    `Slink 5+/[Highest Enemy Defence TN]`
 2.  **Successful Disengage:** On a success, the unit moves out of the Zone safely along their declared movement path.
 3.  **Failed Disengage:** On a failure, the highest **Threat** enemy in the Zone immediately executes an unavoidable **Opportunity Attack** against the escaping unit. Furthermore, the unit's movement is immediately halted, forcing them to remain inside the current Zone for the remainder of the round.
 4.  **Bulk 3+ Restriction:** Wielding or hauling a loose object of **Bulk 3** or greater requires both hands and total focus. A character **cannot attempt a Disengage test** while clutching a Bulk 3+ item. To escape, the character must drop the item as a **Free Action**, defeat the threatening enemies, or have a Mob transport the burden.
@@ -69,12 +67,14 @@ Leaving a Zone that contains alert, unengaged enemy combatants is inherently dan
 
 Obstacles, low masonry, furniture, and environmental barriers provide crucial protection against incoming ranged attacks. Cover is classified into two distinct mechanical levels:
 
-```
-[Attacker in Zone A] ===( Ranged Attack )===> [Low Wall] ===> [Defender in Zone B]
-                                              (Partial Cover: -1d Attack / +1d Dodge)
-
-[Attacker in Zone A] ===( Line of Sight )===> [Solid Pillar] | [Defender in Zone B]
-                                              (Full Cover: Targeting Blocked)
+```mermaid
+flowchart LR
+    subgraph PartialCover ["Partial Cover (-1d Attack / +1d Dodge)"]
+    A1["Attacker in Zone A"] -->|Ranged Attack| W["Low Wall"] --> D1["Defender in Zone B"]
+    end
+    subgraph FullCover ["Full Cover (Targeting Blocked)"]
+    A2["Attacker in Zone A"] -.->|Line of Sight Blocked| P["Solid Pillar"] --- D2["Defender in Zone B"]
+    end
 ```
 
 ### Partial Cover
@@ -143,10 +143,7 @@ The GM can construct complex, encounter-wide weather patterns or atmospheric haz
 
 When a player chooses to split their forces and leave an unsupervised Mob behind at an inactive macro map node (for example, to guard a captured chokepoint, harvest a scrap pile, or hold a rear exit), that node is removed from active micro-combat tracking.
 
-```
-[Active Micro Combat Cluster] <======= Macro Distance =======> [Background Node: Size 3 Mob]
-(Played out in tactical rounds)                                (Resolved via Chaos Tick at Round Closure)
-```
+>> **Active vs. Background Tracking:** Active tactical zones are tracked in micro-combat rounds, while unsupervised mobs at distant macro nodes resolve their actions via the **Chaos Tick** during the Round Closure Phase.
 
 ### Unsupervised Mob Priority AI
 Without direct Boss supervision, an unsupervised Mob automatically follows its base instinct priority list:

@@ -8,29 +8,11 @@
 
 Every raid operates within a continuous four-phase loop that structures the transition from the **Lair** to the target site and back again:
 
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                            THE 4-PHASE RAID LOOP                            │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ PHASE 1: PLANNING & APPROACH (THE JOURNEY)                                  │
-│ • Select scouted target, review known Danger Ratings and Objectives.        │
-│ • Mobilize Raider Mobs from the Gobbo Pool (up to Boss Grunt limits).       │
-│ • Assign Travel Roles and traverse travel Stages to reach the raid site.    │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ PHASE 2: INFILTRATION & ASSAULT (ENTRY & BREACH)                            │
-│ • Establish starting Alert equal to the site's Base Danger Rating (1–5).     │
-│ • Infiltrate initial Zones, bypass sentries, and manage environmental traps.│
-├─────────────────────────────────────────────────────────────────────────────┤
-│ PHASE 3: OBJECTIVE & PLUNDER (TACTICAL EXECUTION)                           │
-│ • Complete the Main Objective (3–5 Raid Points).                            │
-│ • Pursue optional Targets of Opportunity (+2 Raid Points each).             │
-│ • Dismantle infrastructure for Scrap and spend Plunder actions on Loot.     │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ PHASE 4: EXTRACTION & ESCAPE (THE RETURN)                                   │
-│ • Declare extraction and retreat through connected Zones to the exit.       │
-│ • Haul physical Loot and Scrap through the Return Journey Stages.           │
-│ • Manage encumbrance, Mob Attrition, and pursuing forces.                   │
-└─────────────────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    P1["Phase 1: Planning & Approach (The Journey)<br>- Select scouted target & review Danger Ratings<br>- Mobilize Raider Mobs & assign Travel Roles<br>- Traverse travel Stages to reach raid site"] --> P2["Phase 2: Infiltration & Assault (Entry & Breach)<br>- Establish starting Alert equal to Danger Rating (1–5)<br>- Infiltrate initial Zones & bypass sentries"]
+    P2 --> P3["Phase 3: Objective & Plunder (Tactical Execution)<br>- Complete Main Objective (3–5 Raid Points)<br>- Pursue Opportunity Targets (+2 Raid Points each)<br>- Dismantle infrastructure for Scrap & Plunder Loot"]
+    P3 --> P4["Phase 4: Extraction & Escape (The Return)<br>- Declare extraction & retreat through Zones to exit<br>- Haul physical Loot/Scrap through Return Journey<br>- Manage encumbrance & pursuing forces"]
 ```
 
 ### Phase 1: Planning & Approach
@@ -80,7 +62,7 @@ Each tier represents an exponential **5-to-1 step** in value. Lower-tier items c
 Massive treasures possess a **Loot Value** greater than 1 of their Tier:
 * A stolen **Alabaster Sarcophagus** might be valued at **4x T4**.
 * Under the exponential scale, that single sarcophagus is worth:
-  $$\text{4x T4} = \text{20x T3} = \text{100x T2} = \text{500x T1}$$
+  **4x T4** = **20x T3** = **100x T2** = **500x T1**
 * This scale prevents hoarding loose Junk (T1) from trivializing high-tier economic purchases without physical smelting.
 
 ---
@@ -116,7 +98,8 @@ Greed has physical weight. All weapons, armor, tools, and plunder possess a **Bu
 
 ### Goblin Boss Carry Capacity
 Your unburdened **Carry** capacity is derived from your **Tough** stat:
-$$\text{Carry Capacity} = 4 + (2 \times \text{Tough}) \text{ Bulk}$$
+
+**Carry Capacity** = **4 + (2 x Tough) Bulk**
 
 | Tough Stat | Unburdened Carry | Over-Laden Threshold | Dragging Limit (2x Carry) |
 | :---: | :---: | :---: | :---: |
@@ -129,7 +112,7 @@ $$\text{Carry Capacity} = 4 + (2 \times \text{Tough}) \text{ Bulk}$$
 ### Load States & Penalties
 Total the **Bulk** of all carried weapons, armor, gear, and plunder to determine your current **Load State**:
 
-* **Unburdened ($\le$ Carry):** Standard **Movement** speed (in Zones per **Move** action); zero test penalties; full access to all standard actions and reactions.
+* **Unburdened (<= Carry):** Standard **Movement** speed (in Zones per **Move** action); zero test penalties; full access to all standard actions and reactions.
 * **Over-Laden (Carry + 1 to Carry + Tough):** **-1 Zone** per **Move** action (minimum 1 Zone); **Bane 1 (-1d)** on all physical **Slink** and **Tough** tests; you cannot perform two **Move** actions in the same round.
 * **Dragging (Carry + Tough + 1 to 2x Carry):** Fixed at **1 Zone** per **Move** action; auto-fails all stealth and jumping tests; requires **two hands**; you cannot attack with weapons and cannot perform **Dodge** or **Parry** **Reactions** (0 active defense).
 * **Immobilized (> 2x Carry):** **0 Zones** movement speed; you cannot move and must drop carried items as a **Free Action** to regain mobility.
@@ -138,11 +121,11 @@ Total the **Bulk** of all carried weapons, armor, gear, and plunder to determine
 Items of **Bulk 3 or higher** (iron safes, great cauldrons, stone statues, heavy kegs) represent awkward, heavy loads:
 * **Two Hands Required:** Hauling a loose Bulk 3+ item occupies two hands. You cannot wield a weapon, hold a shield, or cast somatic spells while carrying it.
 * **No Disengage:** You cannot perform a **Disengage** action while holding a Bulk 3+ item. You must drop the item as a **Free Action** to disengage, defeat adjacent enemies, or take Opportunity Attacks.
-* **Boss Hauling Limit:** A **Goblin Boss** can haul at most $\lfloor \text{Tough} / 2 \rfloor$ (minimum 1) loose Bulk 3+ items at one time.
+* **Boss Hauling Limit:** A **Goblin Boss** can haul at most Tough / 2 (rounded down, minimum 1) loose Bulk 3+ items at one time.
 
 ### Mob Carry Limits & Casualties
-* **Unburdened Mob Limit:** A **Mob** carries up to **$\text{Size} \times 4$ Bulk** with normal movement and no penalties.
-* **Dragging Mob Limit:** A **Mob** can drag up to **$\text{Size} \times 5$ Bulk** (movement fixed at 1 Zone per **Move** action; cannot execute the reactive **Scatter!** order).
+* **Unburdened Mob Limit:** A **Mob** carries up to **Size x 4 Bulk** with normal movement and no penalties.
+* **Dragging Mob Limit:** A **Mob** can drag up to **Size x 5 Bulk** (movement fixed at 1 Zone per **Move** action; cannot execute the reactive **Scatter!** order).
 * **Mob Combat Penalty:** Every loose object of **Bulk 3+** carried by a **Mob** imposes **Bane 1 (-1d)** on that **Mob's** attack rolls. A **Mob** can carry a maximum number of Bulk 3+ items equal to its current **Size**.
 * **Casualty Drops:** When a **Mob** takes damage that reduces its **Size**, its carry capacity shrinks immediately. The controlling **Goblin Boss** must **immediately declare which Loot items are dropped** in the current **Zone** to meet the new capacity ceiling. Picking dropped items back up requires spending a **Plunder** **Standard Action** per item.
 

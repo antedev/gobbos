@@ -8,20 +8,12 @@
 
 All attacks in **Gobbos**—whether delivered via a rusty cleaver, a scavenged crossbow, or an explosive pot—follow a unified, single-source resolution pipeline.
 
-```
-[Declare Attack] ===> [Assemble Dice Pool] ===> [Roll vs Target Defence TN]
-                                                        ||
-                        +-------------------------------+-------------------------------+
-                        |                               |                               |
-                        v                               v                               v
-             [Successes >= Defence TN]       [1 <= Successes < Defence]       [0 Successes Scored]
-                        |                               |                               |
-                        v                               v                               v
-               [FULL HIT / OVERKILL]            [STAGGER EVALUATION]            [BOUNCE / MISS]
-          - Minion: One-Hit Kill             - Impact Size >= Target Size:     - Strike glances off
-          - Elite: Wound = Floor(Succ/TN)       Target is Staggered             harmlessly
-          - Mob: Frontline / Decrement       - Impact Size < Target Size:
-                                                Mass Resistance (No Stagger)
+```mermaid
+flowchart TD
+    A["Declare Attack"] --> B["Assemble Dice Pool"] --> C["Roll vs Target Defence TN"]
+    C -->|Successes >= Defence TN| D["Full Hit / Overkill<br>- Minion: One-Hit Kill<br>- Elite: 1 Wound per multiple of TN<br>- Mob: Decrement Health Die"]
+    C -->|1 <= Successes < Defence TN| E["Stagger Evaluation<br>- Impact Size >= Target Size: Target Staggered<br>- Impact Size < Target Size: Mass Resistance"]
+    C -->|0 Successes| F["Bounce / Miss<br>- Strike glances off harmlessly"]
 ```
 
 ---
@@ -33,13 +25,13 @@ A **Melee Attack** represents close-quarters combat against a target occupying t
 ### Execution & Dice Pool
 *   **Action Cost:** Costs one **Standard Action** during the **Player Active Turn**.
 *   **Base Pool:** The attacking Goblin Boss rolls a dice pool equal to their **Tough** stat:
-    $$\text{Melee Attack Pool} = \text{Tough} + \text{Boons (+1d)} - \text{Banes (-1d)} + \text{Bangaranga Dice}$$
+    **Melee Attack Pool** = **Tough** + **Boons (+1d)** - **Banes (-1d)** + **Bangaranga Dice**
 *   **Target Number (TN):** The attack resolves against the target's static **Defence TN** (typically 1 to 4).
 
 ### Resolving Melee Outcomes
-1.  **Standard Enemy (Minion):** If accumulated successes meet or exceed the target's **Defence TN** (Successes $\ge$ Defence TN), the minion is instantly defeated and removed from play (**One-Hit Kill**).
+1.  **Standard Enemy (Minion):** If accumulated successes meet or exceed the target's **Defence TN** (Successes >= Defence TN), the minion is instantly defeated and removed from play (**One-Hit Kill**).
 2.  **Elite / Boss Enemy (The Overkill Rule):** If successes meet or exceed the target's **Defence TN**, the strike inflicts **1 Wound for every full multiple of the Defence TN** scored on the single roll:
-    $$\text{Wounds Dealt} = \left\lfloor \frac{\text{Attack Successes}}{\text{Target Defence TN}} \right\rfloor$$
+    **Wounds Dealt** = **Attack Successes** / **Target Defence TN** (rounded down)
     *(Example: Against an Elite with Defence 2, rolling 2 or 3 successes deals 1 Wound; rolling 4 or 5 successes deals 2 Wounds; rolling 6 successes deals 3 Wounds).*
 3.  **Enemy Mob (Single-Target Melee):** If successes meet or exceed the Mob's **Defence TN**, the strike reduces the face value of the Mob's lowest active health die by the weapon's damage (default 1). If reduced below 1, the die is removed and excess damage spills over into the next lowest die.
 4.  **Enemy Mob (Mob-on-Mob Clash):** When a player Mob attacks an enemy Mob, combat resolves via the **Frontline Rule** (see [Mob Mechanics](06_Mob_Mechanics.md)).
@@ -55,7 +47,7 @@ A **Ranged Attack** represents firing projectiles (stones, arrows, bolts, or thr
 ### Execution & Dice Pool
 *   **Action Cost:** Costs one **Standard Action** during the **Player Active Turn**.
 *   **Base Pool:** The attacking Goblin Boss rolls a dice pool equal to their **Slink** stat:
-    $$\text{Ranged Attack Pool} = \text{Slink} + \text{Boons (+1d)} - \text{Banes (-1d)} + \text{Bangaranga Dice}$$
+    **Ranged Attack Pool** = **Slink** + **Boons (+1d)** - **Banes (-1d)** + **Bangaranga Dice**
 *   **Target Number (TN):** Resolves against the target's static **Defence TN**.
 
 ### Range in Zones
@@ -75,22 +67,15 @@ Ranged weapons measure distance strictly in discrete Zone steps:
 
 When an attack scores at least **one (1) success** but falls short of the target's **Defence TN**, the blow lands with insufficient precision to pierce armor or flesh, but carries physical momentum.
 
-```
-[Partial Hit: Successes >= 1 and < Defence TN]
-                    ||
-                    \/
-   [Calculate Attack Impact Size]  vs.  [Target Physical Size]
-                    ||
-    +---------------+---------------+
-    |                               |
-    v                               v
-[Impact Size >= Target Size]     [Impact Size < Target Size]
-Target gains STAGGERED condition   Target has MASS RESISTANCE
-(Defence TN -1 until Round End)    (Stagger is completely ignored)
+```mermaid
+flowchart TD
+    P["Partial Hit: 1 <= Successes < Defence TN"] --> C["Compare Impact Size vs Target Size"]
+    C -->|Impact Size >= Target Size| S["Target gains STAGGERED condition<br>(Defence TN -1 until Round End)"]
+    C -->|Impact Size < Target Size| M["Target has MASS RESISTANCE<br>(Stagger is completely ignored)"]
 ```
 
 ### Calculating Impact Size
-$$\text{Impact Size} = \text{Attacker Base Size} + \text{Weapon Trait Modifiers}$$
+**Impact Size** = **Attacker Base Size** + **Weapon Trait Modifiers**
 
 *   **Attacker Base Size:** A Goblin Boss is **Size 1**. A Mob has a base size equal to its current **Mob Size** (1 to 5).
 *   **`Heavy` Weapon Trait:** Grants **+1 Impact Size** (e.g. a Size 1 Boss wielding a heavy two-handed maul strikes with **Impact Size 2**).
@@ -98,8 +83,8 @@ $$\text{Impact Size} = \text{Attacker Base Size} + \text{Weapon Trait Modifiers}
 *   **Explosives & Spells:** Explosive blast devices and magic attacks possess an Impact Size equal to their **Tier** (Tier 1 = Impact Size 1, Tier 2 = Impact Size 2, Tier 3 = Impact Size 3, Tier 4 = Impact Size 4, Tier 5 = Impact Size 5).
 
 ### Stagger Evaluation & Mass Resistance
-*   **Stagger Applied ($\text{Impact Size} \ge \text{Target Size}$):** If the attack's Impact Size equals or exceeds the target's physical **Size**, the target is thrown violently off balance and gains the **Staggered** condition until the **Round Closure Phase**.
-*   **Mass Resistance ($\text{Impact Size} < \text{Target Size}$):** If the attack's Impact Size is strictly less than the target's physical **Size**, the giant foe absorbs the blow without budging. The target completely ignores the Stagger effect.
+*   **Stagger Applied (Impact Size >= Target Size):** If the attack's Impact Size equals or exceeds the target's physical **Size**, the target is thrown violently off balance and gains the **Staggered** condition until the **Round Closure Phase**.
+*   **Mass Resistance (Impact Size < Target Size):** If the attack's Impact Size is strictly less than the target's physical **Size**, the giant foe absorbs the blow without budging. The target completely ignores the Stagger effect.
 
 >> **THE STAGGERED CONDITION:**
 >> A **Staggered** enemy or Boss suffers reduced combat effectiveness:
@@ -220,12 +205,13 @@ Tools never grant "+1 flat math modifiers" to die faces. Instead, tools operate 
 
 ### Consumables & Explosive Area Threat Profiles
 Explosives (grenades, molotovs, powder kegs) do not roll single-target attack pools. When thrown or detonated, they project an **Area Threat Profile** across their target Zone:
-$$\text{Area Threat Profile} = \text{Threat } [Difficulty]+/ [TN], \text{ [Damage]}, \text{ } [Tags], \text{ Blast Range: } X \text{ Zones}, \text{ Impact Size: } Y$$
+
+**Area Threat Profile** = `Threat [Difficulty]+/[TN]`, `[Damage]`, `[Tags]`, `Blast Range: X Zones`, `Impact Size: Y`
 
 *   **PC Bosses in Blast Zone:** Must resolve an immediate **Clatter Roll** (Dodge vs Threat TN) or suffer full blast damage to Grit.
 *   **Mobs in Blast Zone:** May execute an active **Scatter** reaction or suffer blast damage applied simultaneously to all health dice.
-*   **Standard Minions in Blast Zone:** Instantly destroyed if the explosive's Threat TN $\ge$ Minion Defence TN.
-*   **Elite Enemies in Blast Zone:** Take 1 Wound if Threat TN $\ge$ Defence TN, and gain **Staggered** if blast Impact Size $\ge$ Enemy Size.
+*   **Standard Minions in Blast Zone:** Instantly destroyed if the explosive's Threat TN >= Minion Defence TN.
+*   **Elite Enemies in Blast Zone:** Take 1 Wound if Threat TN >= Defence TN, and gain **Staggered** if blast Impact Size >= Enemy Size.
 
 ---
 
@@ -253,27 +239,13 @@ All adventuring gear, tools, and consumables must adhere strictly to this schema
 
 The **Clatter Roll** is the core defensive mechanic in **Gobbos**. When an enemy strikes during the **Enemy Active Turn**, the GM announces the attack's **Threat Profile** (`Threat [Face]+/[TN]`) and flat **Damage**. The defending Goblin Boss resolves defense in a single simultaneous throw.
 
-```
-[Incoming Threat: Threat 5+/1, Damage 3]
-                   ||
-                   \/
-   [Simultaneous Throw: The Clatter Roll]
-   - Active Stat Dice: 2d Slink (Dodge) [Saved Action Spent]
-   - Passive Armor Dice: 2d Armor (Medium Armor)
-                   ||
-                   \/
-  [Step 1: Check Active Stat Dice vs Threat TN]
-   - Slink scores >= 1 success? ======> CLEAN DODGE (0 Damage Taken)
-   - Slink scores 0 successes?  ======> EVASION FAILS (Proceed to Step 2)
-                   ||
-                   \/
-  [Step 2: Check Passive Armor Dice]
-   - Each 5+ on Armor Dice reduces Damage by 1.
-   - Example: 1 Armor success reduces Damage from 3 to 2.
-                   ||
-                   \/
-  [Step 3: Deduct Remaining Damage from Grit]
-   - Boss takes 2 Damage to Grit.
+```mermaid
+flowchart TD
+    I["Incoming Threat: Threat 5+/1, Damage 3"] --> T["Simultaneous Throw: The Clatter Roll<br>- Active Stat Dice: 2d Slink Dodge (Saved Action Spent)<br>- Passive Armor Dice: 2d Armor (Medium Armor)"]
+    T --> S1["Step 1: Check Active Stat Dice vs Threat TN"]
+    S1 -->|Slink scores >= 1 success| CD["CLEAN DODGE (0 Damage Taken)"]
+    S1 -->|Slink scores 0 successes| S2["Step 2: Check Passive Armor Dice<br>Each 5+ reduces Damage by 1"]
+    S2 --> S3["Step 3: Deduct Remaining Damage from Grit<br>Boss takes remaining Damage to Grit"]
 ```
 
 ### Step-by-Step Clatter Roll Procedure
@@ -298,7 +270,7 @@ To prevent table slowdown and avoid draining all player reaction actions against
 When multiple standard minions gang up on a single Goblin Boss:
 *   **Consolidated Attack:** The GM combines up to **3 standard enemies** into a single incoming strike.
 *   **Damage Scaling:** The attack uses the primary enemy's Threat profile, and deals:
-    $$\text{Group Damage} = \text{Base Enemy Damage} + (1 \text{ Damage per additional enemy})$$
+    **Group Damage** = **Base Enemy Damage** + (1 Damage per additional enemy)
 *   **Single Defense Resolution:** The defending Boss spends only **one (1) saved Standard Action** to resolve a single Clatter Roll against the entire combined swarm attack.
 *   **Targeting Cap:** A maximum of 3 standard enemies may combine against a single PC Boss. (Attacks against player Mobs have no grouping cap).
 

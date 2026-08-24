@@ -6,16 +6,11 @@ This chapter defines the attributes and secondary metrics of a **Goblin Boss**, 
 
 ---
 
-## Main Attributes (Level 1 to 5)
+### Main Attributes (Level 1 to 5)
 
 Every **Goblin Boss** possesses four **Main Stats** rated from **Level 1** to **Level 5**. A rating of Level 1 represents basic goblin competence, while Level 5 represents the pinnacle of goblin prowess.
 
-```
-+-----------------------------------------------------------------------------+
-|                               MAIN STATS                                    |
-|   TOUGH (T)   •   SLINK (S)   •   MOUTH (M)   •   BRAINS (B)                |
-+-----------------------------------------------------------------------------+
-```
+>> **Main Stats:** **TOUGH (T)** • **SLINK (S)** • **MOUTH (M)** • **BRAINS (B)**
 
 *   **Tough (T)**: Muscle, physical violence, brute resilience, intimidation, and raw lifting power. Tough forms the base dice pool for melee attacks and heavy physical feats.
 *   **Slink (S)**: Agility, sleight of hand, stealth, acrobatics, balance, and quick reflexes. Slink forms the base dice pool for ranged attacks and evasion.
@@ -30,22 +25,24 @@ Every **Goblin Boss** possesses four **Main Stats** rated from **Level 1** to **
 
 Each **Main Stat** governs two derived **Secondary Stats** that scale automatically as the parent stat increases:
 
-```
-                  +-------------------> Grit (Damage Capacity: 3 to 5)
-                  |
-        +-- TOUGH +-------------------> Carry (Max Bulk: 6 to 14)
-        |
-        |         +-------------------> Movement (Zones per Move: 2 to 5)
-        +-- SLINK +
-        |         +-------------------> Passive Defence (Mitigation Dice: 0d to 2d)
-BOSS ---+
-        |         +-------------------> Max Mobs (Simultaneous Mobs: 1 to 3)
-        +-- MOUTH +
-        |         +-------------------> Free Orders (Commands per Round: 1 to 3)
-        |
-        |         +-------------------> Power Words (Spell Tag Slots: 0 to 6)
-        +-- BRAINS+
-                  +-------------------> Crafting Capacity (Oddity Slots: 1 to 5)
+```mermaid
+flowchart LR
+    BOSS["Goblin Boss"] --> T["TOUGH"]
+    BOSS --> S["SLINK"]
+    BOSS --> M["MOUTH"]
+    BOSS --> B["BRAINS"]
+    
+    T --> T1["Grit (Damage: 3 to 5)"]
+    T --> T2["Carry (Max Bulk: 6 to 14)"]
+    
+    S --> S1["Movement (Zones per Move: 2 to 5)"]
+    S --> S2["Passive Defence (Mitigation: 0d to 2d)"]
+    
+    M --> M1["Max Mobs (Simultaneous: 1 to 3)"]
+    M --> M2["Free Orders (Commands per Round: 1 to 3)"]
+    
+    B --> B1["Power Words (Spell Slots: 0 to 6)"]
+    B --> B2["Crafting Capacity (Oddity Slots: 1 to 5)"]
 ```
 
 ### Tough Derived Stats: Grit & Carry
@@ -58,9 +55,9 @@ BOSS ---+
 | **Level 4** | **5** | **12 Bulk** |
 | **Level 5** | **5** | **14 Bulk** |
 
-*   **Grit**: Your Boss's damage capacity. When you suffer unmitigated damage from enemy attacks or hazards, your current **Grit** is reduced point-for-point. When your **Grit** reaches 0, you suffer your **Final Act** and die (see [Damage, Grit and Wounds](07_Damage_Grit_and_Wounds.md)).
-*   **Carry Capacity**: The maximum total **Bulk** of weapons, armor, tools, and plunder your Boss can physically carry without penalty. 
-    *   **Over-Laden Rule**: If your carried Bulk exceeds your **Carry Capacity**, you suffer **-1 Zone Movement** per Move action and a **Bane 1 (-1d)** on all physical **Slink** and **Tough** tests. You cannot carry more than your Carry Capacity $+ 4$ Bulk under any circumstances.
+*   **Grit**: The amount of physical damage your Boss can absorb before entering the **Downed State** (see [Damage, Grit & Wounds](07_Damage_Grit_and_Wounds.md)).
+*   **Carry Capacity**: The total **Bulk** of equipment, weapons, and Loot you can carry before suffering encumbrance.
+    *   **Over-Laden Rule**: If your carried Bulk exceeds your **Carry Capacity**, you suffer **-1 Zone Movement** per Move action and a **Bane 1 (-1d)** on all physical **Slink** and **Tough** tests. You cannot carry more than your Carry Capacity + 4 Bulk under any circumstances.ances.
 
 ### Slink Derived Stats: Movement & Passive Defence
 
@@ -110,12 +107,12 @@ BOSS ---+
 ### Calculating Maximum Grunt
 A Boss's **Maximum Grunt** is strictly equal to the Boss's **second-highest Main Stat**:
 
-$$\text{Max Grunt} = \text{SecondHighest}(\text{Tough}, \text{Slink}, \text{Brains}, \text{Mouth})$$
+**Max Grunt** = **Second-Highest Stat** (among Tough, Slink, Brains, Mouth)
 
 > **Example Calculations:**
-> *   Stats: **Tough 3**, **Slink 1**, **Brains 1**, **Mouth 1** $\implies$ Second-highest is 1 $\implies$ **Max Grunt = 1**.
-> *   Stats: **Tough 2**, **Slink 2**, **Brains 1**, **Mouth 1** $\implies$ Second-highest is 2 $\implies$ **Max Grunt = 2**.
-> *   Stats: **Tough 4**, **Slink 3**, **Brains 2**, **Mouth 1** $\implies$ Second-highest is 3 $\implies$ **Max Grunt = 3**.
+> *   Stats: **Tough 3**, **Slink 1**, **Brains 1**, **Mouth 1** -> Second-highest is 1 -> **Max Grunt = 1**.
+> *   Stats: **Tough 2**, **Slink 2**, **Brains 1**, **Mouth 1** -> Second-highest is 2 -> **Max Grunt = 2**.
+> *   Stats: **Tough 4**, **Slink 3**, **Brains 2**, **Mouth 1** -> Second-highest is 3 -> **Max Grunt = 3**.
 
 ### Tracking Current Grunt
 Unlike the four static Main Stats, **Current Grunt** fluctuates dynamically between **0** and **Max Grunt** during a raid:
@@ -132,10 +129,10 @@ Unlike the four static Main Stats, **Current Grunt** fluctuates dynamically betw
 ### Mob Command Limits & The Rebellion Test
 A **Goblin Boss** can only maintain direct command over a **Mob** whose current **Size** is less than or equal to the Boss's **Current Grunt**:
 
-$$\text{Maximum Commandable Mob Size} \le \text{Current Grunt}$$
+**Maximum Commandable Mob Size <= Current Grunt**
 
 *   **Rebellion Test**: If your current **Grunt** drops below the current **Size** of a Mob under your command (or if you attempt to command a Mob larger than your Grunt), you must immediately make a command test:
-    $$\text{Tough or Mouth} \quad \text{5+/[Mob Size]}$$
+    `Tough or Mouth 5+/[Mob Size]`
     *   **Success**: The Mob remains intimidated and obeys your command for this round.
     *   **Failure**: The Mob realizes you are weak, breaks command, and immediately becomes **Out of Control** (see [Mob Mechanics](06_Mob_Mechanics.md)).
 
@@ -144,7 +141,7 @@ When your Grunt is low and your Mobs are restless, you can beat your own followe
 *   **Action Cost**: 1 **Standard Action**.
 *   **Execution**: Make an undefended melee attack against a friendly **Mob** under your command in your Zone.
 *   **Outcome**:
-    *   If the attack deals **$\ge 1$ damage** to the Mob's health dice, your Boss immediately regains **+1 Grunt** (up to Max Grunt).
+    *   If the attack deals **>= 1 damage** to the Mob's health dice, your Boss immediately regains **+1 Grunt** (up to Max Grunt).
     *   If the attack rolls **0 successes** (dealing 0 damage), the attack bounces, your goblins laugh at you, and your Boss loses **-1 Grunt**.
 
 ---
@@ -153,20 +150,12 @@ When your Grunt is low and your Mobs are restless, you can beat your own followe
 
 Follow these sequential steps to create a starting **Goblin Boss**:
 
-```
-[Step 1: Base Stats (All 1s)]
-             |
-             v
-[Step 2: Allocate 2 Points] ---> Specialist (3/1/1/1) vs Generalist (2/2/1/1)
-             |
-             v
-[Step 3: Derive Secondary Stats & Role]
-             |
-             v
-[Step 4: Choose 1 Starting Basic Quirk (Tier <= Stat Level)]
-             |
-             v
-[Step 5: Select Junk (T1) Loadout]
+```mermaid
+flowchart TD
+    S1["Step 1: Base Stats (All 1s)"] --> S2["Step 2: Allocate 2 Points<br>(Specialist 3/1/1/1 or Generalist 2/2/1/1)"]
+    S2 --> S3["Step 3: Derive Secondary Stats & Role"]
+    S3 --> S4["Step 4: Choose 1 Starting Basic Quirk"]
+    S4 --> S5["Step 5: Select Junk (T1) Loadout"]
 ```
 
 ### Step 1: Set Base Stats
@@ -219,12 +208,7 @@ Choose starting gear of **Junk (T1)** quality from the scrap pile:
 
 In **Gobbos**, players do not play isolated lone heroes. The player's persistent, leveling entity is the **Gang**, which survives the death or retirement of individual Bosses.
 
-```
-+-----------------------------------------------------------------------------+
-|                                 THE GANG                                    |
-|   Persistent Entity  •  Infamy Track (1-5)  •  The Hoard  •  The Bone Pile  |
-+-----------------------------------------------------------------------------+
-```
+>> **The Gang:** Persistent Entity • Infamy Track (1–5) • The Hoard • The Bone Pile
 
 ### 1. Infamy Track (Level 1 to 5)
 **Infamy** represents how feared, respected, and notorious your Gang is across the Lair. It acts as the Gang's overall level, scaling from **Infamy 1** to **Infamy 5**.
@@ -246,7 +230,7 @@ A Gang advances its Infamy by earning **Infamy Marks**:
 ### 2. Successor Boss Generation (Roguelite Legacy)
 When a **Goblin Boss** dies, the Gang promotes the next biggest goblin to take command:
 1.  **Base Setup**: The successor begins with base **1** in all four Main Stats, plus the standard **2 starting points**.
-2.  **Successor XP**: The successor receives a bonus pool of **Successor XP** equal to $\text{Infamy Level} \times 4$ to purchase additional stat upgrades at standard advancement costs.
+2.  **Successor XP**: The successor receives a bonus pool of **Successor XP** equal to **Infamy Level x 4** to purchase additional stat upgrades at standard advancement costs.
 3.  **Successor Stat Cap**: A newly generated successor cannot raise any stat above **Level 4** at creation.
 4.  **The Gang Mark**: The successor receives a permanent tattoo inked in soot and blood, inheriting **1 Quirk or Twist** possessed by the deceased Boss, completely bypassing stat tier prerequisites.
 

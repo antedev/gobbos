@@ -8,28 +8,11 @@
 
 Travel in **Gobbos** is designed to be fast, perilous, and highly chaotic. Rather than tracking individual rations or day-by-day distances, overland and subterranean journeys are resolved in abstract **Stages** before the raid begins. The primary threat during travel is **Mob Attrition**—losing goblins to the wilderness before reaching the target.
 
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                           THE JOURNEY RESOLUTION                            │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ 1. ESTABLISH THE ROUTE                                                      │
-│ • The GM sets the destination and number of Stages (1 to 3).                │
-│   - Short Journey: 1 Stage (Local outskirts, familiar sewers).              │
-│   - Medium Journey: 2 Stages (Wild forests, treacherous caverns).           │
-│   - Long / Perilous Journey: 3 Stages (Hostile mountains, enemy heartland). │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ 2. ASSIGN TRAVEL ROLES                                                      │
-│ • Players assign their Bosses (or Mobs) to the 4 mandatory Travel Roles:    │
-│   - Map-Scrawler (Brains)  • Sniffer (Slink)                                │
-│   - Scavver (Tough)        • Loud-Mouth (Mouth)                             │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ 3. TRAVERSE EACH STAGE                                                      │
-│ • Step 1: The Route Test (Map-Scrawler rolls Brains 5+/1).                  │
-│ • Step 2: The Travel Event (GM rolls 1d6 targeting a specific role).        │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ 4. ARRIVAL AT DESTINATION                                                   │
-│ • The party enters the raid site with accumulated Attrition, boons, or bany.│
-└─────────────────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    S1["1. Establish the Route<br>- Short: 1 Stage (Local outskirts, familiar sewers)<br>- Medium: 2 Stages (Wild forests, treacherous caverns)<br>- Long / Perilous: 3 Stages (Hostile mountains, enemy heartland)"] --> S2["2. Assign Travel Roles<br>- Map-Scrawler (Brains)<br>- Sniffer (Slink)<br>- Scavver (Tough)<br>- Loud-Mouth (Mouth)"]
+    S2 --> S3["3. Traverse Each Stage<br>- Step 1: Route Test (Map-Scrawler rolls Brains 5+/1)<br>- Step 2: Travel Event (GM rolls 1d6 targeting a specific role)"]
+    S3 --> S4["4. Arrival at Destination<br>- Party enters raid site with accumulated Attrition, boons, or banes"]
 ```
 
 ---
@@ -73,7 +56,7 @@ The **GM** rolls **1d6** on the **Gobbo Travel Event Table** below. The resultin
 | **1** | **Narrow Pass** | Sniffer | **Slink 5+/1** | You slip through the crevices silently. | Gobbos get crushed by loose rocks. A **Mob** takes **2 damage** (or rolls armor defense). **Mobs of Size 3+** suffer a **Bane 1 (-1d)** on their next test. |
 | **2** | **Deep Torrent** | Scavver | **Tough 5+/1** | The Scavver builds a crude rope bridge. | Gobbos are swept away. A **Mob** takes **Size damage** (losing 1 lowest-value health die, reducing Mob **Size** by 1), or you must discard 1 **Bulk** of equipped gear to save them. |
 | **3** | **Spore Patch** | Scavver | **Tough 5+/1** | You harvest nourishing giant mushrooms. Restore 1 health point to a Mob's health die. | Poisonous bellyaches. Every **Mob** takes 1 damage. One random Boss tests **Tough 5+/1**; on failure, gains the **Weakened** condition. |
-| **4** | **Bickering Over Loot** | Loud-Mouth | **Mouth 5+/1** | The Loud-Mouth cracks heads and restores order. Gain 1 **Loot** (T1) from the scrap. | Violent infighting! A **Mob** takes $\lceil 1\text{d}6/2 \rceil$ damage, and the Loud-Mouth Boss loses **1 Grunt**. |
+| **4** | **Bickering Over Loot** | Loud-Mouth | **Mouth 5+/1** | The Loud-Mouth cracks heads and restores order. Gain 1 **Loot** (T1) from the scrap. | Violent infighting! A **Mob** takes **1d6/2 (rounded up) damage**, and the Loud-Mouth Boss loses **1 Grunt**. |
 | **5** | **Shadow Ambush** | Sniffer | **Slink 5+/1** | You detect the predator. Gain **Boon 1 (+1d)** on the first attack of the raid. | Caught off-guard! A random **Mob** takes **2 damage**, and the GM adds **+2 dice** to the shared **Bangaranga Pool** from the chaos. |
 | **6** | **"Are We There Yet?"** | Loud-Mouth | **Mouth 5+/1** | The Loud-Mouth leads a rowdy, marching chant. | Desertion! The Loud-Mouth Boss loses **1 Grunt**, and one **Mob** shrinks by **1 Size** as runts sneak away. |
 
@@ -84,12 +67,12 @@ The **GM** rolls **1d6** on the **Gobbo Travel Event Table** below. The resultin
 Raiding a vault is simple; hauling heavy iron chests, bronze cauldrons, and gold idols back across the wilderness is where greed kills.
 
 ### Laden Mobs (> 50% Carry Capacity)
-A **Mob** hauling significant expedition plunder ($\text{Carried Bulk} > \text{Size} \times 2$) is **Laden**:
+A **Mob** hauling significant expedition plunder (**Carried Bulk > Size x 2**) is **Laden**:
 * **Laden** Mobs suffer **Bane 1 (-1d)** on all **Slink** and **Tough** tests during the return journey.
 * The Map-Scrawler's **Route Test** required successes increase by +1 (e.g., from **Brains 5+/1** to **Brains 5+/2**).
 
 ### Over-Laden Mobs (Maximum & Dragging Capacity)
-A **Mob** carrying at or above its unburdened carry capacity ($\text{Carried Bulk} \ge \text{Size} \times 4$, up to the dragging limit of $\text{Size} \times 5$) is **Over-Laden**:
+A **Mob** carrying at or above its unburdened carry capacity (**Carried Bulk >= Size x 4**, up to the dragging limit of **Size x 5**) is **Over-Laden**:
 * **Over-Laden** Mobs suffer all penalties of being **Laden**.
 * **Over-Laden** Mobs cannot roll passive armor defense dice against travel hazards.
 * **Over-Laden** Mobs automatically take **1 damage** on failed Route Tests (representing exhaustion from dragging heavy scrap), in addition to standard party Attrition.

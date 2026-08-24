@@ -8,25 +8,14 @@
 
 The **Lair** is the shared, cooperative base of operations managed by all players. The state of the settlement is tracked on the **Lair Sheet** across six core metrics:
 
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                             THE LAIR DASHBOARD                              │
-├──────────────────────────────────────┬──────────────────────────────────────┤
-│ 1. WARREN TIER & ASSET CAPACITY      │ 2. THE SWARM (The Gobbo Pool)        │
-│    • Tier 1 to 4 (Scale & Renown)    │    • Total Workforce Pool (in d6s)   │
-│    • Max Active Assets: (Tier × 2)+2 │    • Raider Mobs vs. Laborer Dice    │
-├──────────────────────────────────────┼──────────────────────────────────────┤
-│ 3. THE COMMUNAL HOARD                │ 4. SWARM MOOD (Morale & Mutiny)      │
-│    • Pooled Loot Value (Liquid)      │    • 0–5 Morale Track                │
-│    • Pooled Scrap (Building Matter)  │    • Mob Mutiny at Level 5           │
-├──────────────────────────────────────┴──────────────────────────────────────┤
-│ 5. THREAT LEVEL (Regional Heat)                                             │
-│    • 0–5 Regional Heat Track (Retaliatory Assault at Level 5)               │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ 6. THE BONE PILE (Ancestral Legacy)                                         │
-│    • Skull Tally & Milestone Ancestral Boons (Every 4 Skulls)               │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
+| Metric | Category | Mechanical Scope |
+| :--- | :--- | :--- |
+| **1. Warren Tier & Capacity** | Settlement Scale | Tier 1 to 4; Max Active Assets = (Tier x 2) + 2 |
+| **2. The Swarm (Gobbo Pool)** | Workforce Pool | Total population in d6s; split between Raider Mobs & Laborer Dice |
+| **3. The Communal Hoard** | Shared Capital | Pooled Loot Value (liquid wealth) & Scrap (building matter) |
+| **4. Swarm Mood** | Morale & Discipline | 0–5 Morale Track; Mob Mutiny triggers at Level 5 |
+| **5. Threat Level** | Regional Heat | 0–5 Heat Track; Retaliatory Lair Assault triggers at Level 5 |
+| **6. The Bone Pile** | Ancestral Legacy | Skull Tally; unlocks permanent Ancestral Boons every 4 Skulls |
 
 ### Warren Tier & Asset Capacity
 **Warren Tier** measures the overall physical scale, engineering complexity, and regional renown of the goblin settlement:
@@ -36,10 +25,10 @@ The **Lair** is the shared, cooperative base of operations managed by all player
 * **Tier 3: Subterranean Stronghold** (Sprawling underground cavern network, heavy industry; Max **8** Active Assets).
 * **Tier 4: Goblin Under-Kingdom** (Legendary subterranean fortress commanding regional outposts; Max **10** Active Assets).
 
-$$\text{Asset Capacity} = (\text{Warren Tier} \times 2) + 2$$
+**Asset Capacity** = (**Warren Tier** x 2) + 2
 
 >> **THE ASSET CAPACITY CEILING:**
->> A Lair can only maintain a maximum number of **Active Assets** equal to $(\text{Warren Tier} \times 2) + 2$. If the Lair exceeds this ceiling, the settlement suffers from overcrowding and structural strain: **Swarm Mood increases by +1 at the start of every Lair Turn for each asset over the cap.**
+>> A Lair can only maintain a maximum number of **Active Assets** equal to (**Warren Tier** x 2) + 2. If the Lair exceeds this ceiling, the settlement suffers from overcrowding and structural strain: **Swarm Mood increases by +1 at the start of every Lair Turn for each asset over the cap.**
 
 ---
 
@@ -49,7 +38,7 @@ The Lair's total goblin population is tracked as a communal dice pool: **The Gob
 * **The Workforce Division:** At the start of each **Lair Turn**, players divide the **Gobbo Pool** into two groups:
   1. **Raider Mobs:** Dice assigned to **Bosses** (up to each Boss's **Grunt** limit) to form tactical **Mobs** for raids.
   2. **Laborer Dice:** Dice remaining in the Lair to perform scavenging, excavation, recruitment, and crafting operations.
-* **Mob Survival & Auto-Heal:** If a Raider **Mob** returns from a raid with at least 1 health point on at least one health die ($\text{Size} \ge 1$), it immediately **auto-heals back to its full allocated Size** for free during Step 1 (Homecoming).
+* **Mob Survival & Auto-Heal:** If a Raider **Mob** returns from a raid with at least 1 health point on at least one health die (**Size** >= 1), it immediately **auto-heals back to its full allocated Size** for free during Step 1 (Homecoming).
 * **Casualty Elimination:** If a **Mob** is reduced to **Size 0** (all health dice lost), those dice are permanently removed from the **Gobbo Pool**.
 * **The Communal Runts Floor:** The Lair always maintains a baseline floor of **3d6 communal runts**. These runts cannot perform heavy labor or be assigned as Laborer Dice, but they guarantee that each **Player** can always lead at least a **Size 1 Runt Mob (1d6)** on a raid, even after a catastrophic wipe.
 * **Vacant Nest Growth:** During Step 1 (Homecoming), if the total **Gobbo Pool** falls below **3d6 per Player** (e.g., under 9d6 in a 3-player campaign), the Lair automatically gains **+1d6** to the **Gobbo Pool** for free as wild runts move into empty burrows.
@@ -95,33 +84,17 @@ The **Bone Pile** is a sacred memorial containing the skulls of fallen **Bosses*
 
 The **Lair Phase** resolves in a strict four-step procedure between raids:
 
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                         SEQUENCE OF THE LAIR PHASE                          │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ STEP 1: HOMECOMING & TALLY                                                  │
-│ • Deposit extracted Loot and Scrap into the Communal Hoard.                 │
-│ • Record deceased Bosses on the Bone Pile; surviving Mobs auto-heal.        │
-│ • Check Vacant Nest Growth (if Gobbo Pool is below baseline).               │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ STEP 2: LAIR PULSE & COMPLICATIONS                                          │
-│ • Evaluate Threat Level and Swarm Mood tracks.                              │
-│ • The GM rolls 1d66 on the Lair Complications Table.                        │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ STEP 3: LABOR ALLOCATION & PASSIVE RESOLUTION                               │
-│ • Harvest automatic yields from active Facilities and Outposts.             │
-│ • Assign Laborer Dice (Choose Safe 2-Dice or Risky Push 1-Die).             │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ STEP 4: BOSS DOWNTIME ACTIONS & DOMINANCE                                   │
-│ • Each Boss executes ONE personal Downtime Action.                          │
-│ • Update Dominance ledgers for newly constructed or upgraded assets.        │
-└─────────────────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    S1["Step 1: Homecoming & Tally<br>- Deposit Loot & Scrap into Hoard<br>- Record dead Bosses on Bone Pile; surviving Mobs auto-heal<br>- Check Vacant Nest Growth"] --> S2["Step 2: Lair Pulse & Complications<br>- Evaluate Threat Level & Swarm Mood<br>- GM rolls 1d66 on Complications Table"]
+    S2 --> S3["Step 3: Labor Allocation & Passive Resolution<br>- Harvest automatic facility yields<br>- Assign Laborer Dice (Safe vs Risky)"]
+    S3 --> S4["Step 4: Boss Downtime Actions & Dominance<br>- Each Boss executes 1 personal Downtime Action<br>- Update Dominance ledgers for assets"]
 ```
 
 ### Step 1: Homecoming & Tally
 1. **Deposit Wealth:** Transfer all plundered **Loot Value** and **Scrap** into the **Communal Hoard**.
-2. **Honour the Fallen:** Add deceased **Bosses** to the **Bone Pile**. Generate successor **Bosses** with starting **Successor XP** equal to $\text{Gang Infamy} \times 4$.
-3. **Regenerate Mobs:** Surviving **Mobs** ($\text{Size} \ge 1$) restore all health dice to full allocated **Size**. Wiped **Mobs** are deleted from the pool.
+2. **Honour the Fallen:** Add deceased **Bosses** to the **Bone Pile**. Generate successor **Bosses** with starting **Successor XP** equal to **Gang Infamy x 4**.
+3. **Regenerate Mobs:** Surviving **Mobs** (Size >= 1) restore all health dice to full allocated **Size**. Wiped **Mobs** are deleted from the pool.
 4. **Vacant Nest Check:** If total **Gobbo Pool** is under 3d6 per player, add **+1d6** for free.
 
 ### Step 2: Lair Pulse & Complications
@@ -219,7 +192,7 @@ Death in **Gobbos** is a stepping stone to greater power. When a **Goblin Boss**
 ### The "Next Gobbo Up" (Successor Creation)
 When a Boss dies, the next prominent goblin in the Gang takes command:
 * **Starting Stats:** Successors start with **1** in all Main Stats, receive **2 starting advances** (standard character creation), plus a starting pool of **Successor XP**:
-$$\text{Successor XP} = \text{Gang Infamy} \times 4$$
+**Successor XP** = **Gang Infamy x 4**
 * **Successor Caps:** A successor cannot raise any stat above **Level 4** at creation and cannot start as an **Elder** (Level 6).
 * **The Catch-Up Boost:** A fresh successor receives **+2 bonus XP** on the first survived raid.
 

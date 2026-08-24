@@ -8,26 +8,20 @@
 
 A **Mob** is a collection of lesser goblins under the direct command of a **Goblin Boss** (Player Character). Mobs do not possess individual attribute ratings; all of their combat strength, physical mass, and carrying capacities scale from their current **Size** rating (ranging from **Size 1** to **Size 5**).
 
-```
-+---------------------------------------------------------------------------------+
-|                                MOB SIZE PROGRESSION                             |
-+-------------------+------+-------------+----------------+-----------------------+
-| Classification    | Size | Combat Dice | Required Grunt | Loot Capacity         |
-+-------------------+------+-------------+----------------+-----------------------+
-| Runt Mob          |  1   |     1d6     |       1        |  4 Bulk               |
-| Skirmish Group    |  2   |     2d6     |       2        |  8 Bulk               |
-| Raid Troop        |  3   |     3d6     |       3        | 12 Bulk               |
-| War Gang          |  4   |     4d6     |       4        | 16 Bulk               |
-| Horde Company     |  5   |     5d6     |       5        | 20 Bulk               |
-+-------------------+------+-------------+----------------+-----------------------+
-```
+| Classification | Size | Combat Dice | Required Grunt | Loot Capacity |
+| :--- | :---: | :---: | :---: | :---: |
+| **Runt Mob** | **1** | **1d6** | **1** | **4 Bulk** |
+| **Skirmish Group** | **2** | **2d6** | **2** | **8 Bulk** |
+| **Raid Troop** | **3** | **3d6** | **3** | **12 Bulk** |
+| **War Gang** | **4** | **4d6** | **4** | **16 Bulk** |
+| **Horde Company** | **5** | **5d6** | **5** | **20 Bulk** |
 
 ### Core Mob Attributes
 1.  **Combat & Tough Dice Pool:** A Mob rolls a physical dice pool equal to its current **Size** (**1d6 to 5d6**) for Melee Attacks, physical force, lifting, and **Tough** hazard tests.
 2.  **General Skill Baseline:** For non-physical tests (**Slink**, **Brains**, and **Mouth**), a Mob rolls a flat baseline pool of **2d6**, reflecting the aggregate cunning of the crowd.
-3.  **Required Grunt:** To maintain absolute authority without command resistance, the controlling Boss must maintain a current **Grunt $\ge$ Mob Size**.
-4.  **Loot Capacity:** A Mob carries up to $\text{Size} \times 4 \text{ Bulk}$ in loose Loot and expedition gear without suffering encumbrance penalties.
-5.  **Over-Laden Mobs:** If a Mob carries Bulk exceeding its Loot Capacity (up to a hard cap of $\text{Size} \times 6 \text{ Bulk}$), it becomes **Over-Laden**: its Movement is reduced by **-1 Zone** per Move action (minimum 1 Zone) and it suffers a **Bane 1 (-1d)** penalty on all physical tests.
+3.  **Required Grunt:** To maintain absolute authority without command resistance, the controlling Boss must maintain a current **Grunt >= Mob Size**.
+4.  **Loot Capacity:** A Mob carries up to **Size x 4 Bulk** in loose Loot and expedition gear without suffering encumbrance penalties.
+5.  **Over-Laden Mobs:** If a Mob carries Bulk exceeding its Loot Capacity (up to a hard cap of **Size x 6 Bulk**), it becomes **Over-Laden**: its Movement is reduced by **-1 Zone** per Move action (minimum 1 Zone) and it suffers a **Bane 1 (-1d)** penalty on all physical tests.
 
 ---
 
@@ -37,13 +31,13 @@ A Boss can outfit a Mob with protective armor and specialized tools, but doing s
 
 ### Mob Armor (Scaled Bulk)
 Equipping an entire Mob with armor requires sufficient scrap-plates or quilted hides for every runt in the Mob.
-*   **Bulk Cost:** Mob Armor costs **Bulk equal to the Armor's Bulk rating multiplied by current Mob Size** (e.g. Light Armor costs $\text{Size} \times 1$ Bulk; Medium Armor costs $\text{Size} \times 2$ Bulk).
+*   **Bulk Cost:** Mob Armor costs **Bulk equal to the Armor's Bulk rating multiplied by current Mob Size** (e.g. Light Armor costs Size x 1 Bulk; Medium Armor costs Size x 2 Bulk).
 *   **Passive Armor Dice:** An armored Mob rolls its passive Armor Dice (+1d or +2d) **once per incoming attack**. Every success (**5+**) reduces incoming damage by 1 across all targeted health dice before damage is applied.
 *   **Casualty Scaling:** When a Mob suffers casualties and loses Size, the armor of the fallen goblins remains on their corpses on the battlefield. Equipped Mob Armor never causes an encumbrance overload when Size drops.
 
 ### Expedition Tools & Weapons
 *   **Shared Expedition Tools:** Expedition tools (such as Ropes, Crowbars, Lanterns, and Shovels) are shared across the Mob. Each tool occupies its standard flat **Bulk** rating (e.g. 1 Bulk for a Climbing Rope).
-*   **Mob Weapons:** Equipping a Mob with specialized weapons (e.g. Cleavers or Greatclubs) costs $\text{Size} \times \text{Weapon Bulk}$, granting the entire Mob the weapon's traits (e.g. `Heavy` granting +1 Impact Size, or `Cleave` damaging additional unengaged frontline dice).
+*   **Mob Weapons:** Equipping a Mob with specialized weapons (e.g. Cleavers or Greatclubs) costs **Size x Weapon Bulk**, granting the entire Mob the weapon's traits (e.g. `Heavy` granting +1 Impact Size, or `Cleave` damaging additional unengaged frontline dice).
 
 ---
 
@@ -51,34 +45,19 @@ Equipping an entire Mob with armor requires sufficient scrap-plates or quilted h
 
 A Mob's health is physically represented on the gaming table by a pool of **d6s equal to its current Size**, with each die starting at the **"6" face**.
 
-```
-[Size 3 Mob at Full Health] ===> [Die 1: Face 6]  [Die 2: Face 6]  [Die 3: Face 6]
-```
+> **Example (Size 3 Mob at Full Health):** `[Die 1: Face 6]` `[Die 2: Face 6]` `[Die 3: Face 6]`
 
-### Damage Delivery Rules
+### Damage Delivery Modes
 
-```
-+---------------------------------------------------------------------------------+
-|                           MOB DAMAGE RESOLUTION MODES                           |
-+-------------------------+-------------------------------------------------------+
-| Attack Delivery Type    | Mechanical Resolution Across Health Dice Pool         |
-+-------------------------+-------------------------------------------------------+
-| Single-Target Attack    | Deduct from lowest-value active die. Spillover into   |
-|                         | next lowest die if reduced below 1.                   |
-+-------------------------+-------------------------------------------------------+
-| Mob-on-Mob Melee        | The Frontline Rule: Deduct damage simultaneously from |
-|                         | min(Atk Size, Def Size) lowest-value dice.            |
-+-------------------------+-------------------------------------------------------+
-| Cleaving Strike         | Cleave X: Deduct damage simultaneously from up to X   |
-| (`Cleave X`)            | lowest-value active health dice.                      |
-+-------------------------+-------------------------------------------------------+
-| True Area Threat        | Full Zone AoE: Deduct damage simultaneously from      |
-| (`[AoE]`, Explosives)   | EVERY SINGLE active health die in the Mob's pool.     |
-+-------------------------+-------------------------------------------------------+
-```
+| Attack Delivery Type | Mechanical Resolution Across Health Dice Pool |
+| :--- | :--- |
+| **Single-Target Attack** | Deduct from lowest-value active die. Spillover into next lowest die if reduced below 1. |
+| **Mob-on-Mob Melee** | **The Frontline Rule:** Deduct damage simultaneously from min(Attacker Size, Defender Size) lowest-value dice. |
+| **Cleaving Strike (`Cleave X`)** | Deduct damage simultaneously from up to X lowest-value active health dice. |
+| **True Area Threat (`[AoE]`, Explosives)** | **Full Zone AoE:** Deduct damage simultaneously from EVERY SINGLE active health die in the Mob's pool. |
 
 1.  **Single-Target Damage & Spillover:** Single-target strikes (arrows, single sword thrusts) apply damage directly to the Mob's **lowest-value active health die**. If the die drops below 1, that die is permanently removed from the table (reducing Mob Size by 1), and any remaining excess damage **spills over** into the next lowest die.
-2.  **The Frontline Rule (Mob-on-Mob Melee):** When two Mobs clash in close combat, the attacking Mob strikes a number of health dice equal to its own current Size: $\min(\text{Attacker Size}, \text{Defender Size})$.
+2.  **The Frontline Rule (Mob-on-Mob Melee):** When two Mobs clash in close combat, the attacking Mob strikes a number of health dice equal to its own current Size: **min(Attacker Size, Defender Size)**.
     *   *Lowest Dice First:* Damage is applied simultaneously to the defender's lowest-value health dice up to the engagement cap.
     *   *Simultaneous Reduction:* Each engaged die is reduced by the attack's effective damage. Any die reduced below 1 is removed.
     *   *Backline Immunity:* Unengaged backline dice suffer **0 damage**.
@@ -101,12 +80,12 @@ A Mob receives **two (2) actions** per round, reset at Round Start. Mobs act dur
 
 | Command Factor | Distance / Condition | Command Resolution Rule |
 | :--- | :--- | :--- |
-| **Size $\le$ Grunt** | Baseline | **Target Number (TN) = 1** |
-| **Size $>$ Grunt** | Rebellious Swarm | **TN increases by +1 per point of difference** |
-| **Same Zone** | Point-blank | **+1 Automatic Success** (Guaranteed pass if Size $\le$ Grunt) |
-| **Distance $\le$ Mouth** | Voice Range | **Normal (5+)** Difficulty test |
+| **Size <= Grunt** | Baseline | **Target Number (TN) = 1** |
+| **Size > Grunt** | Rebellious Swarm | **TN increases by +1 per point of difference** |
+| **Same Zone** | Point-blank | **+1 Automatic Success** (Guaranteed pass if Size <= Grunt) |
+| **Distance <= Mouth** | Voice Range | **Normal (5+)** Difficulty test |
 | **Distance = Mouth + 1** | Shouting Range | **Hard (6)** Difficulty test |
-| **Distance $>$ Mouth + 1** | Out of Range | **Command is physically impossible** |
+| **Distance > Mouth + 1** | Out of Range | **Command is physically impossible** |
 
 ### The Boredom Rule
 >> **THE BOREDOM RULE:**
@@ -123,16 +102,11 @@ A Mob receives **two (2) actions** per round, reset at Round Start. Mobs act dur
 
 Mobs that receive no direct orders from their Boss resolve their actions at the end of the **Player Active Turn** (after all player characters have finished their declarations).
 
-```
-[Mob Receives No Order] ===> Check Command State
-                                    ||
-        +---------------------------+---------------------------+
-        |                                                       |
-        v                                                       v
-  [LOITERING STATE]                                   [OUT OF CONTROL STATE]
-  - Under Control (Size <= Grunt)                     - Broken Command / Panicked
-  - Spends 1 Action on Loitering Table                - Spends 2 Actions under GM Control
-  - Saves 1 Action for Defense Reactions              - Saves 0 Actions for Defense
+```mermaid
+flowchart TD
+    M["Mob Receives No Order"] --> CS{"Check Command State"}
+    CS -->|Under Control: Size <= Grunt| L["LOITERING STATE<br>- Spends 1 Action on Loitering Table<br>- Saves 1 Action for Defense Reactions"]
+    CS -->|Broken Command / Panicked| OC["OUT OF CONTROL STATE<br>- Spends 2 Actions under GM Control<br>- Saves 0 Actions for Defense"]
 ```
 
 ### Loitering Table (1d6)
@@ -169,9 +143,9 @@ If the Mob has at least **1 saved action remaining**, the Boss may spend a saved
 
 1.  **Assemble Mouth Pool:** The Boss rolls a dice pool equal to the Boss's **Mouth** stat.
 2.  **The Size Penalty:** Large swarms are clumsy to disperse. The Scatter TN equals the attack's Threat TN plus the Mob's Size penalty:
-    $$\text{Scatter TN} = \text{Threat TN} + (\text{Mob Size} - 1)$$
-3.  **Clean Scatter:** If Mouth successes $\ge$ Scatter TN, the Mob evades completely (**0 Damage taken**) and immediately moves **1 Zone** into available cover.
-4.  **Failed Scatter:** If Mouth successes $<$ Scatter TN, the Mob takes incoming damage normally, mitigated only by passive Armor Dice.
+    **Scatter TN** = **Threat TN** + (**Mob Size** - 1)
+3.  **Clean Scatter:** If Mouth successes >= Scatter TN, the Mob evades completely (**0 Damage taken**) and immediately moves **1 Zone** into available cover.
+4.  **Failed Scatter:** If Mouth successes < Scatter TN, the Mob takes incoming damage normally, mitigated only by passive Armor Dice.
 5.  **The Scatter Gamble (Gobbo Gamble):** If the initial Scatter roll falls short, the Boss may reroll all **1s** on the Mouth dice. 
     *   *If the Gamble Succeeds:* The Mob pulls off a chaotic miracle dive, taking **0 Damage**.
     *   *If the Gamble Fails:* Catastrophic stampede! The Mob takes the full attack damage, suffers **1 Trample Damage to EVERY active health die** in its pool, drops **1 Bulk** of carried Loot, and immediately becomes **Out of Control**. If the Boss occupies the same Zone, the Boss is caught in the stampede and gains the **Staggered** condition.
@@ -190,10 +164,10 @@ Goblins are cowardly by nature. When battle turns against them, discipline shatt
 ### Enemy Morale & The Swarm Terror Check
 When an enemy group suffers catastrophic loss (50% casualties or their commander is slain), the player horde unleashes their collective terror:
 
-$$\text{Swarm Terror Pool} = \sum \text{Surviving Mob Sizes in Zone/Adjacent} + \sum \text{Surviving Bosses in Zone/Adjacent}$$
+**Swarm Terror Pool** = **Surviving Mob Sizes in Zone/Adjacent** + **Surviving Bosses in Zone/Adjacent**
 
 *   **The Roll:** Players roll the combined **Swarm Terror Pool** against the enemy's static **Morale TN** (typically 1 to 3).
-*   **Success ($\text{Successes} \ge \text{Morale TN}$):** The enemy force breaks and flees toward the nearest exit for 2 actions per turn until off the map.
+*   **Success (Successes >= Morale TN):** The enemy force breaks and flees toward the nearest exit for 2 actions per turn until off the map.
 *   **Commander Rally:** A surviving Enemy Commander can spend 1 action on their active turn to attempt a Rally, testing against the players' Swarm Terror profile.
 
 ---
