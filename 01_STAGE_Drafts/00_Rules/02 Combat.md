@@ -17,7 +17,11 @@ With a Move action, you can move up to your [[Movement]] number of zones. The di
 #### Attack (Mob or PC)
 The Attack action can only be used in the Players Active turn. 
 To Attack, the player's base [[dice pool]] is based on the player's [[Tough]] for [[Melee attack]] and [[Slink]] for [[Ranged attack]], modified by any equipment, Quirks, or other circumstances. 
-*   **Kill / Wound / Mob Damage:** If you roll successes equal to or greater than the target's current [[Defence]] (acting as the test's [[TN]]), you instantly defeat a standard enemy, deal 1 [[Wound]] to a Boss/Elite (plus additional Wounds for every full multiple of Defence TN scored; see [Enemies](../04_Enemies/20_Enemies.md)), or deal damage to an Enemy [[Mob]] reducing the face value of its active Health Die (losing a die when reduced below 1, which reduces the Mob's [[Size]] by 1; see [Goblin Mobs](../01_Characters%20&%20Mobs/13_Goblin_mob.md)).
+*   **Kill / Wound / Mob Damage:** If you roll successes equal to or greater than the target's current [[Defence]] (acting as the test's [[TN]]):
+    *   *Standard Enemy:* Instantly defeated (**One-Hit Kill**).
+    *   *Boss / Elite:* Deals **1 [[Wound]] for every full multiple of the target's Defence TN** scored on the roll (see [Enemies](../04_Enemies/20_Enemies.md)).
+    *   *Enemy Mob (Single-Target Attack):* Reduces the face value of the Mob's lowest active health die by the attack's damage (or by 1 if untyped).
+    *   *Enemy Mob (Mob-on-Mob Melee):* Resolves via the **Frontline Rule** (see [Goblin Mobs](../01_Characters%20&%20Mobs/13_Goblin_mob.md)), applying damage simultaneously to the enemy's lowest-value health dice up to your attacking Mob's current [[Size]]. *(Note: Melee dice pools may be constrained by environmental terrain, such as `Narrow` choke points; see [Movement & Zones](03_Movement%20&%20Zones.md)).*
 *   **Stagger (Impact Size vs. Target Size):** If you roll at least **one (1) success** but fewer than the target's current [[Defence]] TN, the attack does not deal damage, but it can throw the target off balance. To inflict the [[Staggered]] condition, the attack's **Impact Size** must be equal to or greater than the target's **Physical [[Size]]** (Impact Size >= Target Size):
     *   **Calculating Impact Size:**
         *   *Standard Attacks:* Equal to the attacker's physical [[Size]] (a lone Goblin Boss is **Size 1**; a [[Mob]] uses its current **Mob [[Size]]**).
@@ -43,7 +47,7 @@ When targeted by an attack with a listed **Threat** (e.g., `5+/1`) and **Damage*
 
 **Mob Defense & The "Scatter!" Order:**
 Mobs do not have individual attributes and cannot naturally dodge. A Mob has a strict maximum of **two (2) actions per round**. If an Order directed them to spend both actions on the Player Active turn, they have 0 actions left and cannot react. When targeted by an attack, a Mob resolves defense based on its state and available actions:
-1.  **Passive Armor:** If equipped with Armor, the Mob rolls its passive Armor Dice against incoming damage, with each success reducing damage by 1.
+1.  **Passive Armor:** If equipped with Armor, the Mob rolls its passive Armor Dice **once per incoming attack**. Each success (**5+**) reduces the incoming attack damage by 1 across all targeted dice before damage is applied.
 2.  **Active Scatter ("Scatter!" Reaction):** If a Mob has at least **1 unused action remaining**, the Boss can spend a saved [[Standard Action]] (or an unused Free Order) as a reaction to scream "Scatter!". The Mob uses its remaining action to roll active defense dice equal to the Boss's [[Mouth]] stat.
     *   **The Size Target Penalty:** Large mobs occupy more space and are sluggish to disperse. Every point of Mob [[Size]] above 1 increases the enemy attack's Threat TN by **+1** for the Scatter test (e.g., a Size 3 Mob faces a +2 TN penalty).
     *   **Clean Scatter:** If the Mouth dice meet the modified Threat TN, the Mob evades completely (0 damage) and immediately moves **1 Zone** into cover.

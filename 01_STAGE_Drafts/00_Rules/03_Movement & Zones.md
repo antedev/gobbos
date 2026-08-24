@@ -124,9 +124,9 @@ GMs can customize battlefields by placing these standardized, modular traits ont
 *   **Deep Water (Obstacle):** Flooded chambers, sewer channels, or rapid rivers.
     *   *Trigger:* Passive / Interactive (for swimming).
     *   *Rules:* Traversing this Zone requires a [[Move]] action to travel only 1 [[Zone]] (ignoring standard movement speed). If forced to swim or stay afloat (directly in the water without a boat or bridge), a creature starting their turn in this Zone must test [[Tough]] against the [[Zone Profile]] or begin drowning (taking 1 damage per round).
-*   **Narrow (Obstacle):** A tight crawlspace, pipe, or rocky crevice.
+*   **Narrow (Obstacle):** A tight crawlspace, pipe, doorway, or rocky crevice.
     *   *Trigger:* Passive.
-    *   *Rules:* The maximum Mob size that can occupy this Zone without penalty is **Size 2**. Mobs of **Size 3+** suffer a [[Bane]] (-1d) to all attack rolls and physical tests while in this Zone, and their Movement is capped at 1 [[Zone]]. Giant enemies cannot enter.
+    *   *Rules:* A Narrow zone defines a maximum physical capacity and frontline width (default **Size 2**, though specific zone descriptions may define tighter or wider limits). Mobs exceeding this capacity suffer a [[Bane]] (-1d) to all physical tests, have their Movement capped at 1 [[Zone]], and their maximum Melee Combat Dice pool / Frontline Width is capped at the zone's listed rating as backline units queue behind. Giant enemies cannot enter.
 *   **Pillars / Statues (Tactical Feature):** Solid stone pillars or crumbling carvings.
     *   *Trigger:* Passive.
     *   *Rules:* Anyone occupying this Zone can declare they are taking cover behind a pillar (as a [[Free Action]]), granting them [[Full Cover]] against attacks coming from one specific adjacent Zone.

@@ -18,24 +18,23 @@ The absolute most important stat for a Mob is its [[Size]]. Size determines ever
 ## Mob Equipment & Loot Tradeoff
 Mobs can be equipped with scavenged weapons, armor, and utility tools, but this comes at a steep cost to their greed. 
 
-*   **Mob Armor:** Equipping a Mob with Armor grants them passive **Armor Dice** (e.g., **+1d6** or **+2d6**). Whenever the Mob is attacked, you roll these dice simultaneously against incoming damage. Every success (**5+**) reduces the incoming damage by 1. Outfitting a Mob with armor requires sufficient gear for the swarm: Mob Armor costs **Bulk equal to the Armor's Bulk rating multiplied by Mob Size** (e.g., Light Armor costs **Size x 1 Bulk**; Medium Armor costs **Size x 2 Bulk**).
+*   **Mob Armor:** Equipping a Mob with Armor grants them passive **Armor Dice** (e.g., **+1d6** or **+2d6**). Whenever the Mob is attacked, you roll these dice **once per incoming attack**. Every success (**5+**) reduces the incoming damage by 1 across all targeted dice before damage is applied. Outfitting a Mob with armor requires sufficient gear for the swarm: Mob Armor costs **Bulk equal to the Armor's Bulk rating multiplied by Mob Size** (e.g., Light Armor costs **Size x 1 Bulk**; Medium Armor costs **Size x 2 Bulk**).
 *   **Expedition Tools & Utility Gear:** Tools (such as Ropes, Crowbars, Lanterns, or Shovels) are shared by the squad. Each tool costs its standard flat **Bulk** rating (e.g., 1 Bulk for 1 Rope & Grappling Hook). 1 tool carried in the squad's pack serves the entire Mob.
 *   **The Tradeoff:** Every piece of gear a Mob is equipped with reduces their **Carry / [[Loot Capacity]]** by an equal amount of Bulk. A heavily armored Mob will survive longer, but they will not be able to carry the raiding loot back to the lair! A naked, feral Mob will die quickly but can carry a horde of treasure.
 *   **Casualties & Equipped Gear:** Equipped **Mob Armor** and **Mob Weapons** scale dynamically with the Mob's current **Size**. When a Mob loses Size from casualties, the armor and weapons of the fallen goblins remain on their corpses on the battlefield. Equipped gear never causes an encumbrance overload when Size drops. Only loose **Loot** and **Expedition Tools** count against the Mob's reduced capacity.
 
 ### Health & Taking Damage
-A Mob's health is tracked physically on the table using a number of D6s equal to its Size (e.g., A Size 3 mob starts with three physical dice turned to the "6" face). 
+A Mob's health is tracked physically on the table using a number of D6s equal to its Size (e.g., a Size 3 Mob starts with three physical dice turned to the "6" face). How damage is applied depends on the source of the attack:
 
-When a Mob takes standard damage, you turn the face down on one of those dice by the damage amount. When a die drops below 1, that die is removed, and the Mob permanently shrinks 1 point in Size. 
-*   **Damage Spillover:** In Gobbos, damage is lethal and always carries over! If a die is removed and there is still incoming damage left over, that remaining damage spills over into the next die. 
+1.  **Single-Target Attacks:** Damage is applied to the Mob's **lowest-value active health die**. If the die drops below 1, that die is removed (reducing the Mob's [[Size]] by 1), and any remaining damage spills over into the next lowest die.
+2.  **Mob-on-Mob Melee (The Frontline Rule):** When two Mobs clash in close combat, the attacking Mob strikes a number of health dice equal to its own current [[Size]] ($\min(\text{Attacker Size}, \text{Defender Size})$).
+    *   *Lowest Dice First:* Damage is applied to the defender's **lowest-value health dice first** (representing battered frontline runts absorbing the impact).
+    *   *Simultaneous Reduction:* Each engaged die suffers the full effective damage. Any die reduced below 1 is removed from the table. Any unengaged dice in the back ranks take **0 damage**.
+    *   *(Note: The maximum number of Melee Combat Dice or frontline width may be restricted by zone terrain, such as `Narrow` choke points; see [Movement & Zones](../00_Rules/03_Movement%20&%20Zones.md)).*
+3.  **Cleaving Attacks (`Cleave X`):** Attacks made with the `Cleave X` trait (such as a `Cleave 2` Greataxe or a `Cleave 3` Ogre Club) sweep across the frontline, applying their damage simultaneously to **up to X of the Mob's lowest-value health dice**.
+4.  **True Area Threats (`[AoE]` & Explosives):** Environmental catastrophes, explosive devices, and dragon breath weapons blanket the entire zone without an engagement cap. Incoming damage is applied to **every single active die** in the Mob's pool simultaneously.
 
-> *Example: A Size 3 mob has one die currently reading "2". They take 3 damage. The die is turned to 0 and removed (the mob is now Size 2). The remaining 1 damage spills over to the next die, turning a "6" into a "5".*
-
-**AoE & Cleave Damage (The Mob Killer):**
-Mobs are strong against single-target damage, but incredibly weak to Area of Effect (AoE) or Cleave attacks (like a roaring dragon's breath or a wizard's fireball). 
-If an attack explicitly has the AoE or Cleave trait, the incoming damage is applied to **EVERY SINGLE DIE** in the Mob.
-
-> *Example: A Fireball deals 3 Damage to a Size 5 Mob. Instead of just reducing one die by 3, you reduce ALL 5 dice by 3. That single fireball just dealt 15 total damage!*
+> *Example (Mob-on-Mob Clash): A Size 4 Goblin Mob has dice reading `[6, 4, 2, 1]`. A Size 2 Guard Mob attacks and deals 2 effective damage. The guards are Size 2, so they damage the 2 lowest dice (`[1]` and `[2]`). Both dice take 2 damage and are reduced below 1 and removed. The Goblin Mob is now Size 2, with surviving dice `[6, 4]`.*
 
 **Dropping Loot:** If a Mob shrinks in Size, their [[Loot Capacity]] also drops! If they are suddenly carrying more loose [[Loot]] and tools than their new Size allows, the controlling Boss must immediately choose which Loot is dropped on the floor. 
 

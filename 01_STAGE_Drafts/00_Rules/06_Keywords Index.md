@@ -27,7 +27,7 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 *   [[Carry Capacity]]: The maximum weight or Bulk a character can carry without speed or action penalties.
 *   [[Chassis]]: The base item that forms the body of a piece of Custom Gear. Built from Scrap. Determines the item type, Bulk, and base dice.
 *   [[Clatter Roll]]: A simultaneous roll of active Stat Dice (Slink for Dodge or Tough for Parry) alongside colored passive Armor Dice. Meeting the Threat TN results in 0 damage; failing triggers Armor Dice to mitigate remaining damage.
-*   [[Cleave]]: An attack property allowing excess successes to overflow and damage adjacent targets.
+*   [[Cleave|Cleave X]]: A weapon or monster attack property allowing melee strikes to sweep across multiple foes, dealing its damage simultaneously to up to **X adjacent targets** or up to **X of the lowest-value health dice** in a Mob (e.g., a standard Greataxe has `Cleave 2`, an Ogre has `Cleave 3`, and a Colossal Giant has `Cleave 5`).
 *   [[Condition]]: A temporary state applied to a character or Mob, imposing penalties or mechanical limits.
 *   [[Cover]]: Defensive positioning against ranged attacks. Partial cover grants a [[Boon]] (+1d) to Dodge, or imposes a [[Bane]] (-1d) on attacks. Full cover blocks targeting. See [[02 Combat]].
 *   [[Crafting Capacity]]: The maximum number of Oddities that can be attached to a single item. Equal to the crafter's Brains score.

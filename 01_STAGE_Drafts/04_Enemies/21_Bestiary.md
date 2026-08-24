@@ -143,7 +143,7 @@ Every creature belongs to an **Ancestry** that establishes its universal behavio
 #### [[Attack|Attacks]]
 | Attack | Threat | Damage | Range | Special |
 | :--- | :---: | :---: | :---: | :--- |
-| **Crushing Claws** | `Tough 5+/2` | 3 | Melee | Cleave (deals full damage to all dice in a Mob). |
+| **Crushing Claws** | `Tough 5+/2` | 3 | Melee | `Cleave 2` (damages up to 2 Mob dice). |
 | **Bear Hug** | `Slink 4+/2` | 2 | Melee | Target gains the [[Restrained]] condition. |
 
 **Plunder:** Massive Bear Hide, Bear Skull Helm (Loot Value 2, 2 Scrap T2).
@@ -389,7 +389,7 @@ Every creature belongs to an **Ancestry** that establishes its universal behavio
 #### [[Attack|Attacks]]
 | Attack | Threat | Damage | Range | Special |
 | :--- | :---: | :---: | :---: | :--- |
-| **Uprooted Log Smash** | `Tough 5+/2` | 3 | Melee (Zone-Wide) | Cleave: Targets are knocked [[Prone]]. |
+| **Uprooted Log Smash** | `Tough 5+/2` | 3 | Melee (Zone-Wide) | `Cleave 3`: Targets are knocked [[Prone]]. |
 | **Bile Vomit** | `Slink 4+/2` | 2 | Ranged (1 Zone) | Inflicts `[Acidic]` and `[Toxic]` tags. |
 
 **Plunder:** Troll gall bladder (alchemical catalyst), petrified stone club (Loot Value 4, 3 Scrap T3).
@@ -503,8 +503,8 @@ Every creature belongs to an **Ancestry** that establishes its universal behavio
 #### [[Attack|Attacks]]
 | Attack | Threat | Damage | Range | Special |
 | :--- | :---: | :---: | :---: | :--- |
-| **Brimstone Cleaver** | `Tough 4+/3` | 4 | Melee | Cleave (deals full damage to all Mob dice); inflicts `[Vile]`. |
-| **Barbed Shadow-Whip** | `Slink 5+/2` | 2 | Ranged (1 Zone) | Drags target into the Fiend's [[Zone]] and inflicts [[Restrained]]. |
+| **Brimstone Cleaver** | `Tough 4+/3` | 4 | Melee | `Cleave 3`; inflicts `[Vile]`. |
+| **Barbed Shadow-Whip** | `Slink 5+/2` | 2 | Range (1 Zone) | Drags target into the Fiend's [[Zone]] and inflicts [[Restrained]]. |
 
 **Plunder:** Demon Horn Scrap, Smoldering Infernal Core, Jagged Hell-Steel Blade (Loot Value 7, 4 Scrap T4).
 
@@ -528,7 +528,7 @@ Every creature belongs to an **Ancestry** that establishes its universal behavio
 #### [[Attack|Attacks]]
 | Attack | Threat | Damage | Range | Special |
 | :--- | :---: | :---: | :---: | :--- |
-| **Colossal Tail Sweep** | `Slink 5+/3` | 4 | Melee (Zone-Wide) | Cleave: All targets in [[Zone]] thrown 1 Zone and knocked [[Prone]]. |
+| **Colossal Tail Sweep** | `Slink 5+/3` | 4 | Melee (Zone-Wide) | `Cleave 5`: All targets in [[Zone]] thrown 1 Zone and knocked [[Prone]]. |
 | **Crushing Dragon Jaws** | `Tough 6/2` (Hard!) | 6 | Melee | Shatters shields; inflicts 2 Wounds on Bosses if undefended. |
 | **Hellfire Breath (Clock)** | `Slink 4+/3` | 5 | Ranged (2 Zones, AoE) | Vaporizes wooden cover; ignites both zones with `[Fire]`. |
 

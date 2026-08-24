@@ -84,15 +84,17 @@ Unique Statblock Traits are specialized behaviors or combat tactics custom-writt
 Enemy Mobs represent swarms of standard, weak units acting as a single tactical squad.
 
 ### Symmetrical Health (Dice-HP)
-An Enemy [[Mob]] of **Size X** (Size 1–5) is tracked using **X physical D6s** on the table, starting at the "6" face. 
-*   **Standard Damage:** Damage reduces the face of a single die. Spillover damage applies. 
-*   **AoE / Cleave:** [[Area of Effect (AoE)]] and Cleave attacks apply their damage to **every single die** in the Mob's pool simultaneously.
-    *   *Cleave Attacks:* A player using a weapon/ability with the `Cleave` trait can distribute their excess **successes** to kill multiple units in the Mob (each multiple of the unit's [[Defence TN]] removes 1 point of Mob Size).
-    *   *AoE Attacks:* An `AoE` attack (like a fire bomb) deals its flat damage directly to every die in the Mob's pool.
+An Enemy [[Mob]] of **Size X** (Size 1–5) is tracked using **X physical D6s** on the table, starting at the "6" face.
+*   **Single-Target Damage:** Damage reduces the face value of the Mob's lowest active health die. Spillover damage applies to the next lowest die if a die is removed.
+*   **Mob-on-Mob Melee (The Frontline Rule):** When attacked in melee by a Player [[Mob]], incoming damage applies simultaneously to the enemy's lowest-value health dice up to the attacking Mob's current [[Size]].
+*   **Cleave Attacks (`Cleave X`):** Attacks with the `Cleave X` trait sweep across multiple foes, applying damage simultaneously to **up to X of the Mob's lowest-value health dice** (e.g., standard two-handed greataxes have `Cleave 2`, while massive monsters possess `Cleave 3` or `Cleave 5`). (Overkill multi-wound scaling applies strictly against [[Elite]] and [[Boss]] foes on a Wounds track).
+*   **True Area Threats (`[AoE]`):** Attacks with the `[AoE]` tag (like fire bombs or dragon breath) apply their flat damage to **every single active die** in the Mob's pool simultaneously.
 
 ### Deterministic Damage Scaling
 An Enemy [[Mob]]'s automatic damage scales with its size:
 $$\text{Mob Damage} = \text{Base Unit Damage} + (\text{Current Size} - 1)$$
+*   **Attacking a Player Mob:** The Enemy Mob applies this damage via the **Frontline Rule** to a number of goblin dice equal to its current [[Size]] (targeting the lowest-value dice first).
+*   **Attacking a PC Boss:** The Enemy Mob delivers this damage as a single combined strike, defended with a single [[Clatter Roll]].
 
 ### Mob Constraints
 *   **No Elite Mobs:** [[Mob|Mobs]] can only consist of standard, one-hit-kill enemies. Elite and Boss enemies must always be fought as individual units.

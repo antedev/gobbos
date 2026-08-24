@@ -1,0 +1,143 @@
+﻿======================================================================
+                GOBBOS COMBAT SIMULATOR: Street Skirmish              
+======================================================================
+
+  ALLIES ROSTER:
+    - Boss Garg (Goblin Boss) -- Grit: 8/8, Grunt: 2/2, Zone: street_west [Gear: Notched Scimitar / Sword, Spiked Pot-Lid Shield, Riveted Mail Hauberk] [Quirks: Ankle Bite]
+    - Garg's Runts (Player Mob) -- Size: 3, Health Dice: [6, 6, 6], Zone: street_west
+
+  ENEMIES ROSTER:
+    - Robber Gang (Enemy Mob) -- Size: 3, Health Dice: [6, 6, 6], Zone: street_center
+    - Footpad Shiv (Standard) -- Defence: 1, Zone: street_center
+    - Footpad Slinger (Standard) -- Defence: 1, Zone: alley_east
+
+  ZONE TOPOLOGY:
+    - Zone [street_west] 'Street West': Profile 5+/1 (Traits: None) -> Adjacent: [street_center]
+    - Zone [street_center] 'Street Center': Profile 5+/1 [Cover: Partial] (Traits: None) -> Adjacent: [alley_east, street_west]
+    - Zone [alley_east] 'Alley East': Profile 5+/1 (Traits: Narrow) -> Adjacent: [street_center]
+
+
+======================================================================
+=========================  ROUND 1 -- START  =========================
+======================================================================
+
+  --- Action Log ---
+  -> [Boss Garg] performs Save Reaction
+  -> [Boss Garg] performs Free Order
+  -> [Garg's Runts] performs Mob Move
+  -> [Garg's Runts] performs Mob Melee Attack -> target: [Robber Gang]
+    * Dice Pool (3d6 vs 5+): [faces: [6, 1, 1] + explosions: [6, 3]] -> 2 Successes ([CRITICAL!])
+    [Damage] [Robber Gang] takes 1 Damage damage (Remaining: ?)
+  -> [Boss Garg] performs Move
+  -> [Boss Garg] performs Melee Attack -> target: [Footpad Shiv]
+    * Dice Pool (2d6 vs 5+): [faces: [2, 2]] -> 0 Successes
+  -> [Footpad Slinger] performs Enemy Move
+  -> [Group Attack (Robber Gang, Footpad Shiv, Footpad Slinger)] performs Group Attack on Boss -> target: [Boss Garg]
+    [Clatter Defense] for [Group Attack (Robber Gang, Footpad Shiv, Footpad Slinger)]: 1 Stat Succ, 0 Armor Mit => CLEAN EVASION (0 Damage Taken)
+
+  --- Round Status ---
+  Allies: Boss Garg (8/8 Grit), Garg's Runts (Size 3)
+  Enemies: Robber Gang (Size 3), Footpad Shiv, Footpad Slinger
+
+======================================================================
+=========================  ROUND 2 -- START  =========================
+======================================================================
+
+  --- Action Log ---
+  -> [Boss Garg] performs Save Reaction
+  -> [Boss Garg] performs Free Order
+  -> [Garg's Runts] performs Mob Melee Attack -> target: [Robber Gang]
+    * Dice Pool (3d6 vs 5+): [faces: [6, 6, 5] + explosions: [1, 5]] -> 4 Successes
+    [Damage] [Robber Gang] takes 1 Damage damage (Remaining: ?)
+  -> [Boss Garg] performs Melee Attack -> target: [Footpad Shiv]
+    * Dice Pool (2d6 vs 5+): [faces: [4, 1]] -> 0 Successes ([FUMBLE!], [GAMBLED])
+  -> [Boss Garg] performs Melee Attack -> target: [Footpad Shiv]
+    * Dice Pool (2d6 vs 5+): [faces: [2, 2]] -> 0 Successes ([FUMBLE!], [GAMBLED])
+  -> [Group Attack (Robber Gang, Footpad Shiv, Footpad Slinger)] performs Group Attack on Boss -> target: [Boss Garg]
+    [Clatter Defense] for [Group Attack (Robber Gang, Footpad Shiv, Footpad Slinger)]: 1 Stat Succ, 0 Armor Mit => CLEAN EVASION (0 Damage Taken)
+
+  --- Round Status ---
+  Allies: Boss Garg (8/8 Grit), Garg's Runts (Size 3)
+  Enemies: Robber Gang (Size 2), Footpad Shiv, Footpad Slinger
+
+======================================================================
+=========================  ROUND 3 -- START  =========================
+======================================================================
+
+  --- Action Log ---
+  -> [Boss Garg] performs Save Reaction
+  -> [Boss Garg] performs Free Order
+  -> [Garg's Runts] performs Mob Melee Attack -> target: [Robber Gang]
+    * Dice Pool (3d6 vs 5+): [faces: [1, 5, 2]] -> 1 Success
+    [Damage] [Robber Gang] takes 1 Damage damage (Remaining: ?)
+  -> [Boss Garg] performs Melee Attack -> target: [Footpad Shiv]
+    * Dice Pool (2d6 vs 5+): [faces: [6, 6] + explosions: [6, 5, 4]] -> 4 Successes ([CRITICAL!])
+    [Damage] [Footpad Shiv] takes 1 Wounds damage (Remaining: ?) [ELIMINATED / DEAD]
+  -> [Boss Garg] performs Melee Attack -> target: [Footpad Slinger]
+    * Dice Pool (2d6 vs 5+): [faces: [2, 4]] -> 0 Successes
+  -> [Group Attack (Robber Gang, Footpad Slinger)] performs Group Attack on Boss -> target: [Boss Garg]
+    [Clatter Defense] for [Group Attack (Robber Gang, Footpad Slinger)]: 1 Stat Succ, 0 Armor Mit => CLEAN EVASION (0 Damage Taken)
+
+  --- Round Status ---
+  Allies: Boss Garg (8/8 Grit), Garg's Runts (Size 3)
+  Enemies: Robber Gang (Size 2), Footpad Shiv (DEAD), Footpad Slinger
+
+======================================================================
+=========================  ROUND 4 -- START  =========================
+======================================================================
+
+  --- Action Log ---
+  -> [Boss Garg] performs Save Reaction
+  -> [Boss Garg] performs Free Order
+  -> [Garg's Runts] performs Mob Melee Attack -> target: [Robber Gang]
+    * Dice Pool (3d6 vs 5+): [faces: [1, 2, 6] + explosions: [4]] -> 1 Success
+    [Damage] [Robber Gang] takes 1 Damage damage (Remaining: ?)
+  -> [Boss Garg] performs Melee Attack -> target: [Footpad Slinger]
+    * Dice Pool (2d6 vs 5+): [faces: [3, 3]] -> 0 Successes
+  -> [Boss Garg] performs Melee Attack -> target: [Footpad Slinger]
+    * Dice Pool (2d6 vs 5+): [faces: [2, 2]] -> 0 Successes
+  -> [Group Attack (Robber Gang, Footpad Slinger)] performs Group Attack on Boss -> target: [Boss Garg]
+    [Clatter Defense] for [Group Attack (Robber Gang, Footpad Slinger)]: 0 Stat Succ, 0 Armor Mit => HIT -> Took 3 Damage
+
+  --- Round Status ---
+  Allies: Boss Garg (5/8 Grit), Garg's Runts (Size 3)
+  Enemies: Robber Gang (Size 2), Footpad Shiv (DEAD), Footpad Slinger
+
+======================================================================
+=========================  ROUND 5 -- START  =========================
+======================================================================
+
+  --- Action Log ---
+  -> [Boss Garg] performs Save Reaction
+  -> [Boss Garg] performs Free Order
+  -> [Garg's Runts] performs Mob Melee Attack -> target: [Robber Gang]
+    * Dice Pool (3d6 vs 5+): [faces: [3, 3, 5]] -> 1 Success
+    [Damage] [Robber Gang] takes 1 Damage damage (Remaining: ?)
+  -> [Boss Garg] performs Melee Attack -> target: [Footpad Slinger]
+    * Dice Pool (2d6 vs 5+): [faces: [3, 6] + explosions: [4]] -> 1 Success ([GAMBLED])
+    [Damage] [Footpad Slinger] takes 1 Wounds damage (Remaining: ?) [ELIMINATED / DEAD]
+  -> [Boss Garg] performs Melee Attack -> target: [Robber Gang]
+    * Dice Pool (2d6 vs 5+): [faces: [5, 1]] -> 1 Success
+    [Damage] [Robber Gang] takes 0 Wounds damage (Remaining: ?)
+  -> [Robber Gang] performs Enemy Attack on Boss -> target: [Boss Garg]
+    [Clatter Defense] for [Robber Gang]: 0 Stat Succ, 0 Armor Mit => HIT -> Took 0 Damage
+    [Morale] Trigger: Morale Check: Loss -> Enemies Broken: True
+
+  --- Round Status ---
+  Allies: Boss Garg (5/8 Grit), Garg's Runts (Size 3)
+  Enemies: Robber Gang (DISPERSED), Footpad Shiv (DEAD), Footpad Slinger (DEAD)
+
+======================================================================
+               COMBAT ENCOUNTER SUMMARY: Street Skirmish              
+                        VICTORY FOR THE GOBLINS!                      
+----------------------------------------------------------------------
+  - Victor: ALLIES
+  - Total Rounds Elapsed: 5
+  - Allies Survived: True
+  - Enemies Defeated: 3
+  - Total Ally Casualties: 0
+  - Boss Remaining Grit:
+    - Boss Garg: 5 Grit
+  - Mob Remaining Size:
+    - Garg's Runts: Size 3
+======================================================================
