@@ -122,20 +122,30 @@ Enemies whose physical [[Size]] exceeds an attack's **Impact Size** possess natu
 
 ## 6. Morale & Group Flight
 
-Every enemy group has a static **Morale TN** (e.g. Peasant = **5+/1**, Guard = **5+/3**).
+Because the GM never rolls dice, enemy morale is resolved through player-facing intimidation checks using the horde's **Swarm Terror Pool**.
 
-### The Morale Check
-A group [[Morale Check]] is triggered at the end of the round if the enemies suffered a catastrophic loss (e.g. losing 50% of their total units/[[Mob]] [[Size]], their Commander dying, or suffering massive explosive damage).
+### The Morale Trigger Windows
+An enemy force must test morale when triggered during two distinct windows:
+1.  **Immediate Triggers (Mid-Phase):**
+    *   *Commander Slain:* When the enemy group's designated **Commander** is slain or incapacitated.
+    *   *Ancestry Panic:* When a specific vulnerability is triggered (such as a `[Beast]` exposed to `[Fire]` or `[Loud]` tags).
+    *   *Active Intimidation:* When a Boss spends an action to roar, bang pots, or unleash terrifying magic.
+2.  **Attrition Trigger (Phase 4: Round Closure):**
+    *   *50% Casualties:* The enemy group ends the round having lost **50% or more of its starting units** (or 50% of an Enemy Mob's starting **Size**).
 
-*   **The Roll:** The players roll a combined `Swarm Terror` pool of **d6s** against a target of **5+** (successes on 5 or 6). The number of dice in the pool equals the **total Size of all surviving Mobs + surviving PCs** in the current and adjacent [[Zones]].
-*   **The Result:** If the players roll **successes** equal to or greater than the enemy group's **Morale TN**, the enemies break!
+### The Swarm Terror Check
+The players roll a combined **Swarm Terror Pool** against the enemy's printed **Morale Profile** (`[Target Face]+/[Required Successes]`, e.g. `4+/1` for Militia, `5+/2` for Watchmen, `6/2` for Knights; or `Immune` for Undead and Fiends):
 
-### Fleeing
-When enemies break, they drop all heavy loot and must use their 2 Actions on their turns to move toward the nearest exit or safety. If their escape path is physically blocked, fleeing enemies will use their actions to shove, smash, or attack whatever stands in their way.
+$$\text{Swarm Terror Pool} = \sum(\text{Surviving Mob Sizes in Same \& Adjacent Zones}) + \sum(\text{Surviving Bosses in Same \& Adjacent Zones})$$
+
+*   **The Result:** If the players roll successes equal to or greater than the enemy group's **Morale TN**, the enemies break!
+*   **Panicked Rout:** Broken enemies drop heavy weapons and carried loot, and must spend **two (2) Move actions** on their turns fleeing toward the nearest exit until off the map.
+*   **The Parting Shot:** To prevent excessive table rolling during a rout, the fleeing group triggers **exactly one (1) free Opportunity Attack (or one free Plunder grab)**, awarded to **one Boss or Mob of the players' choice** in that Zone.
+*   **Failure:** If players roll fewer successes than Morale TN, the enemies steel their nerves, hold the line, and continue fighting.
 
 ### Regrouping (The Rally)
-If there is a surviving **Enemy Commander** who did not break, they can use an action to rally the fleeing troops. This triggers an opposed [[Morale Check]]:
-*   The players roll their Swarm Terror pool against the Commander's **Morale TN**. 
+If an **Enemy Commander** survives and did not break, they can use 1 action on their active turn to attempt to rally the fleeing troops. This triggers an opposed check:
+*   The players roll their Swarm Terror pool against the Commander's **Morale Profile**. 
     *   *Fiction:* The players roll to represent the Goblins banging their shields, screaming, and actively drowning out the Commander's orders to keep the enemies panicked.
 *   If the players succeed, the troops keep running.
 *   If the players fail, the Commander successfully rallies the troops, and they stop fleeing.

@@ -137,23 +137,31 @@ To prevent overwhelming action-economy drain and endless individual rolls when m
 
 ## 6. Enemy Morale, Swarm Terror, and Rallying
 
-### The Morale Trigger
-An enemy group must make an immediate **Morale Check** during the **Round Closure Phase** if they suffer catastrophic collapse:
-1.  The enemy group loses **50% or more of its total units** (or 50% of an Enemy Mob's starting **Size**).
-2.  The enemy group's **Commander** is slain.
+Because the GM never rolls dice, enemy morale is resolved through player-facing intimidation checks using the horde's **Swarm Terror Pool**.
+
+### The Morale Trigger Windows
+An enemy force must test morale when triggered during two distinct windows:
+1.  **Immediate Triggers (Mid-Phase):**
+    *   *Commander Slain:* When the enemy group's designated **Commander** is slain or incapacitated.
+    *   *Ancestry Panic:* When a specific vulnerability is triggered (such as a `[Beast]` exposed to `[Fire]` or `[Loud]` tags).
+    *   *Active Intimidation:* When a **Goblin Boss** spends a Standard Action to roar or bang shields.
+2.  **Attrition Trigger (Phase 4: Round Closure):**
+    *   *50% Casualties:* The enemy group ends the round having lost **50% or more of its starting units** (or 50% of an Enemy Mob's starting **Size**).
 
 ### The Swarm Terror Check
-The players roll a combined **Swarm Terror Pool** against the enemy group's static **Morale TN** (testing against **5+** difficulty):
+The players roll a combined **Swarm Terror Pool** against the enemy's printed **Morale Profile** (`[Target Face]+/[Required Successes]`):
 
-**Swarm Terror Dice** = **Surviving Mob Sizes in Zone/Adjacent** + **Surviving Bosses in Zone/Adjacent**
+**Swarm Terror Dice** = **Surviving Mob Sizes in Same & Adjacent Zones** + **Surviving Bosses in Same & Adjacent Zones**
 
-*   **Success (Successes >= Morale TN):** The enemy group breaks! The enemies drop heavy gear and must spend **two (2) Move actions** on their turns fleeing toward the nearest exit.
+*   **Success (Successes >= Morale TN):** The enemy force breaks!
+    *   *Panicked Rout:* The enemies drop heavy gear and carried weapons, and must spend **two (2) Move actions** each turn fleeing toward the nearest exit until off the map.
+    *   *The Parting Shot:* To prevent excessive table rolling during a rout, the fleeing group triggers **exactly one (1) free Opportunity Attack (or one free Plunder grab)**, awarded to **one Boss or Mob of the players' choice** in that Zone.
 *   **Failure (Successes < Morale TN):** The enemies hold their ground and continue fighting.
 
 ### The Commander Rally
-If an **Enemy Commander** survives and did not break, the commander may spend **1 Standard Action** on its turn to attempt a **Rally**:
-*   **Opposed Roll:** The players roll their current **Swarm Terror Pool** against the Commander's **Morale TN**.
-*   **Resolution:** If the players succeed, the goblin shouting and shield-banging drowns out the commander, and the troops continue fleeing. If the players fail, the commander restores order, and the troops return to combat.
+If an **Enemy Commander** survives and did not break, the commander may spend **1 Standard Action** on their active turn to attempt a **Rally**:
+*   **Opposed Roll:** The players roll their current **Swarm Terror Pool** against the Commander's **Morale Profile**.
+*   **Resolution:** If the players score successes >= Commander's Morale TN, the goblin screaming and shield-banging drowns out the commander, and the troops continue fleeing. If the players fail, the commander restores order, and the troops return to combat on their next turn.
 
 ---
 

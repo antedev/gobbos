@@ -2,7 +2,7 @@
 
 *Goblins do not rely on disciplined training, ancient martial manuals, or measured arithmetic. When a goblin Boss leaps into the fray, success is a messy collision of muscle, blind panic, screeching mobs, and sheer explosive momentum.*
 
-This chapter defines the core resolution engine for **Gobbos**. All dice tests, difficulty structures, pool modifications, and chaotic risk mechanics operate under the rules codified below.
+This chapter defines the core resolution engine for **Gobbos**. All dice tests, difficulty structures, pool modifications, extra successes, horde hype levels, and chaotic risk mechanics operate under the rules codified below.
 
 ---
 
@@ -24,7 +24,7 @@ When you attempt an action that carries a risk of failure or meaningful conseque
 
 ---
 
-## Difficulty & Target Numbers
+## Difficulty, Target Numbers & Extra Successes
 
 Every test is defined by two values: a **Difficulty Face** (which die faces count as a success) and a **Target Number (TN)** (how many total successes you must accumulate to succeed).
 
@@ -51,7 +51,40 @@ To eliminate math bloat during play, all checks use the standard slash notation:
 *   **In System Paragraphs**: *“Climbing the slick wall requires a Slink test against the zone profile of 5+ (2 successes).”*
 *   **In Statblocks & Profiles**: `Slink 5+/2`, `Tough 4+/1`, `Brains 6/2`.
 
-> **Example:** Picking a sturdy lock requires `Brains 5+/2`. A **Goblin Boss** with **Brains 3** rolls 3d6. The dice land on **1**, **5**, and **6**. Because the test is **Normal (5+)**, both the **5** and the **6** count as successes. With 2 successes scored against a **TN of 2**, the lock clicks open.
+---
+
+### Extra Successes & The Goblin Touch
+
+When your roll yields more successes than the required **Target Number (TN)** (Successes > TN), you achieve an **Over-Success**. Rolling beyond the bare minimum excites the horde and allows you to dictate the style and narrative quality of your triumph.
+
+```mermaid
+flowchart TD
+    R["Roll Dice Pool"] --> E{"Evaluate Successes vs TN"}
+    E -->|Successes < TN| F["Failure / Optional Gobbo Gamble"]
+    E -->|Successes == TN| S["Clean Success (Task Completed)"]
+    E -->|Successes > TN| OS["OVER-SUCCESS (The Goblin Touch)<br>- Add +1d6 to Bangaranga Pool<br>- Declare Narrative Quality"]
+    OS --> C{"Exceeded TN by >= 2?"}
+    C -->|Yes: Successes >= TN + 2| CR["CRUSHED IT! (Gobbo Flex)<br>- Regain +1 Grunt OR<br>- Apply Instant Tactical Condition"]
+    C -->|No| DONE["Action Complete"]
+```
+
+#### 1. Hype Generation (+1d6 Bangaranga)
+Whenever you score **at least one extra success** beyond the required TN (regardless of whether you beat it by 1, 3, or 5 successes), you immediately add **+1d6 directly to the communal Bangaranga Pool**. Your conspicuous competence fires up the surrounding runts and builds the raid's momentum.
+
+#### 2. The Narrative Quality (The Goblin Touch)
+When you over-succeed, you choose the narrative and tactical delivery of how you completed the action:
+*   **Quiet (Ghost Gobbo):** The task is executed with zero sound or trace. Picking a lock or climbing a wall creates 0 Clatter and generates no suspicion from nearby sentries.
+*   **Swift (In a Flash):** The task is executed in half the time, allowing you to react immediately or slip through a gap before an obstacle resets.
+*   **Showy / Loud (Look at Me!):** You execute the task with obnoxious swagger, posing and drawing all enemy attention in the Zone onto yourself and away from sneaking allies.
+*   **Demolishing (Splintered):** The obstacle is permanently ruined in the process. A picked lock is stripped clean; a bypassed grate is ripped out of the masonry so foes cannot lock it behind you.
+
+#### 3. "Crushed It!" (Successes >= TN + 2)
+If your total accumulated successes exceed the TN by **two (2) or more extra successes**, you completely smash the challenge. In addition to adding **+1d6 to the Bangaranga Pool**, choose one instant bonus:
+*   **Gobbo Flex (+1 Grunt):** Your Boss's vanity and adrenaline surge, instantly restoring **+1 Grunt** (up to your maximum rating).
+*   **Tactical Impact:** You impose an immediate physical condition on an enemy or feature in your Zone (apply the **Staggered** condition, knock a minion **Prone**, or push an opponent **1 Zone**).
+
+> **Example:** Snagtooth attempts to pick a sturdy vault lock (`Brains 5+/1`). He rolls a pool of 4d6 and scores **3 successes** (2 extra successes). The lock snaps open instantly. 
+> Snagtooth achieves an Over-Success: he immediately adds **+1d6 to the Bangaranga Pool** as his runts snicker with excitement. Because he beat the TN by 2 full successes, he triggers **Crushed It!**: he chooses the **Demolishing** narrative style (stripping the lock mechanism bare) and takes **+1 Grunt** from pure goblin swagger.
 
 ---
 
@@ -76,16 +109,14 @@ When you achieve a **Critical Success**, you immediately receive two mechanical 
 flowchart LR
     A["Natural 6 Rolled"] -->|Counts as 1 Success| B["Roll +1 Bonus Die"]
     B -->|Rolls 6| C["CRITICAL SUCCESS!"]
-    C --> D["- Counts as 1 Success<br>- Regain +1 Grunt<br>- Gain 1 Free Non-Offensive Action<br>- Roll another Bonus Die (Chains!)"]
+    C --> D["- Counts as 1 Success<br>- Regain +1 Grunt<br>- Gain 1 Free Non-Offensive Action<br>- Add +1d6 to Bangaranga Pool<br>- Roll another Bonus Die (Chains!)"]
 ```
-
-[MISSING RULE / GAP: Bangaranga Multi-Explosion Critical Cascade Definition — When rolling Bangaranga Dice, a natural 6 explodes into two regular dice simultaneously. The rules must define whether a 6 rolled on either bonus die triggers a Critical Success. Suggested Resolution: Any bonus die generated from an exploding die that rolls a 6 is treated as a Critical Success, granting +1 Grunt and a free non-offensive action. However, a single test action can grant a maximum of +1 Grunt and 1 bonus Free Action regardless of how many individual double-six chains occur in that single pool throw.]
 
 ---
 
 ## Zero Dice Pools & The Salvage Roll
 
-When extreme Banes, encumbrance penalties, or debilitating conditions reduce your active dice pool to **0d6 or fewer dice**, the action automatically fails by default. However, a goblin always makes one last desperate attempt.
+When severe Banes, heavy encumbrance, or debilitating conditions reduce your active dice pool to **0d6 or fewer dice**, the action automatically fails by default. However, a goblin always makes one last desperate attempt.
 
 ### The Salvage Roll
 When forced to test with a pool of **0d6 or fewer**, you roll exactly **1d6** as a **Salvage Roll**:
@@ -103,42 +134,46 @@ When forced to test with a pool of **0d6 or fewer**, you roll exactly **1d6** as
 When an initial roll fails, a goblin can push luck by doubling down on their worst dice.
 
 ### Declaring the Gamble
-If your initial test fails to accumulate enough successes to meet the **Target Number (TN)**, but your roll contains one or more dice showing **1s**, you may declare a **Gobbo Gamble**:
+If your initial test fails to accumulate enough successes to meet the **Target Number (TN)**, but your roll contains one or more regular dice showing **1s**, you may declare a **Gobbo Gamble**:
 
-1.  **Reroll All 1s**: Pick up all dice showing natural **1s** from the failed pool and reroll them together. You cannot choose to reroll only some of the 1s; all 1s must be rerolled.
-2.  **The Blessing**: If the rerolled dice produce enough new successes to bring your total pool successes up to or above the **TN**, the test succeeds normally.
-3.  **The Fumble**: If the total successes are still fewer than the **TN** after rerolling the 1s, you have **Fumbled**. The action fails catastrophically, and your **Goblin Boss** immediately loses **1 Grunt**.
-4.  **Accepting Failure**: If you choose not to reroll your 1s (or if your failed roll contained zero 1s), the action fails normally. You suffer no **Fumble** penalty and lose **0 Grunt**.
-
-> **Example:** You make a `Tough 5+/2` test with a pool of 3d6. The dice show **1**, **1**, and **3** (0 successes). Because you have two 1s, you declare a **Gobbo Gamble** and reroll both 1s. 
-> *   *Outcome A:* The rerolled dice land on **5** and **6**. You now have 2 successes. The test succeeds!
-> *   *Outcome B:* The rerolled dice land on **2** and **5**. You now have 1 success (short of the TN of 2). The test fails, you trigger a **Fumble**, and you lose **1 Grunt**.
+1.  **Reroll Regular 1s Only**: Pick up all standard pool dice showing natural **1s** from the failed pool and reroll them together. You cannot choose to reroll only some of the regular 1s; all regular 1s must be rerolled.
+2.  **Locked Bangaranga 1s**: Any drawn **Bangaranga Dice** showing **1s** represent erratic crowd blunders. They are locked and **cannot be rerolled** during a Gobbo Gamble. If a failed pool contains only Bangaranga 1s and zero regular 1s, you cannot declare a Gobbo Gamble.
+3.  **The Blessing**: If the rerolled regular dice produce enough new successes to bring your total pool successes up to or above the **TN**, the test succeeds normally.
+4.  **The Fumble**: If the total successes are still fewer than the **TN** after rerolling the regular 1s, you have **Fumbled**. The action fails catastrophically, and your **Goblin Boss** immediately loses **1 Grunt**.
+5.  **Accepting Failure**: If you choose not to reroll your regular 1s (or if your failed roll contained zero regular 1s), the action fails normally. You suffer no **Fumble** penalty and lose **0 Grunt** (unless Bangaranga dice were drawn; see below).
 
 ---
 
-## Boons & Banes
+## Boons & Banes (Tactical Stacking)
 
-Circumstances, tactical positioning, environmental traits, and specialized gear modify dice pools by adding or removing physical dice.
+Circumstances, tactical positioning, environmental hazards, and specialized equipment modify dice pools by adding or removing physical dice.
 
 ### Boons (+1d)
-A **Boon** represents a tactical advantage (such as attacking an unalert target, using masterwork lockpicks, or having high ground). Each Boon adds **+1d6** to your active dice pool before the roll is made.
+A **Boon** represents a tactical advantage (such as attacking an unalert target, flanking with an allied Mob, using high ground, or wielding masterwork lockpicks). Each Boon adds **+1d6** to your active dice pool before the roll is made.
 
 ### Banes (-1d)
-A **Bane** represents an active hindrance (such as attacking through thick smoke, firing into partial cover, or moving while over-encumbered). Each Bane removes **1d6** from your active dice pool before the roll is made.
+A **Bane** represents an active hindrance (such as attacking through thick smoke, firing into heavy cover, operating in pitch darkness, or moving while over-encumbered). Each Bane removes **1d6** from your active dice pool before the roll is made.
 
-### The Net Cap Rule
-Multiple environmental, tactical, or situational modifiers do not stack indefinitely:
-*   **1-to-1 Cancellation**: Boons and Banes cancel each other out on a 1-to-1 basis.
-*   **Net Modifier Cap**: After cancellation, situational and environmental modifiers are capped at a net maximum of **+1d (Boon 1)** or **-1d (Bane 1)** on any single test.
-*   *Exception*: Distinct gear properties (such as Heavy Armor imposing Bane 2 on Slink) or specific high-tier Quirks explicitly state when they bypass the situational net cap.
+### 1-to-1 Cancellation & Uncapped Stacking
+Boons and Banes cancel each other out on a strict **1-to-1 basis** before rolling:
+*   **Uncapped Boons**: Positive modifiers stack naturally without an artificial ceiling. If a Boss combines high ground (+1d), flanking (+1d), and weapon reach (+1d), the Boss gains a net **Boon 3 (+3d6)**. Generating massive successes from stacked Boons directly fuels the communal **Bangaranga Pool**.
+*   **Uncapped Banes**: Negative situational and environmental modifiers stack to reflect truly hostile perils. If cumulative Banes reduce a pool to **0d6 or lower**, the test is forced into a desperate **0d6 Salvage Roll**.
 
 ---
 
-## The Bangaranga Pool Engine
+## The Bangaranga Pool & Horde Hype Engine
 
-The **Bangaranga Pool** is a shared, communal pool of distinctly colored standard d6s (such as bright red or neon green) placed in the center of the table. It represents the collective hype, screaming, bloodlust, and erratic momentum of the entire goblin horde.
+The **Bangaranga Pool** is a communal pool of distinctly colored standard d6s (such as bright red or neon green) placed in the center of the table. It physically tracks the decibel level, bloodlust, and collective momentum of the entire goblin horde.
 
->> **The Bangaranga Pool:** Shared Horde Momentum • Double-Exploding 6s • High Risk
+```mermaid
+flowchart LR
+    A["0–3 Dice: Quiet / Skittish<br>(Stealth Active • Fragile Morale)"] 
+    --> B["4–7 Dice: Rowdy Raid<br>(Starting Baseline • Standard Decibels)"]
+    --> C["8–11 Dice: Mob Frenzy<br>(Stealth Broken • Mandatory Bangaranga Dice)"]
+    --> D["12+ Dice: THE BOILING POINT / WAAAGH!<br>(Fearless Swarm • Must Vent or Riot)"]
+```
+
+---
 
 ### 1. Seeding the Pool (Raid Start)
 At the start of every raid, the **Bangaranga Pool** is seeded with initial dice based on party composition:
@@ -149,13 +184,14 @@ At the start of every raid, the **Bangaranga Pool** is seeded with initial dice 
 | Each controlled **Mob** of **Size 3** or **Size 4** | **+1d** per Mob |
 | Each controlled **Mob** of **Size 5** | **+2d** per Mob |
 
-> **Example:** A raiding party consists of 3 **Goblin Bosses**, one **Size 4 Mob**, and one **Size 2 Mob**. At the start of the raid, the table seeds the **Bangaranga Pool** with **4d6** (3d from Bosses + 1d from the Size 4 Mob + 0d from the Size 2 Mob).
+---
 
 ### 2. Loading the Pool (Hype Triggers)
 During play, notable chaotic feats add physical dice to the active **Bangaranga Pool**:
 
 | Trigger Event | Condition | Dice Added |
 | :--- | :--- | :---: |
+| **Over-Success** | Scoring successes strictly greater than the test's Target Number (TN) | **+1d6** |
 | **Critical Success** | Any player rolls a double-six Critical Success on any test | **+1d6** |
 | **Fumble** | Any player fumbles a test (via failed Gamble or 0d6 Salvage) | **+1d6** |
 | **Notable Kill** | Defeating an enemy with the `[Notable]` or `[Big Threat]` tag | **+1d6** |
@@ -163,25 +199,68 @@ During play, notable chaotic feats add physical dice to the active **Bangaranga 
 | **Shenanigan Indulged** | Indulging a Gang **Shenanigan** compulsion to the party's detriment | **+1d6** |
 | **Mob Mischief** | Rolling natural 1s during background node **Chaos Ticks** | **+1d6 per 1** |
 
-### 3. Tapping the Pool & The Bangaranga Tax
+---
+
+### 3. Horde Hype Tiers (Decibel & Swarm Mood)
+
+The total number of physical dice currently resting in the **Bangaranga Pool** dictates the auditory profile and psychological mood of the horde:
+
+#### Tier 1: Quiet / Skittish (0–3 Dice in Pool)
+*   **Auditory Profile:** Muffled whispers, crawling runts, nervous silence.
+*   **Stealth:** Slink and stealth actions operate normally.
+*   **Morale:** Goblins are timid. Mobs suffer standard Morale checks when taking casualties.
+
+#### Tier 2: Rowdy Raid (4–7 Dice in Pool — *Starting Baseline*)
+*   **Auditory Profile:** Clattering scrap, muttering, rattling pots. Standard raid decibel level.
+*   **Command:** Baseline command range and Boss order flow.
+
+#### Tier 3: Mob Frenzy (8–11 Dice in Pool)
+*   **Auditory Profile:** Howling, banging weapons against shields, stomping feet. **Stealth is impossible.** All connected adjacent zones immediately become **Alert**.
+*   **Mandatory Bangaranga:** The swarm carries you along. Every active test made by a Boss or Mob **must draw and roll at least 1 Bangaranga die**.
+*   **Order Friction:** Goblins only want violence. Orders to **Attack**, **Charge**, or **Wreck** resolve normally. Subtle or restrained orders (**Wait**, **Sneak**, **Fall Back**) suffer a **Bane 1 (-1d)** penalty.
+
+#### Tier 4: The Boiling Point / WAAAGH! (12+ Dice in Pool)
+*   **Auditory Profile:** Total deafening pandemonium. The dungeon masonry shakes.
+*   **Fearless Swarm:** Player Mobs become **Fearless**, completely ignoring all Morale checks caused by Mob casualties (they only check Morale if their Boss is incapacitated).
+*   **Swarm Terror:** The howling horde terrifies defenders. Enemies suffer a **-1 penalty to their Morale TN** against player Swarm Terror checks.
+*   **Boiling Pressure:** The horde cannot sustain this pressure at rest. During the **Round Closure Phase**, if the pool remains at 12+ dice, any **Unordered Mob** (a Mob that received no active orders this round) must immediately roll on the **Out of Control Table** (`06_Mob_Mechanics.md`) as runts run amok.
+
+---
+
+### 4. Tapping the Pool & The Messy Shortcut Rule
+
 Before rolling any test, a **Goblin Boss** may draw dice from the **Bangaranga Pool** to add to their active dice pool:
-*   **Grunt Draw Limit**: You can draw a maximum number of Bangaranga dice equal to your Boss's current **Grunt** rating.
+*   **Grunt Draw Limit**: You can draw a maximum number of Bangaranga dice equal to your Boss's current **Grunt** rating (minimum 1 die if pool is at 8+ dice).
 *   **The Bangaranga Tax**: If the number of Bangaranga dice drawn is **strictly greater than the test's Target Number (TN)**, you must pay a **1-die Tax**. One additional die is removed from the Bangaranga Pool and discarded unrolled back to the box.
-*   **Pool Coverage Requirement**: If the Bangaranga Pool contains insufficient dice to cover both the drawn dice and the required tax die, you cannot draw that number of dice.
+*   **Rolling Bangaranga (Double Explosions)**: Every natural **6** rolled on a Bangaranga die counts as **1 Success** and **explodes twice**, immediately adding **two regular d6s** into the active pool.
+*   **The Messy Shortcut Rule**: You may draw Bangaranga dice on **Brains** or **Slink** tests (such as picking locks, disarming traps, or tinkering), but doing so represents an impatient, chaotic shortcut. Using Bangaranga on a delicate test **automatically generates Noise / Clatter** and causes collateral damage to the surrounding mechanism or container.
 
-> **Example (Tax Calculation on a 5+/2 Test):**
-> *   Drawing 1 or 2 Bangaranga dice: No tax (2 dice drawn <= TN 2). Exactly 2 dice are drawn and rolled.
-> *   Drawing 3 Bangaranga dice: Tax applies (3 dice drawn > TN 2). Requires 4 total dice in the pool. 3 dice are rolled, and 1 die is discarded unrolled.
+---
 
-### 4. Rolling Bangaranga Dice (Double Explosions)
-Bangaranga dice are rolled alongside your standard pool dice:
-*   Every natural **6** rolled on a Bangaranga die counts as **1 Success** and **explodes twice**.
-*   You immediately roll **two regular d6s** into your pool for each exploding Bangaranga 6. These bonus regular dice can themselves succeed or explode normally.
+### 5. "Hush the Swarm" (The Buzzkill Check)
 
-### 5. Overreaching & Drain
+To quiet a rowdy horde and reduce dungeon noise, a Boss can spend one **Standard Action** making a **Mouth** (or **Slink**) test to silence the runts. The required **Target Number (TN)** scales with the current Hype Tier:
+
+| Current Bangaranga Pool | Horde Mood | "Hush the Swarm" Check | Success Outcome |
+| :---: | :---: | :---: | :--- |
+| **4 – 7 Dice** | **Rowdy** | `Mouth 5+/1` | Safely discards **2 Bangaranga dice**. |
+| **8 – 11 Dice** | **Frenzy** | `Mouth 5+/2` | Safely discards **3 Bangaranga dice**. |
+| **12+ Dice** | **Boiling Point** | `Mouth 6/2` | Safely discards **4 Bangaranga dice**. |
+
+#### The "Buzzkill" Backfire (Failure)
+Goblins despise a party-pooper. If a Boss fails a "Hush the Swarm" test:
+1.  **Public Mockery**: The runts throw boots, bones, and rotten mushrooms. The Boss immediately loses **1 Grunt**.
+2.  **Mob Riot**: The Mob in the Boss's Zone immediately enters the **Out of Control** state.
+3.  **Spite Noise**: In open defiance, the mob bangs pots as loud as possible, alerting the nearest unalert zone.
+
+---
+
+### 6. Overreaching & Drain
+
 Relying on the crowd's chaotic energy carries severe penalties when things go wrong:
-*   **Grunt Loss**: If a test fails after including Bangaranga dice, your Boss immediately loses **1 Grunt**. (Because failure already costs 1 Grunt, you should always declare a **Gobbo Gamble** on any 1s rolled).
-*   **Pool Drain**: If a test using Bangaranga dice ends in failure (either by accepting failure with 1s or failing the Gobbo Gamble) and the final pool contains **any natural 1s**, the hype collapses. You must immediately remove and discard a number of dice from the communal **Bangaranga Pool** equal to the number of Bangaranga dice drawn for that test.
+*   **Grunt Loss**: If a test fails after including Bangaranga dice, your Boss immediately loses **1 Grunt**.
+*   **Locked Bangaranga 1s**: Any drawn Bangaranga dice showing **1s** are locked on the table and **cannot be rerolled** during a Gobbo Gamble.
+*   **Pool Drain**: If a test using Bangaranga dice ends in failure (whether by accepting failure, having only locked Bangaranga 1s, or failing a Gobbo Gamble) and the final pool contains **any natural 1s** (including locked Bangaranga 1s), the hype collapses. You must immediately remove and discard a number of dice from the communal **Bangaranga Pool** equal to the number of Bangaranga dice drawn for that test.
 
 ---
 
@@ -195,18 +274,18 @@ When an NPC, enemy guard, or trap resists a player's action:
 2.  **Active Player Test**: The player makes an active test using the appropriate stat (**Slink** for stealth, **Mouth** for intimidation, **Tough** for wrestling) against that static profile.
 3.  **Outcome**: If player successes meet or exceed the static Resistance TN, the player overcomes the opposition. If successes fall short, the action fails and triggers enemy awareness or retaliation.
 
-[MISSING RULE / GAP: Unified Opposed & Resistance Test Mechanics — While the core engine specifies that the GM never rolls dice, complex opposed contests between multiple NPCs or asymmetric player-versus-player disputes lack an explicit tie-breaking formula. Suggested Resolution: In any direct contest between two active player characters, both roll their active stat pools against a default Normal (5+) difficulty; the character with the higher net successes wins. If tied, the character with the higher base Main Stat wins; if still tied, both suffer a chaotic collision and gain the Staggered condition.]
-
 ---
 
 ## Summary of Core Resolution Rules
 
-1.  **ROLL:** Assemble pool = **Base Stat / Mob Size** + **Boons** - **Banes** + **Bangaranga**. The GM never rolls.
+1.  **ROLL:** Assemble pool = **Base Stat / Mob Size** + **Boons** - **Banes** + **Bangaranga**. (Boons/Banes stack uncapped).
 2.  **COUNT:** Match faces against Difficulty (**Easy 4+**, **Normal 5+**, **Hard 6**).
 3.  **EXPLODE:** Every natural **6** is +1 success and rolls +1 bonus d6.
-    *   Double explosion (6 -> 6) is a **Critical Success**: +1 Grunt & +1 Free Non-Offensive Action.
+    *   Double explosion (6 -> 6) is a **Critical Success**: +1 Grunt, +1 Free Action, and +1d6 to Bangaranga.
     *   Bangaranga **6** explodes into **two regular dice**.
 4.  **EVALUATE:** Compare total successes to **Target Number (TN)**.
-    *   **Successes >= TN:** Action succeeds.
-    *   **Successes < TN with 1s:** Optional **Gobbo Gamble** (reroll all 1s; fail = lose 1 Grunt).
+    *   **Successes >= TN + 2:** **Crushed It!** (+1d6 Bangaranga, declare Narrative Quality, and gain +1 Grunt OR apply instant Tactical Condition).
+    *   **Successes > TN:** **Over-Success** (+1d6 Bangaranga and declare Narrative Quality).
+    *   **Successes == TN:** **Standard Success** (Task completed).
+    *   **Successes < TN with regular 1s:** Optional **Gobbo Gamble** (reroll regular 1s; Bangaranga 1s locked; fail = lose 1 Grunt).
     *   **Pool <= 0d6:** **Salvage Roll** (1d6: 6 = Success, 1 = Fumble & lose 1 Grunt, 2–5 = Failure).

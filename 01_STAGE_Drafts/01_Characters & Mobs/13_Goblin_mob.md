@@ -81,8 +81,13 @@ Mobs cannot naturally dodge. When targeted by an incoming attack:
 A Mob is under command as long as they are within line of sight of their Boss and the Mob's current [[Size]] does not exceed the Boss's maximum [[Grunt]] stat. A Mob immediately becomes [[Out of Control]] if:
 1.  **Broken Command:** They break line of sight with their Boss (e.g., they move behind a solid wall or enter a separate room).
 2.  **Command Limit Exceeded:** The Mob's [[Size]] increases beyond the Boss's current [[Grunt]] (often due to merging or the Boss losing Grunt from a Fumble).
-3.  **Morale Failure:** The Mob fails a group [[Morale Check]] and panics.
+3.  **Morale Failure:** The Mob fails a [[Morale Check]] and panics (or becomes an Orphaned Mob if the Boss is incapacitated).
 4.  **Scatter Gamble Failure:** The Boss fails a [[Gobbo Gamble]] while ordering the Mob to Scatter.
+
+#### Mob Morale Checks
+*   **Trigger:** Evaluated during Round Closure if the Mob suffered 50% casualties during the round, or immediately if the controlling Boss is incapacitated.
+*   **Active Boss:** The Boss tests [[Mouth]] or [[Grunt]] against **5+/1** (or **5+/2** if facing a `[Terrifying]` enemy). On failure, the Mob becomes [[Out of Control]] for 1 round.
+*   **Incapacitated Boss (Orphaned Mob):** The Mob has no leader to keep discipline. They **automatically fail without rolling** and immediately enter the [[Out of Control]] state at the start of the next round.
 
 #### Regaining Control
 To bring an [[Out of Control]] Mob back under command, the Boss must spend a [[Standard Action]] to [[Order]] them, resolving it using the standard command test rules in [Giving Orders](../00_Rules/04_Giving%20orders.md). On a success, the Mob becomes controlled and receives their instructions; on a failure, they ignore the Boss and remain [[Out of Control]].

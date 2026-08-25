@@ -154,21 +154,36 @@ If the Mob has at least **1 saved action remaining**, the Boss may spend a saved
 
 ## Morale & Swarm Terror
 
-Goblins are cowardly by nature. When battle turns against them, discipline shatters.
+Goblins are cowardly by nature, and even tall-men break when swarmed by a screaming green horde. Morale resolution is strictly player-facing, requiring zero GM dice rolls.
+
+### Universal Morale Trigger Windows
+Morale checks are evaluated during two distinct combat windows:
+1.  **Immediate Triggers (Mid-Phase):** Resolved immediately when an event occurs:
+    *   *Commander Slain:* When an Enemy Commander or Leader is killed or incapacitated.
+    *   *Orphaned Mob:* When a Player Mob's controlling Boss is incapacitated.
+    *   *Ancestry Panic:* When an adversary with a fear flaw is triggered (e.g. a `[Beast]` exposed to `[Fire]` or `[Loud]` tags).
+    *   *Active Intimidation:* When a Boss spends an action to roar, bang shields, or unleash terrifying magic.
+2.  **Attrition Trigger (Phase 4: Round Closure):** Evaluated at the end of the round for any group that sustained heavy losses:
+    *   *50% Casualties:* Any Mob or enemy squad that ends the round having lost **50% or more of its starting Size or unit headcount**.
 
 ### Player Mob Morale Checks
-*   **Trigger:** Occurs during the **Round Closure Phase** if a Mob lost **50% or more of its starting Size** during the round, or if its controlling Boss was incapacitated.
-*   **The Check:** The Boss must pass an immediate **Mouth** or **Grunt** test against **Normal (5+/1)** difficulty (or **5+/2** if facing a `[Terrifying]` foe).
-*   **Failure:** The Mob breaks command and enters the **Out of Control** state, fleeing toward the exit on its next turn.
+When an allied Mob is forced to test morale:
+*   **Boss Active:** The controlling Boss makes an immediate **Mouth** or **Grunt** test against **Normal (5+/1)** difficulty (or **5+/2** if facing an enemy with the `[Terrifying]` or `[Frightening]` tag).
+    *   *Success:* The Boss cracks the whip or screams authority; the Mob holds discipline and remains **Ordered**.
+    *   *Failure:* Discipline shatters. The Mob enters the **Out of Control** state for 1 round, rolling on the Out of Control Table during its next turn.
+*   **Boss Incapacitated (The Orphaned Mob):** If the controlling Boss is knocked unconscious or killed, the Mob has no leader to maintain order. The Mob **automatically fails without rolling** and immediately enters the **Out of Control** state at the start of the next round.
 
 ### Enemy Morale & The Swarm Terror Check
-When an enemy group suffers catastrophic loss (50% casualties or their commander is slain), the player horde unleashes their collective terror:
+When an enemy force is forced to test morale, the players unleash their collective intimidation:
 
-**Swarm Terror Pool** = **Surviving Mob Sizes in Zone/Adjacent** + **Surviving Bosses in Zone/Adjacent**
+**Swarm Terror Pool** = **Surviving Mob Sizes in Same & Adjacent Zones** + **Surviving Bosses in Same & Adjacent Zones**
 
-*   **The Roll:** Players roll the combined **Swarm Terror Pool** against the enemy's static **Morale TN** (typically 1 to 3).
-*   **Success (Successes >= Morale TN):** The enemy force breaks and flees toward the nearest exit for 2 actions per turn until off the map.
-*   **Commander Rally:** A surviving Enemy Commander can spend 1 action on their active turn to attempt a Rally, testing against the players' Swarm Terror profile.
+*   **The Roll:** Players assemble and roll the combined **Swarm Terror Pool** against the enemy group's printed **Morale Profile** (`[Target Face]+/[Required Successes]`, e.g. `4+/1` for Militia, `5+/2` for Watchmen, `6/2` for Knights; or `Immune` for Undead and Fiends).
+*   **Success (Successes >= Morale TN):** The enemy force breaks!
+    *   *Panicked Rout:* Broken enemies drop heavy weapons and carried Loot, and must spend **two (2) Move actions** on their turns fleeing toward the nearest exit until off the map.
+    *   *The Parting Shot:* To prevent excessive table rolling during a rout, the fleeing group triggers **exactly one (1) free Opportunity Attack (or one free Plunder grab)**, awarded to **one Boss or Mob of the players' choice** in that Zone.
+*   **Failure (Successes < Morale TN):** The enemies steel their nerves, hold the line, and continue fighting normally.
+*   **Commander Rally:** If an **Enemy Commander** survives and did not break, the commander may spend **1 Standard Action** on their active turn to attempt a Rally, testing against the players' Swarm Terror profile to restore order.
 
 ---
 
@@ -209,4 +224,4 @@ When a Gang lacks proper tools, a Boss can order expendable runts into desperate
 
 [MISSING RULE / GAP: Mob Weapon Equipping & Scaling Rules — While Mob armor and tools have detailed Bulk rules, rules for outfitting Mobs with specialized melee weapons (e.g. Greatclubs, Cleavers, Polearms) lack an explicit framework in early drafts. Suggested Resolution: Standardize that equipping a Mob with specialized weapons costs Size x Weapon Bulk from their Loot Capacity, granting the entire Mob the weapon's built-in traits (such as Cleave or Heavy +1 Impact Size).]
 
-[MISSING RULE / GAP: Maximum Swarm Terror Pool Ceiling — In massive multi-player raids with multiple Size 5 Mobs, Swarm Terror dice pools can reach 15d–20d6, mathematically guaranteeing enemy routs. Suggested Resolution: Cap the Swarm Terror dice pool at a maximum of 8d6 on any single Morale test, ensuring high-morale commanders retain a viable chance to hold the line.]
+[RESOLVED GAP: Swarm Terror Proximity & Cap — Swarm Terror pools are strictly bound to surviving Mobs and Bosses in the same and adjacent connected zones. Large multi-mob swarms concentrated in a single engagement represent an authentic goblin "deathball" that naturally terrifies defenders.]

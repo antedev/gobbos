@@ -153,7 +153,7 @@ Enemies act deterministically in accordance with their statblock profiles:
 1.  **Raid Points Tally**: Tally confirmed and contested Raid Points for the round.
 2.  **End-of-Round Ticks**: Resolve lingering hazard ticks (e.g. fire spreading on 1d6 roll of 5–6, poison degradation).
 3.  **Clear Staggered**: Automatically remove the **Staggered** condition from all PCs, Mobs, and enemies.
-4.  **Morale Checks**: If any Mob or enemy force suffered 50% casualties this round, resolve a **Swarm Terror Morale Check** (see [Mob Mechanics](06_Mob_Mechanics.md)).
+4.  **Attrition Morale Checks**: If any Mob or enemy force ends the round having suffered 50% or more casualties, resolve an end-of-round **Morale Check** (or **Swarm Terror Check**; see [Mob Mechanics](06_Mob_Mechanics.md)). *(Note: Immediate triggers like Commander deaths or Beast panic resolve mid-phase as soon as they occur).*
 5.  **Reset Action Budgets**: Reset all Boss budgets to 3 Standard Actions + Free Orders, and all Mob budgets to 2 Actions.
 
 ---

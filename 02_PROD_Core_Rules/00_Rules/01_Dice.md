@@ -40,13 +40,16 @@ Whenever you roll a **6** that explodes, and the new die you roll also turns int
 
 *(Note: Grunt is fully explained in the [Character Stats rules](../01_Characters & Mobs/10_Stats.md#grunt)).*
 
-### 1s and Fumbles
+### 1s and Fumbles (The Gobbo Gamble)
 
-Sometimes, luck is just a bad joke waiting for a punchline. When you roll a [[Test]] and fail to accumulate enough [[Success|Successes]] (your [[Success|Successes]] are less than the [[Target Number (TN)]]), but you have one or more dice showing **1s**, you can choose to push your luck and re-roll all of those **1s**. 
+When you roll a [[Test]] and fail to accumulate enough [[Success|Successes]] (your [[Success|Successes]] are less than the [[Target Number (TN)]]), but you have one or more regular dice showing **1s**, you can choose to push your luck and declare a **Gobbo Gamble** by re-rolling all of those regular **1s**.
 
-* **The Blessing:** If the re-rolled dice generate enough [[Success|Successes]] to meet or exceed the [[Test|Test's]] [[TN]], the [[Test]] succeeds normally. 
-* **The Fumble:** If the [[Test]] still fails after re-rolling the **1s**, you have [[Fumbled]]! The effort backfires catastrophically, and you lose 1 [[Grunt]].
-* **Accepting Failure:** If you choose not to re-roll the **1s** (or if you failed the [[Test]] but rolled no **1s** at all), the action simply fails normally. You do not lose 1 [[Grunt]] or trigger any Fumble effects.
+*   **Regular 1s Only:** You pick up and re-roll all standard dice showing **1s**.
+*   **Locked Bangaranga 1s:** Any [[Bangaranga Dice]] showing **1s** represent chaotic crowd blunders. They are locked on the table and **cannot be re-rolled**. If you only have Bangaranga 1s and zero regular 1s, you cannot gamble.
+*   **The Blessing:** If the re-rolled regular dice generate enough [[Success|Successes]] to meet or exceed the [[Test|Test's]] [[TN]], the [[Test]] succeeds normally. 
+*   **The Fumble:** If the [[Test]] still fails after re-rolling the regular **1s**, you have [[Fumbled]]! The effort backfires catastrophically, and you lose 1 [[Grunt]].
+
+If you choose not to re-roll your regular **1s** (or if you failed the [[Test]] but rolled no regular **1s** at all), the action simply fails normally. You do not lose 1 [[Grunt]] or trigger any Fumble effects (unless Bangaranga dice were drawn; see below).
 
 ## The Bangaranga Pool
 
@@ -95,8 +98,8 @@ However, using the crowd's energy for mundane tasks is considered "cheating" and
 
 Every **6** rolled on a Bangaranga Die counts as 1 [[Success]], but it **explodes twice**, meaning you immediately roll *two* additional regular dice instead of one, which can themselves succeed or explode normally!
 
-### Overreaching
+### Overreaching & Drain
 
-If your [[Test]] fails when you use [[Bangaranga Dice]], you lose 1 [[Grunt]]. Because a failed [[Bangaranga]] roll already carries this penalty, you have nothing to lose by re-rolling any **1s** in a desperate bid for [[Success]]!
+If your [[Test]] fails when you use [[Bangaranga Dice]], you lose 1 [[Grunt]]. 
 
-However, using the horde's noise carries a high risk of exhausting their hype. If you fail the [[Test]] when using [[Bangaranga Dice]] (either by choosing not to re-roll **1s**, or by re-rolling them and still failing), and your final roll contains any **1s** (including those rolled on the re-roll), you immediately drain the [[Bangaranga Pool]], removing a number of [[Bangaranga Dice]] from the pool equal to the number of [[Bangaranga Dice]] you took for the [[Test]].
+Any [[Bangaranga Dice]] showing **1s** are locked on the table and **cannot be re-rolled** during a Gobbo Gamble. If the overall test fails (whether by accepting failure, having only locked Bangaranga 1s, or failing a Gobbo Gamble) and the final pool contains **any 1s** (including locked Bangaranga 1s), the hype collapses: you immediately remove and discard a number of [[Bangaranga Dice]] from the communal pool equal to the number of [[Bangaranga Dice]] drawn for that test.

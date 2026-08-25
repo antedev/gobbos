@@ -158,7 +158,7 @@ A spellcaster can tap the communal **Bangaranga Pool** (see [Core Resolution](01
 *   **Double Explosions:** Every **6** rolled on a **Bangaranga Die** counts as a success and **explodes twice**, immediately granting two additional regular dice to the casting pool.
 *   **Overreaching & Drain Risk:**
     *   If a spell that used Bangaranga dice fails or suffers a **Farkle**, the caster loses **1 Grunt**.
-    *   If the failed roll contains any **1s** (even after pushing luck), the **Bangaranga Pool** is drained, immediately discarding dice equal to the number of Bangaranga dice taken.
+    *   Any drawn **Bangaranga Dice** showing **1s** are locked and **cannot be rerolled** during a Gobbo Gamble. If the spellcasting test ends in failure and the final pool contains any **1s** (including locked Bangaranga 1s), the **Bangaranga Pool** is drained, immediately discarding dice equal to the number of Bangaranga dice taken.
 
 ---
 
