@@ -187,6 +187,8 @@
   },
   "active": "bee09906b4c976de",
   "lastOpenFiles": [
+    "00_DEV_Brainstorms/Chaos_Tick_and_Unsupervised_Mobs_Brainstorm.md",
+    "01_STAGE_Drafts/04_Zones_and_Movement.md",
     "05_System_Tools/rulebook-site/dist/stage--rules--dice.html",
     "05_System_Tools/rulebook-site/dist/prod--the-raid-loop.html",
     "05_System_Tools/rulebook-site/dist/prod--the-lair-loop-and-progression.html",
@@ -197,7 +199,6 @@
     "05_System_Tools/rulebook-site/dist/prod--core-resolution.html",
     "05_System_Tools/rulebook-site/dist/prod--combat-engine.html",
     "05_System_Tools/rulebook-site/dist/prod--boss-profile-and-gang.html",
-    "05_System_Tools/rulebook-site/dist/prod--adversaries-and-threats.html",
     "02_PROD_Core_Rules/03_Action_Economy_and_Turn_Flow.md",
     "02_PROD_Core_Rules/06_Mob_Mechanics.md",
     "02_PROD_Core_Rules/11_Journeys_and_Hazards.md",
@@ -221,7 +222,6 @@
     "05_System_Tools/rulebook-site/dist/all_llm.md",
     "01_STAGE_Drafts/00_Rules/99_live_test_rule.md",
     "05_System_Tools/rulebook-site/dist/lore_all_llm.md",
-    "05_System_Tools/rulebook-site/dist/lore_prod_llm.md",
-    "05_System_Tools/rulebook-site/dist/lore_stage_llm.md"
+    "05_System_Tools/rulebook-site/dist/lore_prod_llm.md"
   ]
 }

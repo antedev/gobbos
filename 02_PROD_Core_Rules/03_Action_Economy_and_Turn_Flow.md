@@ -165,11 +165,8 @@ Combat concludes when all enemies are slain, all PCs are eliminated, or one side
 ### Fleeing & Disengaging
 Goblins are practical cowards; a tactical retreat preserves stolen Loot and saves lives.
 *   **Escape Zones**: To escape an encounter, a Boss or Mob must enter a designated exit Zone and spend 1 Move action to withdraw.
-*   **Disengaging from Melee**: Leaving a Zone containing alert enemies without fighting triggers an immediate Opportunity Attack. To disengage safely, a Boss or Mob must spend 1 Standard Action to **Disengage**, testing:
-    `Slink 5+/[Highest Enemy Defence TN]`
-    *   **Success**: The unit withdraws safely into an adjacent connected Zone without taking damage.
-    *   **Failure**: The highest-Threat enemy in the Zone executes an immediate Opportunity Attack against the fleeing unit, and the unit's movement immediately ends inside the current Zone.
-
-[MISSING RULE / GAP: Disengage Failure & Opportunity Attack Resolution — Legacy drafts did not define exact mechanical outcomes when failing a Disengage test. Resolution codified: On a failed Disengage test, the highest Threat enemy in the zone executes an immediate Opportunity Attack, and the fleeing unit's movement ends immediately in the contested zone.]
-
-*   **The Heavy Loot Restriction (Bulk 3+)**: Hauling an unwieldy item of **Bulk 3 or higher** requires two hands. You **cannot perform a Disengage action while clutching a Bulk 3+ item**. To escape safely, you must drop the heavy loot as a Free Action, hand it off to a Mob, or defeat the pursuing enemies.
+*   **Disengaging from Melee**: Leaving an engaged enemy (**In Your Face**) without care triggers an immediate Opportunity Attack. To disengage safely, a Boss or Mob spends 1 Standard Action (or 1 Mob Action) to **Disengage**, testing `Slink 5+/[Highest Enemy Defence TN]`:
+    *   **Success**: The unit withdraws safely into **Here** or an adjacent connected Zone (**There**) without triggering enemy reactions.
+    *   **Failure**: The engaged enemy may spend 1 **Reaction** to execute an Opportunity Attack. The Boss receives a free reactive **Dodge Clatter Roll** (or the Mob receives a free **"Scatter!" Roll**). The unit completes its movement regardless of the outcome.
+*   **Careless Fleeing / Panic Sprint**: A Boss or Mob spending a standard **Move** action to flee without disengaging triggers an **Unchecked Strike** from any engaged enemy with a Reaction (Boss/Mob cannot actively Dodge/Scatter, relying only on passive **Armor Dice**).
+*   **The Heavy Loot Restriction (Bulk 3+)**: Hauling an unwieldy item of **Bulk 3 or higher** requires two hands. You **cannot perform a Disengage action while clutching a Bulk 3+ item**. To escape safely, you must drop the heavy loot as a Free Action, hand it off to a Mob, or perform a Careless Sprint.
