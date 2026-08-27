@@ -68,7 +68,7 @@ Your **Role Level** determines which tier of your Role Skill is currently active
     *   **Level 2:** Weapons and armor you wield ignore their first [[Break Roll]] per raid ([[Junk]] gear does not shatter on its first fumble). Heavy weapons you wield have their encumbrance reduced by **1 [[Bulk]]** (minimum 1 Bulk).
     *   **Level 3:** Gain **+1d [[Passive Defence]]** while equipped with armor or a shield. When you hit an enemy with a Heavy weapon, destroy any minor cover in their [[Zone]].
     *   **Level 4:** Gain **+1d [[Passive Defence]]**. When your weapon triggers a [[Break Roll]], you can choose to intentionally shatter it to add **+2 automatic successes** to your attack.
-    *   **Level 5:** Gain **+2d [[Passive Defence]]**. You can attach 1 additional [[Oddity]] to any Heavy weapon or armor beyond normal workshop limits.
+    *   **Level 5:** Gain **+2d [[Passive Defence]]**. You can attach 1 additional [[Component]] to any Heavy weapon or armor beyond normal workshop limits.
 
 ---
 
@@ -147,9 +147,9 @@ Your **Role Level** determines which tier of your Role Skill is currently active
 #### 13. The Sage-Tinker (Brains Specialist)
 *A mad goblin inventor who locks themselves in the workshop to concoct acids, clockwork contraptions, and volatile machines.*
 *   **Skill: Experimental Innovation (Passive/Active)**
-    *   **Level 3:** Your [[Crafting Capacity]] is treated as **2 higher** than your current [[Brains]] stat. You can dismantle scrap or [[Junk]] gear during a raid to assemble single-use tools or makeshift bombs in 1 [[Manipulate Action]]. When an item with an [[Oddity]] triggers an effect, you can double its potency by risking an immediate durability test (`Brains 4+/1`).
+    *   **Level 3:** Your [[Crafting Capacity]] is treated as **2 higher** than your current [[Brains]] stat. You can dismantle scrap or [[Junk]] gear during a raid to assemble single-use tools or makeshift bombs in 1 [[Manipulate Action]]. When an item with an [[Component]] triggers an effect, you can double its potency by risking an immediate durability test (`Brains 4+/1`).
     *   **Level 4:** Gain **+2 [[Crafting Capacity]]**. You can repair broken items during a raid with 1 [[Manipulate Action]]. Weapons you customize gain **+1d damage**.
-    *   **Level 5:** Gain **+3 [[Crafting Capacity]]**. You can invent 1 Masterwork [[Relic]] with up to 4 [[Oddity]] sockets that never suffers [[Break Roll|Break Rolls]].
+    *   **Level 5:** Gain **+3 [[Crafting Capacity]]**. You can invent 1 Masterwork [[Relic]] with up to 4 [[Component]] sockets that never suffers [[Break Roll|Break Rolls]].
 
 #### 14. The Runecaster (Brains + Tough Hybrid)
 *A heavily built runic warrior who chisels glowing arcane glyphs onto iron blades and armor, smashing foes with elemental force.*

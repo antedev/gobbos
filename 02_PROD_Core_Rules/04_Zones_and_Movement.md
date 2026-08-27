@@ -82,7 +82,7 @@ When you are **In Your Face** with an active enemy and wish to retreat carefully
 *   **Resolution:**
     *   **Success:** You slip away cleanly. No enemy reactions are triggered.
     *   **Failure:** The engaged enemy may spend 1 **Reaction** to strike on the way out. Because your withdrawal was guarded, you receive your active defense for free without spending an extra action:
-        *   *Goblin Boss:* Roll an immediate **Dodge Clatter Roll** (`Slink` vs Threat TN) or absorb with Armor.
+        *   *Goblin Boss:* Roll an immediate **Dodge Defence Roll** (`Slink` vs Threat TN) or absorb with Armor.
         *   *Goblin Mob:* The Boss rolls an immediate **"Scatter!" Roll** (`Mouth` vs `Threat TN + Mob Size - 1`) or absorbs with Mob Armor.
     *   **Movement Never Halts:** Regardless of whether the test succeeds or fails (and whether damage is taken), the moving unit **always completes its movement** to the declared destination.
 
@@ -121,7 +121,7 @@ flowchart LR
 ### 1. Cover Types
 *   **Partial Cover (Waist-high walls, crates, furniture, trenches, allied Mobs):**
     *   *Player Shooting Enemy in Cover:* The Player rolls their **Ranged Attack** dice pool with a **Bane 1 (-1d)** penalty against the enemy's static Defence TN.
-    *   *Enemy Shooting Player in Cover:* The Player gains a **Boon 1 (+1d)** to their active **Dodge** (**Slink**) pool during a **Clatter Roll** (or adds a **+1d Boon** to passive **Armor Dice**).
+    *   *Enemy Shooting Player in Cover:* The Player gains a **Boon 1 (+1d)** to their active **Dodge** (**Slink**) pool during a **Defence Roll** (or adds a **+1d Boon** to passive **Armor Dice**).
 *   **Full Cover (Solid stone pillars, iron doors, thick walls):**
     *   A combatant behind Full Cover cannot be targeted by direct ranged attacks, single-target spells, or line-of-sight abilities originating from that vector.
     *   Bypassing Full Cover requires spending movement to cross into a connected Zone that clears the line of sight.
@@ -135,7 +135,7 @@ A combatant hunkered behind Full Cover (such as a stone pillar or doorway jamb) 
 ### 3. Fortified Positions vs. Melee Charges (First-Strike Advantage)
 When a combatant is entrenched behind a fortified barrier (such as a sandbag trench, heavy overturned table, or spiked barricade), the barrier protects against incoming melee charges for the **first attack of the engagement**:
 *   **Player Charging an Entrenched Enemy:** The Player’s first **Melee Attack roll** against that enemy suffers a **Bane 1 (-1d)**. Subsequent attacks in that melee tangle resolve normally.
-*   **Enemy Charging an Entrenched Player:** The Player receives a **Boon 1 (+1d)** to their active **Dodge/Parry Clatter Roll** (or Mob Armor roll) against the enemy's opening strike. Subsequent strikes resolve normally.
+*   **Enemy Charging an Entrenched Player:** The Player receives a **Boon 1 (+1d)** to their active **Dodge/Parry Defence Roll** (or Mob Armor roll) against the enemy's opening strike. Subsequent strikes resolve normally.
 *   **The Breach:** Once that opening strike is resolved, the attacker has breached the barrier. Both combatants are now tangled **In Your Face**, and the fortification bonus no longer applies between them.
 
 ### 4. Line of Sight & Environmental Concealment
@@ -143,7 +143,7 @@ Line of sight across Zones depends on the environmental density of the interveni
 *   **Open Sightlines (Corridors, open yards):** Clear line of sight across all connected Zones up to maximum weapon range (**There**, **Over There**, **Far Away**).
 *   **Obscured / Dense Terrain (Thick woods, heavy fog, toxic smoke, dense gloom):**
     *   *Sightline Cap:* Line of sight is hard-capped at **1 Zone step (There)**. You cannot target or see anything at **Over There (2 Zones)** or **Far Away (3+ Zones)**.
-    *   *Concealment Penalty:* Ranged attacks targeting creatures inside or passing through an Obscured Zone suffer a **Bane 1 (-1d)** penalty on attack rolls (or grant **Boon 1 (+1d)** to Dodge Clatter Rolls).
+    *   *Concealment Penalty:* Ranged attacks targeting creatures inside or passing through an Obscured Zone suffer a **Bane 1 (-1d)** penalty on attack rolls (or grant **Boon 1 (+1d)** to Dodge Defence Rolls).
     *   *Stealth Synergy:* Occupants inside an Obscured Zone gain a **Boon 1 (+1d)** to all stealth-related **Slink** tests.
 *   **Blocked Sightlines (Solid stone walls, closed portcullises, sheer cliffs):** Direct targeting and ranged attacks across this boundary are impossible.
 

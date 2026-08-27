@@ -6,7 +6,7 @@
 
 ## Catalogue Overview & Notation
 
-Every item in this catalogue is a mundane **Base Chassis** possessing a standard **Quality Tier (T1–T5)** and zero magical Oddities (see [Equipment & Gear](33_Equipment.md) and [Loot & Plunder](31_loot.md)). 
+Every item in this catalogue is a mundane **Base Chassis** possessing a standard **Quality Tier (T1–T5)** and zero magical Components (see [Equipment & Gear](33_Equipment.md) and [Loot & Plunder](31_loot.md)). 
 
 ### Statblock Headers
 *   **Bulk (0–4+):** The physical weight and pack space of the item (see [Carrying Stuff](32_Carry%20Stuff.md)).
@@ -57,7 +57,7 @@ Ranged attacks roll a [[Dice Pool]] based on [[Slink]] against the target's [[De
 
 ## 3. Armor & Shields
 
-Armor and Shields provide passive colored dice rolled in the **[[Clatter Roll]]** to mitigate incoming damage when active dodging fails (see [Combat](../00_Rules/02%20Combat.md#dodge--parry-reaction--the-clatter-roll)).
+Armor and Shields provide passive colored dice rolled in the **[[Defence Roll]]** to mitigate incoming damage when active dodging fails (see [Combat](../00_Rules/02%20Combat.md#dodge--parry-reaction--the-clatter-roll)).
 
 | Item Name | Quality | Bulk | Hands / Slot | Base Cost | Break Roll | Armor Dice | Mobility Penalties & Special Capabilities |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |

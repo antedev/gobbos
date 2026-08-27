@@ -12,37 +12,37 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 *   [[Bangaranga Dice]]: Extra dice added to a roll by spending points from the communal Bangaranga Pool.
 *   [[Bangaranga Pool]]: A communal pool of d6s built by fumbles and ones, spent by players to purchase temporary Boons or activate magic.
 *   [[Base Danger Rating]]: The default difficulty profile of a raid, setting the default Difficulty and TN of all unlisted hazards.
-*   [[Bite (B)]]: The instability of an Oddity. Ranges from 0 (pure, stable) to 3 (dangerous). Represents the negative consequences of using the Oddity.
+*   [[Flaw (F)]]: The instability of a Component. Ranges from 0 (pure, stable) to 3 (dangerous). Represents the negative consequences of using the Component.
 *   [[Blinded]]: A condition blocking sight, making ranged attacks Hard and preventing Dodge reactions.
-*   [[Blueprint]]: A physical item (Bulk 0) that records the structure of a specific Oddity effect. Produced by Reverse Engineering. Tradeable.
-*   **[Bonded]:** A Tag on an Oddity that cannot be freely removed once installed. Removing it requires a specific condition defined by the GM.
-*   [[Bone Oddity]]: An Oddity crafted from the remains of a dead Gobbo Boss. Always T1–T2, always B0–B1. Tags reflect how the Boss died.
+*   [[Blueprint]]: A physical item (Bulk 0) that records the structure of a specific Component effect. Produced by Reverse Engineering. Tradeable.
+*   **[Bonded]:** A Tag on a Component that cannot be freely removed once installed. Removing it requires a specific condition defined by the GM.
+*   [[Boss Relic]]: A Component crafted from the remains of a dead Gobbo Boss. Always T1–T2, always F0–F1. Tags reflect how the Boss died.
 *   [[Bone Pile]]: A memorial in the Lair where dead PCs are recorded, granting boons to their successors.
 *   [[Boon]]: A positive modifier that adds bonus dice to a test's dice pool before rolling. Boons scale in integer steps: **Boon 1 (+1d)**, **Boon 2 (+2d)**, etc.
 *   [[Boon|Boons]]: Positive modifiers adding bonus dice to a test's dice pool (**Boon 1 (+1d)**, **Boon 2 (+2d)**).
-*   [[Boss]]: A player character or elite NPC possessing Grit, specialized Quirks, and command over Mobs.
+*   [[Boss]]: A player character or elite NPC possessing Grit, specialized Feats, and command over Mobs.
 *   [[Brains]]: Main stat representing wit, alchemical knowledge, and custom gear crafting capacity.
 *   [[Bulk]]: A measure of how heavy/unwieldy an item is. High bulk reduces movement or requires multiple goblins.
 *   [[Carry]]: An attribute indicating the maximum Bulk of items a character or Mob can carry without penalty.
 *   [[Carry Capacity]]: The maximum weight or Bulk a character can carry without speed or action penalties.
 *   [[Chassis]]: The base item that forms the body of a piece of Custom Gear. Built from Scrap. Determines the item type, Bulk, and base dice.
-*   [[Clatter Roll]]: A simultaneous roll of active Stat Dice (Slink for Dodge or Tough for Parry) alongside colored passive Armor Dice. Meeting the Threat TN results in 0 damage; failing triggers Armor Dice to mitigate remaining damage.
+*   [[Defence Roll]]: A simultaneous roll of active Stat Dice (Slink for Dodge or Tough for Parry) alongside colored passive Armor Dice. Meeting the Threat TN results in 0 damage; failing triggers Armor Dice to mitigate remaining damage.
 *   [[Cleave|Cleave X]]: A weapon or monster attack property allowing melee strikes to sweep across multiple foes, dealing its damage simultaneously to up to **X adjacent targets** or up to **X of the lowest-value health dice** in a Mob (e.g., a standard Greataxe has `Cleave 2`, an Ogre has `Cleave 3`, and a Colossal Giant has `Cleave 5`).
 *   [[Condition]]: A temporary state applied to a character or Mob, imposing penalties or mechanical limits.
 *   [[Cover]]: Defensive positioning against ranged attacks. Partial cover grants a [[Boon]] (+1d) to Dodge, or imposes a [[Bane]] (-1d) on attacks. Full cover blocks targeting. See [[02 Combat]].
-*   [[Crafting Capacity]]: The maximum number of Oddities that can be attached to a single item. Equal to the crafter's Brains score.
+*   [[Crafting Capacity]]: The maximum number of Components that can be attached to a single item. Equal to the crafter's Brains score.
 *   [[Critical]]: Rolling a **6** that explodes, and rolling another **6** on the resulting die (a double-six chain). It grants **+1 Grunt** and an immediate bonus action. See [Dice](01_Dice.md#criticals).
 *   [[Critical Success]]: An exceptional roll resulting from double-six chains, granting bonus actions or Grunt recovery.
-*   [[Custom Gear]]: Equipment built by a Gobbo Boss using a Chassis and one or more Oddities. Defined by Tier and Bite rather than a simple quality rating.
+*   [[Custom Gear]]: Equipment built by a Gobbo Boss using a Chassis and one or more Components. Defined by Tier and Flaw rather than a simple quality rating.
 *   [[Defence]]: The static threshold (acting as a test's TN) that an attacker must meet or exceed in successes to hit or damage a target.
 *   [[Defence TN]]: The target number of successes required to successfully hit or damage a creature.
 *   [[Delivery]]: The method by which a magical spell is projected, such as Touch, Ray, or Zone.
-*   [[Dice Pool]]: The total number of d6s rolled for a test, determined by a character's base stat, equipment, quirks, and Boon/Bane modifiers.
+*   [[Dice Pool]]: The total number of d6s rolled for a test, determined by a character's base stat, equipment, feats, and Boon/Bane modifiers.
 *   [[Difficulty]]: The die face needed to score a success (Easy 4+, Normal 5+, Hard 6). This is typically dependent on the circumstances of the test.
-*   [[Dodge]]: An active Reaction to completely avoid an incoming attack by rolling Slink against the attack's Threat TN in a Clatter Roll.
+*   [[Dodge]]: An active Reaction to completely avoid an incoming attack by rolling Slink against the attack's Threat TN in a Defence Roll.
 *   [[Dominance]]: A Lair test made to command internal Lair factions or establish authority, reducing unrest.
 *   [[Dragging]]: Hauling massive plunder exceeding your Over-Laden threshold (up to 2x Carry). Locks movement to 1 Zone, requires both hands, and prevents active Dodge or Parry reactions.
-*   [[Dumb]]: A condition preventing the wielder from casting spells or using Brains-based active Quirks.
+*   [[Dumb]]: A condition preventing the wielder from casting spells or using Brains-based active Feats.
 *   [[Duration]]: The timeframe that an effect, spell, or condition remains active on a target or Zone.
 *   [[Easy]]: A test Difficulty requiring a die face of 4+ to score a success.
 *   [[Elder]]: A player character who reaches a stat of 6 and automatically retires, granting a permanent passive boon to their Gang.
@@ -61,7 +61,7 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 *   [[Gang Agenda]]: A long-term objective chosen by the Gang that rewards Infamy or Scrap upon completion.
 *   [[Gang Agenda|Gang Agendas]]: A long-term objective chosen by the Gang that rewards Infamy or Scrap upon completion.
 *   [[Gang Mark]]: The tracking sheet recording the Gang's shared upgrades, Lair rooms, and Infamy level.
-*   [[Gang Quirks]]: Upgraded abilities shared by all members of a specific Gang, unlocked via Lair Upgrades and Infamy.
+*   [[Gang Feats]]: Upgraded abilities shared by all members of a specific Gang, unlocked via Lair Upgrades and Infamy.
 *   [[Gang Sheet]]: The master ledger recording a Gang's members, shared Infamy progress, and unlocked Lair rooms.
 *   [[Glory]]: Raid points earned by completing objectives, pooled at the end of a raid to reward shared XP.
 *   [[Glory (Raid Points)]]: Weightless points awarded for objective completion. At the end of the raid, all points are pooled, and the XP payout is shared equally among surviving PCs.
@@ -83,7 +83,7 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 *   [[Loot Value]]: The worth of treasure expressed in Tier tokens (T1–T5). Follows the 5-to-1 exponential scale (5x T1 = 1x T2, 5x T2 = 1x T3, etc.) for Lair smelting, purchases, and upgrades.
 *   [[Main Stats]]: The four primary attributes defining a goblin: Tough, Slink, Brains, and Mouth.
 *   [[Manipulate]]: A Standard Action catch-all used to interact with items, machinery, traps, or environmental components.
-*   [[Marks]]: Communal Gang progression milestones equivalent to levels, unlocking new quirks and upgrades.
+*   [[Marks]]: Communal Gang progression milestones equivalent to levels, unlocking new feats and upgrades.
 *   [[Max Mobs]]: The maximum number of Mobs a Boss can command simultaneously, determined by their Mouth stat.
 *   [[Melee]]: Close-range combat conducted within the same Zone.
 *   [[Melee attack]]: A close-quarters attack action testing Tough against the target's Defence.
@@ -96,29 +96,29 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 *   [[Movement]]: A stat or action indicating how many Zones a character or Mob can cross on their turn.
 *   [[Named Item]]: A piece of gear imbued with the spirit of a dead PC, possessing minor magical properties and "Gang Loyalty."
 *   [[Normal]]: The default test Difficulty requiring a die face of 5+ to score a success.
-*   [[Oddities]]: Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.
-*   [[Oddity]]: A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Bite (B) value.
+*   [[Components]]: Unique components like demon hearts or elemental crystals attached to custom gear to add magical properties.
+*   [[Component]]: A unique component (monster part, magical crystal, ancient mechanism) attached to a Chassis to give Custom Gear its special properties. Defined by a Tier (T) and Flaw (F) value.
 *   [[Order]]: A Standard Action used by a PC Boss to direct a Mob's actions, bypassing command rolls for controlled Mobs.
 *   [[Order Action]]: The action spent to direct a Mob, executing their priority combat behavior.
 *   [[Out of Control]]: A Mob state triggered by failed command rolls or size limits. The Mob acts randomly under GM direction.
 *   [[Over-Laden]]: A load state where carried Bulk exceeds baseline Carry capacity (up to Carry + Tough). Reduces movement speed by 1 Zone and imposes Bane 1 (-1d) on physical Slink and Tough tests.
-*   [[Overclock]]: A declaration made before an Attack Action that amplifies Custom Gear's effect to its maximum, destroys the item, and ignores the target's Passive Defence dice.
+*   [[Overload]]: A declaration made before an Attack Action that amplifies Custom Gear's effect to its maximum, destroys the item, and ignores the target's Passive Defence dice.
 *   [[Overreaching]]: The risk of casting magic beyond safety limits, drawing d6s from the Bangaranga Pool and risking fumbles.
 *   [[Parry]]: An active Reaction to block incoming melee attacks by testing Tough while holding a shield, reducing damage.
 *   [[Partial Cover]]: Positioning behind partial obstacles, granting a Boon to Dodge and imposing a Bane on incoming attacks.
-*   [[Passive]]: A Quirk or rule that is either always active or triggered automatically without costing a Standard Action, Grunt, or Free Order.
+*   [[Passive]]: A Feat or rule that is either always active or triggered automatically without costing a Standard Action, Grunt, or Free Order.
 *   [[Passive Defence]]: Defence dice granted automatically by armor or positioning without requiring a Standard Action or Reaction.
 *   [[Patron Saint]]: A chosen spirit of a dead PC from the Pile of Bones that grants a new PC a highly specific situational boon (so long as the new PC appeases them).
 *   [[Persistent]]: An effect or spell duration that remains active across multiple rounds or encounters.
-*   [[Personal Quirks]]: Unique abilities specific to a single PC Boss rather than shared across their Gang.
+*   [[Personal Feats]]: Unique abilities specific to a single PC Boss rather than shared across their Gang.
 *   [[Pile of Bones]]: The resting place for glorious dead PCs. 
 *   [[Player]]: The real-world participant controlling a goblin Boss and their associated Gang.
 *   [[Plunder]]: A Standard Action spent to pick up and secure loose Loot, Scrap, or items in the current Zone.
 *   [[Power Words]]: Modular magical components representing alchemical elements or domains used to construct spells.
 *   [[Prone]]: A condition representing being knocked down. Restricts movement and imposes a -1d Bane on melee attacks.
 *   [[Quality]]: The standard tier of construction for items, determining durability and crafting ceilings.
-*   [[Quirk]]: A modular base ability (a "Knack" or action) that defines a character's fighting style or special talent. Measured in Tiers (T1-T5).
-*   [[Quirk|Quirks]]: A modular ability or special talent measured in Tiers (T1–T5) that defines a character's action or passive benefits.
+*   [[Feat]]: A modular base ability (a "Knack" or action) that defines a character's fighting style or special talent. Measured in Tiers (T1-T5).
+*   [[Feat|Feats]]: A modular ability or special talent measured in Tiers (T1–T5) that defines a character's action or passive benefits.
 *   [[Raid|Raids]]: An expedition into dangerous territory to secure Loot, Scrap, and Glory for the Gang.
 *   [[Raid]]: An expedition into dangerous territory to secure Loot, Scrap, and Glory for the Gang.
 *   [[Raid Boss (MVP)]]: A title voted upon at the end of a raid. Grants the winner a Flair Item or Temporary Boon for the next raid.
@@ -126,15 +126,15 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 *   [[Raid-Points]]: Objective metrics earned during a raid that determine the final Glory and XP payouts.
 *   [[Ranged attack]]: A distant attack action testing Slink against the target's Defence, suffering Banes for cover.
 *   [[Reaction]]: An action taken out of turn in response to a trigger (e.g., Dodge/Parry), costing a saved Standard Action. See [[02 Combat]].
-*   [[Relic]]: A rare, powerful magical or alchemical oddity found during raids, used in advanced crafting.
+*   [[Relic]]: A rare, powerful magical or alchemical component found during raids, used in advanced crafting.
 *   [[Restrained]]: A condition preventing movement and imposing a -1d Bane to Dodge reactions.
 *   [[Retire]]: The process of withdrawing a high-level goblin Boss (reaching a stat of 6) to become a Patron Saint or Elder.
 *   [[Route Test]]: A travel test made during journeys using Brains or Slink to navigate path hazards and find safe passages.
 *   [[Salvage Roll]]: A single **1d6** rolled when a test's [[Dice Pool]] is reduced to **0d6 or less**. A roll of **6** generates 1 [[Success]] (non-exploding); a roll of **1** triggers an immediate [[Fumble]].
-*   [[Scarred]]: An Oddity that has survived a Scrap Cascade. Has permanently gained +1 Bite.
+*   [[Scarred]]: A Component that has survived a Scrap Cascade. Has permanently gained +1 Flaw.
 *   [[Scouting]]: A travel role utilizing Slink or Brains to identify path hazards and choose route options.
 *   [[Scrap]]: Base resources used to build a Chassis. Comes in Tiers 1–5.
-*   [[Scrap Cascade]]: When Custom Gear breaks, each Oddity rolls a d6 for survival. An Oddity that survives becomes Scarred (+1 Bite).
+*   [[Scrap Cascade]]: When Custom Gear breaks, each Component rolls a d6 for survival. A Component that survives becomes Scarred (+1 Flaw).
 *   [[Scrappy]]: The second quality tier (T2) of equipment, representing crude but functional goblin forge-work.
 *   [[Secondary Stats]]: Stats derived from main stats or leveling up, such as Grit, Grunt, and Carry.
 *   [[Shenanigan]]: A high-chaos, situational action performed by a goblin character or Mob using their traits.
@@ -152,25 +152,25 @@ This is a master list of the core game mechanics and goblin keywords to quickly 
 *   [[Superior]]: The fourth quality tier (T4) of equipment, representing high-quality dwarven smithing or rare alloys.
 *   [[Tag|Tags]]: Dynamic elements and physical forces (always bracketed, e.g., `[Fire]`, `[Sticky]`, `[Toxic]`) that can be dynamically slapped onto or stripped away from zones, weapons, and creatures. For a full glossary of baseline tag behaviors and element synthesis rules, see [Master Tag Index](08_Master_Tag_Index.md).
 *   [[Tag]]: A transient elemental, material, or magical state bracketed like [Fire] that can be dynamically attached to items or zones.
-*   [[Taming]]: Spending 6s from the Crafting Roll to reduce an Oddity's active Bite level, boost base item stats, or add flavour tags.
+*   [[Taming]]: Spending 6s from the Crafting Roll to reduce a Component's active Bite level, boost base item stats, or add flavour tags.
 *   [[Target Number (TN)]]: The total number of successes required to pass a test (e.g., in shorthand **5+/1**, you need one die to land on 5 or 6). This is typically a fixed number. 
 *   [[Terrified]]: A condition forcing a character or Mob to flee from a source of fear and preventing them from closing distance.
 *   [[Test]]: A roll of a d6 dice pool to determine success against a target face (Difficulty) and required successes (TN).
 *   [[Threat]]: The incoming evasion profile of an enemy attack (e.g. `5+/1`), defining the Difficulty and TN a defender must meet to avoid damage.
-*   [[Tier]]: The mechanical power level of a Quirk, Tag, Oddity, or item, ranging from 1 to 5.
-*   [[Tier (T)]]: The power level of an Oddity's positive effect. Ranges from 1 to 5.
+*   [[Tier]]: The mechanical power level of a Feat, Tag, Component, or item, ranging from 1 to 5.
+*   [[Tier (T)]]: The power level of a Component's positive effect. Ranges from 1 to 5.
 *   [[TN]]: Target Number. The total number of success rolls (usually meeting the Difficulty face) required to pass a test.
 *   [[Tough]]: Main stat representing physical power, raw force, and melee combat capability.
 *   [[Trait]]: A static mechanical property of armor, weapons, or zones that modifies rolls without participating in synthesis.
 *   [[Traits (Weapon/Armor)]]: Static physical properties built into equipment (e.g., `Bashing`, `Cutting`, `Heavy`, `Loud`). They are permanent properties of the item's design, modify core rules math, and do not participate in element synthesis. See [Equipment](33_Equipment.md).
 *   [[Travel Event]]: A random event resolved during journeys, indicating hazards, encounters, or opportunities.
-*   [[Twist]]: A modifier attached to a Quirk that alters how it works or adds an extra effect. Multiple Twists can be attached to the same Quirk to create a "Molecule."
+*   [[Twist]]: A modifier attached to a Feat that alters how it works or adds an extra effect. Multiple Twists can be attached to the same Feat to create a "Molecule."
 *   [[Uncontrolled]]: A state where a Mob ignores commands and acts randomly according to GM-controlled mischief tables.
 *   [[Uncontrolled Mobs]]: Mobs that have broken command and resolve their actions randomly using behavior tables.
 *   [[Weakened]]: A condition imposing a -1d Bane on all action tests.
 *   [[Wound]]: A mark of serious physical trauma. PCs and Elite enemies are defeated or knocked down after taking their maximum Wounds.
 *   [[Wound|Wounds]]: A mark of serious physical trauma. PCs and Elite enemies are defeated or knocked down after taking their maximum Wounds.
-*   [[XP]]: Experience points earned by securing Loot and Glory, spent during Lair Phases to advance stats or purchase Quirks.
+*   [[XP]]: Experience points earned by securing Loot and Glory, spent during Lair Phases to advance stats or purchase Feats.
 *   [[Zone]]: An abstract area of the battlefield (a room, a field, a corridor) used to measure movement and range.
 *   [[Zone Profile]]: The default Difficulty and TN profile of a Zone (e.g. 5+/1) that traversal or manipulation tests in that Zone resolve against.
 *   [[Zone Trait]]: A permanent physical attribute of a Zone (such as Slippery or Narrow) that applies passive modifiers.

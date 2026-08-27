@@ -10,7 +10,7 @@ In Gobbos, the Game Master (GM) **never rolls dice**. Adversaries do not test fo
 
 ```mermaid
 flowchart TD
-    A["Adversary Declares Attack<br>(Static Threat Profile + Flat Damage)"] --> CR["Goblin Boss Clatter Roll"]
+    A["Adversary Declares Attack<br>(Static Threat Profile + Flat Damage)"] --> CR["Goblin Boss Defence Roll"]
     CR --> SA{"Saved Action Available?"}
     SA -->|Yes| E1["Roll Active Stat Dice + Passive Armor Dice"]
     SA -->|No / 0 Saved Actions| E2["Cannot Dodge/Parry!<br>(Roll Passive Armor Dice Only)"]
@@ -65,7 +65,7 @@ An Enemy Mob's automatic attack damage scales deterministically with its current
 **Enemy Mob Damage** = **Base Unit Damage** + (**Current Mob Size** - 1)
 
 *   **Attacking a Player Mob:** The Enemy Mob delivers this damage across the frontline, affecting a number of player goblin health dice equal to the Enemy Mob's current **Size** (targeting the lowest-value dice first).
-*   **Attacking a Goblin Boss:** The Enemy Mob delivers this total damage as a single combined strike, which the **Goblin Boss** defends against using a single **Clatter Roll**.
+*   **Attacking a Goblin Boss:** The Enemy Mob delivers this total damage as a single combined strike, which the **Goblin Boss** defends against using a single **Defence Roll**.
 
 ---
 
@@ -131,7 +131,7 @@ Adversaries can trigger specialized reactions (such as parrying shields, retalia
 To prevent overwhelming action-economy drain and endless individual rolls when multiple standard enemies surround a single **Goblin Boss**:
 *   **Combined Strike:** Up to **three (3) standard enemies** in melee range of the same **Goblin Boss** combine their attacks into a single strike.
 *   **Damage Formula:** **Combined Damage** = **Base Damage** + 1 per additional attacking enemy.
-*   **Single Defense:** The **Goblin Boss** defends against the combined blow using a single **Clatter Roll**.
+*   **Single Defense:** The **Goblin Boss** defends against the combined blow using a single **Defence Roll**.
 
 ---
 
@@ -192,7 +192,7 @@ All living bestiary compendiums, monster catalogs, and NPC adversaries must foll
 
 **Reactions:** [Specific out-of-turn triggers, deducting 1 action from active turn if used.]  
 **Flaw Hook / Vulnerability:** [Specific Tag interaction that lowers Defence TN or makes attacks Easy (4+).]  
-**Plunder:** [Salvageable Scrap tier, Loot Value tokens, or Oddity parts dropped on defeat.]
+**Plunder:** [Salvageable Scrap tier, Loot Value tokens, or Component parts dropped on defeat.]
 ```
 
 ---

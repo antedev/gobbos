@@ -25,7 +25,7 @@ flowchart TD
 ### Prerequisites to Cast
 To channel the unstable currents of magic, a **Goblin Boss** must meet two mechanical requirements:
 1.  **Brains Level 3+:** You must possess at least **Brains 3** to unlock **Power Word Slots**. Characters with **Brains 1** or **Brains 2** have 0 slots and cannot cast magic.
-2.  **Magical Conduit:** You must possess a magic-focused **Quirk** (such as *Weirdo*, *Bone-Speaker*, or *Shaman*) or wield an active magical **Oddity** (such as a runic staff, crystal skull, or channeling wand).
+2.  **Magical Conduit:** You must possess a magic-focused **Feat** (such as *Weirdo*, *Bone-Speaker*, or *Shaman*) or wield an active magical **Component** (such as a runic staff, crystal skull, or channeling wand).
 
 ### Power Word Slots and Memorization
 Goblins do not learn rigid spells; they memorize **Power Words** represented by narrative **Tags** (e.g. `[Fire]`, `[Sticky]`, `[Shock]`, `[Spooky]`, `[Slip]`):
@@ -33,7 +33,7 @@ Goblins do not learn rigid spells; they memorize **Power Words** represented by 
 *   **Brains Level 3:** **2 Power Word Slots**.
 *   **Brains Level 4:** **4 Power Word Slots**.
 *   **Brains Level 5:** **6 Power Word Slots**.
-*   **Tag Swapping:** Swapping prepared **Power Words** in your slots takes place strictly in the **Lair** during the **Lair Phase** (see [The Lair Loop & Progression](10_The_Lair_Loop_and_Progression.md)). A character can attune to any Tag accessible through personal **Quirks**, carried **Gear**, or **Lair Upgrades**.
+*   **Tag Swapping:** Swapping prepared **Power Words** in your slots takes place strictly in the **Lair** during the **Lair Phase** (see [The Lair Loop & Progression](10_The_Lair_Loop_and_Progression.md)). A character can attune to any Tag accessible through personal **Feats**, carried **Gear**, or **Lair Upgrades**.
 
 ---
 
@@ -164,7 +164,7 @@ A spellcaster can tap the communal **Bangaranga Pool** (see [Core Resolution](01
 
 ## 7. Ritual Casting Mechanics
 
-Ritual Magic represents extended, cooperative spellcasting used for monumental supernatural feats: purifying **`[Cursed]`** or **`[Bonded]`** oddities, warding the **Lair**, erecting permanent elemental barriers, or crafting magical artifacts.
+Ritual Magic represents extended, cooperative spellcasting used for monumental supernatural feats: purifying **`[Cursed]`** or **`[Bonded]`** components, warding the **Lair**, erecting permanent elemental barriers, or crafting magical artifacts.
 
 ```mermaid
 flowchart TD

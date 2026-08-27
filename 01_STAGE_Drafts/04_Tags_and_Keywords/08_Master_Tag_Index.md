@@ -324,7 +324,7 @@ When two dynamic elements meet (either combined in [[custom gear]] crafting or o
 
 #### `[Nullified]`
 *   *Flavor:* Anti-magic circles, lead runes, or cold iron anchors.
-*   *Universal Baseline:* Dead-zone. Temporarily deactivates all active supernatural traits, magical tags, and [[oddities]] in the [[Zone]].
+*   *Universal Baseline:* Dead-zone. Temporarily deactivates all active supernatural traits, magical tags, and [[components]] in the [[Zone]].
 *   *Fictional Interaction:* Turns magic weapons back into normal scrap, shuts down spellcasting.
 
 #### `[Petrified]`

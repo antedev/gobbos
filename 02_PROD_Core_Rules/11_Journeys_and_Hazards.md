@@ -144,7 +144,7 @@ Every journey hazard, weather obstacle, or wilderness encounter is defined by th
 - **Hazard Check & Difficulty:** [Stat tested against Target Number, e.g., Slink 5+/1 or Tough 5+/2]
 - **Failure Consequence:** [Exact mechanical penalty: Mob Attrition damage, Boss Grit loss, Lost Bulk, Condition applied, or Alert increase]
 - **Success Outcome:** [Hazard bypassed, Mob healed, Boon granted, or bonus Loot secured]
-- **Mitigating Action / Avoidance:** [Equipment, Oddity, or alternative cost that bypasses the roll]
+- **Mitigating Action / Avoidance:** [Equipment, Component, or alternative cost that bypasses the roll]
 ```
 
 ### Reference Hazard Instances

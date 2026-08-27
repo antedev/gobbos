@@ -2,7 +2,7 @@
 
 *Every goblin Boss clawed their way to the top of the muck pile by being slightly meaner, faster, louder, or weirder than the screaming runts around them. But individual bosses are disposable; it is the Gang that endures, hoarding scrap and building a bloody legacy across generations.*
 
-This chapter defines the attributes and secondary metrics of a **Goblin Boss**, the character creation engine, the rules governing authority and **Grunt**, the persistent mechanics of the **Gang as Class Archetype**, and the structural schema for **Quirks**.
+This chapter defines the attributes and secondary metrics of a **Goblin Boss**, the character creation engine, the rules governing authority and **Grunt**, the persistent mechanics of the **Gang as Class Archetype**, and the structural schema for **Feats**.
 
 ---
 
@@ -41,8 +41,8 @@ flowchart LR
     M --> M1["Max Mobs (Simultaneous: 1 to 3)"]
     M --> M2["Free Orders (Commands per Round: 1 to 3)"]
     
-    B --> B1["Power Words (Spell Slots: 0 to 6)"]
-    B --> B2["Crafting Capacity (Oddity Slots: 1 to 5)"]
+    B --> F1["Power Words (Spell Slots: 0 to 6)"]
+    B --> F2["Crafting Capacity (Component Slots: 1 to 5)"]
 ```
 
 ### Tough Derived Stats: Grit & Carry
@@ -70,7 +70,7 @@ flowchart LR
 | **Level 5** | **5 Zones** | **+2d6** |
 
 *   **Movement**: The maximum number of discrete environmental **Zones** your Boss can cross by spending a single **Move** action (see [Zones, Movement & Environment](04_Zones_and_Movement.md)).
-*   **Passive Defence**: Innate dodging reflexes that grant passive mitigation dice. These dice are rolled alongside your equipped armor dice in the **Clatter Roll**, reducing incoming damage on rolls of **5+** even if you have saved zero actions to actively Dodge (see [Combat Engine](05_Combat_Engine.md)).
+*   **Passive Defence**: Innate dodging reflexes that grant passive mitigation dice. These dice are rolled alongside your equipped armor dice in the **Defence Roll**, reducing incoming damage on rolls of **5+** even if you have saved zero actions to actively Dodge (see [Combat Engine](05_Combat_Engine.md)).
 
 ### Mouth Derived Stats: Max Mobs & Free Orders
 
@@ -87,22 +87,22 @@ flowchart LR
 
 ### Brains Derived Stats: Power Words & Crafting Capacity
 
-| Brains Level | Power Words (Spell Tag Slots) | Crafting Capacity (Oddity Slots) |
+| Brains Level | Power Words (Spell Tag Slots) | Crafting Capacity (Component Slots) |
 | :---: | :---: | :---: |
-| **Level 1** | **0 Slots** | **1 Oddity Slot** |
-| **Level 2** | **0 Slots** | **2 Oddity Slots** |
-| **Level 3** | **2 Slots** | **3 Oddity Slots** |
-| **Level 4** | **4 Slots** | **4 Oddity Slots** |
-| **Level 5** | **6 Slots** | **5 Oddity Slots** |
+| **Level 1** | **0 Slots** | **1 Component Slot** |
+| **Level 2** | **0 Slots** | **2 Component Slots** |
+| **Level 3** | **2 Slots** | **3 Component Slots** |
+| **Level 4** | **4 Slots** | **4 Component Slots** |
+| **Level 5** | **6 Slots** | **5 Component Slots** |
 
 *   **Power Words**: The maximum number of volatile magical element and delivery tags your Boss can commit to memory for casting spells (see [Magic & Bangaranga](08_Magic_and_Bangaranga.md)). You must have at least **Brains 3** to memorize Power Words and cast spells.
-*   **Crafting Capacity**: The maximum number of specialized **Oddities** (custom mechanical attachments, alchemical coatings, spikes, and contraptions) you can install onto a single crafted item during downtime (see [The Lair Loop and Progression](10_The_Lair_Loop_and_Progression.md)).
+*   **Crafting Capacity**: The maximum number of specialized **Components** (custom mechanical attachments, alchemical coatings, spikes, and contraptions) you can install onto a single crafted item during downtime (see [The Lair Loop and Progression](10_The_Lair_Loop_and_Progression.md)).
 
 ---
 
 ## Grunt & Command Limits
 
-**Grunt** represents personal authority, intimidation, and psychological command momentum. It determines how large a **Mob** you can intimidate into following orders, and acts as the currency for activating high-tier **Quirks**.
+**Grunt** represents personal authority, intimidation, and psychological command momentum. It determines how large a **Mob** you can intimidate into following orders, and acts as the currency for activating high-tier **Feats**.
 
 ### Calculating Maximum Grunt
 A Boss's **Maximum Grunt** is strictly equal to the Boss's **second-highest Main Stat**:
@@ -154,7 +154,7 @@ Follow these sequential steps to create a starting **Goblin Boss**:
 flowchart TD
     S1["Step 1: Base Stats (All 1s)"] --> S2["Step 2: Allocate 2 Points<br>(Specialist 3/1/1/1 or Generalist 2/2/1/1)"]
     S2 --> S3["Step 3: Derive Secondary Stats & Role"]
-    S3 --> S4["Step 4: Choose 1 Starting Basic Quirk"]
+    S3 --> S4["Step 4: Choose 1 Starting Basic Feat"]
     S4 --> S5["Step 5: Select Junk (T1) Loadout"]
 ```
 
@@ -181,8 +181,8 @@ Consult the progression tables above to record your **Grit**, **Carry Capacity**
 
 Your highest stat and second-highest stat define your starting **Role** (e.g. Tough Specialist = Meat-Wall; Tough/Slink Hybrid = Raider; Slink/Brains Hybrid = Saboteur; Slink/Mouth Hybrid = Ring-Leader; Mouth/Brains Hybrid = Chant-Monger; Brains Specialist = Sage-Tinker).
 
-### Step 4: Choose 1 Starting Basic Quirk
-Select **1 Basic Quirk** matching a stat where your Boss's stat level meets or exceeds the Quirk's Tier (starts with 0 Twists).
+### Step 4: Choose 1 Starting Basic Feat
+Select **1 Basic Feat** matching a stat where your Boss's stat level meets or exceeds the Feat's Tier (starts with 0 Twists).
 
 ### Step 5: Select Starting Loadout
 Choose starting gear of **Junk (T1)** quality from the scrap pile:
@@ -219,20 +219,20 @@ A Gang advances its Infamy by earning **Infamy Marks**:
 2.  **Gang Agendas**: Completing a chosen **Gang Agenda** during a raid grants **1 Infamy Mark** (maximum 1 Mark from Agendas per raid).
 
 #### Infamy Milestones & Scaling
-| Infamy Level | Cumulative Marks Required | Successor Starting XP | Max Equipped Gang Quirks |
+| Infamy Level | Cumulative Marks Required | Successor Starting XP | Max Equipped Gang Feats |
 | :---: | :---: | :---: | :---: |
-| **Infamy 1** | **0 Marks** | **4 XP** | **1 Gang Quirk** |
-| **Infamy 2** | **3 Marks** | **8 XP** | **2 Gang Quirks** |
-| **Infamy 3** | **6 Marks** | **12 XP** | **3 Gang Quirks** |
-| **Infamy 4** | **10 Marks** | **16 XP** | **4 Gang Quirks** |
-| **Infamy 5** | **15 Marks** | **20 XP** | **5 Gang Quirks** |
+| **Infamy 1** | **0 Marks** | **4 XP** | **1 Gang Feat** |
+| **Infamy 2** | **3 Marks** | **8 XP** | **2 Gang Feats** |
+| **Infamy 3** | **6 Marks** | **12 XP** | **3 Gang Feats** |
+| **Infamy 4** | **10 Marks** | **16 XP** | **4 Gang Feats** |
+| **Infamy 5** | **15 Marks** | **20 XP** | **5 Gang Feats** |
 
 ### 2. Successor Boss Generation (Roguelite Legacy)
 When a **Goblin Boss** dies, the Gang promotes the next biggest goblin to take command:
 1.  **Base Setup**: The successor begins with base **1** in all four Main Stats, plus the standard **2 starting points**.
 2.  **Successor XP**: The successor receives a bonus pool of **Successor XP** equal to **Infamy Level x 4** to purchase additional stat upgrades at standard advancement costs.
 3.  **Successor Stat Cap**: A newly generated successor cannot raise any stat above **Level 4** at creation.
-4.  **The Gang Mark**: The successor receives a permanent tattoo inked in soot and blood, inheriting **1 Quirk or Twist** possessed by the deceased Boss, completely bypassing stat tier prerequisites.
+4.  **The Gang Mark**: The successor receives a permanent tattoo inked in soot and blood, inheriting **1 Feat or Twist** possessed by the deceased Boss, completely bypassing stat tier prerequisites.
 
 ### 3. The Gang Hoard
 **The Hoard** is the Gang's central stockpile of unrefined scrap, stolen tools, spare weapons, and trade wealth stored in the Lair. 
@@ -249,7 +249,7 @@ When any **Goblin Boss** reaches **Level 6** in any Main Stat, that Boss automat
 *   **Elder of Tough (Training Ring)**: All Mobs commanded by the Gang gain **+1 Passive Armor Die** without consuming Bulk.
 *   **Elder of Slink (Shadow Den)**: Reduces the Target Number (**TN**) of all environmental traps by **1** (minimum TN 1).
 *   **Elder of Mouth (Council Chambers)**: Increases the Boss's Maximum **Grunt** by **+1**; once per raid, allows rallying all fleeing Mobs in the zone as a Free Action.
-*   **Elder of Brains (Tinker Yard)**: Allows installing **+1 extra Oddity** onto crafted custom gear beyond standard Crafting Capacity.
+*   **Elder of Brains (Tinker Yard)**: Allows installing **+1 extra Component** onto crafted custom gear beyond standard Crafting Capacity.
 
 ### 6. Gang Shenanigan (Cultural Identity)
 Every Gang possesses a defining cultural trait called a **Shenanigan** (e.g. *Pyromaniacs, Shiny-Snatchers, Trap-Trippers, Skull-Bangers*):
@@ -259,13 +259,13 @@ Every Gang possesses a defining cultural trait called a **Shenanigan** (e.g. *Py
 
 ---
 
-## Quirk Structural Schema
+## Feat Structural Schema
 
-Quirks are modular personal abilities that modify dice outcomes, manipulate conditions, or alter the action economy. Every Quirk must conform to the following formal schema:
+Feats are modular personal abilities that modify dice outcomes, manipulate conditions, or alter the action economy. Every Feat must conform to the following formal schema:
 
 ```markdown
-### [CONTENT INSTANCE: Boss Quirk]
-**Name**: <Quirk Name>
+### [CONTENT INSTANCE: Boss Feat]
+**Name**: <Feat Name>
 **Category**: <Tough | Slink | Brains | Mouth | General | Gang Legacy>
 **Tier**: <T1 | T2 | T3 | T4 | T5>
 **Prerequisite**: <Stat Name> Level >= Tier
@@ -277,5 +277,5 @@ Quirks are modular personal abilities that modify dice outcomes, manipulate cond
 **Keywords**: <[Keywords from Master Index]>
 ```
 
-### [CONTENT EXTENSION POINT: Boss Quirks & Talents]
-*All specific Boss Quirks, talent trees, and Twist modifiers are maintained in the modular Quirks Compendium and attach directly to the core rules via the schema above.*
+### [CONTENT EXTENSION POINT: Boss Feats & Talents]
+*All specific Boss Feats, talent trees, and Twist modifiers are maintained in the modular Feats Compendium and attach directly to the core rules via the schema above.*

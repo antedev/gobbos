@@ -3,9 +3,9 @@
 *Goblins don't follow formulas, unless it is a formula for making things go boom. A bit of glowing scrap, a twitching monster eyeball, a sudden chemical itch in the skin—mix them all together, tape it to a sword, and you have got a plan.*
 
 The **Unified Modular Powers System** is the core framework for all custom abilities, mutations, and specialized gear in Gobbos. It unifies three separate paths of progression under a single rules architecture:
-1. **Quirks & Twists:** Personal abilities customized by the Boss, detailed in [14_Quirks.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters & Mobs/14_Quirks.md).
+1. **Feats & Twists:** Personal abilities customized by the Boss, detailed in [14_Feats.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters & Mobs/14_Feats.md).
 2. **Shenanigans:** The core culture and compulsive traits of a [[Gang]], detailed in [12_Gangs.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md).
-3. **[[Oddities]] & Relics:** Strange materials and magical scrap crafted into custom equipment, detailed in [34_Crafting.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/03_Loot/34_Crafting.md).
+3. **[[Components]] & Relics:** Strange materials and magical scrap crafted into custom equipment, detailed in [34_Crafting.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/03_Loot/34_Crafting.md).
 
 ---
 
@@ -58,7 +58,7 @@ The specific rules, stats, actions, or trackers that the modification acts upon.
 *   **Horde & Command:** Mob [[Size]], Mob [[Slink]] Normalization, Mob Cognitive Normalization, Boredom Rule, Cross-Gang Command Struggle, In-Fighting Damage.
 *   **Campaign & Lair:** [[Zone Profile]] (Base TN), Movement Cost Multiplier, Size Capacity Threshold, Cover State, Hazard Resolution Test, [[Route Test]], [[Travel Event]], **Laden** or [[Over-Laden]] Penalties, Lair labor allocation, Recruitment loops, Slot clearance, Dominance contribution, Supply routes.
 *   **Arcane:** Spell Activation Brains Pool, Push-Your-Luck Reroll, Chaotic Leakage (Side Effects), Spell Mishap (Farkle).
-*   **Equipment:** Durability Break Roll, [[Scrap Cascade]], [[Oddity]] Ceiling.
+*   **Equipment:** Durability Break Roll, [[Scrap Cascade]], [[Component]] Ceiling.
 
 ### Category 3: The Trigger or Constraint (When it applies)
 The specific conditions, circumstances, or events required for the ability to activate:
@@ -93,7 +93,7 @@ The specific conditions, circumstances, or events required for the ability to ac
     *   *Gang Faction Alignment:* Character sheet matches parent faction tag.
     *   *Faction Defiance (Cursed):* Item gang tag doesn't match wielder's rival gang.
     *   *Attribute Tier Gating:* Primary stat score is at or above a designated value.
-    *   *Component Mismatch (Ceiling Rule):* [[Oddity]] tier exceeds workshop level.
+    *   *Component Mismatch (Ceiling Rule):* [[Component]] tier exceeds workshop level.
     *   *Arcane Difficulty Constraint:* Successes are locked strictly to face value 6 (Hard casting).
 
 ### Category 4: The Delivery (Who and where it targets)
@@ -135,11 +135,11 @@ The action, resource ([[Grunt]], [[Grit]], or [[Size]]), or item spent to activa
     *   *Garrison Cost:* Leaving a Mob behind, removing them from the Gobbo Pool.
 *   **Inventory & Wealth:**
     *   *Scrap / Component Consumption:* Consumes a piece of Scrap or item held in inventory.
-    *   *[[Oddity]] Sacrifice:* Permanently erases a component from Lair inventory.
+    *   *[[Component]] Sacrifice:* Permanently erases a component from Lair inventory.
     *   *Bribe / [[Loot Value]] Expenditure:* Deducts raw wealth (e.g. 5 Loot) from hoard.
 *   **Equipment Lifecycle:**
-    *   *[[Overclock]] Disintegration:* Instantly vaporizes the item chassis.
-    *   *Active Bite Level Escalation:* Increases item's instability by +1 Bite.
+    *   *[[Overload]] Disintegration:* Instantly vaporizes the item chassis.
+    *   *Active Flaw Level Escalation:* Increases item's instability by +1 Flaw.
 *   **Downtime Subsystems:**
     *   *Laborer Die Allocation:* Assigns a Lair laborer die to a chore.
     *   *Laborer Die Consumption:* Consumes a laborer die permanently/temporarily.
@@ -208,7 +208,7 @@ To simplify play, the rules pre-bundle the positive building blocks (**Modificat
 
 ## 4. Non-Combat & Campaign Tiering
 
-While the combat-focused matrix is the default player-facing interface, custom Quirks and [[Oddities]] that modify non-combat loops (such as travel routes, downtime labor, or item durability) are tiered using these guidelines:
+While the combat-focused matrix is the default player-facing interface, custom Feats and [[Components]] that modify non-combat loops (such as travel routes, downtime labor, or item durability) are tiered using these guidelines:
 
 *   **Tier 1 (Niche/Minor):** Modifies a single-target, minor non-combat utility (e.g., granting a [[Boon]] to a specific travel role, or reducing an item's Bulk by 1).
 *   **Tier 2 (Standard):** Modifies a standard non-combat mechanic (e.g., shifting a travel test difficulty step, or reducing an item's active Bite level by 1).
@@ -248,28 +248,28 @@ GMs and developers write abilities using this standardized [[blueprint]] card:
 *   **Duration:** [How long does this altered rule-state persist before clearing?]
 ```
 
-> **Example (Quirk):** Grub has a [[Slink]] of 2. They select a [[Slink]] **T2** [[Quirk]]. They combine the **T2** Mechanical Effect (*imposes a Sustained condition*) with the Descriptor `[Sticky]` to create the **Sticky Spit** [[Quirk]]. When activated, the target is covered in glue and gains the *Restrained* condition.
+> **Example (Feat):** Grub has a [[Slink]] of 2. They select a [[Slink]] **T2** [[Feat]]. They combine the **T2** Mechanical Effect (*imposes a Sustained condition*) with the Descriptor `[Sticky]` to create the **Sticky Spit** [[Feat]]. When activated, the target is covered in glue and gains the *Restrained* condition.
 >
-> **Example ([[Oddity]]):** A crafter builds a **T3** weapon using a fire crystal. They choose the **T3** Mechanical Effect (*Zone Area*) and the Descriptor `[Fire]`. The weapon is a **Flameslasher**. When swung, it sweeps fire across the entire [[Zone]].
+> **Example ([[Component]]):** A crafter builds a **T3** weapon using a fire crystal. They choose the **T3** Mechanical Effect (*Zone Area*) and the Descriptor `[Fire]`. The weapon is a **Flameslasher**. When swung, it sweeps fire across the entire [[Zone]].
 
 ### The Activation Cost Economy
-To use an active modular power or [[Oddity]], a Boss must pay its associated activation cost. Because [[Grunt]] is a limited pool that determines maximum commanded Mob [[Size]], spending [[Grunt]] is a significant tactical sacrifice:
+To use an active modular power or [[Component]], a Boss must pay its associated activation cost. Because [[Grunt]] is a limited pool that determines maximum commanded Mob [[Size]], spending [[Grunt]] is a significant tactical sacrifice:
 *   **T1–T2 Powers:** May be [[Passive]], cost 1 [[Action]], or cost 1 [[Grunt]].
 *   **T3 Powers:** Cost 1 [[Action]] OR 1 [[Grunt]].
 *   **T4 Powers:** Cost 1 [[Action]] + 1 [[Grunt]] OR 2 [[Grunt]].
-*   **T5 Powers:** Cost 3 [[Grunt]] OR trigger an immediate [[Overclock]] (completely destroying the gear chassis upon resolution).
+*   **T5 Powers:** Cost 3 [[Grunt]] OR trigger an immediate [[Overload]] (completely destroying the gear chassis upon resolution).
 
 ### Balancing Area of Effect (AoE) Powers
 Area attacks are highly lethal in Gobbos because [[Area of Effect (AoE)]] or [[Cleave]] damage applies to **every single die** in a [[Mob]]'s pool (see [13_Goblin_mob.md](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters & Mobs/13_Goblin_mob.md)).
-*   **The Multi-[[Oddity]] Rule:** An item or power cannot possess both a high-tier damage effect and a wide Area/Blast delivery without paying the modular cost.
-*   To build an Area-damage weapon, a player must install both a **Core** [[Oddity]] (representing the successes/damage) and a **Modifier** [[Oddity]] (representing the Area/Blast delivery).
-*   Because a goblin's [[Brains]] stat caps their [[Crafting Capacity]] (max [[Oddities]] per item), low-[[Brains]] goblins cannot build wide-area high-tier weapons. A [[Brains]] 1 goblin can only build a single-target **T3** weapon. A [[Brains]] 3+ goblin is required to combine a **T3** **Core** and a **T3** Area **Modifier**.
+*   **The Multi-[[Component]] Rule:** An item or power cannot possess both a high-tier damage effect and a wide Area/Blast delivery without paying the modular cost.
+*   To build an Area-damage weapon, a player must install both a **Core** [[Component]] (representing the successes/damage) and a **Modifier** [[Component]] (representing the Area/Blast delivery).
+*   Because a goblin's [[Brains]] stat caps their [[Crafting Capacity]] (max [[Components]] per item), low-[[Brains]] goblins cannot build wide-area high-tier weapons. A [[Brains]] 1 goblin can only build a single-target **T3** weapon. A [[Brains]] 3+ goblin is required to combine a **T3** **Core** and a **T3** Area **Modifier**.
 
 ---
 
 ## 6. Element Synthesis
 
-When players combine multiple descriptors (e.g., [[custom gear]] with multiple [[Oddities]] or environmental combos), the outcome is resolved using the following guidelines:
+When players combine multiple descriptors (e.g., [[custom gear]] with multiple [[Components]] or environmental combos), the outcome is resolved using the following guidelines:
 
 ### Resolution at Creation
 To prevent combat speed-bumps, **Element Synthesis must be resolved at the point of weapon creation/customization**, rather than negotiated during combat rounds. The player designs the combination during downtime, the GM approves the emergent synergy, and a static final statblock is written onto the item sheet.

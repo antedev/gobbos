@@ -10,7 +10,7 @@ This chapter contains standardized stat blocks for adversaries encountered durin
 
 ### Quick Reference Rules
 *   **Zero GM Rolls:** The **GM** never rolls to hit or damage. All enemy attacks present a static **Threat** (difficulty and successes required to avoid) and flat **Damage**.
-*   **Player Reactions:** When targeted by an enemy attack, you can spend a saved [[Standard Action]] to make a [[Clatter Roll]], rolling [[Slink]] to [[Dodge]] or [[Tough]] to [[Parry]] against the attack's **Threat**. 
+*   **Player Reactions:** When targeted by an enemy attack, you can spend a saved [[Standard Action]] to make a [[Defence Roll]], rolling [[Slink]] to [[Dodge]] or [[Tough]] to [[Parry]] against the attack's **Threat**. 
 *   **Passive Mitigation:** Successes on your equipped [[Armor]] dice reduce incoming damage by 1 per success (**5+**).
 *   **One-Hit Kills:** Standard enemies die instantly when you roll successes equal to or greater than their [[Defence]] [[Target Number (TN)]].
 *   **Wounds & Overkill:** [[Elite]] and [[Boss]] enemies track damage using a **Wounds** track. You deal **1 [[Wound]] for every full multiple of the target's [[Defence]] TN** scored on a single attack roll (e.g., against Defence 2, scoring 2 successes deals 1 Wound, 4 successes deals 2 Wounds, and 6 successes deals 3 Wounds).
@@ -487,7 +487,7 @@ Every creature belongs to an **Ancestry** that establishes its universal behavio
 
 ## 8. Legendary Threats & Apex Monsters
 
-*These are the apex predators of the world—ancient horrors whose mere presence shakes the earth. Fighting an apex monster is a lethal puzzle requiring planning, explosive oddities, and throwing dozens of screaming goblins into the grinder to create a single killing blow.*
+*These are the apex predators of the world—ancient horrors whose mere presence shakes the earth. Fighting an apex monster is a lethal puzzle requiring planning, explosive components, and throwing dozens of screaming goblins into the grinder to create a single killing blow.*
 
 ### Brimstone Fiend (The Horned Ravager)
 *Boss Fiend (Size 2)*  
@@ -532,7 +532,7 @@ Every creature belongs to an **Ancestry** that establishes its universal behavio
 | **Crushing Dragon Jaws** | `Tough 6/2` (Hard!) | 6 | Melee | Shatters shields; inflicts 2 Wounds on Bosses if undefended. |
 | **Hellfire Breath (Clock)** | `Slink 4+/3` | 5 | Ranged (2 Zones, AoE) | Vaporizes wooden cover; ignites both zones with `[Fire]`. |
 
-**Plunder:** Hoard of the Drake-Lords (Loot Value 15, 6 Scrap T4, 2 Scrap T5, Dragon Heart Oddity T5/B0).
+**Plunder:** Hoard of the Drake-Lords (Loot Value 15, 6 Scrap T4, 2 Scrap T5, Dragon Heart Component T5/F0).
 
 ---
 
@@ -552,7 +552,7 @@ Every creature belongs to an **Ancestry** that establishes its universal behavio
 > 
 > *The Forest Mauler (Elite Beast) attacks Boss Fizzle with its Crushing Claws (Threat `Tough 5+/2`, Damage 3).*
 > 
-> Fizzle has saved 1 [[Standard Action]] from his turn and holds a scrap iron shield. He declares a **Parry** and rolls his **Clatter Roll**:
+> Fizzle has saved 1 [[Standard Action]] from his turn and holds a scrap iron shield. He declares a **Parry** and rolls his **Defence Roll**:
 > *   **Stat Dice:** 2d6 for [[Tough]] (Fizzle's Tough is 2).
 > *   **Armor Dice:** 2 gray d6s for his Tin Plate armor.
 > 
@@ -563,7 +563,7 @@ Every creature belongs to an **Ancestry** that establishes its universal behavio
 > 
 > Fizzle takes **1 Grit** damage instead of 3, absorbing the savage swipe on his trusty armor!
 
-> **Example 3: Overclocking Against the High Aurelian Praetor**
+> **Example 3: Overloading Against the High Aurelian Praetor**
 > 
 > *Boss Grib and his Gang face the towering Solar Praetor (Defence 4, Wounds 5).*
 > 

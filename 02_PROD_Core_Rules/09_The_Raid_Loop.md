@@ -22,10 +22,10 @@ Before leaving the **Lair**, you select a scouted target, inspect the known **Ba
 The party breaches the target perimeter. The **GM** sets the location's starting **Alert** track equal to its **Base Danger Rating** (1 to 5). You navigate connected **Zones**, defeat sentries, bypass obstacles, and work to keep **Alert** low before sounding alarms.
 
 ### Phase 3: Objective & Plunder
-The party executes tactical combat and exploration actions in the target **Zones**. You secure the **Main Objective** (worth 3–5 **Raid Points**), seek optional **Targets of Opportunity** (worth +2 **Raid Points** each), dismantle heavy machinery or architecture for **Scrap**, and spend **Plunder** **Standard Actions** to gather loose **Loot** and **Oddities**.
+The party executes tactical combat and exploration actions in the target **Zones**. You secure the **Main Objective** (worth 3–5 **Raid Points**), seek optional **Targets of Opportunity** (worth +2 **Raid Points** each), dismantle heavy machinery or architecture for **Scrap**, and spend **Plunder** **Standard Actions** to gather loose **Loot** and **Components**.
 
 ### Phase 4: Extraction & Escape
-Once objectives are secured, or when **Alert** escalates to lethal levels, the party declares **Extraction**. You must haul all gathered physical **Loot**, **Scrap**, and **Oddities** back through the perimeter to the exit, managing encumbrance penalties and fighting off pursuers before resolving the return journey.
+Once objectives are secured, or when **Alert** escalates to lethal levels, the party declares **Extraction**. You must haul all gathered physical **Loot**, **Scrap**, and **Components** back through the perimeter to the exit, managing encumbrance penalties and fighting off pursuers before resolving the return journey.
 
 ---
 
@@ -37,7 +37,7 @@ The **Gobbos** economy operates without fractional coinage or coin-counting math
 | :--- | :--- | :--- | :--- |
 | **Loot Value (LV)** | Liquid Wealth | Plundered as physical items during raids | Smelted via Rule of Five; buys equipment, hires specialists, expands Lair facilities. |
 | **Scrap** | Building Matter | Harvested from broken infrastructure and salvage | Constructs facility chassis, expands rooms, and provides base weapon materials. |
-| **Infamy Marks** | Gang Level | Contributed Loot (10 LV = 1 Mark) or Agendas | Determines Gang Infamy (1–5), Successor starting XP, and equipped Gang Quirks. |
+| **Infamy Marks** | Gang Level | Contributed Loot (10 LV = 1 Mark) or Agendas | Determines Gang Infamy (1–5), Successor starting XP, and equipped Gang Feats. |
 | **Raid Points (Glory)** | Shared Renown | Completing Main and Opportunity Objectives | Pooled at raid end; converts into shared **Boss XP** during Homecoming. |
 | **Boss XP** | Personal Power | Pooled Raid Points, Personal Glory, Successor pools | Spent during downtime to advance **Main Stats** (**Tough**, **Slink**, **Brains**, **Mouth**). |
 
@@ -171,29 +171,29 @@ All **Raid Points** earned by the party from completing objectives are pooled an
 ### 2. Personal Glory (+1 XP)
 A **Goblin Boss** earns **+1 Personal Glory** (maximum 1 per raid, converting to **+1 XP** during Homecoming) by fulfilling at least one of these chaotic acts:
 * **The Compulsion:** Voluntarily trigger your Gang's **Shenanigan** compulsion in an disadvantageous tactical situation, causing a complication and adding a die to the communal **Bangaranga Pool**.
-* **The Sacrifice:** Completely destroy a custom gear item by declaring an **Overclock**.
+* **The Sacrifice:** Completely destroy a custom gear item by declaring an **Overload**.
 * **The Tyrant:** Use the **Assert Dominance** action (attacking a **Mob** under your command) to regain **Grunt** in combat.
 * **The Martyr:** Roll a **Fumble** or trigger **Overreaching** when rolling dice, yet survive the raid.
 
 ### 3. Communal Hoard Deposit vs. Private Gang Hoard
 * **Communal Hoard:** All standard **Loot Value** and **Scrap** gathered by the party is deposited into the **Communal Hoard**. Contributing 10 **Loot Value** to the Communal Hoard earns your Gang **1 Infamy Mark**.
-* **Oddity Drafting:** Rare **Oddities** extracted from the raid are placed on the table and distributed by **Player Consensus**. If an **Oddity** was physically carried out by a specific **Mob**, that **Mob's** controlling Gang holds **First Pick** rights.
+* **Component Drafting:** Rare **Components** extracted from the raid are placed on the table and distributed by **Player Consensus**. If an **Component** was physically carried out by a specific **Mob**, that **Mob's** controlling Gang holds **First Pick** rights.
 
 ---
 
 ## 9. Loot & Salvage Structural Schema
 
-Every plundered treasure, scrap cache, or harvested monster oddity is defined by the following structural template:
+Every plundered treasure, scrap cache, or harvested monster component is defined by the following structural template:
 
 ```markdown
 ### [Item Name]
-- **Category:** [Pocket Scrap | Scrappy Plunder | Fine Treasure | Masterwork | Mythic Relic | Oddity | Chassis | Consumable]
+- **Category:** [Pocket Scrap | Scrappy Plunder | Fine Treasure | Masterwork | Mythic Relic | Component | Chassis | Consumable]
 - **Quality Tier:** [T1 Junk | T2 Scrappy | T3 Standard | T4 Superior | T5 Legendary]
 - **Bulk:** [0 | 1 | 2 | 3 | 4+]
 - **Loot Value (LV):** [Quantity of Tier units, e.g. 1x T1, 1x T2, 3x T3, 1x T5]
 - **Scrap Yield:** [Quantity of Scrap recovered if dismantled in Lair]
 - **Divisibility:** [Divisible | Indivisible]
-- **Special Utility / Crafting Tag:** [Attached Oddity (Tier/Bite), Weapon/Armor Tag, or Blueprint schematic]
+- **Special Utility / Crafting Tag:** [Attached Component (Tier/Bite), Weapon/Armor Tag, or Blueprint schematic]
 - **Description:** [Brief physical Tier B/C description]
 ```
 
@@ -220,7 +220,7 @@ Every plundered treasure, scrap cache, or harvested monster oddity is defined by
 - **Description:** *A heavy silver banquet cup lined with gold filigree and small garnet beads.*
 
 #### Flame Drake Bile Gland
-- **Category:** Oddity
+- **Category:** Component
 - **Quality Tier:** T4 Superior
 - **Bulk:** 2
 - **Loot Value (LV):** 1x T4
@@ -235,7 +235,7 @@ Every plundered treasure, scrap cache, or harvested monster oddity is defined by
 
 [CONTENT EXTENSION POINT: Loot & Salvage Items]
 
-All future compendiums of treasures, trade goods, monster harvest oddities, relics, and scrap caches must implement the Loot & Salvage Structural Schema defined above, respecting Quality Tiers (T1–T5), Bulk encumbrance rules, and Scrap yields.
+All future compendiums of treasures, trade goods, monster harvest components, relics, and scrap caches must implement the Loot & Salvage Structural Schema defined above, respecting Quality Tiers (T1–T5), Bulk encumbrance rules, and Scrap yields.
 
 ---
 

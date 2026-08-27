@@ -15,7 +15,7 @@ The player have three different components that grows with them as they play:
 3) The Lair - The base of operations for your and the other players gang, a cooperative building project that the players can invest in to gain new abilities and resources.
 
 The player do not only control his Character but also a Mob of goblin from his gang, when going on adventures. 
-The main loop of the game is to go on raids, find Loot and Glory, that gives XP and resources to upgrade the Lair, craft new items and aquire more Quirks. 
+The main loop of the game is to go on raids, find Loot and Glory, that gives XP and resources to upgrade the Lair, craft new items and aquire more Feats. 
 The core game mechanic is that the player rolls a dice pool of d6s, looking for a set number of successes. 6s explode, counts as a success and lets the player rolls another die. 
 
 Death of a character is far from the end, rather it is almost necessary to increase in power, like a roguelite game. They grant bonuses to the next character the player creates.
@@ -272,6 +272,6 @@ To ensure that the setting feels immersive, lived-in, and highly atmospheric (dr
 
 2.  **Diagrams and Visual Layouts (Mermaid vs. Plain Markdown):**
     *   **No Raw ASCII Art:** Raw ASCII diagrams (using `+---+`, `||`, `\/`, etc.) are strictly forbidden. They warp on smaller screens and break layout flow.
-    *   **Mermaid Diagrams:** When a visual diagram is genuinely needed (e.g., Round Phase sequences, Clatter Roll decision flows, Stagger checks, Raid phase loops), use standard **Mermaid** syntax (` ```mermaid `). Mermaid is cleanly readable in text editors and natively supported by Obsidian, GitHub, and web frontends.
+    *   **Mermaid Diagrams:** When a visual diagram is genuinely needed (e.g., Round Phase sequences, Defence Roll decision flows, Stagger checks, Raid phase loops), use standard **Mermaid** syntax (` ```mermaid `). Mermaid is cleanly readable in text editors and natively supported by Obsidian, GitHub, and web frontends.
     *   **Text/Table Fallbacks:** If a concept can be explained cleanly in a Markdown table or a numbered procedural list, prefer the text/table approach over complex diagrams.
 

@@ -133,7 +133,7 @@ Each active **Goblin Boss** executes **one** personal Downtime Action:
 
 * **The Pitch (Mouth Test):** Deliver an inspiring or terrifying speech. Pass a **Mouth 4+/1** test to reduce **Swarm Mood by 1**. *(Alternative: Spend 5 Loot from the Hoard to buy a round of rotgut grog, automatically reducing Swarm Mood by 1 with no roll).*
 * **Laying Low (Slink Test):** Lead scouts into the surrounding wilderness to eliminate enemy patrols and erase tracks. Pass a **Slink 4+/1** test to reduce **Threat Level by 1**. *(Alternative: Spend 5 Loot to bribe local corrupt watchmen).*
-* **Custom Crafting (Brains Test):** Operate a workshop to assemble, modify, or overclock weapons and armor using **Scrap** and **Oddities** (see [Combat Engine](05_Combat_Engine.md)).
+* **Custom Crafting (Brains Test):** Operate a workshop to assemble, modify, or overload weapons and armor using **Scrap** and **Components** (see [Combat Engine](05_Combat_Engine.md)).
 * **The Skim (Slink Test):** Secretly divert wealth from the Communal Hoard into your **Gang's Private Hoard**. Pass a **Slink 4+/1** test to divert up to your **Slink** rating in **Loot Value**. If your roll contains any **1s**, you are caught: you receive 0 Loot and **Swarm Mood increases by +1**.
 * **Bar Brawl / Power Play (Tough or Mouth Test):** Challenge a rival Gang's dominance over a Lair facility. Pass a **Tough 4+/1** (physical brawl) or **Mouth 4+/1** (screaming dominance) test to transfer 1 point of contribution on that asset's ledger from the defender to your Gang.
 * **Beast Taming (Brains or Tough Test):** Break and train a captured beast. Pass a **Brains 4+/1** or **Tough 4+/1** test to attach a beast archetype tag (e.g., `[Wolf Mount]`, `[Squig Hound]`) to a commanded **Mob**.
@@ -198,9 +198,9 @@ When a Boss dies, the next prominent goblin in the Gang takes command:
 
 ### Gang Marks (Tattoos of the Dead)
 The successor honors the fallen predecessor by receiving a crude soot tattoo:
-* The successor inherits **one Quirk or Twist** possessed by the deceased Boss.
-* The successor **ignores all Stat and Tier requirements** for this inherited Quirk.
-* This Quirk counts toward the Boss's limit of 3 personal Quirks.
+* The successor inherits **one Feat or Twist** possessed by the deceased Boss.
+* The successor **ignores all Stat and Tier requirements** for this inherited Feat.
+* This Feat counts toward the Boss's limit of 3 personal Feats.
 
 ### Named Items & Revenge Quests
 When a Boss dies, the Boss's favored equipment absorbs that chaotic spirit and becomes a **Named Item**:
@@ -212,14 +212,14 @@ When a Boss dies, the Boss's favored equipment absorbs that chaotic spirit and b
 ### Patron Saints of the Bone Pile
 When creating a successor, the player may select one deceased Boss from the **Bone Pile** to adopt as a **Patron Saint**:
 * **The Boon:** Grants a specific situational power related to how the Saint lived or died (e.g., *Saint Grugor: Ignore fire damage once per raid*).
-* **The Behavioral Catch:** To maintain the boon, the Boss must follow the Saint's behavioral quirk (e.g., always choosing the loudest path, or never retreating).
+* **The Behavioral Catch:** To maintain the boon, the Boss must follow the Saint's behavioral feat (e.g., always choosing the loudest path, or never retreating).
 
 ### Retirement & Elders
 When a Boss earns enough XP to raise any Main Stat to **Level 6**, the Boss automatically **Retires** from active raiding to become an **Elder**:
 * **Elder of Tough:** Staffed at the Training Ring; grants **+1 passive Defense Die** (Armor) to all commanded friendly Mobs.
 * **Elder of Slink:** Staffed at the Shadow Den; reduces trap **Target Numbers (TN)** by **1** (minimum 1) for the Gang.
 * **Elder of Mouth:** Staffed at the Council Room; increases starting and maximum **Grunt** by **+1**, and allows rallying fleeing Mobs as a **Free Action** once per raid.
-* **Elder of Brains:** Staffed at the Tinker Yard; enables installing **1 extra Oddity** on custom gear items.
+* **Elder of Brains:** Staffed at the Tinker Yard; enables installing **1 extra Component** on custom gear items.
 
 ---
 

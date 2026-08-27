@@ -151,7 +151,7 @@ All weapon instances, armory catalogues, and custom forge chassis must adhere st
 Armor and shields provide passive protection, absorb incoming blows, and enable active parrying reactions.
 
 ### Passive Armor Dice
-Worn armor provides bonus colored dice (the **Armor Dice pool**) that are thrown alongside active defense dice during a **Clatter Roll**:
+Worn armor provides bonus colored dice (the **Armor Dice pool**) that are thrown alongside active defense dice during a **Defence Roll**:
 *   **Light Armor (Bulk 1 | 0 Bane):** Grants **+1d Armor Die**. Flexible and quiet; imposes zero mobility or stealth penalties.
 *   **Medium Armor (Bulk 2 | Bane 1):** Grants **+2d Armor Dice**. Stiff leather or mail; imposes **Bane 1 (-1d)** on all **Slink** tests.
 *   **Heavy Armor (Bulk 3 | Bane 2):** Grants **+3d Armor Dice**. Rigid plate; imposes **Bane 2 (-2d)** on all **Slink** tests, and the wearer **cannot swim** (sinks instantly in Deep Water).
@@ -162,7 +162,7 @@ Worn armor provides bonus colored dice (the **Armor Dice pool**) that are thrown
 
 ### Passive Mitigation Ceiling
 >> **THE 5D MITIGATION CEILING:**
->> The total passive mitigation pool rolled on any single Clatter Roll (combining Armor Dice, Shield bonus dice, and Slink Passive Defence dice) is hard-capped at **5d6 Armor Dice** to prevent absolute invulnerability.
+>> The total passive mitigation pool rolled on any single Defence Roll (combining Armor Dice, Shield bonus dice, and Slink Passive Defence dice) is hard-capped at **5d6 Armor Dice** to prevent absolute invulnerability.
 
 ### Ablative Gear Sacrifice Rule
 When a Goblin Boss suffers an incoming strike with enough unmitigated damage to reduce their **Grit to 0** (or cause immediate death), the Boss may declare an immediate **Gear Sacrifice**:
@@ -208,7 +208,7 @@ Explosives (grenades, molotovs, powder kegs) do not roll single-target attack po
 
 **Area Threat Profile** = `Threat [Difficulty]+/[TN]`, `[Damage]`, `[Tags]`, `Blast Range: X Zones`, `Impact Size: Y`
 
-*   **PC Bosses in Blast Zone:** Must resolve an immediate **Clatter Roll** (Dodge vs Threat TN) or suffer full blast damage to Grit.
+*   **PC Bosses in Blast Zone:** Must resolve an immediate **Defence Roll** (Dodge vs Threat TN) or suffer full blast damage to Grit.
 *   **Mobs in Blast Zone:** May execute an active **Scatter** reaction or suffer blast damage applied simultaneously to all health dice.
 *   **Standard Minions in Blast Zone:** Instantly destroyed if the explosive's Threat TN >= Minion Defence TN.
 *   **Elite Enemies in Blast Zone:** Take 1 Wound if Threat TN >= Defence TN, and gain **Staggered** if blast Impact Size >= Enemy Size.
@@ -237,18 +237,18 @@ All adventuring gear, tools, and consumables must adhere strictly to this schema
 
 ## The Clatter Defense Roll
 
-The **Clatter Roll** is the core defensive mechanic in **Gobbos**. When an enemy strikes during the **Enemy Active Turn**, the GM announces the attack's **Threat Profile** (`Threat [Face]+/[TN]`) and flat **Damage**. The defending Goblin Boss resolves defense in a single simultaneous throw.
+The **Defence Roll** is the core defensive mechanic in **Gobbos**. When an enemy strikes during the **Enemy Active Turn**, the GM announces the attack's **Threat Profile** (`Threat [Face]+/[TN]`) and flat **Damage**. The defending Goblin Boss resolves defense in a single simultaneous throw.
 
 ```mermaid
 flowchart TD
-    I["Incoming Threat: Threat 5+/1, Damage 3"] --> T["Simultaneous Throw: The Clatter Roll<br>- Active Stat Dice: 2d Slink Dodge (Saved Action Spent)<br>- Passive Armor Dice: 2d Armor (Medium Armor)"]
+    I["Incoming Threat: Threat 5+/1, Damage 3"] --> T["Simultaneous Throw: The Defence Roll<br>- Active Stat Dice: 2d Slink Dodge (Saved Action Spent)<br>- Passive Armor Dice: 2d Armor (Medium Armor)"]
     T --> S1["Step 1: Check Active Stat Dice vs Threat TN"]
     S1 -->|Slink scores >= 1 success| CD["CLEAN DODGE (0 Damage Taken)"]
     S1 -->|Slink scores 0 successes| S2["Step 2: Check Passive Armor Dice<br>Each 5+ reduces Damage by 1"]
     S2 --> S3["Step 3: Deduct Remaining Damage from Grit<br>Boss takes remaining Damage to Grit"]
 ```
 
-### Step-by-Step Clatter Roll Procedure
+### Step-by-Step Defence Roll Procedure
 
 1.  **Saved Action Declaration:** To roll active **Stat Dice**, the Boss must spend one saved **Standard Action** (declaring a **Dodge** using `Slink`, or a **Parry** using `Tough` if equipped with a Shield).
     *   *Zero Saved Actions:* If the Boss spent all 3 actions on their active turn, they cannot roll Stat Dice and must rely entirely on passive Armor Dice.
@@ -271,7 +271,7 @@ When multiple standard minions gang up on a single Goblin Boss:
 *   **Consolidated Attack:** The GM combines up to **3 standard enemies** into a single incoming strike.
 *   **Damage Scaling:** The attack uses the primary enemy's Threat profile, and deals:
     **Group Damage** = **Base Enemy Damage** + (1 Damage per additional enemy)
-*   **Single Defense Resolution:** The defending Boss spends only **one (1) saved Standard Action** to resolve a single Clatter Roll against the entire combined swarm attack.
+*   **Single Defense Resolution:** The defending Boss spends only **one (1) saved Standard Action** to resolve a single Defence Roll against the entire combined swarm attack.
 *   **Targeting Cap:** A maximum of 3 standard enemies may combine against a single PC Boss. (Attacks against player Mobs have no grouping cap).
 
 ### Flanking & Crossfire Boons

@@ -19,7 +19,7 @@ Every **Goblin Boss** receives the following action budget per round:
 1.  **Three (3) Standard Actions**: The core currency of your turn. Standard Actions are spent to **Move**, **Attack**, **Plunder**, **Manipulate**, or issue an **Order**. Unspent Standard Actions may be saved to perform **Reactions** during the enemy turn.
 2.  **Free Orders per Round**: An innate command allowance determined by your **Mouth** stat (1 Free Order at Mouth 1–2; 2 Free Orders at Mouth 3–4; 3 Free Orders at Mouth 5). Free Orders allow commanding Mobs without spending your precious Standard Actions.
 3.  **Free Actions**: Minor, instantaneous maneuvers that cost zero Standard Actions (e.g. dropping an item, speaking, shouting a battle cry, drawing 1 light item once per turn).
-4.  **Reactions**: Out-of-turn defensive or triggered responses (such as **Dodge**, **Parry**, **Scatter**, or reactive Quirks). Performing a Reaction strictly requires spending a saved **Standard Action** (or an unused Free Order for the Scatter reaction).
+4.  **Reactions**: Out-of-turn defensive or triggered responses (such as **Dodge**, **Parry**, **Scatter**, or reactive Feats). Performing a Reaction strictly requires spending a saved **Standard Action** (or an unused Free Order for the Scatter reaction).
 
 ### Mob Action Budget
 Every allied **Mob** possesses a strict budget of **two (2) actions** per round:
@@ -105,10 +105,10 @@ On the Player Active Turn, you are not required to spend all 3 Standard Actions.
 *   **Zero Saved Actions**: If you spent all 3 Standard Actions on your turn, you have **0 saved actions**. You cannot attempt to actively evade, and must rely entirely on passive **Armor Dice** to absorb the strike!
 
 ### Reaction Types
-1.  **Dodge (Boss Reaction)**: Spend 1 saved Standard Action. Roll your active **Slink** dice pool against the incoming attack's **Threat TN** in the **Clatter Roll**. Scoring successes >= Threat TN completely negates the attack (0 damage).
-2.  **Parry (Boss Reaction)**: Spend 1 saved Standard Action. Roll your active **Tough** dice pool against the incoming attack's **Threat TN** in the **Clatter Roll**. Requires an equipped **Shield** or **Heavy Weapon**. Scoring successes >= Threat TN completely negates the attack (0 damage).
+1.  **Dodge (Boss Reaction)**: Spend 1 saved Standard Action. Roll your active **Slink** dice pool against the incoming attack's **Threat TN** in the **Defence Roll**. Scoring successes >= Threat TN completely negates the attack (0 damage).
+2.  **Parry (Boss Reaction)**: Spend 1 saved Standard Action. Roll your active **Tough** dice pool against the incoming attack's **Threat TN** in the **Defence Roll**. Requires an equipped **Shield** or **Heavy Weapon**. Scoring successes >= Threat TN completely negates the attack (0 damage).
 3.  **Scatter (Mob Reaction)**: Spend 1 saved Boss Standard Action (or 1 unused Free Order) to order a targeted Mob with >= 1 unused action to disperse. Roll your Boss's **Mouth** pool against `Threat TN + (Mob Size - 1)`. Success negates damage and scurries the Mob 1 Zone into cover.
-4.  **Reactive Quirks**: Specific Boss abilities (such as *Meat Shield* or *Ankle Bite*) trigger out of turn by paying their stated Grunt or Reaction cost.on cost.
+4.  **Reactive Feats**: Specific Boss abilities (such as *Meat Shield* or *Ankle Bite*) trigger out of turn by paying their stated Grunt or Reaction cost.on cost.
 
 ---
 
@@ -120,7 +120,7 @@ Every round of combat follows a strict 5-phase sequence:
 flowchart TD
     P0["Phase 0: Setup (First Round Only)"] --> P1["Phase 1: Round Start<br>- Evaluate Start-of-Round triggers<br>- Spawn reinforcements & update active Raid Points"]
     P1 --> P2["Phase 2: Player Active Turn<br>- Boss declarations: Move, Attack, Plunder, Manipulate, Order<br>- Resolve Unordered Mobs (Loitering / Out of Control)<br>- GM declares triggered enemy reactions"]
-    P2 --> P3["Phase 3: Enemy Active Turn<br>- Deterministic threat resolution (GM never rolls)<br>- Players execute Clatter Rolls (Dodge/Parry)<br>- Bosses issue reactive Scatter orders"]
+    P2 --> P3["Phase 3: Enemy Active Turn<br>- Deterministic threat resolution (GM never rolls)<br>- Players execute Defence Rolls (Dodge/Parry)<br>- Bosses issue reactive Scatter orders"]
     P3 --> P4["Phase 4: Round Closure<br>- Tally Raid Points & process hazard ticks<br>- Automatically remove Staggered conditions<br>- Resolve Swarm Terror Morale checks (if 50% casualties)<br>- Reset action budgets for Bosses & Mobs"]
     P4 -->|Combat Continues| P1
     P4 -->|Combat Concludes| P5["Phase 5: Combat End & Tactical Retreat"]
@@ -147,7 +147,7 @@ flowchart TD
 Enemies act deterministically in accordance with their statblock profiles:
 *   Standard enemies and Enemy Mobs receive **2 actions**; Apex Bosses receive **3 actions**.
 *   Enemies move toward priority targets and unleash attacks with listed **Threat Profiles** and flat **Damage**.
-*   Players resolve incoming attacks via the **Clatter Roll**, spending saved Standard Actions to Dodge or Parry, shouting "Scatter!" to save Mobs, or rolling passive Armor Dice.
+*   Players resolve incoming attacks via the **Defence Roll**, spending saved Standard Actions to Dodge or Parry, shouting "Scatter!" to save Mobs, or rolling passive Armor Dice.
 
 ### Phase 4: Round Closure
 1.  **Raid Points Tally**: Tally confirmed and contested Raid Points for the round.
@@ -167,6 +167,6 @@ Goblins are practical cowards; a tactical retreat preserves stolen Loot and save
 *   **Escape Zones**: To escape an encounter, a Boss or Mob must enter a designated exit Zone and spend 1 Move action to withdraw.
 *   **Disengaging from Melee**: Leaving an engaged enemy (**In Your Face**) without care triggers an immediate Opportunity Attack. To disengage safely, a Boss or Mob spends 1 Standard Action (or 1 Mob Action) to **Disengage**, testing `Slink 5+/[Highest Enemy Defence TN]`:
     *   **Success**: The unit withdraws safely into **Here** or an adjacent connected Zone (**There**) without triggering enemy reactions.
-    *   **Failure**: The engaged enemy may spend 1 **Reaction** to execute an Opportunity Attack. The Boss receives a free reactive **Dodge Clatter Roll** (or the Mob receives a free **"Scatter!" Roll**). The unit completes its movement regardless of the outcome.
+    *   **Failure**: The engaged enemy may spend 1 **Reaction** to execute an Opportunity Attack. The Boss receives a free reactive **Dodge Defence Roll** (or the Mob receives a free **"Scatter!" Roll**). The unit completes its movement regardless of the outcome.
 *   **Careless Fleeing / Panic Sprint**: A Boss or Mob spending a standard **Move** action to flee without disengaging triggers an **Unchecked Strike** from any engaged enemy with a Reaction (Boss/Mob cannot actively Dodge/Scatter, relying only on passive **Armor Dice**).
 *   **The Heavy Loot Restriction (Bulk 3+)**: Hauling an unwieldy item of **Bulk 3 or higher** requires two hands. You **cannot perform a Disengage action while clutching a Bulk 3+ item**. To escape safely, you must drop the heavy loot as a Free Action, hand it off to a Mob, or perform a Careless Sprint.

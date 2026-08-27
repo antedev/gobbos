@@ -2,11 +2,11 @@
 
 ## Architecture
 The system is a streamlined, modular, zero-math TTRPG core rulebook located in `02_PROD_Core_Rules/`.
-It isolates pure game mechanics and systemic loops from living content catalogs (weapons, equipment catalogs, spell lists, monster bestiaries, quirk compendiums), establishes single-source rule definitions with strict cross-references, embeds standardized structural schemas with `[CONTENT EXTENSION POINT]` tags, and explicitly flags all mechanical gaps with `[MISSING RULE / GAP]` tags.
+It isolates pure game mechanics and systemic loops from living content catalogs (weapons, equipment catalogs, spell lists, monster bestiaries, feat compendiums), establishes single-source rule definitions with strict cross-references, embeds standardized structural schemas with `[CONTENT EXTENSION POINT]` tags, and explicitly flags all mechanical gaps with `[MISSING RULE / GAP]` tags.
 
 ### Modular Chapter Structure (`02_PROD_Core_Rules/`)
 1. `01_Core_Resolution.md` — Core Resolution & Dice Pool Engine (Pool tests, Exploding 6s, Salvage rolls, Gobbo Gamble, Boons & Banes, Bangaranga pool).
-2. `02_Boss_Profile_and_Gang.md` — Attributes, Boss Profile & Gang Fundamentals (Main Stats 1–5, Grunt, Grit, Boss creation, Gang archetype, Quirk Schema & `[CONTENT EXTENSION POINT: Boss Quirks & Talents]`).
+2. `02_Boss_Profile_and_Gang.md` — Attributes, Boss Profile & Gang Fundamentals (Main Stats 1–5, Grunt, Grit, Boss creation, Gang archetype, Feat Schema & `[CONTENT EXTENSION POINT: Boss Feats & Talents]`).
 3. `03_Action_Economy_and_Turn_Flow.md` — Action Economy & Turn Flow (3 Standard Actions + 1 Free Order, Reactions, Free Actions, 5-Phase Round Flow).
 4. `04_Zones_and_Movement.md` — Zones, Movement & Environment (Zone Profiles `Difficulty+/TN`, Movement costs, Cover, Modular Zone Traits/Hazards, Chaos Tick).
 5. `05_Combat_Engine.md` — Combat Engine (Melee, Ranged, Impact Size & Stagger, Weapon Traits, Clatter Defense, Shield Parry, Group Attacks, Weapon Schema & `[CONTENT EXTENSION POINT: Weapons]`, Armor/Shield Schema & `[CONTENT EXTENSION POINT: Armor & Shields]`, Gear Schema & `[CONTENT EXTENSION POINT: Gear, Tools & Consumables]`).
@@ -30,7 +30,7 @@ It isolates pure game mechanics and systemic loops from living content catalogs 
 | 5 | Boons & Banes | Situational +/- 1d modifiers with net cap equal to lower profile | `01_Core_Resolution.md` | M1 |
 | 6 | Boss Attributes & Stats | Tough, Slink, Brains, Mouth (1-5), Grunt derived, Grit pool | `02_Boss_Profile_and_Gang.md` | M1 |
 | 7 | Boss Creation & Gang | Specialist vs Generalist starting stats, Gang as Class archetype | `02_Boss_Profile_and_Gang.md` | M1 |
-| 8 | Quirk Schema & Hooks | Quirk template, trigger/cost/effect structure, content hook | `02_Boss_Profile_and_Gang.md` | M1 |
+| 8 | Feat Schema & Hooks | Feat template, trigger/cost/effect structure, content hook | `02_Boss_Profile_and_Gang.md` | M1 |
 | 9 | Action Economy | 3 Standard Actions + 1 Free Order for Boss; 2 Actions for Mobs | `03_Action_Economy_and_Turn_Flow.md` | M1 |
 | 10 | Round Structure | 5-phase turn flow: Setup, Round start, Player Turn, Enemy Turn, Closure | `03_Action_Economy_and_Turn_Flow.md` | M1 |
 | 11 | Reactions & Free Actions | Dodge, Parry, Scatter, Free actions, and Reaction holding | `03_Action_Economy_and_Turn_Flow.md` | M1 |

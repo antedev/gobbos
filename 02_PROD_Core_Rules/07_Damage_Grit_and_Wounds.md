@@ -17,7 +17,7 @@ The Game Master (GM) never rolls attack tests or damage rolls. All enemy attacks
 *   **The Synonym Ban:** A **Goblin Boss** tracks **Grit**. A **Goblin Boss** never tracks *Health* or *Wounds*. **Health Dice** are used exclusively by **Mobs** (see [Mob Mechanics](06_Mob_Mechanics.md)), and **Wounds** are tracked exclusively by **Elite** and **Boss** enemies.
 
 ### Unmitigated Damage Decrement
-When an incoming attack targets a **Goblin Boss**, the **Player** resolves defense using a **Clatter Roll** (see [Combat Engine](05_Combat_Engine.md)):
+When an incoming attack targets a **Goblin Boss**, the **Player** resolves defense using a **Defence Roll** (see [Combat Engine](05_Combat_Engine.md)):
 1.  **Active Evasion:** If the **Player** spent a saved **Standard Action** to declare a **Dodge** (testing **Slink**) or **Parry** (testing **Tough** with a shield or heavy weapon), scoring successes equal to or exceeding the attack's **Threat TN** negates the attack entirely (**0 Damage taken**).
 2.  **Passive Armor Mitigation:** If active evasion fails or no saved action was available, the **Player** rolls passive **Armor Dice**. Every die showing **5+** reduces incoming **Damage** by **1**.
 3.  **Grit Loss:** Any remaining unmitigated **Damage** reduces the **Goblin Boss's** current **Grit** on a 1-for-1 basis.
@@ -49,13 +49,13 @@ The moment your **Grit** reaches **0**, your **Goblin Boss** immediately trigger
 ### The Temporary Boss
 During the remainder of the active raid, the **Player** cannot generate a new full **Goblin Boss** until returning to the **Lair**:
 *   **Stepping Forward:** If the deceased character's **Gang** still has a surviving **Mob** on the map, one runt steps forward as a **Temporary Boss**.
-*   **Profile:** The **Temporary Boss** is controlled by the **Player**, possesses no **Quirks**, and has all attribute stats reduced by **1** compared to the deceased **Goblin Boss** (to a minimum attribute score of **1**).
+*   **Profile:** The **Temporary Boss** is controlled by the **Player**, possesses no **Feats**, and has all attribute stats reduced by **1** compared to the deceased **Goblin Boss** (to a minimum attribute score of **1**).
 *   **Survival:** The **Temporary Boss** allows the **Player** to remain active, issue commands, and extract surviving **Loot** back to the **Lair**.
 
 ### Successor Generation in the Lair
 When the raid party returns to the **Lair**, the player generates a true **Successor Boss** (see [The Lair Loop & Progression](10_The_Lair_Loop_and_Progression.md)):
 *   **Successor XP:** The new **Goblin Boss** starts with baseline stats plus bonus **Successor XP** equal to **Gang Infamy x 4**.
-*   **Inherited Quirks:** The new character inherits 1 **Gang Mark Quirk** from the ancestral pool.
+*   **Inherited Feats:** The new character inherits 1 **Gang Mark Feat** from the ancestral pool.
 *   **Named Items:** The favorite weapon of the fallen boss can be recovered and enshrined as a **Named Item** in the **Lair**.
 
 ---
@@ -118,7 +118,7 @@ Conditions represent temporary physiological, psychological, or tactical hindran
 | :--- | :--- | :--- | :--- |
 | **Weakened** | **Bane 1 (-1d)** on **Tough** tests. | **Bane 1 (-1d)** on **Attack** rolls. | Attack **Threat TN** reduced by **1** (minimum 1). |
 | **Restrained** | **Bane 1 (-1d)** on **Slink** tests; **Movement** becomes **0**. | Cannot **Scatter**; **Movement** becomes **0**. | **Movement** becomes **0**; **Defence TN** reduced by **1** (minimum 1). |
-| **Dumb** | **Bane 1 (-1d)** on **Brains** and **Mouth** tests; cannot cast spells or activate **Brains** quirks. | **Bane 1 (-1d)** on **Morale** checks; cannot receive complex orders. | Cannot cast spells or use tactical reactions. |
+| **Dumb** | **Bane 1 (-1d)** on **Brains** and **Mouth** tests; cannot cast spells or activate **Brains** feats. | **Bane 1 (-1d)** on **Morale** checks; cannot receive complex orders. | Cannot cast spells or use tactical reactions. |
 | **Silenced** | **Bane 1 (-1d)** on **Mouth** tests; cannot issue verbal orders or cast vocal spells. | Cannot hear orders; **Bane 1 (-1d)** on **Morale** checks. | Cannot issue orders or shout tactical warnings. |
 | **Blinded** | **Bane 1 (-1d)** on physical tests; ranged attacks are **Hard (6)**; cannot **Dodge**. | **Bane 1 (-1d)** on physical tests; ranged attacks are **Hard (6)**; cannot **Scatter**. | Attacks become **Hard (6)**; **Defence TN** reduced by **1** (minimum 1). |
 | **Terrified** | **Bane 1 (-1d)** on **Brains** and **Mouth** tests; cannot move closer to source of fear. | **Bane 2 (-2d)** on **Morale** checks; **Order** tests targeting **Mob** are **Hard (6)**. | Must spend all active actions fleeing from the source of fear. |

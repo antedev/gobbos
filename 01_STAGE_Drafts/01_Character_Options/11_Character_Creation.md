@@ -39,9 +39,9 @@ You have **2 points** to distribute among your four [[Main Stats]].
     *   **Generalist:** Put one starting point into two different stats, resulting in two stats at **2** and two stats at **1** (e.g. 2, 2, 1, 1).
 
 ### The Insta-Gobbo Origin Table
-If you want to skip manual allocation and roll up a character instantly, roll **1d6** on the table below to determine your starting stats, starting [[Role]], starting [[Quirk]], and starting equipment:
+If you want to skip manual allocation and roll up a character instantly, roll **1d6** on the table below to determine your starting stats, starting [[Role]], starting [[Feat]], and starting equipment:
 
-| d6 | Origin (Role) | Starting Stats | Starting Quirk | Starting Loadout |
+| d6 | Origin (Role) | Starting Stats | Starting Feat | Starting Loadout |
 | :---: | :--- | :--- | :--- | :--- |
 | **1** | **The Meat-Wall** (Tough Specialist) | **[[Tough]]** 3, **[[Slink]]** 1, **[[Mouth]]** 1, **[[Brains]]** 1 | **Meat Shield** | Heavy Melee Weapon, Light Armor |
 | **2** | **The Raider** (Tough + Slink Hybrid) | **[[Tough]]** 2, **[[Slink]]** 2, **[[Mouth]]** 1, **[[Brains]]** 1 | **Ankle-Biter** | Two Light Melee Weapons, Light Armor |
@@ -73,13 +73,13 @@ The combination of your highest stat (Primary) and your second-highest stat (Sec
 
 ---
 
-## 5. Choose a Starting Quirk
+## 5. Choose a Starting Feat
 
-If you built your Boss manually, choose **1 Basic Quirk** of your choice. 
+If you built your Boss manually, choose **1 Basic Feat** of your choice. 
 
-*   **Stat Gating:** The Quirk must match a stat in which your Boss has a level equal to or greater than the Quirk's Tier. Since your highest stat at creation can be up to 3, you can choose up to a Tier 3 Quirk corresponding to that high stat, or a Tier 1 Quirk for any other stat.
-*   **No Twists:** You start with 0 [[Twist|Twists]] attached to your Quirk.
-*   For the list of available starting Quirks, see [Quirks & Twists](14_Quirks.md).
+*   **Stat Gating:** The Feat must match a stat in which your Boss has a level equal to or greater than the Feat's Tier. Since your highest stat at creation can be up to 3, you can choose up to a Tier 3 Feat corresponding to that high stat, or a Tier 1 Feat for any other stat.
+*   **No Twists:** You start with 0 [[Twist|Twists]] attached to your Feat.
+*   For the list of available starting Feats, see [Feats & Twists](14_Feats.md).
 
 ---
 
@@ -105,4 +105,4 @@ Choose one option from each of the following categories:
 *   **Shield** (Bulk 1, +1d Passive Defense, One-Handed)
 *   **No Defense** (Choose this if you want to travel light)
 
->> **IMPORTANT:** Standard starting gear does not possess any magical tags or [[Oddities]]. It is simple, rusty, and prone to breaking on a Fumble. If you roll a Fumble with Junk gear, it is highly likely to shatter (see [Standard Equipment & Loadouts](33_Equipment.md) and [Crafting & Custom Gear](34_Crafting.md) for breaking rules).
+>> **IMPORTANT:** Standard starting gear does not possess any magical tags or [[Components]]. It is simple, rusty, and prone to breaking on a Fumble. If you roll a Fumble with Junk gear, it is highly likely to shatter (see [Standard Equipment & Loadouts](33_Equipment.md) and [Crafting & Custom Gear](34_Crafting.md) for breaking rules).
