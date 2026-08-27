@@ -15,7 +15,7 @@ The **Lair** is the shared, cooperative base of operations managed by all player
 | **3. The Communal Hoard** | Shared Capital | Pooled Loot Value (liquid wealth) & Scrap (building matter) |
 | **4. Swarm Mood** | Morale & Discipline | 0–5 Morale Track; Mob Mutiny triggers at Level 5 |
 | **5. Threat Level** | Regional Heat | 0–5 Heat Track; Retaliatory Lair Assault triggers at Level 5 |
-| **6. The Bone Pile** | Ancestral Legacy | Skull Tally; unlocks permanent Ancestral Boons every 4 Skulls |
+| **6. The Bone Pile & Mojo Wall**| Ancestral Legacy | Skull Tally (Ancestral Boons) & Ancestral Mojo Feat Slots (1–4) |
 
 ### Warren Tier & Asset Capacity
 **Warren Tier** measures the overall physical scale, engineering complexity, and regional renown of the goblin settlement:
@@ -72,11 +72,9 @@ The **Communal Hoard** stores shared capital brought back from raids:
 
 ---
 
-### The Bone Pile (Ancestral Legacy)
-The **Bone Pile** is a sacred memorial containing the skulls of fallen **Bosses**:
-* Every dead **Boss** adds **1 Skull** to the **Bone Pile** track.
-* **Ancestral Boons:** Every **4 Skulls** marked unlocks a permanent, Lair-wide ancestral perk (e.g., *Ancestral Grudge:* +1d attack against the enemy faction responsible for the most Boss deaths; *Haunted Warrens:* invaders suffer **Bane 1 (-1d)** during Lair assaults).
-* **Relic Harvesting:** A **Boss** may salvage a skull or bone from the **Bone Pile** to forge a unique **Relic** item.
+### The Bone Pile & Mojo Wall (Ancestral Legacy)
+* **The Bone Pile:** A monument containing the skulls of fallen **Bosses**. Every dead **Boss** adds **1 Skull** to the track. Every **4 Skulls** marked unlocks a permanent, Lair-wide ancestral perk (e.g. *Ancestral Grudge:* +1d attack against the enemy faction responsible for the most Boss deaths).
+* **The Ancestral Mojo Wall:** An etched stone wall preserving the signature Masterpiece Feats of over-stretched Bosses who achieved legendary generational leaps (see Section 4).
 
 ---
 
@@ -86,14 +84,14 @@ The **Lair Phase** resolves in a strict four-step procedure between raids:
 
 ```mermaid
 flowchart TD
-    S1["Step 1: Homecoming & Tally<br>- Deposit Loot & Scrap into Hoard<br>- Record dead Bosses on Bone Pile; surviving Mobs auto-heal<br>- Check Vacant Nest Growth"] --> S2["Step 2: Lair Pulse & Complications<br>- Evaluate Threat Level & Swarm Mood<br>- GM rolls 1d66 on Complications Table"]
+    S1["Step 1: Homecoming & Tally<br>- Deposit Loot & Scrap into Hoard<br>- Resolve Generational Leaps & Successor creation<br>- Check Vacant Nest Growth"] --> S2["Step 2: Lair Pulse & Complications<br>- Evaluate Threat Level & Swarm Mood<br>- GM rolls 1d66 on Complications Table"]
     S2 --> S3["Step 3: Labor Allocation & Passive Resolution<br>- Harvest automatic facility yields<br>- Assign Laborer Dice (Safe vs Risky)"]
     S3 --> S4["Step 4: Boss Downtime Actions & Dominance<br>- Each Boss executes 1 personal Downtime Action<br>- Update Dominance ledgers for assets"]
 ```
 
 ### Step 1: Homecoming & Tally
 1. **Deposit Wealth:** Transfer all plundered **Loot Value** and **Scrap** into the **Communal Hoard**.
-2. **Honour the Fallen:** Add deceased **Bosses** to the **Bone Pile**. Generate successor **Bosses** with starting **Successor XP** equal to **Gang Infamy x 4**.
+2. **Honour the Fallen / Settle Generations:** Add deceased Bosses to the **Bone Pile**. Evaluate **Generational Leaps** for deceased, nuclear, or stepped-down Bosses, and generate successors using the updated **Gang Infamy** rating.
 3. **Regenerate Mobs:** Surviving **Mobs** (Size >= 1) restore all health dice to full allocated **Size**. Wiped **Mobs** are deleted from the pool.
 4. **Vacant Nest Check:** If total **Gobbo Pool** is under 3d6 per player, add **+1d6** for free.
 
@@ -131,6 +129,7 @@ The **GM** rolls **1d66** on the **Lair Complications Table**:
 ### Step 4: Boss Downtime Actions
 Each active **Goblin Boss** executes **one** personal Downtime Action:
 
+* **Step Down as Grumpy Goblin (Voluntary Retirement):** If your **Stat Sum** is at least `Gang Infamy + 1`, your Boss steps down to become the Gang's active **Grumpy Goblin**, establishing in-raid **Advice Tokens** and triggering the **Generational Leap** for the new Boss.
 * **The Pitch (Mouth Test):** Deliver an inspiring or terrifying speech. Pass a **Mouth 4+/1** test to reduce **Swarm Mood by 1**. *(Alternative: Spend 5 Loot from the Hoard to buy a round of rotgut grog, automatically reducing Swarm Mood by 1 with no roll).*
 * **Laying Low (Slink Test):** Lead scouts into the surrounding wilderness to eliminate enemy patrols and erase tracks. Pass a **Slink 4+/1** test to reduce **Threat Level by 1**. *(Alternative: Spend 5 Loot to bribe local corrupt watchmen).*
 * **Custom Crafting (Brains Test):** Operate a workshop to assemble, modify, or overload weapons and armor using **Scrap** and **Components** (see [Combat Engine](05_Combat_Engine.md)).
@@ -145,81 +144,73 @@ Each active **Goblin Boss** executes **one** personal Downtime Action:
 Knowledge and infrastructure in the Lair are not an abstract tech tree. **Knowledge is held in living Persons, physical Facilities, Allies, and Blueprints.** If an asset is killed, destroyed, or lost, its capability is disabled immediately.
 
 ### The Four Asset Categories
-1. `[Person]` **(Elders, Specialists, Captives):** Living experts.
-   * *Elders:* Retired Level 6 Bosses. High loyalty, but frail (vulnerable to health complications).
+1. `[Person]` **(Elders, Specialists, Captives, Grumpy Goblins):** Living experts.
+   * *Grumpy Goblins:* Retired Bosses providing in-raid Advice Tokens.
+   * *Elders:* Level 6 retired Bosses providing permanent Lair-wide boons.
    * *Specialists:* Hired non-goblin outcasts. Require weekly **Loot Upkeep**; leave if unpaid.
-   * *Captives:* Enslaved enemies (Dwarves, Humans, Elves). Provide elite masterwork knowledge, but carry high **Flight Risk** and increase **Threat Level**.
+   * *Captives:* Enslaved enemies. Provide elite knowledge, but carry **Flight Risk** and raise **Threat Level**.
 2. `[Facility]` **(Workshops, Dens, Fortifications):** Physical structures built with **Loot** and **Scrap**.
-3. `[Ally]` **(Befriended Monsters, Patron Factions):** External creatures living alongside the horde. Powerful, but demand food or cause social friction.
-4. `[Blueprint]` **(Physical Schematics, Stolen Scrolls):** Fragile paper or stone schematics (Bulk 0). Destroyed if hit by fire or water complications.
-
-### Core Asset Rules
-* **The Non-Stacking Clause:** Identical mechanical boons from Lair assets do not stack. A **Mob** can only gain a maximum of **+1 passive Defense Die** from Lair assets, regardless of how many armories or martial Elders are present.
-* **Loss of Knowledge:** Destroying or losing an asset immediately disables its associated capability until a replacement asset is secured.
+3. `[Ally]` **(Befriended Monsters, Patron Factions):** External creatures living alongside the horde.
+4. `[Blueprint]` **(Physical Schematics, Stolen Scrolls):** Fragile paper or stone schematics (Bulk 0).
 
 ---
 
-### Dominance & Inter-Gang Politics
-While the Lair belongs to all goblins, individual assets are controlled by specific Gangs through **Dominance**:
+## 4. Roguelite Generational Progression & The Generational Leap
 
-1. **The Contribution Ledger:** When constructing or upgrading an asset, players record the total **Loot**, **Scrap**, and **Laborer Dice** contributed by their specific Gang.
-2. **Dominant Gang:** The Gang with the highest cumulative contribution holds **Dominance** over that asset.
-3. **Disputed Status:** Tied contributions render an asset *Disputed* (no Gang gains the kickback) until one Gang contributes additional resources or wins a **Bar Brawl** Downtime Action.
+Death, burnout, and stepping down in **Gobbos** are the primary engines of permanent meta-progression. When a Boss departs active raiding, the Gang absorbs that achievement through **The Generational Leap**.
 
-#### Dominance Benefits
-* **Renaming Rights:** The dominant Gang names the facility (e.g., *"Snikt's Exploding Forge"*).
-* **Priority Access:** The dominant Gang acts first whenever facility use is contested.
-* **Dominance Kickback:** The dominant Gang exclusively receives the asset's specific **Dominance Perk**.
+```mermaid
+flowchart TD
+    D["Boss Dies, Goes Nuclear, OR Steps Down"] --> CALC["Compare Boss Stat Sum vs. Gang Infamy"]
+    CALC -->|"Stat Sum <= Gang"| L0["Par Departure<br>- Gang Infamy +0<br>- Successor starts at Gang Baseline"]
+    CALC -->|"Stat Sum = Gang + 1"| L1["Solid Generational Step<br>- Gang Infamy +1<br>- Forge 1 Minor Bone Relic (+1d)"]
+    CALC -->|"Stat Sum >= Gang + 2"| L2["THE GENERATIONAL LEAP (+2 Cap)<br>- Gang Infamy +2 (Maximum Cap)<br>- Inscribe 1 Masterpiece Feat into Ancestral Mojo Wall<br>- Successor starts at new higher Baseline"]
+```
+
+### 1. The Generational Leap Formula
+When a **Goblin Boss** leaves active raiding (via in-raid Death, Going Nuclear, or Stepping Down in the Lair), calculate the Gang's growth:
+
+**Gang Infamy Increase** = **min(2, max(0, Boss Stat Sum - Gang Infamy))**
+
+| Boss Stat Sum at Departure | Gang Infamy Gain | Outcome for Gang & Successor |
+| :--- | :---: | :--- |
+| **Stat Sum <= Gang Infamy** | **+0 Infamy** | **Par Departure:** Successor is generated at the current Gang Infamy baseline. |
+| **Stat Sum = Gang Infamy + 1** | **+1 Infamy** | **Solid Step:** Gang Infamy advances by +1; Gang forges **1 Minor Relic** (+1d situational boon). |
+| **Stat Sum >= Gang Infamy + 2** | **+2 Infamy (MAX)** | **Generational Leap!** Gang Infamy advances by the maximum cap of +2; inscribe **1 Masterpiece Feat** into the **Ancestral Mojo Wall**. |
+
+>> **THE +2 GENERATIONAL CAP:**  
+>> A Gang can absorb a maximum of **+2 Infamy** from a single Boss's career. Even if a Boss stretched to `Gang + 4`, excess power was enjoyed during that Boss's life, and the Gang advances by +2 upon departure.
 
 ---
 
-### Outposts & Macro-Territory
-Secured dungeon sites or regional structures (iron mines, ruined watchtowers, breweries) can be garrisoned as **Outposts**:
-
-* **Garrison Cost:** Deduct **1d6** permanently from the **Gobbo Pool** to staff the outpost.
-* **Passive Yield:** Generates a flat resource yield each **Lair Turn** (e.g., *Iron Mine: +4 Scrap; Brewery: -1 Swarm Mood*).
-* **Supply Run Checks:** During Step 3, resolve shipment delivery:
-  * *Safe Route:* Automatic delivery.
-  * *Wild Route:* Roll **1d6**. On a **1**, bandits intercept the shipment (lose yield for this turn).
-  * *Hostile Route:* Roll **2d6** against **4+**. Needs at least one success to deliver. Rolling all 1s means the Outpost is besieged and must be relieved in a raid.
+### 2. The Successor Boss Generation
+When generating a new Boss to replace a fallen or retired predecessor:
+1. **Allocate Stat Points:** Distribute total points equal to current **Gang Infamy Rating** across Tough, Slink, Mouth, and Brains (minimum 1 in each stat).
+2. **Stat Cap at Creation:** No single stat can start higher than **Level 3** (at Infamy 6–10) or **Level 4** (at Infamy 12–16).
+3. **Derive Role & Grunt:** Derive your **Role**, **Role Level**, **Max Grunt**, and Secondary Stats directly from your new stat configuration.
+4. **The Catch-Up Boost:** A fresh successor receives **+5 bonus XP** on the first survived raid.
 
 ---
 
-## 4. Roguelite Generational Progression & Death
+### 3. The Ancestral Mojo Wall (Gang Feats)
+The **Ancestral Mojo Wall** is a carved stone monument in the Warren where the signature abilities of legendary Bosses are preserved:
+* **Mojo Capacity:** A Gang unlocks Mojo slots as its **Infamy Rating** grows:
+  * **Infamy 8:** 1 Mojo Slot
+  * **Infamy 12:** 2 Mojo Slots
+  * **Infamy 16:** 3 Mojo Slots
+  * **Infamy 20:** 4 Mojo Slots (Maximum Cap)
+* **Inscribing a Masterpiece:** When a Boss triggers a **+2 Generational Leap**, choose 1 personal **Feat** possessed by that Boss and etch it into an open Mojo slot on the wall.
+* **Passive Benefit:** All future Bosses and Mobs in this Gang gain this Feat's mechanical benefits **passively** without consuming personal Feat slots.
+* **Overwriting Slots:** If all Mojo slots are full, a new +2 Generational Leap allows the player to overwrite an older Mojo with the new Boss's Feat.
 
-Death in **Gobbos** is a stepping stone to greater power. When a **Goblin Boss** dies, the player does not start from zero.
+---
 
-### The "Next Gobbo Up" (Successor Creation)
-When a Boss dies, the next prominent goblin in the Gang takes command:
-* **Starting Stats:** Successors start with **1** in all Main Stats, receive **2 starting advances** (standard character creation), plus a starting pool of **Successor XP**:
-**Successor XP** = **Gang Infamy x 4**
-* **Successor Caps:** A successor cannot raise any stat above **Level 4** at creation and cannot start as an **Elder** (Level 6).
-* **The Catch-Up Boost:** A fresh successor receives **+2 bonus XP** on the first survived raid.
-
-### Gang Marks (Tattoos of the Dead)
-The successor honors the fallen predecessor by receiving a crude soot tattoo:
-* The successor inherits **one Feat or Twist** possessed by the deceased Boss.
-* The successor **ignores all Stat and Tier requirements** for this inherited Feat.
-* This Feat counts toward the Boss's limit of 3 personal Feats.
-
-### Named Items & Revenge Quests
-When a Boss dies, the Boss's favored equipment absorbs that chaotic spirit and becomes a **Named Item**:
-* **Imbued Boon:** The item gains a **T1 Boon** reflecting the deceased Boss's highest stat or cause of death.
-* **Recovery:** If surviving goblins drag the item back to the Lair, the successor inherits it.
-* **Enemy Wielders:** If the raid wipes and the item is lost, the enemy killer claims the weapon. The item can be reclaimed in future revenge raids.
-* **Gang Rebellion:** Named items rebel if wielded by a rival Gang (e.g., treating all Criticals as Fumbles).
-
-### Patron Saints of the Bone Pile
-When creating a successor, the player may select one deceased Boss from the **Bone Pile** to adopt as a **Patron Saint**:
-* **The Boon:** Grants a specific situational power related to how the Saint lived or died (e.g., *Saint Grugor: Ignore fire damage once per raid*).
-* **The Behavioral Catch:** To maintain the boon, the Boss must follow the Saint's behavioral feat (e.g., always choosing the loudest path, or never retreating).
-
-### Retirement & Elders
-When a Boss earns enough XP to raise any Main Stat to **Level 6**, the Boss automatically **Retires** from active raiding to become an **Elder**:
-* **Elder of Tough:** Staffed at the Training Ring; grants **+1 passive Defense Die** (Armor) to all commanded friendly Mobs.
-* **Elder of Slink:** Staffed at the Shadow Den; reduces trap **Target Numbers (TN)** by **1** (minimum 1) for the Gang.
-* **Elder of Mouth:** Staffed at the Council Room; increases starting and maximum **Grunt** by **+1**, and allows rallying fleeing Mobs as a **Free Action** once per raid.
-* **Elder of Brains:** Staffed at the Tinker Yard; enables installing **1 extra Component** on custom gear items.
+### 4. True Elders & Campaign Milestones (Stat Level 6)
+When any Boss raises a Main Stat to **Level 6**, that Boss automatically retires from active raiding to become an **Elder**:
+* **Elder of Tough:** Staffed at the Training Ring; all commanded friendly Mobs gain **+1 Passive Armor Die**.
+* **Elder of Slink:** Staffed at the Shadow Den; reduces trap **Target Numbers (TN)** by **1** (minimum 1).
+* **Elder of Mouth:** Staffed at the Council Room; maximum **Grunt +1**; rally fleeing Mobs as a Free Action once per raid.
+* **Elder of Brains:** Staffed at the Tinker Yard; enables installing **+1 extra Component** on custom crafted gear.
 
 ---
 
@@ -229,7 +220,7 @@ Every constructible room, workshop, outpost, or living asset is defined by the f
 
 ```markdown
 ### [Asset Name]
-- **Category / Type:** [Person: Elder | Person: Specialist | Person: Captive | Facility: Industry | Facility: Swarm | Facility: Beasts | Facility: Defense | Ally: Outcast | Blueprint]
+- **Category / Type:** [Person: Elder | Person: Specialist | Person: Captive | Person: Grumpy Goblin | Facility: Industry | Facility: Swarm | Facility: Beasts | Facility: Defense | Ally: Outcast | Blueprint]
 - **Tier:** [Tier 1–4]
 - **Construction Cost:** [X Base Loot, Y Base Scrap (or "None / Recruited / Discovered")]
 - **Requirements & Prerequisites:** [Warren Tier X, Outpost / Mine required, or specific Elder staffed]
@@ -238,76 +229,4 @@ Every constructible room, workshop, outpost, or living asset is defined by the f
 - **Active Function / Crafting Station:** [Downtime Action enabled, Quality unlock, or Taming modifier]
 - **Volatility & Cost (Bane / Catch):** [Complication trigger, flight risk, mutiny risk, or hazard]
 - **Dominance Kickback:** [Exclusive mechanical perk granted to the Gang holding Dominance]
-- **Upgrade Tiers:** [Path to upgrade to higher Tier and associated costs]
 ```
-
-### Reference Facility Instances
-
-#### The Scrap Forge
-- **Category / Type:** Facility: Industry
-- **Tier:** Tier 2
-- **Construction Cost:** 10 Loot (T2), 15 Scrap
-- **Requirements & Prerequisites:** Warren Tier 2
-- **Upkeep:** None
-- **Passive Benefit (Boon):** Unlocks Standard Quality (T3) weapon crafting; provides +1 Guaranteed Taming Success on weapon crafting.
-- **Active Function / Crafting Station:** Custom Crafting Station for weapons and armor.
-- **Volatility & Cost (Bane / Catch):** Crafting rolls containing any 1s inflict 1 Grit damage to the crafter.
-- **Dominance Kickback:** The dominant Gang crafts weapon chassis for 0 base Scrap cost.
-- **Upgrade Tiers:** Upgrade to Masterwork Foundry (Tier 3) for 20 Loot (T3), 30 Scrap.
-
-#### Spore Breeding Nursery
-- **Category / Type:** Facility: Swarm
-- **Tier:** Tier 2
-- **Construction Cost:** 10 Loot (T2), 20 Scrap
-- **Requirements & Prerequisites:** Warren Tier 2
-- **Upkeep:** None
-- **Passive Benefit (Boon):** Generates **+1d6 Runts** added to the Gobbo Pool at the start of every Lair Turn (up to Tier cap).
-- **Active Function / Crafting Station:** Safe labor assignment for runt cultivation.
-- **Volatility & Cost (Bane / Catch):** If Swarm Mood is 4+, rolls of 1 on Lair Events spoil 5 Loot worth of supplies.
-- **Dominance Kickback:** The dominant Gang gains first pick of recruits, increasing their commanded Mob's **Size cap by +1**.
-- **Upgrade Tiers:** Upgrade to Great Fungal Warren (Tier 3) for 25 Loot (T3), 35 Scrap.
-
----
-
-## Content Extension Point
-
-[CONTENT EXTENSION POINT: Lair Rooms & Facilities]
-
-All future compendiums of Lair structures, workshops, specialist quarters, beast pens, fortifications, and ancestral shrines must implement the Lair Room & Facility Structural Schema defined above, respecting Warren Tier caps, asset capacity limits, and Dominance kickbacks.
-
----
-
-## Mechanical Gaps & Unresolved Systems
-
-[MISSING RULE / GAP: Retaliatory Lair Assault Resolution Engine]
-*   **Description:** Reaching Threat Level 5 triggers a "Retaliatory Assault" against the Lair, after which Threat resets to 2. However, there are no codified rules for how this assault is resolved, no enemy assault force generation tables, no rules for how defense facilities (like Trapped Palisade rolling 3d6) apply defensive damage, and no defined consequences if the defense is lost.
-*   **Why it is needed:** Threat Level 5 is the primary external pressure clock in the game. Without clear resolution mechanics and stakes, regional heat has zero teeth.
-*   **Suggested Resolution:** Establish a formal 3-step Lair Defense procedure:
-    1. Determine Enemy Force based on Warren Tier and Threat level.
-    2. Automated Defense Phase: Roll active Defense Facilities (e.g. 3d6 from Palisade) and assign Laborer Dice to inflict damage before enemies breach.
-    3. Tactical Skirmish Phase: If enemies survive, resolve a combat round in the Lair Entrance Zone using Bosses and Raider Mobs. If defeated, the Lair suffers 1 destroyed Asset, loses 1d6 from the Gobbo Pool, and loses half the Communal Hoard.
-
-[MISSING RULE / GAP: Mutiny Resolution Mechanics & Facility Recovery]
-*   **Description:** At Swarm Mood 5, a "Mob Mutiny" locks one random Lair facility and forces grunts to demand upfront bribes of 5 Loot per Mob to embark on raids. The rules do not define how a locked facility is unlocked, what happens if players refuse to pay bribes, or how mutiny is suppressed without money.
-*   **Why it is needed:** Mutiny is the core internal pressure clock. Players need actionable mechanical paths to break a strike through intimidation, brawling, or concessions.
-*   **Suggested Resolution:** Codify Mutiny suppression options:
-    1. Bribe: Pay 5 T1 Loot per Mob to clear the raid lockout.
-    2. Tyrant's Beatdown: A Boss makes an opposed Tough 5+/2 or Mouth 5+/2 test as a Downtime Action. Success reduces Swarm Mood to 3 and unlocks the facility; failure inflicts 1 Grit damage on the Boss and increases Threat by +1 from the riot.
-
-[MISSING RULE / GAP: Asset Decommissioning, Destruction, and Slot Recovery]
-*   **Description:** A Lair can maintain up to (Tier * 2) + 2 active assets. If players wish to replace an obsolete Tier 1 facility with an advanced Tier 3 workshop, there are no rules for demolishing or dismantling existing assets, nor is it clear if dismantling returns Scrap to the Hoard.
-*   **Why it is needed:** Hard asset caps force players to cycle assets as the Warren expands.
-*   **Suggested Resolution:** Add a "Dismantle Asset" Downtime action: spending 1 Laborer Die dismantles an existing facility, frees the asset slot immediately, and recovers 50% of its base Scrap cost into the Communal Hoard.
-
-[MISSING RULE / GAP: Mid-Raid Boss Death & Successor Spawning Timing]
-*   **Description:** The rules describe the "Next Gobbo Up" successor generation during Homecoming. However, they do not specify what happens in the middle of a raid when a Boss dies. Does the player sit out the session, or does the next biggest runt in their Mob immediately promote to Boss status mid-combat?
-*   **Why it is needed:** Player elimination during tactical skirmishes ruins table engagement and violates Tenet 1 (Fun at the Table).
-*   **Suggested Resolution:** Implement the "Instant Promotion" rule: If a Boss dies during combat and commands an active Mob, the player immediately promotes the leading runt of that Mob into a makeshift Boss (with 3 Grit, 1 in all stats, and current Mob Size reduced by 1). Full successor generation and XP allocation take place during Homecoming.
-
-[MISSING RULE / GAP: Formal Patron Saint Ledger & Appeasement Trigger System]
-*   **Description:** The rules introduce Patron Saints from the Bone Pile with situational boons and behavioral appeasement catches, but lack rules governing: (a) how many Patron Saints a Gang can maintain; (b) the exact mechanical trigger for losing/restoring the boon; (c) the minimum criteria for a dead Boss to qualify as a Saint vs. a generic Skull.
-*   **Why it is needed:** Patron Saints provide key roguelite meta-progression, but currently read as loose flavor suggestions.
-*   **Suggested Resolution:**
-    1. A Boss can attune to exactly 1 Patron Saint from the Gang's Bone Pile during character creation or Homecoming.
-    2. Qualifying as a Saint requires the dead Boss to have reached at least Level 3 in one Main Stat or earned at least 5 Lifetime Glory.
-    3. If the active Boss violates the Saint's behavioral catch during a raid, the boon is disabled for the remainder of that raid and the subsequent Lair Phase.

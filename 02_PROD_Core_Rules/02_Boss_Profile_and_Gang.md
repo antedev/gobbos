@@ -2,7 +2,7 @@
 
 *Every goblin Boss clawed their way to the top of the muck pile by being slightly meaner, faster, louder, or weirder than the screaming runts around them. But individual bosses are disposable; it is the Gang that endures, hoarding scrap and building a bloody legacy across generations.*
 
-This chapter defines the attributes and secondary metrics of a **Goblin Boss**, the character creation engine, the rules governing authority and **Grunt**, the persistent mechanics of the **Gang as Class Archetype**, and the structural schema for **Feats**.
+This chapter defines the attributes and secondary metrics of a **Goblin Boss**, the dynamic **Role and Archetype Engine**, the rules governing authority and **Grunt**, the character creation engine, the persistent mechanics of the **Gang as Class Archetype**, and the structural schema for **Feats**.
 
 ---
 
@@ -57,7 +57,7 @@ flowchart LR
 
 *   **Grit**: The amount of physical damage your Boss can absorb before entering the **Downed State** (see [Damage, Grit & Wounds](07_Damage_Grit_and_Wounds.md)).
 *   **Carry Capacity**: The total **Bulk** of equipment, weapons, and Loot you can carry before suffering encumbrance.
-    *   **Over-Laden Rule**: If your carried Bulk exceeds your **Carry Capacity**, you suffer **-1 Zone Movement** per Move action and a **Bane 1 (-1d)** on all physical **Slink** and **Tough** tests. You cannot carry more than your Carry Capacity + 4 Bulk under any circumstances.ances.
+    *   **Over-Laden Rule**: If your carried Bulk exceeds your **Carry Capacity**, you suffer **-1 Zone Movement** per Move action and a **Bane 1 (-1d)** on all physical **Slink** and **Tough** tests. You cannot carry more than your Carry Capacity + 4 Bulk under any circumstances.
 
 ### Slink Derived Stats: Movement & Passive Defence
 
@@ -146,6 +146,79 @@ When your Grunt is low and your Mobs are restless, you can beat your own followe
 
 ---
 
+## The Role & Tactical Archetype Engine
+
+A **Role** represents the emergent tactical archetype, battlefield persona, and leadership style of your **Goblin Boss**. Rather than a static character class, your **Role** is dynamically derived from your active **Main Stats** configuration.
+
+```mermaid
+flowchart TD
+    Stats["Main Stats Spread (Tough, Slink, Mouth, Brains)"] --> Spread{"Compare Highest vs Second-Highest"}
+    Spread -->|"Gap >= 2"| Specialist["Specialist Archetype<br>(Role Level = Primary Stat)"]
+    Spread -->|"Gap <= 1"| Hybrid["Hybrid Archetype<br>(Role Level = Grunt / Secondary Stat)"]
+    
+    Specialist --> S_Power["High Personal Prowess (Lvl 3-5)<br>Low Max Grunt (1-3) & Smaller Mobs"]
+    Hybrid --> H_Power["Dual-Stat Synergy (Lvl 2-5)<br>High Max Grunt (2-5) & Large Mobs"]
+    
+    S_Power --> RS["1 Innate Scaling Role Skill (Cumulative Track)"]
+    H_Power --> RS
+```
+
+### 1. Determining Your Role & Archetype
+
+Your **Role** is calculated by comparing your **Primary Stat** (your highest Main Stat) against your **Secondary Stat** (your second-highest Main Stat, which also sets your **Max Grunt**):
+
+*   **Specialist Archetype (Gap >= 2):** If your Primary Stat is **2 or more levels higher** than your Secondary Stat, you are a **Specialist** who relies on extreme personal focus in a single discipline.
+    *   **Role Level:** Equal to your **Primary Stat** (Levels 3, 4, and 5).
+    *   **Command Profile:** Low **Max Grunt (1 to 3)**. You command smaller **Mobs** (Size 1 to 3) and carry the fight through devastating personal power.
+*   **Hybrid Archetype (Gap <= 1):** If the difference between your Primary and Secondary Stat is **1 or 0**, you are a **Hybrid** combining two attributes into a coordinated command style.
+    *   **Role Level:** Equal to your **Secondary Stat / Max Grunt** (Levels 2, 3, 4, and 5).
+    *   **Command Profile:** High **Max Grunt (2 to 5)**. You command large **Mobs** (Size 2 to 5) and fight through swarm coordination and tactical synergy.
+
+>> **Tied Stats:** If multiple stats are tied for highest or second-highest, you designate which of those stats functions as your Primary and Secondary for active Role determination.
+
+---
+
+### 2. Role Skills (Innate Archetype Perks)
+
+Each **Role** grants **1 unique, scaling Role Skill** that embodies that archetype's tactical edge.
+
+*   **Innate & Free (No XP Cost):** Role Skills are not purchased with XP and do not consume personal **Feat** slots. They are granted automatically by your active stat configuration.
+*   **Cumulative Progression Track:** A Role Skill progresses along a single, continuous track from Level 2/3 up to Level 5. Higher levels add to and enhance lower-level benefits rather than replacing them, ensuring that leveling up never penalizes prior utility.
+*   **Dynamic Role Shifting (Zero XP Waste):** If spending XP during downtime in the Lair causes your stat spread to shift into a new archetype (e.g., raising Slink turns a *Meat-Wall* into a *Raider*), your Boss immediately assumes the new **Role** title and gains the new **Role Skill** at your new **Role Level** for free.
+*   **Distinction from Feats:**
+    *   **Personal Feats:** Modular abilities purchased with XP (up to 3 Feats), customizable with **Twists**.
+    *   **Role Skills:** Exactly 1 signature ability per Boss, automatically scaled by your current **Role Level**.
+    *   **Gang Feats:** Collective faction powers unlocked via Gang **Infamy** and the **Ancestral Mojo Wall**.
+
+---
+
+### 3. The 16 Archetypes Reference Matrix
+
+The table below outlines the 16 core **Roles** across all four primary disciplines (4 Specialists and 12 Hybrids):
+
+| Primary Stat | Archetype Category | Role Title | Stat Configuration | Role Level Calculation | Core Tactical Vibe |
+| :--- | :--- | :--- | :--- | :--- | :---: |
+| **TOUGH** | **Specialist** | **The Meat-Wall** | Tough >= Secondary + 2 | Tough Level (3–5) | Scarred damage sponge; absorbs massive punishment. |
+| **TOUGH** | **Hybrid** | **The Raider** | Tough + Slink | Slink Level (2–5) | Violent shock-trooper; charges and smashes lines on the run. |
+| **TOUGH** | **Hybrid** | **The Enforcer** | Tough + Mouth | Mouth Level (2–5) | Brutal bully; beats enemies and intimidates mobs into action. |
+| **TOUGH** | **Hybrid** | **The Iron-Tinker** | Tough + Brains | Brains Level (2–5) | Heavy scrap-armored juggernaut; swings customized bludgeons. |
+| **SLINK** | **Specialist** | **The Scuttler** | Slink >= Secondary + 2 | Slink Level (3–5) | Shadow ghost; slips through cracks and evades danger. |
+| **SLINK** | **Hybrid** | **The Gut-Cutter** | Slink + Tough | Tough Level (2–5) | Lethal assassin; strikes distracted targets from behind. |
+| **SLINK** | **Hybrid** | **The Ring-Leader** | Slink + Mouth | Mouth Level (2–5) | Slippery agitator; shouts orders from safety and cover. |
+| **SLINK** | **Hybrid** | **The Saboteur** | Slink + Brains | Brains Level (2–5) | Infiltration expert; bypasses locks and rigs deadly traps. |
+| **MOUTH** | **Specialist** | **The Over-Lord** | Mouth >= Secondary + 2 | Mouth Level (3–5) | Tyrannical loudmouth; wears the biggest hat and hides behind runts. |
+| **MOUTH** | **Hybrid** | **The Taskmaster** | Mouth + Tough | Tough Level (2–5) | Cruel driver; sacrifices runt lives to frenzy mobs. |
+| **MOUTH** | **Hybrid** | **The Swindler** | Mouth + Slink | Slink Level (2–5) | Fast-talking trickster; misdirects enemy attacks into each other. |
+| **MOUTH** | **Hybrid** | **The Chant-Monger** | Mouth + Brains | Brains Level (2–5) | Rhythm chanter; turns magical formulas into goblin war-songs. |
+| **BRAINS** | **Specialist** | **The Sage-Tinker** | Brains >= Secondary + 2 | Brains Level (3–5) | Mad inventor; crafts volatile devices, bombs, and contraptions. |
+| **BRAINS** | **Hybrid** | **The Runecaster** | Brains + Tough | Tough Level (2–5) | Runic warrior; etches elemental glyphs onto blades and armor. |
+| **BRAINS** | **Hybrid** | **The Hex-Weaver** | Brains + Slink | Slink Level (2–5) | Shadow spell-sniper; hurls curses and bolts from stealth. |
+| **BRAINS** | **Hybrid** | **The Shaman** | Brains + Mouth | Mouth Level (2–5) | Tribal mystic; channels elemental spirit energy through mobs. |
+
+>> *Note: The complete 5-level cumulative progression tracks and mechanical rules for all 16 Role Skills are maintained in the Character Options Compendium.*
+
+---
+
 ## Boss Creation Engine
 
 Follow these sequential steps to create a starting **Goblin Boss**:
@@ -166,20 +239,22 @@ Set all four **Main Stats** to **1**:
 *   **Brains**: 1
 
 ### Step 2: Distribute Starting Points
-You have **2 points** to distribute among your four Main Stats. At character creation, no stat can be increased above **Level 3**.
+You have **2 points** to distribute among your four Main Stats (bringing starting **Stat Sum to 6**). At character creation, no stat can be increased above **Level 3**.
 
 Choose one of two core archetype distributions:
 1.  **Specialist (3, 1, 1, 1)**: Invest both points into one primary stat.
     *   *Result*: Primary Stat = 3, remaining stats = 1.
-    *   *Derived Grunt*: **Max Grunt = 1**. (Can command a **Size 1 Mob** at campaign start).
+    *   *Derived Grunt*: **Max Grunt = 1**. (Commands a **Size 1 Mob** at campaign start).
+    *   *Derived Role*: **Specialist Role** at **Role Level 3** (e.g., Tough Specialist = *The Meat-Wall* at Role Level 3).
 2.  **Generalist (2, 2, 1, 1)**: Invest one point into two different stats.
     *   *Result*: Two Stats at 2, two stats at 1.
-    *   *Derived Grunt*: **Max Grunt = 2**. (Can command a **Size 2 Mob** at campaign start).
+    *   *Derived Grunt*: **Max Grunt = 2**. (Commands a **Size 2 Mob** at campaign start).
+    *   *Derived Role*: **Hybrid Role** at **Role Level 2** (e.g., Tough + Slink Hybrid = *The Raider* at Role Level 2).
 
 ### Step 3: Derive Secondary Stats & Role
-Consult the progression tables above to record your **Grit**, **Carry Capacity**, **Movement**, **Passive Defence**, **Max Mobs**, **Free Orders**, **Power Words**, and **Crafting Capacity**.
+Consult the progression tables to record your **Grit**, **Carry Capacity**, **Movement**, **Passive Defence**, **Max Mobs**, **Free Orders**, **Power Words**, and **Crafting Capacity**.
 
-Your highest stat and second-highest stat define your starting **Role** (e.g. Tough Specialist = Meat-Wall; Tough/Slink Hybrid = Raider; Slink/Brains Hybrid = Saboteur; Slink/Mouth Hybrid = Ring-Leader; Mouth/Brains Hybrid = Chant-Monger; Brains Specialist = Sage-Tinker).
+Identify your starting **Role** and **Role Level** from the Archetypes Matrix above, recording your starting **Role Skill** on your sheet.
 
 ### Step 4: Choose 1 Starting Basic Feat
 Select **1 Basic Feat** matching a stat where your Boss's stat level meets or exceeds the Feat's Tier (starts with 0 Twists).
@@ -198,64 +273,140 @@ Choose starting gear of **Junk (T1)** quality from the scrap pile:
     *   *Light Armor* (Bulk 1, +1d Passive Armor Die).
     *   *Shield* (Bulk 1, One-Handed, +1d Passive Armor Die, enables Tough Parry).
 
-[MISSING RULE / GAP: Weapon Damage Metric & Loadout Notation Discrepancy — Legacy character creation drafts incorrectly listed starting weapons with "+2d damage / +3d damage" dice bloat. In the standardized rules engine, all weapon attacks roll the Boss's Tough (melee) or Slink (ranged) dice pool against the target's Defence TN, dealing flat 1 damage or 1 Wound per success threshold. Weapon category dictates Hands, Bulk, Range, and Impact Size (+1 Heavy, +2 Crushing).]
-
-[MISSING RULE / GAP: Dual-Wielding Melee Weapons — Character creation references wielding two Light Melee weapons simultaneously, but requires formal resolution. Suggested Resolution: Wielding an off-hand Light Melee weapon grants a passive Boon 1 (+1d) to melee attack pools or allows splitting scored successes between two distinct targets in the same Zone.]
-
 ---
 
 ## The Gang as Class Archetype
 
-In **Gobbos**, players do not play isolated lone heroes. The player's persistent, leveling entity is the **Gang**, which survives the death or retirement of individual Bosses.
+In **Gobbos**, players do not play isolated lone heroes. The player's persistent, leveling entity is the **Gang**, which survives the death, retirement, or burnout of individual Bosses.
 
->> **The Gang:** Persistent Entity • Infamy Track (1–5) • The Hoard • The Bone Pile
+>> **The Gang:** Persistent Entity • Infamy Track (6–20) • The Hoard • The Bone Pile • The Grumpy Goblin
 
-### 1. Infamy Track (Level 1 to 5)
-**Infamy** represents how feared, respected, and notorious your Gang is across the Lair. It acts as the Gang's overall level, scaling from **Infamy 1** to **Infamy 5**.
+### 1. The Unified 6–20 Progression Scale
+
+A Boss's overall power is measured by their **Stat Sum**:
+
+**Boss Stat Sum** = **Tough** + **Slink** + **Mouth** + **Brains** (Range: **6 to 20**)
+
+**Gang Infamy** represents the persistent baseline rating of your Gang and Lair across the campaign, tracking from **Infamy 6** (campaign start) to **Infamy 20** (legendary warren horde).
 
 #### Earning Infamy Marks
-A Gang advances its Infamy by earning **Infamy Marks**:
-1.  **Loot Contribution**: Every **10 Loot Value** brought back from raids and deposited into the Lair Hoard grants **1 Infamy Mark**.
-2.  **Gang Agendas**: Completing a chosen **Gang Agenda** during a raid grants **1 Infamy Mark** (maximum 1 Mark from Agendas per raid).
+A Gang advances its Infamy during play through three distinct avenues:
+1.  **Loot Contribution**: Every **10 Loot Value** deposited into the Communal Hoard grants **1 Infamy Mark**.
+2.  **Gang Agendas**: Completing a chosen **Gang Agenda** during a raid grants **1 Infamy Mark** (max 1 per raid).
+3.  **The Generational Leap**: When an over-stretched Boss dies or steps down, the Gang's Infamy advances by up to **+2 steps** (see [The Generational Leap](10_The_Lair_Loop_and_Progression.md)).
 
-#### Infamy Milestones & Scaling
-| Infamy Level | Cumulative Marks Required | Successor Starting XP | Max Equipped Gang Feats |
+#### Gang Infamy Milestones & Scale
+| Gang Infamy Rating | Cumulative Marks Required | Successor Starting Stat Points | Ancestral Mojo Slots |
 | :---: | :---: | :---: | :---: |
-| **Infamy 1** | **0 Marks** | **4 XP** | **1 Gang Feat** |
-| **Infamy 2** | **3 Marks** | **8 XP** | **2 Gang Feats** |
-| **Infamy 3** | **6 Marks** | **12 XP** | **3 Gang Feats** |
-| **Infamy 4** | **10 Marks** | **16 XP** | **4 Gang Feats** |
-| **Infamy 5** | **15 Marks** | **20 XP** | **5 Gang Feats** |
+| **Infamy 6** | **0 Marks** | **6 Points** (1/1/1/1 + 2 points) | **0 Slots** |
+| **Infamy 8** | **4 Marks** | **8 Points** (Max 3 in any stat) | **1 Mojo Slot** |
+| **Infamy 10** | **9 Marks** | **10 Points** (Max 3 in any stat) | **1 Mojo Slot** |
+| **Infamy 12** | **15 Marks** | **12 Points** (Max 4 in any stat) | **2 Mojo Slots** |
+| **Infamy 14** | **22 Marks** | **14 Points** (Max 4 in any stat) | **2 Mojo Slots** |
+| **Infamy 16** | **30 Marks** | **16 Points** (Max 4 in any stat) | **3 Mojo Slots** |
+| **Infamy 18** | **39 Marks** | **18 Points** (Max 5 in any stat) | **3 Mojo Slots** |
+| **Infamy 20** | **50 Marks** | **20 Points** (Max 5 in any stat) | **4 Mojo Slots** |
 
-### 2. Successor Boss Generation (Roguelite Legacy)
-When a **Goblin Boss** dies, the Gang promotes the next biggest goblin to take command:
-1.  **Base Setup**: The successor begins with base **1** in all four Main Stats, plus the standard **2 starting points**.
-2.  **Successor XP**: The successor receives a bonus pool of **Successor XP** equal to **Infamy Level x 4** to purchase additional stat upgrades at standard advancement costs.
-3.  **Successor Stat Cap**: A newly generated successor cannot raise any stat above **Level 4** at creation.
-4.  **The Gang Mark**: The successor receives a permanent tattoo inked in soot and blood, inheriting **1 Feat or Twist** possessed by the deceased Boss, completely bypassing stat tier prerequisites.
+---
 
-### 3. The Gang Hoard
-**The Hoard** is the Gang's central stockpile of unrefined scrap, stolen tools, spare weapons, and trade wealth stored in the Lair. 
-*   Before embarking on a raid, the Gang draws from the Hoard to outfit recruited **Mobs** with weapons, armor, and utility consumables.
-*   Loot brought back from raids that is not contributed to Lair infrastructure is melted down into the Hoard (see [The Raid Loop](09_The_Raid_Loop.md)).
+### 2. The XP Rubber Band Engine
 
-### 4. The Bone Pile & Relics
-The **Bone Pile** is a literal monument of skulls and bones belonging to the Gang's deceased former Bosses.
-*   **Forging Relics**: When a Boss dies, the Gang can recover a bone or token and attach it to a weapon or armor piece to forge a **Relic**.
-*   **Relic Boon**: The Relic grants a mechanical Boon (+1d) tied to the deceased Boss's highest Main Stat. A Boss may equip at most **1 Relic** at a time.
+Progression is not a flat linear track. Advancing a Boss's stats is evaluated relative to your Gang's active **Infamy Level**:
 
-### 5. Elders & Retirement
-When any **Goblin Boss** reaches **Level 6** in any Main Stat, that Boss automatically retires from active raiding to become an **Elder**. Elders are permanently staffed at Lair facilities to grant persistent bonuses:
-*   **Elder of Tough (Training Ring)**: All Mobs commanded by the Gang gain **+1 Passive Armor Die** without consuming Bulk.
-*   **Elder of Slink (Shadow Den)**: Reduces the Target Number (**TN**) of all environmental traps by **1** (minimum TN 1).
-*   **Elder of Mouth (Council Chambers)**: Increases the Boss's Maximum **Grunt** by **+1**; once per raid, allows rallying all fleeing Mobs in the zone as a Free Action.
-*   **Elder of Brains (Tinker Yard)**: Allows installing **+1 extra Component** onto crafted custom gear beyond standard Crafting Capacity.
+```
+[ Gang Infamy Level ]
+         │
+ ┌───────┴────────────────────────┬────────────────────────┐
+ ▼                                ▼                        ▼
+[ Next Stat Sum <= Gang ]  [ Next Stat Sum = Gang + 1/2 ] [ Next Stat Sum >= Gang + 3 ]
+   10 XP (Par Catch-Up)      25 XP / 60 XP (The Stretch)     150+ XP (The Brick Wall)
+```
 
-### 6. Gang Shenanigan (Cultural Identity)
+#### Relative Stat Advancement Costs
+When spending Boss XP during the Lair Phase to raise any Main Stat by +1:
+
+| Next Stat Sum vs. Gang Infamy | Progression Category | XP Cost per Stat Point | Table Experience |
+| :--- | :---: | :---: | :--- |
+| **Next Sum <= Gang Infamy** | **Par / Catch-Up** | **10 XP** | **Fast Catch-Up:** New Bosses easily catch up to the Gang's established baseline. |
+| **Next Sum = Gang Infamy + 1** | **Stretch 1** | **25 XP** | **The Squeeze Begins:** Solid milestone requiring 1–2 successful raids. |
+| **Next Sum = Gang Infamy + 2** | **Stretch 2** | **60 XP** | **Heavy Squeeze:** Major effort; the player feels the limits of this Boss's growth. |
+| **Next Sum >= Gang Infamy + 3** | **The Brick Wall** | **150+ XP** | **The Outrageous Limit:** Nearly impossible for a single Boss to push alone. |
+
+> **Example:**  
+> A Gang is at **Infamy 8**. A new Boss starts with a Stat Sum of **8** (`3, 2, 2, 1`).  
+> * Raising Tough from 3 to 4 increases Stat Sum to **9** (`Gang + 1`) -> costs **25 XP**.  
+> * Raising Slink from 2 to 3 increases Stat Sum to **10** (`Gang + 2`) -> costs **60 XP**.  
+> * Attempting to raise Mouth to 3 would increase Stat Sum to **11** (`Gang + 3`) -> costs **150 XP** (The Brick Wall).
+
+---
+
+### 3. The Grumpy Goblin (Voluntary Step-Down & Advice)
+
+When a Boss reaches `Stat Sum >= Gang Infamy + 1`, the player may choose not to push against the extreme XP wall. During the **Lair Phase**, the Boss can voluntarily **Step Down** to become the Gang's **Grumpy Goblin**.
+
+```mermaid
+flowchart LR
+    A["Old Boss Steps Down in Lair"] --> B["Grumpy Goblin in Warrens<br>(Grants 1–3 Advice Tokens/Raid)"]
+    B --> C["In-Raid Crisis: Player Spends 1 Token<br>(Free Action, Max 1/Round)"]
+    C --> D["Declare 1-Sentence Flashback:<br>'Wait! Old Grug warned me about this!'<br>-> Instant Situational Boon"]
+```
+
+#### Advice Tokens per Raid
+A **Grumpy Goblin** provides a pool of **Advice Tokens** on every future raid (refreshed for free during Homecoming) based on the retired Boss's highest Main Stat:
+* **Retired Stat Level 3:** **1 Advice Token** per raid.
+* **Retired Stat Level 4:** **2 Advice Tokens** per raid.
+* **Retired Stat Level 5:** **3 Advice Tokens** per raid.
+
+#### The 4 Grumpy Disciplines
+When spending an **Advice Token** as a **Free Action** (max 1 per round), the active Boss declares a quick 1-sentence flashback advice quote matching the Grumpy Goblin's primary specialty:
+
+1. **The Bruiser (Tough Specialty):** *"Smack 'em in the gristle!"*  
+   * **Boon:** Roll **+2 Passive Armor Dice** against an unexpected hit, or smash through a physical barricade without needing a tool.
+2. **The Sneak (Slink Specialty):** *"Guards never look at the ceiling!"*  
+   * **Boon:** Automatically negate an environmental trap or ambush trigger, or escape a grapple/restraint as a Free Action.
+3. **The Loudmouth (Mouth Specialty):** *"Scream loud and wave a dead chicken!"*  
+   * **Boon:** Force an attacking humanoid foe to hesitate (losing 1 action on their turn), or immediately rally a fleeing Mob to combat formation for free.
+4. **The Tinkerer (Brains Specialty):** *"Cut the green fuse, not the red one!"*  
+   * **Boon:** Declare you retroactively packed a common utility tool/flask into your bag (Blades-in-the-Dark style), or instantly jury-rig a broken item.
+
+>> **RULE: Single Active Grumpy Goblin**  
+>> A Gang can only benefit from **one (1) active Grumpy Goblin at a time**. If a newer Boss steps down, the previous Grumpy Goblin settles into permanent comfortable retirement in the warrens, and the new Boss becomes the active advisor.
+
+---
+
+### 4. Successor Boss Generation
+
+When a **Goblin Boss** dies, goes nuclear, or steps down as a Grumpy Goblin, the Gang promotes a new Boss:
+1. **Allocate Stat Points:** Distribute total points equal to the current **Gang Infamy Rating** across Tough, Slink, Mouth, Brains (minimum 1 in each stat).
+2. **Stat Cap at Creation:** No single stat can start higher than **Level 3** (at Infamy 6–10) or **Level 4** (at Infamy 12–16).
+3. **Derive Secondary Stats & Role:** Derived automatically from the new stat configuration in seconds.
+4. **Ancestral Mojo Inheritance:** The successor immediately benefits from all active Feats etched into the Gang's **Ancestral Mojo Wall** without consuming personal Feat slots.
+
+---
+
+### 5. The Gang Hoard & Bone Pile
+
+* **The Hoard:** Central stockpile of unrefined scrap, tools, and wealth. Outfits recruited Mobs before raids.
+* **The Bone Pile:** Monument of skulls from deceased Bosses. When a Boss dies, the Gang can salvage a skull/bone to forge **1 Relic** granting a **+1d Boon** tied to that Boss's highest stat.
+
+---
+
+### 6. Elders & True Retirement (Stat Level 6)
+
+When any Boss achieves **Level 6** in a Main Stat, that Boss transcends active raiding and Grumpy Goblin status to become a permanent **Elder**, staffing major Lair facilities:
+* **Elder of Tough (Training Ring):** All commanded Mobs gain **+1 Passive Armor Die**.
+* **Elder of Slink (Shadow Den):** Reduces trap **Target Numbers (TN)** by **1** (minimum 1).
+* **Elder of Mouth (Council Chambers):** Maximum **Grunt +1**; rally fleeing Mobs as a Free Action once per raid.
+* **Elder of Brains (Tinker Yard):** Install **+1 extra Component** onto custom crafted gear.
+
+---
+
+### 7. Gang Shenanigan (Cultural Identity)
+
 Every Gang possesses a defining cultural trait called a **Shenanigan** (e.g. *Pyromaniacs, Shiny-Snatchers, Trap-Trippers, Skull-Bangers*):
-*   **The Boon**: Grants a **+1d Boon** on action tests directly aligned with the Shenanigan.
-*   **The Compulsion**: When presented with an opportunity to indulge the Shenanigan, the Boss must make a `Brains 5+/1` test to resist.
-*   **Feeding the Bangaranga**: Whenever a player willingly indulges your Shenanigan to the tactical detriment of the party, immediately add **+1d6** to the communal **Bangaranga Pool**.
+* **The Boon:** Grants a **+1d Boon** on action tests directly aligned with the Shenanigan.
+* **The Compulsion:** When presented with an opportunity to indulge the Shenanigan, the Boss must make a `Brains 5+/1` test to resist.
+* **Feeding the Bangaranga:** Whenever a player willingly indulges your Shenanigan to the tactical detriment of the party, immediately add **+1d6** to the communal **Bangaranga Pool**.
 
 ---
 

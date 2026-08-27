@@ -11,12 +11,12 @@ Every raid operates within a continuous four-phase loop that structures the tran
 ```mermaid
 flowchart TD
     P1["Phase 1: Planning & Approach (The Journey)<br>- Select scouted target & review Danger Ratings<br>- Mobilize Raider Mobs & assign Travel Roles<br>- Traverse travel Stages to reach raid site"] --> P2["Phase 2: Infiltration & Assault (Entry & Breach)<br>- Establish starting Alert equal to Danger Rating (1–5)<br>- Infiltrate initial Zones & bypass sentries"]
-    P2 --> P3["Phase 3: Objective & Plunder (Tactical Execution)<br>- Complete Main Objective (3–5 Raid Points)<br>- Pursue Opportunity Targets (+2 Raid Points each)<br>- Dismantle infrastructure for Scrap & Plunder Loot"]
+    P2 --> P3["Phase 3: Objective & Plunder (Tactical Execution)<br>- Complete Main Objective (3–5 Raid Points)<br>- Pursue Opportunity Targets (+2 Raid Points each)<br>- Dismantle infrastructure for Scrap & Plunder Loot<br>- Spend Grumpy Goblin Advice Tokens (Free Action)"]
     P3 --> P4["Phase 4: Extraction & Escape (The Return)<br>- Declare extraction & retreat through Zones to exit<br>- Haul physical Loot/Scrap through Return Journey<br>- Manage encumbrance & pursuing forces"]
 ```
 
 ### Phase 1: Planning & Approach
-Before leaving the **Lair**, you select a scouted target, inspect the known **Base Danger Rating** and **Objectives**, allocate **Raider Mobs** from the communal **Gobbo Pool** (up to your Boss's **Grunt** limit), and assign the four **Travel Roles**. The party then traverses wilderness or subterranean **Stages** as detailed in [Journeys & Hazards](11_Journeys_and_Hazards.md).
+Before leaving the **Lair**, you select a scouted target, inspect the known **Base Danger Rating** and **Objectives**, allocate **Raider Mobs** from the communal **Gobbo Pool** (up to your Boss's **Grunt** limit), and assign the four **Travel Roles**. Ensure your active **Grumpy Goblin Advice Tokens** are recorded on your sheet (see [Boss Profile & Gang](02_Boss_Profile_and_Gang.md)). The party then traverses wilderness or subterranean **Stages** as detailed in [Journeys & Hazards](11_Journeys_and_Hazards.md).
 
 ### Phase 2: Infiltration & Assault
 The party breaches the target perimeter. The **GM** sets the location's starting **Alert** track equal to its **Base Danger Rating** (1 to 5). You navigate connected **Zones**, defeat sentries, bypass obstacles, and work to keep **Alert** low before sounding alarms.
@@ -29,7 +29,33 @@ Once objectives are secured, or when **Alert** escalates to lethal levels, the p
 
 ---
 
-## 2. The Raid Economy
+## 2. In-Raid Emergency Tactical Actions
+
+During Phase 3 (Tactical Execution), players possess two specialized tactical lifelines:
+
+### 1. Spending Grumpy Goblin Advice (Flashback Action)
+If your Gang possesses an active **Grumpy Goblin** in the Lair, your Boss enters the raid with a pool of **1 to 3 Advice Tokens**:
+* **Action Cost:** **Free Action** (maximum **1 Advice Token per round**).
+* **Execution:** Declare a 1-sentence flashback quote from your retired veteran (*"Wait! Old Grug warned me about this!"*).
+* **Benefit:** Trigger one immediate situational boon matching the Grumpy Goblin's discipline:
+  * *Bruiser (Tough):* Roll **+2 Passive Armor Dice** against an unexpected hit, or smash a barricade without tools.
+  * *Sneak (Slink):* Automatically negate a trap trigger, or escape a grapple/restraint for free.
+  * *Loudmouth (Mouth):* Force a humanoid foe to lose 1 action in confusion, or immediately rally a fleeing Mob.
+  * *Tinkerer (Brains):* Retroactively pull a common utility item from your sack, or instantly jury-rig a broken weapon.
+
+### 2. Going Nuclear (The Overclock Rampage)
+When an encounter turns catastrophic and defeat is imminent, a Boss can choose to go out in an epic blaze of glory rather than dying as a casualty:
+* **Action Cost:** 1 **Standard Action** (can be triggered once per Boss lifespan).
+* **The Overdrive State (Until Combat Concludes):**
+  * **Peak Attributes:** All four **Main Stats** are temporarily elevated to **Level 5** (rolling 5d6 on all checks).
+  * **Supercharged Chaos:** All dice explode on natural **5s and 6s** (each adding +1 success and +1 bonus die).
+  * **Unstoppable Vigor:** Completely immune to **Staggered**, **Prone**, and **Terrified**; your **Grit** cannot drop below 1 until the combat scene ends.
+* **The Terminal Burnout:** At the conclusion of the combat scene, the Boss suffers fatal cardiac explosion, gear detonation, or complete bodily collapse. The Boss dies or is permanently incapacitated.
+* **The Payout:** The party secures safe extraction for all carried loot, the Gang earns the maximum **Generational Leap (+2 Gang Infamy)** during Homecoming, and the fallen Boss's signature Feat is etched into the **Ancestral Mojo Wall**.
+
+---
+
+## 3. The Raid Economy
 
 The **Gobbos** economy operates without fractional coinage or coin-counting math. Wealth and progress are measured across five standardized systemic resources:
 
@@ -37,13 +63,13 @@ The **Gobbos** economy operates without fractional coinage or coin-counting math
 | :--- | :--- | :--- | :--- |
 | **Loot Value (LV)** | Liquid Wealth | Plundered as physical items during raids | Smelted via Rule of Five; buys equipment, hires specialists, expands Lair facilities. |
 | **Scrap** | Building Matter | Harvested from broken infrastructure and salvage | Constructs facility chassis, expands rooms, and provides base weapon materials. |
-| **Infamy Marks** | Gang Level | Contributed Loot (10 LV = 1 Mark) or Agendas | Determines Gang Infamy (1–5), Successor starting XP, and equipped Gang Feats. |
+| **Infamy Marks** | Gang Level | Contributed Loot (10 LV = 1 Mark) or Agendas | Determines Gang Infamy (6–20), Successor starting stat points, and unlocked Mojo slots. |
 | **Raid Points (Glory)** | Shared Renown | Completing Main and Opportunity Objectives | Pooled at raid end; converts into shared **Boss XP** during Homecoming. |
 | **Boss XP** | Personal Power | Pooled Raid Points, Personal Glory, Successor pools | Spent during downtime to advance **Main Stats** (**Tough**, **Slink**, **Brains**, **Mouth**). |
 
 ---
 
-## 3. Loot Value & The Exponential Scale
+## 4. Loot Value & The Exponential Scale
 
 All treasure plundered from a raid belongs to a **Quality Tier (T1–T5)** and possesses a **Loot Value (LV)** representing its concentrated material worth.
 
@@ -67,7 +93,7 @@ Massive treasures possess a **Loot Value** greater than 1 of their Tier:
 
 ---
 
-## 4. The Rule of Five: Smelting & Barter
+## 5. The Rule of Five: Smelting & Barter
 
 During the **Lair Phase** (downtime between raids), you can combine, melt down, or break apart plunder using the **Rule of Five**:
 
@@ -81,7 +107,7 @@ During the **Lair Phase** (downtime between raids), you can combine, melt down, 
 
 ---
 
-## 5. Scrap Generation & Conversion
+## 6. Scrap Generation & Conversion
 
 **Scrap** is abstract structural building matter (reclaimed iron plates, oak beams, lead pipes, chains, and masonry) required to construct Lair facilities, build defenses, and form custom weapon chassis.
 
@@ -92,7 +118,7 @@ During the **Lair Phase** (downtime between raids), you can combine, melt down, 
 
 ---
 
-## 6. Carry Capacity & Tactical Encumbrance
+## 7. Carry Capacity & Tactical Encumbrance
 
 Greed has physical weight. All weapons, armor, tools, and plunder possess a **Bulk** rating (0 to 4+). 
 
@@ -131,7 +157,7 @@ Items of **Bulk 3 or higher** (iron safes, great cauldrons, stone statues, heavy
 
 ---
 
-## 7. Danger Scaling, Scouting & Alert
+## 8. Danger Scaling, Scouting & Alert
 
 Raids scale dynamically based on site danger and the party's operational profile.
 
@@ -155,9 +181,9 @@ The **GM** tracks the raid location's active **Alert** (starting equal to the **
 
 ---
 
-## 8. Post-Raid Reckoning & Payout
+## 9. Post-Raid Reckoning & Payout
 
-When the party extracts safely back to the **Lair**, rewards are tallied across three separate tracks:
+When the party extracts safely back to the **Lair**, rewards are tallied across three separate tracks during Homecoming:
 
 ### 1. Communal Glory to Shared Boss XP
 All **Raid Points** earned by the party from completing objectives are pooled and converted into shared **Boss XP**:
@@ -165,11 +191,11 @@ All **Raid Points** earned by the party from completing objectives are pooled an
 | Pooled Raid Points | Shared Boss XP Awarded | Raid Reputation |
 | :---: | :---: | :--- |
 | **1–4 Points** | **0 XP** | Failure. The horde throws mud at the returning raiders. |
-| **5–9 Points** | **1 XP** | Decent raid. The horde acknowledges the plunder. |
-| **10+ Points** | **2 XP** | Legendary triumph! A feast is held in your honor. |
+| **5–9 Points** | **10 XP** | Decent raid. The horde acknowledges the plunder. |
+| **10+ Points** | **15 XP** | Legendary triumph! A feast is held in your honor. |
 
-### 2. Personal Glory (+1 XP)
-A **Goblin Boss** earns **+1 Personal Glory** (maximum 1 per raid, converting to **+1 XP** during Homecoming) by fulfilling at least one of these chaotic acts:
+### 2. Personal Glory (+5 XP)
+A **Goblin Boss** earns **+5 Personal Glory XP** (maximum +5 XP per raid) by fulfilling at least one of these chaotic acts:
 * **The Compulsion:** Voluntarily trigger your Gang's **Shenanigan** compulsion in an disadvantageous tactical situation, causing a complication and adding a die to the communal **Bangaranga Pool**.
 * **The Sacrifice:** Completely destroy a custom gear item by declaring an **Overload**.
 * **The Tyrant:** Use the **Assert Dominance** action (attacking a **Mob** under your command) to regain **Grunt** in combat.
@@ -181,7 +207,7 @@ A **Goblin Boss** earns **+1 Personal Glory** (maximum 1 per raid, converting to
 
 ---
 
-## 9. Loot & Salvage Structural Schema
+## 10. Loot & Salvage Structural Schema
 
 Every plundered treasure, scrap cache, or harvested monster component is defined by the following structural template:
 
@@ -218,42 +244,3 @@ Every plundered treasure, scrap cache, or harvested monster component is defined
 - **Divisibility:** Indivisible
 - **Special Utility / Crafting Tag:** None
 - **Description:** *A heavy silver banquet cup lined with gold filigree and small garnet beads.*
-
-#### Flame Drake Bile Gland
-- **Category:** Component
-- **Quality Tier:** T4 Superior
-- **Bulk:** 2
-- **Loot Value (LV):** 1x T4
-- **Scrap Yield:** 0 Scrap
-- **Divisibility:** Indivisible
-- **Special Utility / Crafting Tag:** [Fire] (Tier 4, Bite 3, [Searing] Tag)
-- **Description:** *A pulsating, smoking organ harvested from a drake carcass. Warm to the touch.*
-
----
-
-## Content Extension Point
-
-[CONTENT EXTENSION POINT: Loot & Salvage Items]
-
-All future compendiums of treasures, trade goods, monster harvest components, relics, and scrap caches must implement the Loot & Salvage Structural Schema defined above, respecting Quality Tiers (T1–T5), Bulk encumbrance rules, and Scrap yields.
-
----
-
-## Mechanical Gaps & Unresolved Systems
-
-[MISSING RULE / GAP: Economy Currency Normalization & Tiered Conversion]
-*   **Description:** Stage drafts define Loot Value on a 5-to-1 exponential scale (T1–T5), but Lair construction rules list flat costs like "10 Loot, 15 Scrap" and Gang progression awards 1 Infamy Mark per "10 Loot Value" contributed. If a single T5 Relic equals 6,250 T1 units, depositing one T5 item would grant 625 Infamy Marks, instantly maxing Gang Infamy 40 times over.
-*   **Why it is needed:** The macro progression and Lair construction loops collapse into hyper-inflation or complete ambiguity if currency tiers are not strictly normalized.
-*   **Suggested Resolution:**
-    1. Define all flat Lair construction costs in matching Tier tokens (e.g., Tier 2 rooms cost T2 tokens, Tier 3 rooms cost T3 tokens).
-    2. Normalize Infamy Mark generation to require 10x T1 for Infamy 1, 10x T2 for Infamy 2, 10x T3 for Infamy 3, 10x T4 for Infamy 4, and 10x T5 for Infamy 5.
-
-[MISSING RULE / GAP: Codified Extraction Phase & Chase Mechanics]
-*   **Description:** While Journey rules handle travel to and from the site, there is no formal mechanical procedure for the transition between dungeon combat/plunder and extraction. If Alert reaches 4 or 5, there are no rules for whether enemies chase the party into the return journey, or how players disengage from the dungeon node to start return stages.
-*   **Why it is needed:** The "Extraction & Escape" phase is one of the four core raid pillars, but currently lacks dedicated evasion mechanics.
-*   **Suggested Resolution:** Define the Extraction Trigger: Once the party declares Extraction, each Zone between their current location and the entrance must be traversed. If Alert is 4+, each exit transition triggers an immediate Slink 5+/1 evasion test; failure inflicts 1 Attrition damage on all Mobs and carries +1 Alert into the Return Journey.
-
-[MISSING RULE / GAP: Private Gang Hoard vs. Communal Hoard Economy]
-*   **Description:** The Skim Downtime Action allows a Boss to secretly divert Loot into the Gang's Private Hoard. However, the rules never define what a Gang's Private Hoard can be spent on versus the Communal Hoard, or whether Private Hoard wealth counts toward Infamy Marks.
-*   **Why it is needed:** Without distinct mechanical uses (e.g. purchasing personal gear without table consensus, bribing Elders for personal perks, or buying unshared Mob upgrades), the Skim action has no tactical purpose.
-*   **Suggested Resolution:** Clarify that the Communal Hoard is spent strictly by group consensus for Lair upgrades and shared outfitting, while a Gang's Private Hoard is spent exclusively by that player to purchase personal gear, bribe Elders, or buy personal Mob equipment. Wealth in the Private Hoard only grants Infamy Marks when deposited into the Communal Hoard.
