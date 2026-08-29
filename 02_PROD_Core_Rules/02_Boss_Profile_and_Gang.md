@@ -41,7 +41,7 @@ flowchart LR
     M --> M1["Max Mobs (Simultaneous: 1 to 3)"]
     M --> M2["Free Orders (Commands per Round: 1 to 3)"]
     
-    B --> F1["Power Words (Spell Slots: 0 to 6)"]
+    B --> F1["Power Words (Spell Slots: 1 to 5)"]
     B --> F2["Crafting Capacity (Component Slots: 1 to 5)"]
 ```
 
@@ -89,13 +89,13 @@ flowchart LR
 
 | Brains Level | Power Words (Spell Tag Slots) | Crafting Capacity (Component Slots) |
 | :---: | :---: | :---: |
-| **Level 1** | **0 Slots** | **1 Component Slot** |
-| **Level 2** | **0 Slots** | **2 Component Slots** |
-| **Level 3** | **2 Slots** | **3 Component Slots** |
+| **Level 1** | **1 Slot** | **1 Component Slot** |
+| **Level 2** | **2 Slots** | **2 Component Slots** |
+| **Level 3** | **3 Slots** | **3 Component Slots** |
 | **Level 4** | **4 Slots** | **4 Component Slots** |
-| **Level 5** | **6 Slots** | **5 Component Slots** |
+| **Level 5** | **5 Slots** | **5 Component Slots** |
 
-*   **Power Words**: The maximum number of volatile magical element and delivery tags your Boss can commit to memory for casting spells (see [Magic & Bangaranga](08_Magic_and_Bangaranga.md)). You must have at least **Brains 3** to memorize Power Words and cast spells.
+*   **Power Words**: The maximum number of volatile magical element and delivery tags your Boss can commit to memory for casting spells (see [Magic & Bangaranga](08_Magic_and_Bangaranga.md)).
 *   **Crafting Capacity**: The maximum number of specialized **Components** (custom mechanical attachments, alchemical coatings, spikes, and contraptions) you can install onto a single crafted item during downtime (see [The Lair Loop and Progression](10_The_Lair_Loop_and_Progression.md)).
 
 ---

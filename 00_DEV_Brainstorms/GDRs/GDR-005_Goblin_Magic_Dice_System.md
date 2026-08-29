@@ -1,9 +1,9 @@
 # GDR-005: Goblin Magic Dice System
 
-* **Status:** ACCEPTED
+* **Status:** SUPERSEDED (Replaced by V2 Difficulty / TN & Delivery Form Casting Engine in PROD `08_Magic_and_Bangaranga.md`)
 * **Date:** 2026-05-28
 * **Designer(s):** User & Antigravity (AI Coding Assistant)
-* **Target Folder:** `STAGE_Drafts/08_Magic/`
+* **Target Folder:** `PROD_Core_Rules/08_Magic_and_Bangaranga.md`
 
 ---
 

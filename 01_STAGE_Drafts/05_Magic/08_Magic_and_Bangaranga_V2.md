@@ -1,4 +1,4 @@
-# Magic and Bangaranga
+# Magic and Bangaranga (V2 Draft)
 
 *Goblins do not study dusty, leather-bound grimoires in high towers. We shout words carved into mossy dungeon stones, crush glowing cavern mushrooms in our bare fists, and cling to raw cosmic lightning until our teeth rattle. If you are not risking a catastrophic explosion, you are not really casting.*
 
@@ -92,9 +92,9 @@ Announce three elements before picking up the dice:
 
 ### Step 2 — Determine Difficulty Face
 Compare your **Declared Tier** to your **Brains** attribute:
-*   **Tier < Brains -> Easy (4+):** The spell is below your mental limit. Highly routine (4, 5, and 6 count as successes).
-*   **Tier == Brains -> Normal (5+):** The spell matches your mental limit (5 and 6 count as successes).
-*   **Tier > Brains -> Hard (6):** You are reaching beyond your capacity. Volatile (Only natural 6s count as successes).
+*   **Tier < Brains $\rightarrow$ Easy (4+):** The spell is below your mental limit. Highly routine (4, 5, and 6 count as successes).
+*   **Tier == Brains $\rightarrow$ Normal (5+):** The spell matches your mental limit (5 and 6 count as successes).
+*   **Tier > Brains $\rightarrow$ Hard (6):** You are reaching beyond your capacity. Volatile (Only natural 6s count as successes).
 
 ### Step 3 — Assemble and Roll the Pool
 *   Roll **d6s equal to your Brains** stat.
@@ -119,15 +119,7 @@ If your roll failed to meet the TN, but contains one or more regular dice showin
 1.  **Reroll Regular 1s:** Pick up all regular dice showing **1s** and reroll them together.
 2.  **Locked Bangaranga 1s:** Any drawn **Bangaranga Dice** showing **1s** are locked and **cannot be rerolled**.
 3.  **Triumph on Reroll:** If the rerolled dice generate enough new successes to bring your total pool up to or above the TN, the spell succeeds normally!
-4.  **MISCAST on Reroll:** If the reroll fails to reach the required TN, the spell collapses into a **Miscast**.
-
-> **Example:** Griznak (**Brains 3**, **Grunt 2**) wants to blast a squad of guards with `[Shock]`.
-> *   **Declaration:** Griznak declares `[Shock]`, **Open Hands** (Burst), at **Tier 3** (**TN 3**).
-> *   **Difficulty:** Tier 3 == Brains 3 -> **Normal (5+)**.
-> *   **The Roll:** Griznak draws 1 **Bangaranga Die** and rolls 4d6 total (3 Brains + 1 Bangaranga). Result: `[5, 3, 1]` (regular) and `[2]` (Bangaranga). That is 1 success (short of TN 3).
-> *   **The Gamble:** Griznak refuses to look foolish. Griznak declares a **Gobbo Gamble** and rerolls the regular `1`.
-> *   **Second Roll:** The rerolled die lands on a `6`! It explodes, rolling another die that lands on a `5`.
-> *   **Final Resolution:** Total successes are now 3 (`5`, `6`, `5`). The spell succeeds! A massive T3 lightning burst arcs across the entire enemy Zone, dealing 3 damage to every guard present.
+4.  **MISCAST on Reroll:** If the rerololl fails to reach the required TN, the spell collapses into a **Miscast**.
 
 ---
 
@@ -156,43 +148,7 @@ Channeling communal hype supercharges magic, but heightens volatility:
 
 ---
 
-## 8. Ritual Casting Mechanics
-
-Ritual Magic represents extended, cooperative spellcasting used for monumental supernatural feats: purifying **`[Cursed]`** or **`[Bonded]`** components, warding the **Lair**, erecting permanent elemental barriers, or crafting magical artifacts.
-
-```mermaid
-flowchart TD
-    P["Assemble Pool:<br>Lead Caster (Brains 1+) + Mouth Assistants + Bangaranga"] --> R["Roll Pool against Normal (5+) Difficulty"]
-    R --> ACC["Accumulate Successes toward Ritual TN"]
-    ACC --> S{"Successes >= Ritual TN?"}
-    S -->|Yes| DONE["Ritual Complete!<br>(Curse Broken / Lair Warded / Item Crafted)"]
-    S -->|No| CHK{"Any 1s Rolled?"}
-    CHK -->|Yes| COST["Material Attrition & Leakage<br>(Lose 1 Scrap/Loot per 1 rolled or spawn T2 Hazard)"]
-    CHK -->|No| NEXT["Continue Ritual Working"]
-    COST --> NEXT
-    NEXT --> R
-```
-
-### Ritual Parameters
-*   **Time & Scale:** A ritual requires **1 Lair Phase Turn** in the **Lair** (or 3 consecutive, uninterrupted combat rounds during a raid).
-*   **Lead Caster:** Must possess the relevant **Power Word** Tag.
-*   **Assistants:** Up to a number of goblins equal to the Lead Caster's **Mouth** stat may assist. Each assistant contributes **+1d** to the ritual pool.
-*   **Communal Fuel:** The Lead Caster may draw up to their **Grunt** in **Bangaranga Dice** to fuel the ritual.
-
-### Extended Accumulation Engine
-Rituals do not use the single-action casting loop. Instead, the Lead Caster rolls the assembled pool against **Normal (5+)** difficulty, accumulating successes across steps toward a **Ritual Target Number**:
-*   **Tier 3 Ritual (Cleansing Minor Curses / Basic Wards):** Requires **5 Accumulated Successes**.
-*   **Tier 4 Ritual (Cleansing Bonded Relics / Fortress Wards):** Requires **8 Accumulated Successes**.
-*   **Tier 5 Ritual (Major Reality Transmutation / Artifact Crafting):** Requires **12 Accumulated Successes**.
-
-### Ritual Complications and Resource Attrition
-Because rituals are grounded, stable workings, failing a single roll does not destroy accumulated successes:
-*   **The Cost of Failure:** Every **1** rolled during a ritual step consumes extra resources: the party must immediately discard **1 Scrap** (or 1 Bulk of carried **Loot**) per 1 rolled, or suffer a **T2 Chaotic Hazard** in the ritual chamber.
-*   **Interruption:** If the Lead Caster suffers unmitigated damage or gains the **Stunned** condition during the ritual, the working collapses, wasting all invested materials.
-
----
-
-## 9. Combat Interactions & Target Defence
+## 8. Combat Interactions & Target Defence
 
 To maintain complete consistency with the [Combat Engine](05_Combat_Engine.md):
 *   **Physical & Elemental Spells (`[Fire]`, `[Acid]`, `[Shock]`, `[Bone]`):** Inflict direct **Grit damage** (to Bosses/PCs) or **Size damage** (to Mobs). Targets in the area make their standard **Passive Defence** rolls to mitigate incoming damage.
@@ -200,7 +156,7 @@ To maintain complete consistency with the [Combat Engine](05_Combat_Engine.md):
 
 ---
 
-## 10. Core Power Words Catalogue
+## 9. Core Power Words Catalogue (Examples)
 
 ### `[BURN]` (Elemental / Fire)
 *   **Tag Category:** Elemental (Damage Base: Fire)
@@ -244,22 +200,11 @@ To maintain complete consistency with the [Combat Engine](05_Combat_Engine.md):
 
 ---
 
-## 11. Tag Effect and Spell Structural Schema
+## 10. Summary of Key Differences from V1 Draft
 
-[CONTENT EXTENSION POINT: Magic Spells & Tag Effects]
+1.  **No Farkle Math / Sets:** Removed the face-matching paradox. Casting is determined by **Total Successes vs Declared Tier TN**.
+2.  **Brains vs. Tier Difficulty:** Automatically shifts difficulty (Easy 4+, Normal 5+, Hard 6) based on whether the spell is below, equal to, or above the caster's Brains stat.
+3.  **Universal 4 Delivery Forms:** Replaced 300 individual spells with 4 universal casting postures (Point, Open Hands, Slam Ground, Infuse).
+4.  **Zero Random Lookup Tables:** Miscasts use the **Law of Lost Containment** (the attempted spell inverts directly onto the caster and their Zone).
+5.  **Brains 1–2 Inclusion:** Low-Brains goblins can now cast T1 tricks on Easy 4+, while Arch-Mages cast high-tier magic with greater reliability.
 
-All modular tag effects, living spell compendiums, and grimoire expansions must follow this formal structural schema:
-
-```markdown
-### [Power Word Name]
-*   **Primary Tag:** `[Tag Name]` (e.g. `[Fire]`, `[Sticky]`, `[Shock]`, `[Spooky]`, `[Slip]`)
-*   **Tag Category:** [Elemental | Physical | Mental / Social | Spatial / Movement | Metaphysical]
-*   **Delivery Options:** [Point | Open Hands | Slam Ground | Infuse]
-*   **Effect Scaling:**
-    *   *T1 (Touch / Minor):* [Minor/Niche effect, +1 Success on attack OR 1 Grit/Size damage]
-    *   *T2 (Bolt / Standard):* [Standard single-target effect, +2 Successes OR 2 Grit/Size damage; Sustained condition]
-    *   *T3 (Burst / Zone):* [Heroic / Zone-wide effect, +3 Successes OR 3 Grit/Size damage; Persistent condition]
-    *   *T4 (Blast / Multi-Zone):* [Destructive / Blast effect, +4 Successes OR 4 Grit/Size damage; Encounter condition]
-    *   *T5 (Mythic / Legendary):* [Legendary / Encounter-scale effect; Instant defeat OR permanent reality warp]
-*   **Miscast Outcome (Law of Lost Containment):** [Description of how the spell inverts onto the caster / occupied Zone when containment is lost]
-```

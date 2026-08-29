@@ -101,6 +101,10 @@ The setting's history, themes, culture, and geography are kept separate in the `
 3. **Review:** Audit the drafts for continuity and compatibility with existing canon using the Lore Keeper.
 4. **Publishing:** Move the finalized, locked canon document into `LORE/03_PROD_Lore/`.
 
+### Tool Usage & File Editing Rules
+*   **Native File Tools First:** Always use native file tools (`replace_file_content`, `write_to_file`) to create or modify repository files.
+*   **No Scripted File Modifiers:** Avoid executing PowerShell commands (`Set-Content`, `Out-File`), shell redirects, or Python one-liners (`python -c "open(...).write(...)"`) to create, edit, or overwrite project files unless explicitly asked by the user or strictly necessary (e.g. running Monte Carlo simulations in `System_Tools/`). File modifications must remain native, transparent, and reviewable.
+
 ---
 
 ## 3. Official Style & Formatting Guide
