@@ -117,6 +117,19 @@ Whenever a weapon deals damage, its **Damage Type** applies its single universal
 *   **`[Hacking]`:** **Shield Splitter.** If the defender uses a **Shield** to block/parry the hit, their shield is instantly damaged (loses its armor bonus for the remainder of the encounter).
 *   **`[Crushing]`:** **Concussive Force.** Adds **+1 to Impact Size** for Stagger checks; scoring **2+ successes** knocks humanoid targets **Prone**.
 
+### Standard Tactical Weapon Traits
+
+| Trait | Category | Mechanical Function |
+| :--- | :--- | :--- |
+| `Heavy` | Offensive | Adds **+1 to Impact Size** when calculating Stagger. Requires two hands (**2H**). |
+| `Cleave X` | Offensive | Sweeps across frontline ranks. Deals damage simultaneously to up to **X adjacent standard targets** or up to **X lowest active health dice** in an enemy Mob. |
+| `Reach` | Tactical | Allows melee attacks against targets in an adjacent connected Zone without moving into that Zone, or from behind an allied Mob. |
+| `Concealable` | Utility | Compact profile (**Bulk 1**). Can be drawn or stowed as an incidental **Free Action** once per turn. |
+| `Versatile` | Tactical | Balanced one-handed profile (**1H**). Can be swung with two hands to gain **+1 Impact Size**. |
+| `Flexible` | Tactical | Flail or chain link. Bypasses enemy shield cover and cannot be Parried. |
+| `Scavenged Ammo`| Utility | Uses stones or rubble freely found in any Zone (0 Bulk ammo). |
+| `Fast Throw` | Tactical | Can be thrown without stowing your equipped off-hand weapon or shield. |
+
 ---
 
 ## Formal Weapon Structural Schema
@@ -131,32 +144,13 @@ All weapon instances, armory catalogues, and custom forge chassis adhere strictl
 *   **Bulk:** [Integer 0 to 3+]
 *   **Attack Dice Bonus:** [+0d (Light) | +1d (Medium) | +2d (Heavy)]
 *   **Damage Type:** [Stabbing | Slashing | Hacking | Crushing]
-*   **Range:** [Melee | 1 Zone | 2 Zones | 3 Zones]
+*   **Range:** [Current Zone (Melee) | 1 Zone | 2 Zones | 3 Zones]
 *   **Break Roll Threshold:** [Breaks on 1–4 | Breaks on 1–3 | Breaks on 1–2 | Breaks on 1 | Never breaks]
-*   **Special Tag:** [Optional: Reach, Concealable, Scavenged Ammo]
+*   **Tactical Traits:** [`Heavy`, `Cleave X`, `Reach`, `Concealable`, `Versatile`, `Flexible`, `Fast Throw`]
+*   **Elemental / Material Tags:** [Optional bracketed tags, e.g. `[Fire]`, `[Spiked]`, `[Silvered]`]
 ```
 
-### Starter Weapons Reference Ledger
-
-#### Melee Weapons
-
-| Weapon Name | Hands | Bulk | Attack Bonus | Damage Type | Range | Special Traits | Break Roll |
-| :--- | :---: | :---: | :---: | :--- | :---: | :--- | :---: |
-| **Bone Shiv / Shank** | **1H** | **1** | **+0d** | `[Stabbing]` | Melee | `[Concealable]` (draw as Free Action) | 1–4 |
-| **Shortsword** | **1H** | **2** | **+1d** | `[Slashing]` | Melee | Balanced infantry blade | 1–3 |
-| **Scrap Cleaver** | **1H** | **2** | **+1d** | `[Hacking]` | Melee | Heavy butcher edge | 1–3 |
-| **Spiked Club / Mace** | **1H** | **2** | **+1d** | `[Crushing]` | Melee | Splintered oak with iron nails | 1–4 |
-| **Goblin Shortspear** | **1H** | **2** | **+1d** | `[Stabbing]` | Melee | `[Reach]` (strikes from behind allies) | 1–3 |
-| **Scrap Greataxe** | **2H** | **3** | **+2d** | `[Hacking]` | Melee | Heavy two-handed cleave | 1–3 |
-| **Great-Hammer** | **2H** | **3** | **+2d** | `[Crushing]` | Melee | Massive blunt obliteration | 1–3 |
-
-#### Ranged Weapons
-
-| Weapon Name | Hands | Bulk | Attack Bonus | Damage Type | Range | Special Traits | Break Roll |
-| :--- | :---: | :---: | :---: | :--- | :---: | :--- | :---: |
-| **Leather Sling** | **1H** | **1** | **+0d** | `[Crushing]` | 1 Zone | `[Scavenged Ammo]` (0 Bulk ammo) | 1–4 |
-| **Throwing Daggers (3)** | **1H** | **1** | **+0d** | `[Stabbing]` | 1 Zone | `[Fast Throw]` (throw without stowing) | 1–3 |
-| **Goblin Shortbow** | **2H** | **2** | **+1d** | `[Stabbing]` | 2 Zones | Fires across 2 Zones | 1–3 |
+>> *Note: The complete weapons catalog is maintained in [Equipment, Gear & Custom Crafting](13_Equipment_and_Crafting.md).*
 
 ---
 
@@ -203,14 +197,7 @@ All protective gear instances and shields adhere strictly to this schema:
 *   **Elemental / Material Tags:** [Optional bracketed tags, e.g. `[Reinforced]`, `[Spiked]`, `[Insulated]`]
 ```
 
-### Starter Armor & Shields Reference Ledger
-
-| Armor / Shield Name | Quality | Bulk | Slot | Break Roll | Armor Dice | Mobility Penalties & Special Rules |
-| :--- | :---: | :---: | :---: | :---: | :---: | :--- |
-| **Padded Rag Tunic** | T1 | 1 | Worn | 1–4 | **+1d** | *Light:* Quilted burlap rags. Zero penalties. |
-| **Boiled Hide Armor** | T2 | 1 | Worn | 1–3 | **+1d** | *Light:* Cured reptile hide. Zero penalties. |
-| **Cobbled Scrap-Plate** | T2 | 2 | Worn | 1–3 | **+2d** | *Medium:* Imposes **Bane 1 (-1d)** on all **Slink** tests. |
-| **Spiked Pot-Lid Shield**| T2 | 1 | 1H | 1–3 | **+1d** | *Shield:* Adds **+1d Armor Die**; enables **Parry Reaction** (**Tough** test). |
+>> *Note: The complete armor and shields catalog is maintained in [Equipment, Gear & Custom Crafting](13_Equipment_and_Crafting.md).*
 
 ---
 
@@ -252,18 +239,7 @@ All adventuring gear, tools, and consumables adhere strictly to this schema:
 *   **Loot Value** *(Plunder only)*: [Tier 1–5 Value tokens]
 ```
 
-### Starter Tools & Consumables Reference Ledger
-
-| Item Name | Quality | Bulk | Category | Break / Uses | Mechanical Function & Rule |
-| :--- | :---: | :---: | :---: | :---: | :--- |
-| **Crude Bone Wire** | T1 | 0 | Tool | 1–4 | *Picks:* Allows picking crude locks; fumbling snaps the wire instantly. |
-| **Heavy Crowbar** | T2 | 1 | Tool | 1–3 | *Leverage:* Grants **Boon 1 (+1d)** to **Tough** tests to force doors or smash chests. |
-| **Hemp Rope & Iron Hook**| T2 | 1 | Tool | 1–3 | *Climbing:* Scale vertical walls without a test; snag Bulk 1–2 items 1 Zone away. |
-| **Torch** | T1 | 1 | Consumable| 1 Raid Phase | *Light & Weapon:* Strips `[Dark]`. Usable as melee weapon carrying `[Fire, Light]`. |
-| **Bag of Caltrops** | T2 | 1 | Consumable| 1 Zone Use | *Zone Trap:* Moving through forces `Slink 5+/1` test or creature halts and takes 1 Damage. |
-| **Fire Flask (Molotov)** | T2 | 1 | Consumable| 1 Use | *Fireblast:* Thrown 1 Zone. `Threat 5+/1`, 2 Damage, `[Fire]`. Sets terrain `[Burning]`. |
-| **Choking Smoke Pot** | T2 | 1 | Consumable| 1 Use | *Screen:* Thrown 1 Zone. `Threat 4+/1`, 0 Damage, `[Gaseous]`. Fills Zone with fog (`[Dark]`). |
-| **Troll-Slime Poultice** | T2 | 0 | Consumable| 1 Use | *First Aid:* Standard Action. Restores **1 Grit**; roll `Tough 5+/1` or suffer nausea 1 round. |
+>> *Note: The complete tools, consumables, and exploration gear catalog is maintained in [Equipment, Gear & Custom Crafting](13_Equipment_and_Crafting.md).*
 
 ---
 

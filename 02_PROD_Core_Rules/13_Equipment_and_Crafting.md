@@ -104,6 +104,19 @@ Whenever a weapon deals damage, its **Damage Type** applies its single universal
 *   **`[Hacking]`:** **Shield Splitter.** If the defender uses a **Shield** to block/parry the hit, their shield is instantly damaged (loses its armor bonus for the remainder of the encounter).
 *   **`[Crushing]`:** **Concussive Force.** Adds **+1 to Impact Size** for Stagger checks; scoring **2+ successes** knocks humanoid targets **Prone**.
 
+### Standard Tactical Weapon Traits
+
+| Trait | Category | Mechanical Function |
+| :--- | :--- | :--- |
+| `Heavy` | Offensive | Adds **+1 to Impact Size** when calculating Stagger. Requires two hands (**2H**). |
+| `Cleave X` | Offensive | Sweeps across frontline ranks. Deals damage simultaneously to up to **X adjacent standard targets** or up to **X lowest active health dice** in an enemy Mob. |
+| `Reach` | Tactical | Allows melee attacks against targets in an adjacent connected Zone without moving into that Zone, or from behind an allied Mob. |
+| `Concealable` | Utility | Compact profile (**Bulk 1**). Can be drawn or stowed as an incidental **Free Action** once per turn. |
+| `Versatile` | Tactical | Balanced one-handed profile (**1H**). Can be swung with two hands to gain **+1 Impact Size**. |
+| `Flexible` | Tactical | Flail or chain link. Bypasses enemy shield cover and cannot be Parried. |
+| `Scavenged Ammo`| Utility | Uses stones or rubble freely found in any Zone (0 Bulk ammo). |
+| `Fast Throw` | Tactical | Can be thrown without stowing your equipped off-hand weapon or shield. |
+
 ---
 
 ### Master Mundane Weapons Ledger
