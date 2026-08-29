@@ -5,3 +5,4 @@ Inspiration/
 *.env
 dist/status.json
 05_System_Tools/rulebook-site/dist/status.json
+.obsidian/

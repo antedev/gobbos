@@ -37,13 +37,13 @@
 | `08_Magic/00_Magic_Rules.md` | Farkle Magic Loop | **Superseded** | Fully codified in `08_Magic_and_Bangaranga.md`. Archived. |
 | **`01_Character_Options/11_Character_Creation.md`** | Character Creation | **Active STAGE Queue** | Contains the **Insta-Gobbo Table** and **Gang Shenanigans** not in PROD. |
 | **`01_Character_Options/11a_Roles.md`** | The 16 Roles Matrix | **Active STAGE Queue** | Contains full Level 2–5 skills for all 16 Specialist/Hybrid roles. |
-| **`01_Character_Options/14_Feats.md`** | Feats & Twists | **Active STAGE Queue** | Contains starting feat atoms, twist rules, and tier gating. |
-| **`01_Character_Options/16_Unified_Modular_Powers_System.md`** | Modular Powers Toolkit | **Active STAGE Queue** | The 6-category engine unifying feats, shenanigans, components, and spells. |
-| **`02_Equipment_and_Crafting/34_Crafting.md`** | Component Crafting Engine | **Active STAGE Queue** | Contains **Flaw (F0–F3)**, Cores/Modifiers/Stabilisers, Blueprints, and Boss Relics. |
-| **`02_Equipment_and_Crafting/35_Equipment_Catalogue.md`** | Equipment & Plunder | **Active STAGE Queue** | Full catalogue of melee/ranged weapons, armor, tools, and Break Rolls. |
-| **`03_Bestiary_and_Threats/21_Bestiary.md`** | Monster Statblocks | **Active STAGE Queue** | Full bestiary of beasts, town guards, undead, monstrosities, fiends. |
-| **`04_Tags_and_Keywords/06_Keywords_Index.md`** | Master Terminology | **Active STAGE Queue** | Master system glossary for quick in-game cross-referencing. |
-| **`04_Tags_and_Keywords/08_Master_Tag_Index.md`** | Tags & Synthesis | **Active STAGE Queue** | Master elemental dictionary and chemical synthesis combinations. |
+| `01_Character_Options/14_Feats.md` | Feats & Twists | **Active STAGE Queue** | Contains starting feat atoms, twist rules, and tier gating. |
+| `01_Character_Options/16_Unified_Modular_Powers_System.md` | Modular Powers Toolkit | **Active STAGE Queue** | The 6-category engine unifying feats, shenanigans, components, and spells. |
+| **`02_Equipment_and_Crafting/34_Crafting.md`** | Component Crafting Engine | **PROD Promoted** | Fully audited and codified in `02_PROD_Core_Rules/13_Equipment_and_Crafting.md`. |
+| **`02_Equipment_and_Crafting/35_Equipment_Catalogue.md`** | Equipment & Plunder | **PROD Promoted** | Fully audited and codified in `02_PROD_Core_Rules/13_Equipment_and_Crafting.md`. |
+| `03_Bestiary_and_Threats/21_Bestiary.md` | Monster Statblocks | **Active STAGE Queue** | Full bestiary of beasts, town guards, undead, monstrosities, fiends. |
+| `04_Tags_and_Keywords/06_Keywords_Index.md` | Master Terminology | **Active STAGE Queue** | Master system glossary for quick in-game cross-referencing. |
+| `04_Tags_and_Keywords/08_Master_Tag_Index.md` | Tags & Synthesis | **Active STAGE Queue** | Master elemental dictionary and chemical synthesis combinations. |
 
 ---
 
