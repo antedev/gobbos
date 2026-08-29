@@ -178,44 +178,65 @@ Your **Role** is calculated by comparing your **Primary Stat** (your highest Mai
 
 ---
 
-### 2. Role Skills (Innate Archetype Perks)
+### 2. Role Skill Mechanics & Structural Formula
 
-Each **Role** grants **1 unique, scaling Role Skill** that embodies that archetype's tactical edge.
+Every **Role** grants exactly **1 innate Role Skill** that defines that archetype's tactical profile on the table.
 
-*   **Innate & Free (No XP Cost):** Role Skills are not purchased with XP and do not consume personal **Feat** slots. They are granted automatically by your active stat configuration.
-*   **Cumulative Progression Track:** A Role Skill progresses along a single, continuous track from Level 2/3 up to Level 5. Higher levels add to and enhance lower-level benefits rather than replacing them, ensuring that leveling up never penalizes prior utility.
-*   **Dynamic Role Shifting (Zero XP Waste):** If spending XP during downtime in the Lair causes your stat spread to shift into a new archetype (e.g., raising Slink turns a *Meat-Wall* into a *Raider*), your Boss immediately assumes the new **Role** title and gains the new **Role Skill** at your new **Role Level** for free.
-*   **Distinction from Feats:**
-    *   **Personal Feats:** Modular abilities purchased with XP (up to 3 Feats), customizable with **Twists**.
-    *   **Role Skills:** Exactly 1 signature ability per Boss, automatically scaled by your current **Role Level**.
-    *   **Gang Feats:** Collective faction powers unlocked via Gang **Infamy** and the **Ancestral Mojo Wall**.
+*   **Innate & Free (No XP Cost):** Role Skills are granted automatically by your active **Main Stats** spread and do not consume personal **Feat** slots.
+*   **Dynamic Role Shifting:** If your stat spread changes during downtime in the Lair (e.g., raising Slink turns *The Meat-Wall* into *The Raider*), your Boss immediately adopts the new **Role** title and gains its corresponding **Role Skill** for free.
+*   **The Structural Formula:** Every Role Skill combines a direct **Active Engine** (bonus dice pool boons on tests) with a **Passive Secondary Perk** (flat boosts to derived secondary stats):
+
+**Role Skill** = **[Primary Stat Active Engine]** + **[Secondary Stat Passive Perk]**
+
+#### Archetype Power Profiles:
+1.  **Specialist Roles (Gap >= 2):**
+    *   *Primary Active Engine:* Supercharged **+2d6 Boon** on all action tests made with your Primary Stat.
+    *   *Secondary Passive Boost:* Boosts **both** secondary derived tracks of your primary discipline by **+1** (e.g., Tough Specialist gains **+1 Max Grit** AND **+4 Carry Capacity**).
+2.  **Hybrid Roles (Gap <= 1):**
+    *   *Primary Active Engine:* **+1d6 Boon** on all action tests made with your Primary Stat.
+    *   *Secondary Passive Edge:* Grants **+1** to a single secondary derived track chosen from your secondary discipline (e.g., Tough + Slink Hybrid gains **+1 Zone Movement**).
 
 ---
 
-### 3. The 16 Archetypes Reference Matrix
+### 3. The 16 Roles Reference Ledger
 
-The table below outlines the 16 core **Roles** across all four primary disciplines (4 Specialists and 12 Hybrids):
+The following reference ledger contains the complete mechanical profiles for all 16 starting **Role Skills** (4 Specialists and 12 Hybrids):
 
-| Primary Stat | Archetype Category | Role Title | Stat Configuration | Role Level Calculation | Core Tactical Vibe |
-| :--- | :--- | :--- | :--- | :--- | :---: |
-| **TOUGH** | **Specialist** | **The Meat-Wall** | Tough >= Secondary + 2 | Tough Level (3–5) | Scarred damage sponge; absorbs massive punishment. |
-| **TOUGH** | **Hybrid** | **The Raider** | Tough + Slink | Slink Level (2–5) | Violent shock-trooper; charges and smashes lines on the run. |
-| **TOUGH** | **Hybrid** | **The Enforcer** | Tough + Mouth | Mouth Level (2–5) | Brutal bully; beats enemies and intimidates mobs into action. |
-| **TOUGH** | **Hybrid** | **The Iron-Tinker** | Tough + Brains | Brains Level (2–5) | Heavy scrap-armored juggernaut; swings customized bludgeons. |
-| **SLINK** | **Specialist** | **The Scuttler** | Slink >= Secondary + 2 | Slink Level (3–5) | Shadow ghost; slips through cracks and evades danger. |
-| **SLINK** | **Hybrid** | **The Gut-Cutter** | Slink + Tough | Tough Level (2–5) | Lethal assassin; strikes distracted targets from behind. |
-| **SLINK** | **Hybrid** | **The Ring-Leader** | Slink + Mouth | Mouth Level (2–5) | Slippery agitator; shouts orders from safety and cover. |
-| **SLINK** | **Hybrid** | **The Saboteur** | Slink + Brains | Brains Level (2–5) | Infiltration expert; bypasses locks and rigs deadly traps. |
-| **MOUTH** | **Specialist** | **The Over-Lord** | Mouth >= Secondary + 2 | Mouth Level (3–5) | Tyrannical loudmouth; wears the biggest hat and hides behind runts. |
-| **MOUTH** | **Hybrid** | **The Taskmaster** | Mouth + Tough | Tough Level (2–5) | Cruel driver; sacrifices runt lives to frenzy mobs. |
-| **MOUTH** | **Hybrid** | **The Swindler** | Mouth + Slink | Slink Level (2–5) | Fast-talking trickster; misdirects enemy attacks into each other. |
-| **MOUTH** | **Hybrid** | **The Chant-Monger** | Mouth + Brains | Brains Level (2–5) | Rhythm chanter; turns magical formulas into goblin war-songs. |
-| **BRAINS** | **Specialist** | **The Sage-Tinker** | Brains >= Secondary + 2 | Brains Level (3–5) | Mad inventor; crafts volatile devices, bombs, and contraptions. |
-| **BRAINS** | **Hybrid** | **The Runecaster** | Brains + Tough | Tough Level (2–5) | Runic warrior; etches elemental glyphs onto blades and armor. |
-| **BRAINS** | **Hybrid** | **The Hex-Weaver** | Brains + Slink | Slink Level (2–5) | Shadow spell-sniper; hurls curses and bolts from stealth. |
-| **BRAINS** | **Hybrid** | **The Shaman** | Brains + Mouth | Mouth Level (2–5) | Tribal mystic; channels elemental spirit energy through mobs. |
+#### 🔴 Tough Archetypes (Primary: Tough)
 
->> *Note: The complete 5-level cumulative progression tracks and mechanical rules for all 16 Role Skills are maintained in the Character Options Compendium.*
+| Role Title | Archetype | Configuration | Active Engine (Primary) | Passive Perk (Secondary) |
+| :--- | :--- | :---: | :--- | :--- |
+| **The Meat-Wall** | Specialist | Tough >= Sec + 2 | **+2d6 Boon** on all **Tough** Melee attacks and physical feats of strength. | **+1 Max Grit** (starts at 5 Grit) **AND +4 Carry Capacity** (starts at 10 Bulk). |
+| **The Raider** | Hybrid | Tough + Slink | **+1d6 Boon** on all **Tough** Melee attacks. | **+1 Zone Movement** on **Move** actions (runs 3 Zones per Move). |
+| **The Enforcer** | Hybrid | Tough + Mouth | **+1d6 Boon** on all **Tough** Melee attacks. | **+1 Free Order per round** (usable for brutal melee command). |
+| **The Iron-Tinker**| Hybrid | Tough + Brains | **+1d6 Boon** on all **Tough** Melee attacks. | **+1 Max Grit** from bolted scrap-armor plates (starts at 5 Grit). |
+
+#### 🔵 Slink Archetypes (Primary: Slink)
+
+| Role Title | Archetype | Configuration | Active Engine (Primary) | Passive Perk (Secondary) |
+| :--- | :--- | :---: | :--- | :--- |
+| **The Scuttler** | Specialist | Slink >= Sec + 2 | **+2d6 Boon** on all **Slink** Evasion, Stealth, and Infiltration tests. | **+1 Zone Movement** (runs 4 Zones per Move) **AND +1d Passive Armor Die** (dodging). |
+| **The Gut-Cutter** | Hybrid | Slink + Tough | **+1d6 Boon** on all **Slink** Ranged and Sneak-Attack tests. | **+1 Max Grit** (starts at 4 Grit; survives close shaves). |
+| **The Ring-Leader**| Hybrid | Slink + Mouth | **+1d6 Boon** on all **Slink** Stealth and Evasion tests. | **+1 Free Order per round** (issuing orders from full cover or stealth). |
+| **The Saboteur** | Hybrid | Slink + Brains | **+1d6 Boon** on all **Slink** Infiltration and Sleight-of-Hand tests. | Automatically spot non-magical traps in your Zone without an action. |
+
+#### 🟡 Mouth Archetypes (Primary: Mouth)
+
+| Role Title | Archetype | Configuration | Active Engine (Primary) | Passive Perk (Secondary) |
+| :--- | :--- | :---: | :--- | :--- |
+| **The Over-Lord** | Specialist | Mouth >= Sec + 2 | **+2d6 Boon** on all **Mouth** Command, Intimidation, and Rebellion tests. | **+1 Free Order per round** (2 Free Orders total) **AND +1 Max Commanded Mob**. |
+| **The Taskmaster** | Hybrid | Mouth + Tough | **+1d6 Boon** on all **Mouth** Command and Rebellion tests. | **+1 Max Commanded Mob Size** (commands Mobs of Size up to Grunt + 1). |
+| **The Swindler** | Hybrid | Mouth + Slink | **+1d6 Boon** on all **Mouth** Bluff, Feint, and Misdirection tests. | **+1d Passive Dodge Die** when an ally or Mob is in your Zone. |
+| **The Chant-Monger**| Hybrid | Mouth + Brains | **+1d6 Boon** on all **Mouth** Command tests. | Add **+1 free Bangaranga Die** to the communal pool when an allied Mob passes a test (max 1/round). |
+
+#### 🟣 Brains Archetypes (Primary: Brains)
+
+| Role Title | Archetype | Configuration | Active Engine (Primary) | Passive Perk (Secondary) |
+| :--- | :--- | :---: | :--- | :--- |
+| **The Sage-Tinker**| Specialist | Brains >= Sec + 2| **+2d6 Boon** on all **Brains** Trap, Hazard, Salvage, and Mechanism tests. | **1 Free Reroll per raid** on any failed test **AND +2 Inventory Component Slots**. |
+| **The Runecaster** | Hybrid | Brains + Tough | **+1d6 Boon** on all **Brains** Hazard and Tactical analysis tests. | **+1 Max Grit** from etched defensive glyphs (starts at 4 Grit). |
+| **The Hex-Weaver** | Hybrid | Brains + Slink | **+1d6 Boon** on all **Brains** Perception and Threat-spotting tests. | **+1 Zone Range** on all ranged weapons, slings, and thrown consumables. |
+| **The Shaman** | Hybrid | Brains + Mouth | **+1d6 Boon** on all **Brains** tests and occult understanding. | Commanded Mobs gain a **+1d Boon** to resist all Morale and Swarm Terror checks. |
 
 ---
 
@@ -410,23 +431,88 @@ Every Gang possesses a defining cultural trait called a **Shenanigan** (e.g. *Py
 
 ---
 
-## Feat Structural Schema
+## 8. Feat Mechanics & Structural Schema
 
-Feats are modular personal abilities that modify dice outcomes, manipulate conditions, or alter the action economy. Every Feat must conform to the following formal schema:
+Feats are modular personal abilities that grant new tactical permissions, modify dice outcomes, or alter the action economy.
+
+### 1. The Core Feat Rules
+*   **The Personal Feat Limit:** A **Goblin Boss** can maintain a maximum of **three (3) Personal Feats** simultaneously.
+*   **Starting Feat:** At character creation, a new Boss selects **one (1) Tier 1 Feat** matching any stat where the Boss has at least **Level 1** (or a **General Feat**).
+*   **Stat Gating (Tier Requirements):** Feats are rated from **Tier 1 (T1)** to **Tier 5 (T5)**. To learn a Tier X Feat, your Boss's underlying relevant **Main Stat** (**Tough**, **Slink**, **Mouth**, or **Brains**) must be equal to or greater than X. **General Feats** have no stat prerequisite.
+*   **Activation Costs:** Every Feat specifies its activation cost (**Passive**, **1 Free Action**, **1 Standard Action**, **1 Reaction**, or **1 Grunt**).
+
+---
+
+### 2. Feat Structural Schema
+
+Every Feat in the game adheres to the following formal data structure:
 
 ```markdown
-### [CONTENT INSTANCE: Boss Feat]
-**Name**: <Feat Name>
-**Category**: <Tough | Slink | Brains | Mouth | General | Gang Legacy>
-**Tier**: <T1 | T2 | T3 | T4 | T5>
-**Prerequisite**: <Stat Name> Level >= Tier
-**Cost**: <Passive | 1 Grunt | 1 Standard Action | 1 Reaction | 1 Free Order>
-**Trigger**: <Passive | On Hit | On Dodge | On Fumble | Start of Turn | Action Declaration>
-**Target Hub**: <Self | Allied Mob | Enemy in Zone | Zone Environment>
-**Mechanical Effect**: <Direct Tier A rule specifying dice modification, condition, or action bypass>
-**Twist Slots**: <1 Twist Max | 0 Twists>
-**Keywords**: <[Keywords from Master Index]>
+### [Feat Name]
+- **Category:** [Tough | Slink | Mouth | Brains | General | Gang Mojo]
+- **Tier & Prerequisite:** [T1–T5 | Stat Level >= Tier]
+- **Cost & Trigger:** [Passive | 1 Free Action | 1 Standard Action | 1 Reaction | 1 Grunt]
+- **Mechanical Effect:** [Direct Tier A rule specifying the mechanical interaction]
+- **Keywords:** [Keywords from Master Tag Index]
 ```
 
-### [CONTENT EXTENSION POINT: Boss Feats & Talents]
-*All specific Boss Feats, talent trees, and Twist modifiers are maintained in the modular Feats Compendium and attach directly to the core rules via the schema above.*
+---
+
+### 3. Starter Feats Reference Ledger (Tiers 1 & 2)
+
+The following reference ledger contains the starting catalogue of personal **Feats** available for character creation and early progression:
+
+#### 🔴 Tough Feats (Brute Force & Impacts)
+
+| Feat Name | Tier & Prereq | Cost & Trigger | Mechanical Effect | Keywords |
+| :--- | :---: | :--- | :--- | :--- |
+| **Batter-Up!** | **T1** (Tough 1+) | **Passive** (On Heavy Melee hit) | When you hit with a Heavy or Two-Handed weapon, shove the target **1 Zone backward** (into an adjacent Zone or against a wall). | `[Melee]`, `[Forced Move]` |
+| **Bowling Strike** | **T2** (Tough 2+) | **Passive** (On Collision) | When an enemy is shoved into another creature or wall, both creatures take **1 flat damage** and are knocked **Prone**. | `[Impact]`, `[Prone]` |
+| **Skull-Scab** | **T1** (Tough 1+) | **1 Reaction** (When enemy misses you or stands from Prone) | Make an immediate undefended Headbutt attack against that enemy, dealing **1 flat damage**. | `[Melee]`, `[Reaction]` |
+| **Thick Scab** | **T1** (Tough 1+) | **Passive** (Once per raid) | When incoming damage would reduce your **Grit** to 0, ignore that instance of damage and remain at 1 Grit. | `[Survival]`, `[Grit]` |
+| **Juggernaut Push** | **T2** (Tough 2+) | **Passive** (On Move action) | Smash through wooden doors, barricades, or weak walls during movement without spending extra actions or making a roll. | `[Movement]`, `[Breach]` |
+
+#### 🔵 Slink Feats (Agility, Climbing & Stabs)
+
+| Feat Name | Tier & Prereq | Cost & Trigger | Mechanical Effect | Keywords |
+| :--- | :---: | :--- | :--- | :--- |
+| **Spring-Heeled** | **T1** (Slink 1+) | **Passive** (On Move action) | Leap vertically up to 2 meters (onto ledges, wagons, beams, chandeliers) without spending extra movement or rolling athletics. | `[Movement]`, `[Vertical]` |
+| **Wall-Scrawler** | **T1** (Slink 1+) | **Passive** | Gain a **+1d Boon** on climb tests, and you can end your turn clinging to sheer walls or ceilings. | `[Climb]`, `[Position]` |
+| **Drop-Stab** | **T2** (Slink 2+) | **Passive** (Melee attack from higher elevation or falling) | Gain a **+2d Attack Boon** on your melee strike and knock the target **Prone** on hit. | `[Melee]`, `[High Ground]` |
+| **Slip Away** | **T1** (Slink 1+) | **1 Free Action** (Start of turn in Cover/Darkness) | Immediately enter **Stealth** without spending a Standard Action. | `[Stealth]`, `[Cover]` |
+| **Scurry-Dodge** | **T2** (Slink 2+) | **Passive** (On successful Dodge) | When you successfully Dodge an incoming attack, immediately **Move 1 Zone for free**. | `[Evasion]`, `[Reaction Move]` |
+
+#### 🟡 Mouth Feats (Screaming, Bullying & Herds)
+
+| Feat Name | Tier & Prereq | Cost & Trigger | Mechanical Effect | Keywords |
+| :--- | :---: | :--- | :--- | :--- |
+| **"Look Behind You!"** | **T1** (Mouth 1+) | **1 Free Action** (Once per round) | Point and scream at an enemy in your Zone. That target suffers **-1d Bane** on their next **Defence Roll** this round. | `[Deception]`, `[Bane]` |
+| **Meat-Shield Shove** | **T1** (Mouth 1+) | **1 Reaction / 1 Grunt** (When taking damage) | Redirect the incoming hit entirely to an adjacent friendly Runt or enemy in your Zone. | `[Sacrifice]`, `[Defence]` |
+| **Pile-On!** | **T2** (Mouth 2+) | **1 Reaction** (When you hit in melee) | An allied **Mob** in your Zone immediately makes a free out-of-turn **Attack** against that same target. | `[Mob]`, `[Synergy]` |
+| **Bullhorn Roar** | **T1** (Mouth 1+) | **1 Standard Action** | Scream so loud that all Standard humanoid enemies in your Zone must pass `Tough 4+/1` or lose 1 action on their next turn. | `[Intimidation]`, `[Hesitate]` |
+| **Whip-Crack Drive** | **T2** (Mouth 2+) | **1 Free Order** | Grant a commanded **Mob** +1 bonus Action this turn, but the Mob suffers **1 damage** (loses 1 pip on a health die) from exhaustion. | `[Mob]`, `[Overdrive]` |
+
+#### 🟣 Brains Feats (Traps, Dirty Tricks & Contraptions)
+
+| Feat Name | Tier & Prereq | Cost & Trigger | Mechanical Effect | Keywords |
+| :--- | :---: | :--- | :--- | :--- |
+| **Pocket Sand** | **T1** (Brains 1+) | **1 Standard Action** | Fling grit/pepper at an enemy in your Zone. The target is **Blinded** until the end of their next turn. | `[Dirty Trick]`, `[Blinded]` |
+| **Tripwire Rigger** | **T2** (Brains 2+) | **1 Standard Action** | Rig an improvised snare in your Zone. The next enemy entering must pass `Slink 4+/1` or become **Restrained** and **Prone**. | `[Trap]`, `[Restrained]` |
+| **Shrapnel Master** | **T1** (Brains 1+) | **Passive** (Detonating Bomb/Flask) | When you detonate any explosive bomb or flask, its blast expands to engulf **+1 adjacent Zone**. | `[Explosive]`, `[Area]` |
+| **Weak-Spot Tapping**| **T2** (Brains 2+) | **1 Standard Action** | Study an enemy in your Zone. Your next attack against them completely ignores their **Passive Armor Dice**. | `[Tactics]`, `[Armor Piercing]` |
+| **Quick-Rig** | **T1** (Brains 1+) | **1 Standard Action** | Temporarily patch a broken weapon/shield for the raid, or jimmy a standard door lock in 1 action with no tools. | `[Utility]`, `[Crafting]` |
+
+#### ⚪ General Feats (Gremlin Tactics & Scavenging)
+
+| Feat Name | Tier & Prereq | Cost & Trigger | Mechanical Effect | Keywords |
+| :--- | :---: | :--- | :--- | :--- |
+| **Ankle-Biter** | **T1** (General) | **Passive** | You suffer no penalties for attacking while **Prone**, and gain **+1d Attack Boon** against targets larger than yourself. | `[Combat]`, `[Prone]` |
+| **Gremlin Latch** | **T2** (General) | **1 Standard Action** (Target Size 2+) | Latch onto a larger foe's back. You move with them, and they cannot hit you in melee without spending an action to shake you off. | `[Grapple]`, `[Mount]` |
+| **Shiny-Snatcher** | **T1** (General) | **Passive** (On Melee hit) | When you hit an enemy in melee, make an immediate free `Slink 4+/1` check to snatch a pouch, potion, or item from their belt. | `[Plunder]`, `[Thievery]` |
+| **Scab-Eater** | **T1** (General) | **Passive** (1 min Breather outside combat) | Restore **+1 lost Grit** without using healing supplies or grog. | `[Recovery]`, `[Grit]` |
+
+---
+
+### [CONTENT EXTENSION POINT: High-Tier Feats & Mojo Wall]
+*Higher-tier Feats (T3–T5), Gang Ancestral Mojo Feats, and custom Twist modifiers are maintained in the modular Feats Compendium.*
+

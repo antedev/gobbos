@@ -95,33 +95,40 @@ When you roll a **Fumble** on an active combat test using an item (a roll contai
 | **Superior** | **T4** | Dwarven alloy, reinforced reptile hide, master smith work. | **Breaks on 1** |
 | **Legendary** | **T5** | Godstone alloy, void-touched crystal, ancient relic metal. | **Never Breaks** |
 
+### The 4 Universal Damage Types
+
+Whenever a weapon deals damage, its **Damage Type** applies its single universal mechanical rule:
+
+*   **`[Stabbing]`:** **Armor Penetration.** Attack hits **ignore 1 Passive Armor Die** from the target's worn armor or natural scales.
+*   **`[Slashing]`:** **Flesh Shredder.** Scoring **2+ successes** on the attack roll inflicts the **Bleeding** condition (the target takes 1 damage at the start of their next turn unless tended).
+*   **`[Hacking]`:** **Shield Splitter.** If the defender uses a **Shield** to block/parry the hit, their shield is instantly damaged (loses its armor bonus for the remainder of the encounter).
+*   **`[Crushing]`:** **Concussive Force.** Adds **+1 to Impact Size** for Stagger checks; scoring **2+ successes** knocks humanoid targets **Prone**.
+
 ---
 
 ### Master Mundane Weapons Ledger
 
 Melee attacks roll a **Dice Pool** equal to **Tough**; Ranged attacks roll **Slink** (see [Combat Engine](05_Combat_Engine.md)).
 
-| Weapon Name | Quality | Bulk | Hands | Range | Break Roll | Impact Size | Mechanical Profile & Boons |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **Sharpened Bone Shiv** | T1 | 1 | 1H | Melee | 1–4 | Size 1 | *Concealable:* Can be drawn as an incidental **Free Action**. |
-| **Crude Spiked Club** | T1 | 2 | 1H | Melee | 1–4 | Size 1 | *Heavy Wood:* Splintered log with rusty nails. |
-| **Rusty Cleaver** | T2 | 1 | 1H | Melee | 1–3 | Size 1 | *Chopper:* Standard goblin butcher blade. |
-| **Goblin Shortspear** | T2 | 2 | 1H | Melee | 1–3 | Size 1 | `[Reach]`: Can strike enemies in your zone from behind an ally. |
-| **Scrappy War-Flail** | T2 | 2 | 1H | Melee | 1–3 | Size 1 | `[Flexible]`: Ignores enemy shield cover benefits. |
-| **Scrap Greataxe** | T2 | 3 | 2H | Melee | 1–3 | Size 2 | `[Heavy]`: Adds **+1 to Impact Size**; requires 2 hands. |
-| **Leather Sling** | T1 | 1 | 1H | 1 Zone | 1–4 | Size 1 | *Scavenged Ammo:* Uses stones picked up freely in any zone. |
-| **Throwing Daggers (3)** | T2 | 1 | 1H | 1 Zone | 1–3 | Size 1 | *Fast Throw:* Can be thrown without stowing your off-hand. |
-| **Goblin Shortbow** | T2 | 2 | 2H | 2 Zones | 1–3 | Size 1 | *Rapid Shot:* Fires across 2 zones without penalty. |
-| **Scrappy Crossbow** | T2 | 2 | 2H | 2 Zones | 1–3 | Size 1 | *Winch Crank:* Requires **Brains 2** to reload and fire cleanly. |
-| **Soldier's Shortsword**| T3 | 2 | 1H | Melee | 1–2 | Size 1 | `[Balanced]`: Well-tempered human infantry blade. |
-| **Knight's Longsword** | T3 | 2 | 1H/2H | Melee | 1–2 | Size 1 | `[Versatile]`: Grants **Boon 1 (+1d)** when swung with two hands. |
-| **Heavy Halberd** | T3 | 3 | 2H | Melee/1Z| 1–2 | Size 2 | `[Heavy, Reach]`: **+1 Impact Size**. Can strike 1 adjacent zone. |
-| **Military Longbow** | T3 | 2 | 2H | 3 Zones | 1–2 | Size 1 | *High Tension:* Requires **Tough 2**. Grants **Boon 1 (+1d)** at 2+ zones. |
-| **Heavy Arbalest** | T3 | 3 | 2H | 3 Zones | 1–2 | Size 2 | `[Heavy]`: Requires **Tough 2** and **Brains 2**. **+1 Impact Size**. |
-| **Dwarven War-Pick** | T4 | 2 | 1H | Melee | 1 | Size 1 | `[Piercing]`: Bypasses 1 Passive Armor Die from target armor. |
-| **Dwarven Great-Hammer**| T4 | 3 | 2H | Melee | 1 | Size 3 | `[Crushing]`: Adds **+2 to Impact Size**; shatters stone barriers. |
-| **Dwarven Repeater** | T4 | 3 | 2H | 2 Zones | 1 | Size 1 | `[Rapid]`: Can make two Ranged Attacks with 1 Standard Action. |
-| **Ancient Titan Cleaver**| T5| 4 | 2H | Melee | **Never**| Size 3 | `[Crushing, Masterwork]`: **+2 Impact Size**, **Boon 1 (+1d)**. Req. **Tough 3**. |
+#### Melee Weapons
+
+| Weapon Name | Quality | Hands | Bulk | Attack Bonus | Damage Type | Range | Special Traits | Break Roll |
+| :--- | :---: | :---: | :---: | :---: | :--- | :---: | :--- | :---: |
+| **Bone Shiv / Shank** | T1 | **1H** | **1** | **+0d** | `[Stabbing]` | Melee | `[Concealable]` (draw as Free Action) | 1–4 |
+| **Shortsword** | T2 | **1H** | **2** | **+1d** | `[Slashing]` | Melee | Balanced infantry blade | 1–3 |
+| **Scrap Cleaver** | T2 | **1H** | **2** | **+1d** | `[Hacking]` | Melee | Heavy butcher edge | 1–3 |
+| **Spiked Club / Mace** | T1 | **1H** | **2** | **+1d** | `[Crushing]` | Melee | Splintered oak with iron nails | 1–4 |
+| **Goblin Shortspear** | T2 | **1H** | **2** | **+1d** | `[Stabbing]` | Melee | `[Reach]` (strikes from behind allies) | 1–3 |
+| **Scrap Greataxe** | T2 | **2H** | **3** | **+2d** | `[Hacking]` | Melee | Heavy two-handed cleave | 1–3 |
+| **Great-Hammer** | T2 | **2H** | **3** | **+2d** | `[Crushing]` | Melee | Massive blunt obliteration | 1–3 |
+
+#### Ranged Weapons
+
+| Weapon Name | Quality | Hands | Bulk | Attack Bonus | Damage Type | Range | Special Traits | Break Roll |
+| :--- | :---: | :---: | :---: | :---: | :--- | :---: | :--- | :---: |
+| **Leather Sling** | T1 | **1H** | **1** | **+0d** | `[Crushing]` | 1 Zone | `[Scavenged Ammo]` (0 Bulk ammo) | 1–4 |
+| **Throwing Daggers (3)** | T2 | **1H** | **1** | **+0d** | `[Stabbing]` | 1 Zone | `[Fast Throw]` (throw without stowing) | 1–3 |
+| **Goblin Shortbow** | T2 | **2H** | **2** | **+1d** | `[Stabbing]` | 2 Zones | Fires across 2 Zones | 1–3 |
 
 ---
 

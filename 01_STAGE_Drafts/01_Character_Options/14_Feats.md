@@ -1,89 +1,88 @@
-# 14. Feats & Twists
-
-> **THIS SECTION IS TO BE CONSIDERED A BIT OUTDATED. ALL THE RULES AROUND STILL CHANGE THAT WILL AFFECT THIS. THIS IS THEREFORE NOT TO SEEN AS A BLOCKER TO OTHER RULE CHANGES, BUT RATHER WE WILL COME BACK AND FINISH THIS ONCE ALL THE OTHER RULES ARE SOLIDIFIED.**
+# 14. Personal Boss Feats Catalogue
 
 *Goblins don't fight fair. They fight weird. When a tall-man swings a shiny sword, a goblin Boss doesn't block it—they duck, bite their ankle, and shove a friend in the way.*
 
-[[Feat|Feats]] are unique personal abilities that allow a Boss to manipulate dice outcomes, bypass combat restrictions, or alter the action economy. A [[Feat]] is a modular base action. The true chaos happens when you attach a [[Twist]]—a modifier that alters how the [[Feat]] works, creating a customized, volatile combination.
-
-All [[Feat|Feats]] and [[Twist|Twists]] are governed by the modular structure detailed in [16. Unified Modular Powers System](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md).
+This chapter details the modular catalogue of personal **Boss Feats**. Feats are distinct, individual abilities that grant new tactical permissions, alter the action economy, or manipulate conditions on the table.
 
 ---
 
-## 1. Acquiring Feats & The Limit
+## 1. Feat Rules Engine
 
-To prevent Bosses from forgetting their own chaotic repertoire mid-raid, a Boss is strictly limited in how many personal [[Feat|Feats]] they can maintain.
+### The Personal Limit
+To keep play fast and minimize cognitive bloat at the table:
+* A **Goblin Boss** can maintain a maximum of **three (3) Personal Feats** simultaneously.
+* At character creation, a starting Boss chooses **one (1) Tier 1 Feat** matching any attribute at Level 1 or higher (or any **General Feat**).
 
-*   **The Personal Limit:** A Boss can hold a maximum of 3 [[Personal Feats]].
-*   **Twist Limits:** Each [[Feat]] can hold exactly 1 [[Twist]]. 
+### Stat Gating & Progression
+Feats are rated from **Tier 1 (T1)** to **Tier 5 (T5)**.
+* To learn or upgrade to a Tier X Feat, your Boss's underlying relevant **Main Stat** (**Tough**, **Slink**, **Mouth**, or **Brains**) must be equal to or greater than X.
+* **General Feats** have no stat prerequisite.
 
-### Progression
-New [[Feat|Feats]] and [[Twist|Twists]] are acquired and upgraded during downtime:
-1.  **Character Creation:** A newly rolled Boss starts with 1 **Basic Feat** of their choice, and 0 [[Twist|Twists]].
-2.  **Leveling Up:** Every time a Boss permanently upgrades *any* stat by 1 point, they may choose to:
-    *   Learn 1 new [[Feat]] (if under the cap of 3).
-    *   Learn 1 new [[Twist]] and attach it to an existing [[Feat]].
-    *   Upgrade an existing [[Feat]] or [[Twist]] to a higher [[Tier]].
-
-### Stat Gating (Tier Requirements)
-[[Feat|Feats]] and [[Twist|Twists]] are rated by **Tier (T1–T5)**. To learn or upgrade to a [[Tier]] X [[Feat]] or [[Twist]], the Boss's underlying relevant Stat ([[Tough]], [[Slink]], [[Mouth]], or [[Brains]]) must be equal to or greater than X.
-> **Example:** To learn the **T3** [[Tough]] [[Feat]] **Head Chopper**, you must have [[Tough]] 3 or higher.
-
----
-
-## 2. Gang Feats & Infamy
-
-[[Gang Feats]] are powerful, legendary abilities that belong to the [[Gang]] as a whole. They are acquired when a Boss reaches Level 6 in any stat and retires as an [[Elder]], or dies gloriously and joins the [[Pile of Bones]] (see [12. Gangs](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters & Mobs/12_Gang.md)).
-
-*   **The [[Infamy]] Limit:** [[Gang Feats]] **do not** count toward a Boss's personal limit of 3. Instead, the maximum number of [[Gang Feats]] a starting Boss can bring on a raid is determined by the [[Gang]]'s [[Infamy]] score. 
+### Action Costs & Triggers
+Every Feat specifies its activation cost:
+* **Passive:** Always active or triggers automatically when conditions are met.
+* **1 Free Action:** Activated once per round on your turn without consuming Standard Actions.
+* **1 Standard Action:** Consumes 1 of your 3 Standard Actions on your turn.
+* **1 Reaction:** Triggered immediately out-of-turn in response to an enemy or environmental event.
+* **1 Grunt:** Requires spending 1 point of current **Grunt** momentum.
 
 ---
 
-## 3. Activation Costs
+## 2. Starter Feats Ledger (Tiers 1 & 2)
 
-To use a [[Feat]], the Boss must pay its associated cost (detailed in [16. Unified Modular Powers System](file:///c:/Users/ante/Documents/github/gobbos/01_STAGE_Drafts/01_Characters & Mobs/16_Unified_Modular_Powers_System.md)):
-*   **[Cost: Passive]** - The [[Feat]] is always active or triggers automatically based on a stated condition. It costs zero actions or [[Grunt]].
-*   **[Cost: Grunt]** - The Boss must spend the stated number of [[Grunt]] points to activate the [[Feat]].
-*   **[Cost: 1 Action]** - The Boss must spend one of their Standard Actions (Move, Attack, Order) to activate the [[Feat]]. 
+### 🔴 Tough Feats (Brute Force & Impacts)
 
----
-
-## 4. Example Feats (Base Atoms)
-
-The following [[Feat|Feats]] are assembled using the successes and condition standards of the modular powers toolkit.
-
-### Tough Feats
-*   **[Cost: 1 Grunt**]
-    *   *Trigger:* When you take a [[Wound]] from an incoming attack.
-    *   *Effect:* Instantly shove an allied [[Mob]] in your [[Zone]] into the way. The [[Mob]] takes the hit instead (losing **1d3** [[Mob]] [[Size]]), and you take 0 [[Wound|Wounds]].
-*   **[Cost: Passive**]
-    *   *Effect:* Gain **+1 Boon Die** when making an Attack test against an enemy whose Size is strictly smaller than yours.
-
-### Slink Feats
-*   **[Cost: Passive**]
-    *   *Trigger:* Whenever you successfully Dodge an incoming attack.
-    *   *Effect:* You may immediately make a free [[melee attack]] against the attacker's legs (if they are in your [[Zone]]) adding **+1 Success** to the attack roll.
-*   **[Cost: Passive**]
-    *   *Effect:* Enemies do not get free reactionary Opportunity Attacks against you when you leave their [[Zone]].
-
-### General Feats
-*   **[Cost: 1 Grunt**]
-    *   *Trigger:* After you roll the [[dice pool]] for any test.
-    *   *Effect:* Spend 1 [[Grunt]] to completely reroll all dice that did not land on a 1 (You cannot reroll [[Fumbles]]).
-*   **[Cost: Passive**]
-    *   *Effect:* You can carry up to 2 [[Bulk]] worth of items by swallowing them. Swallowed items do not count toward your [[Carry Capacity]]. *It requires 1 Action to regurgitate them.*
+| Feat Name | Tier & Prereq | Cost & Trigger | Mechanical Effect | Keywords |
+| :--- | :---: | :--- | :--- | :--- |
+| **Batter-Up!** | **T1** (Tough 1+) | **Passive** (On Heavy Melee hit) | When you hit with a Heavy or Two-Handed weapon, shove the target **1 Zone backward** (into an adjacent Zone or against a wall). | `[Melee]`, `[Forced Move]` |
+| **Bowling Strike** | **T2** (Tough 2+) | **Passive** (On Collision) | When an enemy is shoved into another creature or wall, both creatures take **1 flat damage** and are knocked **Prone**. | `[Impact]`, `[Prone]` |
+| **Skull-Scab** | **T1** (Tough 1+) | **1 Reaction** (When enemy misses you or stands from Prone) | Make an immediate undefended Headbutt attack against that enemy, dealing **1 flat damage**. | `[Melee]`, `[Reaction]` |
+| **Thick Scab** | **T1** (Tough 1+) | **Passive** (Once per raid) | When incoming damage would reduce your **Grit** to 0, ignore that instance of damage and remain at 1 Grit. | `[Survival]`, `[Grit]` |
+| **Juggernaut Push** | **T2** (Tough 2+) | **Passive** (On Move action) | Smash through wooden doors, barricades, or weak walls during movement without spending extra actions or making a roll. | `[Movement]`, `[Breach]` |
 
 ---
 
-## 5. Example Twists (Modifiers)
+### 🔵 Slink Feats (Agility, Climbing & Stabs)
 
-[[Twist|Twists]] modify the behaviors of [[Feat|Feats]] to add utility, change delivery, or adjust action costs.
+| Feat Name | Tier & Prereq | Cost & Trigger | Mechanical Effect | Keywords |
+| :--- | :---: | :--- | :--- | :--- |
+| **Spring-Heeled** | **T1** (Slink 1+) | **Passive** (On Move action) | Leap vertically up to 2 meters (onto ledges, wagons, beams, chandeliers) without spending extra movement or rolling athletics. | `[Movement]`, `[Vertical]` |
+| **Wall-Scrawler** | **T1** (Slink 1+) | **Passive** | Gain a **+1d Boon** on climb tests, and you can end your turn clinging to sheer walls or ceilings. | `[Climb]`, `[Position]` |
+| **Drop-Stab** | **T2** (Slink 2+) | **Passive** (Melee attack from higher elevation or falling) | Gain a **+2d Attack Boon** on your melee strike and knock the target **Prone** on hit. | `[Melee]`, `[High Ground]` |
+| **Slip Away** | **T1** (Slink 1+) | **1 Free Action** (Start of turn in Cover/Darkness) | Immediately enter **Stealth** without spending a Standard Action. | `[Stealth]`, `[Cover]` |
+| **Scurry-Dodge** | **T2** (Slink 2+) | **Passive** (On successful Dodge) | When you successfully Dodge an incoming attack, immediately **Move 1 Zone for free**. | `[Evasion]`, `[Reaction Move]` |
 
-*   **Spiteful (T1)**
-    *   *Effect:* Whenever the attached [[Feat]] is activated, deal **1** [[Grit]] damage (on hit) or add **+1 Success** (on attack) to the nearest enemy.
-*   **Loud (T1)**
-    *   *Effect:* Activating this [[Feat]] automatically rallies 1 Fleeing [[Mob]] in your [[Zone]], but imposes a [[Bane]] on all stealth-related [[Slink]] tests for the rest of the round.
-*   **Efficient (T2)**
-    *   *Effect:* Reduces the [[Grunt]] cost of the attached [[Feat]] by 1 (minimum 0). Cannot be attached to Passive [[Feat|Feats]].
-*   **Reflexive (T3)**
-    *   *Effect:* If the attached [[Feat]] normally costs 1 Action, it now costs a [[Free Action]].
+---
+
+### 🟡 Mouth Feats (Screaming, Bullying & Herds)
+
+| Feat Name | Tier & Prereq | Cost & Trigger | Mechanical Effect | Keywords |
+| :--- | :---: | :--- | :--- | :--- |
+| **"Look Behind You!"** | **T1** (Mouth 1+) | **1 Free Action** (Once per round) | Point and scream at an enemy in your Zone. That target suffers **-1d Bane** on their next **Defence Roll** this round. | `[Deception]`, `[Bane]` |
+| **Meat-Shield Shove** | **T1** (Mouth 1+) | **1 Reaction / 1 Grunt** (When taking damage) | Redirect the incoming hit entirely to an adjacent friendly Runt or enemy in your Zone. | `[Sacrifice]`, `[Defence]` |
+| **Pile-On!** | **T2** (Mouth 2+) | **1 Reaction** (When you hit in melee) | An allied **Mob** in your Zone immediately makes a free out-of-turn **Attack** against that same target. | `[Mob]`, `[Synergy]` |
+| **Bullhorn Roar** | **T1** (Mouth 1+) | **1 Standard Action** | Scream so loud that all Standard humanoid enemies in your Zone must pass `Tough 4+/1` or lose 1 action on their next turn. | `[Intimidation]`, `[Hesitate]` |
+| **Whip-Crack Drive** | **T2** (Mouth 2+) | **1 Free Order** | Grant a commanded **Mob** +1 bonus Action this turn, but the Mob suffers **1 damage** (loses 1 pip on a health die) from exhaustion. | `[Mob]`, `[Overdrive]` |
+
+---
+
+### 🟣 Brains Feats (Traps, Dirty Tricks & Contraptions)
+
+| Feat Name | Tier & Prereq | Cost & Trigger | Mechanical Effect | Keywords |
+| :--- | :---: | :--- | :--- | :--- |
+| **Pocket Sand** | **T1** (Brains 1+) | **1 Standard Action** | Fling grit/pepper at an enemy in your Zone. The target is **Blinded** until the end of their next turn. | `[Dirty Trick]`, `[Blinded]` |
+| **Tripwire Rigger** | **T2** (Brains 2+) | **1 Standard Action** | Rig an improvised snare in your Zone. The next enemy entering must pass `Slink 4+/1` or become **Restrained** and **Prone**. | `[Trap]`, `[Restrained]` |
+| **Shrapnel Master** | **T1** (Brains 1+) | **Passive** (Detonating Bomb/Flask) | When you detonate any explosive bomb or flask, its blast expands to engulf **+1 adjacent Zone**. | `[Explosive]`, `[Area]` |
+| **Weak-Spot Tapping**| **T2** (Brains 2+) | **1 Standard Action** | Study an enemy in your Zone. Your next attack against them completely ignores their **Passive Armor Dice**. | `[Tactics]`, `[Armor Piercing]` |
+| **Quick-Rig** | **T1** (Brains 1+) | **1 Standard Action** | Temporarily patch a broken weapon/shield for the raid, or jimmy a standard door lock in 1 action with no tools. | `[Utility]`, `[Crafting]` |
+
+---
+
+### ⚪ General Feats (Gremlin Tactics & Scavenging)
+
+| Feat Name | Tier & Prereq | Cost & Trigger | Mechanical Effect | Keywords |
+| :--- | :---: | :--- | :--- | :--- |
+| **Ankle-Biter** | **T1** (General) | **Passive** | You suffer no penalties for attacking while **Prone**, and gain **+1d Attack Boon** against targets larger than yourself. | `[Combat]`, `[Prone]` |
+| **Gremlin Latch** | **T2** (General) | **1 Standard Action** (Target Size 2+) | Latch onto a larger foe's back. You move with them, and they cannot hit you in melee without spending an action to shake you off. | `[Grapple]`, `[Mount]` |
+| **Shiny-Snatcher** | **T1** (General) | **Passive** (On Melee hit) | When you hit an enemy in melee, make an immediate free `Slink 4+/1` check to snatch a pouch, potion, or item from their belt. | `[Plunder]`, `[Thievery]` |
+| **Scab-Eater** | **T1** (General) | **Passive** (1 min Breather outside combat) | Restore **+1 lost Grit** without using healing supplies or grog. | `[Recovery]`, `[Grit]` |
