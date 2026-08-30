@@ -25,12 +25,17 @@ Every **Goblin Boss** possesses four **Main Stats** rated from **Level 1** to **
 
 Each **Main Stat** governs two derived **Secondary Stats** that scale automatically as the parent stat increases:
 
-| Main Stat | Derived Secondary Stat 1 | Derived Secondary Stat 2 | System Function & Scope |
-| :--- | :--- | :--- | :--- |
-| **Tough** | **Grit** (3 to 5) | **Carry Capacity** (6 to 14 Bulk) | Physical damage absorption and carried gear/loot limits. |
-| **Slink** | **Movement** (2 to 5 Zones) | **Passive Defence** (0d to 2d) | Tactical battlefield speed and passive incoming hit mitigation. |
-| **Mouth** | **Max Mobs** (1 to 3 Mobs) | **Free Orders** (1 to 3 per Round) | Swarm command bandwidth and tactical order economy. |
-| **Brains** | **Power Words** (1 to 5 Slots) | **Crafting Capacity** (1 to 5 Slots) | Primordial spell mastery and custom gear component slots. |
+| Main Stat | Secondary Stat | Scaling Value Range | In-Game Scope & Function |
+| :--- | :--- | :---: | :--- |
+| **Tough** | **Grit** | **3 to 5** | The maximum physical damage your Boss can absorb before entering the Downed state. |
+| | **Carry Capacity** | **6 to 14 Bulk** | The total physical weight and inventory slots of gear and Loot you can carry unencumbered. |
+| **Slink** | **Movement** | **2 to 5 Zones** | The number of battlefield environmental Zones crossed per standard Move action. |
+| | **Passive Defence** | **0d to 2d** | Bonus mitigation dice rolled in your Defence Roll to soak incoming attack damage. |
+| **Mouth** | **Max Mobs** | **1 to 3 Mobs** | The maximum number of distinct goblin mobs you can command simultaneously on a raid. |
+| | **Free Orders** | **1 to 3 Orders** | The number of free tactical commands you can issue to your commanded Mobs per combat round. |
+| **Brains** | **Power Words** | **1 to 5 Slots** | The number of primordial titan spell words you can memorize and channel into magic spells. |
+| | **Crafting Capacity** | **1 to 5 Slots** | The maximum number of magical and mechanical components you can attach to a single piece of gear. |
+
 
 
 ### Tough Derived Stats: Grit & Carry
