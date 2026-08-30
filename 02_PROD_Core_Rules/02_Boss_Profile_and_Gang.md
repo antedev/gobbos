@@ -2,7 +2,7 @@
 
 *Every goblin Boss clawed their way to the top of the muck pile by being slightly meaner, faster, louder, or weirder than the screaming runts around them. But individual bosses are disposable; it is the Gang that endures, hoarding scrap and building a bloody legacy across generations.*
 
-This chapter defines the attributes and secondary metrics of a **Goblin Boss**, the dynamic **Role and Archetype Engine**, the rules governing authority and **Grunt**, the character creation engine, the persistent mechanics of the **Gang as Class Archetype**, and the structural schema for **Feats**.
+This chapter defines the attributes and secondary metrics of a **Goblin Boss**, the dynamic **Roles**, the rules governing authority, **Grunt**, the character creation , the mechanics of the **Gang**, and **Feats**.
 
 ---
 
