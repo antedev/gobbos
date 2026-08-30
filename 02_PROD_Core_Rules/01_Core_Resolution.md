@@ -8,15 +8,15 @@ This chapter defines the core resolution engine for **Gobbos**. All dice tests, 
 
 ## The D6 Pool Framework
 
-The resolution system in **Gobbos** uses standard six-sided dice (**d6**) exclusively. 
+The resolution system in **Gobbos** uses standard six-sided dice exclusively. In short they are reffered to as d6. And if you are to roll 3 dices, it is 3d6. 
 
 ### The GM Never Rolls
 All mechanical resolution is player-facing. **The Game Master (GM)** never rolls dice for standard tests, attacks, evasion, or environmental hazard checks. Enemies, traps, and the environment present static target thresholds that **Players** roll against using their active pools or passive defense ratings.
 
 ### Assembling the Dice Pool
-When you attempt an action that carries a risk of failure or meaningful consequence, you assemble a **Dice Pool** of standard **d6s**:
+When you attempt an action that carries a risk of failure or meaningful (or fun) consequence, you assemble a **Dice Pool** of standard **d6s**:
 
-**Dice Pool** = **Base Stat / Mob Size** + **Boons (+1d)** - **Banes (-1d)** + **Bangaranga Dice**
+The **Dice Pool** is typically based on either the relevant stat for your Goblin Boss, or the size of the Goblin mob, adjusted by circumstances, equipment and other effects. 
 
 *   **Goblin Boss Tests**: Your base pool equals your current rating in the relevant **Main Stat** (**Tough**, **Slink**, **Brains**, or **Mouth**), which ranges from 1 to 5 dice.
 *   **Mob Tests**: When rolling for a **Mob**, the base pool equals the Mob's current **Size** (1 to 5) for **Tough** tests, or a flat **2d6** for **Slink**, **Brains**, and **Mouth** tests (see [Mob Mechanics](06_Mob_Mechanics.md)).
@@ -37,8 +37,6 @@ The circumstances of an action dictate which die faces generate a **Success**:
 | **Normal (5+)** | **5, 6** | Standard baseline for all routine challenges, attacks, and environmental checks. |
 | **Hard (6)** | **6** | Extremely hostile conditions, heavy armor, narrow margins, or severe handicaps. |
 
->> **IMPORTANT:** The numeral **6** represents the absolute ceiling on a standard d6. In accordance with official system notation, **Hard** difficulty is written strictly as **6** (never write `6+`).
-
 ### Target Number (TN)
 The **Target Number (TN)** is the total count of successes required to pass the test. Standard actions require a **TN of 1**. Complex tasks, fortified adversaries, thick locks, or hazardous obstacles demand a **TN of 2** or higher.
 
@@ -57,16 +55,13 @@ To eliminate math bloat during play, all checks use the standard slash notation:
 
 When your roll yields more successes than the required **Target Number (TN)** (Successes > TN), you achieve an **Over-Success**. Rolling beyond the bare minimum excites the horde and allows you to dictate the style and narrative quality of your triumph.
 
-```mermaid
-flowchart TD
-    R["Roll Dice Pool"] --> E{"Evaluate Successes vs TN"}
-    E -->|Successes < TN| F["Failure / Optional Gobbo Gamble"]
-    E -->|Successes == TN| S["Clean Success (Task Completed)"]
-    E -->|Successes > TN| OS["OVER-SUCCESS (The Goblin Touch)<br>- Add +1d6 to Bangaranga Pool<br>- Declare Narrative Quality"]
-    OS --> C{"Exceeded TN by >= 2?"}
-    C -->|Yes: Successes >= TN + 2| CR["CRUSHED IT! (Gobbo Flex)<br>- Regain +1 Grunt OR<br>- Apply Instant Tactical Condition"]
-    C -->|No| DONE["Action Complete"]
-```
+| Roll Result vs. TN | Resolution Outcome | Mechanical & Narrative Benefits |
+| :--- | :--- | :--- |
+| **Successes < TN** | **Failure** | Action fails. Accept failure or declare an optional **Gobbo Gamble** (reroll all 1s). |
+| **Successes == TN** | **Clean Success** | Task completed cleanly with standard effect. |
+| **Successes > TN** *(Over-Success)* | **The Goblin Touch** | Task completed + add **+1d6 to Bangaranga Pool** + choose **Narrative Quality** (*Quiet, Swift, Showy, Demolishing*). |
+| **Successes >= TN + 2** *(Crushed It!)* | **Gobbo Flex / Critical** | All Over-Success benefits + choose: **Regain +1 Grunt** OR **Apply Instant Tactical Condition** (*Staggered, Prone, 1 Zone Push*). |
+
 
 #### 1. Hype Generation (+1d6 Bangaranga)
 Whenever you score **at least one extra success** beyond the required TN (regardless of whether you beat it by 1, 3, or 5 successes), you immediately add **+1d6 directly to the communal Bangaranga Pool**. Your conspicuous competence fires up the surrounding runts and builds the raid's momentum.
