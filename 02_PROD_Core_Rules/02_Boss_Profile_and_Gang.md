@@ -25,25 +25,13 @@ Every **Goblin Boss** possesses four **Main Stats** rated from **Level 1** to **
 
 Each **Main Stat** governs two derived **Secondary Stats** that scale automatically as the parent stat increases:
 
-```mermaid
-flowchart LR
-    BOSS["Goblin Boss"] --> T["TOUGH"]
-    BOSS --> S["SLINK"]
-    BOSS --> M["MOUTH"]
-    BOSS --> B["BRAINS"]
-    
-    T --> T1["Grit (Damage: 3 to 5)"]
-    T --> T2["Carry (Max Bulk: 6 to 14)"]
-    
-    S --> S1["Movement (Zones per Move: 2 to 5)"]
-    S --> S2["Passive Defence (Mitigation: 0d to 2d)"]
-    
-    M --> M1["Max Mobs (Simultaneous: 1 to 3)"]
-    M --> M2["Free Orders (Commands per Round: 1 to 3)"]
-    
-    B --> F1["Power Words (Spell Slots: 1 to 5)"]
-    B --> F2["Crafting Capacity (Component Slots: 1 to 5)"]
-```
+| Main Stat | Derived Secondary Stat 1 | Derived Secondary Stat 2 | System Function & Scope |
+| :--- | :--- | :--- | :--- |
+| **Tough** | **Grit** (3 to 5) | **Carry Capacity** (6 to 14 Bulk) | Physical damage absorption and carried gear/loot limits. |
+| **Slink** | **Movement** (2 to 5 Zones) | **Passive Defence** (0d to 2d) | Tactical battlefield speed and passive incoming hit mitigation. |
+| **Mouth** | **Max Mobs** (1 to 3 Mobs) | **Free Orders** (1 to 3 per Round) | Swarm command bandwidth and tactical order economy. |
+| **Brains** | **Power Words** (1 to 5 Slots) | **Crafting Capacity** (1 to 5 Slots) | Primordial spell mastery and custom gear component slots. |
+
 
 ### Tough Derived Stats: Grit & Carry
 
